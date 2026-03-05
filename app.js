@@ -136,7 +136,7 @@ const WHATSAPP = {
 const GIGI = {
   whatsappNumber: "5521973607755",
   fabText: "Fale com a Gigi",
-  title: "Gigi",
+  /*title: "Gigi",*/
   subtitle: "",
   gigiImage: "", /* quando tiver: "assets/gigi.png" */
   openKey: "ilg_gigi_open_v1",
