@@ -89,14 +89,24 @@ img{max-width:100%;display:block}
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(255,255,255,.92);
+  background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.88));
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
+}
+.header:after{
+  /* Linha inferior com gradiente */
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height:2px;
+  background: linear-gradient(90deg, rgba(71,176,90,.70), rgba(242,194,0,.70));
+  opacity:.65;
 }
 .header.is-scrolled{
   box-shadow: 0 10px 26px rgba(0,0,0,.06);
 }
 .header__inner{
+  position: relative;
   height: 86px;
   display:flex;
   align-items:center;
@@ -107,20 +117,46 @@ img{max-width:100%;display:block}
 /* Brand / Logo */
 .brand{display:flex;align-items:center;gap:14px; min-width: 260px;}
 .brand__logo{width: 66px;height: 66px;object-fit: contain}
-.brand__text{line-height:1.05}
+
+/* =========================================================
+   AJUSTE DO LOGO/TEXTO (corrige corte do Portal/Gigóia)
+   ========================================================= */
+.brand__text{
+  /* =========================================================
+     AJUSTE DO LOGO/TEXTO
+     - evita corte (ex: “g” do Gigóia)
+     - reduz espaçamento estranho entre palavras
+     ========================================================= */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height: 1.12;
+  padding-top: 2px;
+}
+
 .brand__text small{
   display:block;
   font-size: 12px;
-  letter-spacing: .14em;
+  letter-spacing: .10em; /* menos espaçado */
   font-weight: 800;
   color:#2c7e55;
-  margin-bottom: 4px;
+
+  /* “PORTAL” estava alto/cortando — alinhando */
+  margin: 0 0 4px 0;
+  line-height: 1.1;
 }
+
 .brand__text strong{
-  font-size: 34px;
+  display:block;
+  font-size: 33px; /* levemente menor para não cortar */
   font-weight: 900;
   color:#1f5f88;
+
+  /* evita cortar descenders (g, p, y...) */
+  line-height: 1.12;
+  padding-bottom: 2px;
 }
+
 .brand__text strong span{color:#3aa44a;font-weight:900}
 
 /* =========================================================
@@ -148,8 +184,28 @@ img{max-width:100%;display:block}
 }
 .nav::-webkit-scrollbar{ display:none; } /* Chrome/Safari */
 
+/* =========================================================
+   MENU (mais moderno / mais visível)
+   ========================================================= */
+.navWrap{
+  /* =========================================================
+     MENU (mais moderno / mais visível)
+     - “pill” com gradiente suave + borda/blur
+     ========================================================= */
+  display:flex;
+  align-items:center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: linear-gradient(90deg, rgba(71,176,90,.08), rgba(242,194,0,.08));
+  box-shadow: 0 16px 30px rgba(0,0,0,.08);
+  backdrop-filter: blur(8px);
+  max-width: 720px;
+}
+
 .nav a{
-  padding: 10px 10px;
+  position: relative;
+  padding: 10px 14px; /* mais clicável */
   border-radius: 999px;
   transition: background var(--t) var(--ease), transform var(--t) var(--ease);
   flex: 0 0 auto; /* impede encolher e quebrar */
@@ -157,6 +213,22 @@ img{max-width:100%;display:block}
 .nav a:hover{
   background: rgba(71,176,90,.10);
   transform: translateY(-1px);
+}
+
+/* Link ativo mais evidente */
+.nav a[aria-current="page"]{
+  background: rgba(71,176,90,.14);
+}
+.nav a[aria-current="page"]::after{
+  content:"";
+  position:absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green), var(--yellow));
+  opacity: .95;
 }
 
 .header__actions{display:flex;align-items:center;gap:10px; flex: 0 0 auto;}
@@ -708,22 +780,17 @@ img{max-width:100%;display:block}
   bottom: 18px;
   z-index: 2500;
 
-  /* =========================================================
-     FLUTUANDO COM O SCROLL (JS)
-     - O JS aplica translateY aqui para dar efeito "vivo"
-     ========================================================= */
+  /* FLUTUANDO COM O SCROLL (JS) */
   will-change: transform;
   transition: transform 140ms var(--ease);
 }
+
 .gigiFab__btn{
   display:flex;
   align-items:center;
   gap: 12px;
 
-  /* =========================================================
-     TAMANHO DO BOTÃO (AUMENTADO)
-     - mais fácil de clicar e mais chamativo
-     ========================================================= */
+  /* TAMANHO DO BOTÃO (AUMENTADO) */
   padding: 16px 20px;
   min-height: 58px;
 
@@ -739,13 +806,21 @@ img{max-width:100%;display:block}
   transition: transform 160ms var(--ease), box-shadow 160ms var(--ease);
   animation: gigiPulse 2.2s var(--ease) infinite;
 }
-.gigiFab__btn:hover{ transform: translateY(-2px); box-shadow: 0 24px 50px rgba(0,0,0,.14); animation:none; }
+
+.gigiFab__btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 24px 50px rgba(0,0,0,.14);
+  animation:none;
+}
 
 @keyframes gigiPulse{
   0%{ transform: translateY(0) scale(1); }
   50%{ transform: translateY(-2px) scale(1.02); }
   100%{ transform: translateY(0) scale(1); }
 }
+
+/* Ícone/emoji do botão (maior) */
+.gigiIcon{font-size:20px; line-height:1;}
 
 .gigiBox{
   position: fixed;
@@ -859,58 +934,4 @@ img{max-width:100%;display:block}
 
 @media (max-width: 560px){
   .gigiBox{ bottom: 74px; }
-}
-
-
-/* Ícone/emoji do botão (maior) */
-.gigiIcon{font-size:20px; line-height:1;}
-
-
-/* =========================================================
-   HEADER (mais moderno)
-   - Fundo levemente em gradiente + "pill" no menu
-   ========================================================= */
-.header{
-  background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.88));
-}
-.header:after{
-  /* Linha inferior com gradiente */
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:-1px;
-  height:2px;
-  background: linear-gradient(90deg, rgba(71,176,90,.70), rgba(242,194,0,.70));
-  opacity:.65;
-}
-.header__inner{ position:relative; }
-
-/* “Pill” para o menu (facilita leitura) */
-.navWrap{
-  display:flex;
-  align-items:center;
-  padding: 6px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.08);
-  background: rgba(71,176,90,.06);
-  box-shadow: 0 12px 24px rgba(0,0,0,.06);
-  max-width: 680px; /* ajuda em telas médias */
-}
-
-/* Link ativo mais evidente */
-.nav a{
-  position: relative;
-}
-.nav a[aria-current="page"]{
-  background: rgba(71,176,90,.14);
-}
-.nav a[aria-current="page"]::after{
-  content:"";
-  position:absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 6px;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--green), var(--yellow));
-  opacity: .95;
 }
