@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- Meta básico do documento -->
+  <meta charset="utf-8" />
+  <!-- Responsividade -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portal Ilha da Gigóia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-page="home">
+  <!-- Barra de progresso -->
+  <div class="progress" id="progress"></div>
+
+  <!-- Header dinâmico -->
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Apresentação">
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <div class="pill reveal" id="heroPill">
+          <span class="dot"></span><span>Portal Oficial de Turismo</span>
+        </div>
+
+        <h1 class="reveal" id="heroTitle">
+          Descubra o Paraíso Tropical<br><span class="accent">da Ilha da Gigóia</span>
+        </h1>
+
+        <p class="reveal" id="heroSubtitle">
+          Explore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--green" id="heroPrimary" href="planeje.html">
+            Planejar Minha Viagem <span aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn--gray" id="heroSecondary" href="a-ilha.html">
+            Conheça a Ilha <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="hero__foot reveal">
+          <span class="check" aria-hidden="true">✓</span>
+          <span>Informações oficiais e atualizadas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME -->
+    <section class="section" aria-label="O que te espera">
+      <div class="container">
+        <h2 class="section__title reveal">O Que Te Espera na Ilha</h2>
+        <p class="section__subtitle reveal">
+          Da natureza exuberante aos passeios de barco, cada momento é uma nova descoberta
+        </p>
+
+        <div class="tipRow reveal">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi, seu guia" />
+            </div>
+            <div class="capi__tag" id="capiTag">Capi, seu guia</div>
+          </div>
+
+          <div class="tip" id="tipBox">
+            <p>
+              <span class="bulb" aria-hidden="true">💡</span>
+              <strong id="tipTitle">Dica da Capi:</strong>
+              <span id="tipText">
+                Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="cards" id="homeCards"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+
+  <!-- Widget fixo em todas as páginas -->
+  <div id="gigiWidgetRoot"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
