@@ -36,18 +36,155 @@ const DICT = {
   tip_text: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
 
   /* Cards da Home */
-  home_card1_t: { pt: "Passeios de Barco", en: "Boat Tours", es: "Paseos en Barco" },
-  home_card1_d: { pt: "Navegue pelas águas calmas e descubra paisagens deslumbrantes", en: "Sail the calm waters and discover breathtaking landscapes", es: "Navega por las aguas tranquilas y descubre paisajes impresionantes" },
-  home_card1_l: { pt: "Ver roteiros", en: "View routes", es: "Ver rutas" },
-  home_card2_t: { pt: "Comer & Beber", en: "Food & Drink", es: "Comer y Beber" },
-  home_card2_d: { pt: "Saboreie frutos do mar frescos e pratos da culinária carioca", en: "Savor fresh seafood and local Carioca dishes", es: "Saborea mariscos frescos y platos de la cocina carioca" },
-  home_card2_l: { pt: "Explorar restaurantes", en: "Explore restaurants", es: "Explorar restaurantes" },
-  home_card3_t: { pt: "Natureza & Fauna", en: "Nature & Wildlife", es: "Naturaleza y Fauna" },
-  home_card3_d: { pt: "Explore trilhas, observe aves e conecte-se com a natureza", en: "Explore trails, watch birds and connect with nature", es: "Explora senderos, observa aves y conéctate con la naturaleza" },
-  home_card3_l: { pt: "Descobrir mais", en: "Discover more", es: "Descubrir más" },
-  home_card4_t: { pt: "Hospedagem", en: "Accommodation", es: "Alojamiento" },
-  home_card4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha", en: "Find the perfect place to relax and enjoy the island", es: "Encuentra el lugar perfecto para relajarte y disfrutar la isla" },
-  home_card4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  hm_c1_t: { pt: "Passeios de Barco", en: "Boat Tours", es: "Paseos en Barco" },
+  hm_c1_d: { pt: "Navegue pelas águas calmas e descubra paisagens deslumbrantes", en: "Sail the calm waters and discover breathtaking landscapes", es: "Navega por las aguas tranquilas y descubre paisajes impresionantes" },
+  hm_c1_l: { pt: "Ver roteiros", en: "View routes", es: "Ver rutas" },
+  hm_c2_t: { pt: "Comer & Beber", en: "Food & Drink", es: "Comer y Beber" },
+  hm_c2_d: { pt: "Saboreie frutos do mar frescos e pratos da culinária carioca", en: "Savor fresh seafood and local Carioca dishes", es: "Saborea mariscos frescos y platos de la cocina carioca" },
+  hm_c2_l: { pt: "Explorar restaurantes", en: "Explore restaurants", es: "Explorar restaurantes" },
+  hm_c3_t: { pt: "Natureza & Fauna", en: "Nature & Wildlife", es: "Naturaleza y Fauna" },
+  hm_c3_d: { pt: "Explore trilhas, observe aves e conecte-se com a natureza", en: "Explore trails, watch birds and connect with nature", es: "Explora senderos, observa aves y conéctate con la naturaleza" },
+  hm_c3_l: { pt: "Descobrir mais", en: "Discover more", es: "Descubrir más" },
+  hm_c4_t: { pt: "Hospedagem", en: "Accommodation", es: "Alojamiento" },
+  hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha", en: "Find the perfect place to relax and enjoy the island", es: "Encuentra el lugar perfecto para relajarte y disfrutar la isla" },
+  hm_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+
+  /* ==========================================
+     CARDS PÁGINAS INTERNAS (TRADUZIDOS) 
+     ========================================== */
+  
+  /* A Ilha */
+  ilha_c1_t: { pt: "Como chegar", en: "How to get there", es: "Cómo llegar" },
+  ilha_c1_d: { pt: "Acesso rápido a partir do Rio. Dicas de transporte e horários.", en: "Quick access from Rio. Transport tips and schedules.", es: "Acceso rápido desde Río. Consejos de transporte y horarios." },
+  ilha_c1_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
+  ilha_c2_t: { pt: "História & Cultura", en: "History & Culture", es: "Historia y Cultura" },
+  ilha_c2_d: { pt: "Tradições locais, ambiente tranquilo e charme natural.", en: "Local traditions, peaceful environment, and natural charm.", es: "Tradiciones locales, ambiente tranquilo y encanto natural." },
+  ilha_c2_l: { pt: "Ler mais", en: "Read more", es: "Leer más" },
+  ilha_c3_t: { pt: "Boas práticas", en: "Best practices", es: "Buenas prácticas" },
+  ilha_c3_d: { pt: "Recomendações para curtir com respeito à natureza e aos moradores.", en: "Recommendations for enjoying with respect to nature and residents.", es: "Recomendaciones para disfrutar respetando la naturaleza y a los residentes." },
+  ilha_c3_l: { pt: "Conferir", en: "Check it out", es: "Conferir" },
+  ilha_c4_t: { pt: "Melhor época", en: "Best time to visit", es: "Mejor época" },
+  ilha_c4_d: { pt: "Clima, horários e dicas para aproveitar o dia inteiro.", en: "Climate, schedules, and tips to enjoy the whole day.", es: "Clima, horarios y consejos para disfrutar todo el día." },
+  ilha_c4_l: { pt: "Planejar", en: "Plan", es: "Planificar" },
+
+  /* Passeios & Rotas */
+  pass_c1_t: { pt: "Roteiro clássico de barco", en: "Classic boat tour", es: "Ruta clásica en barco" },
+  pass_c1_d: { pt: "Passeio leve, paisagens e paradas para fotos.", en: "Light tour, landscapes, and photo stops.", es: "Paseo ligero, paisajes y paradas para fotos." },
+  pass_c1_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
+  pass_c2_t: { pt: "Manhã perfeita", en: "Perfect morning", es: "Mañana perfecta" },
+  pass_c2_d: { pt: "Água mais calma e mais chance de ver animais.", en: "Calmer water and better chances of seeing animals.", es: "Agua más tranquila y más posibilidades de ver animales." },
+  pass_c2_l: { pt: "Dicas", en: "Tips", es: "Consejos" },
+  pass_c3_t: { pt: "Pontos instagramáveis", en: "Instagrammable spots", es: "Lugares instagrameables" },
+  pass_c3_d: { pt: "Lugares com luz bonita e ângulos incríveis.", en: "Places with beautiful light and incredible angles.", es: "Lugares con luz hermosa y ángulos increíbles." },
+  pass_c3_l: { pt: "Descobrir", en: "Discover", es: "Descubrir" },
+  pass_c4_t: { pt: "O que levar", en: "What to bring", es: "Qué llevar" },
+  pass_c4_d: { pt: "Protetor, água, chapéu e itens essenciais.", en: "Sunscreen, water, hat, and essential items.", es: "Protector, agua, sombrero y artículos esenciales." },
+  pass_c4_l: { pt: "Checklist", en: "Checklist", es: "Checklist" },
+
+  /* Comer & Beber */
+  com_c1_t: { pt: "Frutos do mar", en: "Seafood", es: "Mariscos" },
+  com_c1_d: { pt: "Os clássicos que você precisa experimentar.", en: "The classics you must try.", es: "Los clásicos que debes probar." },
+  com_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  com_c2_t: { pt: "Bares & pôr do sol", en: "Bars & sunsets", es: "Bares y atardeceres" },
+  com_c2_d: { pt: "Clima perfeito pra relaxar no fim do dia.", en: "Perfect vibe to relax at the end of the day.", es: "Ambiente perfecto para relajarse al final del día." },
+  com_c2_l: { pt: "Sugestões", en: "Suggestions", es: "Sugerencias" },
+  com_c3_t: { pt: "Café e lanches", en: "Coffee and snacks", es: "Café y bocadillos" },
+  com_c3_d: { pt: "Paradas rápidas durante o passeio.", en: "Quick stops during the tour.", es: "Paradas rápidas durante el paseo." },
+  com_c3_l: { pt: "Dicas", en: "Tips", es: "Consejos" },
+  com_c4_t: { pt: "Para famílias", en: "For families", es: "Para familias" },
+  com_c4_d: { pt: "Locais tranquilos e com boas opções.", en: "Quiet places with good options.", es: "Lugares tranquilos con buenas opciones." },
+  com_c4_l: { pt: "Ver", en: "View", es: "Ver" },
+
+  /* Hospedagem */
+  hosp_c1_t: { pt: "Pousadas aconchegantes", en: "Cozy inns", es: "Posadas acogedoras" },
+  hosp_c1_d: { pt: "Opções para descansar e aproveitar a ilha.", en: "Options to rest and enjoy the island.", es: "Opciones para descansar y disfrutar de la isla." },
+  hosp_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  hosp_c2_t: { pt: "Melhor localização", en: "Best location", es: "Mejor ubicación" },
+  hosp_c2_d: { pt: "Dicas para ficar perto do que você quer fazer.", en: "Tips to stay close to what you want to do.", es: "Consejos para estar cerca de lo que quieres hacer." },
+  hosp_c2_l: { pt: "Guia", en: "Guide", es: "Guía" },
+  hosp_c3_t: { pt: "Viagem romântica", en: "Romantic trip", es: "Viaje romántico" },
+  hosp_c3_d: { pt: "Sugestões para casal e momentos especiais.", en: "Suggestions for couples and special moments.", es: "Sugerencias para parejas y momentos especiales." },
+  hosp_c3_l: { pt: "Roteiro", en: "Itinerary", es: "Itinerario" },
+  hosp_c4_t: { pt: "Custo-benefício", en: "Cost-benefit", es: "Costo-beneficio" },
+  hosp_c4_d: { pt: "Como equilibrar conforto e preço.", en: "How to balance comfort and price.", es: "Cómo equilibrar comodidad y precio." },
+  hosp_c4_l: { pt: "Planejar", en: "Plan", es: "Planificar" },
+
+  /* O que fazer */
+  faz_c1_t: { pt: "Passeios de barco", en: "Boat tours", es: "Paseos en barco" },
+  faz_c1_d: { pt: "O clássico imperdível para primeiro dia.", en: "The unmissable classic for the first day.", es: "El clásico imperdible para el primer día." },
+  faz_c1_l: { pt: "Ver rotas", en: "View routes", es: "Ver rutas" },
+  faz_c2_t: { pt: "Comer bem", en: "Eat well", es: "Comer bien" },
+  faz_c2_d: { pt: "Experiências gastronômicas locais.", en: "Local gastronomic experiences.", es: "Experiencias gastronómicas locales." },
+  faz_c2_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  faz_c3_t: { pt: "Contato com a natureza", en: "Contact with nature", es: "Contacto con la naturaleza" },
+  faz_c3_d: { pt: "Trilhas e observação de fauna.", en: "Trails and wildlife observation.", es: "Senderos y observación de fauna." },
+  faz_c3_l: { pt: "Ver seção", en: "View section", es: "Ver sección" },
+  faz_c4_t: { pt: "Onde ficar", en: "Where to stay", es: "Dónde alojarse" },
+  faz_c4_d: { pt: "Dicas rápidas de hospedagem.", en: "Quick accommodation tips.", es: "Consejos rápidos de alojamiento." },
+  faz_c4_l: { pt: "Ver", en: "View", es: "Ver" },
+
+  /* Natureza Cards (dentro de O que Fazer) */
+  nat_c1_t: { pt: "Trilhas leves", en: "Light trails", es: "Senderos ligeros" },
+  nat_c1_d: { pt: "Caminhadas curtas e paisagens lindas.", en: "Short walks and beautiful landscapes.", es: "Caminatas cortas y paisajes hermosos." },
+  nat_c1_l: { pt: "Ver dicas", en: "View tips", es: "Ver consejos" },
+  nat_c2_t: { pt: "Observação de aves", en: "Bird watching", es: "Observación de aves" },
+  nat_c2_d: { pt: "Melhor horário e onde procurar.", en: "Best times and where to look.", es: "Mejores horarios y dónde buscar." },
+  nat_c2_l: { pt: "Descobrir", en: "Discover", es: "Descubrir" },
+
+  /* Planejador de Roteiro (Planner Options) */
+  plan_o1_t: { pt: "Passeio de barco (clássico)", en: "Boat tour (classic)", es: "Paseo en barco (clásico)" },
+  plan_o1_d: { pt: "Rota leve com paisagens e paradas para fotos.", en: "Light route with landscapes and photo stops.", es: "Ruta ligera con paisajes y paradas para fotos." },
+  plan_o1_c1: { pt: "2h–3h", en: "2h–3h", es: "2h–3h" },
+  plan_o1_c2: { pt: "Barco", en: "Boat", es: "Barco" },
+  
+  plan_o2_t: { pt: "Passeio de barco (manhã cedo)", en: "Boat tour (early morning)", es: "Paseo en barco (temprano)" },
+  plan_o2_d: { pt: "Águas mais calmas e clima perfeito.", en: "Calmer waters and perfect weather.", es: "Aguas más tranquilas y clima perfecto." },
+  plan_o2_c1: { pt: "Manhã", en: "Morning", es: "Mañana" },
+  
+  plan_o3_t: { pt: "Passeio de barco no pôr do sol", en: "Sunset boat tour", es: "Paseo en barco al atardecer" },
+  plan_o3_d: { pt: "Luz linda + vibe relax.", en: "Beautiful light + relaxed vibe.", es: "Luz hermosa + ambiente relajado." },
+  plan_o3_c1: { pt: "Fim de tarde", en: "Late afternoon", es: "Atardecer" },
+
+  plan_o4_t: { pt: "Natureza & fauna", en: "Nature & wildlife", es: "Naturaleza y fauna" },
+  plan_o4_d: { pt: "Observação de aves e paisagens verdes.", en: "Bird watching and green landscapes.", es: "Observación de aves y paisajes verdes." },
+  plan_o4_c1: { pt: "1h–2h", en: "1h–2h", es: "1h–2h" },
+  plan_o4_c2: { pt: "Natureza", en: "Nature", es: "Naturaleza" },
+
+  plan_o5_t: { pt: "Trilha leve", en: "Light trail", es: "Sendero ligero" },
+  plan_o5_d: { pt: "Caminhada curta para explorar a natureza.", en: "Short walk to explore nature.", es: "Caminata corta para explorar la naturaleza." },
+  plan_o5_c1: { pt: "Leve", en: "Light", es: "Ligero" },
+
+  plan_o6_t: { pt: "Caiaque / remo (se disponível)", en: "Kayak / rowing (if available)", es: "Kayak / remo (si está disponible)" },
+  plan_o6_d: { pt: "Atividade na água (opcional).", en: "Water activity (optional).", es: "Actividad acuática (opcional)." },
+  plan_o6_c1: { pt: "1h", en: "1h", es: "1h" },
+  plan_o6_c2: { pt: "Atividade", en: "Activity", es: "Actividad" },
+
+  plan_o7_t: { pt: "Almoço frutos do mar", en: "Seafood lunch", es: "Almuerzo de mariscos" },
+  plan_o7_d: { pt: "Experiência gastronômica local.", en: "Local gastronomic experience.", es: "Experiencia gastronómica local." },
+  plan_o7_c2: { pt: "Gastronomia", en: "Gastronomy", es: "Gastronomía" },
+
+  plan_o8_t: { pt: "Café e lanches", en: "Coffee and snacks", es: "Café y bocadillos" },
+  plan_o8_d: { pt: "Parada rápida para recarregar.", en: "Quick stop to recharge.", es: "Parada rápida para recargar." },
+  plan_o8_c1: { pt: "Rápido", en: "Quick", es: "Rápido" },
+
+  plan_o9_t: { pt: "Bares & drinks", en: "Bars & drinks", es: "Bares y bebidas" },
+  plan_o9_d: { pt: "Perfeito para curtir a noite.", en: "Perfect for enjoying the night.", es: "Perfecto para disfrutar la noche." },
+  plan_o9_c1: { pt: "Noite", en: "Night", es: "Noche" },
+
+  plan_o10_t: { pt: "Pontos instagramáveis", en: "Instagrammable spots", es: "Lugares instagrameables" },
+  plan_o10_d: { pt: "Paradas para fotos com ângulos e luz boa.", en: "Photo stops with good angles and light.", es: "Paradas para fotos con buenos ángulos y luz." },
+  plan_o10_c1: { pt: "Fotos", en: "Photos", es: "Fotos" },
+
+  plan_o11_t: { pt: "Relax / descanso", en: "Relax / rest", es: "Relax / descanso" },
+  plan_o11_d: { pt: "Tempo livre para explorar sem pressa.", en: "Free time to explore without rushing.", es: "Tiempo libre para explorar sin prisas." },
+  plan_o11_c1: { pt: "Livre", en: "Free", es: "Libre" },
+  plan_o11_c2: { pt: "Relax", en: "Relax", es: "Relax" },
+
+  plan_o12_t: { pt: "Passeio família", en: "Family tour", es: "Paseo familiar" },
+  plan_o12_d: { pt: "Opções tranquilas, bom para crianças.", en: "Quiet options, good for children.", es: "Opciones tranquilas, buenas para niños." },
+  plan_o12_c1: { pt: "2h", en: "2h", es: "2h" },
+  plan_o12_c2: { pt: "Família", en: "Family", es: "Familia" },
+
 
   /* Widget Gigi */
   gigi_fab: { pt: "Fale com a Gigi", en: "Talk to Gigi", es: "Habla con Gigi" },
@@ -116,60 +253,60 @@ const SITE = {
     text: t("tip_text"),
   },
   homeCards: [
-    { title:t("home_card1_t"), desc:t("home_card1_d"), linkLabel:t("home_card1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
-    { title:t("home_card2_t"), desc:t("home_card2_d"), linkLabel:t("home_card2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork" },
-    { title:t("home_card3_t"), desc:t("home_card3_d"), linkLabel:t("home_card3_l"), href:"o-que-fazer.html#natureza", img:"assets/card-natureza.jpg", icon:"leaf" },
-    { title:t("home_card4_t"), desc:t("home_card4_d"), linkLabel:t("home_card4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
+    { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork" },
+    { title:t("hm_c3_t"), desc:t("hm_c3_d"), linkLabel:t("hm_c3_l"), href:"o-que-fazer.html#natureza", img:"assets/card-natureza.jpg", icon:"leaf" },
+    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
   ],
   pages: {
     "a-ilha": [
-      { title:"Como chegar", desc:"Acesso rápido a partir do Rio. Dicas de transporte e horários.", linkLabel:"Ver detalhes", href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
-      { title:"História & Cultura", desc:"Tradições locais, ambiente tranquilo e charme natural.", linkLabel:"Ler mais", href:"o-que-fazer.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:"Boas práticas", desc:"Recomendações para curtir com respeito à natureza e aos moradores.", linkLabel:"Conferir", href:"o-que-fazer.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
-      { title:"Melhor época", desc:"Clima, horários e dicas para aproveitar o dia inteiro.", linkLabel:"Planejar", href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("ilha_c1_t"), desc:t("ilha_c1_d"), linkLabel:t("ilha_c1_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("ilha_c2_t"), desc:t("ilha_c2_d"), linkLabel:t("ilha_c2_l"), href:"o-que-fazer.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("ilha_c3_t"), desc:t("ilha_c3_d"), linkLabel:t("ilha_c3_l"), href:"o-que-fazer.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("ilha_c4_t"), desc:t("ilha_c4_d"), linkLabel:t("ilha_c4_l"), href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
     ],
     "passeios-rotas": [
-      { title:"Roteiro clássico de barco", desc:"Passeio leve, paisagens e paradas para fotos.", linkLabel:"Ver roteiro", href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
-      { title:"Manhã perfeita", desc:"Água mais calma e mais chance de ver animais.", linkLabel:"Dicas", href:"index.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:"Pontos instagramáveis", desc:"Lugares com luz bonita e ângulos incríveis.", linkLabel:"Descobrir", href:"o-que-fazer.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:"O que levar", desc:"Protetor, água, chapéu e itens essenciais.", linkLabel:"Checklist", href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("pass_c1_t"), desc:t("pass_c1_d"), linkLabel:t("pass_c1_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("pass_c2_t"), desc:t("pass_c2_d"), linkLabel:t("pass_c2_l"), href:"index.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("pass_c3_t"), desc:t("pass_c3_d"), linkLabel:t("pass_c3_l"), href:"o-que-fazer.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("pass_c4_t"), desc:t("pass_c4_d"), linkLabel:t("pass_c4_l"), href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
     ],
     "comer-beber": [
-      { title:"Frutos do mar", desc:"Os clássicos que você precisa experimentar.", linkLabel:"Ver opções", href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:"Bares & pôr do sol", desc:"Clima perfeito pra relaxar no fim do dia.", linkLabel:"Sugestões", href:"o-que-fazer.html", img:"assets/card-passeios.jpg", icon:"boat" },
-      { title:"Café e lanches", desc:"Paradas rápidas durante o passeio.", linkLabel:"Dicas", href:"planeje.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:"Para famílias", desc:"Locais tranquilos e com boas opções.", linkLabel:"Ver", href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("com_c1_t"), desc:t("com_c1_d"), linkLabel:t("com_c1_l"), href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("com_c2_t"), desc:t("com_c2_d"), linkLabel:t("com_c2_l"), href:"o-que-fazer.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("com_c3_t"), desc:t("com_c3_d"), linkLabel:t("com_c3_l"), href:"planeje.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("com_c4_t"), desc:t("com_c4_d"), linkLabel:t("com_c4_l"), href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
     ],
     "hospedagem": [
-      { title:"Pousadas aconchegantes", desc:"Opções para descansar e aproveitar a ilha.", linkLabel:"Ver opções", href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
-      { title:"Melhor localização", desc:"Dicas para ficar perto do que você quer fazer.", linkLabel:"Guia", href:"o-que-fazer.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:"Viagem romântica", desc:"Sugestões para casal e momentos especiais.", linkLabel:"Roteiro", href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:"Custo-benefício", desc:"Como equilibrar conforto e preço.", linkLabel:"Planejar", href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("hosp_c1_t"), desc:t("hosp_c1_d"), linkLabel:t("hosp_c1_l"), href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("hosp_c2_t"), desc:t("hosp_c2_d"), linkLabel:t("hosp_c2_l"), href:"o-que-fazer.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("hosp_c3_t"), desc:t("hosp_c3_d"), linkLabel:t("hosp_c3_l"), href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("hosp_c4_t"), desc:t("hosp_c4_d"), linkLabel:t("hosp_c4_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
     ],
     "o-que-fazer": [
-      { title:"Passeios de barco", desc:"O clássico imperdível para primeiro dia.", linkLabel:"Ver rotas", href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
-      { title:"Comer bem", desc:"Experiências gastronômicas locais.", linkLabel:"Ver opções", href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:"Contato com a natureza", desc:"Trilhas e observação de fauna.", linkLabel:"Ver seção", href:"o-que-fazer.html#natureza", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:"Onde ficar", desc:"Dicas rápidas de hospedagem.", linkLabel:"Ver", href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("faz_c1_t"), desc:t("faz_c1_d"), linkLabel:t("faz_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("faz_c2_t"), desc:t("faz_c2_d"), linkLabel:t("faz_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("faz_c3_t"), desc:t("faz_c3_d"), linkLabel:t("faz_c3_l"), href:"o-que-fazer.html#natureza", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("faz_c4_t"), desc:t("faz_c4_d"), linkLabel:t("faz_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
     ],
   },
   naturezaCards: [
-    { title:"Trilhas leves", desc:"Caminhadas curtas e paisagens lindas.", linkLabel:"Ver dicas", href:"planeje.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-    { title:"Observação de aves", desc:"Melhor horário e onde procurar.", linkLabel:"Descobrir", href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
+    { title:t("nat_c1_t"), desc:t("nat_c1_d"), linkLabel:t("nat_c1_l"), href:"planeje.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+    { title:t("nat_c2_t"), desc:t("nat_c2_d"), linkLabel:t("nat_c2_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
   ],
   plannerOptions: [
-    { id:"boat-classic", title:"Passeio de barco (clássico)", desc:"Rota leve com paisagens e paradas para fotos.", chips:["2h–3h","Barco"] },
-    { id:"boat-sunrise", title:"Passeio de barco (manhã cedo)", desc:"Águas mais calmas e clima perfeito.", chips:["Manhã","Barco"] },
-    { id:"boat-sunset", title:"Passeio de barco no pôr do sol", desc:"Luz linda + vibe relax.", chips:["Fim de tarde","Barco"] },
-    { id:"wildlife", title:"Natureza & fauna", desc:"Observação de aves e paisagens verdes.", chips:["1h–2h","Natureza"] },
-    { id:"trail", title:"Trilha leve", desc:"Caminhada curta para explorar a natureza.", chips:["Leve","Natureza"] },
-    { id:"kayak", title:"Caiaque / remo (se disponível)", desc:"Atividade na água (opcional).", chips:["1h","Atividade"] },
-    { id:"food-sea", title:"Almoço frutos do mar", desc:"Experiência gastronômica local.", chips:["1h–2h","Gastronomia"] },
-    { id:"coffee", title:"Café e lanches", desc:"Parada rápida para recarregar.", chips:["Rápido","Gastronomia"] },
-    { id:"bars", title:"Bares & drinks", desc:"Perfeito para curtir a noite.", chips:["Noite","Gastronomia"] },
-    { id:"photos", title:"Pontos instagramáveis", desc:"Paradas para fotos com ângulos e luz boa.", chips:["1h","Fotos"] },
-    { id:"relax", title:"Relax / descanso", desc:"Tempo livre para explorar sem pressa.", chips:["Livre","Relax"] },
-    { id:"family", title:"Passeio família", desc:"Opções tranquilas, bom para crianças.", chips:["2h","Família"] },
+    { id:"boat-classic", title:t("plan_o1_t"), desc:t("plan_o1_d"), chips:[t("plan_o1_c1"), t("plan_o1_c2")] },
+    { id:"boat-sunrise", title:t("plan_o2_t"), desc:t("plan_o2_d"), chips:[t("plan_o2_c1"), t("plan_o1_c2")] },
+    { id:"boat-sunset", title:t("plan_o3_t"), desc:t("plan_o3_d"), chips:[t("plan_o3_c1"), t("plan_o1_c2")] },
+    { id:"wildlife", title:t("plan_o4_t"), desc:t("plan_o4_d"), chips:[t("plan_o4_c1"), t("plan_o4_c2")] },
+    { id:"trail", title:t("plan_o5_t"), desc:t("plan_o5_d"), chips:[t("plan_o5_c1"), t("plan_o4_c2")] },
+    { id:"kayak", title:t("plan_o6_t"), desc:t("plan_o6_d"), chips:[t("plan_o6_c1"), t("plan_o6_c2")] },
+    { id:"food-sea", title:t("plan_o7_t"), desc:t("plan_o7_d"), chips:[t("plan_o4_c1"), t("plan_o7_c2")] },
+    { id:"coffee", title:t("plan_o8_t"), desc:t("plan_o8_d"), chips:[t("plan_o8_c1"), t("plan_o7_c2")] },
+    { id:"bars", title:t("plan_o9_t"), desc:t("plan_o9_d"), chips:[t("plan_o9_c1"), t("plan_o7_c2")] },
+    { id:"photos", title:t("plan_o10_t"), desc:t("plan_o10_d"), chips:[t("plan_o6_c1"), t("plan_o10_c1")] },
+    { id:"relax", title:t("plan_o11_t"), desc:t("plan_o11_d"), chips:[t("plan_o11_c1"), t("plan_o11_c2")] },
+    { id:"family", title:t("plan_o12_t"), desc:t("plan_o12_d"), chips:[t("plan_o12_c1"), t("plan_o12_c2")] },
   ],
 };
 
@@ -190,7 +327,7 @@ const GIGI = {
 function iconSvg(name) {
   const common = `viewBox="0 0 24 24" aria-hidden="true" focusable="false"`;
   if (name === "boat") return `<svg ${common}><path d="M12 3c.6 0 1 .4 1 1v2h4c.4 0 .8.3 1 .7l2 6.1c.1.4 0 .8-.3 1.1-1.2 1.2-2.9 2.1-4.7 2.1-1.1 0-2.2-.3-3-.8-.8.5-1.9.8-3 .8s-2.2-.3-3-.8c-.8.5-1.9.8-3 .8-1.8 0-3.5-.9-4.7-2.1-.3-.3-.4-.7-.3-1.1l2-6.1c.1-.4.5-.7 1-.7h4V4c0-.6.4-1 1-1h6Zm-5 6H3.7L2.2 13.7c.8.7 1.8 1.2 2.8 1.2.9 0 1.7-.3 2.4-.8l.6-.4.6.4c.7.5 1.5.8 2.4.8.9 0 1.7-.3 2.4-.8l.6-.4.6.4c.7.5 1.5.8 2.4.8 1 0 2-.5 2.8-1.2L20.3 9H17v2c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1V9Zm2 0v1h6V9H9Z"/></svg>`;
-  if (name === "fork") return `<svg ${common}><path d="M8 2c.6 0 1 .4 1 1v7c0 1.7-1.3 3-3 3v8c0 .6-.4 1-1 1s-1-.4-1-1v-8c-1.7 0-3-1.3-3-3V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1Zm12 0c.6 0 1 .4 1 1v9c0 1.9-1.3 3.4-3 3.9V21c0 .6-.4 1-1 1s-1-.4-1-1V3c0-.6.4-1 1-1 2.2 0 4 1.8 4 4v6c0 .6-.4 1-1 1s-1-.4-1-1V6c0-.8-.4-1.5-1-1.9V14h.2c.9-.3 1.8-1.1 1.8-2.2V3c0-.6.4-1 1-1Z"/></svg>`;
+  if (name === "fork") return `<svg ${common}><path d="M8 2c.6 0 1 .4 1 1v7c0 1.7-1.3 3-3 3v8c0 .6-.4 1-1 1s-1-.4-1-1v-8c-1.7 0-3-1.3-3-3V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1Zm12 0c.6 0 1 .4 1 1v9c0 1.9-1.3 3.4-3 3.9V21c0 .6-.4 1-1 1s-1-.4-1-1V3c0-.6.4-1 1-1 2.2 0 4 1.8 4 4v6c0 .6-.4 1-1 1s-1-.4-1-1V6c0-.8-.4-1.5-1-1.9V14h.2c.9-.3 1.8-1.1 1.8-2.2V3c0-.6.4-1 1-1Z"/></svg>`;
   if (name === "leaf") return `<svg ${common}><path d="M20.9 4.6c.2.5.1 1.1-.3 1.5l-8.5 8.5c-1.4 1.4-3.2 2.2-5.2 2.3h-.7l-1.9 1.9c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l1.9-1.9v-.7c.1-2 .9-3.8 2.3-5.2l8.5-8.5c.4-.4 1-.5 1.5-.3 1.6.6 2.9 1.9 3.5 3.5ZM7 14c1.5-.1 2.8-.7 3.9-1.7l7.8-7.8c-.4-.7-1-1.3-1.7-1.7l-7.8 7.8C8 11.7 7.3 13 7.2 14.5V14H7Z"/></svg>`;
   return `<svg ${common}><path d="M4 10c0-1.7 1.3-3 3-3h10c1.7 0 3 1.3 3 3v8c0 .6-.4 1-1 1s-1-.4-1-1v-1H6v1c0 .6-.4 1-1 1s-1-.4-1-1v-8Zm2 5h12v-2c0-.6-.4-1-1-1H7c-.6 0-1 .4-1 1v2Zm2-6h3c.6 0 1 .4 1 1s-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1Z"/></svg>`;
 }
