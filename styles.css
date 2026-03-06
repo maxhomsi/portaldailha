@@ -106,9 +106,9 @@ img{max-width:100%;display:block}
   box-shadow: 0 10px 26px rgba(0,0,0,.06);
 }
 .header__inner{
-  min-height: 94px;
+  /* CORREÇÃO DO ESPAÇAMENTO DA LOGO E DO TEXTO PORTAL */
+  min-height: 100px; 
   padding: 10px 0;
-  height: 86px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -118,7 +118,10 @@ img{max-width:100%;display:block}
 
 /* Brand / Logo */
 .brand{display:flex;align-items:center;gap:14px; min-width: 260px;}
-.brand__logo{width: 66px;height: 66px;object-fit: contain}
+
+/* CORREÇÃO: LOGO MAIOR */
+.brand__logo{width: 80px;height: 80px;object-fit: contain} 
+
 .brand__text{
   display:flex;
   flex-direction:column;
@@ -126,14 +129,16 @@ img{max-width:100%;display:block}
   padding: 2px 0 6px;
   line-height: 1.2;
 }
+
+/* CORREÇÃO: TEXTO "PORTAL" (evitar corte) */
 .brand__text small{
   display:block;
-  font-size: 12px;
+  font-size: 13px; 
   letter-spacing: .10em;
   font-weight: 800;
   color:#2c7e55;
   margin: 0 0 4px 0;
-  line-height: 1.15;
+  line-height: normal; 
 }
 .brand__text strong{
   display:block;
@@ -459,7 +464,7 @@ img{max-width:100%;display:block}
 .tip p{margin:0;color:#2d3330;font-weight:800;line-height:1.45}
 
 /* =========================================================
-   CARDS (AGORA COM FLEXBOX PARA ALINHAR BOTÃO NA BASE)
+   CARDS (COM FLEXBOX PARA ALINHAR BOTÃO NA BASE)
    ========================================================= */
 .cards{
   display:grid;
@@ -475,7 +480,6 @@ img{max-width:100%;display:block}
   position:relative;
   transition: transform 160ms var(--ease), box-shadow 160ms var(--ease);
   transform: translateY(0);
-  /* Flexbox adicionado para alinhar link no fundo */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -510,7 +514,6 @@ img{max-width:100%;display:block}
 .card__icon svg{width: 22px;height: 22px;fill:#fff}
 .card__body{
   padding: 18px 18px 16px;
-  /* Flexbox adicionado para preencher todo o espaço restante do card */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -523,7 +526,6 @@ img{max-width:100%;display:block}
   align-items:center;
   color:#2f9c49;
   font-weight:900;
-  /* Margin-top: auto empurra o link verde para baixo */
   margin-top: auto;
 }
 .card__link span{transition: transform 160ms var(--ease)}
