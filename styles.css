@@ -115,39 +115,49 @@ img{max-width:100%;display:block}
   position:relative;
 }
 
-/* Brand / Logo */
-.brand{display:flex;align-items:center;gap:14px; min-width: 260px;}
-.brand__logo{width: 80px;height: 80px;object-fit: contain}
+/* =========================================================
+   BRAND / LOGO E TEXTO (CORRIGIDO TAMANHO E 1 LINHA)
+   ========================================================= */
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px; 
+  flex-shrink: 0; /* Impede a logo de ser espremida pelo menu */
+  text-decoration: none;
+}
+.brand__logo{
+  width: 64px; /* Tamanho harmonioso, menor que 80px */
+  height: 64px;
+  object-fit: contain;
+}
 
 .brand__text{
   display:flex;
   flex-direction:column;
   justify-content:center;
   padding: 2px 0 6px;
-  line-height: 1.2;
 }
 .brand__text small{
   display:block;
-  font-size: 13px;
-  letter-spacing: .10em;
+  font-size: 11px;
+  letter-spacing: 0.15em;
   font-weight: 800;
   color:#2c7e55;
-  margin: 0 0 4px 0;
-  line-height: normal;
+  margin: 0 0 2px 0;
+  text-transform: uppercase;
+  line-height: 1;
 }
-/* AQUI: MANTÉM "ILHA DA GIGÓIA" EM 1 LINHA SÓ */
 .brand__text strong{
-  display: flex; 
-  align-items: baseline;
-  gap: 6px;
-  font-size: 28px;
+  display: block;
+  font-size: 24px; /* Tamanho exato para encaixar bem */
   font-weight: 900;
   color:#1f5f88;
-  line-height: 1.18;
-  padding-bottom: 6px;
-  white-space: nowrap; 
+  line-height: 1;
+  white-space: nowrap; /* GARANTE QUE ILHA DA GIGÓIA FIQUE EM 1 LINHA */
 }
-.brand__text strong span{color:#3aa44a;font-weight:900}
+.brand__text strong span{
+  color:#3aa44a;
+}
 
 /* NAV */
 .navWrap{
@@ -160,6 +170,7 @@ img{max-width:100%;display:block}
   box-shadow: 0 18px 36px rgba(0,0,0,.10);
   backdrop-filter: blur(8px);
   max-width: 760px;
+  flex-shrink: 1;
 }
 
 .nav{
@@ -204,7 +215,12 @@ img{max-width:100%;display:block}
   opacity: .95;
 }
 
-.header__actions{display:flex;align-items:center;gap:10px; flex: 0 0 auto;}
+.header__actions{
+  display:flex;
+  align-items:center;
+  gap:10px; 
+  flex-shrink: 0; /* Trava as ações de serem esmagadas */
+}
 
 /* =========================================================
    BOTÕES
@@ -394,7 +410,7 @@ img{max-width:100%;display:block}
 }
 
 /* =========================================================
-   BLOCO “DICA DA CAPI” (AQUI FOI ADICIONADA A MÁSCARA)
+   BLOCO “DICA DA CAPI” (COM MÁSCARA CUTOUT)
    ========================================================= */
 .tipRow{
   display:flex;
@@ -414,19 +430,19 @@ img{max-width:100%;display:block}
 .capi__ring{
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Corta redondo */
-  background: #fff; /* Fundo branco pra imagem transparente */
+  border-radius: 50%; /* Círculo perfeito */
+  background: #fff;
   display:flex;
   align-items:center;
   justify-content:center;
   border: 6px solid rgba(71,176,90,.18);
   box-shadow: var(--shadow-soft);
-  overflow: hidden; /* A MÁGICA: tudo fora do círculo é cortado */
+  overflow: hidden; /* MÁGICA DO CUTOUT AQUI */
 }
 .capi__ring img{
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Preenche toda a bola */
+  object-fit: cover;
 }
 .capi__tag{
   background: var(--green);
@@ -594,30 +610,32 @@ img{max-width:100%;display:block}
 }
 
 /* =========================================================
-   RESPONSIVIDADE (Ajustado para a logo em linha única)
+   RESPONSIVIDADE (Celular e Tablet)
    ========================================================= */
 @media (max-width: 1100px){
   .cards{grid-template-columns: repeat(2, minmax(0,1fr));}
   .hero h1{font-size:56px;}
 }
+@media (max-width: 960px){
+  .brand__text strong { font-size: 20px; }
+  .brand__logo { width: 56px; height: 56px; }
+  .nav { gap: 8px; font-size: 14px; }
+}
 @media (max-width: 860px){
-  .nav{display:none;} 
+  /* Esconde completamente a cápsula do menu para não deixar fundo vazio */
+  .navWrap{display:none;} 
+  
   .burger{display:inline-flex;align-items:center;justify-content:center;}
   .mobileNav{display:block;}
+  .header__inner{min-height: 80px;}
   .hero{height:580px;}
   .hero h1{font-size:46px;}
   .hero p{font-size:18px;}
   .section__title{font-size:40px;}
-  
-  /* Ajusta o texto da logo no celular para não transbordar */
-  .brand__logo{width: 60px; height: 60px;}
-  .brand__text strong{font-size: 24px;}
 }
 @media (max-width: 560px){
   .cards{grid-template-columns: 1fr;}
   .hero h1{font-size:38px;}
-  /* Ajuste celular pequeno */
-  .brand__text strong{font-size: 20px;}
 }
 
 /* =========================================================

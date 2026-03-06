@@ -9,7 +9,6 @@ function changeLanguage(lang) {
 }
 
 const DICT = {
-  /* Menu & UI Globais */
   nav_ilha: { pt: "A Ilha", en: "The Island", es: "La Isla" },
   nav_passeios: { pt: "Passeios & Rotas", en: "Tours & Routes", es: "Paseos y Rutas" },
   nav_comer: { pt: "Comer & Beber", en: "Food & Drink", es: "Comer y Beber" },
@@ -21,7 +20,6 @@ const DICT = {
   btn_limpar: { pt: "Limpar", en: "Clear", es: "Limpiar" },
   footer_text: { pt: "Portal Ilha da Gigóia — Termos • Privacidade • Contato", en: "Gigóia Island Portal — Terms • Privacy • Contact", es: "Portal Isla Gigóia — Términos • Privacidad • Contacto" },
 
-  /* Hero & Index Static */
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
   hero_title_a: { pt: "Descubra o Paraíso Tropical", en: "Discover the Tropical Paradise", es: "Descubre el Paraíso Tropical" },
   hero_title_b: { pt: "da Ilha da Gigóia", en: "of Gigóia Island", es: "de la Isla Gigóia" },
@@ -30,12 +28,10 @@ const DICT = {
   sect_espera_title: { pt: "O Que Te Espera na Ilha", en: "What Awaits You on the Island", es: "Lo Que Te Espera en la Isla" },
   sect_espera_sub: { pt: "Da natureza exuberante aos passeios de barco, cada momento é uma nova descoberta", en: "From lush nature to boat tours, every moment is a new discovery", es: "Desde la exuberante naturaleza hasta los paseos en barco, cada momento es un nuevo descobrimento" },
 
-  /* Dica da Capi */
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
   tip_title: { pt: "Dica da Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
   tip_text: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
 
-  /* Cards da Home */
   hm_c1_t: { pt: "Passeios de Barco", en: "Boat Tours", es: "Paseos en Barco" },
   hm_c1_d: { pt: "Navegue pelas águas calmas e descubra paisagens deslumbrantes", en: "Sail the calm waters and discover breathtaking landscapes", es: "Navega por las aguas tranquilas y descubre paisajes impresionantes" },
   hm_c1_l: { pt: "Ver roteiros", en: "View routes", es: "Ver rutas" },
@@ -49,7 +45,6 @@ const DICT = {
   hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha", en: "Find the perfect place to relax and enjoy the island", es: "Encuentra el lugar perfeito para relajarte y disfrutar la isla" },
   hm_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
 
-  /* Cards Páginas Internas */
   ilha_c1_t: { pt: "Como chegar", en: "How to get there", es: "Cómo llegar" },
   ilha_c1_d: { pt: "Acesso rápido a partir do Rio. Dicas de transporte e horários.", en: "Quick access from Rio. Transport tips and schedules.", es: "Acceso rápido desde Río. Consejos de transporte y horarios." },
   ilha_c1_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
@@ -91,7 +86,7 @@ const DICT = {
 
   hosp_c1_t: { pt: "Pousadas aconchegantes", en: "Cozy inns", es: "Posadas acogedoras" },
   hosp_c1_d: { pt: "Opções para descansar e aproveitar a ilha.", en: "Options to rest and enjoy the island.", es: "Opciones para descansar y disfrutar de la isla." },
-  hosp_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  hosp_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opções" },
   hosp_c2_t: { pt: "Melhor localização", en: "Best location", es: "Mejor ubicación" },
   hosp_c2_d: { pt: "Dicas para ficar perto do que você quer fazer.", en: "Tips to stay close to what you want to do.", es: "Consejos para estar cerca de lo que quieres hacer." },
   hosp_c2_l: { pt: "Guia", en: "Guide", es: "Guía" },
@@ -122,7 +117,6 @@ const DICT = {
   nat_c2_d: { pt: "Melhor horário e onde procurar.", en: "Best times and where to look.", es: "Mejores horarios y dónde buscar." },
   nat_c2_l: { pt: "Descobrir", en: "Discover", es: "Descubrir" },
 
-  /* Planejador */
   plan_o1_t: { pt: "Passeio de barco (clássico)", en: "Boat tour (classic)", es: "Paseo en barco (clásico)" },
   plan_o1_d: { pt: "Rota leve com paisagens e paradas para fotos.", en: "Light route with landscapes and photo stops.", es: "Ruta ligera con paisajes y paradas para fotos." },
   plan_o1_c1: { pt: "2h–3h", en: "2h–3h", es: "2h–3h" },
@@ -165,7 +159,6 @@ const DICT = {
   plan_o12_c1: { pt: "2h", en: "2h", es: "2h" },
   plan_o12_c2: { pt: "Família", en: "Family", es: "Familia" },
 
-  /* Widget Gigi */
   gigi_fab: { pt: "Fale com a Gigi", en: "Talk to Gigi", es: "Habla con Gigi" },
   gigi_hello: { pt: "Olá, me chamo Gigi!", en: "Hi, I'm Gigi!", es: "¡Hola, soy Gigi!" },
   gigi_sub: { pt: "Me envie uma mensagem e eu te respondo direto no WhatsApp!", en: "Send me a message and I'll reply directly on WhatsApp!", es: "¡Envíame un mensaje y te responderé directamente por WhatsApp!" },
@@ -175,7 +168,6 @@ const DICT = {
   gigi_btn: { pt: "Enviar", en: "Send", es: "Enviar" },
   gigi_note: { pt: "Ao enviar, abriremos o WhatsApp com sua mensagem pronta.", en: "When sending, we will open WhatsApp with your message ready.", es: "Al enviar, abriremos WhatsApp con tu mensaje listo." },
 
-  /* Traduções HTML Estático */
   pg_ilha_h1: { pt: "A Ilha", en: "The Island", es: "La Isla" },
   pg_ilha_p: { pt: "Um refúgio tropical com natureza exuberante, clima tranquilo e experiências únicas pertinho do Rio.", en: "A tropical refuge with lush nature, a peaceful climate, and unique experiences close to Rio.", es: "Un refugio tropical con naturaleza exuberante, clima tranquilo y experiencias únicas cerca de Río." },
   pg_passeios_h1: { pt: "Passeios & Rotas", en: "Tours & Routes", es: "Paseos y Rutas" },
@@ -187,7 +179,7 @@ const DICT = {
   pg_fazer_h1: { pt: "O que fazer", en: "What to do", es: "Qué hacer" },
   pg_fazer_p: { pt: "Um mix perfeito entre natureza, gastronomia e passeios. Escolha seu estilo e monte seu roteiro.", en: "A perfect mix of nature, gastronomy, and tours. Choose your style and build your itinerary.", es: "Una mezcla perfecta de naturaleza, gastronomía y paseos. Elige tu estilo y arma tu itinerario." },
   pg_fazer_h2: { pt: "Natureza & Fauna", en: "Nature & Wildlife", es: "Naturaleza y Fauna" },
-  pg_fazer_p2: { pt: "Trilhas leves, observação de aves e paisagens para fotos incríveis.", en: "Light trails, bird watching, and landscapes for incredible photos.", es: "Senderos ligeros, observación de aves y paisajes para fotos increíbles." },
+  pg_fazer_p2: { pt: "Trilhas leves, observação de aves e paisagens para fotos incríveis.", en: "Light trails, bird watching, and landscapes for incredible photos.", es: "Senderos ligeros, observación de aves y paisajes para fotos incríveis." },
   pg_plan_h1: { pt: "Monte seu roteiro", en: "Build your itinerary", es: "Arma tu itinerario" },
   pg_plan_p: { pt: "Selecione as opções que você quer fazer. Ao enviar, pediremos seu número para te mandar o roteiro completo com preços e opções.", en: "Select the options you want to do. Upon sending, we will ask for your number to send you the complete itinerary.", es: "Selecciona las opciones que deseas hacer. Al enviar, te pediremos tu número para enviarte el itinerario completo." },
   pg_plan_h2: { pt: "Escolha suas opções", en: "Choose your options", es: "Elige tus opciones" },
@@ -196,9 +188,6 @@ const DICT = {
 
 const t = (key) => DICT[key] ? (DICT[key][currentLang] || DICT[key].pt) : key;
 
-/* =========================================================
-   DADOS CENTRALIZADOS DO SITE
-   ========================================================= */
 const SITE = {
   brand: {
     logo: "assets/logo.png",
@@ -291,13 +280,13 @@ const SITE = {
 
 const WHATSAPP = { toNumber: "5521965666913" };
 
-/* AQUI ESTÁ A INSERÇÃO DA FOTO DA GIGI */
 const GIGI = {
   whatsappNumber: "5521965666913",
   fabText: t("gigi_fab"),
   title: "Gigi",
   subtitle: "",
-  gigiImage: "assets/Gigi.png", 
+  /* CORREÇÃO DO NOME DO ARQUIVO DA GIGI (Tudo minúsculo como no seu PC) */
+  gigiImage: "assets/gigi.png", 
   openKey: "ilg_gigi_open_v1",
 };
 
@@ -632,9 +621,7 @@ function setupReveal() {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("is-in"); });
   }, { threshold: 0.12 });
-  
-  /* AQUI ESTAVA O ERRO DE DIGITAÇÃO! Mudei de "io.observer" para "io.observe" */
-  els.forEach(el => io.observe(el)); 
+  els.forEach(el => io.observe(el));
 }
 
 function setupHeaderScroll() {
