@@ -30,7 +30,15 @@ const DICT = {
 
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
   tip_title: { pt: "Dica da Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
-  tip_text: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
+  
+  /* =========================================================
+     DICAS ALEATÓRIAS DA CAPI
+     ========================================================= */
+  tip_text_0: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
+  tip_text_1: { pt: "Não deixe de provar o pastel de camarão em um dos restaurantes à beira da lagoa, é imperdível!", en: "Be sure to try the shrimp pastel at one of the lakeside restaurants, it's a must!", es: "No dejes de probar el pastel de camarones en uno de los restaurantes junto a la laguna, ¡es imperdible!" },
+  tip_text_2: { pt: "O pôr do sol visto da parte oeste da ilha rende as melhores fotos para o seu Instagram.", en: "The sunset viewed from the west side of the island makes for the best Instagram photos.", es: "El atardecer visto desde el lado oeste de la isla rinde las mejores fotos para tu Instagram." },
+  tip_text_3: { pt: "Use sapatos confortáveis! A ilha não tem carros e as ruelas são um charme para explorar a pé.", en: "Wear comfortable shoes! The island has no cars and the narrow streets are charming to explore on foot.", es: "¡Usa zapatos cómodos! La isla no tiene autos y las callejuelas son un encanto para explorar a pie." },
+  tip_text_4: { pt: "Fique de olho nas árvores! É muito comum avistar micos, garças e até jacarés no passeio de barco.", en: "Keep an eye on the trees! It's very common to spot marmosets, herons, and even alligators on the boat tour.", es: "¡Mantente atento a los árboles! Es muy común avistar titíes, garzas y hasta caimanes en el paseo en barco." },
 
   hm_c1_t: { pt: "Passeios de Barco", en: "Boat Tours", es: "Paseos en Barco" },
   hm_c1_d: { pt: "Navegue pelas águas calmas e descubra paisagens deslumbrantes", en: "Sail the calm waters and discover breathtaking landscapes", es: "Navega por las aguas tranquilas y descubre paisajes impresionantes" },
@@ -86,7 +94,7 @@ const DICT = {
 
   hosp_c1_t: { pt: "Pousadas aconchegantes", en: "Cozy inns", es: "Posadas acogedoras" },
   hosp_c1_d: { pt: "Opções para descansar e aproveitar a ilha.", en: "Options to rest and enjoy the island.", es: "Opciones para descansar y disfrutar de la isla." },
-  hosp_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opções" },
+  hosp_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
   hosp_c2_t: { pt: "Melhor localização", en: "Best location", es: "Mejor ubicación" },
   hosp_c2_d: { pt: "Dicas para ficar perto do que você quer fazer.", en: "Tips to stay close to what you want to do.", es: "Consejos para estar cerca de lo que quieres hacer." },
   hosp_c2_l: { pt: "Guia", en: "Guide", es: "Guía" },
@@ -179,7 +187,7 @@ const DICT = {
   pg_fazer_h1: { pt: "O que fazer", en: "What to do", es: "Qué hacer" },
   pg_fazer_p: { pt: "Um mix perfeito entre natureza, gastronomia e passeios. Escolha seu estilo e monte seu roteiro.", en: "A perfect mix of nature, gastronomy, and tours. Choose your style and build your itinerary.", es: "Una mezcla perfecta de naturaleza, gastronomía y paseos. Elige tu estilo y arma tu itinerario." },
   pg_fazer_h2: { pt: "Natureza & Fauna", en: "Nature & Wildlife", es: "Naturaleza y Fauna" },
-  pg_fazer_p2: { pt: "Trilhas leves, observação de aves e paisagens para fotos incríveis.", en: "Light trails, bird watching, and landscapes for incredible photos.", es: "Senderos ligeros, observación de aves y paisajes para fotos incríveis." },
+  pg_fazer_p2: { pt: "Trilhas leves, observação de aves e paisagens para fotos incríveis.", en: "Light trails, bird watching, and landscapes for incredible photos.", es: "Senderos ligeros, observación de aves y paisajes para fotos increíbles." },
   pg_plan_h1: { pt: "Monte seu roteiro", en: "Build your itinerary", es: "Arma tu itinerario" },
   pg_plan_p: { pt: "Selecione as opções que você quer fazer. Ao enviar, pediremos seu número para te mandar o roteiro completo com preços e opções.", en: "Select the options you want to do. Upon sending, we will ask for your number to send you the complete itinerary.", es: "Selecciona las opciones que deseas hacer. Al enviar, te pediremos tu número para enviarte el itinerario completo." },
   pg_plan_h2: { pt: "Escolha suas opções", en: "Choose your options", es: "Elige tus opciones" },
@@ -218,7 +226,7 @@ const SITE = {
     capiImg: "assets/capi.png",
     capiTag: t("capi_tag"),
     title: t("tip_title"),
-    text: t("tip_text"),
+    /* O texto estático foi removido para usar o sorteio no JavaScript */
   },
   homeCards: [
     { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
@@ -285,7 +293,6 @@ const GIGI = {
   fabText: t("gigi_fab"),
   title: "Gigi",
   subtitle: "",
-  /* CORREÇÃO DO NOME DO ARQUIVO DA GIGI (Tudo minúsculo como no seu PC) */
   gigiImage: "assets/gigi.png", 
   openKey: "ilg_gigi_open_v1",
 };
@@ -420,8 +427,13 @@ function mountHome() {
   const tipTitle = document.getElementById("tipTitle");
   if (tipTitle) tipTitle.textContent = SITE.tip.title;
 
+  /* Sorteador de Dicas da Capi */
   const tipText = document.getElementById("tipText");
-  if (tipText) tipText.textContent = " " + SITE.tip.text;
+  if (tipText) {
+    const tipsArray = ["tip_text_0", "tip_text_1", "tip_text_2", "tip_text_3", "tip_text_4"];
+    const randomTipKey = tipsArray[Math.floor(Math.random() * tipsArray.length)];
+    tipText.textContent = " " + t(randomTipKey);
+  }
 
   const homeCards = document.getElementById("homeCards");
   if (homeCards) homeCards.innerHTML = SITE.homeCards.map((c,i)=>cardHtml(c,i)).join("");
@@ -545,7 +557,7 @@ function mountGigiWidget() {
       </div>
       <div class="gigiBox__body">
         <div class="gigiCard">
-          <div class="gigiCard__img" id="gigiImgBox">56×56px</div>
+          <div class="gigiCard__img" id="gigiImgBox"></div>
           <div class="gigiCard__text">
             <strong>${t("gigi_hello")}</strong>
             <small>${t("gigi_sub")}</small>
@@ -588,7 +600,7 @@ function mountGigiWidget() {
 
   fabBtn?.addEventListener("click", () => {
     if (!gigiBox) return;
-    gigiBox.style.display = "block";
+    gigiBox.style.display = "flex";
     localStorage.setItem(GIGI.openKey, "1");
   });
 
