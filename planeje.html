@@ -14,8 +14,8 @@
   <main>
     <section class="pageHead">
       <div class="container">
-        <h1 class="reveal">Monte seu roteiro</h1>
-        <p class="reveal">
+        <h1 class="reveal" data-i18n="pg_plan_h1">Monte seu roteiro</h1>
+        <p class="reveal" data-i18n="pg_plan_p">
           Selecione as opções que você quer fazer. Ao enviar, pediremos seu número para te mandar o roteiro completo com preços e opções.
         </p>
       </div>
@@ -24,34 +24,26 @@
     <section class="section" style="padding-top:24px">
       <div class="container">
         <div class="card reveal" style="padding:22px">
-          <h2 class="section__title" style="text-align:left;font-size:28px;margin:0 0 12px">
+          <h2 class="section__title" style="text-align:left;font-size:28px;margin:0 0 12px" data-i18n="pg_plan_h2">
             Escolha suas opções
           </h2>
 
-          <p class="section__subtitle" style="text-align:left;margin:0 0 18px">
+          <p class="section__subtitle" style="text-align:left;margin:0 0 18px" data-i18n="pg_plan_p2">
             Marque o que você quer fazer e clique em <strong>Enviar roteiro</strong>.
           </p>
 
-          <!-- Form do planejador -->
           <form id="plannerForm" class="planner">
-            <!-- Opções via JS -->
             <div class="planner__grid" id="plannerOptions"></div>
 
-            <!-- Ações -->
             <div class="planner__actions">
-              <!-- Enviar (abre modal pedindo telefone) -->
-              <button class="btn btn--green" type="submit">Enviar roteiro</button>
-
-              <!-- Limpar seleção -->
-              <button class="btn" type="button" id="clearPlan">Limpar</button>
+              <button class="btn btn--green" type="submit" data-i18n="btn_enviar">Enviar roteiro</button>
+              <button class="btn" type="button" id="clearPlan" data-i18n="btn_limpar">Limpar</button>
             </div>
           </form>
 
-          <!-- Feedback (erro/sucesso) -->
           <div id="planFeedback" style="margin-top:16px"></div>
 
           <p style="margin:14px 0 0;color:rgba(0,0,0,.55);font-weight:800">
-            <!-- Dica para dev -->
             Para editar as opções, altere <strong>SITE.plannerOptions</strong> no <strong>app.js</strong>.
           </p>
         </div>
