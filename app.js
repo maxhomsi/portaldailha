@@ -126,15 +126,15 @@ const SITE = {
    CONFIG DO WHATSAPP (NÚMERO DESTINO)
    ========================================================= */
 const WHATSAPP = {
-  /* Número solicitado: +55(21)973607755 -> wa.me usa só dígitos */
-  toNumber: "5521973607755",
+  /* Número solicitado: +5521965666913 -> wa.me usa só dígitos */
+  toNumber: "5521965666913",
 };
 
 /* =========================================================
    CONFIG DO WIDGET "FALE COM A GIGI"
    ========================================================= */
 const GIGI = {
-  whatsappNumber: "5521973607755",
+  whatsappNumber: "5521965666913",
   fabText: "Fale com a Gigi",
   title: "Gigi",
   subtitle: "",
