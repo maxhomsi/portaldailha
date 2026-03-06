@@ -28,7 +28,7 @@ const DICT = {
   hero_sub: { pt: "Explore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro", en: "Explore beaches, boat tours, lush nature, and authentic experiences just minutes from Rio de Janeiro", es: "Explora playas, paseos en barco, naturaleza exuberante y experiencias auténticas a solo minutos de Río de Janeiro" },
   hero_check: { pt: "Informações oficiais e atualizadas", en: "Official and updated information", es: "Información oficial y actualizada" },
   sect_espera_title: { pt: "O Que Te Espera na Ilha", en: "What Awaits You on the Island", es: "Lo Que Te Espera en la Isla" },
-  sect_espera_sub: { pt: "Da natureza exuberante aos passeios de barco, cada momento é uma nova descoberta", en: "From lush nature to boat tours, every moment is a new discovery", es: "Desde la exuberante naturaleza hasta los paseos en barco, cada momento é um novo descobrimento" },
+  sect_espera_sub: { pt: "Da natureza exuberante aos passeios de barco, cada momento é uma nova descoberta", en: "From lush nature to boat tours, every moment is a new discovery", es: "Desde la exuberante naturaleza hasta los paseos en barco, cada momento es un nuevo descobrimento" },
 
   /* Dica da Capi */
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
@@ -80,7 +80,7 @@ const DICT = {
   com_c1_d: { pt: "Os clássicos que você precisa experimentar.", en: "The classics you must try.", es: "Los clásicos que debes probar." },
   com_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
   com_c2_t: { pt: "Bares & pôr do sol", en: "Bars & sunsets", es: "Bares y atardeceres" },
-  com_c2_d: { pt: "Clima perfeito pra relaxar no fim do dia.", en: "Perfect vibe to relax at the end of the day.", es: "Ambiente perfeito para relajarse al final del día." },
+  com_c2_d: { pt: "Clima perfeito pra relaxar no fim do dia.", en: "Perfect vibe to relax at the end of the day.", es: "Ambiente perfecto para relajarse al final del día." },
   com_c2_l: { pt: "Sugestões", en: "Suggestions", es: "Sugerencias" },
   com_c3_t: { pt: "Café e lanches", en: "Coffee and snacks", es: "Café y bocadillos" },
   com_c3_d: { pt: "Paradas rápidas durante o passeio.", en: "Quick stops during the tour.", es: "Paradas rápidas durante el paseo." },
@@ -108,7 +108,7 @@ const DICT = {
   faz_c2_t: { pt: "Comer bem", en: "Eat well", es: "Comer bien" },
   faz_c2_d: { pt: "Experiências gastronômicas locais.", en: "Local gastronomic experiences.", es: "Experiencias gastronómicas locales." },
   faz_c2_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
-  faz_c3_t: { pt: "Contato com a natureza", en: "Contact with nature", es: "Contacto con la naturaleza" },
+  faz_c3_t: { pt: "Contato com a natureza", en: "Contact with nature", es: "Contacto con la natureza" },
   faz_c3_d: { pt: "Trilhas e observação de fauna.", en: "Trails and wildlife observation.", es: "Senderos y observación de fauna." },
   faz_c3_l: { pt: "Ver seção", en: "View section", es: "Ver sección" },
   faz_c4_t: { pt: "Onde ficar", en: "Where to stay", es: "Dónde alojarse" },
@@ -291,12 +291,13 @@ const SITE = {
 
 const WHATSAPP = { toNumber: "5521965666913" };
 
+/* AQUI ESTÁ A INSERÇÃO DA FOTO DA GIGI */
 const GIGI = {
   whatsappNumber: "5521965666913",
   fabText: t("gigi_fab"),
   title: "Gigi",
   subtitle: "",
-  gigiImage: "",
+  gigiImage: "assets/Gigi.png", 
   openKey: "ilg_gigi_open_v1",
 };
 
@@ -458,7 +459,6 @@ function mountPlanner() {
   const options = SITE.plannerOptions || [];
 
   optionsBox.innerHTML = options.map((opt) => {
-    const chips = opt.chips || [];
     return `
       <label class="plannerOpt" data-opt="${opt.id}">
         <input type="checkbox" name="opt" value="${opt.id}" />
@@ -466,7 +466,7 @@ function mountPlanner() {
           <p class="plannerOpt__title">${opt.title}</p>
           <p class="plannerOpt__desc">${opt.desc}</p>
           <div class="plannerOpt__meta">
-            ${chips.map(ch => `<span class="plannerOpt__chip">${ch}</span>`).join("")}
+            ${(opt.chips || []).map(ch => `<span class="plannerOpt__chip">${ch}</span>`).join("")}
           </div>
         </div>
       </label>
@@ -586,7 +586,7 @@ function mountGigiWidget() {
   if (GIGI.gigiImage) {
     const box = document.getElementById("gigiImgBox");
     if (box) {
-      box.innerHTML = `<img src="${GIGI.gigiImage}" alt="Gigi" style="width:100%;height:100%;object-fit:cover;border-radius:16px" />`;
+      box.innerHTML = `<img src="${GIGI.gigiImage}" alt="Gigi" style="width:100%;height:100%;object-fit:cover;border-radius:18px" />`;
       box.style.border = "none";
       box.style.background = "transparent";
     }
@@ -632,7 +632,9 @@ function setupReveal() {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("is-in"); });
   }, { threshold: 0.12 });
-  els.forEach(el => io.observer(el));
+  
+  /* AQUI ESTAVA O ERRO DE DIGITAÇÃO! Mudei de "io.observer" para "io.observe" */
+  els.forEach(el => io.observe(el)); 
 }
 
 function setupHeaderScroll() {
@@ -699,9 +701,6 @@ function setupGigiFloat() {
   window.addEventListener("resize", () => { lastY = window.scrollY || 0; offset = 0; velocity = 0; fab.style.transform = "translate3d(0,0,0)"; if (box && box.style.display !== "none") box.style.transform = "translate3d(0,0,0)"; }, { passive: true });
 }
 
-/* =========================================================
-   TRADUTOR DO HTML ESTÁTICO
-   ========================================================= */
 function translateHtmlElements() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
