@@ -55,7 +55,6 @@ body{
 }
 body.is-ready{
   opacity: 1;
-  /* IMPORTANTE: remove transform para não quebrar position:fixed */
   transform: none;
 }
 
@@ -96,7 +95,6 @@ img{max-width:100%;display:block}
   background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.88));
 }
 .header:after{
-  /* Linha inferior com gradiente */
   content:"";
   position:absolute;
   left:0; right:0; bottom:-1px;
@@ -461,7 +459,7 @@ img{max-width:100%;display:block}
 .tip p{margin:0;color:#2d3330;font-weight:800;line-height:1.45}
 
 /* =========================================================
-   CARDS
+   CARDS (AGORA COM FLEXBOX PARA ALINHAR BOTÃO NA BASE)
    ========================================================= */
 .cards{
   display:grid;
@@ -477,6 +475,10 @@ img{max-width:100%;display:block}
   position:relative;
   transition: transform 160ms var(--ease), box-shadow 160ms var(--ease);
   transform: translateY(0);
+  /* Flexbox adicionado para alinhar link no fundo */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .card:hover{
   transform: translateY(-4px);
@@ -506,7 +508,13 @@ img{max-width:100%;display:block}
   box-shadow: 0 14px 26px rgba(71,176,90,.25);
 }
 .card__icon svg{width: 22px;height: 22px;fill:#fff}
-.card__body{padding: 18px 18px 16px}
+.card__body{
+  padding: 18px 18px 16px;
+  /* Flexbox adicionado para preencher todo o espaço restante do card */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 .card__title{margin:2px 0 8px;font-size:22px;font-weight:900}
 .card__desc{margin:0 0 14px;color:var(--muted);font-weight:700;line-height:1.6}
 .card__link{
@@ -515,6 +523,8 @@ img{max-width:100%;display:block}
   align-items:center;
   color:#2f9c49;
   font-weight:900;
+  /* Margin-top: auto empurra o link verde para baixo */
+  margin-top: auto;
 }
 .card__link span{transition: transform 160ms var(--ease)}
 .card__link:hover{ text-decoration: underline; }
