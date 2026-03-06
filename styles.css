@@ -819,7 +819,8 @@ img{max-width:100%;display:block}
   right: 18px;
   bottom: 76px;
   width: min(380px, calc(100vw - 36px));
-  max-height: calc(100vh - 100px); /* PROTEÇÃO DE ALTURA */
+  /* Trava de altura adicionada para o card não estourar a tela */
+  max-height: calc(100vh - 100px); 
   z-index: 2500;
   border-radius: 22px;
   border: 1px solid rgba(0,0,0,.10);
@@ -859,7 +860,8 @@ img{max-width:100%;display:block}
   padding: 12px 12px 14px;
   display:grid;
   gap: 12px;
-  overflow-y: auto; /* Permite scroll se a tela for muito pequena */
+  /* Permite rolar o conteúdo interno caso a tela seja muito pequena */
+  overflow-y: auto; 
 }
 .gigiCard{
   display:flex;
@@ -927,19 +929,19 @@ img{max-width:100%;display:block}
 .gigiSend:active{ transform: translateY(1px); }
 
 /* =========================================================
-   AJUSTES GIGI NO CELULAR (Tudo mais compacto)
+   AJUSTES GIGI NO CELULAR (Tudo mais compacto e seguro)
    ========================================================= */
 @media (max-width: 560px){
   .gigiBox{ 
     bottom: 74px; 
     right: 12px;
     width: calc(100vw - 24px); 
-    max-height: calc(100vh - 90px); 
+    max-height: calc(100vh - 90px); /* Garante que nunca exceda a tela */
   }
   .gigiBox__body { padding: 10px; gap: 8px; }
   .gigiForm { gap: 8px; }
-  .gigiForm label { font-size: 12px; }
-  .gigiForm input, .gigiForm textarea { padding: 8px 10px; }
+  .gigiForm label { font-size: 12px; margin-bottom: -2px; display: inline-block; }
+  .gigiForm input, .gigiForm textarea { padding: 8px 10px; font-size: 13px;}
   .gigiForm textarea { min-height: 54px; }
   .gigiCard { padding: 8px; gap: 10px; }
   .gigiCard__img { width: 46px; height: 46px; border-radius: 14px; }

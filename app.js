@@ -31,14 +31,27 @@ const DICT = {
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
   tip_title: { pt: "Dica da Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
   
-  /* =========================================================
-     DICAS ALEATÓRIAS DA CAPI
-     ========================================================= */
+  /* 20 DICAS ALEATÓRIAS DA CAPI */
   tip_text_0: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
   tip_text_1: { pt: "Não deixe de provar o pastel de camarão em um dos restaurantes à beira da lagoa, é imperdível!", en: "Be sure to try the shrimp pastel at one of the lakeside restaurants, it's a must!", es: "No dejes de probar el pastel de camarones en uno de los restaurantes junto a la laguna, ¡es imperdible!" },
   tip_text_2: { pt: "O pôr do sol visto da parte oeste da ilha rende as melhores fotos para o seu Instagram.", en: "The sunset viewed from the west side of the island makes for the best Instagram photos.", es: "El atardecer visto desde el lado oeste de la isla rinde las mejores fotos para tu Instagram." },
-  tip_text_3: { pt: "Use sapatos confortáveis! A ilha não tem carros e as ruelas são um charme para explorar a pé.", en: "Wear comfortable shoes! The island has no cars and the narrow streets are charming to explore on foot.", es: "¡Usa zapatos cómodos! La isla no tiene autos y las callejuelas son un encanto para explorar a pie." },
+  tip_text_3: { pt: "Use sapatos confortáveis! A ilha não tem carros e as ruelas de pedra são um charme para explorar a pé.", en: "Wear comfortable shoes! The island has no cars and the stone streets are charming to explore on foot.", es: "¡Usa zapatos cómodos! La isla no tiene autos y las calles de piedra son un encanto para explorar a pie." },
   tip_text_4: { pt: "Fique de olho nas árvores! É muito comum avistar micos, garças e até jacarés no passeio de barco.", en: "Keep an eye on the trees! It's very common to spot marmosets, herons, and even alligators on the boat tour.", es: "¡Mantente atento a los árboles! Es muy común avistar titíes, garzas y hasta caimanes en el paseo en barco." },
+  tip_text_5: { pt: "A balsa principal funciona 24 horas por dia, então não se preocupe com o horário de volta!", en: "The main ferry operates 24 hours a day, so don't worry about the time you return!", es: "El ferry principal funciona las 24 horas del día, ¡así que no te preocupes por la hora de regreso!" },
+  tip_text_6: { pt: "Traga dinheiro em espécie; embora a maioria dos lugares aceite cartão, as balsas pequenas geralmente cobram em dinheiro.", en: "Bring some cash; although most places accept cards, small ferries usually charge in cash.", es: "Lleva dinero en efectivo; aunque la mayoría acepta tarjetas, los ferris pequeños suelen cobrar en efectivo." },
+  tip_text_7: { pt: "Explore os becos sem saída! Eles muitas vezes escondem pequenos ateliês de arte e cafés charmosos.", en: "Explore the dead-end alleys! They often hide small art studios and charming cafes.", es: "¡Explora los callejones sin salida! A menudo esconden pequeños estudios de arte y cafés encantadores." },
+  tip_text_8: { pt: "O passeio até a Praia da Barra saindo de barco da ilha é uma experiência rápida e super relaxante.", en: "Taking a boat from the island to Barra Beach is a quick and super relaxing experience.", es: "Tomar un barco desde la isla hasta la Playa de Barra es una experiencia rápida y súper relajante." },
+  tip_text_9: { pt: "Experimente a moqueca de frutos do mar, um dos pratos mais tradicionais dos restaurantes locais.", en: "Try the seafood moqueca, one of the most traditional dishes in local restaurants.", es: "Prueba la moqueca de mariscos, uno de los platos más tradicionales de los restaurantes locales." },
+  tip_text_10: { pt: "Alugue uma prancha de Stand Up Paddle (SUP) no início da manhã para explorar os canais com tranquilidade.", en: "Rent a Stand Up Paddleboard (SUP) early in the morning to explore the canals peacefully.", es: "Alquila una tabla de Stand Up Paddle (SUP) temprano en la mañana para explorar los canales tranquilamente." },
+  tip_text_11: { pt: "Não esqueça o repelente! Por ser cercada de natureza e água, os mosquitos costumam aparecer no fim do dia.", en: "Don't forget mosquito repellent! Surrounded by nature and water, mosquitoes appear in the late afternoon.", es: "¡No olvides el repelente! Al estar rodeada de naturaleza y agua, los mosquitos aparecen al atardecer." },
+  tip_text_12: { pt: "A ilha é 'pet friendly'! A maioria dos restaurantes e pousadas adora receber cachorros.", en: "The island is 'pet-friendly'! Most restaurants and inns love welcoming dogs.", es: "¡La isla es 'pet-friendly'! A la mayoría de los restaurantes y posadas les encanta recibir perros." },
+  tip_text_13: { pt: "Quer um passeio romântico? Contrate um barco privado no fim de tarde e leve um bom vinho para brindar na lagoa.", en: "Want a romantic outing? Hire a private boat in the late afternoon and bring a good wine to toast on the lagoon.", es: "¿Quieres un paseo romántico? Contrata un barco privado al atardecer y lleva un buen vino para brindar en la laguna." },
+  tip_text_14: { pt: "Evite saltos altos. Como não há asfalto, o ideal é usar chinelo ou tênis para andar por aqui.", en: "Avoid high heels. Since there's no asphalt, flip-flops or sneakers are ideal for walking around here.", es: "Evita los tacones altos. Como no hay asfalto, lo ideal son chanclas o zapatillas para caminar por aquí." },
+  tip_text_15: { pt: "Bater papo com os barqueiros rende as melhores histórias e lendas urbanas sobre a fundação da ilha.", en: "Chatting with the boatmen yields the best urban legends and stories about the island's foundation.", es: "Charlar con los barqueros rinde las mejores leyendas urbanas e historias sobre la fundación de la isla." },
+  tip_text_16: { pt: "Aos finais de semana, chegue mais cedo para garantir as melhores mesas na beira da água para o almoço.", en: "On weekends, arrive early to secure the best waterside tables for lunch.", es: "Los fines de semana, llega temprano para asegurar las mejores mesas junto al agua para el almuerzo." },
+  tip_text_17: { pt: "Leve uma câmera ou deixe o celular com bateria cheia; há belos murais de grafite escondidos pelas ruelas.", en: "Bring a camera or ensure your phone is fully charged; there are beautiful graffiti murals hidden in the alleys.", es: "Lleva una cámara o asegúrate de tener batería en el celular; hay hermosos murales de graffiti escondidos en las callejuelas." },
+  tip_text_18: { pt: "Respeite o sossego dos moradores. A Ilha da Gigóia é conhecida e amada por sua paz e tranquilidade.", en: "Respect the residents' peace. Gigóia Island is known and loved for its peace and tranquility.", es: "Respeta la paz de los residentes. La Isla de Gigóia es conocida y amada por su paz y tranquilidad." },
+  tip_text_19: { pt: "Se for fazer as trilhas ecológicas, não esqueça o protetor solar, um boné e uma garrafa de água gelada!", en: "If you're taking the ecological trails, don't forget sunscreen, a cap, and a bottle of cold water!", es: "Si vas a hacer los senderos ecológicos, ¡no olvides protector solar, una gorra y una botella de agua fría!" },
 
   hm_c1_t: { pt: "Passeios de Barco", en: "Boat Tours", es: "Paseos en Barco" },
   hm_c1_d: { pt: "Navegue pelas águas calmas e descubra paisagens deslumbrantes", en: "Sail the calm waters and discover breathtaking landscapes", es: "Navega por las aguas tranquilas y descubre paisajes impresionantes" },
@@ -65,6 +78,29 @@ const DICT = {
   ilha_c4_t: { pt: "Melhor época", en: "Best time to visit", es: "Mejor época" },
   ilha_c4_d: { pt: "Clima, horários e dicas para aproveitar o dia inteiro.", en: "Climate, schedules, and tips to enjoy the whole day.", es: "Clima, horarios y consejos para disfrutar todo el día." },
   ilha_c4_l: { pt: "Planejar", en: "Plan", es: "Planificar" },
+
+  /* NOVOS TEXTOS DAS 4 PÁGINAS INTERNAS */
+  pg_cc_h1: { pt: "Como Chegar", en: "How to get there", es: "Cómo llegar" },
+  pg_cc_p: { pt: "Passo a passo simples para você desembarcar no paraíso ecológico.", en: "Simple step-by-step for you to land in the ecological paradise.", es: "Paso a paso sencillo para que desembarques en el paraíso ecológico." },
+  cc_h2: { pt: "Metrô e Balsa", en: "Subway and Ferry", es: "Metro y Ferry" },
+  cc_p1: { pt: "A forma mais fácil é ir de metrô até a estação Jardim Oceânico (Saída Lagoa). Caminhe até o pequeno cais entre os prédios na Avenida Armando Lombardi e pegue uma balsa ou barquinho que faz a travessia em poucos minutos. O valor da balsa costuma ser pago em dinheiro vivo.", en: "The easiest way is to take the subway to Jardim Oceânico station (Lagoa Exit). Walk to the small pier between the buildings on Avenida Armando Lombardi and take a ferry or small boat that makes the crossing in a few minutes. The ferry fare is usually paid in cash.", es: "La forma más fácil es tomar el metro hasta la estación Jardim Oceânico (Salida Lagoa). Camina hasta el pequeño muelle entre los edificios en la Avenida Armando Lombardi y toma un ferry o bote pequeño que hace el cruce en pocos minutos. La tarifa del ferry suele pagarse en efectivo." },
+
+  pg_hc_h1: { pt: "História & Cultura", en: "History & Culture", es: "Historia y Cultura" },
+  pg_hc_p: { pt: "Conheça as raízes da Ilha da Gigóia e seu charme boêmio.", en: "Discover the roots of Gigóia Island and its bohemian charm.", es: "Descubre las raíces de la Isla Gigóia y su encanto bohemio." },
+  hc_h2: { pt: "De vila de pescadores a polo turístico", en: "From fishing village to tourist hub", es: "De pueblo de pescadores a polo turístico" },
+  hc_p1: { pt: "Originalmente habitada por pescadores, a Ilha da Gigóia preserva seu clima de interior mesmo estando no coração da Barra da Tijuca. Sem ruas asfaltadas ou carros, a ilha cresceu de forma orgânica e se tornou um refúgio boêmio, repleto de artistas, ateliês escondidos pelas ruelas e excelentes restaurantes de frutos do mar.", en: "Originally inhabited by fishermen, Gigóia Island preserves its small-town vibe even in the heart of Barra da Tijuca. With no paved streets or cars, the island grew organically and became a bohemian refuge, full of artists, studios hidden in the alleys, and excellent seafood restaurants.", es: "Originalmente habitada por pescadores, la Isla Gigóia conserva su ambiente de pueblo incluso en el corazón de Barra da Tijuca. Sin calles pavimentadas ni autos, la isla creció orgánicamente y se convirtió en un refugio bohemio, lleno de artistas, estudios escondidos en los callejones y excelentes restaurantes de mariscos." },
+
+  pg_bp_h1: { pt: "Boas Práticas", en: "Best Practices", es: "Buenas Prácticas" },
+  pg_bp_p: { pt: "Ajude a preservar este paraíso ecológico e respeite a comunidade local.", en: "Help preserve this ecological paradise and respect the local community.", es: "Ayuda a preservar este paraíso ecológico y respeta a la comunidad local." },
+  bp_h2: { pt: "Dicas para um passeio consciente", en: "Tips for an eco-friendly tour", es: "Consejos para un paseo consciente" },
+  bp_li1: { pt: "Não jogue lixo na lagoa ou nas ruas de pedra. Guarde seu lixo até a lixeira mais próxima.", en: "Do not throw trash in the lagoon or on the cobblestone streets. Keep it until the nearest bin.", es: "No arrojes basura en la laguna ni en las calles empedradas. Guárdala hasta el basurero más cercano." },
+  bp_li2: { pt: "Respeite a privacidade e o sossego dos moradores (evite som alto e gritos nas ruas estreitas).", en: "Respect the privacy and peace of residents (avoid loud music and shouting in narrow streets).", es: "Respeta la privacidad y tranquilidad de los residentes (evita música alta y gritos en calles estrechas)." },
+  bp_li3: { pt: "Dê preferência aos barqueiros locais cadastrados e leve sempre dinheiro trocado.", en: "Give preference to registered local boatmen and always bring small change.", es: "Da preferencia a los barqueros locales registrados y lleva siempre cambio." },
+
+  pg_me_h1: { pt: "Melhor Época", en: "Best Time to Visit", es: "Mejor Época" },
+  pg_me_p: { pt: "Descubra qual estação do ano combina mais com o seu roteiro.", en: "Discover which season best suits your itinerary.", es: "Descubre qué estación se adapta mejor a tu itinerario." },
+  me_h2: { pt: "O ano todo é incrível!", en: "All year round is amazing!", es: "¡Todo el año es increíble!" },
+  me_p1: { pt: "Por estar no Rio de Janeiro, a ilha é ótima o ano todo. No verão (Dezembro a Março), o clima é ideal para curtir os bares e um chope gelado na lagoa. No outono e inverno (Abril a Agosto), as temperaturas mais amenas deixam as caminhadas e trilhas ecológicas muito mais confortáveis. Dica de ouro: Chegue sempre por volta das 16h para não perder o pôr do sol mágico!", en: "Being in Rio, the island is great year-round. In summer (Dec-Mar), it's ideal for enjoying bars and cold beer. In autumn/winter (Apr-Aug), milder temperatures make walking and trails comfortable. Golden tip: Always arrive around 4 PM to not miss the magical sunset!", es: "Al estar en Río, la isla es genial todo el año. En verano (Dic-Mar), es ideal para disfrutar de los bares y una cerveza fría. En otoño/invierno (Abr-Ago), las temperaturas suaves hacen que caminar y los senderos sean cómodos. Consejo de oro: ¡Llega siempre a las 16:00 para el mágico atardecer!" },
 
   pass_c1_t: { pt: "Roteiro clássico de barco", en: "Classic boat tour", es: "Ruta clásica en barco" },
   pass_c1_d: { pt: "Passeio leve, paisagens e paradas para fotos.", en: "Light tour, landscapes, and photo stops.", es: "Paseo ligero, paisajes y paradas para fotos." },
@@ -226,7 +262,6 @@ const SITE = {
     capiImg: "assets/capi.png",
     capiTag: t("capi_tag"),
     title: t("tip_title"),
-    /* O texto estático foi removido para usar o sorteio no JavaScript */
   },
   homeCards: [
     { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
@@ -235,11 +270,12 @@ const SITE = {
     { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
   ],
   pages: {
+    /* LINKS CORRIGIDOS PARA AS NOVAS PÁGINAS CRIADAS! */
     "a-ilha": [
-      { title:t("ilha_c1_t"), desc:t("ilha_c1_d"), linkLabel:t("ilha_c1_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
-      { title:t("ilha_c2_t"), desc:t("ilha_c2_d"), linkLabel:t("ilha_c2_l"), href:"o-que-fazer.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:t("ilha_c3_t"), desc:t("ilha_c3_d"), linkLabel:t("ilha_c3_l"), href:"o-que-fazer.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
-      { title:t("ilha_c4_t"), desc:t("ilha_c4_d"), linkLabel:t("ilha_c4_l"), href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("ilha_c1_t"), desc:t("ilha_c1_d"), linkLabel:t("ilha_c1_l"), href:"como-chegar.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("ilha_c2_t"), desc:t("ilha_c2_d"), linkLabel:t("ilha_c2_l"), href:"historia-cultura.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("ilha_c3_t"), desc:t("ilha_c3_d"), linkLabel:t("ilha_c3_l"), href:"boas-praticas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("ilha_c4_t"), desc:t("ilha_c4_d"), linkLabel:t("ilha_c4_l"), href:"melhor-epoca.html", img:"assets/card-comer.jpg", icon:"fork" },
     ],
     "passeios-rotas": [
       { title:t("pass_c1_t"), desc:t("pass_c1_d"), linkLabel:t("pass_c1_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
@@ -427,10 +463,9 @@ function mountHome() {
   const tipTitle = document.getElementById("tipTitle");
   if (tipTitle) tipTitle.textContent = SITE.tip.title;
 
-  /* Sorteador de Dicas da Capi */
   const tipText = document.getElementById("tipText");
   if (tipText) {
-    const tipsArray = ["tip_text_0", "tip_text_1", "tip_text_2", "tip_text_3", "tip_text_4"];
+    const tipsArray = Array.from({length: 20}, (_, i) => "tip_text_" + i);
     const randomTipKey = tipsArray[Math.floor(Math.random() * tipsArray.length)];
     tipText.textContent = " " + t(randomTipKey);
   }
