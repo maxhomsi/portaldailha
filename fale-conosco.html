@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fale Conosco | Portal Ilha da Gigóia</title>
+
+  <meta name="description" content="Entre em contato com o Portal Ilha da Gigóia para tirar dúvidas, anunciar seu negócio ou sugerir parcerias comerciais." />
+  <meta name="keywords" content="contato Ilha da Gigóia, anunciar Ilha da Gigóia, parcerias, turismo RJ" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fale Conosco | Portal Ilha da Gigóia" />
+  <meta property="og:description" content="Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós." />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/fale-conosco.html" />
+
+  <link rel="stylesheet" href="styles.css" />
+  
+  <style>
+    /* Estilo atualizado para a nova imagem da Gigi na mesa */
+    .contato-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+    .contato-form {
+      flex: 1 1 400px;
+    }
+    .contato-img {
+      flex: 1 1 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gigi-mesa {
+      width: 100%;
+      max-width: 450px; /* Aumentei um pouco para valorizar a mesa e a máquina de escrever */
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.12)); /* Sombra suave para dar profundidade à imagem sem fundo */
+    }
+    
+    @media (max-width: 768px) {
+      .contato-wrapper {
+        flex-direction: column;
+      }
+      .gigi-mesa {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body data-page="fale-conosco">
+  <div class="progress" id="progress"></div>
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container">
+        <h1 class="reveal" data-i18n="pg_fale_h1">Fale Conosco</h1>
+        <p class="reveal" data-i18n="pg_fale_p">Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="card reveal" style="padding: 40px; max-width: 950px; margin: 0 auto;">
+          
+          <div class="contato-wrapper">
+            <div class="contato-img">
+               <img src="assets/gigi_faleconosco.png" alt="Gigi escrevendo na máquina de escrever" class="gigi-mesa" />
+            </div>
+
+            <div class="contato-form">
+              <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin-top:0; margin-bottom:24px;" data-i18n="fc_intro">
+                Estamos aqui para ajudar! Se você tem alguma dúvida sobre a ilha, deseja anunciar seu negócio no Portal Ilha da Gigóia ou propor uma parceria comercial, basta preencher o formulário abaixo que retornaremos em breve.
+              </p>
+
+              <form action="https://formsubmit.co/Ilhadagigoiaoficial@gmail.com" method="POST" class="gigiForm">
+                
+                <input type="hidden" name="_subject" value="Novo contato pelo Portal Ilha da Gigóia!">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div style="margin-bottom: 12px;">
+                  <label data-i18n="fc_lbl_name">Seu nome</label>
+                  <input type="text" name="Nome" required />
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label data-i18n="fc_lbl_email">Seu e-mail</label>
+                  <input type="email" name="Email" required />
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label data-i18n="fc_lbl_phone">Telefone para contato</label>
+                  <input type="tel" name="Telefone" required />
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                  <label data-i18n="fc_lbl_msg">Corpo da mensagem</label>
+                  <textarea name="Mensagem" rows="5" required></textarea>
+                </div>
+
+                <button class="btn btn--green" type="submit" style="width: 100%; justify-content: center;" data-i18n="fc_btn_send">
+                  Enviar mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  <div id="gigiWidgetRoot"></div>
+  <script src="app.js"></script>
+</body>
+</html>
