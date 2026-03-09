@@ -20,7 +20,7 @@ const DICT = {
   btn_limpar: { pt: "Limpar", en: "Clear", es: "Limpiar" },
   footer_text: { pt: "Portal Ilha da Gigóia — Termos • Privacidade • Contato", en: "Gigóia Island Portal — Terms • Privacy • Contact", es: "Portal Isla Gigóia — Términos • Privacidad • Contacto" },
 
-  hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
+  hero_pill: { pt: "Portal Official de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
   hero_title_a: { pt: "Descubra o Paraíso Tropical", en: "Discover the Tropical Paradise", es: "Descubre el Paraíso Tropical" },
   hero_title_b: { pt: "da Ilha da Gigóia", en: "of Gigóia Island", es: "de la Isla Gigóia" },
   hero_sub: { pt: "Explore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro", en: "Explore beaches, boat tours, lush nature, and authentic experiences just minutes from Rio de Janeiro", es: "Explora playas, paseos en barco, naturaleza exuberante y experiencias auténticas a solo minutos de Río de Janeiro" },
@@ -72,18 +72,35 @@ const DICT = {
   ilha_c2_t: { pt: "História & Cultura", en: "History & Culture", es: "Historia y Cultura" },
   ilha_c2_d: { pt: "Tradições locais, ambiente tranquilo e charme natural.", en: "Local traditions, peaceful environment, and natural charm.", es: "Tradiciones locales, ambiente tranquilo y encanto natural." },
   ilha_c2_l: { pt: "Ler mais", en: "Read more", es: "Leer más" },
-  ilha_c3_t: { pt: "Boas práticas", en: "Best practices", es: "Buenas prácticas" },
+  ilha_c3_t: { pt: "Boas práticas", en: "Best practices", es: "Buenas práticas" },
   ilha_c3_d: { pt: "Recomendações para curtir com respeito à natureza e aos moradores.", en: "Recommendations for enjoying with respect to nature and residents.", es: "Recomendaciones para disfrutar respetando la naturaleza y a los residentes." },
   ilha_c3_l: { pt: "Conferir", en: "Check it out", es: "Conferir" },
   ilha_c4_t: { pt: "Melhor época", en: "Best time to visit", es: "Mejor época" },
   ilha_c4_d: { pt: "Clima, horários e dicas para aproveitar o dia inteiro.", en: "Climate, schedules, and tips to enjoy the whole day.", es: "Clima, horarios y consejos para disfrutar todo el día." },
   ilha_c4_l: { pt: "Planejar", en: "Plan", es: "Planificar" },
 
-  /* NOVOS TEXTOS DAS 4 PÁGINAS INTERNAS */
+  /* =========================================================
+     ATUALIZAÇÃO PÁGINA "COMO CHEGAR"
+     ========================================================= */
   pg_cc_h1: { pt: "Como Chegar", en: "How to get there", es: "Cómo llegar" },
-  pg_cc_p: { pt: "Passo a passo simples para você desembarcar no paraíso ecológico.", en: "Simple step-by-step for you to land in the ecological paradise.", es: "Paso a paso sencillo para que desembarques en el paraíso ecológico." },
-  cc_h2: { pt: "Metrô e Balsa", en: "Subway and Ferry", es: "Metro y Ferry" },
-  cc_p1: { pt: "A forma mais fácil é ir de metrô até a estação Jardim Oceânico (Saída Lagoa). Caminhe até o pequeno cais entre os prédios na Avenida Armando Lombardi e pegue uma balsa ou barquinho que faz a travessia em poucos minutos. O valor da balsa costuma ser pago em dinheiro vivo.", en: "The easiest way is to take the subway to Jardim Oceânico station (Lagoa Exit). Walk to the small pier between the buildings on Avenida Armando Lombardi and take a ferry or small boat that makes the crossing in a few minutes. The ferry fare is usually paid in cash.", es: "La forma más fácil es tomar el metro hasta la estación Jardim Oceânico (Salida Lagoa). Camina hasta el pequeño muelle entre los edificios en la Avenida Armando Lombardi y toma un ferry o bote pequeño que hace el cruce en pocos minutos. La tarifa del ferry suele pagarse en efectivo." },
+  pg_cc_p: { pt: "O acesso principal é feito por pequenas embarcações que funcionam 24 horas por dia.", en: "Main access is via small boats that operate 24 hours a day.", es: "El acceso principal es mediante pequeñas embarcaciones que funcionas as 24 horas del día." },
+  
+  cc_intro: { pt: "A Ilha da Gigóia está localizada na Barra da Tijuca, no Rio de Janeiro, dentro do complexo de ilhas da Lagoa da Tijuca. Apesar de estar cercada por água, chegar até a ilha é simples e rápido. O acesso principal é feito por pequenas embarcações (barco-táxis ou chalanas) que fazem a travessia entre o continente e a ilha. O trajeto dura apenas alguns minutos e já faz parte da experiência de visitar o local. Os barcos funcionam 24 horas por dia.", en: "Gigóia Island is located in Barra da Tijuca, Rio de Janeiro, within the Lagoa da Tijuca island complex. Despite being surrounded by water, reaching the island is simple and fast. Main access is via small boats (water taxis or chalanas) that cross between the mainland and the island. The journey takes just a few minutes and is already part of the experience. Boats operate 24 hours a day.", es: "La Isla Gigóia está ubicada en Barra da Tijuca, Río de Janeiro, dentro del complejo de islas de la Lagoa da Tijuca. A pesar de estar rodeada de agua, llegar a la isla es sencillo y rápido. El acceso principal es mediante pequeñas embarcaciones (taxis acuáticos o chalanas) que cruzan entre el continente y la isla. El trayecto dura solo unos minutos y ya forma parte de la experiencia. Los barcos funcionan as 24 horas del día." },
+
+  cc_h2_metro: { pt: "Acesso pelo Jardim Oceânico (metrô)", en: "Access via Jardim Oceânico (metro)", es: "Acceso por Jardim Oceânico (metro)" },
+  cc_p_metro: { pt: "Uma das formas mais práticas de chegar é utilizando o metrô até a estação Jardim Oceânico, na Linha 4. Ao sair da estação no sentido Lagoa, o Cais da Gigóia fica a poucos minutos de caminhada. Nesse local funcionam diversos barquinhos que fazem a travessia constante para a ilha. O percurso dura cerca de 2 a 5 minutos. Esse é o acesso mais utilizado por visitantes.", en: "One of the most practical ways to arrive is by using the metro to Jardim Oceânico station, on Line 4. When leaving the station towards Lagoa, the Cais da Gigóia is a few minutes' walk away. Several small boats operate constant crossings to the island there. The journey takes about 2 to 5 minutes. This is the access most used by visitors.", es: "Una de las formas más prácticas de llegar es utilizando el metro hasta la estación Jardim Oceânico, en la Línea 4. Al salir de la estación en sentido Lagoa, el Cais da Gigóia está a pocos minutos a pie. En este lugar funcionan varios botecitos que hacen el cruce constante hacia la isla. El recorrido dura entre 2 y 5 minutos. Este es el acceso más utilizado por los visitantes." },
+
+  cc_h2_estrada: { pt: "Acesso pela Estrada da Barra da Tijuca", en: "Access via Estrada da Barra da Tijuca", es: "Acceso por Estrada da Barra da Tijuca" },
+  cc_p_estrada: { pt: "Também é possível chegar à ilha pela Estrada da Barra da Tijuca 793, onde existem outros pontos de travessia utilizados por moradores e visitantes. Nessa região também operam barcos que fazem o transporte para diferentes pontos da ilha, sendo uma alternativa prática para quem vem de carro pela região da Barra ou do Itanhangá.", en: "It is also possible to reach the island via Estrada da Barra da Tijuca 793, where there are other crossing points used by residents and visitors. Boats also operate in this region, transporting to different points on the island, being a practical alternative for those coming by car through the Barra or Itanhangá region.", es: "También es posible llegar a la isla por Estrada da Barra da Tijuca 793, donde existen otros puntos de cruce utilizados por residentes y visitantes. En esta región también operan barcos que hacen el transporte a diferentes puntos de la isla, siendo una alternativa práctica para quien viene en coche por la región de Barra o del Itanhangá." },
+
+  cc_h2_carro: { pt: "Chegando de carro", en: "Arriving by car", es: "Llegando en coche" },
+  cc_p_carro: { pt: "Quem estiver de carro pode seguir até a região do Jardim Oceânico ou da Estrada da Barra da Tijuca 793. Existem estacionamentos privados e algumas vagas nas ruas próximas aos pontos de travessia. Após estacionar, basta caminhar até o cais e pegar um dos barcos para a ilha.", en: "Those coming by car can follow to the Jardim Oceânico region or Estrada da Barra da Tijuca 793. There are private parking lots and some spaces on the streets near the crossing points. After parking, just walk to the pier and take one of the boats to the island.", es: "Quien venga en coche puede seguir hasta la región de Jardim Oceânico o de Estrada da Barra da Tijuca 793. Existen aparcamientos privados y algunas plazas en las calles cercanas a los puntos de cruce. Después de aparcar, basta con caminar hasta el muelle y tomar uno de los barcos hacia la isla." },
+
+  cc_h2_app: { pt: "Chegando de aplicativo ou táxi", en: "Arriving by app or taxi", es: "Llegando por aplicación o taxi" },
+  cc_p_app: { pt: "Outra opção muito comum é utilizar Uber, 99 ou táxi diretamente até o Cais da Gigóia ou até os pontos de travessia na Estrada da Barra da Tijuca 793.", en: "Another very common option is to use Uber, 99 or a taxi directly to Cais da Gigóia or to the crossing points at Estrada da Barra da Tijuca 793.", es: "Otra opción muy común es utilizar Uber, 99 o taxi directamente hasta el Cais da Gigóia o hasta los puntos de cruce en Estrada da Barra da Tijuca 793." },
+
+  cc_h2_travessia: { pt: "A travessia", en: "The crossing", es: "La travesía" },
+  cc_p_travessia: { pt: "Os barcos fazem a travessia durante o dia e a noite, e o trajeto é rápido, agradável e seguro. Em poucos minutos você chega à Ilha da Gigóia, um lugar conhecido pelo clima tranquilo, pela natureza ao redor e pelos restaurantes e passeios que fazem da ilha um destino especial na Barra da Tijuca.", en: "Boats make the crossing during the day and night, and the journey is fast, pleasant, and safe. In a few minutes you arrive at Gigóia Island, a place known for its peaceful atmosphere, surrounding nature, and the restaurants and tours that make the island a special destination in Barra da Tijuca.", es: "Los barcos hacen el cruce durante el día y la noche, y el trayecto es rápido, agradable y seguro. En pocos minutos llegas a la Isla Gigóia, un lugar conocido por su clima tranquilo, la naturaleza que la rodea y por los restaurantes y paseos que hacen de la isla un destino especial en Barra da Tijuca." },
 
   pg_hc_h1: { pt: "História & Cultura", en: "History & Culture", es: "Historia y Cultura" },
   pg_hc_p: { pt: "Conheça as raízes da Ilha da Gigóia e seu charme boêmio.", en: "Discover the roots of Gigóia Island and its bohemian charm.", es: "Descubre las raíces de la Isla Gigóia y su encanto bohemio." },
@@ -116,7 +133,7 @@ const DICT = {
   pass_c4_l: { pt: "Checklist", en: "Checklist", es: "Checklist" },
 
   com_c1_t: { pt: "Frutos do mar", en: "Seafood", es: "Mariscos" },
-  com_c1_d: { pt: "Os clássicos que você precisa experimentar.", en: "The classics you must try.", es: "Los clásicos que debes probar." },
+  com_c1_d: { pt: "Os clássicos que você precisa experimentar.", en: "The classics you must try.", es: "Los classics que debes probar." },
   com_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
   com_c2_t: { pt: "Bares & pôr do sol", en: "Bars & sunsets", es: "Bares y atardeceres" },
   com_c2_d: { pt: "Clima perfeito pra relaxar no fim do dia.", en: "Perfect vibe to relax at the end of the day.", es: "Ambiente perfecto para relajarse al final del día." },
@@ -270,9 +287,9 @@ const SITE = {
     { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
   ],
   pages: {
-    /* LINKS CORRIGIDOS PARA AS NOVAS PÁGINAS CRIADAS! */
     "a-ilha": [
-      { title:t("ilha_c1_t"), desc:t("ilha_c1_d"), linkLabel:t("ilha_c1_l"), href:"como-chegar.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      /* IMAGEM ATUALIZADA AQUI PARA comochegar.jpg */
+      { title:t("ilha_c1_t"), desc:t("ilha_c1_d"), linkLabel:t("ilha_c1_l"), href:"como-chegar.html", img:"assets/comochegar.jpg", icon:"boat" },
       { title:t("ilha_c2_t"), desc:t("ilha_c2_d"), linkLabel:t("ilha_c2_l"), href:"historia-cultura.html", img:"assets/card-natureza.jpg", icon:"leaf" },
       { title:t("ilha_c3_t"), desc:t("ilha_c3_d"), linkLabel:t("ilha_c3_l"), href:"boas-praticas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
       { title:t("ilha_c4_t"), desc:t("ilha_c4_d"), linkLabel:t("ilha_c4_l"), href:"melhor-epoca.html", img:"assets/card-comer.jpg", icon:"fork" },
