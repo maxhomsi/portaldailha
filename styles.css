@@ -1,124 +1,383 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fale Conosco | Portal Ilha da Gigóia</title>
+/* =========================================================
+   FONTE (Google Fonts)
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
 
-  <meta name="description" content="Entre em contato com o Portal Ilha da Gigóia para tirar dúvidas, anunciar seu negócio ou sugerir parcerias comerciais." />
-  <meta name="keywords" content="contato Ilha da Gigóia, anunciar Ilha da Gigóia, parcerias, turismo RJ" />
-  <meta name="author" content="Portal Ilha da Gigóia" />
-  <meta name="robots" content="index, follow" />
+/* =========================================================
+   VARIÁVEIS (cores, sombras, raios, animações)
+   ========================================================= */
+:root{
+  --green:#47b05a;
+  --green-dark:#3aa44a;
+  --yellow:#f2c200;
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Fale Conosco | Portal Ilha da Gigóia" />
-  <meta property="og:description" content="Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós." />
-  <meta property="og:url" content="https://www.ilhadagigoia.com.br/fale-conosco.html" />
+  --text:#1d2320;
+  --muted:#6b726e;
 
-  <link rel="stylesheet" href="styles.css" />
-  
-  <style>
-    /* Estilo para manter o formulário lado a lado com a Gigi */
-    .contato-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-      justify-content: center;
-    }
-    .contato-form {
-      flex: 1 1 400px;
-    }
-    .contato-img {
-      flex: 1 1 350px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .gigi-mesa {
-      width: 100%;
-      max-width: 450px;
-      /* O blend-mode faz o branco sumir e deixa a imagem transparente */
-      mix-blend-mode: multiply; 
-      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.12));
-    }
-    
-    @media (max-width: 768px) {
-      .contato-wrapper {
-        flex-direction: column;
-      }
-      .gigi-mesa {
-        max-width: 300px;
-      }
-    }
-  </style>
-</head>
+  --bg:#eef7ef;
+  --white:#ffffff;
+  --line: rgba(0,0,0,.08);
 
-<body data-page="fale-conosco">
-  <div class="progress" id="progress"></div>
-  <header class="header" id="siteHeader"></header>
+  --radius-card: 22px;
+  --radius-btn: 12px;
 
-  <main>
-    <section class="pageHead">
-      <div class="container">
-        <h1 class="reveal" data-i18n="pg_fale_h1">Fale Conosco</h1>
-        <p class="reveal" data-i18n="pg_fale_p">Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós.</p>
-      </div>
-    </section>
+  --shadow-card: 0 20px 50px rgba(14, 32, 20, .14);
+  --shadow-soft: 0 14px 28px rgba(14, 32, 20, .10);
 
-    <section class="section" style="padding-top:24px">
-      <div class="container">
-        <div class="card reveal" style="padding: 40px; max-width: 950px; margin: 0 auto;">
-          
-          <div class="contato-wrapper">
-            <div class="contato-img">
-               <img src="assets/gigi_faleconosco.png" alt="Gigi escrevendo na máquina de escrever" class="gigi-mesa" />
-            </div>
+  --max: 1180px;
 
-            <div class="contato-form">
-              <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin-top:0; margin-bottom:24px;" data-i18n="fc_intro">
-                Estamos aqui para ajudar! Se você tem alguma dúvida sobre a ilha, deseja anunciar seu negócio no Portal Ilha da Gigóia ou propor uma parceria comercial, basta preencher o formulário abaixo que retornaremos em breve.
-              </p>
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --t: 240ms;
+}
 
-              <form action="https://formsubmit.co/Ilhadagigoiaoficial@gmail.com" method="POST" class="gigiForm">
-                
-                <input type="hidden" name="_subject" value="Novo contato pelo Portal Ilha da Gigóia!">
-                <input type="hidden" name="_captcha" value="false">
+/* =========================================================
+   RESET/BASE E STICKY FOOTER
+   ========================================================= */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
-                <div style="margin-bottom: 12px;">
-                  <label data-i18n="fc_lbl_name">Seu nome</label>
-                  <input type="text" name="Nome" required />
-                </div>
+body{
+  margin:0;
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  background: var(--bg);
+  overflow-x:hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-                <div style="margin-bottom: 12px;">
-                  <label data-i18n="fc_lbl_email">Seu e-mail</label>
-                  <input type="email" name="Email" required />
-                </div>
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
 
-                <div style="margin-bottom: 12px;">
-                  <label data-i18n="fc_lbl_phone">Telefone para contato</label>
-                  <input type="tel" name="Telefone" required />
-                </div>
+/* PAGE FADE-IN (entrada suave) */
+body{
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 280ms var(--ease), transform 280ms var(--ease);
+}
+body.is-ready{
+  opacity: 1;
+  transform: none;
+}
 
-                <div style="margin-bottom: 16px;">
-                  <label data-i18n="fc_lbl_msg">Corpo da mensagem</label>
-                  <textarea name="Mensagem" rows="5" required></textarea>
-                </div>
+a{color:inherit;text-decoration:none}
 
-                <button class="btn btn--green" type="submit" style="width: 100%; justify-content: center;" data-i18n="fc_btn_send">
-                  Enviar mensagem
-                </button>
-              </form>
-            </div>
-          </div>
+/* CORREÇÃO DO FUNDO BRANCO NAS IMAGENS */
+img{
+  max-width:100%;
+  display:block;
+  background: transparent !important;
+  border: none !important;
+}
 
-        </div>
-      </div>
-    </section>
-  </main>
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 22px;
+}
 
-  <footer class="footer" id="siteFooter"></footer>
-  <div id="gigiWidgetRoot"></div>
-  <script src="app.js"></script>
-</body>
-</html>
+/* BARRA DE PROGRESSO */
+.progress{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green), var(--yellow));
+  z-index: 2000;
+  transition: width 80ms linear;
+}
+
+/* =========================================================
+   HEADER + NAV
+   ========================================================= */
+.header{
+  overflow: visible;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255,255,255,.92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.88));
+}
+.header:after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height:2px;
+  background: linear-gradient(90deg, rgba(71,176,90,.70), rgba(242,194,0,.70));
+  opacity:.65;
+}
+.header.is-scrolled{
+  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+}
+.header__inner{
+  min-height: 100px;
+  padding: 10px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  position:relative;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 14px; 
+  flex-shrink: 0; 
+  text-decoration: none;
+  background: transparent !important;
+}
+.brand__logo{
+  width: 88px; 
+  height: 88px;
+  object-fit: contain;
+  background: transparent !important;
+}
+.brand__text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding: 2px 0 6px;
+}
+.brand__text small{
+  display:block;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+  color:#2c7e55;
+  margin: 0 0 2px 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.brand__text strong{
+  display: flex; 
+  align-items: baseline;
+  gap: 6px;
+  font-size: 26px;
+  font-weight: 900;
+  color:#1f5f88;
+  line-height: 1;
+  white-space: nowrap; 
+}
+.brand__text strong span{ color:#3aa44a; }
+
+.navWrap{
+  display:flex;
+  align-items:center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: linear-gradient(90deg, rgba(71,176,90,.10), rgba(242,194,0,.08));
+  box-shadow: 0 18px 36px rgba(0,0,0,.10);
+  backdrop-filter: blur(8px);
+  max-width: 760px;
+  flex-shrink: 1;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  font-weight: 800;
+  color:#2c2f2d;
+  font-size: 15px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  min-width: 0;
+}
+.nav::-webkit-scrollbar{ display:none; }
+.nav a{
+  padding: 10px 10px;
+  border-radius: 999px;
+  transition: background var(--t) var(--ease), transform var(--t) var(--ease);
+  flex: 0 0 auto;
+  position: relative;
+}
+.nav a:hover{ background: rgba(71,176,90,.10); transform: translateY(-1px); }
+.nav a[aria-current="page"]{ background: rgba(71,176,90,.14); }
+.nav a[aria-current="page"]::after{
+  content:"";
+  position:absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green), var(--yellow));
+  opacity: .95;
+}
+
+.header__actions{ display:flex; align-items:center; gap:10px; flex-shrink: 0; }
+
+/* BOTÕES */
+.btn{
+  height: 46px;
+  padding: 0 18px;
+  border-radius: var(--radius-btn);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-weight: 900;
+  border: 1px solid rgba(0,0,0,.10);
+  background: #fff;
+  cursor:pointer;
+  user-select:none;
+  transition: transform 120ms var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease);
+}
+.btn:active{transform: translateY(1px)}
+.btn--green{
+  border-color: transparent;
+  background: var(--green);
+  color:#fff;
+  box-shadow: 0 14px 26px rgba(71,176,90,.25);
+}
+.btn--green:hover{
+  background: var(--green-dark);
+  box-shadow: 0 18px 34px rgba(71,176,90,.30);
+  transform: translateY(-1px);
+}
+.btn--gray{
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.38);
+  color:#fff;
+  box-shadow: 0 14px 26px rgba(0,0,0,.12);
+}
+.btn--gray:hover{ background: rgba(255,255,255,.26); transform: translateY(-1px); }
+
+.burger{ display:none; width: 46px;height: 46px; border-radius: var(--radius-btn); border: 1px solid rgba(0,0,0,.10); background:#fff; font-size: 20px; }
+
+/* Menu mobile */
+.mobileNav{ display:none; padding: 12px 0 18px; border-top: 1px solid var(--line); }
+.mobileNav__inner{display:grid;gap:8px}
+.mobileNav a{ padding: 12px 12px; border-radius: 12px; font-weight: 900; transition: background var(--t) var(--ease), transform var(--t) var(--ease); }
+.mobileNav a:hover{ background: rgba(71,176,90,.10); transform: translateY(-1px); }
+
+/* HERO */
+.hero{ position: relative; height: 620px; overflow:hidden; background: #151a17; }
+.hero__bg{ position:absolute; inset:0; background-size: cover; background-position: center; transform: scale(1.05); will-change: transform; }
+.hero__overlay{ position:absolute; inset:0; background: radial-gradient(1200px 600px at 50% 45%, rgba(0,0,0,.18), rgba(0,0,0,.74)), linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.58)); }
+.hero__content{ position: relative; padding: 92px 0 60px; text-align:center; color:#fff; }
+.pill{ display:inline-flex; align-items:center; gap:10px; padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.24); font-weight: 800; color: rgba(255,255,255,.92); }
+.pill .dot{ width: 10px;height: 10px;border-radius: 999px; background: #ffd400; box-shadow: 0 0 0 4px rgba(255,212,0,.22); }
+.hero h1{ margin: 26px auto 12px; max-width: 980px; font-size: 66px; line-height: 1.02; font-weight: 900; letter-spacing: -0.02em; text-shadow: 0 10px 26px rgba(0,0,0,.35); }
+.hero h1 .accent{color: var(--yellow)}
+.hero p{ margin: 12px auto 26px; max-width: 900px; font-size: 20px; line-height: 1.6; color: rgba(255,255,255,.90); text-shadow: 0 10px 24px rgba(0,0,0,.35); }
+.hero__actions{ display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:22px; }
+.hero__foot{ margin-top: 18px; display:flex; gap:10px; justify-content:center; align-items:center; color: rgba(255,255,255,.82); font-weight: 800; }
+.hero__foot .check{ width: 18px;height: 18px;border-radius: 999px; background: rgba(255,255,255,.22); display:inline-flex; align-items:center; justify-content:center; }
+
+/* SEÇÕES */
+.section{ padding: 70px 0 78px; background: var(--bg); }
+.section__title{ text-align:center; font-size: 54px; letter-spacing: -0.02em; margin: 0 0 10px; font-weight: 900; color:#2c2f2d; }
+.section__subtitle{ text-align:center; color: var(--muted); font-size: 18px; margin: 0 0 34px; font-weight: 800; }
+
+/* DICA DO CAPI */
+.tipRow{ display:flex; justify-content:center; align-items:center; gap: 18px; margin: 10px 0 40px; flex-wrap:wrap; }
+.capi{ display:flex; flex-direction:column; align-items:center; gap:10px; margin-right:6px; }
+.capi__ring{ width: 100px; height: 100px; border-radius: 50%; background: #fff; display:flex; align-items:center; justify-content:center; border: 6px solid rgba(71,176,90,.18); box-shadow: var(--shadow-soft); overflow: hidden; }
+.capi__ring img{ width: 100%; height: 100%; object-fit: cover; }
+.capi__tag{ background: var(--green); color:#fff; font-weight: 900; padding: 8px 14px; border-radius: 999px; box-shadow: 0 12px 22px rgba(71,176,90,.18); font-size: 14px; }
+.tip{ position: relative; max-width: 660px; background: #fff; border-radius: 14px; padding: 18px 18px; border: 2px solid rgba(71,176,90,.18); box-shadow: var(--shadow-soft); }
+.tip:before{ content:""; position:absolute; left: -12px; top: 36px; width: 18px;height: 18px; transform: rotate(45deg); background:#fff; border-left: 2px solid rgba(71,176,90,.18); border-bottom: 2px solid rgba(71,176,90,.18); }
+.tip strong{color:#2f9c49;font-weight:900}
+.tip .bulb{ display:inline-flex; width: 30px;height: 30px;border-radius: 999px; background: rgba(242,194,0,.18); align-items:center; justify-content:center; margin-right: 8px; vertical-align: middle; }
+.tip p{margin:0;color:#2d3330;font-weight:800;line-height:1.45}
+
+/* CARDS */
+.cards{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; }
+.card{ background: var(--white); border-radius: var(--radius-card); box-shadow: var(--shadow-card); overflow:hidden; border: 1px solid rgba(0,0,0,.06); position:relative; transition: transform 160ms var(--ease), box-shadow 160ms var(--ease); transform: translateY(0); display: flex; flex-direction: column; height: 100%; }
+.card:hover{ transform: translateY(-4px); box-shadow: 0 26px 56px rgba(14,32,20,.18); }
+.card__img{ height: 210px; position:relative; overflow:hidden; background: #dfeee2; }
+.card__img img{ width:100%;height:100%; object-fit: cover; transform: scale(1.06); transition: transform 500ms var(--ease); }
+.card:hover .card__img img{ transform: scale(1.12); }
+.card__icon{ position:absolute; left: 16px;top: 16px; width: 46px;height: 46px;border-radius: 999px; background: var(--green); display:flex; align-items:center; justify-content:center; box-shadow: 0 14px 26px rgba(71,176,90,.25); }
+.card__icon svg{width: 22px;height: 22px;fill:#fff}
+.card__body{ padding: 18px 18px 16px; display: flex; flex-direction: column; flex-grow: 1; }
+.card__title{margin:2px 0 8px;font-size:22px;font-weight:900}
+.card__desc{margin:0 0 14px;color:var(--muted);font-weight:700;line-height:1.6}
+.card__link{ display:inline-flex; gap:10px; align-items:center; color:#2f9c49; font-weight:900; margin-top: auto; }
+.card__link span{transition: transform 160ms var(--ease)}
+.card__link:hover{ text-decoration: underline; }
+.card__link:hover span{ transform: translateX(2px); }
+
+/* PAGE HEAD */
+.pageHead{ padding: 54px 0 14px; background: var(--bg); }
+.pageHead h1{ margin:0; font-size:46px; letter-spacing:-.02em; font-weight:900; }
+.pageHead p{ margin:10px 0 0; color:var(--muted); font-weight:700; font-size:18px; max-width:900px; }
+
+/* =========================================================
+   FALE CONOSCO E GIGI FORM
+   ========================================================= */
+.contato-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; }
+.contato-form { flex: 1 1 400px; }
+.contato-img { flex: 1 1 350px; display: flex; justify-content: center; align-items: center; }
+.gigi-mesa {
+  width: 100%;
+  max-width: 450px;
+  background: transparent !important;
+  mix-blend-mode: multiply; /* Faz o fundo branco sumir na página! */
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.12));
+}
+.gigiForm label { font-weight: 900; font-size: 13px; }
+.gigiForm input, .gigiForm textarea {
+  width: 100%; border-radius: 14px; border: 1px solid rgba(0,0,0,.10); padding: 10px 10px; font-weight: 800; outline: none; background: rgba(255,255,255,.96);
+}
+
+/* WIDGET GIGI (WHATSAPP) */
+.gigiFab{ position: fixed; right: 18px; bottom: 18px; z-index: 2500; will-change: transform; transition: transform 140ms var(--ease); }
+.gigiFab__btn{ display:flex; align-items:center; gap: 12px; padding: 16px 20px; min-height: 58px; border-radius: 999px; border: 1px solid rgba(0,0,0,.10); background: rgba(255,255,255,.94); box-shadow: 0 18px 36px rgba(0,0,0,.12); font-weight: 900; font-size: 16px; cursor:pointer; transition: transform 160ms var(--ease), box-shadow 160ms var(--ease); animation: gigiPulse 2.2s var(--ease) infinite; }
+.gigiFab__btn:hover{ transform: translateY(-2px); box-shadow: 0 24px 50px rgba(0,0,0,.14); animation:none; }
+@keyframes gigiPulse{ 0%{ transform: translateY(0) scale(1); } 50%{ transform: translateY(-2px) scale(1.02); } 100%{ transform: translateY(0) scale(1); } }
+.gigiIcon{font-size:20px; line-height:1;}
+.gigiBox{ position: fixed; right: 18px; bottom: 76px; width: min(380px, calc(100vw - 36px)); max-height: calc(100vh - 100px); z-index: 2500; border-radius: 22px; border: 1px solid rgba(0,0,0,.10); background: rgba(255,255,255,.92); backdrop-filter: blur(12px); box-shadow: 0 24px 60px rgba(0,0,0,.16); display: flex; flex-direction: column; transform-origin: bottom right; animation: gigiPop 220ms var(--ease); }
+@keyframes gigiPop{ from{ opacity:0; transform: translateY(10px) scale(.98); } to{ opacity:1; transform: translateY(0) scale(1); } }
+.gigiBox__top{ display:flex; align-items:center; justify-content:space-between; gap: 10px; padding: 12px 12px; border-bottom: 1px solid rgba(0,0,0,.08); background: linear-gradient(90deg, rgba(71,176,90,.16), rgba(242,194,0,.14)); }
+.gigiBox__title{ display:flex; flex-direction:column; gap:2px; }
+.gigiBox__title strong{ font-weight: 900; }
+.gigiBox__title small{ color: rgba(0,0,0,.58); font-weight: 800; }
+.gigiBox__close{ width: 42px;height: 42px; border-radius: 14px; border: 1px solid rgba(0,0,0,.10); background: rgba(255,255,255,.8); cursor:pointer; font-size: 18px; }
+.gigiBox__body{ padding: 12px 12px 14px; display:grid; gap: 12px; overflow-y: auto; }
+.gigiCard{ display:flex; align-items:center; gap: 12px; padding: 10px 10px; border-radius: 18px; border: 1px solid rgba(0,0,0,.08); background: rgba(255,255,255,.85); box-shadow: 0 10px 22px rgba(0,0,0,.06); }
+.gigiCard__img{ width: 56px; height: 56px; border-radius: 18px; border: 2px dashed rgba(0,0,0,.18); background: rgba(0,0,0,.04); display:flex; align-items:center; justify-content:center; font-weight: 900; color: rgba(0,0,0,.45); }
+.gigiCard__text{ display:grid; gap:2px; }
+.gigiCard__text strong{ font-weight:900; }
+.gigiCard__text small{ color: rgba(0,0,0,.58); font-weight:800; }
+.gigiSend{ height: 44px; border-radius: 14px; border: 1px solid rgba(0,0,0,.10); background: var(--green); color:#fff; font-weight: 900; padding: 0 14px; cursor:pointer; box-shadow: 0 14px 26px rgba(71,176,90,.20); transition: transform 140ms var(--ease); }
+.gigiSend:hover{ background: var(--green-dark); transform: translateY(-1px); }
+
+/* FOOTER */
+.footer{ padding: 26px 0 34px; color: rgba(0,0,0,.55); font-weight: 800; border-top: 1px solid var(--line); background: rgba(255,255,255,.55); flex-shrink: 0; }
+
+/* SCROLL REVEAL */
+.reveal{ opacity: 0; transform: translateY(16px); transition: opacity 500ms var(--ease), transform 500ms var(--ease); will-change: opacity, transform; }
+.reveal.is-in{ opacity: 1; transform: translateY(0); }
+
+/* SELETOR DE IDIOMAS */
+.lang-switcher { height: 46px; padding: 0 12px; border-radius: var(--radius-btn); border: 1px solid rgba(0,0,0,.10); background: #fff; font-family: "Manrope", sans-serif; font-weight: 800; font-size: 14px; color: var(--text); cursor: pointer; outline: none; transition: border-color var(--t) var(--ease); appearance: none; -webkit-appearance: none; }
+.lang-switcher:hover { border-color: var(--green); }
+
+/* RESPONSIVIDADE */
+@media (max-width: 1100px){ .cards{grid-template-columns: repeat(2, minmax(0,1fr));} .hero h1{font-size:56px;} }
+@media (max-width: 960px){ .brand__text strong { font-size: 22px; } .brand__logo { width: 76px; height: 76px; } .nav { gap: 10px; font-size: 14px; } }
+@media (max-width: 860px){
+  .navWrap{display:none;} .burger{display:inline-flex;align-items:center;justify-content:center;}
+  .mobileNav{display:block;} .header__inner{min-height: 80px;} .hero{height:580px;}
+  .hero h1{font-size:46px;} .hero p{font-size:18px;} .section__title{font-size:40px;}
+  .brand__logo { width: 70px; height: 70px; } .brand__text strong { font-size: 20px; }
+  .lang-switcher { height: 40px; padding: 0 8px; font-size: 12px; }
+}
+@media (max-width: 768px){ .contato-wrapper { flex-direction: column; } .gigi-mesa { max-width: 300px; } }
+@media (max-width: 560px){
+  .cards{grid-template-columns: 1fr;} .hero h1{font-size:38px;}
+  .brand__text strong { font-size: 18px; } .brand__logo { width: 64px; height: 64px; }
+  .gigiBox{ bottom: 74px; right: 12px; width: calc(100vw - 24px); max-height: calc(100vh - 90px); }
+}
