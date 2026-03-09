@@ -31,11 +31,16 @@ const DICT = {
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
   tip_title: { pt: "Dica da Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
   
-  /* DICA ATUALIZADA DA PÁGINA DE PASSEIOS COM LINK PARA A GIGI */
+  /* DICAS ESPECÍFICAS DE PÁGINAS COM LINK PARA A GIGI */
   tip_passeios: { 
     pt: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para checar a tábua de marés e as melhores condições para o seu passeio!", 
     en: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to check the tide table and the best conditions for your tour!", 
     es: "¡<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para consultar la tabla de mareas y las mejores condiciones para tu paseo!" 
+  },
+  tip_comer: { 
+    pt: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para fazer a sua reserva e garantir a melhor mesa na beira da lagoa!", 
+    en: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to make your reservation and secure the best table by the lagoon!", 
+    es: "¡<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para hacer tu reserva y asegurar la mejor mesa junto a la laguna!" 
   },
   
   /* 20 DICAS ALEATÓRIAS DA CAPI (HOME) */
@@ -619,9 +624,6 @@ function setupGigiFloat() {
   window.addEventListener("resize", () => { lastY = window.scrollY || 0; offset = 0; velocity = 0; fab.style.transform = "translate3d(0,0,0)"; if (box && box.style.display !== "none") box.style.transform = "translate3d(0,0,0)"; }, { passive: true });
 }
 
-/* =========================================================
-   TRADUTOR (Agora usa innerHTML para permitir o link da Capi)
-   ========================================================= */
 function translateHtmlElements() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
