@@ -16,6 +16,8 @@ const DICT = {
   nav_fazer: { pt: "O que fazer", en: "What to do", es: "Qué hacer" },
   btn_passeios: { pt: "Ver Passeios", en: "View Tours", es: "Ver Paseos" },
   btn_conheca: { pt: "Conheça a Ilha", en: "Discover the Island", es: "Conoce la Isla" },
+  btn_enviar: { pt: "Enviar roteiro", en: "Send itinerary", es: "Enviar itinerario" },
+  btn_limpar: { pt: "Limpar", en: "Clear", es: "Limpiar" },
   footer_text: { pt: "Portal Ilha da Gigóia — Termos • Privacidade • Contato", en: "Gigóia Island Portal — Terms • Privacy • Contact", es: "Portal Isla Gigóia — Términos • Privacidad • Contacto" },
 
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
@@ -29,7 +31,14 @@ const DICT = {
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
   tip_title: { pt: "Dica da Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
   
-  /* 20 DICAS ALEATÓRIAS DA CAPI */
+  /* DICA ATUALIZADA DA PÁGINA DE PASSEIOS COM LINK PARA A GIGI */
+  tip_passeios: { 
+    pt: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para checar a tábua de marés e as melhores condições para o seu passeio!", 
+    en: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to check the tide table and the best conditions for your tour!", 
+    es: "¡<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para consultar la tabla de mareas y las mejores condiciones para tu paseo!" 
+  },
+  
+  /* 20 DICAS ALEATÓRIAS DA CAPI (HOME) */
   tip_text_0: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
   tip_text_1: { pt: "Não deixe de provar o pastel de camarão em um dos restaurantes à beira da lagoa, é imperdível!", en: "Be sure to try the shrimp pastel at one of the lakeside restaurants, it's a must!", es: "No dejes de probar el pastel de camarones en uno de los restaurantes junto a la laguna, ¡es imperdible!" },
   tip_text_2: { pt: "O pôr do sol visto da parte oeste da ilha rende as melhores fotos para o seu Instagram.", en: "The sunset viewed from the west side of the island makes for the best Instagram photos.", es: "El atardecer visto desde el lado oeste de la isla rinde las mejores fotos para tu Instagram." },
@@ -77,24 +86,81 @@ const DICT = {
   ilha_c4_d: { pt: "Clima, horários e dicas para aproveitar o dia inteiro.", en: "Climate, schedules, and tips to enjoy the whole day.", es: "Clima, horarios y consejos para disfrutar todo el día." },
   ilha_c4_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
 
-  /* =========================================================
-     NOVOS CARDS DE PASSEIOS E ROTAS
-     ========================================================= */
+  /* TEXTOS PÁGINAS "A ILHA" */
+  pg_cc_h1: { pt: "Como Chegar", en: "How to get there", es: "Cómo llegar" },
+  pg_cc_p: { pt: "O acesso principal é feito por pequenas embarcações que funcionam 24 horas por dia.", en: "Main access is via small boats that operate 24 hours a day.", es: "El acceso principal es mediante pequeñas embarcaciones que funcionas as 24 horas del día." },
+  cc_intro: { pt: "A Ilha da Gigóia está localizada na Barra da Tijuca, no Rio de Janeiro, dentro do complexo de ilhas da Lagoa da Tijuca. Apesar de estar cercada por água, chegar até a ilha é simples e rápido. O acesso principal é feito por pequenas embarcações (barco-táxis ou chalanas) que fazem a travessia entre o continente e a ilha. O trajeto dura apenas alguns minutos e já faz parte da experiência de visitar o local. Os barcos funcionam 24 horas por dia.", en: "Gigóia Island is located in Barra da Tijuca, Rio de Janeiro, within the Lagoa da Tijuca island complex. Despite being surrounded by water, reaching the island is simple and fast. Main access is via small boats (water taxis or chalanas) that cross between the mainland and the island. The journey takes just a few minutes and is already part of the experience. Boats operate 24 hours a day.", es: "La Isla Gigóia está ubicada en Barra da Tijuca, Río de Janeiro, dentro del complejo de islas de la Lagoa da Tijuca. A pesar de estar rodeada de agua, llegar a la isla es sencillo y rápido. El acceso principal es mediante pequeñas embarcaciones (taxis acuáticos o chalanas) que cruzan entre el continente y la isla. El trayecto dura solo unos minutos y ya forma parte de la experiencia. Los barcos funcionan as 24 horas del día." },
+  cc_h2_metro: { pt: "Acesso pelo Jardim Oceânico (metrô)", en: "Access via Jardim Oceânico (metro)", es: "Acceso por Jardim Oceânico (metro)" },
+  cc_p_metro: { pt: "Uma das formas mais práticas de chegar é utilizando o metrô até a estação Jardim Oceânico, na Linha 4. Ao sair da estação no sentido Lagoa, o Cais da Gigóia fica a poucos minutos de caminhada. Nesse local funcionam diversos barquinhos que fazem a travessia constante para a ilha. O percurso dura cerca de 2 a 5 minutos. Esse é o acesso mais utilizado por visitantes.", en: "One of the most practical ways to arrive is by using the metro to Jardim Oceânico station, on Line 4. When leaving the station towards Lagoa, the Cais da Gigóia is a few minutes' walk away. Several small boats operate constant crossings to the island there. The journey takes about 2 to 5 minutes. This is the access most used by visitors.", es: "Una de las formas más prácticas de llegar es utilizando el metro hasta la estación Jardim Oceânico, en la Línea 4. Al salir de la estación en sentido Lagoa, el Cais da Gigóia está a pocos minutos a pie. En este lugar funcionan varios botecitos que hacen el cruce constante hacia la isla. El recorrido dura entre 2 y 5 minutos. Este es el acceso más utilizado por los visitantes." },
+  cc_h2_estrada: { pt: "Acesso pela Estrada da Barra da Tijuca", en: "Access via Estrada da Barra da Tijuca", es: "Acceso por Estrada da Barra da Tijuca" },
+  cc_p_estrada: { pt: "Também é possível chegar à ilha pela Estrada da Barra da Tijuca 793, onde existem outros pontos de travessia utilizados por moradores e visitantes. Nessa região também operam barcos que fazem o transporte para diferentes pontos da ilha, sendo uma alternativa prática para quem vem de carro pela região da Barra ou do Itanhangá.", en: "It is also possible to reach the island via Estrada da Barra da Tijuca 793, where there are other crossing points used by residents and visitors. Boats also operate in this region, transporting to different points on the island, being a practical alternative for those coming by car through the Barra or Itanhangá region.", es: "También es posible llegar a la isla por Estrada da Barra da Tijuca 793, donde existen otros puntos de cruce utilizados por residentes y visitantes. En esta región también operan barcos que hacen el transporte a diferentes puntos de la isla, siendo una alternativa práctica para quien viene en coche por la región de Barra o del Itanhangá." },
+  cc_h2_carro: { pt: "Chegando de carro", en: "Arriving by car", es: "Llegando en coche" },
+  cc_p_carro: { pt: "Quem estiver de carro pode seguir até a região do Jardim Oceânico ou da Estrada da Barra da Tijuca 793. Existem estacionamentos privados e algumas vagas nas ruas próximas aos pontos de travessia. Após estacionar, basta caminhar até o cais e pegar um dos barcos para a ilha.", en: "Those coming by car can follow to the Jardim Oceânico region or Estrada da Barra da Tijuca 793. There are private parking lots and some spaces on the streets near the crossing points. After parking, just walk to the pier and take one of the boats to the island.", es: "Quien venga en coche puede seguir hasta la región de Jardim Oceânico o de Estrada da Barra da Tijuca 793. Existen aparcamientos privados y algunas plazas en las calles cercanas a los puntos de cruce. Después de aparcar, basta con caminar hasta el muelle y tomar uno de los barcos hacia la isla." },
+  cc_h2_app: { pt: "Chegando de aplicativo ou táxi", en: "Arriving by app or taxi", es: "Llegando por aplicación o taxi" },
+  cc_p_app: { pt: "Outra opção muito comum é utilizar Uber, 99 ou táxi diretamente até o Cais da Gigóia ou até os pontos de travessia na Estrada da Barra da Tijuca 793.", en: "Another very common option is to use Uber, 99 or a taxi directly to Cais da Gigóia or to the crossing points at Estrada da Barra da Tijuca 793.", es: "Otra opción muy común es utilizar Uber, 99 o taxi directamente hasta el Cais da Gigóia o hasta los puntos de cruce en Estrada da Barra da Tijuca 793." },
+  cc_h2_travessia: { pt: "A travessia", en: "The crossing", es: "La travesía" },
+  cc_p_travessia: { pt: "Os barcos fazem a travessia durante o dia e a noite, e o trajeto é rápido, agradável e seguro. Em poucos minutos você chega à Ilha da Gigóia, um lugar conhecido pelo clima tranquilo, pela natureza ao redor e pelos restaurantes e passeios que fazem da ilha um destino especial na Barra da Tijuca.", en: "Boats make the crossing during the day and night, and the journey is fast, pleasant, and safe. In a few minutes you arrive at Gigóia Island, a place known for its peaceful atmosphere, surrounding nature, and the restaurants and tours that make the island a special destination in Barra da Tijuca.", es: "Los barcos hacen el cruce durante el día y la noche, y el trayecto es rápido, agradable y seguro. En pocos minutos llegas a la Isla Gigóia, un lugar conocido por su clima tranquilo, la naturaleza que la rodea y por los restaurantes y paseos que hacen de la isla un destino especial en Barra da Tijuca." },
+
+  pg_hc_h1: { pt: "História & Cultura", en: "History & Culture", es: "Historia y Cultura" },
+  pg_hc_p: { pt: "Conheça as raízes da Ilha da Gigóia e seu charme boêmio.", en: "Discover the roots of Gigóia Island and its bohemian charm.", es: "Descubre las raíces de la Isla Gigóia y su encanto bohemio." },
+  hc_p1: { pt: "A Ilha da Gigóia, localizada na Barra da Tijuca, faz parte do conjunto de ilhas da Lagoa da Tijuca e possui uma história marcada pela relação entre natureza e comunidade.", en: "Gigóia Island, located in Barra da Tijuca, is part of the Lagoa da Tijuca island complex and has a history marked by the relationship between nature and community.", es: "La Isla Gigóia, ubicada en Barra da Tijuca, forma parte del complejo de islas de la Lagoa da Tijuca y tiene una historia marcada por la relación entre la naturaleza y la comunidad." },
+  hc_p2: { pt: "Durante muitos anos, a região era frequentada principalmente por pescadores e moradores que viviam da lagoa e dos recursos naturais ao redor. Aos poucos, pequenas casas começaram a surgir e a ilha foi se transformando em uma comunidade única dentro da cidade do Rio de Janeiro.", en: "For many years, the region was mostly frequented by fishermen and residents who lived off the lagoon and surrounding natural resources. Gradually, small houses began to appear, and the island transformed into a unique community within the city of Rio de Janeiro.", es: "Durante muchos años, la región fue frecuentada principalmente por pescadores y residentes que vivían de la laguna y los recursos naturales circundantes. Poco a poco, comenzaron a aparecer pequeñas casas, y la isla se transformó en una comunidad única dentro de la ciudad de Río de Janeiro." },
+  hc_p3: { pt: "Com o crescimento da Barra da Tijuca ao longo das últimas décadas, a ilha passou a despertar curiosidade de visitantes que buscavam um lugar diferente, mais tranquilo e em contato com a natureza. Restaurantes, bares e pequenos negócios locais começaram a aparecer, trazendo nova vida à região.", en: "With the growth of Barra da Tijuca over the last few decades, the island began to arouse the curiosity of visitors looking for a different, more peaceful place in contact with nature. Restaurants, bars, and small local businesses began to appear, bringing new life to the region.", es: "Con el crecimiento de Barra da Tijuca en las últimas décadas, la isla comenzó a despertar la curiosidad de visitantes que buscaban un lugar diferente, más tranquilo y en contacto con la naturaleza. Restaurantes, bares y pequeños negocios locales comenzaron a aparecer, dando nueva vida a la región." },
+  hc_p4: { pt: "Hoje, a Ilha da Gigóia mistura o charme de uma vila com o movimento de um destino gastronômico. Caminhar por suas ruas estreitas, observar as casas à beira da água e conversar com moradores faz parte da experiência de quem visita o local.", en: "Today, Gigóia Island mixes the charm of a village with the bustle of a gastronomic destination. Walking through its narrow streets, observing the waterside houses, and talking to residents is part of the experience for those who visit the place.", es: "Hoy en día, la Isla Gigóia mezcla el encanto de un pueblo con el movimiento de un destino gastronómico. Caminar por sus estrechas calles, observar las casas junto al agua y conversar con los residentes es parte de la experiencia de quienes visitan el lugar." },
+  hc_p5: { pt: "A cultura da ilha também está ligada ao convívio próximo entre natureza e cidade. Garças, jacarés, capivaras e outras espécies são frequentemente vistas nos canais e manguezais da região, lembrando que o local faz parte de um importante ecossistema da Lagoa da Tijuca.", en: "The island's culture is also linked to the close coexistence between nature and the city. Herons, alligators, capybaras, and other species are frequently seen in the region's canals and mangroves, a reminder that the place is part of an important ecosystem of the Lagoa da Tijuca.", es: "La cultura de la isla también está ligada a la estrecha convivencia entre la naturaleza y la ciudad. Garzas, caimanes, capibaras y otras especies son vistas frecuentemente en los canales y manglares de la región, recordando que el lugar forma parte de un importante ecosistema de la Lagoa da Tijuca." },
+  hc_p6: { pt: "Essa combinação entre história, natureza e vida comunitária é o que torna a Ilha da Gigóia um lugar especial e diferente de qualquer outro ponto da Barra da Tijuca.", en: "This combination of history, nature, and community life is what makes Gigóia Island a special place and different from any other spot in Barra da Tijuca.", es: "Esta combinación de historia, naturaleza y vida comunitaria es lo que hace de la Isla Gigóia un lugar especial y diferente a cualquier otro punto en Barra da Tijuca." },
+
+  pg_bp_h1: { pt: "Boas Práticas", en: "Best Practices", es: "Buenas Prácticas" },
+  pg_bp_p: { pt: "Ajude a preservar este paraíso ecológico e respeite a comunidade local.", en: "Help preserve this ecological paradise and respect the local community.", es: "Ayuda a preservar este paraíso ecológico y respeta a la comunidad local." },
+  bp_intro: { pt: "A Ilha da Gigóia é um lugar especial que combina natureza, comunidade local e turismo. Para que todos possam aproveitar a visita e para preservar o ambiente da ilha, algumas boas práticas são importantes.", en: "Gigóia Island is a special place that combines nature, local community, and tourism. So that everyone can enjoy the visit and to preserve the island's environment, some best practices are important.", es: "La Isla Gigóia es un lugar especial que combina naturaleza, comunidad local y turismo. Para que todos puedan disfrutar de la visita y para preservar el entorno de la isla, algunas buenas prácticas son importantes." },
+  bp_h2_1: { pt: "Respeite a natureza", en: "Respect nature", es: "Respeta la naturaleza" },
+  bp_p_1: { pt: "A região faz parte do ecossistema da Lagoa da Tijuca, que abriga diversas espécies de aves, peixes e outros animais. Durante a visita, evite jogar lixo na água ou nas áreas naturais e ajude a manter o local limpo e preservado.", en: "The region is part of the Lagoa da Tijuca ecosystem, home to several species of birds, fish, and other animals. During your visit, avoid throwing trash in the water or natural areas and help keep the place clean and preserved.", es: "La región forma parte del ecosistema de la Lagoa da Tijuca, que alberga diversas especies de aves, peces y otros animales. Durante su visita, evite arrojar basura al agua o áreas naturales y ayude a mantener el lugar limpio y preservado." },
+  bp_h2_2: { pt: "Valorize os negócios locais", en: "Support local businesses", es: "Valora los negocios locales" },
+  bp_p_2: { pt: "A ilha possui diversos restaurantes, bares e pequenos empreendimentos administrados por moradores. Sempre que possível, valorize o comércio local e aproveite para conhecer a gastronomia e os produtos da região.", en: "The island has several restaurants, bars, and small businesses run by residents. Whenever possible, support local commerce and take the opportunity to discover the region's gastronomy and products.", es: "La isla cuenta con varios restaurantes, bares y pequeños emprendimientos administrados por residentes. Siempre que sea posible, valora el comercio local y aprovecha para conocer la gastronomía y los productos de la región." },
+  bp_h2_3: { pt: "Mantenha o ambiente tranquilo", en: "Keep the environment peaceful", es: "Mantén el ambiente tranquilo" },
+  bp_p_3: { pt: "A Ilha da Gigóia é conhecida pelo clima relaxante e pela atmosfera de vila. Respeite os moradores e evite barulho excessivo, principalmente em áreas residenciais.", en: "Gigóia Island is known for its relaxing climate and village atmosphere. Respect the residents and avoid excessive noise, especially in residential areas.", es: "La Isla Gigóia es conocida por su clima relajante y atmósfera de pueblo. Respeta a los residentes y evita el ruido excesivo, especialmente en áreas residenciales." },
+  bp_h2_4: { pt: "Utilize os pontos de embarque com segurança", en: "Use boarding points safely", es: "Utiliza los puntos de embarque con seguridad" },
+  bp_p_4: { pt: "Ao utilizar os barcos para a travessia, aguarde sua vez de embarcar e siga as orientações dos barqueiros. A travessia é rápida e segura quando realizada com organização e atenção.", en: "When using boats for the crossing, wait your turn to board and follow the boatmen's instructions. The crossing is fast and safe when done with organization and attention.", es: "Al utilizar los barcos para la travesía, espera tu turno para embarcar y sigue las instrucciones de los barqueros. La travesía es rápida y segura cuando se realiza con organización y atención." },
+  bp_h2_5: { pt: "Cuide do lixo", en: "Take care of your trash", es: "Cuida la basura" },
+  bp_p_5: { pt: "Sempre utilize lixeiras ou leve seu lixo com você até encontrar um local adequado para descartá-lo. Pequenas atitudes ajudam a manter a ilha bonita e agradável para todos.", en: "Always use trash cans or take your trash with you until you find a suitable place to dispose of it. Small actions help keep the island beautiful and pleasant for everyone.", es: "Utiliza siempre basureros o lleva tu basura contigo hasta encontrar un lugar adecuado para desecharla. Pequeñas acciones ayudan a mantener la isla hermosa y agradable para todos." },
+
+  pg_me_h1: { pt: "Melhor Época", en: "Best Time to Visit", es: "Mejor Época" },
+  pg_me_p: { pt: "Descubra qual estação do ano combina mais com o seu roteiro.", en: "Discover which season best suits your itinerary.", es: "Descubre qué estación se adapta mejor a tu itinerario." },
+  me_h2: { pt: "O ano todo é incrível!", en: "All year round is amazing!", es: "¡Todo el año es increíble!" },
+  me_p1: { pt: "Por estar no Rio de Janeiro, a ilha é ótima o ano todo. No verão (Dezembro a Março), o clima é ideal para curtir os bares e um chope gelado na lagoa. No outono e inverno (Abril a Agosto), as temperaturas mais amenas deixam as caminhadas e trilhas ecológicas muito mais confortáveis. Dica de ouro: Chegue sempre por volta das 16h para não perder o pôr do sol mágico!", en: "Being in Rio, the island is great year-round. In summer (Dec-Mar), it's ideal for enjoying bars and cold beer. In autumn/winter (Apr-Aug), milder temperatures make walking and trails comfortable. Golden tip: Always arrive around 4 PM to not miss the magical sunset!", es: "Al estar en Río, la isla es genial todo el año. En verano (Dic-Mar), es ideal para disfrutar de los bares y una cerveza fría. En otoño/invierno (Abr-Ago), las temperaturas suaves hacen que caminar y los senderos sean cómodos. Consejo de oro: ¡Llega siempre a las 16:00 para el mágico atardecer!" },
+
+  /* TEXTOS PASSEIOS E ROTAS */
   pass_c1_t: { pt: "Ilhas Tijucas", en: "Tijucas Islands", es: "Islas Tijucas" },
   pass_c1_d: { pt: "Passeio de barco até o arquipélago. Águas cristalinas perfeitas para um mergulho e fotos incríveis.", en: "Boat tour to the archipelago. Crystal clear waters perfect for a swim and incredible photos.", es: "Paseo en barco hasta el archipiélago. Aguas cristalinas perfectas para un chapuzón y fotos increíbles." },
   pass_c1_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
-  
+  pg_it_h1: { pt: "Ilhas Tijucas", en: "Tijucas Islands", es: "Islas Tijucas" },
+  pg_it_p: { pt: "Águas cristalinas e vida marinha a poucos minutos da costa.", en: "Crystal clear waters and marine life just minutes from the coast.", es: "Aguas cristalinas y vida marina a pocos minutos de la costa." },
+  it_h2: { pt: "O Caribe Carioca", en: "The Carioca Caribbean", es: "El Caribe Carioca" },
+  it_p1: { pt: "O arquipélago das Ilhas Tijucas é um paraíso escondido no Rio de Janeiro. O passeio de barco leva você a águas incrivelmente claras, perfeitas para mergulho de flutuação, stand up paddle ou simplesmente para relaxar e tirar fotos deslumbrantes.", en: "The Tijucas Islands archipelago is a hidden paradise in Rio de Janeiro. The boat tour takes you to incredibly clear waters, perfect for snorkeling, stand up paddle boarding, or simply relaxing and taking stunning photos.", es: "El archipiélago de las Islas Tijucas es un paraíso escondido en Río de Janeiro. El paseo en barco lo lleva a aguas increíblemente claras, perfectas para hacer snorkel, stand up paddle o simplemente relajarse y tomar fotos impresionantes." },
+
   pass_c2_t: { pt: "Pantanal Carioca", en: "Pantanal Carioca", es: "Pantanal Carioca" },
   pass_c2_d: { pt: "Explore a rica biodiversidade da lagoa, com observação de aves, jacarés e capivaras em um trajeto relaxante.", en: "Explore the lagoon's rich biodiversity, observing birds, alligators, and capybaras on a relaxing route.", es: "Explora la rica biodiversidad de la laguna, observando aves, caimanes y capibaras en un trayecto relajante." },
   pass_c2_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
-  
+  pg_pc_h1: { pt: "Pantanal Carioca", en: "Pantanal Carioca", es: "Pantanal Carioca" },
+  pg_pc_p: { pt: "Um safári urbano inesquecível pelo complexo de lagoas da Barra.", en: "An unforgettable urban safari through the Barra lagoon complex.", es: "Un safari urbano inolvidable por el complejo de lagunas de Barra." },
+  pc_h2: { pt: "Conexão com a Natureza", en: "Connection with Nature", es: "Conexión con la Naturaleza" },
+  pc_p1: { pt: "Navegar pelo Pantanal Carioca é como entrar em outro mundo. Durante o trajeto pelos canais e manguezais calmos, é comum avistarmos capivaras, jacarés-de-papo-amarelo, garças e diversas outras aves. É um passeio relaxante e educativo para todas as idades.", en: "Sailing through the Pantanal Carioca is like entering another world. During the journey through the calm canals and mangroves, it is common to spot capybaras, broad-snouted caimans, herons, and various other birds. It is a relaxing and educational tour for all ages.", es: "Navegar por el Pantanal Carioca es como entrar en otro mundo. Durante el trayecto por los canales y manglares tranquilos, es común avistar capibaras, caimanes de hocico ancho, garzas y diversas otras aves. Es un paseo relajante y educativo para todas las edades." },
+
   pass_c3_t: { pt: "Reserva", en: "Reserva Beach", es: "Playa Reserva" },
   pass_c3_d: { pt: "Navegue pelos canais até chegar à bela e preservada Praia da Reserva. Um contato imersivo com a natureza.", en: "Sail through the canals until you reach the beautiful and preserved Reserva Beach. Immersive contact with nature.", es: "Navega por los canales hasta llegar a la hermosa y conservada Playa Reserva. Contacto inmersivo con la naturaleza." },
   pass_c3_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
-  
-  pass_c4_t: { pt: "Jet-Ski", en: "Jet-Ski", es: "Jet-Ski" },
-  pass_c4_d: { pt: "Para os aventureiros! Passeios guiados e aluguel de Jet-Ski para explorar a lagoa com muita adrenalina.", en: "For the adventurous! Guided tours and Jet-Ski rentals to explore the lagoon with lots of adrenaline.", es: "¡Para los aventureros! Paseos guiados y alquiler de Jet-Ski para explorar la laguna con mucha adrenalina." },
+  pg_res_h1: { pt: "Praia da Reserva", en: "Reserva Beach", es: "Playa Reserva" },
+  pg_res_p: { pt: "Navegue pelos canais até uma das praias mais limpas e preservadas do Rio.", en: "Sail through the canals to one of the cleanest and most preserved beaches in Rio.", es: "Navega por los canales hasta una de las playas más limpias y preservadas de Río." },
+  res_h2: { pt: "Tranquilidade e Mar", en: "Tranquility and Sea", es: "Tranquilidad y Mar" },
+  res_p1: { pt: "O passeio até a Praia da Reserva oferece o melhor dos dois mundos: a viagem contemplativa pelas águas mansas da lagoa e a chegada em uma extensa faixa de areia branca e mar cristalino, longe da agitação da cidade.", en: "The tour to Reserva Beach offers the best of both worlds: the contemplative journey through the calm waters of the lagoon and the arrival at an extensive strip of white sand and crystal clear sea, far from the hustle and bustle of the city.", es: "El paseo hasta la Playa de la Reserva ofrece lo mejor de ambos mundos: el viaje contemplativo por las aguas tranquilas de la laguna y la llegada a una extensa franja de arena blanca y mar cristalino, lejos del bullicio de la ciudad." },
+
+  pass_c4_t: { pt: "Jet-Ski", en: "Jet-Ski", es: "Moto de Agua" },
+  pass_c4_d: { pt: "Para os aventureiros! Passeios guiados e aluguel de Jet-Ski para explorar a lagoa com muita adrenalina.", en: "For the adventurous! Guided tours and Jet-Ski rentals to explore the lagoon with lots of adrenaline.", es: "¡Para los aventureros! Paseos guiados y alquiler de motos de agua para explorar la laguna con mucha adrenalina." },
   pass_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  pg_js_h1: { pt: "Passeio de Jet-Ski", en: "Jet-Ski Tour", es: "Paseo en Moto de Agua" },
+  pg_js_p: { pt: "Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", en: "Adventure and adrenaline exploring the lagoons at your own pace.", es: "Aventura y adrenalina explorando las lagunas a tu propio ritmo." },
+  js_h2: { pt: "Acelere na Lagoa", en: "Accelerate on the Lagoon", es: "Acelera en la Laguna" },
+  js_p1: { pt: "Para quem busca emoção, o passeio de Jet-Ski é a escolha perfeita. Oferecemos opções de passeios guiados pelos principais pontos do complexo lagunar, garantindo segurança, diversão e uma vista privilegiada da natureza ao redor.", en: "For those looking for thrills, the Jet-Ski tour is the perfect choice. We offer guided tour options through the main points of the lagoon complex, ensuring safety, fun, and a privileged view of the surrounding nature.", es: "Para quienes buscan emoción, el paseo en Moto de Agua es la elección perfecta. Ofrecemos opciones de paseos guiados por los puntos principales del complejo lagunar, garantizando seguridad, diversión y una vista privilegiada de la naturaleza circundante." },
 
   com_c1_t: { pt: "Frutos do mar", en: "Seafood", es: "Mariscos" },
   com_c1_d: { pt: "Os clássicos que você precisa experimentar.", en: "The classics you must try.", es: "Los clásicos que debes probar." },
@@ -169,7 +235,6 @@ const SITE = {
     { href: "o-que-fazer.html", label: t("nav_fazer") },
   ],
   ctas: {
-    /* MUDOU DE "Planeje" para "Ver Passeios" apontando para passeios-rotas.html */
     header: { href: "passeios-rotas.html", label: t("btn_passeios") },
     heroPrimary: { href: "passeios-rotas.html", label: t("btn_passeios") },
     heroSecondary: { href: "a-ilha.html", label: t("btn_conheca") },
@@ -200,7 +265,6 @@ const SITE = {
       { title:t("ilha_c4_t"), desc:t("ilha_c4_d"), linkLabel:t("ilha_c4_l"), href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" },
     ],
     "passeios-rotas": [
-      /* OS 4 NOVOS CARDS DE PASSEIO */
       { title:t("pass_c1_t"), desc:t("pass_c1_d"), linkLabel:t("pass_c1_l"), href:"ilhas-tijucas.html", img:"assets/ilhastijucas.jpg", icon:"boat" },
       { title:t("pass_c2_t"), desc:t("pass_c2_d"), linkLabel:t("pass_c2_l"), href:"pantanal-carioca.html", img:"assets/pantanalcarioca.jpg", icon:"leaf" },
       { title:t("pass_c3_t"), desc:t("pass_c3_d"), linkLabel:t("pass_c3_l"), href:"reserva.html", img:"assets/reserva.jpg", icon:"boat" },
@@ -208,7 +272,7 @@ const SITE = {
     ],
     "comer-beber": [
       { title:t("com_c1_t"), desc:t("com_c1_d"), linkLabel:t("com_c1_l"), href:"passeios-rotas.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:t("com_c2_t"), desc:t("com_c2_d"), linkLabel:t("com_c2_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("com_c2_t"), desc:t("com_c2_d"), linkLabel:t("com_c2_l"), href:"o-que-fazer.html", img:"assets/card-passeios.jpg", icon:"boat" },
       { title:t("com_c3_t"), desc:t("com_c3_d"), linkLabel:t("com_c3_l"), href:"passeios-rotas.html", img:"assets/card-natureza.jpg", icon:"leaf" },
       { title:t("com_c4_t"), desc:t("com_c4_d"), linkLabel:t("com_c4_l"), href:"passeios-rotas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
     ],
@@ -376,7 +440,7 @@ function mountHome() {
   if (tipText) {
     const tipsArray = Array.from({length: 20}, (_, i) => "tip_text_" + i);
     const randomTipKey = tipsArray[Math.floor(Math.random() * tipsArray.length)];
-    tipText.textContent = " " + t(randomTipKey);
+    tipText.innerHTML = " " + t(randomTipKey);
   }
 
   const homeCards = document.getElementById("homeCards");
@@ -555,11 +619,14 @@ function setupGigiFloat() {
   window.addEventListener("resize", () => { lastY = window.scrollY || 0; offset = 0; velocity = 0; fab.style.transform = "translate3d(0,0,0)"; if (box && box.style.display !== "none") box.style.transform = "translate3d(0,0,0)"; }, { passive: true });
 }
 
+/* =========================================================
+   TRADUTOR (Agora usa innerHTML para permitir o link da Capi)
+   ========================================================= */
 function translateHtmlElements() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (DICT[key]) {
-      el.textContent = DICT[key][currentLang] || DICT[key].pt;
+      el.innerHTML = DICT[key][currentLang] || DICT[key].pt;
     }
   });
 }
