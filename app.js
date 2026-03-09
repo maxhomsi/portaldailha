@@ -14,10 +14,8 @@ const DICT = {
   nav_comer: { pt: "Comer & Beber", en: "Food & Drink", es: "Comer y Beber" },
   nav_hospedagem: { pt: "Hospedagem", en: "Accommodation", es: "Alojamiento" },
   nav_fazer: { pt: "O que fazer", en: "What to do", es: "Qué hacer" },
-  btn_planeje: { pt: "Planeje sua Viagem", en: "Plan Your Trip", es: "Planifica tu Viaje" },
+  btn_passeios: { pt: "Ver Passeios", en: "View Tours", es: "Ver Paseos" },
   btn_conheca: { pt: "Conheça a Ilha", en: "Discover the Island", es: "Conoce la Isla" },
-  btn_enviar: { pt: "Enviar roteiro", en: "Send itinerary", es: "Enviar itinerario" },
-  btn_limpar: { pt: "Limpar", en: "Clear", es: "Limpiar" },
   footer_text: { pt: "Portal Ilha da Gigóia — Termos • Privacidade • Contato", en: "Gigóia Island Portal — Terms • Privacy • Contact", es: "Portal Isla Gigóia — Términos • Privacidad • Contacto" },
 
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
@@ -77,78 +75,29 @@ const DICT = {
   ilha_c3_l: { pt: "Conferir", en: "Check it out", es: "Conferir" },
   ilha_c4_t: { pt: "Melhor época", en: "Best time to visit", es: "Mejor época" },
   ilha_c4_d: { pt: "Clima, horários e dicas para aproveitar o dia inteiro.", en: "Climate, schedules, and tips to enjoy the whole day.", es: "Clima, horarios y consejos para disfrutar todo el día." },
-  ilha_c4_l: { pt: "Planejar", en: "Plan", es: "Planificar" },
+  ilha_c4_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
 
-  /* COMO CHEGAR */
-  pg_cc_h1: { pt: "Como Chegar", en: "How to get there", es: "Cómo llegar" },
-  pg_cc_p: { pt: "O acesso principal é feito por pequenas embarcações que funcionam 24 horas por dia.", en: "Main access is via small boats that operate 24 hours a day.", es: "El acceso principal es mediante pequeñas embarcaciones que funcionas as 24 horas del día." },
-  cc_intro: { pt: "A Ilha da Gigóia está localizada na Barra da Tijuca, no Rio de Janeiro, dentro do complexo de ilhas da Lagoa da Tijuca. Apesar de estar cercada por água, chegar até a ilha é simples e rápido. O acesso principal é feito por pequenas embarcações (barco-táxis ou chalanas) que fazem a travessia entre o continente e a ilha. O trajeto dura apenas alguns minutos e já faz parte da experiência de visitar o local. Os barcos funcionam 24 horas por dia.", en: "Gigóia Island is located in Barra da Tijuca, Rio de Janeiro, within the Lagoa da Tijuca island complex. Despite being surrounded by water, reaching the island is simple and fast. Main access is via small boats (water taxis or chalanas) that cross between the mainland and the island. The journey takes just a few minutes and is already part of the experience. Boats operate 24 hours a day.", es: "La Isla Gigóia está ubicada en Barra da Tijuca, Río de Janeiro, dentro del complejo de islas de la Lagoa da Tijuca. A pesar de estar rodeada de agua, llegar a la isla es sencillo y rápido. El acceso principal es mediante pequeñas embarcaciones (taxis acuáticos o chalanas) que cruzan entre el continente y la isla. El trayecto dura solo unos minutos y ya forma parte de la experiencia. Los barcos funcionan as 24 horas del día." },
-  cc_h2_metro: { pt: "Acesso pelo Jardim Oceânico (metrô)", en: "Access via Jardim Oceânico (metro)", es: "Acceso por Jardim Oceânico (metro)" },
-  cc_p_metro: { pt: "Uma das formas mais práticas de chegar é utilizando o metrô até a estação Jardim Oceânico, na Linha 4. Ao sair da estação no sentido Lagoa, o Cais da Gigóia fica a poucos minutos de caminhada. Nesse local funcionam diversos barquinhos que fazem a travessia constante para a ilha. O percurso dura cerca de 2 a 5 minutos. Esse é o acesso mais utilizado por visitantes.", en: "One of the most practical ways to arrive is by using the metro to Jardim Oceânico station, on Line 4. When leaving the station towards Lagoa, the Cais da Gigóia is a few minutes' walk away. Several small boats operate constant crossings to the island there. The journey takes about 2 to 5 minutes. This is the access most used by visitors.", es: "Una de las formas más prácticas de llegar es utilizando el metro hasta la estación Jardim Oceânico, en la Línea 4. Al salir de la estación en sentido Lagoa, el Cais da Gigóia está a pocos minutos a pie. En este lugar funcionan varios botecitos que hacen el cruce constante hacia la isla. El recorrido dura entre 2 y 5 minutos. Este es el acceso más utilizado por los visitantes." },
-  cc_h2_estrada: { pt: "Acesso pela Estrada da Barra da Tijuca", en: "Access via Estrada da Barra da Tijuca", es: "Acceso por Estrada da Barra da Tijuca" },
-  cc_p_estrada: { pt: "Também é possível chegar à ilha pela Estrada da Barra da Tijuca 793, onde existem outros pontos de travessia utilizados por moradores e visitantes. Nessa região também operam barcos que fazem o transporte para diferentes pontos da ilha, sendo uma alternativa prática para quem vem de carro pela região da Barra ou do Itanhangá.", en: "It is also possible to reach the island via Estrada da Barra da Tijuca 793, where there are other crossing points used by residents and visitors. Boats also operate in this region, transporting to different points on the island, being a practical alternative for those coming by car through the Barra or Itanhangá region.", es: "También es posible llegar a la isla por Estrada da Barra da Tijuca 793, donde existen otros puntos de cruce utilizados por residentes y visitantes. En esta región también operan barcos que hacen el transporte a diferentes puntos de la isla, siendo una alternativa práctica para quien viene en coche por la región de Barra o del Itanhangá." },
-  cc_h2_carro: { pt: "Chegando de carro", en: "Arriving by car", es: "Llegando en coche" },
-  cc_p_carro: { pt: "Quem estiver de carro pode seguir até a região do Jardim Oceânico ou da Estrada da Barra da Tijuca 793. Existem estacionamentos privados e algumas vagas nas ruas próximas aos pontos de travessia. Após estacionar, basta caminhar até o cais e pegar um dos barcos para a ilha.", en: "Those coming by car can follow to the Jardim Oceânico region or Estrada da Barra da Tijuca 793. There are private parking lots and some spaces on the streets near the crossing points. After parking, just walk to the pier and take one of the boats to the island.", es: "Quien venga en coche puede seguir hasta la región de Jardim Oceânico o de Estrada da Barra da Tijuca 793. Existen aparcamientos privados y algunas plazas en las calles cercanas a los puntos de cruce. Después de aparcar, basta con caminar hasta el muelle y tomar uno de los barcos hacia la isla." },
-  cc_h2_app: { pt: "Chegando de aplicativo ou táxi", en: "Arriving by app or taxi", es: "Llegando por aplicación o taxi" },
-  cc_p_app: { pt: "Outra opção muito comum é utilizar Uber, 99 ou táxi diretamente até o Cais da Gigóia ou até os pontos de travessia na Estrada da Barra da Tijuca 793.", en: "Another very common option is to use Uber, 99 or a taxi directly to Cais da Gigóia or to the crossing points at Estrada da Barra da Tijuca 793.", es: "Otra opción muy común es utilizar Uber, 99 o taxi directamente hasta el Cais da Gigóia o hasta los puntos de cruce en Estrada da Barra da Tijuca 793." },
-  cc_h2_travessia: { pt: "A travessia", en: "The crossing", es: "La travesía" },
-  cc_p_travessia: { pt: "Os barcos fazem a travessia durante o dia e a noite, e o trajeto é rápido, agradável e seguro. Em poucos minutos você chega à Ilha da Gigóia, um lugar conhecido pelo clima tranquilo, pela natureza ao redor e pelos restaurantes e passeios que fazem da ilha um destino especial na Barra da Tijuca.", en: "Boats make the crossing during the day and night, and the journey is fast, pleasant, and safe. In a few minutes you arrive at Gigóia Island, a place known for its peaceful atmosphere, surrounding nature, and the restaurants and tours that make the island a special destination in Barra da Tijuca.", es: "Los barcos hacen el cruce durante el día y la noche, y el trayecto es rápido, agradable y seguro. En pocos minutos llegas a la Isla Gigóia, un lugar conocido por su clima tranquilo, la naturaleza que la rodea y por los restaurantes y paseos que hacen de la isla un destino especial en Barra da Tijuca." },
-
-  /* HISTORIA & CULTURA */
-  pg_hc_h1: { pt: "História & Cultura", en: "History & Culture", es: "Historia y Cultura" },
-  pg_hc_p: { pt: "Conheça as raízes da Ilha da Gigóia e seu charme boêmio.", en: "Discover the roots of Gigóia Island and its bohemian charm.", es: "Descubre las raíces de la Isla Gigóia y su encanto bohemio." },
-  hc_p1: { pt: "A Ilha da Gigóia, localizada na Barra da Tijuca, faz parte do conjunto de ilhas da Lagoa da Tijuca e possui uma história marcada pela relação entre natureza e comunidade.", en: "Gigóia Island, located in Barra da Tijuca, is part of the Lagoa da Tijuca island complex and has a history marked by the relationship between nature and community.", es: "La Isla Gigóia, ubicada en Barra da Tijuca, forma parte del complejo de islas de la Lagoa da Tijuca y tiene una historia marcada por la relación entre la naturaleza y la comunidad." },
-  hc_p2: { pt: "Durante muitos anos, a região era frequentada principalmente por pescadores e moradores que viviam da lagoa e dos recursos naturais ao redor. Aos poucos, pequenas casas começaram a surgir e a ilha foi se transformando em uma comunidade única dentro da cidade do Rio de Janeiro.", en: "For many years, the region was mostly frequented by fishermen and residents who lived off the lagoon and surrounding natural resources. Gradually, small houses began to appear, and the island transformed into a unique community within the city of Rio de Janeiro.", es: "Durante muchos años, la región fue frecuentada principalmente por pescadores y residentes que vivían de la laguna y los recursos naturales circundantes. Poco a poco, comenzaron a aparecer pequeñas casas, y la isla se transformó en una comunidad única dentro de la ciudad de Río de Janeiro." },
-  hc_p3: { pt: "Com o crescimento da Barra da Tijuca ao longo das últimas décadas, a ilha passou a despertar curiosidade de visitantes que buscavam um lugar diferente, mais tranquilo e em contato com a natureza. Restaurantes, bares e pequenos negócios locais começaram a aparecer, trazendo nova vida à região.", en: "With the growth of Barra da Tijuca over the last few decades, the island began to arouse the curiosity of visitors looking for a different, more peaceful place in contact with nature. Restaurants, bars, and small local businesses began to appear, bringing new life to the region.", es: "Con el crecimiento de Barra da Tijuca en las últimas décadas, la isla comenzó a despertar la curiosidad de visitantes que buscaban un lugar diferente, más tranquilo y en contacto con la naturaleza. Restaurantes, bares y pequeños negocios locales comenzaron a aparecer, dando nueva vida a la región." },
-  hc_p4: { pt: "Hoje, a Ilha da Gigóia mistura o charme de uma vila com o movimento de um destino gastronômico. Caminhar por suas ruas estreitas, observar as casas à beira da água e conversar com moradores faz parte da experiência de quem visita o local.", en: "Today, Gigóia Island mixes the charm of a village with the bustle of a gastronomic destination. Walking through its narrow streets, observing the waterside houses, and talking to residents is part of the experience for those who visit the place.", es: "Hoy en día, la Isla Gigóia mezcla el encanto de un pueblo con el movimiento de un destino gastronómico. Caminar por sus estrechas calles, observar las casas junto al agua y conversar con los residentes es parte de la experiencia de quienes visitan el lugar." },
-  hc_p5: { pt: "A cultura da ilha também está ligada ao convívio próximo entre natureza e cidade. Garças, jacarés, capivaras e outras espécies são frequentemente vistas nos canais e manguezais da região, lembrando que o local faz parte de um importante ecossistema da Lagoa da Tijuca.", en: "The island's culture is also linked to the close coexistence between nature and the city. Herons, alligators, capybaras, and other species are frequently seen in the region's canals and mangroves, a reminder that the place is part of an important ecosystem of the Lagoa da Tijuca.", es: "La cultura de la isla también está ligada a la estrecha convivencia entre la naturaleza y la ciudad. Garzas, caimanes, capibaras y otras especies son vistas frecuentemente en los canales y manglares de la región, recordando que el lugar forma parte de un importante ecosistema de la Lagoa da Tijuca." },
-  hc_p6: { pt: "Essa combinação entre história, natureza e vida comunitária é o que torna a Ilha da Gigóia um lugar especial e diferente de qualquer outro ponto da Barra da Tijuca.", en: "This combination of history, nature, and community life is what makes Gigóia Island a special place and different from any other spot in Barra da Tijuca.", es: "Esta combinación de historia, naturaleza y vida comunitaria es lo que hace de la Isla Gigóia un lugar especial y diferente a cualquier otro punto en Barra da Tijuca." },
-
-  /* BOAS PRÁTICAS */
-  pg_bp_h1: { pt: "Boas Práticas", en: "Best Practices", es: "Buenas Prácticas" },
-  pg_bp_p: { pt: "Ajude a preservar este paraíso ecológico e respeite a comunidade local.", en: "Help preserve this ecological paradise and respect the local community.", es: "Ayuda a preservar este paraíso ecológico y respeta a la comunidad local." },
-  bp_intro: { pt: "A Ilha da Gigóia é um lugar especial que combina natureza, comunidade local e turismo. Para que todos possam aproveitar a visita e para preservar o ambiente da ilha, algumas boas práticas são importantes.", en: "Gigóia Island is a special place that combines nature, local community, and tourism. So that everyone can enjoy the visit and to preserve the island's environment, some best practices are important.", es: "La Isla Gigóia es un lugar especial que combina naturaleza, comunidad local y turismo. Para que todos puedan disfrutar de la visita y para preservar el entorno de la isla, algunas buenas prácticas son importantes." },
-  bp_h2_1: { pt: "Respeite a natureza", en: "Respect nature", es: "Respeta la naturaleza" },
-  bp_p_1: { pt: "A região faz parte do ecossistema da Lagoa da Tijuca, que abriga diversas espécies de aves, peixes e outros animais. Durante a visita, evite jogar lixo na água ou nas áreas naturais e ajude a manter o local limpo e preservado.", en: "The region is part of the Lagoa da Tijuca ecosystem, home to several species of birds, fish, and other animals. During your visit, avoid throwing trash in the water or natural areas and help keep the place clean and preserved.", es: "La región forma parte del ecosistema de la Lagoa da Tijuca, que alberga diversas especies de aves, peces y otros animales. Durante su visita, evite arrojar basura al agua o áreas naturales y ayude a mantener el lugar limpio y preservado." },
-  bp_h2_2: { pt: "Valorize os negócios locais", en: "Support local businesses", es: "Valora los negocios locales" },
-  bp_p_2: { pt: "A ilha possui diversos restaurantes, bares e pequenos empreendimentos administrados por moradores. Sempre que possível, valorize o comércio local e aproveite para conhecer a gastronomia e os produtos da região.", en: "The island has several restaurants, bars, and small businesses run by residents. Whenever possible, support local commerce and take the opportunity to discover the region's gastronomy and products.", es: "La isla cuenta con varios restaurantes, bares y pequeños emprendimientos administrados por residentes. Siempre que sea posible, valora el comercio local y aprovecha para conocer la gastronomía y los productos de la región." },
-  bp_h2_3: { pt: "Mantenha o ambiente tranquilo", en: "Keep the environment peaceful", es: "Mantén el ambiente tranquilo" },
-  bp_p_3: { pt: "A Ilha da Gigóia é conhecida pelo clima relaxante e pela atmosfera de vila. Respeite os moradores e evite barulho excessivo, principalmente em áreas residenciais.", en: "Gigóia Island is known for its relaxing climate and village atmosphere. Respect the residents and avoid excessive noise, especially in residential areas.", es: "La Isla Gigóia es conocida por su clima relajante y atmósfera de pueblo. Respeta a los residentes y evita el ruido excesivo, especialmente en áreas residenciales." },
-  bp_h2_4: { pt: "Utilize os pontos de embarque com segurança", en: "Use boarding points safely", es: "Utiliza los puntos de embarque con seguridad" },
-  bp_p_4: { pt: "Ao utilizar os barcos para a travessia, aguarde sua vez de embarcar e siga as orientações dos barqueiros. A travessia é rápida e segura quando realizada com organização e atenção.", en: "When using boats for the crossing, wait your turn to board and follow the boatmen's instructions. The crossing is fast and safe when done with organization and attention.", es: "Al utilizar los barcos para la travesía, espera tu turno para embarcar y sigue las instrucciones de los barqueros. La travesía es rápida y segura cuando se realiza con organización y atención." },
-  bp_h2_5: { pt: "Cuide do lixo", en: "Take care of your trash", es: "Cuida la basura" },
-  bp_p_5: { pt: "Sempre utilize lixeiras ou leve seu lixo com você até encontrar um local adequado para descartá-lo. Pequenas atitudes ajudam a manter a ilha bonita e agradável para todos.", en: "Always use trash cans or take your trash with you until you find a suitable place to dispose of it. Small actions help keep the island beautiful and pleasant for everyone.", es: "Utiliza siempre basureros o lleva tu basura contigo hasta encontrar un lugar adecuado para desecharla. Pequeñas acciones ayudan a mantener la isla hermosa y agradable para todos." },
-
-  /* MELHOR ÉPOCA */
-  pg_me_h1: { pt: "Melhor Época para Visitar", en: "Best Time to Visit", es: "Mejor Época para Visitar" },
-  pg_me_p: { pt: "Descubra qual estação do ano combina mais com o seu roteiro.", en: "Discover which season best suits your itinerary.", es: "Descubre qué estación se adapta mejor a tu itinerario." },
-  me_intro: { pt: "A Ilha da Gigóia pode ser visitada durante todo o ano. Cada estação tem seu próprio charme e oferece diferentes formas de aproveitar a ilha e a região da Lagoa da Tijuca.", en: "Gigóia Island can be visited all year round. Each season has its own charm and offers different ways to enjoy the island and the Lagoa da Tijuca region.", es: "La Isla Gigóia se puede visitar durante todo el año. Cada estación tiene su propio encanto y ofrece diferentes formas de disfrutar la isla y la región de la Lagoa da Tijuca." },
-  me_h2_verao: { pt: "Verão", en: "Summer", es: "Verano" },
-  me_p_verao: { pt: "Durante o verão, os dias são mais longos e o clima é ideal para aproveitar passeios de barco, caminhar pela ilha e curtir os restaurantes ao ar livre. O movimento costuma ser maior, trazendo um ambiente animado e cheio de visitantes.", en: "During summer, the days are longer and the weather is ideal for enjoying boat tours, walking around the island, and enjoying outdoor restaurants. It is usually busier, bringing a lively atmosphere full of visitors.", es: "Durante el verano, los días son más largos y el clima es ideal para disfrutar de paseos en barco, caminar por la isla y disfrutar de restaurantes al aire libre. Suele haber más movimiento, trayendo un ambiente animado y lleno de visitantes." },
-  me_h2_outono: { pt: "Outono", en: "Autumn", es: "Otoño" },
-  me_p_outono: { pt: "O outono costuma ter temperaturas agradáveis e um clima mais tranquilo. É uma ótima época para quem prefere passear com calma, explorar os canais da ilha e aproveitar a paisagem com menos movimento.", en: "Autumn usually has pleasant temperatures and a calmer climate. It is a great time for those who prefer to walk peacefully, explore the island's canals, and enjoy the landscape with less crowds.", es: "El otoño suele tener temperaturas agradables y un clima más tranquilo. Es una gran época para quienes prefieren pasear con calma, explorar los canales de la isla y disfrutar del paisaje con menos movimiento." },
-  me_h2_inverno: { pt: "Inverno", en: "Winter", es: "Invierno" },
-  me_p_inverno: { pt: "Mesmo nos meses de inverno, o clima na Barra da Tijuca continua ameno na maior parte dos dias. Isso permite aproveitar restaurantes, caminhadas e passeios de barco com conforto, além de admirar a natureza ao redor da lagoa.", en: "Even in the winter months, the weather in Barra da Tijuca remains mild on most days. This allows you to enjoy restaurants, walks, and boat tours in comfort, in addition to admiring the nature around the lagoon.", es: "Incluso en los meses de invierno, el clima en Barra da Tijuca sigue siendo suave la mayor parte de los días. Esto permite disfrutar de restaurantes, caminatas y paseos en barco con comodidad, además de admirar la naturaleza alrededor de la laguna." },
-  me_h2_primavera: { pt: "Primavera", en: "Spring", es: "Primavera" },
-  me_p_primavera: { pt: "Na primavera, a região fica especialmente bonita, com vegetação mais verde e clima agradável. É um ótimo período para quem gosta de fotografar paisagens e aproveitar a atmosfera tranquila da ilha.", en: "In spring, the region is especially beautiful, with greener vegetation and pleasant weather. It is a great time for those who like to photograph landscapes and enjoy the peaceful atmosphere of the island.", es: "En primavera, la región se vuelve especialmente hermosa, con vegetación más verde y un clima agradable. Es una gran época para quienes gustan de fotografiar paisajes y disfrutar del ambiente tranquilo de la isla." },
-  me_h2_ano: { pt: "Um destino para o ano inteiro", en: "A destination for the whole year", es: "Un destino para todo el año" },
-  me_p_ano: { pt: "Independentemente da época escolhida, a Ilha da Gigóia sempre oferece uma combinação especial de natureza, gastronomia e tranquilidade. Por isso, é um destino que pode ser visitado em qualquer momento do ano, seja para um passeio rápido ou para passar o dia explorando seus restaurantes e canais.", en: "Regardless of the chosen season, Gigóia Island always offers a special combination of nature, gastronomy, and tranquility. Therefore, it is a destination that can be visited at any time of the year, whether for a quick tour or to spend the day exploring its restaurants and canals.", es: "Independientemente de la época elegida, la Isla Gigóia siempre ofrece una combinación especial de naturaleza, gastronomía y tranquilidad. Por lo tanto, es un destino que se puede visitar en cualquier momento del año, ya sea para un recorrido rápido o para pasar el día explorando sus restaurantes y canales." },
-
-  pass_c1_t: { pt: "Roteiro clássico de barco", en: "Classic boat tour", es: "Ruta clásica en barco" },
-  pass_c1_d: { pt: "Passeio leve, paisagens e paradas para fotos.", en: "Light tour, landscapes, and photo stops.", es: "Paseo ligero, paisajes y paradas para fotos." },
+  /* =========================================================
+     NOVOS CARDS DE PASSEIOS E ROTAS
+     ========================================================= */
+  pass_c1_t: { pt: "Ilhas Tijucas", en: "Tijucas Islands", es: "Islas Tijucas" },
+  pass_c1_d: { pt: "Passeio de barco até o arquipélago. Águas cristalinas perfeitas para um mergulho e fotos incríveis.", en: "Boat tour to the archipelago. Crystal clear waters perfect for a swim and incredible photos.", es: "Paseo en barco hasta el archipiélago. Aguas cristalinas perfectas para un chapuzón y fotos increíbles." },
   pass_c1_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
-  pass_c2_t: { pt: "Manhã perfeita", en: "Perfect morning", es: "Mañana perfecta" },
-  pass_c2_d: { pt: "Água mais calma e mais chance de ver animais.", en: "Calmer water and better chances of seeing animals.", es: "Agua más tranquila y más posibilidades de ver animales." },
-  pass_c2_l: { pt: "Dicas", en: "Tips", es: "Consejos" },
-  pass_c3_t: { pt: "Pontos instagramáveis", en: "Instagrammable spots", es: "Lugares instagrameables" },
-  pass_c3_d: { pt: "Lugares com luz bonita e ângulos incríveis.", en: "Places with beautiful light and incredible angles.", es: "Lugares con luz hermosa y ángulos increíbles." },
-  pass_c3_l: { pt: "Descobrir", en: "Discover", es: "Descubrir" },
-  pass_c4_t: { pt: "O que levar", en: "What to bring", es: "Qué llevar" },
-  pass_c4_d: { pt: "Protetor, água, chapéu e itens essenciais.", en: "Sunscreen, water, hat, and essential items.", es: "Protector, agua, sombrero y artículos esenciales." },
-  pass_c4_l: { pt: "Checklist", en: "Checklist", es: "Checklist" },
+  
+  pass_c2_t: { pt: "Pantanal Carioca", en: "Pantanal Carioca", es: "Pantanal Carioca" },
+  pass_c2_d: { pt: "Explore a rica biodiversidade da lagoa, com observação de aves, jacarés e capivaras em um trajeto relaxante.", en: "Explore the lagoon's rich biodiversity, observing birds, alligators, and capybaras on a relaxing route.", es: "Explora la rica biodiversidad de la laguna, observando aves, caimanes y capibaras en un trayecto relajante." },
+  pass_c2_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
+  
+  pass_c3_t: { pt: "Reserva", en: "Reserva Beach", es: "Playa Reserva" },
+  pass_c3_d: { pt: "Navegue pelos canais até chegar à bela e preservada Praia da Reserva. Um contato imersivo com a natureza.", en: "Sail through the canals until you reach the beautiful and preserved Reserva Beach. Immersive contact with nature.", es: "Navega por los canales hasta llegar a la hermosa y conservada Playa Reserva. Contacto inmersivo con la naturaleza." },
+  pass_c3_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
+  
+  pass_c4_t: { pt: "Jet-Ski", en: "Jet-Ski", es: "Jet-Ski" },
+  pass_c4_d: { pt: "Para os aventureiros! Passeios guiados e aluguel de Jet-Ski para explorar a lagoa com muita adrenalina.", en: "For the adventurous! Guided tours and Jet-Ski rentals to explore the lagoon with lots of adrenaline.", es: "¡Para los aventureros! Paseos guiados y alquiler de Jet-Ski para explorar la laguna con mucha adrenalina." },
+  pass_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
 
   com_c1_t: { pt: "Frutos do mar", en: "Seafood", es: "Mariscos" },
-  com_c1_d: { pt: "Os clássicos que você precisa experimentar.", en: "The classics you must try.", es: "Los classics que debes probar." },
+  com_c1_d: { pt: "Os clássicos que você precisa experimentar.", en: "The classics you must try.", es: "Los clásicos que debes probar." },
   com_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
   com_c2_t: { pt: "Bares & pôr do sol", en: "Bars & sunsets", es: "Bares y atardeceres" },
   com_c2_d: { pt: "Clima perfeito pra relaxar no fim do dia.", en: "Perfect vibe to relax at the end of the day.", es: "Ambiente perfecto para relajarse al final del día." },
@@ -156,7 +105,7 @@ const DICT = {
   com_c3_t: { pt: "Café e lanches", en: "Coffee and snacks", es: "Café y bocadillos" },
   com_c3_d: { pt: "Paradas rápidas durante o passeio.", en: "Quick stops during the tour.", es: "Paradas rápidas durante el paseo." },
   com_c3_l: { pt: "Dicas", en: "Tips", es: "Consejos" },
-  com_c4_t: { pt: "Para famílias", en: "For families", es: "For families" },
+  com_c4_t: { pt: "Para famílias", en: "For families", es: "Para familias" },
   com_c4_d: { pt: "Locais tranquilos e com boas opções.", en: "Quiet places with good options.", es: "Lugares tranquilos con buenas opciones." },
   com_c4_l: { pt: "Ver", en: "View", es: "Ver" },
 
@@ -171,7 +120,7 @@ const DICT = {
   hosp_c3_l: { pt: "Roteiro", en: "Itinerary", es: "Itinerario" },
   hosp_c4_t: { pt: "Custo-benefício", en: "Cost-benefit", es: "Costo-beneficio" },
   hosp_c4_d: { pt: "Como equilibrar conforto e preço.", en: "How to balance comfort and price.", es: "Cómo equilibrar comodidad y precio." },
-  hosp_c4_l: { pt: "Planejar", en: "Plan", es: "Planificar" },
+  hosp_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
 
   faz_c1_t: { pt: "Passeios de barco", en: "Boat tours", es: "Paseos en barco" },
   faz_c1_d: { pt: "O clássico imperdível para primeiro dia.", en: "The unmissable classic for the first day.", es: "El clásico imperdible para el primer día." },
@@ -179,7 +128,7 @@ const DICT = {
   faz_c2_t: { pt: "Comer bem", en: "Eat well", es: "Comer bien" },
   faz_c2_d: { pt: "Experiências gastronômicas locais.", en: "Local gastronomic experiences.", es: "Experiencias gastronómicas locales." },
   faz_c2_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
-  faz_c3_t: { pt: "Contato com a natureza", en: "Contact with nature", es: "Contacto con la natureza" },
+  faz_c3_t: { pt: "Contato com a natureza", en: "Contact with nature", es: "Contacto con la naturaleza" },
   faz_c3_d: { pt: "Trilhas e observação de fauna.", en: "Trails and wildlife observation.", es: "Senderos y observación de fauna." },
   faz_c3_l: { pt: "Ver seção", en: "View section", es: "Ver sección" },
   faz_c4_t: { pt: "Onde ficar", en: "Where to stay", es: "Dónde alojarse" },
@@ -192,48 +141,6 @@ const DICT = {
   nat_c2_t: { pt: "Observação de aves", en: "Bird watching", es: "Observación de aves" },
   nat_c2_d: { pt: "Melhor horário e onde procurar.", en: "Best times and where to look.", es: "Mejores horarios y dónde buscar." },
   nat_c2_l: { pt: "Descobrir", en: "Discover", es: "Descubrir" },
-
-  plan_o1_t: { pt: "Passeio de barco (clássico)", en: "Boat tour (classic)", es: "Paseo en barco (clásico)" },
-  plan_o1_d: { pt: "Rota leve com paisagens e paradas para fotos.", en: "Light route with landscapes and photo stops.", es: "Ruta ligera con paisajes y paradas para fotos." },
-  plan_o1_c1: { pt: "2h–3h", en: "2h–3h", es: "2h–3h" },
-  plan_o1_c2: { pt: "Barco", en: "Boat", es: "Barco" },
-  plan_o2_t: { pt: "Passeio de barco (manhã cedo)", en: "Boat tour (early morning)", es: "Paseo en barco (temprano)" },
-  plan_o2_d: { pt: "Águas mais calmas e clima perfeito.", en: "Calmer waters and perfect weather.", es: "Aguas más tranquilas y clima perfecto." },
-  plan_o2_c1: { pt: "Manhã", en: "Morning", es: "Mañana" },
-  plan_o3_t: { pt: "Passeio de barco no pôr do sol", en: "Sunset boat tour", es: "Paseo en barco al atardecer" },
-  plan_o3_d: { pt: "Luz linda + vibe relax.", en: "Beautiful light + relaxed vibe.", es: "Luz hermosa + ambiente relajado." },
-  plan_o3_c1: { pt: "Fim de tarde", en: "Late afternoon", es: "Atardecer" },
-  plan_o4_t: { pt: "Natureza & fauna", en: "Nature & wildlife", es: "Naturaleza y fauna" },
-  plan_o4_d: { pt: "Observação de aves e paisagens verdes.", en: "Bird watching and green landscapes.", es: "Observación de aves y paisajes verdes." },
-  plan_o4_c1: { pt: "1h–2h", en: "1h–2h", es: "1h–2h" },
-  plan_o4_c2: { pt: "Natureza", en: "Nature", es: "Naturaleza" },
-  plan_o5_t: { pt: "Trilha leve", en: "Light trail", es: "Sendero ligero" },
-  plan_o5_d: { pt: "Caminhada curta para explorar a natureza.", en: "Short walk to explore nature.", es: "Caminata corta para explorar la naturaleza." },
-  plan_o5_c1: { pt: "Leve", en: "Light", es: "Ligero" },
-  plan_o6_t: { pt: "Caiaque / remo (se disponível)", en: "Kayak / rowing (if available)", es: "Kayak / remo (si está disponible)" },
-  plan_o6_d: { pt: "Atividade na água (opcional).", en: "Water activity (optional).", es: "Actividad acuática (opcional)." },
-  plan_o6_c1: { pt: "1h", en: "1h", es: "1h" },
-  plan_o6_c2: { pt: "Atividade", en: "Activity", es: "Actividad" },
-  plan_o7_t: { pt: "Almoço frutos do mar", en: "Seafood lunch", es: "Almuerzo de mariscos" },
-  plan_o7_d: { pt: "Experiência gastronômica local.", en: "Local gastronomic experience.", es: "Experiencia gastronómica local." },
-  plan_o7_c2: { pt: "Gastronomia", en: "Gastronomy", es: "Gastronomía" },
-  plan_o8_t: { pt: "Café e lanches", en: "Coffee and snacks", es: "Café y bocadillos" },
-  plan_o8_d: { pt: "Parada rápida para recarregar.", en: "Quick stop to recharge.", es: "Parada rápida para recargar." },
-  plan_o8_c1: { pt: "Rápido", en: "Quick", es: "Rápido" },
-  plan_o9_t: { pt: "Bares & drinks", en: "Bars & drinks", es: "Bares y bebidas" },
-  plan_o9_d: { pt: "Perfeito para curtir a noite.", en: "Perfect for enjoying the night.", es: "Perfecto para disfrutar la noche." },
-  plan_o9_c1: { pt: "Noite", en: "Night", es: "Noche" },
-  plan_o10_t: { pt: "Pontos instagramáveis", en: "Instagrammable spots", es: "Lugares instagrameables" },
-  plan_o10_d: { pt: "Paradas para fotos com ângulos e luz boa.", en: "Photo stops with good angles and light.", es: "Paradas para fotos con buenos ángulos y luz." },
-  plan_o10_c1: { pt: "Fotos", en: "Photos", es: "Fotos" },
-  plan_o11_t: { pt: "Relax / descanso", en: "Relax / rest", es: "Relax / descanso" },
-  plan_o11_d: { pt: "Tempo livre para explorar sem pressa.", en: "Free time to explore without rushing.", es: "Tiempo libre para explorar sin prisas." },
-  plan_o11_c1: { pt: "Livre", en: "Free", es: "Libre" },
-  plan_o11_c2: { pt: "Relax", en: "Relax", es: "Relax" },
-  plan_o12_t: { pt: "Passeio família", en: "Family tour", es: "Paseo familiar" },
-  plan_o12_d: { pt: "Opções tranquilas, bom para crianças.", en: "Quiet options, good for children.", es: "Opciones tranquilas, buenas para niños." },
-  plan_o12_c1: { pt: "2h", en: "2h", es: "2h" },
-  plan_o12_c2: { pt: "Família", en: "Family", es: "Familia" },
 
   gigi_fab: { pt: "Fale com a Gigi", en: "Talk to Gigi", es: "Habla con Gigi" },
   gigi_hello: { pt: "Olá, me chamo Gigi!", en: "Hi, I'm Gigi!", es: "¡Hola, soy Gigi!" },
@@ -262,8 +169,9 @@ const SITE = {
     { href: "o-que-fazer.html", label: t("nav_fazer") },
   ],
   ctas: {
-    header: { href: "planeje.html", label: t("btn_planeje") },
-    heroPrimary: { href: "planeje.html", label: t("btn_planeje") },
+    /* MUDOU DE "Planeje" para "Ver Passeios" apontando para passeios-rotas.html */
+    header: { href: "passeios-rotas.html", label: t("btn_passeios") },
+    heroPrimary: { href: "passeios-rotas.html", label: t("btn_passeios") },
     heroSecondary: { href: "a-ilha.html", label: t("btn_conheca") },
   },
   hero: {
@@ -292,22 +200,23 @@ const SITE = {
       { title:t("ilha_c4_t"), desc:t("ilha_c4_d"), linkLabel:t("ilha_c4_l"), href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" },
     ],
     "passeios-rotas": [
-      { title:t("pass_c1_t"), desc:t("pass_c1_d"), linkLabel:t("pass_c1_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
-      { title:t("pass_c2_t"), desc:t("pass_c2_d"), linkLabel:t("pass_c2_l"), href:"index.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:t("pass_c3_t"), desc:t("pass_c3_d"), linkLabel:t("pass_c3_l"), href:"o-que-fazer.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:t("pass_c4_t"), desc:t("pass_c4_d"), linkLabel:t("pass_c4_l"), href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      /* OS 4 NOVOS CARDS DE PASSEIO */
+      { title:t("pass_c1_t"), desc:t("pass_c1_d"), linkLabel:t("pass_c1_l"), href:"ilhas-tijucas.html", img:"assets/ilhastijucas.jpg", icon:"boat" },
+      { title:t("pass_c2_t"), desc:t("pass_c2_d"), linkLabel:t("pass_c2_l"), href:"pantanal-carioca.html", img:"assets/pantanalcarioca.jpg", icon:"leaf" },
+      { title:t("pass_c3_t"), desc:t("pass_c3_d"), linkLabel:t("pass_c3_l"), href:"reserva.html", img:"assets/reserva.jpg", icon:"boat" },
+      { title:t("pass_c4_t"), desc:t("pass_c4_d"), linkLabel:t("pass_c4_l"), href:"jet-ski.html", img:"assets/jetski.jpg", icon:"boat" },
     ],
     "comer-beber": [
-      { title:t("com_c1_t"), desc:t("com_c1_d"), linkLabel:t("com_c1_l"), href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:t("com_c2_t"), desc:t("com_c2_d"), linkLabel:t("com_c2_l"), href:"o-que-fazer.html", img:"assets/card-passeios.jpg", icon:"boat" },
-      { title:t("com_c3_t"), desc:t("com_c3_d"), linkLabel:t("com_c3_l"), href:"planeje.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:t("com_c4_t"), desc:t("com_c4_d"), linkLabel:t("com_c4_l"), href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("com_c1_t"), desc:t("com_c1_d"), linkLabel:t("com_c1_l"), href:"passeios-rotas.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("com_c2_t"), desc:t("com_c2_d"), linkLabel:t("com_c2_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("com_c3_t"), desc:t("com_c3_d"), linkLabel:t("com_c3_l"), href:"passeios-rotas.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("com_c4_t"), desc:t("com_c4_d"), linkLabel:t("com_c4_l"), href:"passeios-rotas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
     ],
     "hospedagem": [
-      { title:t("hosp_c1_t"), desc:t("hosp_c1_d"), linkLabel:t("hosp_c1_l"), href:"planeje.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
-      { title:t("hosp_c2_t"), desc:t("hosp_c2_d"), linkLabel:t("hosp_c2_l"), href:"o-que-fazer.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:t("hosp_c3_t"), desc:t("hosp_c3_d"), linkLabel:t("hosp_c3_l"), href:"planeje.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:t("hosp_c4_t"), desc:t("hosp_c4_d"), linkLabel:t("hosp_c4_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("hosp_c1_t"), desc:t("hosp_c1_d"), linkLabel:t("hosp_c1_l"), href:"passeios-rotas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("hosp_c2_t"), desc:t("hosp_c2_d"), linkLabel:t("hosp_c2_l"), href:"passeios-rotas.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+      { title:t("hosp_c3_t"), desc:t("hosp_c3_d"), linkLabel:t("hosp_c3_l"), href:"passeios-rotas.html", img:"assets/card-comer.jpg", icon:"fork" },
+      { title:t("hosp_c4_t"), desc:t("hosp_c4_d"), linkLabel:t("hosp_c4_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
     ],
     "o-que-fazer": [
       { title:t("faz_c1_t"), desc:t("faz_c1_d"), linkLabel:t("faz_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
@@ -317,22 +226,8 @@ const SITE = {
     ],
   },
   naturezaCards: [
-    { title:t("nat_c1_t"), desc:t("nat_c1_d"), linkLabel:t("nat_c1_l"), href:"planeje.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-    { title:t("nat_c2_t"), desc:t("nat_c2_d"), linkLabel:t("nat_c2_l"), href:"planeje.html", img:"assets/card-passeios.jpg", icon:"boat" },
-  ],
-  plannerOptions: [
-    { id:"boat-classic", title:t("plan_o1_t"), desc:t("plan_o1_d"), chips:[t("plan_o1_c1"), t("plan_o1_c2")] },
-    { id:"boat-sunrise", title:t("plan_o2_t"), desc:t("plan_o2_d"), chips:[t("plan_o2_c1"), t("plan_o1_c2")] },
-    { id:"boat-sunset", title:t("plan_o3_t"), desc:t("plan_o3_d"), chips:[t("plan_o3_c1"), t("plan_o1_c2")] },
-    { id:"wildlife", title:t("plan_o4_t"), desc:t("plan_o4_d"), chips:[t("plan_o4_c1"), t("plan_o4_c2")] },
-    { id:"trail", title:t("plan_o5_t"), desc:t("plan_o5_d"), chips:[t("plan_o5_c1"), t("plan_o4_c2")] },
-    { id:"kayak", title:t("plan_o6_t"), desc:t("plan_o6_d"), chips:[t("plan_o6_c1"), t("plan_o6_c2")] },
-    { id:"food-sea", title:t("plan_o7_t"), desc:t("plan_o7_d"), chips:[t("plan_o4_c1"), t("plan_o7_c2")] },
-    { id:"coffee", title:t("plan_o8_t"), desc:t("plan_o8_d"), chips:[t("plan_o8_c1"), t("plan_o7_c2")] },
-    { id:"bars", title:t("plan_o9_t"), desc:t("plan_o9_d"), chips:[t("plan_o9_c1"), t("plan_o7_c2")] },
-    { id:"photos", title:t("plan_o10_t"), desc:t("plan_o10_d"), chips:[t("plan_o6_c1"), t("plan_o10_c1")] },
-    { id:"relax", title:t("plan_o11_t"), desc:t("plan_o11_d"), chips:[t("plan_o11_c1"), t("plan_o11_c2")] },
-    { id:"family", title:t("plan_o12_t"), desc:t("plan_o12_d"), chips:[t("plan_o12_c1"), t("plan_o12_c2")] },
+    { title:t("nat_c1_t"), desc:t("nat_c1_d"), linkLabel:t("nat_c1_l"), href:"passeios-rotas.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+    { title:t("nat_c2_t"), desc:t("nat_c2_d"), linkLabel:t("nat_c2_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
   ],
 };
 
@@ -497,95 +392,6 @@ function mountPageCards(pageKey) {
 function mountNatureCards() {
   const box = document.getElementById("natureCards");
   if (box) box.innerHTML = SITE.naturezaCards.map((c,i)=>cardHtml(c,i)).join("");
-}
-
-function mountPlanner() {
-  const form = document.getElementById("plannerForm");
-  const optionsBox = document.getElementById("plannerOptions");
-  const feedback = document.getElementById("planFeedback");
-  const clearBtn = document.getElementById("clearPlan");
-
-  if (!form || !optionsBox || !feedback) return;
-  const options = SITE.plannerOptions || [];
-
-  optionsBox.innerHTML = options.map((opt) => {
-    return `
-      <label class="plannerOpt" data-opt="${opt.id}">
-        <input type="checkbox" name="opt" value="${opt.id}" />
-        <div class="plannerOpt__body">
-          <p class="plannerOpt__title">${opt.title}</p>
-          <p class="plannerOpt__desc">${opt.desc}</p>
-          <div class="plannerOpt__meta">
-            ${(opt.chips || []).map(ch => `<span class="plannerOpt__chip">${ch}</span>`).join("")}
-          </div>
-        </div>
-      </label>
-    `;
-  }).join("");
-
-  function syncCheckedStyles() {
-    optionsBox.querySelectorAll(".plannerOpt").forEach(label => {
-      const input = label.querySelector("input[type='checkbox']");
-      label.classList.toggle("is-checked", !!input?.checked);
-    });
-  }
-  optionsBox.addEventListener("change", syncCheckedStyles);
-
-  clearBtn?.addEventListener("click", () => {
-    optionsBox.querySelectorAll("input[type='checkbox']").forEach(i => i.checked = false);
-    syncCheckedStyles();
-    feedback.innerHTML = ``;
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const selectedIds = Array.from(optionsBox.querySelectorAll("input[type='checkbox']:checked")).map(i => i.value);
-    if (!selectedIds.length) {
-      feedback.innerHTML = `<div class="planMsg planMsg--error">⚠️ Selecione pelo menos uma opção.</div>`;
-      return;
-    }
-    const selected = options.filter(o => selectedIds.includes(o.id));
-    openPhoneModal(selected);
-  });
-  syncCheckedStyles();
-}
-
-function openPhoneModal(selectedOptions) {
-  const overlay = document.createElement("div");
-  overlay.className = "planModalOverlay";
-  overlay.innerHTML = `
-    <div class="planModal" role="dialog" aria-modal="true">
-      <div class="planModal__top">
-        <strong>${t("btn_enviar")}</strong>
-        <button class="planModal__close" type="button" aria-label="Fechar">✕</button>
-      </div>
-      <div class="planModal__body">
-        <p>${t("pg_plan_p")}</p>
-        <input id="planPhone" type="tel" placeholder="Ex: +55 21 99999-9999" />
-        <button class="btn btn--green" id="planPhoneSend" type="button">${t("btn_enviar")}</button>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(overlay);
-
-  const closeBtn = overlay.querySelector(".planModal__close");
-  const sendBtn = overlay.querySelector("#planPhoneSend");
-  const phoneInput = overlay.querySelector("#planPhone");
-
-  function close() { overlay.remove(); }
-  closeBtn?.addEventListener("click", close);
-  overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
-
-  sendBtn?.addEventListener("click", () => {
-    const phone = String(phoneInput?.value || "").trim();
-    if (!phone) { phoneInput?.focus(); return; }
-    const list = selectedOptions.map(o => `• ${o.title}`).join("\n");
-    const msg = `Olá! Recebemos um pedido de roteiro (Portal Ilha da Gigóia).\n\nTelefone do visitante: ${phone}\n\nOpções selecionadas:\n${list}\n\nPor favor, enviar roteiro completo com preços e opções.`;
-    const url = `https://wa.me/${WHATSAPP.toNumber}?text=${encodeURIComponent(msg)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-    close();
-  });
-  setTimeout(() => phoneInput?.focus(), 80);
 }
 
 function mountGigiWidget() {
@@ -766,7 +572,6 @@ function translateHtmlElements() {
   if (page === "home") mountHome();
   if (page && SITE.pages[page]) mountPageCards(page);
   if (page === "o-que-fazer") mountNatureCards();
-  if (page === "planeje") mountPlanner();
 
   mountGigiWidget();
   setupGigiFloat();
