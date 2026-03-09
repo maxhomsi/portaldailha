@@ -29,7 +29,9 @@ const DICT = {
   sect_espera_sub: { pt: "Da natureza exuberante aos passeios de barco, cada momento é uma nova descoberta", en: "From lush nature to boat tours, every moment is a new discovery", es: "Desde la exuberante naturaleza hasta los paseos en barco, cada momento es un nuevo descobrimento" },
 
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
-  tip_title: { pt: "Dica da Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
+  
+  /* CORRIGIDO PARA "Dica do Capi" */
+  tip_title: { pt: "Dica do Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
   
   /* DICAS ESPECÍFICAS DE PÁGINAS COM LINK PARA A GIGI */
   tip_passeios: { 
@@ -112,7 +114,7 @@ const DICT = {
   hc_p2: { pt: "Durante muitos anos, a região era frequentada principalmente por pescadores e moradores que viviam da lagoa e dos recursos naturais ao redor. Aos poucos, pequenas casas começaram a surgir e a ilha foi se transformando em uma comunidade única dentro da cidade do Rio de Janeiro.", en: "For many years, the region was mostly frequented by fishermen and residents who lived off the lagoon and surrounding natural resources. Gradually, small houses began to appear, and the island transformed into a unique community within the city of Rio de Janeiro.", es: "Durante muchos años, la región fue frecuentada principalmente por pescadores y residentes que vivían de la laguna y los recursos naturales circundantes. Poco a poco, comenzaron a aparecer pequeñas casas, y la isla se transformó en una comunidad única dentro de la ciudad de Río de Janeiro." },
   hc_p3: { pt: "Com o crescimento da Barra da Tijuca ao longo das últimas décadas, a ilha passou a despertar curiosidade de visitantes que buscavam um lugar diferente, mais tranquilo e em contato com a natureza. Restaurantes, bares e pequenos negócios locais começaram a aparecer, trazendo nova vida à região.", en: "With the growth of Barra da Tijuca over the last few decades, the island began to arouse the curiosity of visitors looking for a different, more peaceful place in contact with nature. Restaurants, bars, and small local businesses began to appear, bringing new life to the region.", es: "Con el crecimiento de Barra da Tijuca en las últimas décadas, la isla comenzó a despertar la curiosidad de visitantes que buscaban un lugar diferente, más tranquilo y en contacto con la naturaleza. Restaurantes, bares y pequeños negocios locales comenzaron a aparecer, dando nueva vida a la región." },
   hc_p4: { pt: "Hoje, a Ilha da Gigóia mistura o charme de uma vila com o movimento de um destino gastronômico. Caminhar por suas ruas estreitas, observar as casas à beira da água e conversar com moradores faz parte da experiência de quem visita o local.", en: "Today, Gigóia Island mixes the charm of a village with the bustle of a gastronomic destination. Walking through its narrow streets, observing the waterside houses, and talking to residents is part of the experience for those who visit the place.", es: "Hoy en día, la Isla Gigóia mezcla el encanto de un pueblo con el movimiento de un destino gastronómico. Caminar por sus estrechas calles, observar las casas junto al agua y conversar con los residentes es parte de la experiencia de quienes visitan el lugar." },
-  hc_p5: { pt: "A cultura da ilha também está ligada ao convívio próximo entre natureza e cidade. Garças, jacarés, capivaras e outras espécies são frequentemente vistas nos canais e manguezais da região, lembrando que o local faz parte de um importante ecossistema da Lagoa da Tijuca.", en: "The island's culture is also linked to the close coexistence between nature and the city. Herons, alligators, capybaras, and other species are frequently seen in the region's canals and mangroves, a reminder that the place is part of an important ecosystem of the Lagoa da Tijuca.", es: "La cultura de la isla también está ligada a la estrecha convivencia entre la naturaleza y la ciudad. Garzas, caimanes, capibaras y otras especies son vistas frecuentemente en los canales y manglares de la región, recordando que el lugar forma parte de un importante ecosistema de la Lagoa da Tijuca." },
+  hc_p5: { pt: "A cultura da ilha também está ligado ao convívio próximo entre natureza e cidade. Garças, jacarés, capivaras e outras espécies são frequentemente vistas nos canais e manguezais da região, lembrando que o local faz parte de um importante ecossistema da Lagoa da Tijuca.", en: "The island's culture is also linked to the close coexistence between nature and the city. Herons, alligators, capybaras, and other species are frequently seen in the region's canals and mangroves, a reminder that the place is part of an important ecosystem of the Lagoa da Tijuca.", es: "La cultura de la isla también está ligada a la estrecha convivencia entre la naturaleza y la ciudad. Garzas, caimanes, capibaras y otras especies son vistas frecuentemente en los canales y manglares de la región, recordando que el lugar forma parte de un importante ecosistema de la Lagoa da Tijuca." },
   hc_p6: { pt: "Essa combinação entre história, natureza e vida comunitária é o que torna a Ilha da Gigóia um lugar especial e diferente de qualquer outro ponto da Barra da Tijuca.", en: "This combination of history, nature, and community life is what makes Gigóia Island a special place and different from any other spot in Barra da Tijuca.", es: "Esta combinación de historia, naturaleza y vida comunitaria es lo que hace de la Isla Gigóia un lugar especial y diferente a cualquier otro punto en Barra da Tijuca." },
 
   pg_bp_h1: { pt: "Boas Práticas", en: "Best Practices", es: "Buenas Prácticas" },
@@ -435,9 +437,6 @@ function mountHome() {
   const capiImg = document.getElementById("capiImg");
   if (capiImg) capiImg.src = SITE.tip.capiImg;
 
-  const capiTag = document.getElementById("capiTag");
-  if (capiTag) capiTag.textContent = SITE.tip.capiTag;
-
   const tipTitle = document.getElementById("tipTitle");
   if (tipTitle) tipTitle.textContent = SITE.tip.title;
 
@@ -624,6 +623,9 @@ function setupGigiFloat() {
   window.addEventListener("resize", () => { lastY = window.scrollY || 0; offset = 0; velocity = 0; fab.style.transform = "translate3d(0,0,0)"; if (box && box.style.display !== "none") box.style.transform = "translate3d(0,0,0)"; }, { passive: true });
 }
 
+/* =========================================================
+   TRADUTOR 
+   ========================================================= */
 function translateHtmlElements() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
