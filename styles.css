@@ -14,12 +14,11 @@
   --text: #1d2320;
   --muted: #6b726e;
   
-  --bg: #eef7ef; /* Cor de fundo do site (o verde clarinho) */
+  --bg: #eef7ef;
   --white: #ffffff;
   --line: rgba(0, 0, 0, 0.08);
   
-  /* Aumentei os raios para tirar o aspecto "quadrado" */
-  --radius-card: 26px; 
+  --radius-card: 26px;
   --radius-btn: 16px;
   
   --shadow-card: 0 20px 50px rgba(14, 32, 20, 0.14);
@@ -51,7 +50,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Estado inicial transparente para a animação de entrada */
   opacity: 0;
   transition: opacity 0.4s var(--ease);
 }
@@ -154,14 +152,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
-/* Marca e Logo */
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
 }
 
@@ -200,21 +198,22 @@ img {
    ========================================================= */
 .navWrap {
   background: rgba(71, 176, 90, 0.06);
-  padding: 8px 16px;
-  border-radius: 999px; /* Formato de pílula arredondado */
+  padding: 8px 14px;
+  border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .nav a {
   transition: color var(--t);
   position: relative;
+  padding: 4px 6px;
 }
 
 .nav a:hover,
@@ -222,15 +221,14 @@ img {
   color: var(--green-dark);
 }
 
-/* Ações do Header (Idiomas, Redes Sociais, Botão) */
+/* Ações do Header */
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
 }
 
-/* Ícones do Cabeçalho em Grid 2x2 para economizar espaço e evitar quebrar linha */
 .header__actions .social-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -248,12 +246,10 @@ img {
   height: 14px;
 }
 
-/* =========================================================
-   SELETOR DE IDIOMAS
-   ========================================================= */
+/* SELETOR DE IDIOMAS */
 .lang-switcher {
   height: 42px;
-  padding: 0 12px;
+  padding: 0 10px;
   border-radius: var(--radius-btn);
   border: 1px solid rgba(0, 0, 0, 0.10);
   font-family: inherit;
@@ -276,7 +272,7 @@ img {
 .btn {
   height: 46px;
   padding: 0 24px;
-  border-radius: 50px; /* Bordas totalmente arredondadas, fim do quadrado! */
+  border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -304,7 +300,6 @@ img {
   box-shadow: 0 14px 26px rgba(71, 176, 90, 0.30);
 }
 
-/* Animação do feixe de luz passando pelo botão verde */
 .btn--green::after,
 .gigiFab__btn::after,
 .gigiSend::after {
@@ -356,16 +351,13 @@ img {
 }
 
 /* =========================================================
-   DIVISOR DE ONDAS ORGÂNICAS (MÁGICA ACONTECE AQUI)
+   DIVISOR DE ONDAS ORGÂNICAS
    ========================================================= */
 .hero,
 .pageHead {
   position: relative;
 }
 
-/* Aqui aplicamos um SVG real com curvas profundas (Sine Wave).
-  A cor do preenchimento (%23eef7ef) é a mesma do fundo do site.
-*/
 .hero::after,
 .pageHead::after {
   content: "";
@@ -373,7 +365,7 @@ img {
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 70px; /* Onda mais alta e mais visível */
+  height: 70px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 C360,150 1080,-50 1440,50 L1440,100 L0,100 Z' fill='%23eef7ef' /%3E%3C/svg%3E");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -388,6 +380,8 @@ img {
   height: 600px;
   overflow: hidden;
   background: #151a17;
+  display: flex;
+  align-items: center;
 }
 
 .hero__bg {
@@ -401,15 +395,16 @@ img {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
 }
 
 .hero__content {
   position: relative;
-  padding: 90px 0 60px;
+  padding: 60px 0;
   text-align: center;
   color: #fff;
   z-index: 15;
+  width: 100%;
 }
 
 .pill {
@@ -547,7 +542,7 @@ img {
 .tip {
   background: #fff;
   padding: 30px 30px 30px 60px;
-  border-radius: 24px; /* Muito mais redondo */
+  border-radius: 24px;
   box-shadow: var(--shadow-soft);
   border: 2px solid rgba(71, 176, 90, 0.18);
   max-width: 600px;
@@ -631,7 +626,6 @@ img {
   fill: #fff;
 }
 
-/* Selo / Etiqueta flutuante amarela/laranja no canto do Card */
 .card__badge {
   position: absolute;
   top: 16px;
@@ -640,7 +634,7 @@ img {
   color: var(--text);
   font-weight: 900;
   font-size: 13px;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 50px;
   z-index: 10;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -684,7 +678,6 @@ img {
    CABEÇALHOS DAS PÁGINAS INTERNAS
    ========================================================= */
 .pageHead {
-  /* Mais espaço embaixo para a onda ficar perfeita */
   padding: 60px 0 100px;
   background: var(--green);
   color: #fff;
@@ -709,7 +702,7 @@ img {
 }
 
 /* =========================================================
-   JACK, O PROTETOR DO MANGUE (ALINHAMENTO)
+   JACK, O PROTETOR DO MANGUE
    ========================================================= */
 .jack-block {
   margin-top: 60px;
@@ -720,14 +713,14 @@ img {
   position: relative;
   min-height: 160px;
   display: flex;
-  align-items: center; /* Centraliza o texto verticalmente com a imagem */
+  align-items: center;
 }
 
 .jack-img {
   position: absolute;
   left: -15px;
   top: 50%;
-  transform: translateY(-50%); /* Centraliza a imagem verticalmente no bloco */
+  transform: translateY(-50%);
   width: 170px;
   mix-blend-mode: multiply;
   filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.2));
@@ -895,7 +888,7 @@ img {
 }
 
 /* =========================================================
-   RESPONSIVIDADE (Telas menores)
+   RESPONSIVIDADE (O SEGREDO DO CELULAR PERFEITO)
    ========================================================= */
 @media (max-width: 1100px) {
   .cards {
@@ -904,11 +897,15 @@ img {
 }
 
 @media (max-width: 960px) {
+  .brand__logo {
+    width: 60px;
+    height: 60px;
+  }
   .brand__text strong {
     font-size: 20px;
   }
   .navWrap {
-    display: none; /* Esconde o menu principal em tablets/celulares */
+    display: none; /* Esconde o menu horizontal longo */
   }
   .burger {
     display: inline-flex;
@@ -918,33 +915,74 @@ img {
   .mobileNav {
     display: block;
   }
-  /* Oculta as redes sociais no cabeçalho em telas menores para poupar espaço */
+  
+  /* Esconde ícones sociais e o botão verde do cabeçalho para não espremer a logo */
   .header__actions .social-links {
+    display: none;
+  }
+  .header__actions .btn--green {
     display: none;
   }
 }
 
 @media (max-width: 560px) {
+  /* Cards empilhados um a um */
   .cards {
     grid-template-columns: 1fr;
   }
-  .hero h1 {
-    font-size: 40px;
+  
+  /* Ajuste no Banner Principal */
+  .hero {
+    height: auto;
+    min-height: 500px;
   }
+  .hero__content {
+    padding: 80px 0 100px;
+  }
+  .hero h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Ajustes Gerais de Espaço */
+  .section {
+    padding: 40px 0;
+  }
+  .section__title {
+    font-size: 34px;
+  }
+  
+  /* Cabeçalho Interno */
+  .pageHead {
+    padding: 40px 0 80px;
+  }
+  .pageHead h1 {
+    font-size: 32px;
+  }
+
+  /* Ajuste da Capi */
   .tipRow {
     flex-direction: column;
+    margin-top: 20px;
   }
   .capi {
     margin-right: 0;
-    margin-bottom: -20px;
+    transform: translateY(30px);
+    z-index: 20;
   }
   .tip {
-    padding: 30px 20px 20px;
+    padding: 50px 20px 20px;
+    text-align: center;
   }
   
-  /* Ajuste Perfeito do Jack no Celular para não sobrepor o texto */
+  /* Ajuste Perfeito do Jack no Celular para não espremer o texto */
   .jack-block {
-    padding: 130px 20px 20px 20px !important;
+    margin-top: 80px;
+    padding: 120px 20px 24px 20px !important;
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -952,12 +990,21 @@ img {
   .jack-img {
     left: 50% !important;
     transform: translate(-50%, 0) !important;
-    top: -50px !important;
+    top: -70px !important;
     bottom: auto !important;
-    width: 150px !important;
+    width: 140px !important;
   }
   
+  /* Chatbox da Gigi */
   .gigiBox {
     width: calc(100% - 40px);
+    bottom: 80px;
+  }
+  
+  /* Seletor de Idioma menorzinho */
+  .lang-switcher {
+    padding: 0 8px;
+    font-size: 13px;
+    height: 38px;
   }
 }
