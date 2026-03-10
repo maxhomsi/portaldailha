@@ -14,12 +14,13 @@
   --text: #1d2320;
   --muted: #6b726e;
   
-  --bg: #eef7ef;
+  --bg: #eef7ef; /* Cor de fundo do site (o verde clarinho) */
   --white: #ffffff;
   --line: rgba(0, 0, 0, 0.08);
   
-  --radius-card: 22px;
-  --radius-btn: 12px;
+  /* Aumentei os raios para tirar o aspecto "quadrado" */
+  --radius-card: 26px; 
+  --radius-btn: 16px;
   
   --shadow-card: 0 20px 50px rgba(14, 32, 20, 0.14);
   --shadow-soft: 0 14px 28px rgba(14, 32, 20, 0.10);
@@ -97,11 +98,11 @@ img {
 }
 
 /* =========================================================
-   REDES SOCIAIS (Animação Geral)
+   REDES SOCIAIS (Botões Animados)
    ========================================================= */
 .social-links {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -153,15 +154,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  flex-wrap: nowrap; /* Garante que o cabeçalho não quebre em duas linhas */
+  gap: 12px;
 }
 
 /* Marca e Logo */
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
@@ -186,7 +186,7 @@ img {
 }
 
 .brand__text strong {
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 900;
   color: #1f5f88;
 }
@@ -195,25 +195,26 @@ img {
   color: var(--green-dark);
 }
 
-/* NAVEGAÇÃO PRINCIPAL (NAV) */
+/* =========================================================
+   NAVEGAÇÃO PRINCIPAL (NAV)
+   ========================================================= */
 .navWrap {
   background: rgba(71, 176, 90, 0.06);
-  padding: 8px 14px;
-  border-radius: 999px;
+  padding: 8px 16px;
+  border-radius: 999px; /* Formato de pílula arredondado */
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav {
   display: flex;
-  gap: 14px;
+  gap: 18px;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .nav a {
   transition: color var(--t);
   position: relative;
-  padding: 4px 6px;
 }
 
 .nav a:hover,
@@ -225,11 +226,11 @@ img {
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
-/* O SEGREDO: Ícones do Cabeçalho em Grid 2x2 para economizar espaço */
+/* Ícones do Cabeçalho em Grid 2x2 para economizar espaço e evitar quebrar linha */
 .header__actions .social-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -247,10 +248,12 @@ img {
   height: 14px;
 }
 
-/* SELETOR DE IDIOMAS */
+/* =========================================================
+   SELETOR DE IDIOMAS
+   ========================================================= */
 .lang-switcher {
   height: 42px;
-  padding: 0 10px;
+  padding: 0 12px;
   border-radius: var(--radius-btn);
   border: 1px solid rgba(0, 0, 0, 0.10);
   font-family: inherit;
@@ -271,13 +274,13 @@ img {
    BOTÕES GERAIS E EFEITO DE BRILHO (SHINE)
    ========================================================= */
 .btn {
-  height: 44px;
-  padding: 0 16px;
-  border-radius: var(--radius-btn);
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 50px; /* Bordas totalmente arredondadas, fim do quadrado! */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 900;
   cursor: pointer;
   transition: all var(--t) var(--ease);
@@ -353,13 +356,16 @@ img {
 }
 
 /* =========================================================
-   DIVISOR DE ONDAS (TOPO DA PÁGINA)
+   DIVISOR DE ONDAS ORGÂNICAS (MÁGICA ACONTECE AQUI)
    ========================================================= */
 .hero,
 .pageHead {
   position: relative;
 }
 
+/* Aqui aplicamos um SVG real com curvas profundas (Sine Wave).
+  A cor do preenchimento (%23eef7ef) é a mesma do fundo do site.
+*/
 .hero::after,
 .pageHead::after {
   content: "";
@@ -367,9 +373,9 @@ img {
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 50px;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z' fill='%23eef7ef'/%3E%3C/svg%3E");
-  background-size: cover;
+  height: 70px; /* Onda mais alta e mais visível */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 C360,150 1080,-50 1440,50 L1440,100 L0,100 Z' fill='%23eef7ef' /%3E%3C/svg%3E");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   z-index: 10;
   pointer-events: none;
@@ -462,7 +468,7 @@ img {
 }
 
 /* =========================================================
-   SEÇÕES GERAIS DE CONTEÚDO E CARDS
+   SEÇÕES GERAIS DE CONTEÚDO
    ========================================================= */
 .section {
   padding: 60px 0;
@@ -486,7 +492,9 @@ img {
   font-weight: 800;
 }
 
-/* Dica Capi (Home) */
+/* =========================================================
+   DICA DA CAPI (HOME)
+   ========================================================= */
 .tipRow {
   display: flex;
   justify-content: center;
@@ -539,7 +547,7 @@ img {
 .tip {
   background: #fff;
   padding: 30px 30px 30px 60px;
-  border-radius: 20px;
+  border-radius: 24px; /* Muito mais redondo */
   box-shadow: var(--shadow-soft);
   border: 2px solid rgba(71, 176, 90, 0.18);
   max-width: 600px;
@@ -623,6 +631,7 @@ img {
   fill: #fff;
 }
 
+/* Selo / Etiqueta flutuante amarela/laranja no canto do Card */
 .card__badge {
   position: absolute;
   top: 16px;
@@ -631,7 +640,7 @@ img {
   color: var(--text);
   font-weight: 900;
   font-size: 13px;
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: 50px;
   z-index: 10;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -639,7 +648,7 @@ img {
 }
 
 .card__body {
-  padding: 20px;
+  padding: 24px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -675,7 +684,8 @@ img {
    CABEÇALHOS DAS PÁGINAS INTERNAS
    ========================================================= */
 .pageHead {
-  padding: 50px 0 40px;
+  /* Mais espaço embaixo para a onda ficar perfeita */
+  padding: 60px 0 100px;
   background: var(--green);
   color: #fff;
   z-index: 10;
@@ -705,7 +715,7 @@ img {
   margin-top: 60px;
   padding: 30px 20px 30px 160px;
   background: rgba(71, 176, 90, 0.1);
-  border-radius: 16px;
+  border-radius: 24px;
   border: 1px solid rgba(71, 176, 90, 0.2);
   position: relative;
   min-height: 160px;
@@ -765,9 +775,9 @@ img {
 .gigiForm input,
 .gigiForm textarea {
   width: 100%;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.10);
-  padding: 12px;
+  padding: 14px;
   font-weight: 800;
   outline: none;
   background: rgba(255, 255, 255, 0.96);
@@ -805,7 +815,7 @@ img {
   bottom: 85px;
   width: 340px;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 24px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -815,8 +825,8 @@ img {
 .gigiBox__top {
   background: var(--green);
   color: #fff;
-  padding: 15px;
-  border-radius: 20px 20px 0 0;
+  padding: 15px 20px;
+  border-radius: 24px 24px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -836,14 +846,14 @@ img {
 }
 
 .gigiBox__body {
-  padding: 15px;
+  padding: 20px;
 }
 
 .gigiCard {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .gigiCard__text {
@@ -852,7 +862,7 @@ img {
 }
 
 /* =========================================================
-   FOOTER (RODAPÉ)
+   FOOTER (RODAPÉ) E REDES SOCIAIS
    ========================================================= */
 .footer {
   padding: 40px 0;
