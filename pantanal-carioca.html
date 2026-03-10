@@ -48,11 +48,13 @@
               
               <p data-i18n="pc_p4">Esse passeio é ideal para quem quer conhecer melhor a natureza da lagoa e descobrir um lado surpreendente da Barra da Tijuca.</p>
 
-              <div style="margin-top: 30px; padding: 20px; background: rgba(71,176,90,0.1); border-radius: 16px; border: 1px solid rgba(71,176,90,0.2); display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <img src="assets/jaca.png" alt="Jack o Jacaré" style="width: 130px; mix-blend-mode: multiply; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1)); margin-bottom: -10px;" />
-                <div style="flex: 1 1 200px;">
-                  <h4 data-i18n="jack_title" style="margin: 0 0 8px; color: var(--green-dark); font-size: 18px; font-weight: 900;">Dica do Jack, o Jacaré:</h4>
-                  <p data-i18n="jack_tip_pc" style="margin: 0; font-size: 15px; font-weight: 700; line-height: 1.6;">Bem-vindos ao meu quintal! Fique de olho nas margens dos manguezais, é lá que eu e minha família costumamos tomar sol. Prepare sua câmera!</p>
+              <div class="jack-block" style="margin-top: 60px; padding: 30px 20px 30px 160px; background: rgba(71,176,90,0.1); border-radius: 16px; border: 1px solid rgba(71,176,90,0.2); position: relative; min-height: 140px; display: flex; align-items: center;">
+                
+                <img src="assets/jaca.png" alt="Jack o Jacaré" class="jack-img" style="position: absolute; left: -20px; bottom: 0; width: 190px; mix-blend-mode: multiply; filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.2)); z-index: 5; pointer-events: none;" />
+                
+                <div style="position: relative; z-index: 1;">
+                  <h4 data-i18n="jack_title" style="margin: 0 0 8px; color: var(--green-dark); font-size: 18px; font-weight: 900;">Aviso do Jack, o Protetor do Mangue:</h4>
+                  <p data-i18n="jack_tip_pc" style="margin: 0; font-size: 15px; font-weight: 700; line-height: 1.6;">Bem-vindos ao meu quintal! Mas atenção: sou o guardião destas águas. Durante o passeio, não jogue lixo na lagoa, não alimente os animais selvagens e respeite a natureza. O mangue é a nossa casa e a sobrevivência dele depende de todos nós!</p>
                 </div>
               </div>
             </div>
@@ -86,11 +88,27 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
+  <script src="app.js"></script>
   
   <style>
     @media (max-width: 860px) {
       .info-grid {
         grid-template-columns: 1fr !important;
+      }
+    }
+    
+    /* Ajuste para o Jack não quebrar o layout no celular */
+    @media (max-width: 560px) {
+      .jack-block {
+        padding: 130px 20px 20px 20px !important;
+        text-align: center;
+      }
+      .jack-img {
+        left: 50% !important;
+        transform: translateX(-50%);
+        bottom: auto !important;
+        top: -30px !important;
+        width: 160px !important;
       }
     }
   </style>

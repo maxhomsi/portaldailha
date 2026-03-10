@@ -70,7 +70,6 @@ a {
   text-decoration: none;
 }
 
-/* Transparência forçada para remover fundo branco de logos e mascotes */
 img {
   max-width: 100%;
   display: block;
@@ -106,9 +105,10 @@ img {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.88));
+  background: rgba(255,255,255,.92);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
+  background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.88));
 }
 
 .header:after {
@@ -136,9 +136,7 @@ img {
   position: relative;
 }
 
-/* =========================================================
-   BRAND (LOGO)
-   ========================================================= */
+/* BRAND (LOGO) */
 .brand {
   display: flex;
   align-items: center;
@@ -182,9 +180,7 @@ img {
   color: #3aa44a;
 }
 
-/* =========================================================
-   MENU PRINCIPAL (NAV)
-   ========================================================= */
+/* NAV */
 .navWrap {
   display: flex;
   align-items: center;
@@ -234,9 +230,7 @@ img {
   flex-shrink: 0;
 }
 
-/* =========================================================
-   SELETOR DE IDIOMAS
-   ========================================================= */
+/* SELETOR DE IDIOMAS */
 .lang-switcher {
   height: 46px;
   padding: 0 12px;
@@ -259,9 +253,7 @@ img {
   box-shadow: 0 4px 12px rgba(71,176,90,.15);
 }
 
-/* =========================================================
-   BOTÕES COM EFEITO DE BRILHO (SHINE)
-   ========================================================= */
+/* BOTÕES E EFEITO DE BRILHO */
 .btn {
   height: 46px;
   padding: 0 18px;
@@ -299,7 +291,7 @@ img {
   transform: translateY(-1px);
 }
 
-/* Animação do feixe de luz passando pelo botão */
+/* O BRILHO */
 .btn--green::after, 
 .gigiFab__btn::after, 
 .gigiSend::after {
@@ -332,9 +324,6 @@ img {
   transform: translateY(-1px);
 }
 
-/* =========================================================
-   MENU MOBILE (BURGER)
-   ========================================================= */
 .burger {
   display: none;
   width: 46px;
@@ -369,14 +358,15 @@ img {
 }
 
 /* =========================================================
-   DIVISOR DE ONDAS (SHAPE DIVIDER) 
+   DIVISOR DE ONDAS (A CORREÇÃO)
    ========================================================= */
 .hero, 
 .pageHead {
   position: relative;
+  overflow: hidden; /* Esconde a parte da onda que vaza */
 }
 
-/* Onda SVG super fluida colada no fundo do Hero e PageHead */
+/* Onda SVG mais grossa e marcante */
 .hero::after, 
 .pageHead::after {
   content: "";
@@ -384,20 +374,18 @@ img {
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 50px;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z' fill='%23eef7ef'/%3E%3C/svg%3E");
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 60px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%23eef7ef' d='M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 100% 100%;
   z-index: 10;
   pointer-events: none;
 }
 
 /* =========================================================
-   HERO (BANNER PRINCIPAL)
+   HERO
    ========================================================= */
 .hero {
   height: 620px;
-  overflow: hidden;
   background: #151a17;
 }
 
@@ -510,37 +498,34 @@ img {
 }
 
 /* =========================================================
-   DICA DOS MASCOTES (CAPI / JACK "SAINDO DA CAIXA")
+   DICA DOS MASCOTES (CAPI - EFEITO 3D REFORÇADO)
    ========================================================= */
 .tipRow {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0px;
-  margin: 10px 0 40px;
+  margin: 40px 0;
   position: relative;
 }
 
 .capi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 5;
-  margin-right: -25px; /* Faz a Capi invadir a caixa de texto */
+  position: relative;
+  z-index: 10;
+  margin-right: -40px; /* A Capi invade 40px da caixa ao lado */
+  transform: translateY(-15px); /* Ela sobe um pouco, dando ainda mais o efeito 3D */
 }
 
 .capi__ring {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 5px solid var(--green);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border: 6px solid var(--green);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   overflow: hidden;
-  transform: translateY(-5px);
 }
 
 .capi__ring img {
@@ -550,26 +535,28 @@ img {
 }
 
 .capi__tag {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--green);
   color: #fff;
   font-weight: 900;
-  padding: 6px 12px;
-  border-radius: 999px;
-  box-shadow: 0 8px 16px rgba(71,176,90,.25);
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(71,176,90,.3);
   font-size: 13px;
-  margin-top: -15px;
-  z-index: 6;
-  position: relative;
+  white-space: nowrap;
 }
 
 .tip {
-  position: relative;
-  max-width: 660px;
   background: #fff;
-  border-radius: 18px;
-  padding: 22px 22px 22px 45px;
-  border: 2px solid rgba(71,176,90,.18);
+  padding: 30px 30px 30px 60px; /* O espaço da esquerda (60px) é para a Capi entrar */
+  border-radius: 20px;
   box-shadow: var(--shadow-soft);
+  border: 2px solid rgba(71,176,90,.18);
+  max-width: 600px;
+  position: relative;
   z-index: 1;
 }
 
@@ -586,7 +573,7 @@ img {
 }
 
 /* =========================================================
-   CARDS COM ETIQUETAS (BADGES) FLUTUANTES
+   CARDS E ETIQUETAS (BADGES)
    ========================================================= */
 .cards {
   display: grid;
@@ -651,7 +638,7 @@ img {
   fill: #fff;
 }
 
-/* A ETIQUETA (BADGE) FLUTUANTE */
+/* ETIQUETA (BADGE) */
 .card__badge {
   position: absolute;
   top: 16px;
@@ -709,10 +696,10 @@ img {
 }
 
 /* =========================================================
-   PAGE HEAD (CABEÇALHO INTERNO)
+   PAGE HEAD 
    ========================================================= */
 .pageHead {
-  padding: 54px 0 34px;
+  padding: 54px 0 44px;
   background: var(--bg);
   z-index: 10;
 }
@@ -736,7 +723,7 @@ img {
 }
 
 /* =========================================================
-   FALE CONOSCO - FORMULÁRIO E GIGI
+   FALE CONOSCO
    ========================================================= */
 .contato-wrapper {
   display: flex;
@@ -816,7 +803,6 @@ img {
   line-height: 1;
 }
 
-/* Janela que abre ao clicar na Gigi */
 .gigiBox {
   position: fixed;
   right: 18px;
