@@ -46,8 +46,8 @@ const DICT = {
     en: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to make your reservation and secure the best table by the lagoon!", 
     es: "¡<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para hacer tu reserva y asegurar la mejor mesa junto a la laguna!" 
   },
-  
-  /* 20 DICAS DA CAPI */
+
+  /* 20 DICAS COMPLETAS DA CAPI */
   tip_text_0: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
   tip_text_1: { pt: "Não deixe de provar o pastel de camarão em um dos restaurantes à beira da lagoa, é imperdível!", en: "Be sure to try the shrimp pastel at one of the lakeside restaurants, it's a must!", es: "No dejes de probar el pastel de camarones en uno de los restaurantes junto a la laguna, ¡es imperdible!" },
   tip_text_2: { pt: "O pôr do sol visto da parte oeste da ilha rende as melhores fotos para o seu Instagram.", en: "The sunset viewed from the west side of the island makes for the best Instagram photos.", es: "El atardecer visto desde el lado oeste de la isla rinde las mejores fotos para tu Instagram." },
@@ -82,7 +82,6 @@ const DICT = {
   hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha", en: "Find the perfect place to relax and enjoy the island", es: "Encuentra el lugar perfeito para relajarte y disfrutar la isla" },
   hm_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
 
-  /* A ILHA */
   ilha_c1_t: { pt: "Como chegar", en: "How to get there", es: "Cómo llegar" },
   ilha_c1_d: { pt: "Acesso rápido a partir do Rio. Dicas de transporte e horários.", en: "Quick access from Rio. Transport tips and schedules.", es: "Acceso rápido desde Río. Consejos de transporte y horarios." },
   ilha_c1_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
@@ -96,6 +95,7 @@ const DICT = {
   ilha_c4_d: { pt: "Clima, horários e dicas para aproveitar o dia inteiro.", en: "Climate, schedules, and tips to enjoy the whole day.", es: "Clima, horarios y consejos para disfrutar todo el día." },
   ilha_c4_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
 
+  /* TEXTOS COMPLETOS DA SEÇÃO "A ILHA" */
   pg_cc_h1: { pt: "Como Chegar", en: "How to get there", es: "Cómo llegar" },
   pg_cc_p: { pt: "O acesso principal é feito por pequenas embarcações que funcionam 24 horas por dia.", en: "Main access is via small boats that operate 24 hours a day.", es: "El acceso principal es mediante pequeñas embarcaciones que funcionas as 24 horas del día." },
   cc_intro: { pt: "A Ilha da Gigóia está localizada na Barra da Tijuca, no Rio de Janeiro, dentro do complexo de ilhas da Lagoa da Tijuca. Apesar de estar cercada por água, chegar até a ilha é simples e rápido. O acesso principal é feito por pequenas embarcações (barco-táxis ou chalanas) que fazem a travessia entre o continente e a ilha. O trajeto dura apenas alguns minutos e já faz parte da experiência de visitar o local. Os barcos funcionam 24 horas por dia.", en: "Gigóia Island is located in Barra da Tijuca, Rio de Janeiro, within the Lagoa da Tijuca island complex. Despite being surrounded by water, reaching the island is simple and fast. Main access is via small boats (water taxis or chalanas) that cross between the mainland and the island. The journey takes just a few minutes and is already part of the experience. Boats operate 24 hours a day.", es: "La Isla Gigóia está ubicada en Barra da Tijuca, Río de Janeiro, dentro del complejo de islas de la Lagoa da Tijuca. A pesar de estar rodeada de agua, llegar a la isla es sencillo y rápido. El acceso principal es mediante pequeñas embarcaciones (taxis acuáticos o chalanas) que cruzan entre el continente y la isla. El trayecto dura solo unos minutos y ya forma parte de la experiencia. Los barcos funcionan as 24 horas del día." },
@@ -170,8 +170,17 @@ const DICT = {
   pc_prc_val: { pt: "R$ 50 por pessoa", en: "R$ 50 per person", es: "R$ 50 por persona" },
   pc_btn_book: { pt: "Agendar Passeio", en: "Book Tour", es: "Reservar Paseo" },
 
-  jack_title: { pt: "Dica do Jack, o Jacaré:", en: "Tip from Jack, the Alligator:", es: "Consejo de Jack, el Caimán:" },
-  jack_tip_pc: { pt: "Bem-vindos ao meu quintal! Fique de olho nas margens dos manguezais, é lá que eu e minha família costumamos tomar sol. Prepare sua câmera!", en: "Welcome to my backyard! Keep an eye on the edges of the mangroves, that's where my family and I usually sunbathe. Get your camera ready!", es: "¡Bienvenidos a mi patio! Vigila las orillas de los manglares, ahí es donde mi familia y yo solemos tomar el sol. ¡Prepara tu cámara!" },
+  /* AVISO DO JACK, O XERIFE DO MANGUE */
+  jack_title: { 
+    pt: "Aviso do Jack, o Protetor do Mangue:", 
+    en: "Warning from Jack, the Mangrove Protector:", 
+    es: "Aviso de Jack, el Protector del Manglar:" 
+  },
+  jack_tip_pc: { 
+    pt: "Bem-vindos ao meu quintal! Mas atenção: sou o guardião destas águas. Durante o passeio, não jogue lixo na lagoa, não alimente os animais selvagens e respeite a natureza. O mangue é a nossa casa e a sobrevivência dele depende de todos nós!", 
+    en: "Welcome to my backyard! But beware: I am the guardian of these waters. During the tour, do not throw trash in the lagoon, do not feed the wild animals, and respect nature. The mangrove is our home and its survival depends on all of us!", 
+    es: "¡Bienvenidos a mi patio! Pero atención: soy el guardián de estas aguas. Durante el paseo, no arrojes basura a la laguna, no alimentes a los animales salvajes y respeta la naturaleza. ¡El manglar es nuestro hogar y su supervivencia depende de todos nosotros!" 
+  },
 
   /* PRAIA DA RESERVA */
   pass_c3_t: { pt: "Reserva", en: "Reserva Beach", es: "Playa Reserva" },
@@ -262,6 +271,9 @@ const DICT = {
   gigi_note: { pt: "Ao enviar, abriremos o WhatsApp com sua mensagem pronta.", en: "When sending, we will open WhatsApp with your message ready.", es: "Al enviar, abriremos WhatsApp con tu mensaje listo." },
 };
 
+/* =========================================================
+   FUNÇÃO UNIFICADA DE TRADUÇÃO
+   ========================================================= */
 const t = (key) => DICT[key] ? (DICT[key][currentLang] || DICT[key].pt) : key;
 
 const SITE = {
@@ -311,7 +323,7 @@ const SITE = {
     "passeios-rotas": [
       { title:t("pass_c1_t"), desc:t("pass_c1_d"), linkLabel:t("pass_c1_l"), href:"ilhas-tijucas.html", img:"assets/ilhastijucas.jpg", icon:"boat", badge:"🌊 Mergulho" },
       { title:t("pass_c2_t"), desc:t("pass_c2_d"), linkLabel:t("pass_c2_l"), href:"pantanal-carioca.html", img:"assets/pantanalcarioca.jpg", icon:"leaf", badge:"🐊 Safári" },
-      { title:t("pass_c3_t"), desc:t("pass_c3_d"), linkLabel:t("pass_c3_l"), href:"reserva.html", img:"assets/reserva.jpg", icon:"boat" },
+      { title:t("pass_c3_t"), desc:t("pass_c3_d"), linkLabel:t("pass_c3_l"), href:"reserva.html", img:"assets/reserva.jpg", icon:"boat", badge:"🏖️ Praia" },
       { title:t("pass_c4_t"), desc:t("pass_c4_d"), linkLabel:t("pass_c4_l"), href:"jet-ski.html", img:"assets/jetski.jpg", icon:"boat", badge:"⚡ Adrenalina" },
     ],
     "comer-beber": [
@@ -351,7 +363,6 @@ function iconSvg(name) {
 
 function cardHtml(c, idx=0) {
   const badgeHtml = c.badge ? `<div class="card__badge">${c.badge}</div>` : '';
-  
   return `
     <article class="card reveal" style="transition-delay:${Math.min(idx*60, 240)}ms">
       <div class="card__img">
@@ -670,7 +681,9 @@ function translateHtmlElements() {
   setupGigiFloat();
   translateHtmlElements(); 
   
+  // Exibe a página (destrava o fade in)
   requestAnimationFrame(()=>document.body.classList.add("is-ready"));
+  
   setupHeaderScroll();
   setupHeroParallax();
   setupReveal();
