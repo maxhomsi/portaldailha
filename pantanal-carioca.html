@@ -37,7 +37,7 @@
             <img src="assets/pantanalcarioca.jpg" alt="Passeio de barco no Pantanal Carioca" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
 
-          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;" class="info-grid">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
             
             <div style="color:var(--text); font-size:16px; line-height:1.7; font-weight:600;">
               <p data-i18n="pc_p1" style="margin-top:0;">O passeio pelo Pantanal Carioca é um dos roteiros mais famosos da região da Lagoa da Tijuca. Durante o trajeto, o barco percorre os canais naturais que formam o arquipélago da Ilha da Gigóia, passando pelas 10 ilhas da região e áreas de manguezal preservadas.</p>
@@ -48,10 +48,8 @@
               
               <p data-i18n="pc_p4">Esse passeio é ideal para quem quer conhecer melhor a natureza da lagoa e descobrir um lado surpreendente da Barra da Tijuca.</p>
 
-              <div class="jack-block" style="margin-top: 60px; padding: 30px 20px 30px 160px; background: rgba(71,176,90,0.1); border-radius: 16px; border: 1px solid rgba(71,176,90,0.2); position: relative; min-height: 140px; display: flex; align-items: center;">
-                
-                <img src="assets/jaca.png" alt="Jack o Jacaré" class="jack-img" style="position: absolute; left: -20px; bottom: 0; width: 190px; mix-blend-mode: multiply; filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.2)); z-index: 5; pointer-events: none;" />
-                
+              <div class="jack-block">
+                <img src="assets/jaca.png" alt="Jack o Jacaré" class="jack-img" />
                 <div style="position: relative; z-index: 1;">
                   <h4 data-i18n="jack_title" style="margin: 0 0 8px; color: var(--green-dark); font-size: 18px; font-weight: 900;">Aviso do Jack, o Protetor do Mangue:</h4>
                   <p data-i18n="jack_tip_pc" style="margin: 0; font-size: 15px; font-weight: 700; line-height: 1.6;">Bem-vindos ao meu quintal! Mas atenção: sou o guardião destas águas. Durante o passeio, não jogue lixo na lagoa, não alimente os animais selvagens e respeite a natureza. O mangue é a nossa casa e a sobrevivência dele depende de todos nós!</p>
@@ -74,9 +72,9 @@
                 <div data-i18n="pc_prc_val" style="color:var(--muted); font-weight:700; margin-left:30px;">R$ 50 por pessoa</div>
               </div>
 
-              <a href="https://wa.me/5521993802618?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20o%20passeio%20do%20Pantanal%20Carioca." target="_blank" class="btn btn--green" style="width: 100%; text-align: center;">
+              <button onclick="openGigiChat()" class="btn btn--green" style="width: 100%; text-align: center;">
                 <span data-i18n="pc_btn_book">Agendar Passeio</span>
-              </a>
+              </button>
             </div>
 
           </div>
@@ -90,28 +88,5 @@
   <div id="gigiWidgetRoot"></div>
   <script src="app.js"></script>
   
-  <style>
-    @media (max-width: 860px) {
-      .info-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
-    
-    /* Ajuste para o Jack não quebrar o layout no celular */
-    @media (max-width: 560px) {
-      .jack-block {
-        padding: 130px 20px 20px 20px !important;
-        text-align: center;
-      }
-      .jack-img {
-        left: 50% !important;
-        transform: translateX(-50%);
-        bottom: auto !important;
-        top: -30px !important;
-        width: 160px !important;
-      }
-    }
-  </style>
-
 </body>
 </html>

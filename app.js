@@ -17,6 +17,8 @@ const DICT = {
   nav_fale: { pt: "Fale Conosco", en: "Contact Us", es: "Contáctenos" },
   btn_passeios: { pt: "Ver Passeios", en: "View Tours", es: "Ver Paseos" },
   btn_conheca: { pt: "Conheça a Ilha", en: "Discover the Island", es: "Conoce la Isla" },
+  btn_enviar: { pt: "Enviar roteiro", en: "Send itinerary", es: "Enviar itinerario" },
+  btn_limpar: { pt: "Limpar", en: "Clear", es: "Limpiar" },
   footer_text: { 
     pt: "Portal Ilha da Gigóia — Termos • Privacidade • <a href='fale-conosco.html' style='text-decoration:underline; font-weight:800'>Contato</a>", 
     en: "Gigóia Island Portal — Terms • Privacy • <a href='fale-conosco.html' style='text-decoration:underline; font-weight:800'>Contact</a>", 
@@ -35,17 +37,17 @@ const DICT = {
   tip_title: { pt: "Dica do Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
   
   tip_passeios: { 
-    pt: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para checar a tábua de marés e as melhores condições para o seu passeio!", 
-    en: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to check the tide table and the best conditions for your tour!", 
-    es: "¡<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para consultar la tabla de mareas y las mejores condiciones para tu paseo!" 
+    pt: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para checar a tábua de marés e as melhores condições para o seu passeio!", 
+    en: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to check the tide table and the best conditions for your tour!", 
+    es: "¡<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para consultar la tabla de mareas y las mejores condiciones para tu paseo!" 
   },
   tip_comer: { 
-    pt: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para fazer a sua reserva e garantir a melhor mesa na beira da lagoa!", 
-    en: "<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to make your reservation and secure the best table by the lagoon!", 
-    es: "¡<a href='#' onclick='document.getElementById(\"gigiFabBtn\").click(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para hacer tu reserva y asegurar la mejor mesa junto a la laguna!" 
+    pt: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para fazer a sua reserva e garantir a melhor mesa na beira da lagoa!", 
+    en: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to make your reservation and secure the best table by the lagoon!", 
+    es: "¡<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para hacer tu reserva y asegurar la mejor mesa junto a la laguna!" 
   },
   
-  /* 20 DICAS DA CAPI */
+  /* 20 DICAS COMPLETAS DA CAPI */
   tip_text_0: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
   tip_text_1: { pt: "Não deixe de provar o pastel de camarão em um dos restaurantes à beira da lagoa, é imperdível!", en: "Be sure to try the shrimp pastel at one of the lakeside restaurants, it's a must!", es: "No dejes de probar el pastel de camarones en uno de los restaurantes junto a la laguna, ¡es imperdible!" },
   tip_text_2: { pt: "O pôr do sol visto da parte oeste da ilha rende as melhores fotos para o seu Instagram.", en: "The sunset viewed from the west side of the island makes for the best Instagram photos.", es: "El atardecer visto desde el lado oeste de la isla rinde las mejores fotos para tu Instagram." },
@@ -80,6 +82,7 @@ const DICT = {
   hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha", en: "Find the perfect place to relax and enjoy the island", es: "Encuentra el lugar perfeito para relajarte y disfrutar la isla" },
   hm_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
 
+  /* A ILHA - TEXTOS COMPLETOS */
   ilha_c1_t: { pt: "Como chegar", en: "How to get there", es: "Cómo llegar" },
   ilha_c1_d: { pt: "Acesso rápido a partir do Rio. Dicas de transporte e horários.", en: "Quick access from Rio. Transport tips and schedules.", es: "Acceso rápido desde Río. Consejos de transporte y horarios." },
   ilha_c1_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
@@ -131,7 +134,7 @@ const DICT = {
   bp_p_5: { pt: "Sempre utilize lixeiras ou leve seu lixo com você até encontrar um local adequado para descartá-lo. Pequenas atitudes ajudam a manter a ilha bonita e agradável para todos.", en: "Always use trash cans or take your trash with you until you find a suitable place to dispose of it. Small actions help keep the island beautiful and pleasant for everyone.", es: "Utiliza siempre basureros o lleva tu basura contigo hasta encontrar un lugar adecuado para desecharla. Pequeñas acciones ayudan a mantener la isla hermosa y agradable para todos." },
 
   pg_me_h1: { pt: "Melhor Época", en: "Best Time to Visit", es: "Mejor Época" },
-  pg_me_p: { pt: "Descubra qual estação do ano combina mais com o seu roteiro.", en: "Discover which season best suits your itinerary.", es: "Descubre qué estación se adapta mejor a tu itinerario." },
+  pg_me_p: { pt: "Descubra qual estação do ano combina mais com o seu roteiro.", en: "Discover which season best suits your itinerary.", es: "Descubre qué estación se adapta melhor a tu itinerario." },
   me_h2: { pt: "O ano todo é incrível!", en: "All year round is amazing!", es: "¡Todo el año es increíble!" },
   me_p1: { pt: "Por estar no Rio de Janeiro, a ilha é ótima o ano todo. No verão (Dezembro a Março), o clima é ideal para curtir os bares e um chope gelado na lagoa. No outono e inverno (Abril a Agosto), as temperaturas mais amenas deixam as caminhadas e trilhas ecológicas muito mais confortáveis. Dica de ouro: Chegue sempre por volta das 16h para não perder o pôr do sol mágico!", en: "Being in Rio, the island is great year-round. In summer (Dec-Mar), it's ideal for enjoying bars and cold beer. In autumn/winter (Apr-Aug), milder temperatures make walking and trails comfortable. Golden tip: Always arrive around 4 PM to not miss the magical sunset!", es: "Al estar en Río, la isla es genial todo el año. En verano (Dic-Mar), es ideal para disfrutar de los bares y una cerveza fría. En otoño/invierno (Abr-Ago), las temperaturas suaves hacen que caminar y los senderos sean cómodos. Consejo de oro: ¡Llega siempre a las 16:00 para el mágico atardecer!" },
 
@@ -189,7 +192,7 @@ const DICT = {
   /* JET-SKI */
   pass_c4_t: { pt: "Jet-Ski", en: "Jet-Ski", es: "Moto de Agua" },
   pass_c4_d: { pt: "Para os aventureiros! Passeios guiados e aluguel de Jet-Ski para explorar a lagoa com muita adrenalina.", en: "For the adventurous! Guided tours and Jet-Ski rentals to explore the lagoon with lots of adrenaline.", es: "¡Para los aventureros! Paseos guiados y alquiler de motos de agua para explorar la laguna con mucha adrenalina." },
-  pass_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opções" },
+  pass_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
   pg_js_h1: { pt: "Passeio de Jet-Ski", en: "Jet-Ski Tour", es: "Paseo en Moto de Agua" },
   pg_js_p: { pt: "Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", en: "Adventure and adrenaline exploring the lagoons at your own pace.", es: "Aventura y adrenalina explorando las lagunas a tu propio ritmo." },
   js_p1: { pt: "Para quem procura mais emoção na água, o aluguel de jet ski na Ilha da Gigóia é uma das experiências mais divertidas da região da Barra da Tijuca.", en: "For those looking for more excitement on the water, renting a jet ski at Gigóia Island is one of the most fun experiences in the Barra da Tijuca region.", es: "Para quienes buscan más emoción en el agua, el alquiler de motos de agua en la Isla Gigóia es una de las experiencias más divertidas en la región de Barra da Tijuca." },
@@ -259,6 +262,9 @@ const DICT = {
   gigi_note: { pt: "Ao enviar, abriremos o WhatsApp com sua mensagem pronta.", en: "When sending, we will open WhatsApp with your message ready.", es: "Al enviar, abriremos WhatsApp con tu mensaje listo." },
 };
 
+/* =========================================================
+   FUNÇÃO UNIFICADA DE TRADUÇÃO E OBJETOS DE CONTEÚDO
+   ========================================================= */
 const t = (key) => DICT[key] ? (DICT[key][currentLang] || DICT[key].pt) : key;
 
 const SITE = {
@@ -328,16 +334,35 @@ const SITE = {
 
 const GIGI = {
   whatsappNumber: "5521993802618",
-  fabText: t("gigi_fab"),
-  title: "Gigi",
-  subtitle: "",
-  gigiImage: "assets/gigi.png", 
-  openKey: "ilg_gigi_open_v1",
+  fabText: t("gigi_fab")
+};
+
+/* FUNÇÃO GLOBAL PARA OS BOTÕES "AGENDAR PASSEIO" ABRIREM A GIGI */
+window.openGigiChat = function() {
+  const box = document.getElementById("gigiBox");
+  if(box) {
+    box.style.display = "flex";
+    localStorage.setItem("ilg_gigi_open_v1", "1");
+  }
 };
 
 /* =========================================================
-   ÍCONES (SVG inline)
+   ÍCONES SVG E REDES SOCIAIS
    ========================================================= */
+const svgInsta = `<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>`;
+const svgFb = `<svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>`;
+const svgTiktok = `<svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>`;
+const svgYoutube = `<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`;
+
+const socialHtml = `
+  <div class="social-links">
+    <a href="https://www.instagram.com/ilha.da.gigoia" target="_blank" class="social-icon" aria-label="Instagram">${svgInsta}</a>
+    <a href="https://www.facebook.com/portaldailhadagigoia" target="_blank" class="social-icon" aria-label="Facebook">${svgFb}</a>
+    <a href="https://www.tiktok.com/@ilha.da.gigoia" target="_blank" class="social-icon" aria-label="TikTok">${svgTiktok}</a>
+    <a href="https://www.youtube.com/@ilha.da.gigoia" target="_blank" class="social-icon" aria-label="YouTube">${svgYoutube}</a>
+  </div>
+`;
+
 function iconSvg(name) {
   const common = `viewBox="0 0 24 24" aria-hidden="true" focusable="false"`;
   if (name === "boat") return `<svg ${common}><path d="M12 3c.6 0 1 .4 1 1v2h4c.4 0 .8.3 1 .7l2 6.1c.1.4 0 .8-.3 1.1-1.2 1.2-2.9 2.1-4.7 2.1-1.1 0-2.2-.3-3-.8-.8.5-1.9.8-3 .8s-2.2-.3-3-.8c-.8.5-1.9.8-3 .8-1.8 0-3.5-.9-4.7-2.1-.3-.3-.4-.7-.3-1.1l2-6.1c.1-.4.5-.7 1-.7h4V4c0-.6.4-1 1-1h6Zm-5 6H3.7L2.2 13.7c.8.7 1.8 1.2 2.8 1.2.9 0 1.7-.3 2.4-.8l.6-.4.6.4c.7.5 1.5.8 2.4.8.9 0 1.7-.3 2.4-.8l.6-.4.6.4c.7.5 1.5.8 2.4.8 1 0 2-.5 2.8-1.2L20.3 9H17v2c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1V9Zm2 0v1h6V9H9Z"/></svg>`;
@@ -369,55 +394,55 @@ function cardHtml(c, idx=0) {
 function mountHeaderFooter() {
   const header = document.getElementById("siteHeader");
   const footer = document.getElementById("siteFooter");
-  if (!header || !footer) return;
-
-  header.innerHTML = `
-    <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="Página inicial">
-        <img class="brand__logo" src="${SITE.brand.logo}" alt="Logo" />
-        <div class="brand__text">
-          <small>${SITE.brand.nameSmall}</small>
-          <strong><span>${SITE.brand.nameMainA}</span> ${SITE.brand.nameMainB}</strong>
-        </div>
-      </a>
-      <div class="navWrap" aria-label="Menu principal"><nav class="nav" aria-label="Navegação">
-        ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
-      </nav></div>
-      <div class="header__actions">
-        <select class="lang-switcher" id="langSwitcher" aria-label="Selecione o idioma">
-          <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
-          <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
-          <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
-        </select>
-        <a class="btn btn--green" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
-        <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
-      </div>
-    </div>
-    <div class="mobileNav" id="mobileNav" style="display:none">
-      <div class="container mobileNav__inner">
-        ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
-        <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">
-          ${SITE.ctas.header.label}
+  
+  if (header) {
+    header.innerHTML = `
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img class="brand__logo" src="${SITE.brand.logo}" alt="Logo" />
+          <div class="brand__text">
+            <small>${SITE.brand.nameSmall}</small>
+            <strong><span>${SITE.brand.nameMainA}</span> ${SITE.brand.nameMainB}</strong>
+          </div>
         </a>
+        <div class="navWrap" aria-label="Menu principal"><nav class="nav" aria-label="Navegação">
+          ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
+        </nav></div>
+        <div class="header__actions">
+          ${socialHtml}
+          <select class="lang-switcher" id="langSwitcher" aria-label="Selecione o idioma" onchange="changeLanguage(this.value)">
+            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
+            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
+            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
+          </select>
+          <a class="btn btn--green" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
+          <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
+        </div>
       </div>
-    </div>
-  `;
+      <div class="mobileNav" id="mobileNav" style="display:none">
+        <div class="container mobileNav__inner">
+          ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
+          <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">
+            ${SITE.ctas.header.label}
+          </a>
+        </div>
+      </div>
+    `;
+  }
 
-  footer.innerHTML = `
-    <div class="container" data-i18n="footer_text">
-      © <span id="year"></span> ${t("footer_text")}
-    </div>
-  `;
-  document.getElementById("year").textContent = String(new Date().getFullYear());
+  if (footer) {
+    footer.innerHTML = `
+      <div class="container footer-content">
+        <div class="footer-links">${t("footer_text")}</div>
+        ${socialHtml}
+      </div>
+    `;
+  }
 
   document.getElementById("burger")?.addEventListener("click", () => {
     const panel = document.getElementById("mobileNav");
     if (!panel) return;
     panel.style.display = panel.style.display === "none" ? "block" : "none";
-  });
-
-  document.getElementById("langSwitcher")?.addEventListener("change", (e) => {
-    changeLanguage(e.target.value);
   });
 
   setActiveNav();
@@ -491,14 +516,14 @@ function mountGigiWidget() {
 
   root.innerHTML = `
     <div class="gigiFab">
-      <button class="gigiFab__btn" id="gigiFabBtn" type="button" aria-label="${t("gigi_fab")}">
-        <span class="gigiIcon">💬</span> <span>${GIGI.fabText}</span>
+      <button class="gigiFab__btn" id="gigiFabBtn" type="button" aria-label="${t("gigi_fab")}" onclick="openGigiChat()">
+        <span class="gigiIcon">💬</span> <span>${t("gigi_fab")}</span>
       </button>
     </div>
-    <div class="gigiBox" id="gigiBox" style="display:${isOpen ? "block" : "none"}">
+    <div class="gigiBox" id="gigiBox" style="display:${isOpen ? "flex" : "none"}">
       <div class="gigiBox__top">
-        <div class="gigiBox__title"><strong>${GIGI.title}</strong></div>
-        <button class="gigiBox__close" id="gigiClose" type="button">✕</button>
+        <div class="gigiBox__title"><strong>Gigi</strong><small>Portal Ilha da Gigóia</small></div>
+        <button class="gigiBox__close" onclick="document.getElementById('gigiBox').style.display='none'; localStorage.setItem('ilg_gigi_open_v1','0')">✕</button>
       </div>
       <div class="gigiBox__body">
         <div class="gigiCard">
@@ -512,15 +537,15 @@ function mountGigiWidget() {
         <form class="gigiForm" id="gigiForm">
           <div>
             <label for="gigiName">${t("gigi_lbl_name")}</label>
-            <input id="gigiName" name="name" type="text" placeholder="Maria" />
+            <input id="gigiName" name="name" type="text" placeholder="Maria" required />
           </div>
           <div>
             <label for="gigiPhone">${t("gigi_lbl_phone")}</label>
-            <input id="gigiPhone" name="phone" type="tel" placeholder="+55 21 99999-9999" />
+            <input id="gigiPhone" name="phone" type="tel" placeholder="+55 21 99999-9999" required />
           </div>
           <div>
             <label for="gigiMessage">${t("gigi_lbl_msg")}</label>
-            <textarea id="gigiMessage" name="message" placeholder="..."></textarea>
+            <textarea id="gigiMessage" name="message" placeholder="..." required></textarea>
           </div>
           <button class="gigiSend" type="submit">${t("gigi_btn")}</button>
           <small style="color:rgba(0,0,0,.55);font-weight:800">${t("gigi_note")}</small>
@@ -529,32 +554,14 @@ function mountGigiWidget() {
     </div>
   `;
 
-  if (GIGI.gigiImage) {
-    const box = document.getElementById("gigiImgBox");
-    if (box) {
-      box.innerHTML = `<img src="${GIGI.gigiImage}" alt="Gigi" style="width:100%;height:100%;object-fit:cover;border-radius:18px" />`;
-      box.style.border = "none";
-      box.style.background = "transparent";
-    }
+  const boxImg = document.getElementById("gigiImgBox");
+  if (boxImg) {
+    boxImg.innerHTML = `<img src="assets/gigi.png" alt="Gigi" style="width:100%;height:100%;object-fit:cover;border-radius:18px" />`;
+    boxImg.style.border = "none";
+    boxImg.style.background = "transparent";
   }
 
-  const fabBtn = document.getElementById("gigiFabBtn");
-  const gigiBox = document.getElementById("gigiBox");
-  const closeBtn = document.getElementById("gigiClose");
   const form = document.getElementById("gigiForm");
-
-  fabBtn?.addEventListener("click", () => {
-    if (!gigiBox) return;
-    gigiBox.style.display = "flex";
-    localStorage.setItem(GIGI.openKey, "1");
-  });
-
-  closeBtn?.addEventListener("click", () => {
-    if (!gigiBox) return;
-    gigiBox.style.display = "none";
-    localStorage.setItem(GIGI.openKey, "0");
-  });
-
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = (document.getElementById("gigiName")?.value || "").trim();
@@ -582,15 +589,15 @@ function setupReveal() {
         observer.unobserve(e.target);
       }
     });
-  }, { threshold: 0.01, rootMargin: "50px" });
+  }, { threshold: 0.05, rootMargin: "50px" });
   
   els.forEach(el => io.observe(el));
 
   // TRAVA DE SEGURANÇA CONTRA TELA BRANCA: 
-  // Força a exibição de todos os elementos após 800ms caso o sensor falhe.
+  // Força a exibição de todos os elementos após 150ms caso o sensor falhe.
   setTimeout(() => {
     els.forEach(el => el.classList.add("is-in"));
-  }, 800);
+  }, 150);
 }
 
 function setupHeaderScroll() {
@@ -678,8 +685,8 @@ function translateHtmlElements() {
   setupGigiFloat();
   translateHtmlElements(); 
   
-  // Destrava a página (tira a transparência inicial do body)
-  requestAnimationFrame(()=>document.body.classList.add("is-ready"));
+  // Destrava a página e força a exibição para evitar tela branca
+  requestAnimationFrame(() => document.body.classList.add("is-ready"));
   
   setupHeaderScroll();
   setupHeroParallax();

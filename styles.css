@@ -1,37 +1,37 @@
 /* =========================================================
    FONTE (Google Fonts)
    ========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap');
 
 /* =========================================================
-   VARIÁVEIS (cores, sombras, raios, animações)
+   VARIÁVEIS GERAIS (Cores, Sombras, Raios, Transições)
    ========================================================= */
 :root {
   --green: #47b05a;
   --green-dark: #3aa44a;
   --yellow: #f2c200;
-
+  
   --text: #1d2320;
   --muted: #6b726e;
-
+  
   --bg: #eef7ef;
   --white: #ffffff;
-  --line: rgba(0,0,0,.08);
-
+  --line: rgba(0, 0, 0, 0.08);
+  
   --radius-card: 22px;
   --radius-btn: 12px;
-
-  --shadow-card: 0 20px 50px rgba(14, 32, 20, .14);
-  --shadow-soft: 0 14px 28px rgba(14, 32, 20, .10);
-
+  
+  --shadow-card: 0 20px 50px rgba(14, 32, 20, 0.14);
+  --shadow-soft: 0 14px 28px rgba(14, 32, 20, 0.10);
+  
   --max: 1180px;
-
-  --ease: cubic-bezier(.2,.8,.2,1);
+  
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --t: 240ms;
 }
 
 /* =========================================================
-   RESET/BASE E STICKY FOOTER
+   RESET E BASE DO SITE
    ========================================================= */
 * {
   box-sizing: border-box;
@@ -43,21 +43,20 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* Estado inicial transparente para a animação de entrada */
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 280ms var(--ease), transform 280ms var(--ease);
+  transition: opacity 0.4s var(--ease);
 }
 
 body.is-ready {
   opacity: 1;
-  transform: none;
 }
 
 main {
@@ -84,7 +83,7 @@ img {
 }
 
 /* =========================================================
-   BARRA DE PROGRESSO
+   BARRA DE PROGRESSO NO TOPO
    ========================================================= */
 .progress {
   position: fixed;
@@ -98,65 +97,84 @@ img {
 }
 
 /* =========================================================
-   HEADER + NAV
+   REDES SOCIAIS (Botões Animados)
+   ========================================================= */
+.social-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(71, 176, 90, 0.1);
+  color: var(--green);
+  transition: all 0.3s var(--ease);
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.social-icon:hover {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(-4px) scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 16px rgba(71, 176, 90, 0.3);
+}
+
+/* =========================================================
+   CABEÇALHO (HEADER)
    ========================================================= */
 .header {
-  overflow: visible;
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(255,255,255,.92);
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
-  background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.88));
-}
-
-.header:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(71,176,90,.70), rgba(242,194,0,.70));
-  opacity: .65;
+  /* Fallback gradients se necessário */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.88));
 }
 
 .header.is-scrolled {
-  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
 }
 
 .header__inner {
-  min-height: 100px;
+  min-height: 90px;
   padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  position: relative;
 }
 
-/* BRAND (LOGO) */
+/* Marca e Logo */
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-shrink: 0;
-  background: transparent !important;
 }
 
 .brand__logo {
-  width: 88px;
-  height: 88px;
+  width: 75px;
+  height: 75px;
   object-fit: contain;
-  background: transparent !important;
 }
 
 .brand__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2px 0 6px;
 }
 
 .brand__text small {
@@ -168,132 +186,109 @@ img {
 }
 
 .brand__text strong {
-  display: flex;
-  gap: 6px;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 900;
   color: #1f5f88;
-  line-height: 1;
 }
 
 .brand__text strong span {
-  color: #3aa44a;
+  color: var(--green-dark);
 }
 
-/* NAV */
+/* =========================================================
+   NAVEGAÇÃO PRINCIPAL (NAV)
+   ========================================================= */
 .navWrap {
-  display: flex;
-  align-items: center;
-  padding: 10px 12px;
+  background: rgba(71, 176, 90, 0.06);
+  padding: 8px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.10);
-  background: linear-gradient(90deg, rgba(71,176,90,.10), rgba(242,194,0,.08));
-  box-shadow: 0 18px 36px rgba(0,0,0,.10);
-  backdrop-filter: blur(8px);
-  max-width: 760px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav {
   display: flex;
-  gap: 14px;
+  gap: 18px;
   font-weight: 800;
   font-size: 15px;
-  white-space: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.nav::-webkit-scrollbar {
-  display: none;
 }
 
 .nav a {
-  padding: 10px;
-  border-radius: 999px;
-  transition: background var(--t) var(--ease), transform var(--t) var(--ease);
+  transition: color var(--t);
   position: relative;
 }
 
-.nav a:hover {
-  background: rgba(71,176,90,.10);
-  transform: translateY(-1px);
-}
-
+.nav a:hover,
 .nav a[aria-current="page"] {
-  background: rgba(71,176,90,.14);
+  color: var(--green-dark);
 }
 
+/* Ações do Header (Idiomas, Redes Sociais, Botão) */
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
-/* SELETOR DE IDIOMAS */
+/* =========================================================
+   SELETOR DE IDIOMAS
+   ========================================================= */
 .lang-switcher {
-  height: 46px;
+  height: 42px;
   padding: 0 12px;
   border-radius: var(--radius-btn);
-  border: 1px solid rgba(0,0,0,.10);
-  background: #fff;
-  font-family: "Manrope", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  font-family: inherit;
   font-weight: 800;
-  font-size: 14px;
-  color: var(--text);
   cursor: pointer;
+  background: #fff;
+  color: var(--text);
   outline: none;
-  transition: border-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
-  appearance: none;
-  -webkit-appearance: none;
+  transition: border-color var(--t), box-shadow var(--t);
 }
 
-.lang-switcher:hover, .lang-switcher:focus {
+.lang-switcher:hover {
   border-color: var(--green);
-  box-shadow: 0 4px 12px rgba(71,176,90,.15);
+  box-shadow: 0 4px 12px rgba(71, 176, 90, 0.15);
 }
 
-/* BOTÕES E EFEITO DE BRILHO */
+/* =========================================================
+   BOTÕES GERAIS E EFEITO DE BRILHO (SHINE)
+   ========================================================= */
 .btn {
   height: 46px;
-  padding: 0 18px;
+  padding: 0 20px;
   border-radius: var(--radius-btn);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   font-weight: 900;
-  border: 1px solid rgba(0,0,0,.10);
-  background: #fff;
   cursor: pointer;
-  transition: transform 120ms var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease);
+  transition: all var(--t) var(--ease);
+  border: none;
 }
 
-.btn:active {
-  transform: translateY(1px);
-}
-
-.btn--green, 
-.gigiFab__btn, 
+.btn--green,
+.gigiFab__btn,
 .gigiSend {
-  position: relative;
-  overflow: hidden;
-  border-color: transparent;
   background: var(--green);
   color: #fff;
-  box-shadow: 0 14px 26px rgba(71,176,90,.25);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(71, 176, 90, 0.25);
 }
 
-.btn--green:hover, 
+.btn--green:hover,
 .gigiSend:hover {
   background: var(--green-dark);
-  box-shadow: 0 18px 34px rgba(71,176,90,.30);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(71, 176, 90, 0.30);
 }
 
-/* O BRILHO */
-.btn--green::after, 
-.gigiFab__btn::after, 
+/* Animação do feixe de luz passando pelo botão verde */
+.btn--green::after,
+.gigiFab__btn::after,
 .gigiSend::after {
   content: "";
   position: absolute;
@@ -301,91 +296,83 @@ img {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
   transform: skewX(-20deg);
-  animation: shine 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: shine 4s infinite;
 }
 
 @keyframes shine {
-  0% { left: -100%; }
-  20% { left: 200%; }
-  100% { left: 200%; }
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 200%;
+  }
+  100% {
+    left: 200%;
+  }
 }
 
-.btn--gray {
-  background: rgba(255,255,255,.18);
-  border-color: rgba(255,255,255,.38);
-  color: #fff;
-  box-shadow: 0 14px 26px rgba(0,0,0,.12);
-}
-
-.btn--gray:hover {
-  background: rgba(255,255,255,.26);
-  transform: translateY(-1px);
-}
-
+/* =========================================================
+   MENU MOBILE (BURGER E PAINEL)
+   ========================================================= */
 .burger {
   display: none;
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border-radius: var(--radius-btn);
-  border: 1px solid rgba(0,0,0,.10);
+  border: 1px solid rgba(0, 0, 0, 0.10);
   background: #fff;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .mobileNav {
   display: none;
-  padding: 12px 0 18px;
+  padding: 15px 0;
   border-top: 1px solid var(--line);
 }
 
 .mobileNav__inner {
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 .mobileNav a {
-  padding: 12px;
-  border-radius: 12px;
+  padding: 10px;
   font-weight: 900;
-  transition: background var(--t) var(--ease), transform var(--t) var(--ease);
-}
-
-.mobileNav a:hover {
-  background: rgba(71,176,90,.10);
-  transform: translateY(-1px);
 }
 
 /* =========================================================
-   DIVISOR DE ONDAS (A CORREÇÃO)
+   DIVISOR DE ONDAS (TOPO DA PÁGINA)
    ========================================================= */
-.hero, 
+.hero,
 .pageHead {
   position: relative;
-  overflow: hidden; /* Esconde a parte da onda que vaza */
 }
 
-/* Onda SVG mais grossa e marcante */
-.hero::after, 
+/* A forma da onda inserida via SVG colada na base desses elementos */
+.hero::after,
 .pageHead::after {
   content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 60px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%23eef7ef' d='M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z'%3E%3C/path%3E%3C/svg%3E");
-  background-size: 100% 100%;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z' fill='%23eef7ef'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: 10;
   pointer-events: none;
 }
 
 /* =========================================================
-   HERO
+   BANNER PRINCIPAL DA HOME (HERO)
    ========================================================= */
 .hero {
-  height: 620px;
+  height: 600px;
+  overflow: hidden;
   background: #151a17;
 }
 
@@ -395,18 +382,17 @@ img {
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
-  will-change: transform;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(1200px 600px at 50% 45%, rgba(0,0,0,.18), rgba(0,0,0,.74)), linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.58));
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
 }
 
 .hero__content {
   position: relative;
-  padding: 92px 0 60px;
+  padding: 90px 0 60px;
   text-align: center;
   color: #fff;
   z-index: 15;
@@ -418,10 +404,10 @@ img {
   gap: 10px;
   padding: 10px 18px;
   border-radius: 999px;
-  background: rgba(255,255,255,.16);
-  border: 1px solid rgba(255,255,255,.24);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   font-weight: 800;
-  color: rgba(255,255,255,.92);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .pill .dot {
@@ -429,17 +415,14 @@ img {
   height: 10px;
   border-radius: 999px;
   background: #ffd400;
-  box-shadow: 0 0 0 4px rgba(255,212,0,.22);
+  box-shadow: 0 0 0 4px rgba(255, 212, 0, 0.22);
 }
 
 .hero h1 {
-  margin: 26px auto 12px;
-  max-width: 980px;
-  font-size: 66px;
-  line-height: 1.02;
+  font-size: 60px;
   font-weight: 900;
-  letter-spacing: -0.02em;
-  text-shadow: 0 10px 26px rgba(0,0,0,.35);
+  margin: 20px 0 10px;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 .accent {
@@ -447,12 +430,11 @@ img {
 }
 
 .hero p {
-  margin: 12px auto 26px;
-  max-width: 900px;
   font-size: 20px;
-  line-height: 1.6;
-  color: rgba(255,255,255,.90);
-  text-shadow: 0 10px 24px rgba(0,0,0,.35);
+  font-weight: 600;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .hero__actions {
@@ -460,7 +442,6 @@ img {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 22px;
 }
 
 .hero__foot {
@@ -468,21 +449,21 @@ img {
   display: flex;
   gap: 10px;
   justify-content: center;
-  color: rgba(255,255,255,.82);
+  color: rgba(255, 255, 255, 0.82);
   font-weight: 800;
 }
 
 /* =========================================================
-   SEÇÕES GERAIS
+   SEÇÕES GERAIS DE CONTEÚDO
    ========================================================= */
 .section {
-  padding: 70px 0 78px;
+  padding: 60px 0;
   background: var(--bg);
 }
 
 .section__title {
   text-align: center;
-  font-size: 54px;
+  font-size: 48px;
   letter-spacing: -0.02em;
   margin: 0 0 10px;
   font-weight: 900;
@@ -498,7 +479,7 @@ img {
 }
 
 /* =========================================================
-   DICA DOS MASCOTES (CAPI - EFEITO 3D REFORÇADO)
+   DICA DOS MASCOTES (CAPI NA HOME) EM 3D
    ========================================================= */
 .tipRow {
   display: flex;
@@ -511,8 +492,8 @@ img {
 .capi {
   position: relative;
   z-index: 10;
-  margin-right: -40px; /* A Capi invade 40px da caixa ao lado */
-  transform: translateY(-15px); /* Ela sobe um pouco, dando ainda mais o efeito 3D */
+  margin-right: -40px;
+  transform: translateY(-15px);
 }
 
 .capi__ring {
@@ -524,7 +505,7 @@ img {
   align-items: center;
   justify-content: center;
   border: 6px solid var(--green);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
@@ -544,17 +525,17 @@ img {
   font-weight: 900;
   padding: 6px 14px;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(71,176,90,.3);
+  box-shadow: 0 8px 16px rgba(71, 176, 90, 0.3);
   font-size: 13px;
   white-space: nowrap;
 }
 
 .tip {
   background: #fff;
-  padding: 30px 30px 30px 60px; /* O espaço da esquerda (60px) é para a Capi entrar */
+  padding: 30px 30px 30px 60px;
   border-radius: 20px;
   box-shadow: var(--shadow-soft);
-  border: 2px solid rgba(71,176,90,.18);
+  border: 2px solid rgba(71, 176, 90, 0.18);
   max-width: 600px;
   position: relative;
   z-index: 1;
@@ -573,12 +554,13 @@ img {
 }
 
 /* =========================================================
-   CARDS E ETIQUETAS (BADGES)
+   CARDS DE PASSEIOS E ETIQUETAS (BADGES)
    ========================================================= */
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  padding: 20px 0;
 }
 
 .card {
@@ -587,58 +569,54 @@ img {
   box-shadow: var(--shadow-card);
   overflow: hidden;
   position: relative;
-  transition: transform 160ms var(--ease), box-shadow 160ms var(--ease);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  transition: transform 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 56px rgba(14,32,20,.18);
+  transform: translateY(-5px);
 }
 
 .card__img {
   height: 210px;
   position: relative;
   overflow: hidden;
-  background: #dfeee2;
 }
 
 .card__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.06);
-  transition: transform 500ms var(--ease);
+  transition: transform 0.5s;
 }
 
 .card:hover .card__img img {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
 .card__icon {
   position: absolute;
   left: 16px;
   top: 16px;
-  width: 46px;
-  height: 46px;
-  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   background: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 14px 26px rgba(71,176,90,.25);
   z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card__icon svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   fill: #fff;
 }
 
-/* ETIQUETA (BADGE) */
+/* Selo / Etiqueta flutuante amarela/laranja no canto do Card */
 .card__badge {
   position: absolute;
   top: 16px;
@@ -647,66 +625,59 @@ img {
   color: var(--text);
   font-weight: 900;
   font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  z-index: 2;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  padding: 5px 12px;
+  border-radius: 50px;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border: 2px solid #fff;
 }
 
 .card__body {
-  padding: 22px;
+  padding: 20px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .card__title {
-  margin: 2px 0 8px;
   font-size: 22px;
   font-weight: 900;
+  margin: 0 0 10px;
 }
 
 .card__desc {
-  margin: 0 0 14px;
   color: var(--muted);
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin: 0 0 15px;
 }
 
 .card__link {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  color: #2f9c49;
+  color: var(--green);
   font-weight: 900;
   margin-top: auto;
-}
-
-.card__link span {
-  transition: transform 160ms var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .card__link:hover {
   text-decoration: underline;
 }
 
-.card__link:hover span {
-  transform: translateX(2px);
-}
-
 /* =========================================================
-   PAGE HEAD 
+   CABEÇALHOS DAS PÁGINAS INTERNAS
    ========================================================= */
 .pageHead {
-  padding: 54px 0 44px;
-  background: var(--bg);
+  padding: 50px 0 40px;
+  background: var(--green);
+  color: #fff;
   z-index: 10;
 }
 
 .pageHead h1 {
   margin: 0;
-  font-size: 46px;
+  font-size: 42px;
   font-weight: 900;
   position: relative;
   z-index: 15;
@@ -714,16 +685,42 @@ img {
 
 .pageHead p {
   margin: 10px 0 0;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 700;
   font-size: 18px;
-  max-width: 900px;
   position: relative;
   z-index: 15;
 }
 
 /* =========================================================
-   FALE CONOSCO
+   JACK, O PROTETOR DO MANGUE (ALINHAMENTO E EFEITO 3D)
+   ========================================================= */
+.jack-block {
+  margin-top: 60px;
+  padding: 30px 20px 30px 180px;
+  background: rgba(71, 176, 90, 0.1);
+  border-radius: 16px;
+  border: 1px solid rgba(71, 176, 90, 0.2);
+  position: relative;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+.jack-img {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.2));
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* =========================================================
+   FALE CONOSCO (FORMULÁRIO E MESA DA GIGI)
    ========================================================= */
 .contato-wrapper {
   display: flex;
@@ -749,203 +746,131 @@ img {
   max-width: 450px;
   background: transparent !important;
   mix-blend-mode: multiply;
-  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.12));
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12));
 }
 
 .gigiForm label {
   font-weight: 900;
   font-size: 13px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.gigiForm input, 
+.gigiForm input,
 .gigiForm textarea {
   width: 100%;
   border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.10);
+  border: 1px solid rgba(0, 0, 0, 0.10);
   padding: 12px;
   font-weight: 800;
   outline: none;
-  background: rgba(255,255,255,.96);
+  background: rgba(255, 255, 255, 0.96);
+  font-family: inherit;
 }
 
 /* =========================================================
-   WIDGET GIGI (WHATSAPP FLUTUANTE)
+   WIDGET DA GIGI (O CHATBOX FLUTUANTE)
    ========================================================= */
 .gigiFab {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
+  right: 20px;
+  bottom: 20px;
   z-index: 2500;
-  transition: transform 140ms var(--ease);
 }
 
 .gigiFab__btn {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
-  min-height: 58px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.98);
-  box-shadow: 0 18px 36px rgba(0,0,0,.15);
+  gap: 10px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   font-weight: 900;
-  cursor: pointer;
+  font-size: 16px;
   border: none;
-}
-
-.gigiFab__btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 24px 50px rgba(0,0,0,.20);
-}
-
-.gigiIcon {
-  font-size: 20px;
-  line-height: 1;
+  cursor: pointer;
+  color: var(--text);
 }
 
 .gigiBox {
   position: fixed;
-  right: 18px;
-  bottom: 76px;
-  width: min(380px, calc(100vw - 36px));
-  max-height: calc(100vh - 100px);
-  z-index: 2500;
-  border-radius: 22px;
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 24px 60px rgba(0,0,0,.16);
+  right: 20px;
+  bottom: 85px;
+  width: 340px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  transform-origin: bottom right;
-  animation: gigiPop 220ms var(--ease);
-}
-
-@keyframes gigiPop {
-  from { opacity: 0; transform: translateY(10px) scale(.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  z-index: 2500;
 }
 
 .gigiBox__top {
+  background: var(--green);
+  color: #fff;
+  padding: 15px;
+  border-radius: 20px 20px 0 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 12px 12px;
-  border-bottom: 1px solid rgba(0,0,0,.08);
-  background: linear-gradient(90deg, rgba(71,176,90,.16), rgba(242,194,0,.14));
+  align-items: center;
 }
 
 .gigiBox__title {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-}
-
-.gigiBox__title strong {
-  font-weight: 900;
-}
-
-.gigiBox__title small {
-  color: rgba(0,0,0,.58);
-  font-weight: 800;
 }
 
 .gigiBox__close {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.8);
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
   cursor: pointer;
-  font-size: 18px;
 }
 
 .gigiBox__body {
-  padding: 12px 12px 14px;
-  display: grid;
-  gap: 12px;
-  overflow-y: auto;
+  padding: 15px;
 }
 
 .gigiCard {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 10px;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,.08);
-  background: rgba(255,255,255,.85);
-  box-shadow: 0 10px 22px rgba(0,0,0,.06);
-}
-
-.gigiCard__img {
-  width: 56px;
-  height: 56px;
-  border-radius: 18px;
-  border: 2px dashed rgba(0,0,0,.18);
-  background: rgba(0,0,0,.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  color: rgba(0,0,0,.45);
+  margin-bottom: 15px;
 }
 
 .gigiCard__text {
-  display: grid;
-  gap: 2px;
-}
-
-.gigiCard__text strong {
-  font-weight: 900;
-}
-
-.gigiCard__text small {
-  color: rgba(0,0,0,.58);
-  font-weight: 800;
-}
-
-.gigiSend {
-  height: 44px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.10);
-  padding: 0 14px;
-  cursor: pointer;
-  transition: transform 140ms var(--ease), box-shadow 160ms var(--ease), background 160ms var(--ease);
-}
-
-.gigiSend:active {
-  transform: translateY(1px);
+  display: flex;
+  flex-direction: column;
 }
 
 /* =========================================================
-   FOOTER 
+   FOOTER (RODAPÉ)
    ========================================================= */
 .footer {
   padding: 40px 0;
   text-align: center;
   border-top: 1px solid var(--line);
-  background: rgba(255,255,255,.55);
-  color: rgba(0,0,0,.55);
-  font-weight: 800;
-  flex-shrink: 0;
+  color: var(--muted);
+  font-weight: 700;
+  background: #fff;
 }
 
-.footer a {
-  text-decoration: underline;
-  font-weight: 900;
-  color: var(--green);
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 /* =========================================================
-   SCROLL REVEAL (ANIMAÇÃO DOS CARDS SUBINDO)
+   SCROLL REVEAL (EFEITO DE APARECER ROLANDO)
    ========================================================= */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 500ms var(--ease), transform 500ms var(--ease);
-  will-change: opacity, transform;
+  transform: translateY(20px);
+  transition: all 0.6s var(--ease);
 }
 
 .reveal.is-in {
@@ -954,11 +879,11 @@ img {
 }
 
 /* =========================================================
-   RESPONSIVIDADE (MOBILE & TABLET)
+   RESPONSIVIDADE (Telas menores)
    ========================================================= */
 @media (max-width: 1100px) {
   .cards {
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
   .hero h1 {
     font-size: 56px;
@@ -967,19 +892,8 @@ img {
 
 @media (max-width: 960px) {
   .brand__text strong {
-    font-size: 22px;
+    font-size: 20px;
   }
-  .brand__logo {
-    width: 76px;
-    height: 76px;
-  }
-  .nav {
-    gap: 10px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 860px) {
   .navWrap {
     display: none;
   }
@@ -991,32 +905,8 @@ img {
   .mobileNav {
     display: block;
   }
-  .header__inner {
-    min-height: 80px;
-  }
-  .hero {
-    height: 580px;
-  }
-  .hero h1 {
-    font-size: 46px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-  .section__title {
-    font-size: 40px;
-  }
-  .brand__logo {
-    width: 70px;
-    height: 70px;
-  }
-  .brand__text strong {
-    font-size: 20px;
-  }
-  .lang-switcher {
-    height: 40px;
-    padding: 0 8px;
-    font-size: 12px;
+  .header__actions .social-links {
+    display: none;
   }
 }
 
@@ -1025,20 +915,7 @@ img {
     grid-template-columns: 1fr;
   }
   .hero h1 {
-    font-size: 38px;
-  }
-  .brand__text strong {
-    font-size: 18px;
-  }
-  .brand__logo {
-    width: 64px;
-    height: 64px;
-  }
-  .gigiBox {
-    bottom: 74px;
-    right: 12px;
-    width: calc(100vw - 24px);
-    max-height: calc(100vh - 90px);
+    font-size: 40px;
   }
   .tipRow {
     flex-direction: column;
@@ -1049,5 +926,24 @@ img {
   }
   .tip {
     padding: 30px 20px 20px;
+  }
+  
+  /* Ajuste Perfeito do Jack no Celular para não sobrepor o texto */
+  .jack-block {
+    padding: 140px 20px 20px 20px !important;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .jack-img {
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+    top: -50px !important;
+    bottom: auto !important;
+    width: 160px !important;
+  }
+  
+  .gigiBox {
+    width: calc(100% - 40px);
   }
 }

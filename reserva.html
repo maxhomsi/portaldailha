@@ -37,7 +37,7 @@
             <img src="assets/reserva.jpg" alt="Passeio de barco para a Praia da Reserva" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
 
-          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;" class="info-grid">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
             
             <div style="color:var(--text); font-size:16px; line-height:1.7; font-weight:600;">
               <p data-i18n="res_p1" style="margin-top:0;">Esse passeio leva os visitantes por uma das áreas mais preservadas da região da Barra da Tijuca. A rota segue pelo Canal de Marapendi, atravessando trechos de natureza praticamente intocados, onde é possível observar a vegetação típica da lagoa e uma paisagem pouco vista pela maioria das pessoas.</p>
@@ -64,9 +64,9 @@
                 <div data-i18n="res_prc_val" style="color:var(--muted); font-weight:700; margin-left:30px;">R$ 120 por pessoa</div>
               </div>
 
-              <a href="https://wa.me/5521993802618?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20o%20passeio%20para%20a%20Praia%20da%20Reserva." target="_blank" class="btn btn--green" style="width: 100%; text-align: center;">
+              <button onclick="openGigiChat()" class="btn btn--green" style="width: 100%; text-align: center;">
                 <span data-i18n="res_btn_book">Agendar Passeio</span>
-              </a>
+              </button>
             </div>
 
           </div>
@@ -78,14 +78,7 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
-  
-  <style>
-    @media (max-width: 860px) {
-      .info-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  </style>
+  <script src="app.js"></script>
 
 </body>
 </html>
