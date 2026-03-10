@@ -97,11 +97,11 @@ img {
 }
 
 /* =========================================================
-   REDES SOCIAIS (Botões Animados)
+   REDES SOCIAIS (Animação Geral)
    ========================================================= */
 .social-links {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
 }
 
@@ -140,7 +140,6 @@ img {
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
-  /* Fallback gradients se necessário */
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.88));
 }
 
@@ -154,14 +153,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: nowrap; /* Garante que o cabeçalho não quebre em duas linhas */
 }
 
 /* Marca e Logo */
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
 }
 
@@ -186,7 +186,7 @@ img {
 }
 
 .brand__text strong {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
   color: #1f5f88;
 }
@@ -195,26 +195,25 @@ img {
   color: var(--green-dark);
 }
 
-/* =========================================================
-   NAVEGAÇÃO PRINCIPAL (NAV)
-   ========================================================= */
+/* NAVEGAÇÃO PRINCIPAL (NAV) */
 .navWrap {
   background: rgba(71, 176, 90, 0.06);
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .nav a {
   transition: color var(--t);
   position: relative;
+  padding: 4px 6px;
 }
 
 .nav a:hover,
@@ -226,16 +225,32 @@ img {
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
 }
 
-/* =========================================================
-   SELETOR DE IDIOMAS
-   ========================================================= */
+/* O SEGREDO: Ícones do Cabeçalho em Grid 2x2 para economizar espaço */
+.header__actions .social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  margin-right: 6px;
+}
+
+.header__actions .social-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.header__actions .social-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* SELETOR DE IDIOMAS */
 .lang-switcher {
   height: 42px;
-  padding: 0 12px;
+  padding: 0 10px;
   border-radius: var(--radius-btn);
   border: 1px solid rgba(0, 0, 0, 0.10);
   font-family: inherit;
@@ -256,13 +271,13 @@ img {
    BOTÕES GERAIS E EFEITO DE BRILHO (SHINE)
    ========================================================= */
 .btn {
-  height: 46px;
-  padding: 0 20px;
+  height: 44px;
+  padding: 0 16px;
   border-radius: var(--radius-btn);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 900;
   cursor: pointer;
   transition: all var(--t) var(--ease);
@@ -302,15 +317,9 @@ img {
 }
 
 @keyframes shine {
-  0% {
-    left: -100%;
-  }
-  20% {
-    left: 200%;
-  }
-  100% {
-    left: 200%;
-  }
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
 }
 
 /* =========================================================
@@ -351,7 +360,6 @@ img {
   position: relative;
 }
 
-/* A forma da onda inserida via SVG colada na base desses elementos */
 .hero::after,
 .pageHead::after {
   content: "";
@@ -454,7 +462,7 @@ img {
 }
 
 /* =========================================================
-   SEÇÕES GERAIS DE CONTEÚDO
+   SEÇÕES GERAIS DE CONTEÚDO E CARDS
    ========================================================= */
 .section {
   padding: 60px 0;
@@ -478,9 +486,7 @@ img {
   font-weight: 800;
 }
 
-/* =========================================================
-   DICA DOS MASCOTES (CAPI NA HOME) EM 3D
-   ========================================================= */
+/* Dica Capi (Home) */
 .tipRow {
   display: flex;
   justify-content: center;
@@ -572,6 +578,7 @@ img {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s;
+  height: 100%;
 }
 
 .card:hover {
@@ -616,7 +623,6 @@ img {
   fill: #fff;
 }
 
-/* Selo / Etiqueta flutuante amarela/laranja no canto do Card */
 .card__badge {
   position: absolute;
   top: 16px;
@@ -693,26 +699,26 @@ img {
 }
 
 /* =========================================================
-   JACK, O PROTETOR DO MANGUE (ALINHAMENTO E EFEITO 3D)
+   JACK, O PROTETOR DO MANGUE (ALINHAMENTO)
    ========================================================= */
 .jack-block {
   margin-top: 60px;
-  padding: 30px 20px 30px 180px;
+  padding: 30px 20px 30px 160px;
   background: rgba(71, 176, 90, 0.1);
   border-radius: 16px;
   border: 1px solid rgba(71, 176, 90, 0.2);
   position: relative;
   min-height: 160px;
   display: flex;
-  align-items: center;
+  align-items: center; /* Centraliza o texto verticalmente com a imagem */
 }
 
 .jack-img {
   position: absolute;
-  left: -20px;
+  left: -15px;
   top: 50%;
-  transform: translateY(-50%);
-  width: 180px;
+  transform: translateY(-50%); /* Centraliza a imagem verticalmente no bloco */
+  width: 170px;
   mix-blend-mode: multiply;
   filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.2));
   z-index: 5;
@@ -720,7 +726,7 @@ img {
 }
 
 /* =========================================================
-   FALE CONOSCO (FORMULÁRIO E MESA DA GIGI)
+   FALE CONOSCO (FORMULÁRIO)
    ========================================================= */
 .contato-wrapper {
   display: flex;
@@ -885,9 +891,6 @@ img {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero h1 {
-    font-size: 56px;
-  }
 }
 
 @media (max-width: 960px) {
@@ -895,7 +898,7 @@ img {
     font-size: 20px;
   }
   .navWrap {
-    display: none;
+    display: none; /* Esconde o menu principal em tablets/celulares */
   }
   .burger {
     display: inline-flex;
@@ -905,6 +908,7 @@ img {
   .mobileNav {
     display: block;
   }
+  /* Oculta as redes sociais no cabeçalho em telas menores para poupar espaço */
   .header__actions .social-links {
     display: none;
   }
@@ -930,7 +934,7 @@ img {
   
   /* Ajuste Perfeito do Jack no Celular para não sobrepor o texto */
   .jack-block {
-    padding: 140px 20px 20px 20px !important;
+    padding: 130px 20px 20px 20px !important;
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -940,7 +944,7 @@ img {
     transform: translate(-50%, 0) !important;
     top: -50px !important;
     bottom: auto !important;
-    width: 160px !important;
+    width: 150px !important;
   }
   
   .gigiBox {
