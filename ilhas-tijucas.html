@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ilhas Tijucas | Passeio de Barco | Portal Ilha da Gigóia</title>
+  <title>Ilhas Tijucas | O Caribe Carioca | Portal Ilha da Gigóia</title>
 
-  <meta name="description" content="Passeio de barco até as Ilhas Tijucas. O 'Caribe Carioca' perfeito para mergulho de flutuação e fotos inesquecíveis." />
-  <meta name="keywords" content="Ilhas Tijucas, passeio de barco RJ, mergulho Rio de Janeiro, Caribe Carioca" />
+  <meta name="description" content="Passeio de barco até as Ilhas Tijucas. Águas cristalinas, mergulho e vistas incríveis do Rio de Janeiro saindo da Ilha da Gigóia." />
+  <meta name="keywords" content="Ilhas Tijucas, Caribe Carioca, passeio de barco RJ, Ilha da Gigóia, mergulho Rio de Janeiro" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
@@ -16,7 +16,8 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+
+<body data-page="ilhas-tijucas">
   <div class="progress" id="progress"></div>
   <header class="header" id="siteHeader"></header>
 
@@ -30,12 +31,46 @@
 
     <section class="section" style="padding-top:24px">
       <div class="container">
-        <div class="card reveal" style="padding: 32px; display: grid; gap: 16px;">
-          <h2 class="card__title" style="font-size:24px; margin: 0;" data-i18n="it_h2">O Caribe Carioca</h2>
-          <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="it_p1">
-            O arquipélago das Ilhas Tijucas é um paraíso escondido no Rio de Janeiro. O passeio de barco leva você a águas incrivelmente claras, perfeitas para mergulho de flutuação, stand up paddle ou simplesmente para relaxar e tirar fotos deslumbrantes.
-          </p>
-          <img src="assets/ilhastijucas.jpg" alt="Arquipélago das Ilhas Tijucas" style="width: 100%; border-radius: 12px; margin-top: 20px;" loading="lazy">
+        <div class="card reveal" style="padding: 40px; max-width: 950px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+          
+          <div style="border-radius: 14px; overflow: hidden; max-height: 400px;">
+            <img src="assets/ilhastijucas.jpg" alt="Mergulho nas águas cristalinas das Ilhas Tijucas" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;" class="info-grid">
+            
+            <div style="color:var(--text); font-size:16px; line-height:1.7; font-weight:600;">
+              <p data-i18n="it_p1" style="margin-top:0;">O passeio até as Ilhas Tijucas é considerado um dos roteiros mais impressionantes da região da Barra da Tijuca. A rota segue cerca de 2 km mar adentro, saindo da costa da Barra até o arquipélago das Ilhas Tijucas, um verdadeiro paraíso natural no litoral do Rio de Janeiro.</p>
+              
+              <p data-i18n="it_p2">Durante o trajeto, é possível contemplar uma vista privilegiada da cidade, observando pontos icônicos como o Cristo Redentor, a Pedra da Gávea, o Morro do Vidigal, a Rocinha e o Pão de Açúcar, além das praias da Joatinga, São Conrado e Barra da Tijuca.</p>
+              
+              <p data-i18n="it_p3">Ao chegar nas ilhas, o cenário impressiona: águas cristalinas, formações rochosas e uma rica vida marinha. Em muitos momentos é possível avistar golfinhos, tartarugas, peixes e diversas aves marinhas, tornando a experiência ainda mais especial.</p>
+              
+              <p data-i18n="it_p4">O local é perfeito para mergulhar, tirar fotos, relaxar e explorar um dos lugares mais bonitos do litoral carioca. Muitos visitantes descrevem o destino como um verdadeiro “Caribe dentro do Rio de Janeiro”.</p>
+            </div>
+
+            <div style="background: var(--bg); border-radius: 16px; padding: 24px; border: 1px solid var(--line);">
+              <h3 style="margin-top:0; font-size:18px; font-weight:900; color:var(--green-dark);">Informações</h3>
+              
+              <div style="margin-bottom: 16px;">
+                <span style="font-size:20px; vertical-align:middle;">⏱️</span>
+                <strong data-i18n="it_dur_lbl" style="margin-left:5px;">Duração:</strong>
+                <div data-i18n="it_dur_val" style="color:var(--muted); font-weight:700; margin-left:30px;">4 horas de passeio</div>
+              </div>
+
+              <div style="margin-bottom: 24px;">
+                <span style="font-size:20px; vertical-align:middle;">🎟️</span>
+                <strong data-i18n="it_prc_lbl" style="margin-left:5px;">Valor médio:</strong>
+                <div data-i18n="it_prc_val" style="color:var(--muted); font-weight:700; margin-left:30px;">R$ 150 por pessoa</div>
+              </div>
+
+              <a href="https://wa.me/5521993802618?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20o%20passeio%20para%20as%20Ilhas%20Tijucas." target="_blank" class="btn btn--green" style="width: 100%; text-align: center;">
+                <span data-i18n="it_btn_book">Agendar Passeio</span>
+              </a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
@@ -43,6 +78,12 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
-  <script src="app.js"></script>
+  
+  <style>
+    @media (max-width: 860px) {
+      .info-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
 </body>
 </html>

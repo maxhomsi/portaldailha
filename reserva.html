@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Praia da Reserva | Portal Ilha da Gigóia</title>
 
-  <meta name="description" content="Navegue pelos canais da Ilha da Gigóia até a belíssima e preservada Praia da Reserva." />
-  <meta name="keywords" content="Praia da Reserva, passeio barco, Ilha da Gigóia, praias Rio de Janeiro" />
+  <meta name="description" content="Passeio de barco até a Praia da Reserva. Conecte lagoa e mar em um roteiro relaxante e cercado de natureza intacta." />
+  <meta name="keywords" content="Praia da Reserva, Canal de Marapendi, Ilha da Gigóia, passeio de barco RJ, natureza" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
@@ -16,7 +16,8 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+
+<body data-page="reserva">
   <div class="progress" id="progress"></div>
   <header class="header" id="siteHeader"></header>
 
@@ -30,12 +31,46 @@
 
     <section class="section" style="padding-top:24px">
       <div class="container">
-        <div class="card reveal" style="padding: 32px; display: grid; gap: 16px;">
-          <h2 class="card__title" style="font-size:24px; margin: 0;" data-i18n="res_h2">Tranquilidade e Mar</h2>
-          <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="res_p1">
-            O passeio até a Praia da Reserva oferece o melhor dos dois mundos: a viagem contemplativa pelas águas mansas da lagoa e a chegada em uma extensa faixa de areia branca e mar cristalino, longe da agitação da cidade.
-          </p>
-          <img src="assets/reserva.jpg" alt="A bela Praia da Reserva" style="width: 100%; border-radius: 12px; margin-top: 20px;" loading="lazy">
+        <div class="card reveal" style="padding: 40px; max-width: 950px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+          
+          <div style="border-radius: 14px; overflow: hidden; max-height: 400px;">
+            <img src="assets/reserva.jpg" alt="Passeio de barco para a Praia da Reserva" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;" class="info-grid">
+            
+            <div style="color:var(--text); font-size:16px; line-height:1.7; font-weight:600;">
+              <p data-i18n="res_p1" style="margin-top:0;">Esse passeio leva os visitantes por uma das áreas mais preservadas da região da Barra da Tijuca. A rota segue pelo Canal de Marapendi, atravessando trechos de natureza praticamente intocados, onde é possível observar a vegetação típica da lagoa e uma paisagem pouco vista pela maioria das pessoas.</p>
+              
+              <p data-i18n="res_p2">Ao longo do percurso, o barco avança cerca de 9 km pelos canais, passando por áreas de mata ainda preservada e proporcionando uma experiência tranquila de contato com a natureza.</p>
+              
+              <p data-i18n="res_p3">O passeio segue até a Praia da Reserva, uma das praias mais bonitas e preservadas da região. Em alguns momentos é possível parar para apreciar a paisagem ou até dar um mergulho no mar.</p>
+              
+              <p data-i18n="res_p4">É um roteiro muito procurado por famílias e grupos de amigos, já que combina natureza, passeio relaxante e uma parada especial na praia. Esse passeio tem uma vantagem enorme: ele conecta lagoa + mar. Isso é algo que quase nenhum roteiro urbano oferece.</p>
+            </div>
+
+            <div style="background: var(--bg); border-radius: 16px; padding: 24px; border: 1px solid var(--line);">
+              <h3 style="margin-top:0; font-size:18px; font-weight:900; color:var(--green-dark);">Informações</h3>
+              
+              <div style="margin-bottom: 16px;">
+                <span style="font-size:20px; vertical-align:middle;">⏱️</span>
+                <strong data-i18n="res_dur_lbl" style="margin-left:5px;">Duração:</strong>
+                <div data-i18n="res_dur_val" style="color:var(--muted); font-weight:700; margin-left:30px;">2 horas</div>
+              </div>
+
+              <div style="margin-bottom: 24px;">
+                <span style="font-size:20px; vertical-align:middle;">🎟️</span>
+                <strong data-i18n="res_prc_lbl" style="margin-left:5px;">Valor médio:</strong>
+                <div data-i18n="res_prc_val" style="color:var(--muted); font-weight:700; margin-left:30px;">R$ 120 por pessoa</div>
+              </div>
+
+              <a href="https://wa.me/5521993802618?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20o%20passeio%20para%20a%20Praia%20da%20Reserva." target="_blank" class="btn btn--green" style="width: 100%; text-align: center;">
+                <span data-i18n="res_btn_book">Agendar Passeio</span>
+              </a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
@@ -43,6 +78,14 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
-  <script src="app.js"></script>
+  
+  <style>
+    @media (max-width: 860px) {
+      .info-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
 </body>
 </html>

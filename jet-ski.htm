@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Passeio de Jet-Ski | Portal Ilha da Gigóia</title>
 
-  <meta name="description" content="Explore a Lagoa da Tijuca e o Pantanal Carioca com muita adrenalina em nossos passeios de Jet-Ski." />
-  <meta name="keywords" content="Jet-ski Ilha da Gigóia, aluguel jet-ski RJ, esportes aquáticos, aventura" />
+  <meta name="description" content="Aluguel de jet ski na Ilha da Gigóia. Aventura, adrenalina e liberdade para explorar a Lagoa da Barra da Tijuca." />
+  <meta name="keywords" content="jet ski, aluguel jet ski RJ, Ilha da Gigóia, Barra da Tijuca, passeio de barco" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
@@ -16,7 +16,8 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+
+<body data-page="jet-ski">
   <div class="progress" id="progress"></div>
   <header class="header" id="siteHeader"></header>
 
@@ -30,12 +31,49 @@
 
     <section class="section" style="padding-top:24px">
       <div class="container">
-        <div class="card reveal" style="padding: 32px; display: grid; gap: 16px;">
-          <h2 class="card__title" style="font-size:24px; margin: 0;" data-i18n="js_h2">Acelere na Lagoa</h2>
-          <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="js_p1">
-            Para quem busca emoção, o passeio de Jet-Ski é a escolha perfeita. Oferecemos opções de passeios guiados pelos principais pontos do complexo lagunar, garantindo segurança, diversão e uma vista privilegiada da natureza ao redor.
-          </p>
-          <img src="assets/jetski.jpg" alt="Aventura de Jet-Ski na Ilha da Gigóia" style="width: 100%; border-radius: 12px; margin-top: 20px;" loading="lazy">
+        <div class="card reveal" style="padding: 40px; max-width: 950px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+          
+          <div style="border-radius: 14px; overflow: hidden; max-height: 400px;">
+            <img src="assets/jetski.jpg" alt="Passeio de Jet-Ski na Lagoa da Barra da Tijuca" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;" class="info-grid">
+            
+            <div style="color:var(--text); font-size:16px; line-height:1.7; font-weight:600;">
+              <p data-i18n="js_p1" style="margin-top:0;">Para quem procura mais emoção na água, o aluguel de jet ski na Ilha da Gigóia é uma das experiências mais divertidas da região da Barra da Tijuca.</p>
+              
+              <p data-i18n="js_p2">A atividade permite explorar os canais da lagoa e áreas abertas com velocidade, liberdade e uma vista incrível da região. Durante o passeio é possível navegar pelas águas da lagoa enquanto aprecia a paisagem da Barra da Tijuca de um ângulo totalmente diferente.</p>
+              
+              <p data-i18n="js_p3">O jet ski é uma ótima opção para quem quer adicionar aventura e adrenalina ao passeio pela ilha, sendo muito procurado por visitantes que querem experimentar algo diferente enquanto aproveitam o dia na lagoa.</p>
+              
+              <p data-i18n="js_p4">A atividade conta com orientação básica antes da saída, garantindo uma experiência segura e divertida mesmo para quem nunca pilotou um jet ski.</p>
+            </div>
+
+            <div style="background: var(--bg); border-radius: 16px; padding: 24px; border: 1px solid var(--line);">
+              <h3 style="margin-top:0; font-size:18px; font-weight:900; color:var(--green-dark);">💰 <span data-i18n="js_lbl_vals">Valores:</span></h3>
+              
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom:8px;">
+                <strong data-i18n="js_time_15">15 minutos</strong>
+                <div data-i18n="js_prc_15" style="color:var(--muted); font-weight:800; font-size:15px;">R$ 200</div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom:8px;">
+                <strong data-i18n="js_time_30">30 minutos</strong>
+                <div data-i18n="js_prc_30" style="color:var(--muted); font-weight:800; font-size:15px;">R$ 300</div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                <strong data-i18n="js_time_60">1 hora</strong>
+                <div data-i18n="js_prc_60" style="color:var(--muted); font-weight:800; font-size:15px;">R$ 600</div>
+              </div>
+
+              <a href="https://wa.me/5521993802618?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20o%20aluguel%20de%20Jet-Ski." target="_blank" class="btn btn--green" style="width: 100%; text-align: center;">
+                <span data-i18n="js_btn_book">Agendar Jet Ski</span>
+              </a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
@@ -43,6 +81,12 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
-  <script src="app.js"></script>
+  
+  <style>
+    @media (max-width: 860px) {
+      .info-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
 </body>
 </html>
