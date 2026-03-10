@@ -20,9 +20,9 @@ const DICT = {
   btn_enviar: { pt: "Enviar roteiro", en: "Send itinerary", es: "Enviar itinerario" },
   btn_limpar: { pt: "Limpar", en: "Clear", es: "Limpiar" },
   footer_text: { 
-    pt: "Portal Ilha da Gigóia — Termos • Privacidade • <a href='fale-conosco.html' style='text-decoration:underline; font-weight:800'>Contato</a>", 
-    en: "Gigóia Island Portal — Terms • Privacy • <a href='fale-conosco.html' style='text-decoration:underline; font-weight:800'>Contact</a>", 
-    es: "Portal Isla Gigóia — Términos • Privacidad • <a href='fale-conosco.html' style='text-decoration:underline; font-weight:800'>Contacto</a>" 
+    pt: "Portal Ilha da Gigóia — Termos • Privacidade", 
+    en: "Gigóia Island Portal — Terms • Privacy", 
+    es: "Portal Isla Gigóia — Términos • Privacidad" 
   },
 
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
@@ -301,7 +301,7 @@ const SITE = {
   homeCards: [
     { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat", badge:"⭐ Mais Procurado" },
     { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork", badge:"🍤 Gastronomia" },
-    { title:t("hm_c3_t"), desc:t("hm_c3_d"), linkLabel:t("hm_c3_l"), href:"a-ilha.html", img:"assets/card-natureza.jpg", icon:"leaf" },
+    { title:t("hm_c3_t"), desc:t("hm_c3_d"), linkLabel:t("hm_c3_l"), href:"a-ilha.html", img:"assets/card-natureza.jpg", icon:"leaf", badge:"🔭 Observação" },
     { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed", badge:"🌅 Para Relaxar" },
   ],
   pages: {
@@ -331,7 +331,6 @@ const SITE = {
     ]
   }
 };
-
 const GIGI = {
   whatsappNumber: "5521993802618",
   fabText: t("gigi_fab")
