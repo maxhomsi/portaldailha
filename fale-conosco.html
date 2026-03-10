@@ -44,10 +44,11 @@
                 Estamos aqui para ajudar! Se você tem alguma dúvida sobre a ilha, deseja anunciar seu negócio no Portal Ilha da Gigóia ou propor uma parceria comercial, basta preencher o formulário abaixo que retornaremos em breve.
               </p>
 
-              <form action="https://formsubmit.co/Ilhadagigoiaoficial@gmail.com" method="POST" class="gigiForm">
+              <form id="gigiContactForm" action="https://formsubmit.co/ajax/Ilhadagigoiaoficial@gmail.com" method="POST" class="gigiForm">
                 
                 <input type="hidden" name="_subject" value="Novo contato pelo Portal Ilha da Gigóia!">
                 <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
 
                 <div style="margin-bottom: 12px;">
                   <label data-i18n="fc_lbl_name">Seu nome</label>
@@ -69,10 +70,17 @@
                   <textarea name="Mensagem" rows="5" required></textarea>
                 </div>
 
-                <button class="btn btn--green" type="submit" style="width: 100%; justify-content: center;" data-i18n="fc_btn_send">
-                  Enviar mensagem
+                <button class="btn btn--green" type="submit" style="width: 100%; justify-content: center;">
+                  <span data-i18n="fc_btn_send">Enviar mensagem</span>
                 </button>
               </form>
+
+              <div id="formFeedback" style="display:none; text-align:center; padding: 40px 20px; background: rgba(71,176,90,0.1); border-radius: 16px; border: 1px dashed var(--green);">
+                 <div style="font-size: 40px; margin-bottom: 10px;">🕊️</div>
+                 <h3 style="color:var(--green-dark); font-size: 22px; margin: 0 0 10px 0; font-weight: 900;">Mensagem Enviada!</h3>
+                 <p style="color:var(--text); font-weight: 700; margin: 0; line-height: 1.5;">A Gigi já recebeu sua carta e nossa equipe entrará em contato com você muito em breve.</p>
+              </div>
+
             </div>
           </div>
 
@@ -84,5 +92,59 @@
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
   <script src="app.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("gigiContactForm");
+      const feedback = document.getElementById("formFeedback");
+
+      if(form) {
+        form.addEventListener("submit", function(e) {
+          e.preventDefault(); // Impede o redirecionamento padrão
+
+          const btn = form.querySelector('button[type="submit"]');
+          const originalBtnHtml = btn.innerHTML;
+          
+          // Muda o visual do botão para mostrar que está carregando
+          btn.innerHTML = "Enviando... ⏳";
+          btn.style.opacity = "0.7";
+          btn.style.pointerEvents = "none";
+
+          const formData = new FormData(form);
+
+          // Dispara os dados para o FormSubmit silenciosamente
+          fetch(form.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                  'Accept': 'application/json'
+              }
+          })
+          .then(response => response.json())
+          .then(data => {
+              if (data.success || data.success === "true") {
+                  // Esconde o form e mostra a mensagem de sucesso
+                  form.style.display = "none";
+                  feedback.style.display = "block";
+              } else {
+                  alert("Houve um erro ao enviar. Por favor, tente novamente.");
+                  // Restaura o botão se der erro
+                  btn.innerHTML = originalBtnHtml;
+                  btn.style.opacity = "1";
+                  btn.style.pointerEvents = "auto";
+              }
+          })
+          .catch(error => {
+              alert("Erro de conexão. Por favor, verifique sua internet e tente novamente.");
+              // Restaura o botão se der erro
+              btn.innerHTML = originalBtnHtml;
+              btn.style.opacity = "1";
+              btn.style.pointerEvents = "auto";
+          });
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
