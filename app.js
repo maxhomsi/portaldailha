@@ -19,11 +19,7 @@ const DICT = {
   btn_conheca: { pt: "Conheça a Ilha", en: "Discover the Island", es: "Conoce la Isla" },
   btn_enviar: { pt: "Enviar roteiro", en: "Send itinerary", es: "Enviar itinerario" },
   btn_limpar: { pt: "Limpar", en: "Clear", es: "Limpiar" },
-  footer_text: { 
-    pt: "Portal Ilha da Gigóia — Termos • Privacidade", 
-    en: "Gigóia Island Portal — Terms • Privacy", 
-    es: "Portal Isla Gigóia — Términos • Privacidad" 
-  },
+  footer_text: { pt: "Portal Ilha da Gigóia — Termos • Privacidade", en: "Gigóia Island Portal — Terms • Privacy", es: "Portal Isla Gigóia — Términos • Privacidad" },
 
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
   hero_title_a: { pt: "Descubra o Paraíso Tropical", en: "Discover the Tropical Paradise", es: "Descubre el Paraíso Tropical" },
@@ -36,18 +32,9 @@ const DICT = {
   capi_tag: { pt: "Capi, seu guia", en: "Capi, your guide", es: "Capi, tu guía" },
   tip_title: { pt: "Dica do Capi:", en: "Capi's Tip:", es: "Consejo de Capi:" },
   
-  tip_passeios: { 
-    pt: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para checar a tábua de marés e as melhores condições para o seu passeio!", 
-    en: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to check the tide table and the best conditions for your tour!", 
-    es: "¡<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para consultar la tabla de mareas y las mejores condiciones para tu paseo!" 
-  },
-  tip_comer: { 
-    pt: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para fazer a sua reserva e garantir a melhor mesa na beira da lagoa!", 
-    en: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to make your reservation and secure the best table by the lagoon!", 
-    es: "¡<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para hacer tu reserva y asegurar la mejor mesa junto a la laguna!" 
-  },
+  tip_passeios: { pt: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para checar a tábua de marés e as melhores condições para o seu passeio!", en: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to check the tide table and the best conditions for your tour!", es: "¡<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para consultar la tabla de mareas y las mejores condiciones para tu paseo!" },
+  tip_comer: { pt: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Fale com a Gigi</a> para fazer a sua reserva e garantir a melhor mesa na beira da lagoa!", en: "<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Talk to Gigi</a> to make your reservation and secure the best table by the lagoon!", es: "¡<a href='#' onclick='openGigiChat(); return false;' style='color:#2f9c49; text-decoration:underline'>Habla con Gigi</a> para hacer tu reserva y asegurar la mejor mesa junto a la laguna!" },
   
-  /* 20 DICAS COMPLETAS DA CAPI */
   tip_text_0: { pt: "Comece pelo passeio de barco pela manhã quando as águas estão mais calmas e a vida selvagem está ativa!", en: "Start with the morning boat tour when the waters are calmer and the wildlife is active!", es: "¡Empieza con el paseo en barco por la mañana cuando las aguas están más tranquilas y la vida silvestre está activa!" },
   tip_text_1: { pt: "Não deixe de provar o pastel de camarão em um dos restaurantes à beira da lagoa, é imperdível!", en: "Be sure to try the shrimp pastel at one of the lakeside restaurants, it's a must!", es: "No dejes de probar el pastel de camarones en uno de los restaurantes junto a la laguna, ¡es imperdible!" },
   tip_text_2: { pt: "O pôr do sol visto da parte oeste da ilha rende as melhores fotos para o seu Instagram.", en: "The sunset viewed from the west side of the island makes for the best Instagram photos.", es: "El atardecer visto desde el lado oeste de la isla rinde las mejores fotos para tu Instagram." },
@@ -82,7 +69,6 @@ const DICT = {
   hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha", en: "Find the perfect place to relax and enjoy the island", es: "Encuentra el lugar perfeito para relajarte y disfrutar la isla" },
   hm_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
 
-  /* A ILHA - TEXTOS COMPLETOS */
   ilha_c1_t: { pt: "Como chegar", en: "How to get there", es: "Cómo llegar" },
   ilha_c1_d: { pt: "Acesso rápido a partir do Rio. Dicas de transporte e horários.", en: "Quick access from Rio. Transport tips and schedules.", es: "Acceso rápido desde Río. Consejos de transporte y horarios." },
   ilha_c1_l: { pt: "Ver detalhes", en: "View details", es: "Ver detalles" },
@@ -138,7 +124,6 @@ const DICT = {
   me_h2: { pt: "O ano todo é incrível!", en: "All year round is amazing!", es: "¡Todo el año es increíble!" },
   me_p1: { pt: "Por estar no Rio de Janeiro, a ilha é ótima o ano todo. No verão (Dezembro a Março), o clima é ideal para curtir os bares e um chope gelado na lagoa. No outono e inverno (Abril a Agosto), as temperaturas mais amenas deixam as caminhadas e trilhas ecológicas muito mais confortáveis. Dica de ouro: Chegue sempre por volta das 16h para não perder o pôr do sol mágico!", en: "Being in Rio, the island is great year-round. In summer (Dec-Mar), it's ideal for enjoying bars and cold beer. In autumn/winter (Apr-Aug), milder temperatures make walking and trails comfortable. Golden tip: Always arrive around 4 PM to not miss the magical sunset!", es: "Al estar en Río, la isla es genial todo el año. En verano (Dic-Mar), es ideal para disfrutar de los bares y una cerveza fría. En otoño/invierno (Abr-Ago), las temperaturas suaves hacen que caminar y los senderos sean cómodos. Consejo de oro: ¡Llega siempre a las 16:00 para el mágico atardecer!" },
 
-  /* ILHAS TIJUCAS */
   pass_c1_t: { pt: "Ilhas Tijucas", en: "Tijucas Islands", es: "Islas Tijucas" },
   pass_c1_d: { pt: "Passeio de barco até o arquipélago. Águas cristalinas perfeitas para um mergulho e fotos incríveis.", en: "Boat tour to the archipelago. Crystal clear waters perfect for a swim and incredible photos.", es: "Paseo en barco hasta el archipiélago. Aguas cristalinas perfectas para un chapuzón y fotos increíbles." },
   pass_c1_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
@@ -154,7 +139,6 @@ const DICT = {
   it_prc_val: { pt: "R$ 150 por pessoa", en: "R$ 150 per person", es: "R$ 150 por persona" },
   it_btn_book: { pt: "Agendar Passeio", en: "Book Tour", es: "Reservar Paseo" },
 
-  /* PANTANAL CARIOCA */
   pass_c2_t: { pt: "Pantanal Carioca", en: "Pantanal Carioca", es: "Pantanal Carioca" },
   pass_c2_d: { pt: "Explore a rica biodiversidade da lagoa, com observação de aves, jacarés e capivaras em um trajeto relaxante.", en: "Explore the lagoon's rich biodiversity, observing birds, alligators, and capybaras on a relaxing route.", es: "Explora la rica biodiversidad de la laguna, observando aves, caimanes y capibaras en un trayecto relajante." },
   pass_c2_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
@@ -173,7 +157,6 @@ const DICT = {
   jack_title: { pt: "Aviso do Jack, o Protetor do Mangue:", en: "Warning from Jack, the Mangrove Protector:", es: "Aviso de Jack, el Protector del Manglar:" },
   jack_tip_pc: { pt: "Bem-vindos ao meu quintal! Mas atenção: sou o guardião destas águas. Durante o passeio, não jogue lixo na lagoa, não alimente os animais selvagens e respeite a natureza. O mangue é a nossa casa e a sobrevivência dele depende de todos nós!", en: "Welcome to my backyard! But beware: I am the guardian of these waters. During the tour, do not throw trash in the lagoon, do not feed the wild animals, and respect nature. The mangrove is our home and its survival depends on all of us!", es: "¡Bienvenidos a mi patio! Pero atención: soy el guardián de estas aguas. Durante el paseo, no arrojes basura a la laguna, no alimentes a los animales salvajes y respeta la naturaleza. ¡El manglar es nuestro hogar y su supervivencia depende de todos nosotros!" },
 
-  /* PRAIA DA RESERVA */
   pass_c3_t: { pt: "Reserva", en: "Reserva Beach", es: "Playa Reserva" },
   pass_c3_d: { pt: "Navegue pelos canais até chegar à bela e preservada Praia da Reserva. Um contato imersivo com a natureza.", en: "Sail through the canals until you reach the beautiful and preserved Reserva Beach. Immersive contact with nature.", es: "Navega por los canales hasta llegar a la hermosa y conservada Playa Reserva. Contacto inmersivo con la naturaleza." },
   pass_c3_l: { pt: "Ver roteiro", en: "View route", es: "Ver ruta" },
@@ -189,7 +172,6 @@ const DICT = {
   res_prc_val: { pt: "R$ 120 por pessoa", en: "R$ 120 per person", es: "R$ 120 por persona" },
   res_btn_book: { pt: "Agendar Passeio", en: "Book Tour", es: "Reservar Paseo" },
 
-  /* JET-SKI */
   pass_c4_t: { pt: "Jet-Ski", en: "Jet-Ski", es: "Moto de Agua" },
   pass_c4_d: { pt: "Para os aventureiros! Passeios guiados e aluguel de Jet-Ski para explorar a lagoa com muita adrenalina.", en: "For the adventurous! Guided tours and Jet-Ski rentals to explore the lagoon with lots of adrenaline.", es: "¡Para los aventureros! Paseos guiados y alquiler de motos de agua para explorar la laguna con mucha adrenalina." },
   pass_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
@@ -221,18 +203,46 @@ const DICT = {
   com_c4_d: { pt: "Locais tranquilos e com boas opções.", en: "Quiet places with good options.", es: "Lugares tranquilos con buenas opciones." },
   com_c4_l: { pt: "Ver", en: "View", es: "Ver" },
 
-  hosp_c1_t: { pt: "Pousadas aconchegantes", en: "Cozy inns", es: "Posadas acogedoras" },
-  hosp_c1_d: { pt: "Opções para descansar e aproveitar a ilha.", en: "Options to rest and enjoy the island.", es: "Opciones para descansar y disfrutar de la isla." },
-  hosp_c1_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
-  hosp_c2_t: { pt: "Melhor localização", en: "Best location", es: "Mejor ubicación" },
-  hosp_c2_d: { pt: "Dicas para ficar perto do que você quer fazer.", en: "Tips to stay close to what you want to do.", es: "Consejos para estar cerca de lo que quieres hacer." },
-  hosp_c2_l: { pt: "Guia", en: "Guide", es: "Guía" },
-  hosp_c3_t: { pt: "Viagem romântica", en: "Romantic trip", es: "Viaje romántico" },
-  hosp_c3_d: { pt: "Sugestões para casal e momentos especiais.", en: "Suggestions for couples and special moments.", es: "Sugerencias para parejas y momentos especiales." },
-  hosp_c3_l: { pt: "Roteiro", en: "Itinerary", es: "Itinerario" },
-  hosp_c4_t: { pt: "Custo-benefício", en: "Cost-benefit", es: "Costo-beneficio" },
-  hosp_c4_d: { pt: "Como equilibrar conforto e preço.", en: "How to balance comfort and price.", es: "Cómo equilibrar comodidad y precio." },
-  hosp_c4_l: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  hosp_c1_t: { pt: "Hotéis e Pousadas", en: "Hotels & Inns", es: "Hoteles y Posadas" },
+  hosp_c1_d: { pt: "Conforto e descanso com vista para a lagoa.", en: "Comfort and rest overlooking the lagoon.", es: "Confort y descanso con vistas a la laguna." },
+  hosp_c2_t: { pt: "Airbnb e Temporada", en: "Airbnb & Vacation Rentals", es: "Airbnb y Alquileres Vacacionales" },
+  hosp_c2_d: { pt: "Privacidade e liberdade para grupos e famílias.", en: "Privacy and freedom for groups and families.", es: "Privacidad y libertad para grupos y familias." },
+  hosp_c3_t: { pt: "Espaços para Eventos", en: "Event Spaces", es: "Espacios para Eventos" },
+  hosp_c3_d: { pt: "Cenários memoráveis para sua celebração.", en: "Memorable settings for your celebration.", es: "Escenarios memorables para tu celebración." },
+  hosp_c4_t: { pt: "Experiência Completa", en: "Complete Experience", es: "Experiencia Completa" },
+  hosp_c4_d: { pt: "Passeio, gastronomia e natureza em um único dia.", en: "Tour, gastronomy, and nature in a single day.", es: "Paseo, gastronomía y naturaleza en un solo día." },
+
+  /* TEXTOS DAS 4 NOVAS PÁGINAS DE HOSPEDAGEM PARA TRADUÇÃO */
+  hp_h1: { pt: "Hotéis e Pousadas", en: "Hotels & Inns", es: "Hoteles y Posadas" },
+  hp_sub: { pt: "Hospedagem com charme e tranquilidade.", en: "Accommodation with charm and tranquility.", es: "Alojamiento con encanto y tranquilidad." },
+  hp_p1: { pt: "A Ilha da Gigóia possui diversas <strong>pousadas e pequenas hospedagens</strong> ideais para quem deseja passar mais tempo na região e aproveitar o clima tranquilo da lagoa.", en: "Gigóia Island has several <strong>inns and small accommodations</strong> ideal for those who want to spend more time in the region and enjoy the tranquil atmosphere of the lagoon.", es: "La Isla Gigóia cuenta con varias <strong>posadas y pequeños alojamientos</strong> ideales para quienes desean pasar más tiempo en la región y disfrutar del ambiente tranquilo de la laguna." },
+  hp_p2: { pt: "Muitas dessas hospedagens oferecem <strong>suítes confortáveis, vista para os canais, café da manhã e áreas externas agradáveis</strong>, criando um ambiente perfeito para descanso.", en: "Many of these accommodations offer <strong>comfortable suites, views of the canals, breakfast, and pleasant outdoor areas</strong>, creating a perfect environment for rest.", es: "Muchos de estos alojamientos ofrecen <strong>cómodas suites, vistas a los canales, desayuno y agradables áreas al aire libre</strong>, creando un ambiente perfecto para descansar." },
+  hp_p3: { pt: "Hospedar-se na ilha permite explorar com calma os restaurantes, bares, passeios de barco e atrações locais, vivendo uma experiência diferente dentro da cidade do Rio de Janeiro.", en: "Staying on the island allows you to calmly explore the restaurants, bars, boat tours, and local attractions, living a different experience within the city of Rio de Janeiro.", es: "Hospedarse en la isla permite explorar con calma los restaurantes, bares, paseos en barco y atracciones locales, viviendo una experiencia diferente dentro de la ciudad de Río de Janeiro." },
+  hp_btn: { pt: "Falar com a Gigi sobre Pousadas", en: "Talk to Gigi about Inns", es: "Hablar con Gigi sobre Posadas" },
+
+  ab_h1: { pt: "Airbnb e Casas de Temporada", en: "Airbnb & Vacation Rentals", es: "Airbnb y Alquileres Vacacionales" },
+  ab_sub: { pt: "Sinta-se um verdadeiro morador da ilha.", en: "Feel like a true island resident.", es: "Siéntete como un verdadero residente de la isla." },
+  ab_p1: { pt: "Outra opção bastante procurada na ilha são os <strong>aluguéis de temporada</strong>, como casas e apartamentos disponíveis em plataformas como Airbnb.", en: "Another highly sought-after option on the island is <strong>vacation rentals</strong>, such as houses and apartments available on platforms like Airbnb.", es: "Otra opción muy solicitada en la isla son los <strong>alquileres vacacionales</strong>, como casas y apartamentos disponibles en plataformas como Airbnb." },
+  ab_p2: { pt: "Essa alternativa é ideal para quem viaja em grupo, com amigos ou família, oferecendo <strong>mais privacidade e liberdade</strong> durante a estadia.", en: "This alternative is ideal for those traveling in a group, with friends or family, offering <strong>more privacy and freedom</strong> during the stay.", es: "Esta alternativa es ideal para quienes viajan en grupo, con amigos o familiares, ofreciendo <strong>más privacidad y libertad</strong> durante la estadía." },
+  ab_p3: { pt: "Algumas casas possuem varanda, vista para a lagoa e acesso fácil aos restaurantes e bares da ilha, permitindo que o visitante aproveite o ambiente único da região.", en: "Some houses have a balcony, a view of the lagoon, and easy access to the island's restaurants and bars, allowing the visitor to enjoy the unique atmosphere of the region.", es: "Algunas casas tienen balcón, vista a la laguna y fácil acceso a los restaurantes y bares de la isla, permitiendo al visitante disfrutar del ambiente único de la región." },
+  ab_btn: { pt: "Verificar opções com a Gigi", en: "Check options with Gigi", es: "Consultar opciones con Gigi" },
+
+  ev_h1: { pt: "Espaços para Eventos", en: "Event Spaces", es: "Espacios para Eventos" },
+  ev_sub: { pt: "Celebre momentos inesquecíveis cercado pela natureza.", en: "Celebrate unforgettable moments surrounded by nature.", es: "Celebra momentos inolvidables rodeado de naturaleza." },
+  ev_p1: { pt: "A Ilha da Gigóia também é um destino especial para a realização de <strong>eventos e celebrações</strong>.", en: "Gigóia Island is also a special destination for hosting <strong>events and celebrations</strong>.", es: "La Isla Gigóia también es un destino especial para la realización de <strong>eventos y celebraciones</strong>." },
+  ev_p2: { pt: "Diversos espaços podem ser alugados para <strong>casamentos, aniversários, confraternizações, eventos corporativos e encontros entre amigos</strong>, sempre com o charme da lagoa e da natureza ao redor.", en: "Various spaces can be rented for <strong>weddings, birthdays, get-togethers, corporate events, and meetings with friends</strong>, always with the charm of the lagoon and the surrounding nature.", es: "Diversos espacios pueden ser alquilados para <strong>bodas, cumpleaños, confraternizaciones, eventos corporativos y encuentros entre amigos</strong>, siempre con el encanto de la laguna y la naturaleza alrededor." },
+  ev_p3: { pt: "Realizar um evento na ilha oferece um cenário diferente e memorável, combinando gastronomia, paisagem e uma atmosfera única dentro da Barra da Tijuca.", en: "Hosting an event on the island offers a different and memorable setting, combining gastronomy, landscape, and a unique atmosphere within Barra da Tijuca.", es: "Realizar un evento en la isla ofrece un escenario diferente y memorable, combinando gastronomía, paisaje y una atmósfera única dentro de Barra da Tijuca." },
+  ev_btn: { pt: "Planeje seu evento com a Gigi", en: "Plan your event with Gigi", es: "Planifica tu evento con Gigi" },
+
+  ex_h1: { pt: "Experiência Completa na Ilha", en: "Complete Experience", es: "Experiencia Completa" },
+  ex_sub: { pt: "O roteiro perfeito para viver a Gigóia em um dia.", en: "The perfect itinerary to experience Gigóia in one day.", es: "El itinerario perfecto para vivir Gigóia en un día." },
+  ex_p1: { pt: "Além da hospedagem, também é possível viver <strong>uma experiência completa de um dia na Ilha da Gigóia.</strong>", en: "In addition to accommodation, it is also possible to live <strong>a complete one-day experience on Gigóia Island.</strong>", es: "Además del alojamiento, también es posible vivir <strong>una experiencia completa de un día en la Isla Gigóia.</strong>" },
+  ex_p2: { pt: "O visitante pode começar o passeio chegando de barco e sendo recepcionado na ilha, seguindo para um <strong>café da manhã em um dos estabelecimentos locais.</strong>", en: "Visitors can start the tour by arriving by boat and being welcomed to the island, heading for <strong>breakfast at one of the local establishments.</strong>", es: "El visitante puede comenzar el paseo llegando en barco y siendo recibido en la isla, dirigiéndose a un <strong>desayuno en uno de los establecimentos locales.</strong>" },
+  ex_p3: { pt: "Durante o dia, é possível fazer um <strong>passeio de barco pelos canais ou pela lagoa</strong>, conhecer a natureza da região e depois aproveitar o <strong>almoço em um dos restaurantes da ilha.</strong>", en: "During the day, it is possible to take a <strong>boat tour through the canals or the lagoon</strong>, discover the nature of the region, and then enjoy <strong>lunch at one of the island's restaurants.</strong>", es: "Durante el día, es posible hacer un <strong>paseo en barco por los canales o la laguna</strong>, conocer la naturaleza de la región y luego disfrutar del <strong>almuerzo en uno de los restaurantes de la isla.</strong>" },
+  ex_p4: { pt: "À tarde, muitos visitantes gostam de caminhar pela ilha e visitar a <strong>feirinha local</strong>, antes de relaxar com um <strong>drink ao pôr do sol</strong> à beira da água.", en: "In the afternoon, many visitors like to walk around the island and visit the <strong>local market</strong> before relaxing with a <strong>sunset drink</strong> by the water.", es: "Por la tarde, a muchos visitantes les gusta caminar por la isla y visitar el <strong>mercado local</strong>, antes de relajarse con una <strong>bebida al atardecer</strong> junto al agua." },
+  ex_p5: { pt: "Para encerrar o dia, alguns bares e restaurantes oferecem <strong>música ao vivo</strong>, criando o clima perfeito para aproveitar a noite antes de retornar.", en: "To end the day, some bars and restaurants offer <strong>live music</strong>, creating the perfect atmosphere to enjoy the night before returning.", es: "Para terminar el día, algunos bares y restaurantes ofrecen <strong>música en vivo</strong>, creando el ambiente perfecto para disfrutar la noche antes de regresar." },
+  ex_p6: { pt: "Essa experiência reúne natureza, gastronomia, cultura e lazer em um único dia inesquecível com tudo de melhor que tem na ilha.", en: "This experience brings together nature, gastronomy, culture, and leisure in a single unforgettable day with the best the island has to offer.", es: "Esta experiencia reúne naturaleza, gastronomía, cultura y ocio en un solo día inolvidable con lo mejor que la isla tiene para ofrecer." },
+  ex_btn: { pt: "Agendar Experiência com a Gigi", en: "Schedule Experience with Gigi", es: "Programar Experiencia con Gigi" },
 
   pg_ilha_h1: { pt: "A Ilha", en: "The Island", es: "La Isla" },
   pg_ilha_p: { pt: "Um refúgio tropical com natureza exuberante, clima tranquilo e experiências únicas pertinho do Rio.", en: "A tropical refuge with lush nature, a peaceful climate, and unique experiences close to Rio.", es: "Un refugio tropical con natureza exuberante, clima tranquilo y experiencias únicas cerca de Río." },
@@ -259,12 +269,9 @@ const DICT = {
   gigi_lbl_phone: { pt: "Seu telefone *", en: "Your phone *", es: "Tu teléfono *" },
   gigi_lbl_msg: { pt: "Mensagem *", en: "Message *", es: "Mensaje *" },
   gigi_btn: { pt: "Enviar", en: "Send", es: "Enviar" },
-  gigi_note: { pt: "Ao enviar, abriremos o WhatsApp com sua mensagem pronta.", en: "When sending, we will open WhatsApp with your message ready.", es: "Al enviar, abriremos WhatsApp con tu mensaje listo." },
+  gigi_note: { pt: "Ao enviar, abriremos o WhatsApp com sua mensagem pronta.", en: "When sending, we will open WhatsApp with your message ready.", es: "Al enviar, abriremos WhatsApp con tu mensaje listo." }
 };
 
-/* =========================================================
-   FUNÇÃO UNIFICADA DE TRADUÇÃO E OBJETOS DE CONTEÚDO
-   ========================================================= */
 const t = (key) => DICT[key] ? (DICT[key][currentLang] || DICT[key].pt) : key;
 
 const SITE = {
@@ -324,19 +331,19 @@ const SITE = {
       { title:t("com_c4_t"), desc:t("com_c4_d"), linkLabel:t("com_c4_l"), href:"passeios-rotas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
     ],
     "hospedagem": [
-      { title:t("hosp_c1_t"), desc:t("hosp_c1_d"), linkLabel:t("hosp_c1_l"), href:"passeios-rotas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
-      { title:t("hosp_c2_t"), desc:t("hosp_c2_d"), linkLabel:t("hosp_c2_l"), href:"passeios-rotas.html", img:"assets/card-natureza.jpg", icon:"leaf" },
-      { title:t("hosp_c3_t"), desc:t("hosp_c3_d"), linkLabel:t("hosp_c3_l"), href:"passeios-rotas.html", img:"assets/card-comer.jpg", icon:"fork" },
-      { title:t("hosp_c4_t"), desc:t("hosp_c4_d"), linkLabel:t("hosp_c4_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat" },
+      { title:t("hosp_c1_t"), desc:t("hosp_c1_d"), linkLabel:t("ilha_c1_l"), href:"hoteis-pousadas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:t("hosp_c2_t"), desc:t("hosp_c2_d"), linkLabel:t("ilha_c1_l"), href:"airbnb-temporada.html", img:"assets/airbnb.jpg", icon:"bed" },
+      { title:t("hosp_c3_t"), desc:t("hosp_c3_d"), linkLabel:t("ilha_c1_l"), href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge:"🎉 Celebre" },
+      { title:t("hosp_c4_t"), desc:t("hosp_c4_d"), linkLabel:t("ilha_c1_l"), href:"experiencia-completa.html", img:"assets/experiencia.jpg", icon:"boat", badge:"🌅 Roteiro" },
     ]
   }
 };
+
 const GIGI = {
   whatsappNumber: "5521993802618",
   fabText: t("gigi_fab")
 };
 
-/* FUNÇÃO GLOBAL PARA OS BOTÕES "AGENDAR PASSEIO" ABRIREM A GIGI */
 window.openGigiChat = function() {
   const box = document.getElementById("gigiBox");
   if(box) {
@@ -345,9 +352,6 @@ window.openGigiChat = function() {
   }
 };
 
-/* =========================================================
-   ÍCONES SVG E REDES SOCIAIS
-   ========================================================= */
 const svgInsta = `<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>`;
 const svgFb = `<svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>`;
 const svgTiktok = `<svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>`;
@@ -511,7 +515,7 @@ function mountPageCards(pageKey) {
 function mountGigiWidget() {
   const root = document.getElementById("gigiWidgetRoot");
   if (!root) return;
-  const isOpen = localStorage.getItem(GIGI.openKey) === "1";
+  const isOpen = localStorage.getItem("ilg_gigi_open_v1") === "1";
 
   root.innerHTML = `
     <div class="gigiFab">
@@ -592,8 +596,6 @@ function setupReveal() {
   
   els.forEach(el => io.observe(el));
 
-  // TRAVA DE SEGURANÇA CONTRA TELA BRANCA: 
-  // Força a exibição de todos os elementos após 150ms caso o sensor falhe.
   setTimeout(() => {
     els.forEach(el => el.classList.add("is-in"));
   }, 150);
@@ -684,7 +686,6 @@ function translateHtmlElements() {
   setupGigiFloat();
   translateHtmlElements(); 
   
-  // Destrava a página e força a exibição para evitar tela branca
   requestAnimationFrame(() => document.body.classList.add("is-ready"));
   
   setupHeaderScroll();
