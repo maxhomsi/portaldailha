@@ -97,7 +97,8 @@ const SITE = {
       { title:"Ilhas Tijucas", desc:"Passeio de barco até o arquipélago. Águas cristalinas e fotos incríveis.", linkLabel:"Ver roteiro", href:"ilhas-tijucas.html", img:"assets/ilhastijucas.jpg", icon:"boat", badge:"🌊 Mergulho" },
       { title:"Pantanal Carioca", desc:"Explore a rica biodiversidade da lagoa e o safári urbano.", linkLabel:"Ver roteiro", href:"pantanal-carioca.html", img:"assets/pantanalcarioca.jpg", icon:"leaf", badge:"🐊 Safári" },
       { title:"Reserva", desc:"Navegue pelos canais até chegar à bela e preservada Praia da Reserva.", linkLabel:"Ver roteiro", href:"reserva.html", img:"assets/reserva.jpg", icon:"boat", badge:"🏖️ Praia" },
-      { title:"Jet-Ski", desc:"Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", linkLabel:"Ver opções", href:"jet-ski.html", img:"assets/jetski.jpg", icon:"boat", badge:"⚡ Adrenalina" }
+      { title:"Jet-Ski", desc:"Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", linkLabel:"Ver opções", href:"jet-ski.html", img:"assets/jetski.jpg", icon:"boat", badge:"⚡ Adrenalina" },
+      { title:"Pacotes Especiais", desc:"Monte seu roteiro ideal combinando passeio de barco, almoço e mais.", linkLabel:"Ver pacotes", href:"pacotes-especiais.html", img:"assets/experiencia.jpg", icon:"fork", badge:"🎁 Ofertas" }
     ],
     "comer-beber": [
       { title:"Restaurantes da Ilha", desc:"Pratos de frutos do mar, carnes e culinária variada à beira da lagoa.", linkLabel:"Ver detalhes", href:"restaurantes.html", img:"assets/card-comer.jpg", icon:"fork", badge:"🍤 Gastronomia" },
