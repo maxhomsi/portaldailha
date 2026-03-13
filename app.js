@@ -30,8 +30,6 @@ const DICT = {
 
   capi_tag: { pt: "Capi, seu guia" },
   tip_title: { pt: "Dica do Capi:" },
-  
-  /* PLACEHOLDER DO CAPI - Dicas removidas para limpar o código */
   tip_placeholder: { pt: "[PLACEHOLDER] As dicas do Capi voltarão no final do projeto..." },
   
   hm_c1_t: { pt: "Passeios de Barco" },
@@ -46,17 +44,6 @@ const DICT = {
   hm_c4_t: { pt: "Hospedagem" },
   hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha" },
   hm_c4_l: { pt: "Ver opções" },
-
-  pg_ilha_h1: { pt: "A Ilha" },
-  pg_ilha_p: { pt: "Um refúgio tropical com natureza exuberante, clima tranquilo e experiências únicas pertinho do Rio." },
-  pg_passeios_h1: { pt: "Passeios & Rotas" },
-  pg_passeios_p: { pt: "Roteiros de barco, paradas para fotos, horários ideais e dicas do que levar para aproveitar melhor." },
-  pg_comer_h1: { pt: "Comer & Beber" },
-  pg_comer_p: { pt: "Explore sabores locais: frutos do mar frescos, bares charmosos e aquele pôr do sol perfeito." },
-  pg_hospeda_h1: { pt: "Hospedagem" },
-  pg_hospeda_p: { pt: "Encontre o lugar perfeito para descansar: opções aconchegantes, boas localizações e dicas de custo-benefício." },
-  pg_fale_h1: { pt: "Fale Conosco" },
-  pg_fale_p: { pt: "Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós." },
 
   gigi_fab: { pt: "Fale com a Gigi" },
   gigi_hello: { pt: "Olá, me chamo Gigi!" },
@@ -87,51 +74,42 @@ const SITE = {
     { href: "hospedagem.html", label: t("nav_hospedagem") },
     { href: "fale-conosco.html", label: t("nav_fale") }
   ],
-  ctas: {
-    header: { href: "passeios-rotas.html", label: t("btn_passeios") },
-  },
+  ctas: { header: { href: "passeios-rotas.html", label: t("btn_passeios") } },
   hero: {
-    bg: "assets/hero.jpg",
-    pill: t("hero_pill"),
-    titleA: t("hero_title_a"),
-    titleB: t("hero_title_b"),
-    subtitle: t("hero_sub"),
+    bg: "assets/hero.jpg", pill: t("hero_pill"), titleA: t("hero_title_a"),
+    titleB: t("hero_title_b"), subtitle: t("hero_sub")
   },
-  tip: {
-    capiImg: "assets/capi.png",
-    capiTag: t("capi_tag"),
-    title: t("tip_title"),
-  },
+  tip: { capiImg: "assets/capi.png", capiTag: t("capi_tag"), title: t("tip_title") },
   homeCards: [
     { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat", badge:"⭐ Mais Procurado" },
     { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork", badge:"🍤 Gastronomia" },
     { title:t("hm_c3_t"), desc:t("hm_c3_d"), linkLabel:t("hm_c3_l"), href:"a-ilha.html", img:"assets/card-natureza.jpg", icon:"leaf", badge:"🔭 Observação" },
-    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed", badge:"🌅 Para Relaxar" },
+    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed", badge:"🌅 Para Relaxar" }
   ],
   pages: {
     "a-ilha": [
       { title:"Como chegar", desc:"Acesso rápido a partir do Rio. Dicas de transporte e horários.", linkLabel:"Ver detalhes", href:"como-chegar.html", img:"assets/comochegar.jpg", icon:"boat" },
       { title:"História & Cultura", desc:"Tradições locais, ambiente tranquilo e charme natural.", linkLabel:"Ler mais", href:"historia-cultura.html", img:"assets/historia.jpg", icon:"leaf" },
       { title:"Boas práticas", desc:"Recomendações para curtir com respeito à natureza e aos moradores.", linkLabel:"Conferir", href:"boas-praticas.html", img:"assets/boaspraticas.jpg", icon:"bed" },
-      { title:"Melhor época", desc:"Clima, horários e dicas para aproveitar o dia inteiro.", linkLabel:"Ver detalhes", href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" },
+      { title:"Melhor época", desc:"Clima, horários e dicas para aproveitar o dia inteiro.", linkLabel:"Ver detalhes", href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" }
     ],
     "passeios-rotas": [
       { title:"Ilhas Tijucas", desc:"Passeio de barco até o arquipélago. Águas cristalinas e fotos incríveis.", linkLabel:"Ver roteiro", href:"ilhas-tijucas.html", img:"assets/ilhastijucas.jpg", icon:"boat", badge:"🌊 Mergulho" },
       { title:"Pantanal Carioca", desc:"Explore a rica biodiversidade da lagoa e o safári urbano.", linkLabel:"Ver roteiro", href:"pantanal-carioca.html", img:"assets/pantanalcarioca.jpg", icon:"leaf", badge:"🐊 Safári" },
       { title:"Reserva", desc:"Navegue pelos canais até chegar à bela e preservada Praia da Reserva.", linkLabel:"Ver roteiro", href:"reserva.html", img:"assets/reserva.jpg", icon:"boat", badge:"🏖️ Praia" },
-      { title:"Jet-Ski", desc:"Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", linkLabel:"Ver opções", href:"jet-ski.html", img:"assets/jetski.jpg", icon:"boat", badge:"⚡ Adrenalina" },
+      { title:"Jet-Ski", desc:"Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", linkLabel:"Ver opções", href:"jet-ski.html", img:"assets/jetski.jpg", icon:"boat", badge:"⚡ Adrenalina" }
     ],
     "comer-beber": [
       { title:"Restaurantes da Ilha", desc:"Pratos de frutos do mar, carnes e culinária variada à beira da lagoa.", linkLabel:"Ver detalhes", href:"restaurantes.html", img:"assets/card-comer.jpg", icon:"fork", badge:"🍤 Gastronomia" },
       { title:"Bares e Drinks", desc:"Cerveja gelada, caipirinhas e o pôr do sol mais bonito da região.", linkLabel:"Ver detalhes", href:"bares-drinks.html", img:"assets/bar&DRINK.jpg", icon:"boat", badge:"🍹 Relax" },
       { title:"Café da Manhã e Lanches", desc:"Comece o dia com tranquilidade ou faça uma pausa para recarregar.", linkLabel:"Ver opções", href:"cafe-lanches.html", img:"assets/cafedamanha.png", icon:"leaf", badge:"☕ Bom dia" },
-      { title:"Eventos e Experiências", desc:"Feirinhas, música ao vivo e espaços para celebrações inesquecíveis.", linkLabel:"Conferir", href:"eventos-experiencias.html", img:"assets/drinks.jpg", icon:"fork", badge:"🎵 Ao Vivo" },
+      { title:"Eventos e Experiências", desc:"Feirinhas, música ao vivo e espaços para celebrações inesquecíveis.", linkLabel:"Conferir", href:"eventos-experiencias.html", img:"assets/drinks.jpg", icon:"fork", badge:"🎵 Ao Vivo" }
     ],
     "hospedagem": [
       { title:"Hotéis e Pousadas", desc:"Conforto e descanso com vista para a lagoa.", linkLabel:"Ver detalhes", href:"hoteis-pousadas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
       { title:"Airbnb e Temporada", desc:"Privacidade e liberdade para grupos e famílias.", linkLabel:"Ver opções", href:"airbnb-temporada.html", img:"assets/airbnb.jpg", icon:"bed" },
       { title:"Espaços para Eventos", desc:"Cenários memoráveis para sua celebração.", linkLabel:"Conferir", href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge:"🎉 Celebre" },
-      { title:"Experiência Completa", desc:"Passeio, gastronomia e natureza em um único dia.", linkLabel:"Agendar", href:"experiencia-completa.html", img:"assets/experiencia.jpg", icon:"boat", badge:"🌅 Roteiro" },
+      { title:"Experiência Completa", desc:"Passeio, gastronomia e natureza em um único dia.", linkLabel:"Agendar", href:"experiencia-completa.html", img:"assets/experiencia.jpg", icon:"boat", badge:"🌅 Roteiro" }
     ]
   }
 };
@@ -143,10 +121,7 @@ const GIGI = { whatsappNumber: "5521993802618" };
 
 window.openGigiChat = function() {
   const box = document.getElementById("gigiBox");
-  if(box) {
-    box.style.display = "flex";
-    localStorage.setItem("ilg_gigi_open_v1", "1");
-  }
+  if(box) { box.style.display = "flex"; localStorage.setItem("ilg_gigi_open_v1", "1"); }
 };
 
 const svgInsta = `<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>`;
@@ -183,9 +158,7 @@ function cardHtml(c, idx=0) {
       <div class="card__body">
         <h3 class="card__title">${c.title}</h3>
         <p class="card__desc">${c.desc}</p>
-        <a class="card__link" href="${c.href}">
-          ${c.linkLabel || 'Ver detalhes'} <span aria-hidden="true">→</span>
-        </a>
+        <a class="card__link" href="${c.href}">${c.linkLabel || 'Ver detalhes'} <span>→</span></a>
       </div>
     </article>
   `;
@@ -200,14 +173,9 @@ function mountHeaderFooter() {
       <div class="container header__inner">
         <a class="brand" href="index.html">
           <img class="brand__logo" src="${SITE.brand.logo}" alt="Logo" />
-          <div class="brand__text">
-            <small>${SITE.brand.nameSmall}</small>
-            <strong><span>${SITE.brand.nameMainA}</span> ${SITE.brand.nameMainB}</strong>
-          </div>
+          <div class="brand__text"><small>${SITE.brand.nameSmall}</small><strong><span>${SITE.brand.nameMainA}</span> ${SITE.brand.nameMainB}</strong></div>
         </a>
-        <div class="navWrap"><nav class="nav">
-          ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
-        </nav></div>
+        <div class="navWrap"><nav class="nav">${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}</nav></div>
         <div class="header__actions">
           ${socialHtml}
           <a class="btn btn--green" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
@@ -217,9 +185,7 @@ function mountHeaderFooter() {
       <div class="mobileNav" id="mobileNav" style="display:none">
         <div class="container mobileNav__inner">
           ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
-          <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">
-            ${SITE.ctas.header.label}
-          </a>
+          <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
         </div>
       </div>
     `;
@@ -247,12 +213,8 @@ function setActiveNav() {
   const path = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll("[data-navlink]").forEach(a => {
     const href = a.getAttribute("href");
-    if (href === path) {
-      a.style.background = "rgba(71,176,90,.12)";
-      a.setAttribute("aria-current", "page");
-    } else {
-      a.removeAttribute("aria-current");
-    }
+    if (href === path) { a.setAttribute("aria-current", "page"); } 
+    else { a.removeAttribute("aria-current"); }
   });
 }
 
@@ -281,17 +243,11 @@ function mountHome() {
   const capiImg = document.getElementById("capiImg");
   if (capiImg) capiImg.src = SITE.tip.capiImg;
 
-  const capiTag = document.getElementById("capiTag");
-  if (capiTag) capiTag.textContent = SITE.tip.capiTag;
-
   const tipTitle = document.getElementById("tipTitle");
   if (tipTitle) tipTitle.textContent = SITE.tip.title;
 
-  /* PLACEHOLDER DO CAPI - Puxando apenas a string de placeholder */
   const tipText = document.getElementById("tipText");
-  if (tipText) {
-    tipText.innerHTML = " " + t("tip_placeholder");
-  }
+  if (tipText) tipText.innerHTML = " " + t("tip_placeholder");
 
   const homeCards = document.getElementById("homeCards");
   if (homeCards) homeCards.innerHTML = SITE.homeCards.map((c,i)=>cardHtml(c,i)).join("");
@@ -321,25 +277,13 @@ function mountGigiWidget() {
       </div>
       <div class="gigiBox__body">
         <div class="gigiCard">
-          <div class="gigiCard__img" id="gigiImgBox"></div>
-          <div class="gigiCard__text">
-            <strong>${t("gigi_hello")}</strong>
-            <small>${t("gigi_sub")}</small>
-          </div>
+          <div class="gigiCard__img" id="gigiImgBox"><img src="assets/gigi.png" alt="Gigi" style="width:100%;height:100%;object-fit:cover;border-radius:18px"/></div>
+          <div class="gigiCard__text"><strong>${t("gigi_hello")}</strong><small>${t("gigi_sub")}</small></div>
         </div>
         <form class="gigiForm" id="gigiForm">
-          <div>
-            <label>${t("gigi_lbl_name")}</label>
-            <input id="gigiName" type="text" placeholder="Maria" required />
-          </div>
-          <div>
-            <label>${t("gigi_lbl_phone")}</label>
-            <input id="gigiPhone" type="tel" placeholder="+55 21 99999-9999" required />
-          </div>
-          <div>
-            <label>${t("gigi_lbl_msg")}</label>
-            <textarea id="gigiMessage" placeholder="..." required></textarea>
-          </div>
+          <div><label>${t("gigi_lbl_name")}</label><input id="gigiName" type="text" placeholder="Maria" required /></div>
+          <div><label>${t("gigi_lbl_phone")}</label><input id="gigiPhone" type="tel" placeholder="+55 21 99999-9999" required /></div>
+          <div><label>${t("gigi_lbl_msg")}</label><textarea id="gigiMessage" placeholder="..." required></textarea></div>
           <button class="gigiSend" type="submit">${t("gigi_btn")}</button>
           <small style="color:rgba(0,0,0,.55);font-weight:800">${t("gigi_note")}</small>
         </form>
@@ -347,48 +291,116 @@ function mountGigiWidget() {
     </div>
   `;
 
-  const boxImg = document.getElementById("gigiImgBox");
-  if (boxImg) {
-    boxImg.innerHTML = `<img src="assets/gigi.png" alt="Gigi" style="width:100%;height:100%;object-fit:cover;border-radius:18px" />`;
-    boxImg.style.border = "none";
-    boxImg.style.background = "transparent";
-  }
-
   const form = document.getElementById("gigiForm");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = (document.getElementById("gigiName")?.value || "").trim();
-    const phone = (document.getElementById("gigiPhone")?.value || "").trim();
-    const message = (document.getElementById("gigiMessage")?.value || "").trim();
-
+    const name = document.getElementById("gigiName")?.value || "";
+    const phone = document.getElementById("gigiPhone")?.value || "";
+    const message = document.getElementById("gigiMessage")?.value || "";
     if (!name || !phone || !message) return;
     const text = `Olá! Quero falar com a Gigi (Portal Ilha da Gigóia).\n\nNome: ${name}\nTelefone: ${phone}\nMensagem:\n${message}`;
-    const url = `https://wa.me/${GIGI.whatsappNumber}?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/${GIGI.whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank");
     form.reset();
   });
 }
 
+/* =========================================================
+   NOVO: WIDGET DE CADASTRO DE RESTAURANTES (AJAX MODAL)
+   ========================================================= */
+function setupCadastroModal() {
+  const currentUrl = location.href;
+  // O botão só vai aparecer nestas 4 páginas específicas
+  const showButton = ['restaurantes', 'bares-drinks', 'cafe-lanches', 'eventos-experiencias'].some(page => currentUrl.includes(page));
+  
+  if (!showButton) return;
+
+  const html = `
+    <div class="side-badge" onclick="openCadastroModal()">
+      Cadastre seu<br>Restaurante<br>aqui!
+    </div>
+
+    <div class="modal-overlay" id="cadastroModal" onclick="closeCadastroModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeCadastroModal()">×</button>
+        <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;">Fale Conosco</h2>
+        <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">Preencha os dados abaixo para solicitar um orçamento e cadastrar o seu estabelecimento no Portal.</p>
+        
+        <form id="ajaxCadastroForm" class="gigiForm">
+          <div>
+            <label>Nome do Estabelecimento</label>
+            <input type="text" placeholder="Ex: Boteco da Ilha" required />
+          </div>
+          <div>
+            <label>Nome do Responsável</label>
+            <input type="text" placeholder="Seu nome completo" required />
+          </div>
+          <div>
+            <label>Telefone / WhatsApp</label>
+            <input type="tel" placeholder="(21) 99999-9999" required />
+          </div>
+          <div>
+            <label>Mensagem</label>
+            <textarea rows="3" placeholder="Gostaria de saber os valores para..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px; font-size:16px;" id="ajaxSubmitBtn">Enviar Solicitação</button>
+        </form>
+
+        <div id="ajaxSuccess" style="display:none; text-align:center; padding:40px 20px;">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="var(--green)" style="margin-bottom:20px; display:inline-block;">
+            <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm-1.2 17.3l-4.8-4.8 1.4-1.4 3.4 3.4 7.6-7.6 1.4 1.4-9 9z"/>
+          </svg>
+          <h3 style="margin:0 0 10px; color:var(--text); font-weight:900; font-size:22px;">Mensagem Enviada!</h3>
+          <p style="color:var(--muted); font-size:16px; font-weight:600;">Nossa equipe entrará em contato em breve com todas as informações.</p>
+          <button class="btn" style="margin-top:20px; background:#eee; color:#333; width:100%;" onclick="closeCadastroModal()">Fechar</button>
+        </div>
+
+      </div>
+    </div>
+  `;
+  
+  document.body.insertAdjacentHTML('beforeend', html);
+
+  // Lógica do AJAX (Simulado)
+  const form = document.getElementById('ajaxCadastroForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('ajaxSubmitBtn');
+    btn.innerText = "Enviando aguarde...";
+    btn.style.opacity = "0.7";
+    btn.style.pointerEvents = "none";
+    
+    // Simula o tempo de envio de um servidor (1.5 segundos) e mostra o sucesso
+    setTimeout(() => {
+      form.style.display = 'none';
+      document.getElementById('ajaxSuccess').style.display = 'block';
+    }, 1500);
+  });
+}
+
+window.openCadastroModal = function() {
+  const m = document.getElementById('cadastroModal');
+  m.style.display = 'flex';
+  void m.offsetWidth; // Força o navegador a entender o display:flex antes de animar a opacidade
+  m.classList.add('is-active');
+};
+
+window.closeCadastroModal = function(e) {
+  const m = document.getElementById('cadastroModal');
+  m.classList.remove('is-active');
+  setTimeout(() => { m.style.display = 'none'; }, 300); // Espera a animação terminar para sumir com o HTML
+};
+
+/* =========================================================
+   FUNÇÕES GERAIS DE SCROLL E INICIALIZAÇÃO
+   ========================================================= */
 function setupReveal() {
   const els = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window) || els.length === 0) {
-    els.forEach(el => el.classList.add("is-in"));
-    return;
-  }
+  if (!("IntersectionObserver" in window) || els.length === 0) { els.forEach(el => el.classList.add("is-in")); return; }
   const io = new IntersectionObserver((entries, observer) => {
-    entries.forEach(e => { 
-      if (e.isIntersecting) {
-        e.target.classList.add("is-in"); 
-        observer.unobserve(e.target);
-      }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-in"); observer.unobserve(e.target); } });
   }, { threshold: 0.05, rootMargin: "50px" });
-  
   els.forEach(el => io.observe(el));
-
-  setTimeout(() => {
-    els.forEach(el => el.classList.add("is-in"));
-  }, 150);
+  setTimeout(() => { els.forEach(el => el.classList.add("is-in")); }, 150);
 }
 
 function setupHeaderScroll() {
@@ -405,63 +417,10 @@ function setupProgress() {
   const onScroll = () => {
     const doc = document.documentElement;
     const max = (doc.scrollHeight - doc.clientHeight) || 1;
-    const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
-    bar.style.width = pct.toFixed(2) + "%";
+    bar.style.width = Math.min(100, Math.max(0, (window.scrollY / max) * 100)).toFixed(2) + "%";
   };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive:true });
-}
-
-function setupHeroParallax() {
-  const heroBg = document.getElementById("heroBg");
-  if (!heroBg) return;
-  const onScroll = () => {
-    const y = window.scrollY;
-    heroBg.style.transform = `scale(1.05) translateY(${Math.min(y * 0.08, 30)}px)`;
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive:true });
-}
-
-function setupGigiFloat() {
-  const fab = document.querySelector(".gigiFab");
-  const box = document.getElementById("gigiBox");
-  if (!fab) return;
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  let lastY = window.scrollY || 0;
-  let offset = 0, velocity = 0;
-  const MAX = 18, DAMP = 0.82, SPRING = 0.14;
-  let raf = null;
-
-  function clamp(v, min, max){ return Math.max(min, Math.min(max, v)); }
-  function apply() {
-    raf = null;
-    velocity += (0 - offset) * SPRING;
-    velocity *= DAMP;
-    offset += velocity;
-    offset = clamp(offset, -MAX, MAX);
-    const t = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
-    fab.style.transform = t;
-    if (box && box.style.display !== "none") box.style.transform = t;
-    if (Math.abs(offset) > 0.10 || Math.abs(velocity) > 0.10) { raf = requestAnimationFrame(apply); } 
-    else { offset = 0; velocity = 0; fab.style.transform = "translate3d(0,0,0)"; if (box && box.style.display !== "none") box.style.transform = "translate3d(0,0,0)"; }
-  }
-  function kick(dy) { velocity += clamp(-dy * 0.20, -6, 6); if (!raf) raf = requestAnimationFrame(apply); }
-  function onScroll() { const y = window.scrollY || 0; const dy = y - lastY; lastY = y; kick(dy); }
-
-  fab.style.transform = "translate3d(0,0,0)";
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", () => { lastY = window.scrollY || 0; offset = 0; velocity = 0; fab.style.transform = "translate3d(0,0,0)"; if (box && box.style.display !== "none") box.style.transform = "translate3d(0,0,0)"; }, { passive: true });
-}
-
-function translateHtmlElements() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (DICT[key]) {
-      el.innerHTML = DICT[key][currentLang] || DICT[key].pt;
-    }
-  });
 }
 
 (function init(){
@@ -473,12 +432,9 @@ function translateHtmlElements() {
   if (page && SITE.pages[page]) mountPageCards(page);
 
   mountGigiWidget();
-  setupGigiFloat();
-  translateHtmlElements(); 
+  setupCadastroModal(); // Inicia o botão lateral de cadastro
   
   requestAnimationFrame(() => document.body.classList.add("is-ready"));
-  
   setupHeaderScroll();
-  setupHeroParallax();
   setupReveal();
 })();

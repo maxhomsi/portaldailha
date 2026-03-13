@@ -211,14 +211,21 @@ img {
 }
 
 .nav a {
-  transition: color var(--t);
+  transition: all var(--t);
   position: relative;
-  padding: 4px 6px;
+  padding: 6px 12px; /* Aumentado um pouco para caber a pílula */
+  border-radius: 100px; /* Prepara para a pílula */
 }
 
-.nav a:hover,
-.nav a[aria-current="page"] {
+.nav a:hover {
   color: var(--green-dark);
+}
+
+/* CORREÇÃO DO MENU ATIVO - ESTILO PÍLULA (ADICIONADO) */
+.nav a[aria-current="page"] {
+  background-color: rgba(71, 176, 90, 0.15) !important;
+  color: var(--green) !important;
+  font-weight: 900 !important;
 }
 
 /* Ações do Header */
@@ -348,6 +355,14 @@ img {
 .mobileNav a {
   padding: 10px;
   font-weight: 900;
+}
+
+/* ESTILO PÍLULA NO MENU MOBILE ATIVO */
+.mobileNav a[aria-current="page"] {
+  background-color: rgba(71, 176, 90, 0.15) !important;
+  color: var(--green) !important;
+  border-radius: 100px;
+  text-align: center;
 }
 
 /* =========================================================
@@ -885,6 +900,25 @@ img {
 .reveal.is-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================================================
+   GRADE DE 4 COLUNAS (VITRINE DE RESTAURANTES/BARES)
+   ADICIONADA AGORA!
+   ========================================================= */
+.cards--4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  .cards--4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .cards--4 { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
