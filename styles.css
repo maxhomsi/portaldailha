@@ -586,6 +586,32 @@ img {
   padding: 20px 0;
 }
 
+/* =========================================================
+   NOVO: AJUSTE PARA 5 CARDS NA PÁGINA DE PASSEIOS
+   ========================================================= */
+body[data-page="passeios-rotas"] .cards {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px; /* Diminui o espaço para não espremer muito */
+}
+
+body[data-page="passeios-rotas"] .card__img {
+  height: 160px; /* Reduz a altura da imagem para ficar proporcional */
+}
+
+body[data-page="passeios-rotas"] .card__title {
+  font-size: 17px; /* Fonte ligeiramente menor para não quebrar linha */
+  margin-bottom: 6px;
+}
+
+body[data-page="passeios-rotas"] .card__desc {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+body[data-page="passeios-rotas"] .card__body {
+  padding: 18px 16px 16px; /* Padding interno menor */
+}
+
 .card {
   background: var(--white);
   border-radius: var(--radius-card);
@@ -686,13 +712,6 @@ img {
 
 .card__link:hover {
   text-decoration: underline;
-}
-
-/* CENTRALIZAR O 5º CARD (PACOTES ESPECIAIS NA GRADE DE 4) */
-.cards > .card:nth-child(5):last-child {
-  grid-column: 2 / 4;
-  justify-self: center;
-  width: calc(50% - 12px);
 }
 
 /* =========================================================
@@ -1017,22 +1036,18 @@ img {
 /* =========================================================
    RESPONSIVIDADE E MEDIA QUERIES (SEMPRE NO FINAL DO ARQUIVO)
    ========================================================= */
-@media (max-width: 1100px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  /* Ajuste do 5º Card para o Tablet */
-  .cards > .card:nth-child(5):last-child {
-    grid-column: 1 / 3;
-    width: calc(50% - 12px);
+@media (max-width: 1200px) {
+  body[data-page="passeios-rotas"] .cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+@media (max-width: 1100px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 1024px) {
-  .cards--4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .cards--4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 960px) {
@@ -1045,21 +1060,19 @@ img {
   .header__actions .btn--green { display: none; }
 }
 
+@media (max-width: 768px) {
+  body[data-page="passeios-rotas"] .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 600px) {
-  .cards--4 {
-    grid-template-columns: 1fr;
-  }
+  .cards--4 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+  .cards { grid-template-columns: 1fr; }
   
-  /* Ajuste do 5º Card para o Celular (Ocupa 100%) */
-  .cards > .card:nth-child(5):last-child {
-    grid-column: 1 / -1;
-    width: 100%;
+  body[data-page="passeios-rotas"] .cards {
+    grid-template-columns: 1fr;
   }
   
   .hero { height: auto; min-height: 500px; }
@@ -1089,6 +1102,5 @@ img {
   .gigiBox { width: calc(100% - 40px); bottom: 80px; }
   .lang-switcher { padding: 0 8px; font-size: 13px; height: 38px; }
   
-  /* Ajuste do botão lateral no celular */
   .side-badge { padding: 10px 12px; font-size: 11px; }
 }
