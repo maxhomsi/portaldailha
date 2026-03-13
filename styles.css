@@ -194,7 +194,7 @@ img {
 }
 
 /* =========================================================
-   NAVEGAÇÃO PRINCIPAL (NAV)
+   NAVEGAÇÃO PRINCIPAL (NAV) E MENU ATIVO
    ========================================================= */
 .navWrap {
   background: rgba(71, 176, 90, 0.06);
@@ -577,7 +577,7 @@ img {
 }
 
 /* =========================================================
-   CARDS PADRÃO E ETIQUETAS (BADGES)
+   CARDS DE PASSEIOS E ETIQUETAS (BADGES)
    ========================================================= */
 .cards {
   display: grid;
@@ -688,8 +688,15 @@ img {
   text-decoration: underline;
 }
 
+/* CENTRALIZAR O 5º CARD (PACOTES ESPECIAIS NA GRADE DE 4) */
+.cards > .card:nth-child(5):last-child {
+  grid-column: 2 / 4;
+  justify-self: center;
+  width: calc(50% - 12px);
+}
+
 /* =========================================================
-   GRADE DE 4 COLUNAS (VITRINE DE RESTAURANTES/BARES)
+   GRADE DE 4 COLUNAS (VITRINE DE RESTAURANTES)
    ========================================================= */
 .cards--4 {
   display: grid;
@@ -753,7 +760,7 @@ img {
 }
 
 /* =========================================================
-   FALE CONOSCO (FORMULÁRIO)
+   FALE CONOSCO E GIGI FORM GERAL
    ========================================================= */
 .contato-wrapper {
   display: flex;
@@ -787,6 +794,7 @@ img {
   font-size: 13px;
   display: block;
   margin-bottom: 5px;
+  color: var(--text);
 }
 
 .gigiForm input,
@@ -801,8 +809,12 @@ img {
   font-family: inherit;
 }
 
+.gigiForm textarea {
+  resize: vertical;
+}
+
 /* =========================================================
-   WIDGET DA GIGI (O CHATBOX FLUTUANTE)
+   WIDGET DA GIGI (O CHATBOX FLUTUANTE DE WHATSAPP)
    ========================================================= */
 .gigiFab {
   position: fixed;
@@ -879,40 +891,7 @@ img {
 }
 
 /* =========================================================
-   FOOTER (RODAPÉ) E REDES SOCIAIS
-   ========================================================= */
-.footer {
-  padding: 40px 0;
-  text-align: center;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-weight: 700;
-  background: #fff;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-/* =========================================================
-   SCROLL REVEAL (EFEITO DE APARECER ROLANDO)
-   ========================================================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s var(--ease);
-}
-
-.reveal.is-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================================================
-   WIDGET LATERAL DE CADASTRO E MODAL (AJAX) - FICA AQUI FORA DE MEDIA QUERIES!
+   WIDGET LATERAL DE CADASTRO E MODAL (AJAX)
    ========================================================= */
 .side-badge {
   position: fixed;
@@ -1003,15 +982,57 @@ img {
 }
 
 /* =========================================================
-   RESPONSIVIDADE (O SEGREDO DO CELULAR PERFEITO)
-   !! AS REGRAS DE CELULAR PRECISAM FICAR NO FINAL !!
+   FOOTER (RODAPÉ)
+   ========================================================= */
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 700;
+  background: #fff;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* =========================================================
+   SCROLL REVEAL (EFEITO DE APARECER ROLANDO)
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s var(--ease);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVIDADE E MEDIA QUERIES (SEMPRE NO FINAL DO ARQUIVO)
    ========================================================= */
 @media (max-width: 1100px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Ajuste do 5º Card para o Tablet */
+  .cards > .card:nth-child(5):last-child {
+    grid-column: 1 / 3;
+    width: calc(50% - 12px);
+  }
 }
 
 @media (max-width: 1024px) {
-  .cards--4 { grid-template-columns: repeat(2, 1fr); }
+  .cards--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 960px) {
@@ -1025,22 +1046,37 @@ img {
 }
 
 @media (max-width: 600px) {
-  .cards--4 { grid-template-columns: 1fr; }
+  .cards--4 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
-  .cards { grid-template-columns: 1fr; }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Ajuste do 5º Card para o Celular (Ocupa 100%) */
+  .cards > .card:nth-child(5):last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+  
   .hero { height: auto; min-height: 500px; }
   .hero__content { padding: 80px 0 100px; }
   .hero h1 { font-size: 38px; line-height: 1.1; }
   .hero p { font-size: 16px; margin-bottom: 20px; }
+  
   .section { padding: 40px 0; }
   .section__title { font-size: 34px; }
+  
   .pageHead { padding: 40px 0 80px; }
   .pageHead h1 { font-size: 32px; }
+
   .tipRow { flex-direction: column; margin-top: 20px; }
   .capi { margin-right: 0; transform: translateY(30px); z-index: 20; }
   .tip { padding: 50px 20px 20px; text-align: center; }
+  
   .jack-block {
     margin-top: 80px; padding: 120px 20px 24px 20px !important;
     text-align: center; flex-direction: column; justify-content: center;
@@ -1049,6 +1085,7 @@ img {
     left: 50% !important; transform: translate(-50%, 0) !important;
     top: -70px !important; bottom: auto !important; width: 140px !important;
   }
+  
   .gigiBox { width: calc(100% - 40px); bottom: 80px; }
   .lang-switcher { padding: 0 8px; font-size: 13px; height: 38px; }
   
