@@ -392,6 +392,77 @@ window.closeCadastroModal = function(e) {
 };
 
 /* =========================================================
+   LIGHTBOX INTERATIVO PARA GALERIAS DE FOTOS (NOVO)
+   ========================================================= */
+function setupLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImage');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  
+  let galleryImages = [];
+  let currentIndex = 0;
+
+  if (lightbox) {
+      galleryImages = document.querySelectorAll('.gallery img');
+      
+      if (galleryImages.length > 0) {
+          const openLightbox = (index) => {
+              currentIndex = index;
+              updateLightboxImage();
+              lightbox.classList.add('is-active');
+          };
+
+          const closeLightbox = () => {
+              lightbox.classList.remove('is-active');
+          };
+
+          const updateLightboxImage = () => {
+              if (galleryImages[currentIndex]) {
+                  lightboxImg.src = galleryImages[currentIndex].src;
+                  lightboxImg.alt = galleryImages[currentIndex].alt;
+              }
+          };
+
+          const prevImage = (e) => {
+              if (e) e.stopPropagation();
+              currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+              updateLightboxImage();
+          };
+
+          const nextImage = (e) => {
+              if (e) e.stopPropagation();
+              currentIndex = (currentIndex + 1) % galleryImages.length;
+              updateLightboxImage();
+          };
+
+          galleryImages.forEach((img, index) => {
+              img.addEventListener('click', () => openLightbox(index));
+          });
+
+          if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+          if (lightboxPrev) lightboxPrev.addEventListener('click', prevImage);
+          if (lightboxNext) lightboxNext.addEventListener('click', nextImage);
+
+          lightbox.addEventListener('click', (e) => {
+              if (e.target === lightbox) {
+                  closeLightbox();
+              }
+          });
+
+          document.addEventListener('keydown', (e) => {
+              if (lightbox.classList.contains('is-active')) {
+                  if (e.key === 'Escape') closeLightbox();
+                  if (e.key === 'ArrowLeft') prevImage();
+                  if (e.key === 'ArrowRight') nextImage();
+              }
+          });
+      }
+  }
+}
+
+/* =========================================================
    FUNÇÕES GERAIS DE SCROLL E INICIALIZAÇÃO
    ========================================================= */
 function setupReveal() {
@@ -433,7 +504,8 @@ function setupProgress() {
   if (page && SITE.pages[page]) mountPageCards(page);
 
   mountGigiWidget();
-  setupCadastroModal(); // Inicia o botão lateral de cadastro
+  setupCadastroModal(); 
+  setupLightbox(); // Inicia o Lightbox das galerias
   
   requestAnimationFrame(() => document.body.classList.add("is-ready"));
   setupHeaderScroll();
