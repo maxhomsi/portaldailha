@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boteco Capivara - Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="progress" id="progress"></div>
+  
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container" style="text-align: center;">
+        <h1 class="reveal">Boteco Capivara</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">O verdadeiro boteco raiz da ilha, com cerveja gelada, petiscos clássicos e muita resenha.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/capi/capi1.jpg" alt="Foto Boteco Capivara 1" loading="lazy">
+            <img src="assets/capi/capi2.jpg" alt="Foto Boteco Capivara 2" loading="lazy">
+            <img src="assets/capi/capi3.jpg" alt="Foto Boteco Capivara 3" loading="lazy">
+            <img src="assets/capi/capi4.jpg" alt="Foto Boteco Capivara 4" loading="lazy">
+            <img src="assets/capi/capi5.jpg" alt="Foto Boteco Capivara 5" loading="lazy">
+            <img src="assets/capi/capi6.jpg" alt="Foto Boteco Capivara 6" loading="lazy">
+            <img src="assets/capi/capi7.jpg" alt="Foto Boteco Capivara 7" loading="lazy">
+            <img src="assets/capi/capi8.jpg" alt="Foto Boteco Capivara 8" loading="lazy">
+          </div>
+        </div>
+
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+          
+          <p class="reveal">Batizado em homenagem à simpática e famosa mascote que habita a nossa lagoa, o <strong>Boteco Capivara</strong> é a representação perfeita da cultura do botequim carioca dentro da Ilha da Gigóia.</p>
+
+          <p class="reveal">Aqui não tem tempo ruim nem frescura. O lugar foi feito para quem quer encostar o cotovelo no balcão, pedir uma bebida trincando e jogar conversa fora sem ver as horas passarem, sempre embalado por um clima de vizinhança e amizade.</p>
+
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #8B4513; margin: 40px 0;">
+            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+              🐾 Tradição de Botequim
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Cerveja & Caipirinha:</strong> Os dois combustíveis oficiais do boteco! Cerveja de garrafa sempre estupidamente gelada e caipirinhas caprichadas no limão.
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Comida de Estufa:</strong> Aquele clássico do Rio! Bolinhos, pastéis, caldinhos e tira-gostos que são a verdadeira alma da comida de bar.
+              </li>
+              <li>
+                <strong style="color: #222;">Clima Raiz:</strong> Um ambiente simples, democrático e acolhedor, onde todos são bem-vindos para celebrar o fim do dia com alegria.
+              </li>
+            </ul>
+          </div>
+
+          <p class="reveal">Para quem quer viver a Ilha da Gigóia como um verdadeiro morador local e apreciar os prazeres simples da vida, o Boteco Capivara é uma parada obrigatória.</p>
+
+          <div class="reveal" style="text-align: center; margin-top: 60px;">
+            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+              💬 Falar com a Gigi e Reservar
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  
+  <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

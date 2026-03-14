@@ -24,11 +24,21 @@
     <section class="section">
       <div class="container" style="max-width: 800px;">
         
-        <div class="reveal" style="margin-bottom: 40px; overflow: hidden; border-radius: 24px; box-shadow: var(--shadow-card);">
-          <img src="assets/restaurante-6.jpg" alt="Ambiente sofisticado do Venne Gastronomia" style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 16/9;" />
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/venne/venne1.jpg" alt="Foto Venne 1" loading="lazy">
+            <img src="assets/venne/venne2.jpg" alt="Foto Venne 2" loading="lazy">
+            <img src="assets/venne/venne3.jpg" alt="Foto Venne 3" loading="lazy">
+            <img src="assets/venne/venne4.jpg" alt="Foto Venne 4" loading="lazy">
+            <img src="assets/venne/venne5.jpg" alt="Foto Venne 5" loading="lazy">
+            <img src="assets/venne/venne6.jpg" alt="Foto Venne 6" loading="lazy">
+            <img src="assets/venne/venne7.jpg" alt="Foto Venne 7" loading="lazy">
+            <img src="assets/venne/venne8.jpg" alt="Foto Venne 8" loading="lazy">
+          </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text);">
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
           
           <p class="reveal">O <strong>Venne Gastronomia</strong> se destaca na Ilha da Gigóia por oferecer uma experiência gastronômica mais sofisticada e refinada, combinando boa culinária com um ambiente extremamente elegante.</p>
 
@@ -40,29 +50,15 @@
             </h3>
             <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
               <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Culinária Mediterrânea:</strong> Uma proposta que valoriza o frescor e o equilíbrio de sabores, resultando em pratos autorais e marcantes.
+                <strong style="color: #222;">Culinária Mediterrânea:</strong> Uma proposta gastronômica que valoriza o frescor, o equilíbrio de sabores e uma apresentação impecável em cada prato.
               </li>
               <li>
-                <strong style="color: #222;">Ambiente Fino e Requintado:</strong> O espaço cria um clima ideal, intimista e romântico, perfeito para quem busca um almoço ou jantar especial durante a visita à ilha.
+                <strong style="color: #222;">Ambiente Fino e Requintado:</strong> O espaço cria um clima ideal, intimista e romântico para quem busca um almoço ou jantar mais especial durante a visita à ilha.
               </li>
             </ul>
           </div>
 
-          <p class="reveal">Para quem deseja viver uma experiência gastronômica diferenciada na Ilha da Gigóia, o Venne Gastronomia é uma das opções que combinam perfeitamente boa comida, ambiente de classe e uma atmosfera agradável.</p>
-
-          <div class="reveal" style="margin-top: 50px;">
-            <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-            <div class="gallery">
-              <img src="assets/venne/venne1.jpg" alt="Foto Venne 1" loading="lazy">
-              <img src="assets/venne/venne2.jpg" alt="Foto Venne 2" loading="lazy">
-              <img src="assets/venne/venne3.jpg" alt="Foto Venne 3" loading="lazy">
-              <img src="assets/venne/venne4.jpg" alt="Foto Venne 4" loading="lazy">
-              <img src="assets/venne/venne5.jpg" alt="Foto Venne 5" loading="lazy">
-              <img src="assets/venne/venne6.jpg" alt="Foto Venne 6" loading="lazy">
-              <img src="assets/venne/venne7.jpg" alt="Foto Venne 7" loading="lazy">
-              <img src="assets/venne/venne8.jpg" alt="Foto Venne 8" loading="lazy">
-            </div>
-          </div>
+          <p class="reveal">Para quem deseja viver uma experiência gastronômica diferenciada na Ilha da Gigóia, o Venne Gastronomia é uma das opções que combinam perfeitamente boa comida, ambiente elegante e uma atmosfera super agradável.</p>
 
           <div class="reveal" style="text-align: center; margin-top: 60px;">
             <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
@@ -78,6 +74,13 @@
   <footer class="footer" id="siteFooter"></footer>
   
   <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
   
   <script src="app.js"></script>
 </body>

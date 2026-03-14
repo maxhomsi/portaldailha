@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kai - Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="progress" id="progress"></div>
+  
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container" style="text-align: center;">
+        <h1 class="reveal">Kai</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Um refúgio à beira d'água com drinks modernos, música envolvente e pôr do sol inesquecível.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/kai/kai1.jpg" alt="Foto Kai 1" loading="lazy">
+            <img src="assets/kai/kai2.jpg" alt="Foto Kai 2" loading="lazy">
+            <img src="assets/kai/kai3.jpg" alt="Foto Kai 3" loading="lazy">
+            <img src="assets/kai/kai4.jpg" alt="Foto Kai 4" loading="lazy">
+            <img src="assets/kai/kai5.jpg" alt="Foto Kai 5" loading="lazy">
+            <img src="assets/kai/kai6.jpg" alt="Foto Kai 6" loading="lazy">
+            <img src="assets/kai/kai7.jpg" alt="Foto Kai 7" loading="lazy">
+            <img src="assets/kai/kai8.jpg" alt="Foto Kai 8" loading="lazy">
+          </div>
+        </div>
+
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+          
+          <p class="reveal">O <strong>Kai</strong> é um dos espaços mais charmosos da Ilha da Gigóia, combinando uma estética leve e moderna com a tranquilidade que só a beira da lagoa pode oferecer. O nome, de origem havaiana, traduz bem a essência do bar: uma conexão direta com as águas, a brisa e a energia do verão.</p>
+
+          <p class="reveal">Ideal para quem gosta de um ambiente mais "chill out", o bar atrai visitantes que buscam relaxar no final da tarde, embalados por uma trilha sonora de muito bom gosto e uma carta de bebidas surpreendente.</p>
+
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #00bcd4; margin: 40px 0;">
+            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+              🌊 Essência do Kai
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Coquetelaria de Destaque:</strong> Os drinks são a grande estrela da casa. Preparações autorais, frescas e muito fotogênicas, perfeitas para um brinde no fim de tarde.
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Sabores para Compartilhar:</strong> Um menu de petiscos e pratos leves pensado exatamente para acompanhar as bebidas enquanto se aproveita a vista.
+              </li>
+              <li>
+                <strong style="color: #222;">Vibe Chill Out:</strong> Com uma atmosfera mais relaxante, é um local incrível para encontros românticos ou para colocar o papo em dia com os amigos mais próximos.
+              </li>
+            </ul>
+          </div>
+
+          <p class="reveal">Se a sua ideia de noite (ou fim de tarde) perfeita envolve bons drinks, uma brisa no rosto e um ambiente esteticamente impecável, o Kai vai te conquistar logo na primeira visita.</p>
+
+          <div class="reveal" style="text-align: center; margin-top: 60px;">
+            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+              💬 Falar com a Gigi e Reservar
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  
+  <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

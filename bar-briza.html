@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briza - Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="progress" id="progress"></div>
+  
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container" style="text-align: center;">
+        <h1 class="reveal">Briza</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">O refúgio perfeito para relaxar, curtir a brisa da lagoa e brindar bons momentos.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/briza/briza1.jpg" alt="Foto Briza 1" loading="lazy">
+            <img src="assets/briza/briza2.jpg" alt="Foto Briza 2" loading="lazy">
+            <img src="assets/briza/briza3.jpg" alt="Foto Briza 3" loading="lazy">
+            <img src="assets/briza/briza4.jpg" alt="Foto Briza 4" loading="lazy">
+            <img src="assets/briza/briza5.jpg" alt="Foto Briza 5" loading="lazy">
+            <img src="assets/briza/briza6.jpg" alt="Foto Briza 6" loading="lazy">
+            <img src="assets/briza/briza7.jpg" alt="Foto Briza 7" loading="lazy">
+            <img src="assets/briza/briza8.jpg" alt="Foto Briza 8" loading="lazy">
+          </div>
+        </div>
+
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+          
+          <p class="reveal">O <strong>Briza</strong> faz jus ao seu nome. Com um ambiente arejado, moderno e muito convidativo, é o lugar ideal para quem busca fugir da agitação e curtir uma tarde tranquila, sentindo o vento no rosto e admirando as belezas naturais da Ilha da Gigóia.</p>
+
+          <p class="reveal">O espaço aposta em uma atmosfera mais "lounge", unindo conforto, boa música e uma vista espetacular para as águas calmas da lagoa.</p>
+
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #4eb8c1; margin: 40px 0;">
+            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+              🍃 Clima & Sabores
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Drinks Criativos:</strong> Uma carta de coquetéis super refrescantes, coloridos e cheios de sabor, perfeitos para harmonizar com o clima tropical do Rio.
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Porções Deliciosas:</strong> Petiscos muito bem elaborados e opções leves que combinam perfeitamente com uma tarde de lazer à beira d'água.
+              </li>
+              <li>
+                <strong style="color: #222;">Vibe Lounge:</strong> Decoração aconchegante e música ambiente na medida certa, tornando o Briza incrível tanto para casais quanto para grupos de amigos.
+              </li>
+            </ul>
+          </div>
+
+          <p class="reveal">Se você quer desacelerar, brindar à vida e ter uma experiência relaxante e com muito estilo, o Briza com certeza vai ganhar o seu coração (e o seu paladar).</p>
+
+          <div class="reveal" style="text-align: center; margin-top: 60px;">
+            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+              💬 Falar com a Gigi e Reservar
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  
+  <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

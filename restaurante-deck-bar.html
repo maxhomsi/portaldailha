@@ -24,11 +24,21 @@
     <section class="section">
       <div class="container" style="max-width: 800px;">
         
-        <div class="reveal" style="margin-bottom: 40px; overflow: hidden; border-radius: 24px; box-shadow: var(--shadow-card);">
-          <img src="assets/restaurante-4.jpg" alt="Deck Bar e os famosos guarda-chuvas coloridos" style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 16/9;" />
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/deck/deck1.jpg" alt="Foto Deck Bar 1" loading="lazy">
+            <img src="assets/deck/deck2.jpg" alt="Foto Deck Bar 2" loading="lazy">
+            <img src="assets/deck/deck3.jpg" alt="Foto Deck Bar 3" loading="lazy">
+            <img src="assets/deck/deck4.jpg" alt="Foto Deck Bar 4" loading="lazy">
+            <img src="assets/deck/deck5.jpg" alt="Foto Deck Bar 5" loading="lazy">
+            <img src="assets/deck/deck6.jpg" alt="Foto Deck Bar 6" loading="lazy">
+            <img src="assets/deck/deck7.jpg" alt="Foto Deck Bar 7" loading="lazy">
+            <img src="assets/deck/deck8.jpg" alt="Foto Deck Bar 8" loading="lazy">
+          </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text);">
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
           
           <p class="reveal">O <strong>Deck Bar</strong> é um dos restaurantes mais tradicionais da Ilha da Gigóia e se destaca pelo ambiente descontraído e também pela localização privilegiada à beira da lagoa. O espaço é bastante procurado por visitantes que querem aproveitar uma boa gastronomia em um cenário agradável, com vista para os canais e o clima típico da região.</p>
 
@@ -53,20 +63,6 @@
 
           <p class="reveal">Com boa comida, música ao vivo e um ambiente sempre animado, o Deck Bar é uma das paradas mais populares e obrigatórias para quem deseja aproveitar ao máximo o clima da Ilha da Gigóia.</p>
 
-          <div class="reveal" style="margin-top: 50px;">
-            <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-            <div class="gallery">
-              <img src="assets/deck/deck1.jpg" alt="Foto Deck 1" loading="lazy">
-              <img src="assets/deck/deck2.jpg" alt="Foto Deck 2" loading="lazy">
-              <img src="assets/deck/deck3.jpg" alt="Foto Deck 3" loading="lazy">
-              <img src="assets/deck/deck4.jpg" alt="Foto Deck 4" loading="lazy">
-              <img src="assets/deck/deck5.jpg" alt="Foto Deck 5" loading="lazy">
-              <img src="assets/deck/deck6.jpg" alt="Foto Deck 6" loading="lazy">
-              <img src="assets/deck/deck7.jpg" alt="Foto Deck 7" loading="lazy">
-              <img src="assets/deck/deck8.jpg" alt="Foto Deck 8" loading="lazy">
-            </div>
-          </div>
-
           <div class="reveal" style="text-align: center; margin-top: 60px;">
             <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
               💬 Falar com a Gigi e Reservar
@@ -81,6 +77,13 @@
   <footer class="footer" id="siteFooter"></footer>
   
   <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
   
   <script src="app.js"></script>
 </body>

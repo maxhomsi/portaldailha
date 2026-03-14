@@ -24,18 +24,28 @@
     <section class="section">
       <div class="container" style="max-width: 800px;">
         
-        <div class="reveal" style="margin-bottom: 40px; overflow: hidden; border-radius: 24px; box-shadow: var(--shadow-card);">
-          <img src="assets/restaurante-7.jpg" alt="Ambiente e pratos do Restaurante Laguna" style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 16/9;" />
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/laguna/laguna1.jpg" alt="Foto Laguna 1" loading="lazy">
+            <img src="assets/laguna/laguna2.jpg" alt="Foto Laguna 2" loading="lazy">
+            <img src="assets/laguna/laguna3.jpg" alt="Foto Laguna 3" loading="lazy">
+            <img src="assets/laguna/laguna4.jpg" alt="Foto Laguna 4" loading="lazy">
+            <img src="assets/laguna/laguna5.jpg" alt="Foto Laguna 5" loading="lazy">
+            <img src="assets/laguna/laguna6.jpg" alt="Foto Laguna 6" loading="lazy">
+            <img src="assets/laguna/laguna7.jpg" alt="Foto Laguna 7" loading="lazy">
+            <img src="assets/laguna/laguna8.jpg" alt="Foto Laguna 8" loading="lazy">
+          </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text);">
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
           
           <p class="reveal">O <strong>Restaurante Laguna</strong> é considerado o <strong>primeiro estabelecimento fundado na Ilha da Gigóia</strong>, inaugurado em 2002. Desde então, tornou-se uma referência gastronômica da região e um dos locais mais tradicionais para quem visita a ilha.</p>
 
           <p class="reveal">O restaurante oferece um ambiente rústico e sofisticado ao mesmo tempo, com mesas de madeira sob um charmoso teto de palha, cercado por jardins e com uma bela <strong>vista para a Pedra da Gávea</strong>. O cenário torna o espaço especialmente procurado para ocasiões especiais, encontros românticos e momentos tranquilos à beira da lagoa.</p>
 
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid var(--green); margin: 40px 0;">
-            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid var(--primary); margin: 40px 0;">
+            <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
               🌿 Tradição & Especialidades
             </h3>
             <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
@@ -53,20 +63,6 @@
 
           <p class="reveal">Na gastronomia, o Laguna é especializado em <strong>frutos do mar preparados de forma artesanal</strong>, valorizando ingredientes frescos e receitas clássicas. Com uma atmosfera acolhedora e culinária impecável, é um dos lugares que ajudam a contar a história da Ilha da Gigóia.</p>
 
-          <div class="reveal" style="margin-top: 50px;">
-            <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-            <div class="gallery">
-              <img src="assets/laguna/laguna1.jpg" alt="Foto Laguna 1" loading="lazy">
-              <img src="assets/laguna/laguna2.jpg" alt="Foto Laguna 2" loading="lazy">
-              <img src="assets/laguna/laguna3.jpg" alt="Foto Laguna 3" loading="lazy">
-              <img src="assets/laguna/laguna4.jpg" alt="Foto Laguna 4" loading="lazy">
-              <img src="assets/laguna/laguna5.jpg" alt="Foto Laguna 5" loading="lazy">
-              <img src="assets/laguna/laguna6.jpg" alt="Foto Laguna 6" loading="lazy">
-              <img src="assets/laguna/laguna7.jpg" alt="Foto Laguna 7" loading="lazy">
-              <img src="assets/laguna/laguna8.jpg" alt="Foto Laguna 8" loading="lazy">
-            </div>
-          </div>
-
           <div class="reveal" style="text-align: center; margin-top: 60px;">
             <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
               💬 Falar com a Gigi e Reservar
@@ -81,6 +77,13 @@
   <footer class="footer" id="siteFooter"></footer>
   
   <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
   
   <script src="app.js"></script>
 </body>

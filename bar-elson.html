@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar do Elson - Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="progress" id="progress"></div>
+  
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container" style="text-align: center;">
+        <h1 class="reveal">Bar do Elson</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Tradição, comida farta e o verdadeiro ponto de encontro da ilha.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/elson/elson1.jpg" alt="Foto Bar do Elson 1" loading="lazy">
+            <img src="assets/elson/elson2.jpg" alt="Foto Bar do Elson 2" loading="lazy">
+            <img src="assets/elson/elson3.jpg" alt="Foto Bar do Elson 3" loading="lazy">
+            <img src="assets/elson/elson4.jpg" alt="Foto Bar do Elson 4" loading="lazy">
+            <img src="assets/elson/elson5.jpg" alt="Foto Bar do Elson 5" loading="lazy">
+            <img src="assets/elson/elson6.jpg" alt="Foto Bar do Elson 6" loading="lazy">
+            <img src="assets/elson/elson7.jpg" alt="Foto Bar do Elson 7" loading="lazy">
+            <img src="assets/elson/elson8.jpg" alt="Foto Bar do Elson 8" loading="lazy">
+          </div>
+        </div>
+
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+          
+          <p class="reveal">O <strong>Bar do Elson</strong> é um daqueles lugares clássicos e indispensáveis para quem quer viver a verdadeira essência da Ilha da Gigóia. Conhecido por ser um ponto de encontro tradicional entre os moradores e visitantes assíduos, o bar oferece um clima familiar e extremamente acolhedor.</p>
+
+          <p class="reveal">Se você está procurando comida de verdade, com aquele tempero caseiro inconfundível e sem frescuras, este é o lugar certo. A resenha corre solta nas mesas enquanto os pratos saem fumegantes da cozinha.</p>
+
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #d35400; margin: 40px 0;">
+            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+              🍲 A Cara do Bar
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Pratos Fartos:</strong> As refeições são conhecidas por serem muito bem servidas. Seja um peixinho frito, moqueca ou um bom prato executivo, a satisfação é garantida.
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Cerveja de Garrafa:</strong> Tradição de boteco que se preze! A cerveja de garrafa (de 600ml ou litrão) chega sempre trincando de gelada na sua mesa.
+              </li>
+              <li>
+                <strong style="color: #222;">Clima de Comunidade:</strong> É o local perfeito para bater um bom papo, fazer novos amigos e sentir a receptividade calorosa de quem vive na ilha.
+              </li>
+            </ul>
+          </div>
+
+          <p class="reveal">O Bar do Elson é a prova de que simplicidade, comida boa e atendimento de coração formam a melhor receita para um dia inesquecível na Gigóia.</p>
+
+          <div class="reveal" style="text-align: center; margin-top: 60px;">
+            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+              💬 Falar com a Gigi e Reservar
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  
+  <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

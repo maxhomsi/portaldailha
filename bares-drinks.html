@@ -6,35 +6,102 @@
   <title>Bares e Drinks - Portal Ilha da Gigóia</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="bares-drinks">
+  
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
     <section class="pageHead">
       <div class="container" style="text-align: center;">
         <h1 class="reveal">Bares e Drinks</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">O clima perfeito para relaxar e encontrar amigos.</p>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Cerveja gelada, caipirinhas caprichadas e o pôr do sol mais bonito da região.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330; text-align: center;">
         <div class="reveal">
-          <p>Cervejas geladas, caipirinhas, petiscos e o <strong>pôr do sol mais bonito da região</strong> te esperam. Conheça as melhores opções para curtir o fim de tarde na lagoa:</p>
+          <p>A Ilha da Gigóia é o lugar perfeito para quem gosta de um bom boteco raiz, drinks super elaborados ou apenas sentar à beira da lagoa para ver o dia acabar com muita música boa. Escolha o seu próximo brinde:</p>
         </div>
       </div>
 
       <div class="container">
         <div class="cards--4">
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-1.jpg" alt="Caiçaras" /></div><div class="card__body"><h3 class="card__title">Caiçaras</h3><p class="card__desc">Chopp gelado, petiscos clássicos e um clima tradicional da orla.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-2.jpg" alt="Bar da Joana" /></div><div class="card__body"><h3 class="card__title">Bar da Joana</h3><p class="card__desc">Comida caseira caprichada, petiscos e aquele ambiente familiar.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-3.jpg" alt="Briza" /></div><div class="card__body"><h3 class="card__title">Briza</h3><p class="card__desc">Drinks autorais, música boa e um deck incrível para o pôr do sol.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-4.jpg" alt="Bar do Elson" /></div><div class="card__body"><h3 class="card__title">Bar do Elson</h3><p class="card__desc">A cerveja mais trincando da ilha e as melhores porções raiz.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-5.jpg" alt="Kauai" /></div><div class="card__body"><h3 class="card__title">Kauai</h3><p class="card__desc">Clima jovem e descontraído, ideal para curtir o fim de tarde com amigos.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-6.jpg" alt="Ak bar" /></div><div class="card__body"><h3 class="card__title">Ak bar</h3><p class="card__desc">Ponto de encontro perfeito da galera, com drinks refrescantes.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-7.jpg" alt="Boteco Capivara" /></div><div class="card__body"><h3 class="card__title">Boteco Capivara</h3><p class="card__desc">O boteco mais simpático da ilha. Petiscos fartos e muita resenha.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/bar-8.jpg" alt="Kai" /></div><div class="card__body"><h3 class="card__title">Kai</h3><p class="card__desc">Um lounge espetacular para relaxar, tomar bons drinks e aproveitar a vibe.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Ver detalhes <span>→</span></a></div></article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/caicaras/caicara1.jpg" alt="Caiçaras" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Caiçaras</h3>
+              <p class="card__desc">Clima descontraído, drinks refrescantes e o melhor pôr do sol da lagoa.</p>
+              <a class="card__link" href="bar-caicaras.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/joana/joana1.jpg" alt="Bar da Joana" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Bar da Joana</h3>
+              <p class="card__desc">O autêntico sabor caseiro com a melhor energia e resenha da ilha.</p>
+              <a class="card__link" href="bar-joana.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/briza/briza1.jpg" alt="Briza" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Briza</h3>
+              <p class="card__desc">O refúgio perfeito para relaxar, curtir a brisa da lagoa e brindar bons momentos.</p>
+              <a class="card__link" href="bar-briza.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/elson/elson1.jpg" alt="Bar do Elson" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Bar do Elson</h3>
+              <p class="card__desc">Tradição, comida farta e o verdadeiro ponto de encontro da ilha.</p>
+              <a class="card__link" href="bar-elson.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/kauai/kauai1.jpg" alt="Kauai" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Kauai</h3>
+              <p class="card__desc">Vibe tropical, energia boa e o refúgio perfeito após um dia de sol e esportes.</p>
+              <a class="card__link" href="bar-kauai.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/akbar/ak1.jpg" alt="Ak Bar" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Ak Bar</h3>
+              <p class="card__desc">Um espaço charmoso com música boa e drinks exclusivos.</p>
+              <a class="card__link" href="bar-ak.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/capi/capi1.jpg" alt="Boteco Capivara" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Boteco Capivara</h3>
+              <p class="card__desc">O verdadeiro boteco raiz da ilha, com cerveja gelada e petiscos clássicos.</p>
+              <a class="card__link" href="bar-capivara.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+          
+          <article class="card reveal">
+            <div class="card__img"><img src="assets/kai/kai1.jpg" alt="Kai" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Kai</h3>
+              <p class="card__desc">Um refúgio à beira d'água com drinks modernos e música envolvente.</p>
+              <a class="card__link" href="bar-kai.html">Ver detalhes <span>→</span></a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>

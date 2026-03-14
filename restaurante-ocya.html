@@ -24,8 +24,18 @@
     <section class="section">
       <div class="container" style="max-width: 800px;">
         
-        <div class="reveal" style="margin-bottom: 40px; overflow: hidden; border-radius: 24px; box-shadow: var(--shadow-card);">
-          <img src="assets/restaurante-2.jpg" alt="Pratos e ambiente do restaurante Ocyá" style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 16/9;" />
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/ocya/ocya1.jpg" alt="Foto Ocyá 1" loading="lazy">
+            <img src="assets/ocya/ocya2.jpg" alt="Foto Ocyá 2" loading="lazy">
+            <img src="assets/ocya/ocya3.jpg" alt="Foto Ocyá 3" loading="lazy">
+            <img src="assets/ocya/ocya4.jpg" alt="Foto Ocyá 4" loading="lazy">
+            <img src="assets/ocya/ocya5.jpg" alt="Foto Ocyá 5" loading="lazy">
+            <img src="assets/ocya/ocya6.jpg" alt="Foto Ocyá 6" loading="lazy">
+            <img src="assets/ocya/ocya7.jpg" alt="Foto Ocyá 7" loading="lazy">
+            <img src="assets/ocya/ocya8.jpg" alt="Foto Ocyá 8" loading="lazy">
+          </div>
         </div>
 
         <div style="font-size: 18px; line-height: 1.8; color: var(--text);">
@@ -50,20 +60,6 @@
 
           <p class="reveal">Com uma proposta gastronômica autoral e foco total em ingredientes frescos, o Ocyá se consolidou como um dos restaurantes mais respeitados da cidade, oferecendo uma experiência especial para quem deseja explorar o lado mais sofisticado da Ilha da Gigóia.</p>
 
-          <div class="reveal" style="margin-top: 50px;">
-            <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-            <div class="gallery">
-              <img src="assets/ocya/ocya1.jpg" alt="Foto Ocyá 1" loading="lazy">
-              <img src="assets/ocya/ocya2.jpg" alt="Foto Ocyá 2" loading="lazy">
-              <img src="assets/ocya/ocya3.jpg" alt="Foto Ocyá 3" loading="lazy">
-              <img src="assets/ocya/ocya4.jpg" alt="Foto Ocyá 4" loading="lazy">
-              <img src="assets/ocya/ocya5.jpg" alt="Foto Ocyá 5" loading="lazy">
-              <img src="assets/ocya/ocya6.jpg" alt="Foto Ocyá 6" loading="lazy">
-              <img src="assets/ocya/ocya7.jpg" alt="Foto Ocyá 7" loading="lazy">
-              <img src="assets/ocya/ocya8.jpg" alt="Foto Ocyá 8" loading="lazy">
-            </div>
-          </div>
-
           <div class="reveal" style="text-align: center; margin-top: 60px;">
             <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
               💬 Falar com a Gigi e Reservar
@@ -78,6 +74,13 @@
   <footer class="footer" id="siteFooter"></footer>
   
   <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
   
   <script src="app.js"></script>
 </body>

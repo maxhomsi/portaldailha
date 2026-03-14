@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kauai - Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="progress" id="progress"></div>
+  
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container" style="text-align: center;">
+        <h1 class="reveal">Kauai</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Vibe tropical, energia boa e o refúgio perfeito após um dia de sol e esportes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/kauai/kauai1.jpg" alt="Foto Kauai 1" loading="lazy">
+            <img src="assets/kauai/kauai2.jpg" alt="Foto Kauai 2" loading="lazy">
+            <img src="assets/kauai/kauai3.jpg" alt="Foto Kauai 3" loading="lazy">
+            <img src="assets/kauai/kauai4.jpg" alt="Foto Kauai 4" loading="lazy">
+            <img src="assets/kauai/kauai5.jpg" alt="Foto Kauai 5" loading="lazy">
+            <img src="assets/kauai/kauai6.jpg" alt="Foto Kauai 6" loading="lazy">
+            <img src="assets/kauai/kauai7.jpg" alt="Foto Kauai 7" loading="lazy">
+            <img src="assets/kauai/kauai8.jpg" alt="Foto Kauai 8" loading="lazy">
+          </div>
+        </div>
+
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+          
+          <p class="reveal">Inspirado na energia e no estilo de vida havaiano, o <strong>Kauai</strong> traz para a Ilha da Gigóia um pedacinho do paraíso focado no bem-estar, na descontração e na conexão com a natureza.</p>
+
+          <p class="reveal">Com um ambiente super descolado e jovem, o espaço é o point favorito da galera que curte esportes aquáticos, como Stand Up Paddle (SUP) e passeios de caiaque, sendo o local perfeito para recarregar as energias depois de algumas horas na água.</p>
+
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #e74c3c; margin: 40px 0;">
+            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+              🌺 Vibe & Sabores
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Energia Tropical:</strong> O cardápio conta com opções leves e refrescantes, incluindo açaís caprichados, sucos naturais e sanduíches que são a cara do verão carioca.
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Drinks Coloridos:</strong> Para a hora do pôr do sol, os coquetéis bem elaborados e geladíssimos entram em cena para embalar o fim de tarde.
+              </li>
+              <li>
+                <strong style="color: #222;">Ponto de Encontro Aloha:</strong> Um espaço onde todo mundo chega de chinelo, a música é sempre boa e a resenha não tem hora para acabar.
+              </li>
+            </ul>
+          </div>
+
+          <p class="reveal">Se você está buscando um local alto-astral para se refrescar, comer bem e curtir a verdadeira vibe praiana e esportiva da Gigóia, o Kauai é o seu destino garantido.</p>
+
+          <div class="reveal" style="text-align: center; margin-top: 60px;">
+            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+              💬 Falar com a Gigi e Reservar
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  
+  <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

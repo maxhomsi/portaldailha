@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ak Bar - Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="progress" id="progress"></div>
+  
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container" style="text-align: center;">
+        <h1 class="reveal">Ak Bar</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Um espaço charmoso com música boa, drinks exclusivos e o clima inconfundível da Gigóia.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        
+        <div class="reveal" style="margin-bottom: 40px;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+          <div class="gallery">
+            <img src="assets/akbar/ak1.jpg" alt="Foto Ak Bar 1" loading="lazy">
+            <img src="assets/akbar/ak2.jpg" alt="Foto Ak Bar 2" loading="lazy">
+            <img src="assets/akbar/ak3.jpg" alt="Foto Ak Bar 3" loading="lazy">
+            <img src="assets/akbar/ak4.jpg" alt="Foto Ak Bar 4" loading="lazy">
+            <img src="assets/akbar/ak5.jpg" alt="Foto Ak Bar 5" loading="lazy">
+            <img src="assets/akbar/ak6.jpg" alt="Foto Ak Bar 6" loading="lazy">
+            <img src="assets/akbar/ak7.jpg" alt="Foto Ak Bar 7" loading="lazy">
+            <img src="assets/akbar/ak8.jpg" alt="Foto Ak Bar 8" loading="lazy">
+          </div>
+        </div>
+
+        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+          
+          <p class="reveal">O <strong>Ak Bar</strong> é aquele ponto de encontro vibrante que atrai quem busca aliar boa gastronomia, drinks de primeira e muita animação. Com um ambiente super moderno e acolhedor, o bar rapidamente se tornou um dos favoritos de quem visita ou mora na Ilha da Gigóia.</p>
+
+          <p class="reveal">A proposta da casa é entregar uma experiência completa, desde o momento do happy hour assistindo ao pôr do sol, até a noite mais agitada embalada por música de qualidade.</p>
+
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #8e44ad; margin: 40px 0;">
+            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+              🍸 A Vibe da Casa
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Mixologia Criativa:</strong> O bar capricha (e muito!) na carta de drinks, com apresentações que impressionam e sabores que surpreendem o paladar.
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong style="color: #222;">Petiscos Irresistíveis:</strong> Acompanhando as bebidas, o cardápio oferece porções deliciosas e muito bem elaboradas, perfeitas para compartilhar.
+              </li>
+              <li>
+                <strong style="color: #222;">Atmosfera Envolvente:</strong> Decoração intimista, iluminação na medida certa e aquela energia de que a noite vai ser longa e cheia de boas memórias.
+              </li>
+            </ul>
+          </div>
+
+          <p class="reveal">Se você quer elevar a sua experiência noturna ou curtir um happy hour com muito estilo, o Ak Bar é uma escolha certeira para brindar os bons momentos na Gigóia.</p>
+
+          <div class="reveal" style="text-align: center; margin-top: 60px;">
+            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+              💬 Falar com a Gigi e Reservar
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  
+  <div id="gigiWidgetRoot"></div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
