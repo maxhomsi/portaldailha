@@ -254,10 +254,11 @@ img {
 
 /* SELETOR DE IDIOMAS */
 .lang-switcher {
-  height: 42px;
+  height: 40px;
   padding: 0 10px;
   border-radius: var(--radius-btn);
   border: 1px solid rgba(0, 0, 0, 0.10);
+  font-size: 13px;
   font-family: inherit;
   font-weight: 800;
   cursor: pointer;
@@ -276,8 +277,9 @@ img {
    BOTÕES GERAIS E EFEITO DE BRILHO (SHINE)
    ========================================================= */
 .btn {
-  height: 46px;
+  height: 44px; /* Diminuído para ficar mais elegante */
   padding: 0 24px;
+  font-size: 14px; /* Fonte ajustada para proporção */
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -467,32 +469,33 @@ img {
   flex-wrap: wrap;
 }
 
-/* Transforma QUALQUER link da Hero em botão (cria o botão "Conheça a Ilha") */
+/* Transforma TODOS os links da Hero em botões padronizados (menores e elegantes) */
 .hero__actions a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 46px;
+  height: 44px; /* Combinando com o tamanho ajustado */
   padding: 0 24px;
+  font-size: 14px;
   border-radius: 50px;
   font-weight: 900;
   text-decoration: none;
   transition: all var(--t) var(--ease);
 }
 
-/* Se o link não tiver a classe .btn--green, ele vira um botão secundário elegante (translúcido com borda branca) */
+/* O botão secundário "Conheça a Ilha" ganha fundo branco sólido e sombra */
 .hero__actions a:not(.btn--green) {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
+  background: #ffffff;
+  color: var(--text);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Hover do botão secundário para interatividade */
 .hero__actions a:not(.btn--green):hover {
-  background: #fff;
-  color: var(--green-dark);
-  border-color: #fff;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: var(--green-dark);
 }
 
 .hero__foot {
