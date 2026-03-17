@@ -4,37 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotéis e Pousadas - Portal Ilha da Gigóia</title>
+  
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="hoteis-pousadas">
+  
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
     <section class="pageHead">
       <div class="container" style="text-align: center;">
         <h1 class="reveal">Hotéis e Pousadas</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Hospedagem com charme e tranquilidade.</p>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Conforto, tranquilidade e a experiência única de acordar com a brisa da lagoa.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330;">
-        <div class="reveal">
-          <p>A Ilha da Gigóia possui diversas <strong>pousadas e pequenas hospedagens</strong> ideais para quem deseja passar mais tempo na região e aproveitar o clima tranquilo da lagoa.</p>
-          <p>Muitas dessas hospedagens oferecem <strong>suítes confortáveis, vista para os canais, café da manhã e áreas externas agradáveis</strong>, criando um ambiente perfeito para descanso.</p>
-          <p>Hospedar-se na ilha permite explorar com calma os restaurantes, bares, passeios de barco e atrações locais, vivendo uma experiência diferente dentro da cidade do Rio de Janeiro.</p>
-          
-          <div style="text-align: center; margin-top: 40px;">
-            <a href="#" onclick="openGigiChat(); return false;" class="btn btn--green">Falar com a Gigi sobre Pousadas</a>
-          </div>
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h2 class="reveal" style="font-size: 32px; color: var(--text);">Onde ficar nas Ilhas</h2>
+          <p class="reveal" style="font-size: 18px; color: var(--muted);">Opções charmosas para casais, famílias e quem busca relaxar longe do barulho da cidade.</p>
         </div>
+
+        <div class="cards--4">
+          
+          <article class="card reveal" style="display: flex; flex-direction: column;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🛶 Boutique</div>
+              <img src="assets/veneza.jpg" alt="Veneza Carioca Hotel Boutique" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Veneza+Carioca'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Veneza Carioca Hotel Boutique</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Localizada na tranquila Ilha Primeira. Ambiente intimista, acolhedor e com decoração exclusiva. Ideal para casais e viajantes que buscam sossego.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                  <span style="font-size: 12px; color: var(--muted); font-weight: 800;">Diárias a partir de:<br><strong style="font-size: 16px; color: var(--text);">R$ 250 a R$ 400</strong></span>
+                </div>
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Wi-Fi • Perto do Metrô</span>
+                <a class="btn btn--green" href="veneza-carioca.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 100ms;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🌴 Bem Localizada</div>
+              <img src="assets/pousada-barra.jpg" alt="Pousada Barra da Tijuca" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Pousada+Barra'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Pousada Barra da Tijuca</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Uma das mais conhecidas da Ilha da Gigóia. Excelente localização, com fácil acesso aos restaurantes e travessia rápida para a praia e o continente.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                  <span style="font-size: 12px; color: var(--muted); font-weight: 800;">Diárias a partir de:<br><strong style="font-size: 16px; color: var(--text);">R$ 220 a R$ 350</strong></span>
+                </div>
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Ar-condicionado • Wi-Fi</span>
+                <a class="btn btn--green" href="pousada-barra.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 200ms;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🌺 Acolhedora</div>
+              <img src="assets/marisis.jpg" alt="Pousada Marísis" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Pousada+Marisis'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Pousada Marísis</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Hospedagem pequena e familiar na Gigóia. Muito elogiada pela limpeza impecável, ambiente silencioso e sensação de estar em um refúgio seguro na natureza.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                  <span style="font-size: 12px; color: var(--muted); font-weight: 800;">Diárias a partir de:<br><strong style="font-size: 16px; color: var(--text);">R$ 200 a R$ 320</strong></span>
+                </div>
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Quartos c/ varanda • Wi-Fi</span>
+                <a class="btn btn--green" href="pousada-marisis.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 300ms;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🌅 Premium</div>
+              <img src="assets/casanova.jpg" alt="Casanova Residence" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Casanova+Residence'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Casanova Residence</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Uma das mais sofisticadas da ilha, de frente para a lagoa e vista para a Pedra da Gávea. Suítes com temáticas românticas, perfeita para experiências premium.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                  <span style="font-size: 12px; color: var(--muted); font-weight: 800;">Diárias a partir de:<br><strong style="font-size: 16px; color: var(--text);">R$ 350 a R$ 600</strong></span>
+                </div>
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Piscina • Café Buffet</span>
+                <a class="btn btn--green" href="casanova.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        
+        <div class="reveal" style="margin-top: 60px; background: rgba(242, 194, 0, 0.1); border: 2px dashed rgba(242, 194, 0, 0.4); padding: 30px; border-radius: 20px; text-align: center;">
+          <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px;">É dono de Pousada na ilha?</h3>
+          <p style="color: var(--muted); margin-bottom: 20px; font-weight: 600;">Destaque seu negócio no portal oficial e receba reservas diretas no seu WhatsApp.</p>
+          <a class="btn" style="background: var(--yellow); color: var(--text); padding: 10px 24px;" href="fale-conosco.html">Cadastrar Minha Pousada</a>
+        </div>
+
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+  
   <script src="app.js"></script>
 </body>
 </html>

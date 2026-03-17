@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pousada Barra da Tijuca - Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="pousada-barra">
+  
+  <div class="progress" id="progress"></div>
+  
+  <header class="header" id="siteHeader"></header>
+
+  <main>
+    <section class="pageHead" style="padding-bottom: 60px;">
+      <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🌴 Bem Localizada</div>
+        <h1 class="reveal">Pousada Barra da Tijuca</h1>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Uma das hospedagens mais conhecidas da Ilha, com fácil acesso aos restaurantes e travessia rápida para a praia.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        
+        <div class="reveal gallery" style="margin-top: 0;">
+          <img src="assets/barra1.jpg" alt="Fachada" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+          <img src="assets/barra2.jpg" alt="Quarto" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+          <img src="assets/barra3.jpg" alt="Área Comum" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+          <img src="assets/barra4.jpg" alt="Vista" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
+        </div>
+
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
+          
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre a Pousada</h2>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            A <strong>Pousada Barra da Tijuca</strong> é uma das hospedagens mais conhecidas da Ilha da Gigóia, muito procurada por turistas que desejam conhecer a ilha e também aproveitar a proximidade com a praia da Barra.
+          </p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
+            Com localização privilegiada dentro da ilha, a pousada oferece fácil acesso aos restaurantes e bares locais, além de uma travessia super rápida de barco até o continente.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+            
+            <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Destaques</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
+                <li style="margin-bottom: 8px;">✓ Quartos com ar-condicionado</li>
+                <li style="margin-bottom: 8px;">✓ Wi-Fi gratuito</li>
+                <li style="margin-bottom: 8px;">✓ Ambiente familiar</li>
+                <li>✓ Boa localização na ilha</li>
+              </ul>
+            </div>
+            
+            <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Faixa de Preço</h3>
+              <p style="font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 20px; margin-top: 0;">💰 R$ 220 a R$ 350 <span style="font-size: 14px; font-weight: 700; color: var(--muted);">/ noite</span></p>
+              
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Ideal Para</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">Turistas que querem explorar a ilha, viajantes com bom custo-benefício e estadias curtas de fim de semana.</p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 15px 40px; height: auto;">
+              💬 Consultar Disponibilidade e Reservar
+            </a>
+            <p style="margin-top: 15px; font-size: 14px; color: var(--muted); font-weight: 700;">Fale direto pelo WhatsApp da pousada para garantir sua reserva.</p>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="hoteis-pousadas.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para a lista de pousadas</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  
+  <div id="gigiWidgetRoot"></div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="Imagem Ampliada">
+    <a class="lightbox__prev" id="lightboxPrev">&#10094;</a>
+    <a class="lightbox__next" id="lightboxNext">&#10095;</a>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
