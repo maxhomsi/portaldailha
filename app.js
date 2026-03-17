@@ -38,9 +38,6 @@ const DICT = {
   hm_c2_t: { pt: "Comer & Beber" },
   hm_c2_d: { pt: "Saboreie frutos do mar frescos e pratos da culinária carioca" },
   hm_c2_l: { pt: "Explorar restaurantes" },
-  hm_c3_t: { pt: "Natureza & Fauna" },
-  hm_c3_d: { pt: "Explore trilhas, observe aves e conecte-se com a natureza" },
-  hm_c3_l: { pt: "Descobrir mais" },
   hm_c4_t: { pt: "Hospedagem" },
   hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha" },
   hm_c4_l: { pt: "Ver opções" },
@@ -83,7 +80,7 @@ const SITE = {
   homeCards: [
     { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat", badge:"⭐ Mais Procurado" },
     { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork", badge:"🍤 Gastronomia" },
-    { title:t("hm_c3_t"), desc:t("hm_c3_d"), linkLabel:t("hm_c3_l"), href:"a-ilha.html", img:"assets/card-natureza.jpg", icon:"leaf", badge:"🔭 Observação" },
+    // O Card de Natureza foi removido daqui!
     { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed", badge:"🌅 Para Relaxar" }
   ],
   pages: {
@@ -500,6 +497,29 @@ function setupLightbox() {
 }
 
 /* =========================================================
+   TORNAR AS FOTOS DOS CARDS CLICÁVEIS (GLOBAL)
+   ========================================================= */
+function setupClickableCards() {
+  // Encontra todos os cards na página que o usuário abriu
+  const cards = document.querySelectorAll('.card');
+  
+  cards.forEach(card => {
+    const foto = card.querySelector('.card__img');
+    // Encontra o botão de link correspondente dentro desse mesmo card
+    const link = card.querySelector('a.btn, a.btn--green, a.card__link');
+    
+    // Se o card tiver uma foto e um link, cria a mágica
+    if (foto && link) {
+      foto.style.cursor = 'pointer'; // Muda o mouse para a "mãozinha" de clique
+      
+      foto.addEventListener('click', () => {
+        window.location.href = link.href; // Redireciona para a página do botão
+      });
+    }
+  });
+}
+
+/* =========================================================
    FUNÇÕES GERAIS DE SCROLL E INICIALIZAÇÃO
    ========================================================= */
 function setupReveal() {
@@ -542,7 +562,10 @@ function setupProgress() {
 
   mountGigiWidget();
   setupCadastroModal(); 
-  setupLightbox(); // Inicia o Lightbox das galerias
+  setupLightbox(); 
+  
+  // Atraso sutil para garantir que o HTML de todas as páginas (inclusive as geradas via JS) já existam
+  setTimeout(setupClickableCards, 100); 
   
   requestAnimationFrame(() => document.body.classList.add("is-ready"));
   setupHeaderScroll();
