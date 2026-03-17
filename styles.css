@@ -306,7 +306,8 @@ img {
   box-shadow: 0 14px 26px rgba(71, 176, 90, 0.30);
 }
 
-.btn--green::after,
+/* MÁGICA: O reflexo agora é aplicado APENAS no botão do header e nos botões da Gigi! */
+.header__actions .btn--green::after,
 .gigiFab__btn::after,
 .gigiSend::after {
   content: "";
@@ -466,6 +467,34 @@ img {
   flex-wrap: wrap;
 }
 
+/* Transforma QUALQUER link da Hero em botão (cria o botão "Conheça a Ilha") */
+.hero__actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 50px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all var(--t) var(--ease);
+}
+
+/* Se o link não tiver a classe .btn--green, ele vira um botão secundário elegante (translúcido com borda branca) */
+.hero__actions a:not(.btn--green) {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.hero__actions a:not(.btn--green):hover {
+  background: #fff;
+  color: var(--green-dark);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
 .hero__foot {
   margin-top: 18px;
   display: flex;
@@ -585,7 +614,7 @@ img {
   padding: 20px 0;
 }
 
-/* AJUSTE MÁGICO: Se houver exatamente 3 cards (como na Hospedagem), centraliza em 3 colunas! */
+/* AJUSTE MÁGICO: Se houver exatamente 3 cards (como na Hospedagem e Home), centraliza em 3 colunas! */
 .cards:has(> .card:last-child:nth-child(3)) {
   grid-template-columns: repeat(3, 1fr);
   max-width: 1050px;
