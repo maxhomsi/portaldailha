@@ -6,7 +6,8 @@
   <title>Eventos e Experiências - Portal Ilha da Gigóia</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="eventos-experiencias">
+  
   <div class="progress" id="progress"></div>
   <header class="header" id="siteHeader"></header>
 
@@ -19,7 +20,7 @@
     </section>
 
     <section class="section">
-      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330; text-align: center;">
+      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330; text-align: center; margin-bottom: 50px;">
         <div class="reveal">
           <p>De confraternizações animadas a <strong>casamentos e eventos corporativos</strong> fechados, a ilha tem o espaço perfeito para tornar seu momento inesquecível. Conheça nossos parceiros:</p>
         </div>
@@ -27,10 +28,67 @@
 
       <div class="container">
         <div class="cards--4">
-          <article class="card reveal"><div class="card__img"><img src="assets/evento-1.jpg" alt="Maracujá" /></div><div class="card__body"><h3 class="card__title">Maracujá</h3><p class="card__desc">Gastronomia impecável e um ambiente charmoso, perfeito para o seu evento.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar datas <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/evento-2.jpg" alt="Oasis" /></div><div class="card__body"><h3 class="card__title">Oasis</h3><p class="card__desc">Um verdadeiro refúgio na ilha, ideal para celebrações e festas intimistas.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar datas <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/evento-3.jpg" alt="Solar das Palmeiras" /></div><div class="card__body"><h3 class="card__title">Solar das Palmeiras</h3><p class="card__desc">Cenário deslumbrante com ampla área verde para casamentos e grandes eventos.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar datas <span>→</span></a></div></article>
-          <article class="card reveal"><div class="card__img"><img src="assets/evento-4.jpg" alt="Gaivota" /></div><div class="card__body"><h3 class="card__title">Gaivota</h3><p class="card__desc">Tradicional e acolhedor, com uma vista incrível para momentos especiais.</p><a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar datas <span>→</span></a></div></article>
+          
+          <article class="card reveal" style="display: flex; flex-direction: column;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🕊️ Cenário Especial</div>
+              <img src="assets/evento-gaivota.jpg" alt="Gaivota" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Gaivota'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Gaivota</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Localizado na Ilha Primeira, combina vista privilegiada com atmosfera elegante. Perfeito para casamentos intimistas, festas e eventos corporativos.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Vista p/ Lagoa • Clima Festivo</span>
+                <a class="btn btn--green" href="gaivota.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 100ms;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🌴 Sofisticado</div>
+              <img src="assets/evento-solar.jpg" alt="Solar das Palmeiras Rio" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Solar+Palmeiras'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Solar das Palmeiras Rio</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Arquitetura colonial e amplos jardins. Oferece produção personalizada de alta gastronomia para casamentos, festas de 15 anos e celebrações grandiosas.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Grandes Eventos • Cenografia</span>
+                <a class="btn btn--green" href="solar-palmeiras.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 200ms;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🍸 Estiloso</div>
+              <img src="assets/evento-oasis.jpg" alt="Oásis Gastrolounge" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Oasis'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Oásis Gastrolounge</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Mistura restaurante, lounge e espaço para festas privadas. Cenário charmoso para almoços relaxantes que ganha um clima animado e musical à noite.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Festas Privadas • Boa Música</span>
+                <a class="btn btn--green" href="oasis.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 300ms;">
+            <div class="card__img" style="height: 200px;">
+              <div class="card__badge">🌺 Energia Leve</div>
+              <img src="assets/evento-maracuja.jpg" alt="Maracujá da Ilha" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Maracuja'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Maracujá da Ilha</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.</p>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05);">
+                <span style="display: block; font-size: 13px; color: var(--green); font-weight: 800; margin-bottom: 12px;">✓ Drinks Tropicais • Pôr do Sol</span>
+                <a class="btn btn--green" href="maracuja.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
