@@ -110,7 +110,6 @@ const SITE = {
       { title:"Hotéis e Pousadas", desc:"Conforto e descanso com vista para a lagoa.", linkLabel:"Ver detalhes", href:"hoteis-pousadas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
       { title:"Airbnb e Temporada", desc:"Privacidade e liberdade para grupos e famílias.", linkLabel:"Ver opções", href:"airbnb-temporada.html", img:"assets/airbnb.jpg", icon:"bed" },
       { title:"Espaços para Eventos", desc:"Cenários memoráveis para sua celebração.", linkLabel:"Conferir", href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge:"🎉 Celebre" },
-      { title:"Experiência Completa", desc:"Passeio, gastronomia e natureza em um único dia.", linkLabel:"Agendar", href:"experiencia-completa.html", img:"assets/experiencia.jpg", icon:"boat", badge:"🌅 Roteiro" }
     ]
   }
 };
