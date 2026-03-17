@@ -1242,6 +1242,29 @@ body[data-page="passeios-rotas"] .card__body {
 }
 
 /* =========================================================
+   OCULTAR ELEMENTOS INDESEJADOS (TAGS E FEATURES)
+   ========================================================= */
+/* Oculta a tag acima do título nas páginas internas */
+.pageHead .container div[style*="background: var(--yellow)"] {
+  display: none !important;
+}
+
+/* Oculta as tags amarelas flutuantes nas fotos */
+.card__badge, 
+.badge {
+  display: none !important;
+}
+
+/* Oculta a linha divisória e os textos verdes de características no final dos cards */
+.card__body hr,
+.card hr,
+.card__features,
+.card__body p[style*="color: var(--green)"],
+.card__body p[style*="color: #47b05a"] {
+  display: none !important;
+}
+
+/* =========================================================
    RESPONSIVIDADE E MEDIA QUERIES (SEMPRE NO FINAL)
    ========================================================= */
 @media (max-width: 1200px) {
