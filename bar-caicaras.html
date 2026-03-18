@@ -3,88 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caiçaras - Portal Ilha da Gigóia</title>
-  
+  <title>Bar e Restaurante Caiçaras | Portal Ilha da Gigóia</title>
+
+  <meta name="description" content="Saboreie o melhor da culinária caiçara no Bar Caiçaras na Ilha da Gigóia. Frutos do mar frescos, ambiente acolhedor e tradição à beira da lagoa." />
+  <meta name="keywords" content="Bar Caiçaras Ilha da Gigóia, restaurante frutos do mar, comida caiçara RJ, onde almoçar na ilha, gastronomia Gigóia" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bar e Restaurante Caiçaras - Tradição e Sabor" />
+  <meta property="og:description" content="O autêntico sabor da Ilha. Venha provar nossas especialidades em um ambiente familiar único." />
+  <meta property="og:image" content="assets/caicaras/caicaras1.jpg" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <h1 class="reveal">Caiçaras</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Clima descontraído, drinks refrescantes e o melhor pôr do sol da lagoa.</p>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🐟 Tradição Caiçara</div>
+        <h1 class="reveal">Bar Caiçaras</h1>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Referência em frutos do mar e culinária brasileira, unindo sabor caseiro e o visual incrível da nossa lagoa.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 900px;">
         
-        <div class="reveal" style="margin-bottom: 40px;">
-          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-          <div class="gallery">
-            <img src="assets/caicaras/caicara1.jpg" alt="Foto Caiçaras 1" loading="lazy">
-            <img src="assets/caicaras/caicara2.jpg" alt="Foto Caiçaras 2" loading="lazy">
-            <img src="assets/caicaras/caicara3.jpg" alt="Foto Caiçaras 3" loading="lazy">
-            <img src="assets/caicaras/caicara4.jpg" alt="Foto Caiçaras 4" loading="lazy">
-            <img src="assets/caicaras/caicara5.jpg" alt="Foto Caiçaras 5" loading="lazy">
-            <img src="assets/caicaras/caicara6.jpg" alt="Foto Caiçaras 6" loading="lazy">
-            <img src="assets/caicaras/caicara7.jpg" alt="Foto Caiçaras 7" loading="lazy">
-            <img src="assets/caicaras/caicara8.jpg" alt="Foto Caiçaras 8" loading="lazy">
+        <div class="reveal gallery" style="margin-top: 0;">
+          <img src="assets/caicaras/caicaras1.jpg" alt="Caiçaras 1" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+1'">
+          <img src="assets/caicaras/caicaras2.jpg" alt="Caiçaras 2" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+2'">
+          <img src="assets/caicaras/caicaras3.jpg" alt="Caiçaras 3" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+3'">
+          <img src="assets/caicaras/caicaras4.jpg" alt="Caiçaras 4" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+4'">
+          <img src="assets/caicaras/caicaras5.jpg" alt="Caiçaras 5" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+5'">
+          <img src="assets/caicaras/caicaras6.jpg" alt="Caiçaras 6" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+6'">
+          <img src="assets/caicaras/caicaras7.jpg" alt="Caiçaras 7" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+7'">
+          <img src="assets/caicaras/caicaras8.jpg" alt="Caiçaras 8" onerror="this.src='https://via.placeholder.com/400x300?text=Caiçaras+8'">
+        </div>
+
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre o Restaurante</h2>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            O <strong>Bar Caiçaras</strong> é um marco na Ilha da Gigóia. Perfeito para quem busca um almoço farto e de qualidade, o restaurante se destaca por suas moquecas, peixes grelhados e guarnições que remetem ao melhor da comida feita com carinho.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+            <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Especialidades</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
+                <li style="margin-bottom: 8px;">✓ Moquecas Variadas</li>
+                <li style="margin-bottom: 8px;">✓ Peixes Frescos do Dia</li>
+                <li style="margin-bottom: 8px;">✓ Petiscos Clássicos</li>
+                <li>✓ Sobremesas Caseiras</li>
+              </ul>
+            </div>
+            <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Ambiente</h3>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Amplo, arejado e ideal para famílias e grandes grupos.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Destaque</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">🔝 Um dos mais tradicionais e bem avaliados da ilha.</p>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 20px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Ver Cardápio via Gigi</button>
           </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
-          
-          <p class="reveal">O <strong>Caiçaras</strong> é um dos bares mais charmosos e procurados da Ilha da Gigóia. Com uma atmosfera rústica e acolhedora, o espaço foi pensado para quem deseja relaxar, jogar conversa fora e apreciar a beleza natural da região à beira da água.</p>
-
-          <p class="reveal">A casa é famosa por sua carta de drinks autorais e clássicos muito bem executados, perfeitos para acompanhar os dias ensolarados ou o início da noite na ilha.</p>
-
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #f2c200; margin: 40px 0;">
-            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
-              🍹 Destaques do Bar
-            </h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Drinks Especiais:</strong> Uma seleção incrível que vai das tradicionais caipirinhas com frutas da estação até criações exclusivas da casa.
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Petiscos de Boteco:</strong> Porções caprichadas e muito saborosas, ideais para compartilhar com os amigos enquanto a música rola.
-              </li>
-              <li>
-                <strong style="color: #222;">Visual Fim de Tarde:</strong> A localização privilegiada oferece um dos melhores ângulos para curtir o famoso pôr do sol da Ilha da Gigóia.
-              </li>
-            </ul>
-          </div>
-
-          <p class="reveal">Se você procura um lugar animado, com bom atendimento e aquela vibe única que só os bares da ilha têm, o Caiçaras é uma parada mais do que obrigatória no seu roteiro.</p>
-
-          <div class="reveal" style="text-align: center; margin-top: 60px;">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
-              💬 Falar com a Gigi e Reservar
-            </a>
-          </div>
-
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  
   <div id="gigiWidgetRoot"></div>
-  
+
   <div class="lightbox" id="lightbox">
     <span class="lightbox__close" id="lightboxClose">&times;</span>
-    <img class="lightbox__content" id="lightboxImage" src="" alt="">
-    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
-    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="Imagem Ampliada">
+    <a class="lightbox__prev" id="lightboxPrev">&#10094;</a>
+    <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

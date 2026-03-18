@@ -3,52 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurante Laguna - Portal Ilha da Gigóia</title>
-  
+  <title>Restaurante Laguna - Tradição e Alta Gastronomia | Ilha da Gigóia</title>
+
+  <meta name="description" content="Visite o Restaurante Laguna, o primeiro da Ilha da Gigóia. Desfrute de lagostas, pastéis de camarão famosos e uma vista deslumbrante para a Pedra da Gávea." />
+  <meta name="keywords" content="restaurante laguna ilha da gigoia, primeiro restaurante gigoia, lagosta laguna, onde comer frutos do mar rj, restaurante romântico barra da tijuca" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Restaurante Laguna - O Pioneiro da Gigóia" />
+  <meta property="og:description" content="Tradição desde 2002 com o melhor pastel de camarão e vista para a Pedra da Gávea." />
+  <meta property="og:image" content="assets/laguna/laguna1.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/restaurante-laguna.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
         <h1 class="reveal">Restaurante Laguna</h1>
         <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">O pioneiro da Ilha da Gigóia, com tradição e vista para a Pedra da Gávea.</p>
       </div>
     </section>
 
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 900px;">
         
-        <div class="reveal" style="margin-bottom: 40px;">
-          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+        <div class="reveal" style="margin-bottom: 40px; margin-top: 0;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px; text-align: center;">📸 Conheça o Espaço</h3>
           <div class="gallery">
-            <img src="assets/laguna/laguna1.jpg" alt="Foto Laguna 1" loading="lazy">
-            <img src="assets/laguna/laguna2.jpg" alt="Foto Laguna 2" loading="lazy">
-            <img src="assets/laguna/laguna3.jpg" alt="Foto Laguna 3" loading="lazy">
-            <img src="assets/laguna/laguna4.jpg" alt="Foto Laguna 4" loading="lazy">
-            <img src="assets/laguna/laguna5.jpg" alt="Foto Laguna 5" loading="lazy">
-            <img src="assets/laguna/laguna6.jpg" alt="Foto Laguna 6" loading="lazy">
-            <img src="assets/laguna/laguna7.jpg" alt="Foto Laguna 7" loading="lazy">
-            <img src="assets/laguna/laguna8.jpg" alt="Foto Laguna 8" loading="lazy">
+            <img src="assets/laguna/laguna1.jpg" alt="Foto Laguna 1" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+1'">
+            <img src="assets/laguna/laguna2.jpg" alt="Foto Laguna 2" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+2'">
+            <img src="assets/laguna/laguna3.jpg" alt="Foto Laguna 3" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+3'">
+            <img src="assets/laguna/laguna4.jpg" alt="Foto Laguna 4" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+4'">
+            <img src="assets/laguna/laguna5.jpg" alt="Foto Laguna 5" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+5'">
+            <img src="assets/laguna/laguna6.jpg" alt="Foto Laguna 6" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+6'">
+            <img src="assets/laguna/laguna7.jpg" alt="Foto Laguna 7" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+7'">
+            <img src="assets/laguna/laguna8.jpg" alt="Foto Laguna 8" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna+8'">
           </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
           
-          <p class="reveal">O <strong>Restaurante Laguna</strong> é considerado o <strong>primeiro estabelecimento fundado na Ilha da Gigóia</strong>, inaugurado em 2002. Desde então, tornou-se uma referência gastronômica da região e um dos locais mais tradicionais para quem visita a ilha.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            O <strong>Restaurante Laguna</strong> é considerado o <strong>primeiro estabelecimento fundado na Ilha da Gigóia</strong>, inaugurado em 2002. Desde então, tornou-se uma referência gastronômica da região e um dos locais mais tradicionais para quem visita a ilha.
+          </p>
 
-          <p class="reveal">O restaurante oferece um ambiente rústico e sofisticado ao mesmo tempo, com mesas de madeira sob um charmoso teto de palha, cercado por jardins e com uma bela <strong>vista para a Pedra da Gávea</strong>. O cenário torna o espaço especialmente procurado para ocasiões especiais, encontros românticos e momentos tranquilos à beira da lagoa.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
+            O restaurante oferece um ambiente rústico e sofisticado ao mesmo tempo, com mesas de madeira sob um charmoso teto de palha, cercado por jardins e com uma bela <strong>vista para a Pedra da Gávea</strong>. O cenário torna o espaço especialmente procurado para ocasiões especiais.
+          </p>
 
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid var(--primary); margin: 40px 0;">
+          <div style="background: rgba(71, 176, 90, 0.05); padding: 35px; border-radius: 20px; border-left: 6px solid var(--green-dark); margin: 40px 0;">
             <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
               🌿 Tradição & Especialidades
             </h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #444; line-height: 1.6;">
               <li style="margin-bottom: 16px;">
                 <strong style="color: #222;">Pastel de Camarão:</strong> O famoso e inconfundível pastel é considerado um dos grandes carros-chefes da casa.
               </li>
@@ -61,14 +92,20 @@
             </ul>
           </div>
 
-          <p class="reveal">Na gastronomia, o Laguna é especializado em <strong>frutos do mar preparados de forma artesanal</strong>, valorizando ingredientes frescos e receitas clássicas. Com uma atmosfera acolhedora e culinária impecável, é um dos lugares que ajudam a contar a história da Ilha da Gigóia.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            Especializado em <strong>frutos do mar preparados de forma artesanal</strong>, o Laguna valoriza ingredientes frescos e receitas clássicas em uma atmosfera que ajuda a contar a história da Ilha da Gigóia.
+          </p>
 
-          <div class="reveal" style="text-align: center; margin-top: 60px;">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+          <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;">
               💬 Falar com a Gigi e Reservar
-            </a>
+            </button>
           </div>
 
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
@@ -85,6 +122,9 @@
     <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

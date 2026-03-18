@@ -1,61 +1,14 @@
 /* =========================================================
-   SISTEMA BASE E TEXTOS (Apenas PT-BR no momento)
-   WhatsApp: 5521993802618 | E-mail: Ilhadagigoiaoficial@gmail.com
+   SISTEMA BASE E LÓGICA DO PORTAL ILHA DA GIGÓIA
    ========================================================= */
-const currentLang = localStorage.getItem('ilha_lang') || 'pt';
 
-function changeLanguage(lang) {
-  localStorage.setItem('ilha_lang', lang);
-  location.reload();
+// Verifica se os arquivos dependentes (Dicionário e Capi) foram carregados corretamente
+if (typeof DICT === 'undefined' || typeof capiTips === 'undefined') {
+  console.warn("Aviso: 'dicionario.js' ou 'dicas-capi.js' não foram carregados. O site pode apresentar textos faltantes.");
 }
 
-/* DICIONÁRIO ENXUTO - Apenas Português e Placeholder do Capi */
-const DICT = {
-  nav_ilha: { pt: "A Ilha" },
-  nav_passeios: { pt: "Passeios & Rotas" },
-  nav_comer: { pt: "Comer & Beber" },
-  nav_hospedagem: { pt: "Hospedagem" },
-  nav_fale: { pt: "Fale Conosco" },
-  btn_passeios: { pt: "Ver Passeios" },
-  btn_conheca: { pt: "Conheça a Ilha" },
-  footer_text: { pt: "Portal Ilha da Gigóia — Termos • Privacidade" },
-
-  hero_pill: { pt: "Portal Oficial de Turismo" },
-  hero_title_a: { pt: "Descubra o Paraíso Tropical" },
-  hero_title_b: { pt: "da Ilha da Gigóia" },
-  hero_sub: { pt: "Explore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro" },
-  hero_check: { pt: "Informações oficiais e atualizadas" },
-  sect_espera_title: { pt: "O Que Te Espera na Ilha" },
-  sect_espera_sub: { pt: "Da natureza exuberante aos passeios de barco, cada momento é uma nova descoberta" },
-
-  capi_tag: { pt: "Capi, seu guia" },
-  tip_title: { pt: "Dica do Capi:" },
-  tip_placeholder: { pt: "[PLACEHOLDER] As dicas do Capi voltarão no final do projeto..." },
-  
-  hm_c1_t: { pt: "Passeios de Barco" },
-  hm_c1_d: { pt: "Navegue pelas águas calmas e descubra paisagens deslumbrantes" },
-  hm_c1_l: { pt: "Ver roteiros" },
-  hm_c2_t: { pt: "Comer & Beber" },
-  hm_c2_d: { pt: "Saboreie frutos do mar frescos e pratos da culinária carioca" },
-  hm_c2_l: { pt: "Explorar restaurantes" },
-  hm_c4_t: { pt: "Hospedagem" },
-  hm_c4_d: { pt: "Encontre o lugar perfeito para relaxar e aproveitar a ilha" },
-  hm_c4_l: { pt: "Ver opções" },
-
-  gigi_fab: { pt: "Fale com a Gigi" },
-  gigi_hello: { pt: "Olá, me chamo Gigi!" },
-  gigi_sub: { pt: "Me envie uma mensagem e eu te respondo direto no WhatsApp!" },
-  gigi_lbl_name: { pt: "Seu nome *" },
-  gigi_lbl_phone: { pt: "Seu telefone *" },
-  gigi_lbl_msg: { pt: "Mensagem *" },
-  gigi_btn: { pt: "Enviar" },
-  gigi_note: { pt: "Ao enviar, abriremos o WhatsApp com sua mensagem pronta." }
-};
-
-const t = (key) => DICT[key] ? (DICT[key][currentLang] || DICT[key].pt) : key;
-
 /* =========================================================
-   DADOS DOS CARDS E PÁGINAS (ATUALIZADO COM PASTAS CORRETAS)
+   DADOS DOS CARDS E PÁGINAS (Com Pastas Corretas)
    ========================================================= */
 const SITE = {
   brand: {
@@ -80,7 +33,6 @@ const SITE = {
   homeCards: [
     { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge:"⭐ Mais Procurado" },
     { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/lanches/gourmet1.webp", icon:"fork", badge:"🍤 Gastronomia" },
-    // O Card de Natureza foi removido daqui!
     { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/pousadas/casanova1.webp", icon:"bed", badge:"🌅 Para Relaxar" }
   ],
   pages: {
@@ -101,11 +53,11 @@ const SITE = {
       { title:"Restaurantes da Ilha", desc:"Pratos de frutos do mar, carnes e culinária variada à beira da lagoa.", linkLabel:"Ver detalhes", href:"restaurantes.html", img:"assets/lanches/parada1.webp", icon:"fork", badge:"🍤 Gastronomia" },
       { title:"Bares e Drinks", desc:"Cerveja gelada, caipirinhas e o pôr do sol mais bonito da região.", linkLabel:"Ver detalhes", href:"bares-drinks.html", img:"assets/bar&DRINK.jpg", icon:"boat", badge:"🍹 Relax" },
       { title:"Café da Manhã e Lanches", desc:"Comece o dia com tranquilidade ou faça uma pausa para recarregar.", linkLabel:"Ver opções", href:"cafe-lanches.html", img:"assets/aleatoria/cantinho1.webp", icon:"leaf", badge:"☕ Bom dia" },
-      { title:"Eventos e Experiências", desc:"Feirinhas, música ao vivo e espaços para celebrações inesquecíveis.", linkLabel:"Conferir", href:"eventos-experiencias.html", img:"assets/drinks.jpg", icon:"fork", badge:"🎵 Ao Vivo" }
+      { title:"Eventos e Experiências", desc:"Feirinhas, música ao vivo e espaços para celebrações inesquecíveis.", linkLabel:"Conferir", href:"eventos-experiencias.html", img:"assets/aleatoria/solar1.jpg", icon:"fork", badge:"🎵 Ao Vivo" }
     ],
     "hospedagem": [
       { title:"Hotéis e Pousadas", desc:"Conforto e descanso com vista para a lagoa.", linkLabel:"Ver detalhes", href:"hoteis-pousadas.html", img:"assets/pousadas/veneza1.jpg", icon:"bed" },
-      { title:"Airbnb e Temporada", desc:"Privacidade e liberdade para grupos e famílias.", linkLabel:"Ver opções", href:"airbnb-temporada.html", img:"assets/airbnb.jpg", icon:"bed" },
+      { title:"Airbnb e Temporada", desc:"Privacidade e liberdade para grupos e famílias.", linkLabel:"Ver opções", href:"airbnb-temporada.html", img:"assets/airbnb/venti1.avif", icon:"bed" },
       { title:"Espaços para Eventos", desc:"Cenários memoráveis para sua celebração.", linkLabel:"Conferir", href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge:"🎉 Celebre" },
     ]
   }
@@ -175,6 +127,13 @@ function mountHeaderFooter() {
         <div class="navWrap"><nav class="nav">${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}</nav></div>
         <div class="header__actions">
           ${socialHtml}
+          
+          <select class="lang-switcher" onchange="changeLanguage(this.value)">
+            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
+            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
+            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
+          </select>
+
           <a class="btn btn--green" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
           <button class="burger" id="burger">☰</button>
         </div>
@@ -182,6 +141,13 @@ function mountHeaderFooter() {
       <div class="mobileNav" id="mobileNav" style="display:none">
         <div class="container mobileNav__inner">
           ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
+          
+          <select class="lang-switcher" onchange="changeLanguage(this.value)" style="margin: 10px 0; width: 100%;">
+            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
+            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
+            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
+          </select>
+          
           <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
         </div>
       </div>
@@ -280,9 +246,6 @@ function mountHome() {
   const tipTitle = document.getElementById("tipTitle");
   if (tipTitle) tipTitle.textContent = SITE.tip.title;
 
-  const tipText = document.getElementById("tipText");
-  if (tipText) tipText.innerHTML = " " + t("tip_placeholder");
-
   const homeCards = document.getElementById("homeCards");
   if (homeCards) homeCards.innerHTML = SITE.homeCards.map((c,i)=>cardHtml(c,i)).join("");
 }
@@ -346,14 +309,14 @@ function setupCadastroModal() {
 
   const html = `
     <div class="side-badge" onclick="openCadastroModal()">
-      Cadastre seu<br>Restaurante<br>aqui!
+      Cadastre seu<br>Espaço<br>aqui!
     </div>
 
     <div class="modal-overlay" id="cadastroModal" onclick="closeCadastroModal(event)">
       <div class="modal-content" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeCadastroModal()">×</button>
         <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;">Fale Conosco</h2>
-        <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">Preencha os dados abaixo para solicitar um orçamento e cadastrar o seu estabelecimento no Portal.</p>
+        <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">Preencha os dados abaixo para solicitar o cadastro do seu estabelecimento no Portal.</p>
         
         <form id="ajaxCadastroForm" class="gigiForm">
           <div>
@@ -370,7 +333,7 @@ function setupCadastroModal() {
           </div>
           <div>
             <label>Mensagem</label>
-            <textarea rows="3" placeholder="Gostaria de saber os valores para..." required></textarea>
+            <textarea rows="3" placeholder="Gostaria de saber como funciona o cadastro..." required></textarea>
           </div>
           <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px; font-size:16px;" id="ajaxSubmitBtn">Enviar Solicitação</button>
         </form>
@@ -380,7 +343,7 @@ function setupCadastroModal() {
             <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm-1.2 17.3l-4.8-4.8 1.4-1.4 3.4 3.4 7.6-7.6 1.4 1.4-9 9z"/>
           </svg>
           <h3 style="margin:0 0 10px; color:var(--text); font-weight:900; font-size:22px;">Mensagem Enviada!</h3>
-          <p style="color:var(--muted); font-size:16px; font-weight:600;">Nossa equipe entrará em contato em breve com todas as informações.</p>
+          <p style="color:var(--muted); font-size:16px; font-weight:600;">Nossa equipe entrará em contato em breve.</p>
           <button class="btn" style="margin-top:20px; background:#eee; color:#333; width:100%;" onclick="closeCadastroModal()">Fechar</button>
         </div>
 
@@ -391,7 +354,7 @@ function setupCadastroModal() {
   document.body.insertAdjacentHTML('beforeend', html);
 
   const form = document.getElementById('ajaxCadastroForm');
-  form.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = document.getElementById('ajaxSubmitBtn');
     btn.innerText = "Enviando aguarde...";
@@ -533,12 +496,21 @@ function setupProgress() {
   window.addEventListener("scroll", onScroll, { passive:true });
 }
 
+// INICIALIZAÇÃO PRINCIPAL DO SITE
 (function init(){
   setupProgress();
   mountHeaderFooter();
   const page = document.body.getAttribute("data-page");
 
-  if (page === "home") mountHome();
+  if (page === "home") {
+    mountHome();
+    
+    // Chama a função do Capi SOMENTE SE ELA EXISTIR (Garante que não quebra o site se o arquivo não carregou)
+    if (typeof initCapiTip === 'function') {
+      initCapiTip();
+    }
+  }
+  
   if (page && SITE.pages[page]) mountPageCards(page);
 
   mountGigiWidget();

@@ -3,52 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deck Bar - Portal Ilha da Gigóia</title>
-  
+  <title>Deck Bar - Música ao Vivo e Gastronomia Tropical | Ilha da Gigóia</title>
+
+  <meta name="description" content="Visite o Deck Bar na Ilha da Gigóia. Famoso pelo camarão no abacaxi, decoração com guarda-chuvas coloridos, música ao vivo e participação no Comida di Buteco." />
+  <meta name="keywords" content="deck bar ilha da gigoia, camarão no abacaxi gigoia, comida di buteco rj, música ao vivo barra da tijuca, restaurante com guarda-chuvas coloridos" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deck Bar - Tradição e Alegria na Gigóia" />
+  <meta property="og:description" content="O melhor camarão no abacaxi e o cenário mais instagramável da Ilha." />
+  <meta property="og:image" content="assets/deck/deck1.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/restaurante-deck-bar.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🍍 Tropical & Vibrante</div>
         <h1 class="reveal">Deck Bar</h1>
         <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Tradição, música ao vivo e um cenário inesquecível à beira da lagoa.</p>
       </div>
     </section>
 
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 900px;">
         
-        <div class="reveal" style="margin-bottom: 40px;">
-          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+        <div class="reveal" style="margin-bottom: 40px; margin-top: 0;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px; text-align: center;">📸 Conheça o Espaço</h3>
           <div class="gallery">
-            <img src="assets/deck/deck1.jpg" alt="Foto Deck Bar 1" loading="lazy">
-            <img src="assets/deck/deck2.jpg" alt="Foto Deck Bar 2" loading="lazy">
-            <img src="assets/deck/deck3.jpg" alt="Foto Deck Bar 3" loading="lazy">
-            <img src="assets/deck/deck4.jpg" alt="Foto Deck Bar 4" loading="lazy">
-            <img src="assets/deck/deck5.jpg" alt="Foto Deck Bar 5" loading="lazy">
-            <img src="assets/deck/deck6.jpg" alt="Foto Deck Bar 6" loading="lazy">
-            <img src="assets/deck/deck7.jpg" alt="Foto Deck Bar 7" loading="lazy">
-            <img src="assets/deck/deck8.jpg" alt="Foto Deck Bar 8" loading="lazy">
+            <img src="assets/deck/deck1.jpg" alt="Foto Deck Bar 1" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+            <img src="assets/deck/deck2.jpg" alt="Foto Deck Bar 2" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+            <img src="assets/deck/deck3.jpg" alt="Foto Deck Bar 3" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+            <img src="assets/deck/deck4.jpg" alt="Foto Deck Bar 4" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
+            <img src="assets/deck/deck5.jpg" alt="Foto Deck Bar 5" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+5'">
+            <img src="assets/deck/deck6.jpg" alt="Foto Deck Bar 6" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+6'">
+            <img src="assets/deck/deck7.jpg" alt="Foto Deck Bar 7" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+7'">
+            <img src="assets/deck/deck8.jpg" alt="Foto Deck Bar 8" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+8'">
           </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
           
-          <p class="reveal">O <strong>Deck Bar</strong> é um dos restaurantes mais tradicionais da Ilha da Gigóia e se destaca pelo ambiente descontraído e também pela localização privilegiada à beira da lagoa. O espaço é bastante procurado por visitantes que querem aproveitar uma boa gastronomia em um cenário agradável, com vista para os canais e o clima típico da região.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            O <strong>Deck Bar</strong> é um dos restaurantes mais tradicionais da Ilha da Gigóia e se destaca pelo ambiente descontraído e também pela localização privilegiada à beira da lagoa. O espaço é bastante procurado por visitantes que querem aproveitar uma boa gastronomia em um cenário agradável, com vista para os canais e o clima típico da região.
+          </p>
 
-          <p class="reveal">A casa tem forte presença na culinária de <strong>frutos do mar</strong>, com pratos que valorizam ingredientes frescos e sabores marcantes.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
+            A casa tem forte presença na culinária de <strong>frutos do mar</strong>, com pratos que valorizam ingredientes frescos e sabores marcantes.
+          </p>
 
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid var(--yellow); margin: 40px 0;">
+          <div style="background: rgba(71, 176, 90, 0.05); padding: 35px; border-radius: 20px; border-left: 6px solid var(--yellow); margin: 40px 0;">
             <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
               🍍 Destaques & Atrações
             </h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #444; line-height: 1.6;">
               <li style="margin-bottom: 16px;">
                 <strong style="color: #222;">Camarão no Abacaxi:</strong> Uma das marcas registradas do restaurante, o prato chama a atenção tanto pela sua apresentação tropical e criativa quanto pelo sabor irresistível.
               </li>
@@ -61,14 +93,20 @@
             </ul>
           </div>
 
-          <p class="reveal">Com boa comida, música ao vivo e um ambiente sempre animado, o Deck Bar é uma das paradas mais populares e obrigatórias para quem deseja aproveitar ao máximo o clima da Ilha da Gigóia.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            Com boa comida, música ao vivo e um ambiente sempre animado, o Deck Bar é uma das paradas mais populares e obrigatórias para quem deseja aproveitar ao máximo o clima da Ilha da Gigóia.
+          </p>
 
-          <div class="reveal" style="text-align: center; margin-top: 60px;">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+          <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;">
               💬 Falar com a Gigi e Reservar
-            </a>
+            </button>
           </div>
 
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
@@ -85,6 +123,9 @@
     <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

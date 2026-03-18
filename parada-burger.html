@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parada Burger - Portal Ilha da Gigóia</title>
-  
+  <title>Parada Burger - Hambúrguer Artesanal | Ilha da Gigóia</title>
+
+  <meta name="description" content="Conheça o Parada Burger na Ilha da Gigóia. Hambúrgueres artesanais suculentos, ambiente descontraído e o melhor lanche da região da Barra da Tijuca." />
+  <meta name="keywords" content="Parada Burger, hambúrguer Ilha da Gigóia, onde comer lanche, artesanal, Gigóia Gastronomia, delivery gigoia" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Parada Burger - O Melhor Burger da Ilha" />
+  <meta property="og:description" content="O ponto de parada obrigatório para quem ama um burger de respeito na Ilha da Gigóia." />
+  <meta property="og:image" content="assets/lanches/parada1.webp" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/parada-burger.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="cafe-lanches">
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
@@ -16,9 +27,25 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🍔 Hamburgueria</div>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🍔 Parada Obrigatória</div>
         <h1 class="reveal">Parada Burger</h1>
-        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Ponto de parada obrigatório com hambúrgueres artesanais deliciosos em um ambiente totalmente descontraído.</p>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Sabor autêntico e ambiente acolhedor no coração da Ilha da Gigóia. O lanche perfeito para fechar o dia.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -37,42 +64,42 @@
         </div>
 
         <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
-          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre o Espaço</h2>
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre a Casa</h2>
           <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
-            A <strong>Parada Burger</strong> é aquele lugar perfeito para matar a fome no fim da tarde ou no início da noite, após um longo dia passeando pela Ilha da Gigóia. Com um clima totalmente casual, é o point ideal para encontrar amigos.
+            O <strong>Parada Burger</strong> é conhecido pela qualidade constante e pelo atendimento que faz você se sentir em casa. Nossos hambúrgueres são montados com ingredientes frescos, blends de carnes selecionadas e molhos especiais da casa que dão aquele toque único.
           </p>
-          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
-            Os hambúrgueres são o grande destaque: carne suculenta, blends artesanais e acompanhamentos caprichados. Tudo isso acompanhado de bebidas bem geladas em um ambiente de fácil acesso para todos os visitantes.
-          </p>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;">
             <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
               <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Destaques</h3>
               <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
-                <li style="margin-bottom: 8px;">✓ Hambúrgueres artesanais e blends</li>
-                <li style="margin-bottom: 8px;">✓ Acompanhamentos e porções</li>
-                <li style="margin-bottom: 8px;">✓ Clima casual e amigável</li>
-                <li>✓ Bebidas sempre geladas</li>
+                <li style="margin-bottom: 8px;">✓ Hambúrguer Artesanal</li>
+                <li style="margin-bottom: 8px;">✓ Milkshakes Especiais</li>
+                <li style="margin-bottom: 8px;">✓ Localização Central</li>
+                <li>✓ Ambiente Familiar</li>
               </ul>
             </div>
             <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Preço Médio</h3>
-              <p style="font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 20px; margin-top: 0;">💲 $$ (Moderado)</p>
               <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Funcionamento</h3>
-              <p style="margin: 0; color: #444; font-weight: 700;">Consulte horários no local.</p>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Aberto para almoço e jantar. Consulte os dias exatos.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Pedidos</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">Disponível para consumo no local e delivery na ilha.</p>
             </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 30px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 15px 40px; font-size: 16px;">Fazer Pedido com a Gigi</button>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Café e Lanches</a>
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  
   <div id="gigiWidgetRoot"></div>
 
   <div class="lightbox" id="lightbox">
@@ -82,6 +109,9 @@
     <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

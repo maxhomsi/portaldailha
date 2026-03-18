@@ -3,25 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurantes da Ilha - Portal Ilha da Gigóia</title>
+  <title>Restaurantes da Ilha | Guia Gastronômico Ilha da Gigóia</title>
+  
+  <meta name="description" content="Explore os melhores restaurantes da Ilha da Gigóia. Frutos do mar, alta gastronomia, petiscos e culinária internacional em um cenário único no Rio de Janeiro." />
+  <meta name="keywords" content="restaurantes ilha da gigoia, onde comer barra da tijuca, frutos do mar rj, gastronomia gigoia, guia de restaurantes" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Guia Gastronômico - Restaurantes da Ilha" />
+  <meta property="og:description" content="Onde comer na Ilha da Gigóia: do rústico ao sofisticado, todos os sabores da lagoa." />
+  <meta property="og:image" content="assets/maracuja/mara1.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/restaurantes.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
         <h1 class="reveal">Restaurantes da Ilha</h1>
         <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Gastronomia e tradição à beira da lagoa.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330; text-align: center;">
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 40px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330; text-align: center; margin-bottom: 50px;">
         <div class="reveal">
           <p>A Ilha da Gigóia é conhecida pela sua gastronomia, especialmente pelos <strong>pratos de frutos do mar</strong>, carnes e culinária internacional. Escolha a sua próxima experiência gastronômica abaixo:</p>
         </div>
@@ -31,73 +59,73 @@
         <div class="cards--4">
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/maracuja/mara1.jpg" alt="Maracujá da Ilha" /></div>
+            <div class="card__img"><img src="assets/maracuja/mara1.jpg" alt="Maracujá da Ilha" onerror="this.src='https://via.placeholder.com/400x300?text=Maracuja'"></div>
             <div class="card__body">
               <h3 class="card__title">Maracujá</h3>
-              <p class="card__desc">Especialidade em frutos do mar e vista deslumbrante para a lagoa.</p>
+              <p class="card__desc">Especialidade em frutos do mar e vista deslumbrante na Ilha Primeira.</p>
               <a class="card__link" href="restaurante-maracuja.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/ocya/ocya1.jpg" alt="Ocyá" /></div>
+            <div class="card__img"><img src="assets/ocya/ocya1.jpg" alt="Ocyá" onerror="this.src='https://via.placeholder.com/400x300?text=Ocya'"></div>
             <div class="card__body">
               <h3 class="card__title">Ocyá</h3>
-              <p class="card__desc">Alta gastronomia focada em peixes e frutos do mar para momentos especiais.</p>
+              <p class="card__desc">Alta gastronomia reconhecida pelo Guia Michelin com técnicas de maturação.</p>
               <a class="card__link" href="restaurante-ocya.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/cais/cais1.jpg" alt="Cais bar" /></div>
+            <div class="card__img"><img src="assets/cais/cais1.jpg" alt="Cais bar" onerror="this.src='https://via.placeholder.com/400x300?text=Cais+Bar'"></div>
             <div class="card__body">
               <h3 class="card__title">Cais bar</h3>
-              <p class="card__desc">Comida caseira tradicional com tempero carioca e clima descontraído.</p>
+              <p class="card__desc">Moquecas tradicionais, pratos fartos e um clima familiar inconfundível.</p>
               <a class="card__link" href="restaurante-cais-bar.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/deck/deck1.jpg" alt="Deck bar" /></div>
+            <div class="card__img"><img src="assets/deck/deck1.jpg" alt="Deck bar" onerror="this.src='https://via.placeholder.com/400x300?text=Deck+Bar'"></div>
             <div class="card__body">
               <h3 class="card__title">Deck bar</h3>
-              <p class="card__desc">O melhor deck para curtir boas porções e drinks à beira da água.</p>
+              <p class="card__desc">Ambiente vibrante com música ao vivo e o famoso camarão no abacaxi.</p>
               <a class="card__link" href="restaurante-deck-bar.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/salome/salome1.jpg" alt="Salomé" /></div>
+            <div class="card__img"><img src="assets/salome/salome1.jpg" alt="Salomé" onerror="this.src='https://via.placeholder.com/400x300?text=Salome'"></div>
             <div class="card__body">
               <h3 class="card__title">Salomé</h3>
-              <p class="card__desc">Moquecas inesquecíveis e pratos regionais super bem servidos.</p>
+              <p class="card__desc">Um dos melhores pastéis de camarão da ilha e tábuas completas de mariscos.</p>
               <a class="card__link" href="restaurante-salome.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/venne/venne1.jpg" alt="Venne" /></div>
+            <div class="card__img"><img src="assets/venne/venne1.jpg" alt="Venne" onerror="this.src='https://via.placeholder.com/400x300?text=Venne'"></div>
             <div class="card__body">
               <h3 class="card__title">Venne</h3>
-              <p class="card__desc">Massas artesanais, culinária impecável e vinhos selecionados.</p>
+              <p class="card__desc">Sofisticação mediterrânea com pratos autorais em um ambiente refinado.</p>
               <a class="card__link" href="restaurante-venne.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/laguna/laguna1.jpg" alt="Laguna" /></div>
+            <div class="card__img"><img src="assets/laguna/laguna1.jpg" alt="Laguna" onerror="this.src='https://via.placeholder.com/400x300?text=Laguna'"></div>
             <div class="card__body">
               <h3 class="card__title">Laguna</h3>
-              <p class="card__desc">Carnes nobres e um ambiente familiar super aconchegante.</p>
+              <p class="card__desc">O pioneiro da Ilha. Tradição artesanal com vista para a Pedra da Gávea.</p>
               <a class="card__link" href="restaurante-laguna.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
           
           <article class="card reveal">
-            <div class="card__img"><img src="assets/camarao/camarao1.jpg" alt="Camarão da Barra" /></div>
+            <div class="card__img"><img src="assets/camarao/camarao1.jpg" alt="Camarão da Barra" onerror="this.src='https://via.placeholder.com/400x300?text=Camarao+da+Barra'"></div>
             <div class="card__body">
               <h3 class="card__title">Camarão da Barra</h3>
-              <p class="card__desc">O verdadeiro sabor da ilha com dedicação total aos frutos do mar.</p>
+              <p class="card__desc">Cozinha contemporânea moderna especializada em diferentes preparos de camarão.</p>
               <a class="card__link" href="restaurante-camarao.html">Ver detalhes <span>→</span></a>
             </div>
           </article>
@@ -108,7 +136,12 @@
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+  
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotéis e Pousadas - Portal Ilha da Gigóia</title>
-  
+  <title>Hotéis e Pousadas na Ilha da Gigóia | Portal Oficial</title>
+
+  <meta name="description" content="Encontre as melhores pousadas e hotéis na Ilha da Gigóia. Hospedagem com vista para a lagoa, café da manhã e muito conforto na Barra da Tijuca, Rio de Janeiro." />
+  <meta name="keywords" content="pousadas ilha da gigoia, hoteis gigoia, onde ficar barra da tijuca, hospedagem com cafe da manha rj, pousada com vista lagoa" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hotéis e Pousadas | Ilha da Gigóia" />
+  <meta property="og:description" content="O charme e o acolhimento da ilha com serviços completos para a sua estadia perfeita." />
+  <meta property="og:image" content="assets/card-pousadas.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/hoteis-pousadas.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="hoteis-pousadas">
@@ -14,14 +25,30 @@
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 30px;">
       <div class="container" style="text-align: center;">
         <h1 class="reveal">Hotéis e Pousadas</h1>
         <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Conforto, tranquilidade e a experiência única de acordar com a brisa da lagoa.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 40px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
       <div class="container">
         
         <div style="text-align: center; margin-bottom: 50px;">
@@ -132,9 +159,16 @@
     </div>
   </div>
 
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
 
   <script>
+    if (typeof initCapiTip === 'function') initCapiTip();
+
+    function openCadastroModal() { document.getElementById('cadastroModal').classList.add('active'); }
+    function closeCadastroModal(e) { document.getElementById('cadastroModal').classList.remove('active'); }
+
     document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('pousadaCadastroForm');
       if (form) {

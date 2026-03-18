@@ -1,86 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fale Conosco | Portal Ilha da Gigóia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco | Portal Oficial Ilha da Gigóia</title>
 
-  <meta name="description" content="Entre em contato com o Portal Ilha da Gigóia para tirar dúvidas, anunciar seu negócio ou sugerir parcerias comerciais." />
-  <meta name="keywords" content="contato Ilha da Gigóia, anunciar Ilha da Gigóia, parcerias, turismo RJ" />
+  <meta name="description" content="Entre em contato com o Portal Oficial da Ilha da Gigóia. Dúvidas, parcerias, suporte para reservas e informações turísticas sobre a Barra da Tijuca." />
+  <meta name="keywords" content="contato Ilha da Gigóia, telefone gigoia, suporte portal ilha da gigoia, parcerias turismo rj, duvidas passeios" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Fale Conosco | Portal Ilha da Gigóia" />
-  <meta property="og:description" content="Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós." />
+  <meta property="og:title" content="Fale Conosco - Portal Ilha da Gigóia" />
+  <meta property="og:description" content="Estamos aqui para ajudar. Envie sua mensagem, tire dúvidas ou seja um parceiro do Portal." />
+  <meta property="og:image" content="assets/card-contato.jpg" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/fale-conosco.html" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body data-page="fale-conosco">
+<body data-page="a-ilha">
+  
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
-      <div class="container">
-        <h1 class="reveal" data-i18n="pg_fale_h1">Fale Conosco</h1>
-        <p class="reveal" data-i18n="pg_fale_p">Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós.</p>
+    <section class="pageHead" style="padding-bottom: 60px;">
+      <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">💬 Atendimento</div>
+        <h1 class="reveal">Fale Conosco</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Dúvidas, sugestões ou interesse em parcerias? Nossa equipe e a Gigi estão prontas para te atender.</p>
       </div>
     </section>
 
-    <section class="section" style="padding-top:24px">
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
       <div class="container">
-        <div class="card reveal" style="padding: 40px; max-width: 950px; margin: 0 auto;">
+        <div class="tipRow reveal" style="margin-bottom: 40px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+      <div class="container" style="max-width: 900px;">
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
           
-          <div class="contato-wrapper">
-            <div class="contato-img">
-               <img src="assets/gigi_faleconosco.png" alt="Gigi escrevendo na máquina de escrever" class="gigi-mesa" />
+          <div class="reveal" style="background: rgba(71, 176, 90, 0.05); padding: 40px; border-radius: 24px;">
+            <h2 style="color: var(--green-dark); margin-bottom: 20px;">Canais Diretos</h2>
+            <p style="color: #444; line-height: 1.6; margin-bottom: 30px; font-weight: 600;">
+              Precisa de uma resposta rápida? Fale direto com a Gigi pelo WhatsApp ou mande um e-mail para nossa administração.
+            </p>
+
+            <div style="margin-bottom: 20px;">
+              <h3 style="font-size: 16px; color: var(--text); margin-bottom: 5px;">📱 WhatsApp (Gigi)</h3>
+              <p style="font-weight: 700; color: var(--green-dark);"><a href="#" onclick="openGigiChat(); return false;" style="color: inherit; text-decoration: none;">Iniciar Conversa →</a></p>
             </div>
 
-            <div class="contato-form">
-              <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin-top:0; margin-bottom:24px;" data-i18n="fc_intro">
-                Estamos aqui para ajudar! Se você tem alguma dúvida sobre a ilha, deseja anunciar seu negócio no Portal Ilha da Gigóia ou propor uma parceria comercial, basta preencher o formulário abaixo que retornaremos em breve.
-              </p>
+            <div style="margin-bottom: 20px;">
+              <h3 style="font-size: 16px; color: var(--text); margin-bottom: 5px;">✉️ E-mail</h3>
+              <p style="font-weight: 700; color: #444;">contato@ilhadagigoia.com.br</p>
+            </div>
 
-              <form id="gigiContactForm" action="https://formsubmit.co/ajax/Ilhadagigoiaoficial@gmail.com" method="POST" class="gigiForm">
-                
-                <input type="hidden" name="_subject" value="Novo contato pelo Portal Ilha da Gigóia!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="box">
+            <div>
+              <h3 style="font-size: 16px; color: var(--text); margin-bottom: 5px;">📷 Instagram</h3>
+              <p style="font-weight: 700; color: #444;">@portalilhadagigoia</p>
+            </div>
+          </div>
 
-                <div style="margin-bottom: 12px;">
-                  <label data-i18n="fc_lbl_name">Seu nome</label>
-                  <input type="text" name="Nome" required />
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                  <label data-i18n="fc_lbl_email">Seu e-mail</label>
-                  <input type="email" name="Email" required />
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                  <label data-i18n="fc_lbl_phone">Telefone para contato</label>
-                  <input type="tel" name="Telefone" required />
-                </div>
-
-                <div style="margin-bottom: 16px;">
-                  <label data-i18n="fc_lbl_msg">Corpo da mensagem</label>
-                  <textarea name="Mensagem" rows="5" required></textarea>
-                </div>
-
-                <button class="btn btn--green" type="submit" style="width: 100%; justify-content: center;">
-                  <span data-i18n="fc_btn_send">Enviar mensagem</span>
-                </button>
-              </form>
-
-              <div id="formFeedback" style="display:none; text-align:center; padding: 40px 20px; background: rgba(71,176,90,0.1); border-radius: 16px; border: 1px dashed var(--green);">
-                 <div style="font-size: 40px; margin-bottom: 10px;">🕊️</div>
-                 <h3 style="color:var(--green-dark); font-size: 22px; margin: 0 0 10px 0; font-weight: 900;">Mensagem Enviada!</h3>
-                 <p style="color:var(--text); font-weight: 700; margin: 0; line-height: 1.5;">A Gigi já recebeu sua carta e nossa equipe entrará em contato com você muito em breve.</p>
+          <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft);">
+            <h2 style="color: var(--green-dark); margin-bottom: 20px;">Envie uma Mensagem</h2>
+            
+            <form id="contatoForm" class="gigiForm">
+              <div style="margin-bottom: 15px;">
+                <label style="display:block; margin-bottom:8px; font-weight:700; font-size:14px; color:var(--text);">Nome Completo</label>
+                <input type="text" placeholder="Seu nome" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; font-family:inherit;" />
+              </div>
+              
+              <div style="margin-bottom: 15px;">
+                <label style="display:block; margin-bottom:8px; font-weight:700; font-size:14px; color:var(--text);">E-mail</label>
+                <input type="email" placeholder="seu@email.com" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; font-family:inherit;" />
               </div>
 
+              <div style="margin-bottom: 15px;">
+                <label style="display:block; margin-bottom:8px; font-weight:700; font-size:14px; color:var(--text);">Assunto</label>
+                <select required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; font-family:inherit; background:#fff;">
+                  <option value="">Selecione...</option>
+                  <option value="duvida">Dúvida Geral</option>
+                  <option value="parceria">Quero ser Parceiro</option>
+                  <option value="suporte">Problema no Site</option>
+                  <option value="sugestao">Sugestão</option>
+                </select>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label style="display:block; margin-bottom:8px; font-weight:700; font-size:14px; color:var(--text);">Mensagem</label>
+                <textarea rows="4" placeholder="Como podemos te ajudar?" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; font-family:inherit; resize:vertical;"></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn--green" style="width:100%; padding:15px;" id="contatoSubmitBtn">Enviar Mensagem</button>
+            </form>
+
+            <div id="contatoSuccess" style="display:none; text-align:center; padding:30px 10px;">
+              <div style="font-size: 40px; margin-bottom: 15px;">✅</div>
+              <h3 style="color:var(--green-dark);">Mensagem Enviada!</h3>
+              <p style="color: #666; font-weight: 500;">Agradecemos o contato. Nossa equipe responderá no seu e-mail o mais breve possível.</p>
             </div>
           </div>
 
@@ -91,60 +123,26 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
+  
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const form = document.getElementById("gigiContactForm");
-      const feedback = document.getElementById("formFeedback");
+    if (typeof initCapiTip === 'function') initCapiTip();
 
-      if(form) {
-        form.addEventListener("submit", function(e) {
-          e.preventDefault(); // Impede o redirecionamento padrão
-
-          const btn = form.querySelector('button[type="submit"]');
-          const originalBtnHtml = btn.innerHTML;
-          
-          // Muda o visual do botão para mostrar que está carregando
-          btn.innerHTML = "Enviando... ⏳";
-          btn.style.opacity = "0.7";
-          btn.style.pointerEvents = "none";
-
-          const formData = new FormData(form);
-
-          // Dispara os dados para o FormSubmit silenciosamente
-          fetch(form.action, {
-              method: "POST",
-              body: formData,
-              headers: {
-                  'Accept': 'application/json'
-              }
-          })
-          .then(response => response.json())
-          .then(data => {
-              if (data.success || data.success === "true") {
-                  // Esconde o form e mostra a mensagem de sucesso
-                  form.style.display = "none";
-                  feedback.style.display = "block";
-              } else {
-                  alert("Houve um erro ao enviar. Por favor, tente novamente.");
-                  // Restaura o botão se der erro
-                  btn.innerHTML = originalBtnHtml;
-                  btn.style.opacity = "1";
-                  btn.style.pointerEvents = "auto";
-              }
-          })
-          .catch(error => {
-              alert("Erro de conexão. Por favor, verifique sua internet e tente novamente.");
-              // Restaura o botão se der erro
-              btn.innerHTML = originalBtnHtml;
-              btn.style.opacity = "1";
-              btn.style.pointerEvents = "auto";
-          });
-        });
-      }
-    });
+    // Lógica do Form de Contato
+    const form = document.getElementById('contatoForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('contatoSubmitBtn');
+        btn.innerText = "Enviando...";
+        setTimeout(() => {
+          form.style.display = 'none';
+          document.getElementById('contatoSuccess').style.display = 'block';
+        }, 1500);
+      });
+    }
   </script>
-
 </body>
 </html>

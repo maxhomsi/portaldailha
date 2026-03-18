@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Onde Comer e Beber | Melhores Restaurantes | Ilha da Gigóia</title>
+  <title>Onde Comer e Beber | Ilha da Gigóia</title>
 
-  <meta name="description" content="Onde comer na Ilha da Gigóia? Descubra os melhores restaurantes de frutos do mar e bares perfeitos para curtir o pôr do sol na lagoa." />
-  <meta name="keywords" content="restaurantes Ilha da Gigóia, onde comer Ilha da Gigóia, bares, frutos do mar, pôr do sol" />
+  <meta name="description" content="Descubra os melhores restaurantes, bares e cafés da Ilha da Gigóia. Frutos do mar, drinks tropicais e o pôr do sol mais bonito do Rio de Janeiro." />
+  <meta name="keywords" content="restaurantes Ilha da Gigóia, onde comer, bares, frutos do mar, café da manhã, Ilha da Gigóia RJ" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Onde Comer e Beber | Restaurantes na Ilha da Gigóia" />
-  <meta property="og:description" content="Os melhores restaurantes e bares para saborear frutos do mar frescos com vista para a lagoa." />
+  <meta property="og:title" content="Onde Comer e Beber | Ilha da Gigóia" />
+  <meta property="og:description" content="Saboreie a gastronomia local com vista para a lagoa. Opções para todos os gostos e momentos." />
   <meta property="og:image" content="assets/card-comer.jpg" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/comer-beber.html" />
 
@@ -21,13 +21,14 @@
 
 <body data-page="comer-beber">
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
     <section class="pageHead">
       <div class="container">
-        <h1 class="reveal" data-i18n="pg_comer_h1">Comer & Beber</h1>
-        <p class="reveal" data-i18n="pg_comer_p">Explore sabores locais: frutos do mar frescos, bares charmosos e aquele pôr do sol perfeito.</p>
+        <h1 class="reveal">Comer & Beber</h1>
+        <p class="reveal">Saboreie frutos do mar frescos, pratos da culinária carioca e aproveite os melhores drinks com vista para a lagoa.</p>
       </div>
     </section>
 
@@ -36,15 +37,12 @@
         <div class="tipRow reveal" style="margin-bottom: 20px;">
           <div class="capi">
             <div class="capi__ring">
-              <img src="assets/capi.png" alt="Capi" />
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
             </div>
-            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
           <div class="tip">
-            <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;">
-              <span class="bulb" aria-hidden="true">💡</span>
-              <strong data-i18n="tip_title">Dica do Capi:</strong>
-              <span data-i18n="tip_comer"></span>
-            </p>
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
           </div>
         </div>
       </div>
@@ -52,13 +50,23 @@
 
     <section class="section" style="padding-top:24px">
       <div class="container">
-        <div class="cards" id="pageCards"></div>
+        <div class="cards--4" id="pageCards"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+
+  <script>
+    if (typeof initCapiTip === 'function') {
+      initCapiTip();
+    }
+  </script>
 </body>
 </html>

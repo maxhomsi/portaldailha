@@ -21,13 +21,14 @@
 
 <body data-page="passeios-rotas">
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
     <section class="pageHead">
       <div class="container">
-        <h1 class="reveal" data-i18n="pg_passeios_h1">Passeios & Rotas</h1>
-        <p class="reveal" data-i18n="pg_passeios_p">Roteiros de barco, paradas para fotos, horários ideais e dicas do que levar para aproveitar melhor.</p>
+        <h1 class="reveal">Passeios & Rotas</h1>
+        <p class="reveal">Roteiros de barco, paradas para fotos, horários ideais e dicas do que levar para aproveitar melhor.</p>
       </div>
     </section>
 
@@ -36,15 +37,12 @@
         <div class="tipRow reveal" style="margin-bottom: 20px;">
           <div class="capi">
             <div class="capi__ring">
-              <img src="assets/capi.png" alt="Capi" />
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
             </div>
-            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
           <div class="tip">
-            <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;">
-              <span class="bulb" aria-hidden="true">💡</span>
-              <strong data-i18n="tip_title">Dica do Capi:</strong>
-              <span data-i18n="tip_passeios"></span>
-            </p>
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
           </div>
         </div>
       </div>
@@ -52,13 +50,23 @@
 
     <section class="section" style="padding-top:24px">
       <div class="container">
-        <div class="cards" id="pageCards"></div>
+        <div class="cards--4" id="pageCards"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+
+  <script>
+    if (typeof initCapiTip === 'function') {
+      initCapiTip();
+    }
+  </script>
 </body>
 </html>

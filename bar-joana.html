@@ -3,88 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bar da Joana - Portal Ilha da Gigóia</title>
-  
+  <title>Bar da Joana - O Sabor Caseiro da Ilha | Portal Ilha da Gigóia</title>
+
+  <meta name="description" content="Experimente o autêntico tempero caseiro no Bar da Joana na Ilha da Gigóia. Pratos tradicionais, petiscos feitos na hora e um atendimento que faz você se sentir em casa." />
+  <meta name="keywords" content="Bar da Joana Ilha da Gigóia, comida caseira Gigóia, onde almoçar na ilha, restaurante tradicional RJ, petiscos da Joana" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bar da Joana - Tradição e Tempero" />
+  <meta property="og:description" content="O melhor da culinária caseira com o carinho que só a Joana tem. Venha saborear nossos pratos!" />
+  <meta property="og:image" content="assets/joana/joana1.jpg" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🍳 Tempero com Amor</div>
         <h1 class="reveal">Bar da Joana</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">O autêntico sabor caseiro com a melhor energia e resenha da Ilha da Gigóia.</p>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Simplicidade, tradição e aquele gostinho de comida feita na hora que todo mundo ama.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 900px;">
         
-        <div class="reveal" style="margin-bottom: 40px;">
-          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-          <div class="gallery">
-            <img src="assets/joana/joana1.jpg" alt="Foto Bar da Joana 1" loading="lazy">
-            <img src="assets/joana/joana2.jpg" alt="Foto Bar da Joana 2" loading="lazy">
-            <img src="assets/joana/joana3.jpg" alt="Foto Bar da Joana 3" loading="lazy">
-            <img src="assets/joana/joana4.jpg" alt="Foto Bar da Joana 4" loading="lazy">
-            <img src="assets/joana/joana5.jpg" alt="Foto Bar da Joana 5" loading="lazy">
-            <img src="assets/joana/joana6.jpg" alt="Foto Bar da Joana 6" loading="lazy">
-            <img src="assets/joana/joana7.jpg" alt="Foto Bar da Joana 7" loading="lazy">
-            <img src="assets/joana/joana8.jpg" alt="Foto Bar da Joana 8" loading="lazy">
+        <div class="reveal gallery" style="margin-top: 0;">
+          <img src="assets/joana/joana1.jpg" alt="Bar da Joana 1" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+          <img src="assets/joana/joana2.jpg" alt="Bar da Joana 2" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+          <img src="assets/joana/joana3.jpg" alt="Bar da Joana 3" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+          <img src="assets/joana/joana4.jpg" alt="Bar da Joana 4" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
+          <img src="assets/joana/joana5.jpg" alt="Bar da Joana 5" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+5'">
+          <img src="assets/joana/joana6.jpg" alt="Bar da Joana 6" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+6'">
+          <img src="assets/joana/joana7.jpg" alt="Bar da Joana 7" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+7'">
+          <img src="assets/joana/joana8.jpg" alt="Bar da Joana 8" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+8'">
+        </div>
+
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Culinária de Raiz</h2>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            O <strong>Bar da Joana</strong> é o destino certo para quem busca o verdadeiro sabor da Ilha da Gigóia. Joana e sua equipe preparam cada prato com o cuidado de quem cozinha para a própria família, tornando o local um dos favoritos tanto de moradores quanto de visitantes frequentes.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+            <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Especialidades</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
+                <li style="margin-bottom: 8px;">✓ Prato Feito (PF) Caprichado</li>
+                <li style="margin-bottom: 8px;">✓ Bolinhos Artesanais</li>
+                <li style="margin-bottom: 8px;">✓ Peixe com Molho de Camarão</li>
+                <li>✓ Galinhada aos Domingos</li>
+              </ul>
+            </div>
+            <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Informações</h3>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Ambiente simples, acolhedor e familiar.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Preço</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">💸 Excelente custo-benefício.</p>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 20px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Falar com a Gigi</button>
           </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
-          
-          <p class="reveal">O <strong>Bar da Joana</strong> é aquele cantinho especial que faz você se sentir em casa logo no primeiro momento. Conhecido pelo atendimento extremamente caloroso e pela comida com verdadeiro tempero caseiro, é o ponto de encontro perfeito para quem busca uma experiência autêntica e sem frescuras.</p>
-
-          <p class="reveal">Aqui a regra é simples: sentar, pedir uma bebida bem gelada e deixar o tempo passar enquanto se aproveita a tranquilidade e a simpatia dos moradores e visitantes da ilha.</p>
-
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #e06c43; margin: 40px 0;">
-            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
-              🍻 Destaques do Bar
-            </h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Cerveja Estupidamente Gelada:</strong> Ponto de honra da casa! Está sempre no ponto certinho para espantar o calor do Rio de Janeiro.
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Petiscos Raiz:</strong> Pastéis super recheados, bolinhos e caldinhos que trazem a verdadeira essência da comida de boteco carioca.
-              </li>
-              <li>
-                <strong style="color: #222;">Clima Familiar:</strong> Um ambiente aconchegante onde todo mundo se conhece (ou acaba se conhecendo) e a conversa rola solta o dia inteiro.
-              </li>
-            </ul>
-          </div>
-
-          <p class="reveal">Se a sua ideia de passeio perfeito envolve simplicidade, gente boa e sabores que abraçam o estômago, o Bar da Joana vai ser uma das suas paradas favoritas.</p>
-
-          <div class="reveal" style="text-align: center; margin-top: 60px;">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
-              💬 Falar com a Gigi e Reservar
-            </a>
-          </div>
-
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  
   <div id="gigiWidgetRoot"></div>
-  
+
   <div class="lightbox" id="lightbox">
     <span class="lightbox__close" id="lightboxClose">&times;</span>
-    <img class="lightbox__content" id="lightboxImage" src="" alt="">
-    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
-    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="Imagem Ampliada">
+    <a class="lightbox__prev" id="lightboxPrev">&#10094;</a>
+    <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

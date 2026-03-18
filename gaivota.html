@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaivota - Portal Ilha da Gigóia</title>
-  
+  <title>Gaivota - Espaço para Eventos na Ilha da Gigóia | Portal Oficial</title>
+
+  <meta name="description" content="Conheça o espaço Gaivota na Ilha da Gigóia. O cenário perfeito com vista para a lagoa para casamentos, aniversários e eventos corporativos inesquecíveis." />
+  <meta name="keywords" content="Espaço Gaivota Ilha da Gigóia, espaço para eventos barra da tijuca, casamentos ilha da gigoia, festas rj, local para confraternização" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gaivota - O Cenário do Seu Próximo Evento" />
+  <meta property="og:description" content="Atmosfera elegante e vista para a lagoa. Celebre seus melhores momentos no Gaivota." />
+  <meta property="og:image" content="assets/aleatoria/gaivota1.jpeg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/gaivota.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="eventos-experiencias">
+<body data-page="servicos">
   
   <div class="progress" id="progress"></div>
   
@@ -19,6 +30,22 @@
         <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🕊️ Cenário Especial</div>
         <h1 class="reveal">Gaivota</h1>
         <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Um cenário especial na Ilha Primeira, combinando vista para a lagoa e atmosfera elegante para festas memoráveis.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -68,16 +95,16 @@
           </div>
 
           <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 15px 40px; height: auto;">
+            <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;">
               💬 Solicitar Orçamento e Datas
-            </a>
+            </button>
             <p style="margin-top: 15px; font-size: 14px; color: var(--muted); font-weight: 700;">Fale direto pelo WhatsApp da equipe de eventos para planejar sua festa.</p>
           </div>
 
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="eventos-experiencias.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Eventos e Experiências</a>
+          <a href="espacos-eventos.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Espaços e Eventos</a>
         </div>
 
       </div>
@@ -95,6 +122,9 @@
     <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pousada Marísis - Portal Ilha da Gigóia</title>
-  
+  <title>Pousada Marísis | Hospedagem Acolhedora na Ilha da Gigóia</title>
+
+  <meta name="description" content="Hospede-se na Pousada Marísis na Ilha da Gigóia. Um ambiente familiar, limpo e extremamente silencioso para quem busca paz e contato com a natureza no Rio de Janeiro." />
+  <meta name="keywords" content="Pousada Marisis, pousada familiar gigoia, hospedagem silenciosa barra da tijuca, onde ficar na ilha da gigoia, pousada com varanda rj" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pousada Marísis - O Seu Refúgio de Paz na Ilha" />
+  <meta property="og:description" content="Hospedagem pequena, familiar e elogiada pela limpeza impecável. Fuja do barulho da cidade." />
+  <meta property="og:image" content="assets/pousadas/marisis1.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/pousada-marisis.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="hospedagem">
@@ -19,6 +30,22 @@
         <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🌺 Acolhedora</div>
         <h1 class="reveal">Pousada Marísis</h1>
         <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Hospedagem pequena e familiar na Gigóia. O refúgio seguro perfeito para quem busca paz e contato com a natureza.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -63,8 +90,8 @@
             </div>
           </div>
           
-          <div style="text-align: center; margin-top: 20px;">
-             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Falar com a Gigi para Reservar</button>
+          <div style="text-align: center; margin-top: 30px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 15px 40px; font-size: 16px;">Falar com a Gigi para Reservar</button>
           </div>
         </div>
 
@@ -86,6 +113,9 @@
     <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

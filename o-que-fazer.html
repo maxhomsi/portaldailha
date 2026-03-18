@@ -24,21 +24,40 @@
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
-      <div class="container">
+    <section class="pageHead" style="padding-bottom: 60px;">
+      <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🎯 Roteiros & Atividades</div>
         <h1 class="reveal" data-i18n="pg_fazer_h1">O que fazer</h1>
-        <p class="reveal" data-i18n="pg_fazer_p">Um mix perfeito entre natureza, gastronomia e passeios. Escolha seu estilo e monte seu roteiro.</p>
+        <p class="reveal" data-i18n="pg_fazer_p" style="max-width: 700px; margin: 10px auto 0;">Um mix perfeito entre natureza, gastronomia e passeios. Escolha seu estilo e monte seu roteiro.</p>
       </div>
     </section>
-    <section class="section" style="padding-top:24px">
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 40px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
       <div class="container">
         <div class="cards" id="pageCards"></div>
       </div>
     </section>
-    <section class="section" id="natureza" style="padding-top:0">
+
+    <section class="section" id="natureza" style="padding-top: 20px;">
       <div class="container">
-        <h2 class="section__title reveal" style="text-align:left;font-size:34px" data-i18n="pg_fazer_h2">Natureza & Fauna</h2>
-        <p class="section__subtitle reveal" style="text-align:left;margin-bottom:18px" data-i18n="pg_fazer_p2">Trilhas leves, observação de aves e paisagens para fotos incríveis.</p>
+        <h2 class="section__title reveal" style="text-align:left; font-size:34px; color: var(--green-dark);" data-i18n="pg_fazer_h2">Natureza & Fauna</h2>
+        <p class="section__subtitle reveal" style="text-align:left; margin-bottom:30px; font-weight: 600;" data-i18n="pg_fazer_p2">Trilhas leves, observação de aves e paisagens para fotos incríveis.</p>
         <div class="cards" id="natureCards"></div>
       </div>
     </section>
@@ -46,6 +65,10 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
+  
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

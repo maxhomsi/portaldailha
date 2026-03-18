@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ilha Gourmet - Portal Ilha da Gigóia</title>
-  
+  <title>Ilha Gourmet - Gastronomia de Excelência | Portal Oficial Ilha da Gigóia</title>
+
+  <meta name="description" content="Conheça o Ilha Gourmet na Ilha da Gigóia. Alta gastronomia, pratos sofisticados, carta de vinhos selecionada e um ambiente inesquecível no Rio de Janeiro." />
+  <meta name="keywords" content="Ilha Gourmet Ilha da Gigóia, restaurante gigóia, alta gastronomia barra da tijuca, onde comer na ilha, jantar romântico rj" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ilha Gourmet - Sabores Únicos na Gigóia" />
+  <meta property="og:description" content="Uma experiência gastronômica que une técnica, ingredientes frescos e um cenário paradisíaco." />
+  <meta property="og:image" content="assets/lanches/gourmet1.webp" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/ilha-gourmet.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="cafe-lanches">
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
@@ -16,9 +27,25 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🍕 Pratos Leves & Lanches</div>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🍽️ Alta Gastronomia</div>
         <h1 class="reveal">Ilha Gourmet</h1>
-        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Opção versátil e acolhedora com lanches, pizzas e pratos leves para a sua pausa perfeita na ilha.</p>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Sabores que impressionam. Uma fusão de culinária contemporânea com o frescor e o charme da Ilha da Gigóia.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -26,10 +53,10 @@
       <div class="container" style="max-width: 900px;">
         
         <div class="reveal gallery" style="margin-top: 0;">
-          <img src="assets/lanches/gourmet1.webp" alt="Fachada Ilha Gourmet" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
-          <img src="assets/lanches/gourmet2.webp" alt="Pizzas e Sanduíches" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
-          <img src="assets/lanches/gourmet3.webp" alt="Ambiente Interno" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
-          <img src="assets/lanches/gourmet4.webp" alt="Pratos Leves" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
+          <img src="assets/lanches/gourmet1.webp" alt="Ilha Gourmet 1" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+          <img src="assets/lanches/gourmet2.webp" alt="Ilha Gourmet 2" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+          <img src="assets/lanches/gourmet3.webp" alt="Ilha Gourmet 3" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+          <img src="assets/lanches/gourmet4.webp" alt="Ilha Gourmet 4" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
           <img src="assets/lanches/gourmet5.jpg" alt="Ilha Gourmet 5" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+5'">
           <img src="assets/lanches/gourmet6.jpg" alt="Ilha Gourmet 6" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+6'">
           <img src="assets/lanches/gourmet7.jpg" alt="Ilha Gourmet 7" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+7'">
@@ -37,42 +64,42 @@
         </div>
 
         <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
-          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre o Espaço</h2>
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Experiência Inesquecível</h2>
           <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
-            A <strong>Ilha Gourmet</strong> é o curinga perfeito para qualquer momento do dia. Seja no intervalo de um passeio de barco ou no fim de tarde após caminhar pelas ruelas da Gigóia, o espaço oferece um ambiente sempre amigável e descontraído.
-          </p>
-          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
-            A versatilidade é a palavra-chave por aqui: o cardápio agrada desde quem procura um sanduíche rápido e bem recheado, até quem prefere dividir uma pizza quentinha com a família ou optar por pratos mais leves. Tudo isso com um serviço atencioso e de qualidade.
+            O <strong>Ilha Gourmet</strong> nasceu para os paladares mais exigentes. Com um menu cuidadosamente elaborado, o restaurante oferece pratos que são verdadeiras obras de arte, combinando ingredientes frescos locais com técnicas da gastronomia internacional.
           </p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
             <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
-              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Destaques</h3>
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Destaques do Menu</h3>
               <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
-                <li style="margin-bottom: 8px;">✓ Pizzas deliciosas</li>
-                <li style="margin-bottom: 8px;">✓ Sanduíches e pratos leves</li>
-                <li style="margin-bottom: 8px;">✓ Ambiente versátil e acolhedor</li>
-                <li>✓ Ótimo para famílias e grupos</li>
+                <li style="margin-bottom: 8px;">✓ Frutos do Mar Frescos</li>
+                <li style="margin-bottom: 8px;">✓ Carnes Nobres</li>
+                <li style="margin-bottom: 8px;">✓ Sobremesas Autorais</li>
+                <li>✓ Carta de Vinhos Premium</li>
               </ul>
             </div>
             <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Preço Médio</h3>
-              <p style="font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 20px; margin-top: 0;">💲 $$ (Moderado)</p>
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Funcionamento</h3>
-              <p style="margin: 0; color: #444; font-weight: 700;">Consulte horários no local.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Ambiente</h3>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Intimista, climatizado e com atendimento impecável.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Ideal Para</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">🍷 Jantares românticos e comemorações especiais.</p>
             </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 20px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Fazer Reserva via Gigi</button>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Café e Lanches</a>
+          <a href="restaurantes.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Restaurantes</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  
   <div id="gigiWidgetRoot"></div>
 
   <div class="lightbox" id="lightbox">
@@ -82,6 +109,9 @@
     <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

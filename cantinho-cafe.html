@@ -3,11 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cantinho do Café - Portal Ilha da Gigóia</title>
-  
+  <title>Cantinho do Café - O Seu Momento de Pausa | Portal Ilha da Gigóia</title>
+
+  <meta name="description" content="Descubra o Cantinho do Café na Ilha da Gigóia. O lugar perfeito para um café fresquinho, bolos artesanais e um ambiente acolhedor no coração da ilha." />
+  <meta name="keywords" content="Cantinho do Café Ilha da Gigóia, cafeteria Gigóia, onde tomar café na ilha, café da manhã RJ, lanches Ilha da Gigóia" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cantinho do Café - Sabor e Aconchego" />
+  <meta property="og:description" content="Sinta o aroma do café fresquinho e aproveite nossas delícias artesanais. Esperamos por você!" />
+  <meta property="og:image" content="assets/aleatoria/cafe1.jpg" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="cafe-lanches">
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
@@ -16,9 +26,25 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">☕ Tradicional & Saboroso</div>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">☕ Pausa & Sabor</div>
         <h1 class="reveal">Cantinho do Café</h1>
-        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Uma cafeteria charmosa com cardápio variado, perfeita para sentar, descansar e aproveitar o ritmo calmo da ilha.</p>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Um espaço charmoso criado para quem não abre mão de um bom café e um atendimento carinhoso.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -26,53 +52,49 @@
       <div class="container" style="max-width: 900px;">
         
         <div class="reveal gallery" style="margin-top: 0;">
-          <img src="assets/aleatoria/cantinho1.webp" alt="Fachada do Cantinho do Café" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
-          <img src="assets/aleatoria/cantinho2.webp" alt="Café da Manhã" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
-          <img src="assets/aleatoria/cantinho3.webp" alt="Tapiocas e Lanches" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
-          <img src="assets/aleatoria/cantinho4.webp" alt="Ambiente Interno" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
-          <img src="assets/aleatoria/cantinho5.png" alt="Cantinho do Café 5" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+5'">
-          <img src="assets/aleatoria/cantinho6.webp" alt="Cantinho do Café 6" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+6'">
-          <img src="assets/aleatoria/cantinho7.jpg" alt="Cantinho do Café 7" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+7'">
-          <img src="assets/aleatoria/cantinho8.avif" alt="Cantinho do Café 8" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+8'">
+          <img src="assets/aleatoria/cafe1.jpg" alt="Cantinho do Café 1" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+          <img src="assets/aleatoria/cafe2.jpg" alt="Cantinho do Café 2" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+          <img src="assets/aleatoria/cafe3.jpg" alt="Cantinho do Café 3" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+          <img src="assets/aleatoria/cafe4.jpg" alt="Cantinho do Café 4" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
         </div>
 
         <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
-          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre o Espaço</h2>
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sabor em cada detalhe</h2>
           <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
-            O <strong>Cantinho do Café</strong> é uma das opções mais queridas para quem busca um lanche completo ou um café da manhã reforçado antes de passear pela Ilha da Gigóia. Com um ambiente familiar e aconchegante, ele convida a sentar sem pressa e curtir o momento.
-          </p>
-          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
-            O cardápio é super variado e pensado para agradar todos os gostos: de tapiocas bem recheadas a sanduíches, pães de queijo e, claro, opções de cafés deliciosos para acompanhar. É o verdadeiro significado de comida reconfortante!
+            O <strong>Cantinho do Café</strong> é aquele lugar especial onde o tempo parece passar mais devagar. Perfeito para começar o dia com energia ou para uma pausa relaxante à tarde, oferecemos uma seleção de grãos e acompanhamentos feitos com muito amor.
           </p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
             <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
-              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Destaques</h3>
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Especialidades</h3>
               <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
-                <li style="margin-bottom: 8px;">✓ Tapiocas doces e salgadas</li>
-                <li style="margin-bottom: 8px;">✓ Cafés Especiais e Tradicionais</li>
-                <li style="margin-bottom: 8px;">✓ Ótimo para café da manhã</li>
-                <li>✓ Ambiente interno climatizado</li>
+                <li style="margin-bottom: 8px;">✓ Café Coado na Hora</li>
+                <li style="margin-bottom: 8px;">✓ Pão de Queijo Recheado</li>
+                <li style="margin-bottom: 8px;">✓ Bolos Caseiros Variados</li>
+                <li>✓ Sanduíches Naturais</li>
               </ul>
             </div>
             <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Preço Médio</h3>
-              <p style="font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 20px; margin-top: 0;">💲 $$ (Moderado)</p>
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Funcionamento</h3>
-              <p style="margin: 0; color: #444; font-weight: 700;">Consulte horários no local.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Vibe</h3>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Ambiente íntimo e perfeito para um bom papo.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Destaque</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">☕ Grãos selecionados da região.</p>
             </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 20px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Falar com a Gigi</button>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Café e Lanches</a>
+          <a href="cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Café & Lanches</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  
   <div id="gigiWidgetRoot"></div>
 
   <div class="lightbox" id="lightbox">
@@ -82,6 +104,9 @@
     <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

@@ -19,50 +19,90 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body data-page="a-ilha">
   <div class="progress" id="progress"></div>
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
-      <div class="container">
+    <section class="pageHead" style="padding-bottom: 60px;">
+      <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">☀️ Clima & Tempo</div>
         <h1 class="reveal" data-i18n="pg_me_h1">Melhor Época para Visitar</h1>
-        <p class="reveal" data-i18n="pg_me_p">Descubra qual estação do ano combina mais com o seu roteiro.</p>
+        <p class="reveal" data-i18n="pg_me_p" style="max-width: 700px; margin: 10px auto 0;">Descubra qual estação do ano combina mais com o seu roteiro.</p>
       </div>
     </section>
 
-    <section class="section" style="padding-top:24px">
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
       <div class="container">
-        <div class="card reveal" style="padding: 32px; display: grid; gap: 20px;">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft);">
           
-          <p style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_intro">
+          <p style="color:#444; font-size:18px; line-height:1.8; font-weight:600; margin-bottom: 40px; text-align: center;" data-i18n="me_intro">
             A Ilha da Gigóia pode ser visitada durante todo o ano. Cada estação tem seu próprio charme e oferece diferentes formas de aproveitar a ilha e a região da Lagoa da Tijuca.
           </p>
 
-          <h2 class="card__title" style="font-size:24px; margin: 10px 0 0;" data-i18n="me_h2_verao">Verão</h2>
-          <p style="color:var(--muted); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_verao">
-            Durante o verão, os dias são mais longos e o clima é ideal para aproveitar passeios de barco, caminhar pela ilha e curtir os restaurantes ao ar livre. O movimento costuma ser maior, trazendo um ambiente animado e cheio de visitantes.
-          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+            
+            <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
+              <div style="font-size: 30px; margin-bottom: 10px;">☀️</div>
+              <h2 class="card__title" style="font-size:22px; margin: 0 0 10px; color: var(--text);" data-i18n="me_h2_verao">Verão</h2>
+              <p style="color:#444; font-size:15px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_verao">
+                Durante o verão, os dias são mais longos e o clima é ideal para aproveitar passeios de barco, caminhar pela ilha e curtir os restaurantes ao ar livre. O movimento costuma ser maior, trazendo um ambiente animado e cheio de visitantes.
+              </p>
+            </div>
 
-          <h2 class="card__title" style="font-size:24px; margin: 10px 0 0;" data-i18n="me_h2_outono">Outono</h2>
-          <p style="color:var(--muted); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_outono">
-            O outono costuma ter temperaturas agradáveis e um clima mais tranquilo. É uma ótima época para quem prefere passear com calma, explorar os canais da ilha e aproveitar a paisagem com menos movimento.
-          </p>
+            <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
+              <div style="font-size: 30px; margin-bottom: 10px;">🍂</div>
+              <h2 class="card__title" style="font-size:22px; margin: 0 0 10px; color: var(--text);" data-i18n="me_h2_outono">Outono</h2>
+              <p style="color:#444; font-size:15px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_outono">
+                O outono costuma ter temperaturas agradáveis e um clima mais tranquilo. É uma ótima época para quem prefere passear com calma, explorar os canais da ilha e aproveitar a paisagem com menos movimento.
+              </p>
+            </div>
 
-          <h2 class="card__title" style="font-size:24px; margin: 10px 0 0;" data-i18n="me_h2_inverno">Inverno</h2>
-          <p style="color:var(--muted); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_inverno">
-            Mesmo nos meses de inverno, o clima na Barra da Tijuca continua ameno na maior parte dos dias. Isso permite aproveitar restaurantes, caminhadas e passeios de barco com conforto, além de admirar a natureza ao redor da lagoa.
-          </p>
+            <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
+              <div style="font-size: 30px; margin-bottom: 10px;">🍷</div>
+              <h2 class="card__title" style="font-size:22px; margin: 0 0 10px; color: var(--text);" data-i18n="me_h2_inverno">Inverno</h2>
+              <p style="color:#444; font-size:15px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_inverno">
+                Mesmo nos meses de inverno, o clima na Barra da Tijuca continua ameno na maior parte dos dias. Isso permite aproveitar restaurantes, caminhadas e passeios de barco com conforto, além de admirar a natureza ao redor da lagoa.
+              </p>
+            </div>
 
-          <h2 class="card__title" style="font-size:24px; margin: 10px 0 0;" data-i18n="me_h2_primavera">Primavera</h2>
-          <p style="color:var(--muted); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_primavera">
-            Na primavera, a região fica especialmente bonita, com vegetação mais verde e clima agradável. É um ótimo período para quem gosta de fotografar paisagens e aproveitar a atmosfera tranquila da ilha.
-          </p>
+            <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
+              <div style="font-size: 30px; margin-bottom: 10px;">🌸</div>
+              <h2 class="card__title" style="font-size:22px; margin: 0 0 10px; color: var(--text);" data-i18n="me_h2_primavera">Primavera</h2>
+              <p style="color:#444; font-size:15px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_primavera">
+                Na primavera, a região fica especialmente bonita, com vegetação mais verde e clima agradável. É um ótimo período para quem gosta de fotografar paisagens e aproveitar a atmosfera tranquila da ilha.
+              </p>
+            </div>
 
-          <h2 class="card__title" style="font-size:24px; margin: 10px 0 0;" data-i18n="me_h2_ano">Um destino para o ano inteiro</h2>
-          <p style="color:var(--muted); font-size:16px; line-height:1.6; font-weight:600; margin:0;" data-i18n="me_p_ano">
-            Independentemente da época escolhida, a Ilha da Gigóia sempre oferece uma combinação especial de natureza, gastronomia e tranquilidade. Por isso, é um destino que pode ser visitado em qualquer momento do ano, seja para um passeio rápido ou para passar o dia explorando seus restaurantes e canais.
-          </p>
+          </div>
+
+          <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <h2 class="card__title" style="font-size:24px; margin: 0 0 15px; color: var(--green-dark);" data-i18n="me_h2_ano">Um destino para o ano inteiro</h2>
+            <p style="color:#444; font-size:16px; line-height:1.8; font-weight:600; margin:0 auto 30px; max-width: 700px;" data-i18n="me_p_ano">
+              Independentemente da época escolhida, a Ilha da Gigóia sempre oferece uma combinação especial de natureza, gastronomia e tranquilidade. Por isso, é um destino que pode ser visitado em qualquer momento do ano, seja para um passeio rápido ou para passar o dia explorando seus restaurantes e canais.
+            </p>
+            
+            <button class="btn btn--green" onclick="openGigiChat()" style="padding: 15px 40px; font-size: 16px;">
+              🌤️ Perguntar a previsão do tempo para a Gigi
+            </button>
+          </div>
 
         </div>
       </div>
@@ -71,6 +111,10 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
+  
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

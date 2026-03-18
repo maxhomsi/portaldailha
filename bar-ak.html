@@ -3,88 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ak Bar - Portal Ilha da Gigóia</title>
-  
+  <title>Bar Ak - O Point do Pôr do Sol | Portal Ilha da Gigóia</title>
+
+  <meta name="description" content="Visite o Bar Ak na Ilha da Gigóia. Cerveja gelada, petiscos tradicionais e a melhor vista para o pôr do sol nos canais da Barra da Tijuca." />
+  <meta name="keywords" content="Bar Ak Ilha da Gigóia, Bar do Akira, onde beber na ilha, pôr do sol Gigóia, boteco RJ" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bar Ak - Ilha da Gigóia" />
+  <meta property="og:description" content="Cerveja trincando e os melhores petiscos à beira da lagoa. O lugar perfeito para relaxar." />
+  <meta property="og:image" content="assets/akbar/ak1.jpg" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <h1 class="reveal">Ak Bar</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Um espaço charmoso com música boa, drinks exclusivos e o clima inconfundível da Gigóia.</p>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🍺 Cerveja Gelada & Vista</div>
+        <h1 class="reveal">Bar Ak</h1>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Um clássico da Ilha da Gigóia para quem não abre mão de um bom petisco e o visual do pôr do sol.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 900px;">
         
-        <div class="reveal" style="margin-bottom: 40px;">
-          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-          <div class="gallery">
-            <img src="assets/akbar/ak1.jpg" alt="Foto Ak Bar 1" loading="lazy">
-            <img src="assets/akbar/ak2.jpg" alt="Foto Ak Bar 2" loading="lazy">
-            <img src="assets/akbar/ak3.jpg" alt="Foto Ak Bar 3" loading="lazy">
-            <img src="assets/akbar/ak4.jpg" alt="Foto Ak Bar 4" loading="lazy">
-            <img src="assets/akbar/ak5.jpg" alt="Foto Ak Bar 5" loading="lazy">
-            <img src="assets/akbar/ak6.jpg" alt="Foto Ak Bar 6" loading="lazy">
-            <img src="assets/akbar/ak7.jpg" alt="Foto Ak Bar 7" loading="lazy">
-            <img src="assets/akbar/ak8.jpg" alt="Foto Ak Bar 8" loading="lazy">
+        <div class="reveal gallery" style="margin-top: 0;">
+          <img src="assets/akbar/ak1.jpg" alt="Bar Ak 1" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+          <img src="assets/akbar/ak2.jpg" alt="Bar Ak 2" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+          <img src="assets/akbar/ak3.jpg" alt="Bar Ak 3" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+          <img src="assets/akbar/ak4.jpg" alt="Bar Ak 4" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
+          <img src="assets/akbar/ak5.jpg" alt="Bar Ak 5" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+5'">
+          <img src="assets/akbar/ak6.jpg" alt="Bar Ak 6" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+6'">
+          <img src="assets/akbar/ak7.jpg" alt="Bar Ak 7" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+7'">
+          <img src="assets/akbar/ak8.jpg" alt="Bar Ak 8" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+8'">
+        </div>
+
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre o Bar</h2>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            O <strong>Bar Ak</strong> é sinônimo de tradição. Com uma das vistas mais privilegiadas da Ilha da Gigóia, o bar oferece o cenário perfeito para relaxar enquanto observa o vai e vem dos barcos.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+            <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Especialidades</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
+                <li style="margin-bottom: 8px;">✓ Petiscos de Boteco</li>
+                <li style="margin-bottom: 8px;">✓ Cerveja sempre gelada</li>
+                <li style="margin-bottom: 8px;">✓ Drinks tropicais</li>
+                <li>✓ Vista para o Pôr do Sol</li>
+              </ul>
+            </div>
+            <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Horários</h3>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Consulte o horário de funcionamento local.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Destaque</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">🌅 Localização privilegiada para o fim de tarde.</p>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 20px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Falar com a Gigi</button>
           </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
-          
-          <p class="reveal">O <strong>Ak Bar</strong> é aquele ponto de encontro vibrante que atrai quem busca aliar boa gastronomia, drinks de primeira e muita animação. Com um ambiente super moderno e acolhedor, o bar rapidamente se tornou um dos favoritos de quem visita ou mora na Ilha da Gigóia.</p>
-
-          <p class="reveal">A proposta da casa é entregar uma experiência completa, desde o momento do happy hour assistindo ao pôr do sol, até a noite mais agitada embalada por música de qualidade.</p>
-
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #8e44ad; margin: 40px 0;">
-            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
-              🍸 A Vibe da Casa
-            </h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Mixologia Criativa:</strong> O bar capricha (e muito!) na carta de drinks, com apresentações que impressionam e sabores que surpreendem o paladar.
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Petiscos Irresistíveis:</strong> Acompanhando as bebidas, o cardápio oferece porções deliciosas e muito bem elaboradas, perfeitas para compartilhar.
-              </li>
-              <li>
-                <strong style="color: #222;">Atmosfera Envolvente:</strong> Decoração intimista, iluminação na medida certa e aquela energia de que a noite vai ser longa e cheia de boas memórias.
-              </li>
-            </ul>
-          </div>
-
-          <p class="reveal">Se você quer elevar a sua experiência noturna ou curtir um happy hour com muito estilo, o Ak Bar é uma escolha certeira para brindar os bons momentos na Gigóia.</p>
-
-          <div class="reveal" style="text-align: center; margin-top: 60px;">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
-              💬 Falar com a Gigi e Reservar
-            </a>
-          </div>
-
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  
   <div id="gigiWidgetRoot"></div>
-  
+
   <div class="lightbox" id="lightbox">
     <span class="lightbox__close" id="lightboxClose">&times;</span>
-    <img class="lightbox__content" id="lightboxImage" src="" alt="">
-    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
-    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="Imagem Ampliada">
+    <a class="lightbox__prev" id="lightboxPrev">&#10094;</a>
+    <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

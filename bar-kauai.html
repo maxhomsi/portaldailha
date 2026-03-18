@@ -3,88 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kauai - Portal Ilha da Gigóia</title>
-  
+  <title>Kauai Ilha da Gigóia - Drinks e Gastronomia Tropical</title>
+
+  <meta name="description" content="Viva a experiência tropical no Kauai Ilha da Gigóia. Drinks autorais, gastronomia refrescante e um ambiente paradisíaco de frente para a lagoa." />
+  <meta name="keywords" content="Kauai Ilha da Gigóia, bar tropical RJ, drinks na ilha, onde ir na Barra da Tijuca, restaurante pé na areia Gigóia" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kauai - O Seu Oásis Tropical na Gigóia" />
+  <meta property="og:description" content="Gastronomia, coquetelaria e a melhor energia da Ilha. Venha conhecer o Kauai." />
+  <meta property="og:image" content="assets/kauai/kauai1.jpg" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🌴 Tropical Vibes</div>
         <h1 class="reveal">Kauai</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Vibe tropical, energia boa e o refúgio perfeito após um dia de sol e esportes.</p>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Um pedaço do paraíso com deck exclusivo, coquetelaria de alto nível e pratos que celebram o frescor do Rio.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 900px;">
         
-        <div class="reveal" style="margin-bottom: 40px;">
-          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
-          <div class="gallery">
-            <img src="assets/kauai/kauai1.jpg" alt="Foto Kauai 1" loading="lazy">
-            <img src="assets/kauai/kauai2.jpg" alt="Foto Kauai 2" loading="lazy">
-            <img src="assets/kauai/kauai3.jpg" alt="Foto Kauai 3" loading="lazy">
-            <img src="assets/kauai/kauai4.jpg" alt="Foto Kauai 4" loading="lazy">
-            <img src="assets/kauai/kauai5.jpg" alt="Foto Kauai 5" loading="lazy">
-            <img src="assets/kauai/kauai6.jpg" alt="Foto Kauai 6" loading="lazy">
-            <img src="assets/kauai/kauai7.jpg" alt="Foto Kauai 7" loading="lazy">
-            <img src="assets/kauai/kauai8.jpg" alt="Foto Kauai 8" loading="lazy">
+        <div class="reveal gallery" style="margin-top: 0;">
+          <img src="assets/kauai/kauai1.jpg" alt="Kauai 1" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+          <img src="assets/kauai/kauai2.jpg" alt="Kauai 2" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+          <img src="assets/kauai/kauai3.jpg" alt="Kauai 3" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+          <img src="assets/kauai/kauai4.jpg" alt="Kauai 4" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
+          <img src="assets/kauai/kauai5.jpg" alt="Kauai 5" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+5'">
+          <img src="assets/kauai/kauai6.jpg" alt="Kauai 6" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+6'">
+          <img src="assets/kauai/kauai7.jpg" alt="Kauai 7" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+7'">
+          <img src="assets/kauai/kauai8.jpg" alt="Kauai 8" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+8'">
+        </div>
+
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Experiência Kauai</h2>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            O <strong>Kauai</strong> combina a energia descontraída da ilha com uma estrutura impecável. Conhecido pela sua decoração temática e ambiente arejado, é o lugar perfeito para quem busca um almoço prolongado ou um brinde especial ao pôr do sol.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+            <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Destaques</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
+                <li style="margin-bottom: 8px;">✓ Mixologia Premium</li>
+                <li style="margin-bottom: 8px;">✓ Cozinha Fusion</li>
+                <li style="margin-bottom: 8px;">✓ Deck Panorâmico</li>
+                <li>✓ Música e DJ Set</li>
+              </ul>
+            </div>
+            <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Informações</h3>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Consulte sobre reservas para eventos e aniversários.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Estilo</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;">🏖️ Tropical Chic.</p>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 20px;">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Reservar pelo WhatsApp</button>
           </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text); margin-top: 40px;">
-          
-          <p class="reveal">Inspirado na energia e no estilo de vida havaiano, o <strong>Kauai</strong> traz para a Ilha da Gigóia um pedacinho do paraíso focado no bem-estar, na descontração e na conexão com a natureza.</p>
-
-          <p class="reveal">Com um ambiente super descolado e jovem, o espaço é o point favorito da galera que curte esportes aquáticos, como Stand Up Paddle (SUP) e passeios de caiaque, sendo o local perfeito para recarregar as energias depois de algumas horas na água.</p>
-
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid #e74c3c; margin: 40px 0;">
-            <h3 style="color: var(--text); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
-              🌺 Vibe & Sabores
-            </h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Energia Tropical:</strong> O cardápio conta com opções leves e refrescantes, incluindo açaís caprichados, sucos naturais e sanduíches que são a cara do verão carioca.
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Drinks Coloridos:</strong> Para a hora do pôr do sol, os coquetéis bem elaborados e geladíssimos entram em cena para embalar o fim de tarde.
-              </li>
-              <li>
-                <strong style="color: #222;">Ponto de Encontro Aloha:</strong> Um espaço onde todo mundo chega de chinelo, a música é sempre boa e a resenha não tem hora para acabar.
-              </li>
-            </ul>
-          </div>
-
-          <p class="reveal">Se você está buscando um local alto-astral para se refrescar, comer bem e curtir a verdadeira vibe praiana e esportiva da Gigóia, o Kauai é o seu destino garantido.</p>
-
-          <div class="reveal" style="text-align: center; margin-top: 60px;">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
-              💬 Falar com a Gigi e Reservar
-            </a>
-          </div>
-
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  
   <div id="gigiWidgetRoot"></div>
-  
+
   <div class="lightbox" id="lightbox">
     <span class="lightbox__close" id="lightboxClose">&times;</span>
-    <img class="lightbox__content" id="lightboxImage" src="" alt="">
-    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
-    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="Imagem Ampliada">
+    <a class="lightbox__prev" id="lightboxPrev">&#10094;</a>
+    <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

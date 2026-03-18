@@ -1,92 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portal Ilha da Gigóia | Turismo, Passeios e Gastronomia</title>
-
-  <meta name="description" content="Descubra a Ilha da Gigóia no Rio de Janeiro. O portal oficial para você encontrar passeios de barco, restaurantes, pousadas e trilhas. Planeje sua viagem!" />
-  <meta name="keywords" content="Ilha da Gigóia, passeios de barco, Rio de Janeiro, turismo RJ, Barra da Tijuca, restaurantes Ilha da Gigóia, pousadas, Pantanal Carioca" />
-  <meta name="author" content="Portal Ilha da Gigóia" />
-  <meta name="robots" content="index, follow" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Portal Ilha da Gigóia | Turismo e Passeios" />
-  <meta property="og:description" content="Explore o paraíso escondido no Rio de Janeiro. Passeios de barco, gastronomia e natureza a minutos da Barra da Tijuca." />
-  <meta property="og:image" content="assets/hero.jpg" />
-  <meta property="og:url" content="https://www.ilhadagigoia.com.br/" />
-  <meta property="og:site_name" content="Portal Ilha da Gigóia" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Portal Ilha da Gigóia | Turismo e Passeios" />
-  <meta name="twitter:description" content="Explore o paraíso escondido no Rio de Janeiro. Passeios de barco, gastronomia e natureza." />
-  <meta name="twitter:image" content="assets/hero.jpg" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body data-page="home">
+  
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="hero" aria-label="Apresentação">
+    <section class="hero">
       <div class="hero__bg" id="heroBg"></div>
       <div class="hero__overlay"></div>
-      <div class="container hero__content">
+      <div class="hero__content container">
+        
         <div class="pill reveal" id="heroPill">
-          <span class="dot"></span><span>Portal Oficial de Turismo</span>
+          <span class="dot"></span>
+          <span></span>
         </div>
-        <h1 class="reveal" id="heroTitle">
-          Descubra o Paraíso Tropical<br><span class="accent">da Ilha da Gigóia</span>
-        </h1>
-        <p class="reveal" id="heroSubtitle">
-          Explore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro
-        </p>
-        <div class="hero__actions reveal">
-          <a class="btn btn--green" id="heroPrimary" href="passeios-rotas.html">
-            Planejar Minha Viagem <span aria-hidden="true">→</span>
-          </a>
-          <a class="btn btn--gray" id="heroSecondary" href="a-ilha.html">
-            Conheça a Ilha <span aria-hidden="true">↗</span>
-          </a>
+        
+        <h1 class="reveal" id="heroTitle"></h1>
+        <p class="reveal" id="heroSubtitle"></p>
+        
+        <div class="hero__actions reveal" style="transition-delay: 200ms;">
+          <a href="passeios-rotas.html" class="btn btn--green">Ver Passeios</a>
+          <a href="a-ilha.html" class="btn">Conheça a Ilha</a>
         </div>
-        <div class="hero__foot reveal">
-          <span class="check" aria-hidden="true">✓</span>
-          <span>Informações oficiais e atualizadas</span>
+
+        <div class="hero__foot reveal" style="transition-delay: 300ms;">
+          <span>✓</span>
+          <span></span> 
         </div>
+        
       </div>
     </section>
 
-    <section class="section" aria-label="O que te espera">
+    <section class="section">
       <div class="container">
-        <h2 class="section__title reveal">O Que Te Espera na Ilha</h2>
-        <p class="section__subtitle reveal">
-          Da natureza exuberante aos passeios de barco, cada momento é uma nova descoberta
-        </p>
-        <div class="tipRow reveal">
+        
+        <div class="tipRow reveal" style="margin-bottom: 60px;">
           <div class="capi">
             <div class="capi__ring">
-              <img id="capiImg" src="assets/capi.png" alt="Capi, seu guia" />
+              <img id="capiImg" src="" alt="Capi, O Guia" />
             </div>
-            <div class="capi__tag" id="capiTag">Capi, seu guia</div>
+            <div class="capi__tag" id="tipTitle"></div>
           </div>
-          <div class="tip" id="tipBox">
-            <p>
-              <span class="bulb" aria-hidden="true">💡</span>
-              <strong id="tipTitle">Dica do Capi:</strong>
-              <span id="tipText">
-                </span>
-            </p>
+          <div class="tip">
+            <p id="tipText"></p>
           </div>
         </div>
+
+        <h2 class="section__title reveal"></h2>
+        <p class="section__subtitle reveal"></p>
+        
         <div class="cards" id="homeCards"></div>
+        
       </div>
     </section>
+
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>

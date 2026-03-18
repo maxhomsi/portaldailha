@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar das Palmeiras Rio - Portal Ilha da Gigóia</title>
+  <title>Solar das Palmeiras Rio - Espaço de Eventos | Ilha da Gigóia</title>
   
+  <meta name="description" content="Realize seu evento no Solar das Palmeiras Rio na Ilha da Gigóia. Arquitetura colonial, jardins deslumbrantes e produção personalizada para casamentos e festas exclusivas." />
+  <meta name="keywords" content="Solar das Palmeiras Rio, eventos ilha da gigoia, casamentos barra da tijuca, espaço para festas rj, réveillon gigoia, eventos corporativos rio" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Solar das Palmeiras Rio - O Cenário Perfeito para seu Evento" />
+  <meta property="og:description" content="Arquitetura colonial e jardins integrados à natureza da lagoa para celebrações inesquecíveis." />
+  <meta property="og:image" content="assets/aleatoria/solar1.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/solar-palmeiras.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="eventos-experiencias">
+<body data-page="servicos">
   
   <div class="progress" id="progress"></div>
   
@@ -16,9 +27,24 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🌴 Sofisticado</div>
         <h1 class="reveal">Solar das Palmeiras Rio</h1>
         <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Arquitetura colonial, amplos jardins e produção personalizada para transformar sua festa em uma memória marcante.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -40,14 +66,13 @@
           
           <h2 style="color: var(--green-dark); margin-bottom: 20px;">Sobre o Espaço</h2>
           <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
-            O <strong>Solar das Palmeiras Rio</strong> é um dos espaços de eventos mais sofisticados da Ilha da Gigóia. O local mistura arquitetura de inspiração colonial com jardins e áreas abertas cercadas pela natureza da lagoa. Ali, cada evento é pensado como uma experiência completa, em um ambiente cuidadosamente decorado e integrado à paisagem da ilha.
+            O <strong>Solar das Palmeiras Rio</strong> é um dos espaços de eventos mais sofisticados da Ilha da Gigóia. O local mistura arquitetura de inspiração colonial com jardins e áreas abertas cercadas pela natureza da lagoa. Ali, cada evento é pensado como uma experiência completa, em um ambiente cuidadosamente decorado.
           </p>
           <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
-            O espaço é conhecido por sua gastronomia elaborada e produção de eventos personalizados, com cenografia, iluminação e menus criados para cada celebração. Em ocasiões especiais, como festas de Réveillon, o local se transforma em um cenário exclusivo para celebrar com vista para os fogos da Barra da Tijuca. É o tipo de lugar que transforma uma festa em uma memória inesquecível.
+            O espaço é conhecido por sua gastronomia elaborada e produção de eventos personalizados, com cenografia e menus exclusivos. Em ocasiões como festas de Réveillon, o local se torna um dos pontos mais desejados para celebrar com vista privilegiada para os fogos da Barra da Tijuca.
           </p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
-            
             <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
               <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">Destaques</h3>
               <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
@@ -63,21 +88,21 @@
               <p style="font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 20px; margin-top: 0;">🗓️ Sob Consulta</p>
               
               <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Ideal Para</h3>
-              <p style="margin: 0; color: #444; font-weight: 700;">Casamentos, festas de 15 anos, grandes eventos corporativos, aniversários e festas de Réveillon.</p>
+              <p style="margin: 0; color: #444; font-weight: 700;">Casamentos, festas de 15 anos, grandes eventos corporativos e celebrações exclusivas.</p>
             </div>
           </div>
 
           <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 15px 40px; height: auto;">
+            <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;">
               💬 Solicitar Orçamento e Datas
-            </a>
+            </button>
             <p style="margin-top: 15px; font-size: 14px; color: var(--muted); font-weight: 700;">Fale direto com a equipe de produção para desenhar o seu evento exclusivo.</p>
           </div>
 
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="eventos-experiencias.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Eventos e Experiências</a>
+          <a href="espacos-eventos.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Espaços e Eventos</a>
         </div>
 
       </div>
@@ -95,6 +120,9 @@
     <a class="lightbox__next" id="lightboxNext">&#10095;</a>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

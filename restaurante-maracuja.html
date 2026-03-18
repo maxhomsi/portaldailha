@@ -3,69 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maracujá da Ilha - Portal Ilha da Gigóia</title>
+  <title>Maracujá da Ilha - Gastronomia na Ilha Primeira | Portal Oficial</title>
   
+  <meta name="description" content="Conheça o restaurante Maracujá da Ilha na Ilha Primeira. Famoso pelo camarão empanado, ceviche com chips de aipim e um visual incrível da lagoa." />
+  <meta name="keywords" content="Maracujá da Ilha, restaurante ilha primeira, onde comer ilha da gigoia, frutos do mar barra da tijuca, camarão empanado gigoia" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maracujá da Ilha - Gastronomia e Natureza" />
+  <meta property="og:description" content="O ponto de encontro perfeito na Ilha Primeira para almoçar e tomar um drink à beira da lagoa." />
+  <meta property="og:image" content="assets/maracuja/mara1.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/restaurante-maracuja.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
         <h1 class="reveal">Maracujá da Ilha</h1>
         <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Gastronomia, natureza e o clima perfeito na Ilha Primeira.</p>
       </div>
     </section>
 
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 900px;">
         
-        <div class="reveal" style="margin-bottom: 40px;">
-          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px;">📸 Conheça o Espaço</h3>
+        <div class="reveal" style="margin-bottom: 40px; margin-top: 0;">
+          <h3 style="color: var(--green-dark); margin-bottom: 20px; font-size: 24px; text-align: center;">📸 Conheça o Espaço</h3>
           <div class="gallery">
-            <img src="assets/maracuja/mara1.jpg" alt="Foto Maracujá 1" loading="lazy">
-            <img src="assets/maracuja/mara2.jpg" alt="Foto Maracujá 2" loading="lazy">
-            <img src="assets/maracuja/mara3.jpg" alt="Foto Maracujá 3" loading="lazy">
-            <img src="assets/maracuja/mara4.jpg" alt="Foto Maracujá 4" loading="lazy">
-            <img src="assets/maracuja/mara5.jpg" alt="Foto Maracujá 5" loading="lazy">
-            <img src="assets/maracuja/mara6.jpg" alt="Foto Maracujá 6" loading="lazy">
-            <img src="assets/maracuja/mara7.jpg" alt="Foto Maracujá 7" loading="lazy">
-            <img src="assets/maracuja/mara8.jpg" alt="Foto Maracujá 8" loading="lazy">
+            <img src="assets/maracuja/mara1.jpg" alt="Foto Maracujá 1" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+1'">
+            <img src="assets/maracuja/mara2.jpg" alt="Foto Maracujá 2" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+2'">
+            <img src="assets/maracuja/mara3.jpg" alt="Foto Maracujá 3" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+3'">
+            <img src="assets/maracuja/mara4.jpg" alt="Foto Maracujá 4" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+4'">
+            <img src="assets/maracuja/mara5.jpg" alt="Foto Maracujá 5" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+5'">
+            <img src="assets/maracuja/mara6.jpg" alt="Foto Maracujá 6" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+6'">
+            <img src="assets/maracuja/mara7.jpg" alt="Foto Maracujá 7" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+7'">
+            <img src="assets/maracuja/mara8.jpg" alt="Foto Maracujá 8" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+8'">
           </div>
         </div>
 
-        <div style="font-size: 18px; line-height: 1.8; color: var(--text);">
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
           
-          <p class="reveal">O <strong>Maracujá da Ilha</strong> é um dos restaurantes mais conhecidos do complexo lagunar da Ilha da Gigóia, porém ele fica localizado na <em>Ilha Primeira</em>. É um ponto de parada frequente para quem visita a região. Localizado às margens da lagoa, o restaurante oferece um ambiente descontraído e agradável, perfeito para quem quer aproveitar a gastronomia da ilha cercado pela natureza.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            O <strong>Maracujá da Ilha</strong> é um dos restaurantes mais conhecidos do complexo lagunar, localizado na charmosa <em>Ilha Primeira</em>. Localizado às margens da lagoa, o restaurante oferece um ambiente descontraído e agradável, perfeito para quem quer aproveitar a gastronomia cercado pela natureza.
+          </p>
 
-          <p class="reveal">O cardápio combina <strong>frutos do mar, petiscos e pratos variados</strong>, muito procurados por quem chega após um passeio de barco ou decide passar o dia explorando a ilha.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
+            O cardápio combina <strong>frutos do mar, petiscos e pratos variados</strong>, sendo uma parada estratégica para quem chega de barco.
+          </p>
 
-          <div class="reveal" style="background: rgba(71, 176, 90, 0.08); padding: 35px; border-radius: 20px; border-left: 6px solid var(--green); margin: 40px 0;">
+          <div style="background: rgba(71, 176, 90, 0.05); padding: 35px; border-radius: 20px; border-left: 6px solid var(--green-dark); margin: 40px 0;">
             <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 20px; font-size: 22px; display: flex; align-items: center; gap: 10px;">
               🍤 Destaques da Casa
             </h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 17px;">
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #444; line-height: 1.6;">
               <li style="margin-bottom: 16px;">
-                <strong style="color: #222;">Camarão Empanado:</strong> Crocante por fora e suculento por dentro. É um dos grandes sucessos do restaurante e costuma ser uma das escolhas mais pedidas pelos clientes.
+                <strong style="color: #222;">Camarão Empanado:</strong> Crocante por fora e suculento por dentro. É um dos grandes sucessos da casa e favorito entre os clientes.
               </li>
               <li>
-                <strong style="color: #222;">Ceviche Tradicional:</strong> Servido com deliciosos chips de aipim, traz uma combinação refrescante de sabores e se tornou um dos pratos mais característicos do local.
+                <strong style="color: #222;">Ceviche Tradicional:</strong> Servido com chips de aipim crocantes, traz uma combinação refrescante de sabores.
               </li>
             </ul>
           </div>
 
-          <p class="reveal">Além da gastronomia, o ambiente descontraído e a vista para a lagoa tornam o Maracujá da Ilha um ótimo lugar para <strong>almoçar, petiscar, tomar um drink</strong> e aproveitar o clima incrível da ilha.</p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+            Além da gastronomia, o ambiente aberto e a vista para a lagoa tornam o Maracujá da Ilha o lugar ideal para <strong>almoçar, petiscar e tomar um drink</strong> aproveitando a brisa do Rio.
+          </p>
 
-          <div class="reveal" style="text-align: center; margin-top: 60px;">
-            <a class="btn btn--green" href="#" onclick="openGigiChat(); return false;" style="font-size: 18px; padding: 18px 36px;">
+          <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;">
               💬 Reservar mesa com a Gigi
-            </a>
+            </button>
           </div>
 
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
         </div>
       </div>
     </section>
@@ -82,6 +119,9 @@
     <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

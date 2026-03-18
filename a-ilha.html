@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>A Ilha | História e Cultura | Portal Ilha da Gigóia</title>
+  <title>A Ilha: Como Chegar, História e Cultura | Ilha da Gigóia</title>
 
-  <meta name="description" content="Conheça a história, a cultura e como chegar na Ilha da Gigóia. Um refúgio de natureza e paz no coração da Barra da Tijuca, Rio de Janeiro." />
-  <meta name="keywords" content="como chegar Ilha da Gigóia, história Ilha da Gigóia, balsa Ilha da Gigóia, turismo RJ" />
+  <meta name="description" content="Tudo o que você precisa saber sobre a Ilha da Gigóia: como chegar, história, melhores épocas para visitar e boas práticas para aproveitar o passeio." />
+  <meta name="keywords" content="como chegar Ilha da Gigóia, história Ilha da Gigóia, turismo RJ, Barra da Tijuca, o que fazer na Ilha da Gigóia" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="A Ilha | Portal Ilha da Gigóia" />
-  <meta property="og:description" content="Saiba como chegar e encante-se com a história da Ilha da Gigóia, um verdadeiro refúgio tropical no Rio de Janeiro." />
-  <meta property="og:image" content="assets/hero.jpg" />
+  <meta property="og:title" content="A Ilha: Como Chegar, História e Cultura | Ilha da Gigóia" />
+  <meta property="og:description" content="Conheça a história, a cultura e tudo o que você precisa saber antes de desembarcar no nosso paraíso carioca." />
+  <meta property="og:image" content="assets/historia.jpg" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/a-ilha.html" />
 
   <link rel="stylesheet" href="styles.css" />
@@ -21,24 +21,52 @@
 
 <body data-page="a-ilha">
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
     <section class="pageHead">
       <div class="container">
-        <h1 class="reveal" data-i18n="pg_ilha_h1">A Ilha</h1>
-        <p class="reveal" data-i18n="pg_ilha_p">Um refúgio tropical com natureza exuberante, clima tranquilo e experiências únicas pertinho do Rio.</p>
+        <h1 class="reveal">A Ilha</h1>
+        <p class="reveal">Conheça a história, a cultura e tudo o que você precisa saber antes de desembarcar no nosso paraíso carioca.</p>
       </div>
     </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" style="padding-top:24px">
       <div class="container">
-        <div class="cards" id="pageCards"></div>
+        <div class="cards--4" id="pageCards"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+
+  <script>
+    if (typeof initCapiTip === 'function') {
+      initCapiTip();
+    }
+  </script>
 </body>
 </html>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Monte seu Roteiro | Planeje sua Viagem | Ilha da Gigóia</title>
 
-  <meta name="description" content="Monte seu roteiro personalizado para a Ilha da Gigóia. Escolha seus passeios e receba dicas e preços direto no seu WhatsApp." />
-  <meta name="keywords" content="roteiro Ilha da Gigóia, planejar viagem, dicas turismo RJ, guia Barra da Tijuca" />
+  <meta name="description" content="Monte seu roteiro personalizado para a Ilha da Gigóia. Escolha seus passeios e receba dicas e preços direto no seu WhatsApp com a ajuda da Gigi." />
+  <meta name="keywords" content="roteiro Ilha da Gigóia, planejar viagem, dicas turismo RJ, guia Barra da Tijuca, passeios personalizados" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
@@ -24,25 +24,47 @@
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
-      <div class="container">
+    <section class="pageHead" style="padding-bottom: 60px;">
+      <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">📝 Roteiro Personalizado</div>
         <h1 class="reveal" data-i18n="pg_plan_h1">Monte seu roteiro</h1>
-        <p class="reveal" data-i18n="pg_plan_p">Selecione as opções que você quer fazer. Ao enviar, pediremos seu número para te mandar o roteiro completo com preços e opções.</p>
+        <p class="reveal" data-i18n="pg_plan_p" style="max-width: 700px; margin: 10px auto 0;">Selecione as opções que você quer fazer. Ao enviar, pediremos seu número para te mandar o roteiro completo com preços e opções.</p>
       </div>
     </section>
-    <section class="section" style="padding-top:24px">
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
       <div class="container">
-        <div class="card reveal" style="padding:22px">
-          <h2 class="section__title" style="text-align:left;font-size:28px;margin:0 0 12px" data-i18n="pg_plan_h2">Escolha suas opções</h2>
-          <p class="section__subtitle" style="text-align:left;margin:0 0 18px" data-i18n="pg_plan_p2">Marque o que você quer fazer e clique em <strong>Enviar roteiro</strong>.</p>
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+      <div class="container" style="max-width: 800px;">
+        <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft);">
+          
+          <h2 class="section__title" style="text-align:center; font-size:28px; margin:0 0 15px; color: var(--green-dark);" data-i18n="pg_plan_h2">Escolha suas opções</h2>
+          <p class="section__subtitle" style="text-align:center; margin:0 0 30px; font-weight: 600; color: #444;" data-i18n="pg_plan_p2">Marque o que você quer fazer e clique em <strong>Enviar roteiro</strong> para a Gigi organizar tudo.</p>
+          
           <form id="plannerForm" class="planner">
-            <div class="planner__grid" id="plannerOptions"></div>
-            <div class="planner__actions">
-              <button class="btn btn--green" type="submit" data-i18n="btn_enviar">Enviar roteiro</button>
-              <button class="btn" type="button" id="clearPlan" data-i18n="btn_limpar">Limpar</button>
+            <div class="planner__grid" id="plannerOptions" style="display: grid; gap: 15px; margin-bottom: 30px;"></div>
+            
+            <div class="planner__actions" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+              <button class="btn btn--green" type="submit" data-i18n="btn_enviar" style="padding: 15px 40px; font-size: 16px;">Enviar roteiro</button>
+              <button class="btn" type="button" id="clearPlan" data-i18n="btn_limpar" style="padding: 15px 40px; font-size: 16px; background: #eee; color: #333;">Limpar</button>
             </div>
           </form>
-          <div id="planFeedback" style="margin-top:16px"></div>
+
+          <div id="planFeedback" style="margin-top:20px; text-align: center; font-weight: 700; color: var(--green-dark);"></div>
         </div>
       </div>
     </section>
@@ -50,6 +72,10 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
+  
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

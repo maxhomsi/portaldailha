@@ -1,95 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafés e Lanches - Portal Ilha da Gigóia</title>
-  
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Café e Lanches: Onde fazer um lanche na Ilha da Gigóia | Portal Oficial</title>
+
+  <meta name="description" content="Encontre as melhores cafeterias, hamburguerias e lanchonetes da Ilha da Gigóia. Do café da manhã reforçado ao lanche artesanal de fim de tarde." />
+  <meta name="keywords" content="café na Ilha da Gigóia, lanches gigoia, hamburgueria artesanal Barra da Tijuca, onde tomar café no Rio, lanchonetes Gigóia" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Café e Lanches: Sabores da Ilha da Gigóia" />
+  <meta property="og:description" content="Pausas deliciosas para qualquer hora do dia. Conheça nossos cafés e hamburguerias." />
+  <meta property="og:image" content="assets/card-lanches.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/cafe-lanches.html" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="cafe-lanches">
-  
+
+<body data-page="comer-beber">
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead" style="padding-bottom: 90px;">
-      <div class="container" style="text-align: center;">
-        <h1 class="reveal">Cafés e Lanches</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Comece o dia com tranquilidade ou faça uma pausa deliciosa para recarregar as energias.</p>
+    <section class="pageHead">
+      <div class="container">
+        <h1 class="reveal">Café & Lanches</h1>
+        <p class="reveal">Para um café da manhã tranquilo, um lanche rápido entre passeios ou aquele hambúrguer artesanal caprichado no final do dia.</p>
       </div>
     </section>
 
-    <section class="section" style="padding-top: 30px;">
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
       <div class="container">
-        
-        <div style="text-align: center; margin-bottom: 50px;">
-          <h2 class="reveal" style="font-size: 32px; color: var(--text);">Onde tomar um bom café</h2>
-          <p class="reveal" style="font-size: 18px; color: var(--muted);">Opções charmosas com bolos caseiros, lanches rápidos e muito sabor.</p>
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="cards--4">
-          
-          <article class="card reveal" style="display: flex; flex-direction: column;">
-            <div class="card__img" style="height: 200px;">
-              <img src="assets/aleatoria/poesia1.jpg" alt="Café da Poesia" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Cafe+da+Poesia'" />
-            </div>
-            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
-              <h3 class="card__title" style="font-size: 20px;">Café da Poesia</h3>
-              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Mistura cafeteria com arte e poesia em um ambiente super acolhedor. O lugar perfeito para começar o dia com um café especial e relaxar na ilha.</p>
-              <div style="margin-top: 15px; padding-top: 15px;">
-                <a class="btn btn--green" href="cafe-poesia.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 100ms;">
-            <div class="card__img" style="height: 200px;">
-              <img src="assets/aleatoria/cantinho1.webp" alt="Cantinho do Café Gigóia" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Cantinho+do+Cafe'" />
-            </div>
-            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
-              <h3 class="card__title" style="font-size: 20px;">Cantinho do Café</h3>
-              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Cafeteria charmosa conhecida pelo cardápio variado. Ideal para um café da manhã relaxante ou um lanche da tarde depois de explorar a região.</p>
-              <div style="margin-top: 15px; padding-top: 15px;">
-                <a class="btn btn--green" href="cantinho-cafe.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 200ms;">
-            <div class="card__img" style="height: 200px;">
-              <img src="assets/lanches/parada1.webp" alt="Parada Burger" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Parada+Burger'" />
-            </div>
-            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
-              <h3 class="card__title" style="font-size: 20px;">Parada Burger</h3>
-              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Ponto de parada obrigatório com deliciosos hambúrgueres preparados na hora. Ambiente descontraído para um lanche reforçado no início da noite.</p>
-              <div style="margin-top: 15px; padding-top: 15px;">
-                <a class="btn btn--green" href="parada-burger.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 300ms;">
-            <div class="card__img" style="height: 200px;">
-              <img src="assets/lanches/gourmet1.webp" alt="Ilha Gourmet" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Ilha+Gourmet'" />
-            </div>
-            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
-              <h3 class="card__title" style="font-size: 20px;">Ilha Gourmet</h3>
-              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Uma opção versátil e sem complicação. Perfeito para fazer uma pausa entre um passeio de barco e uma caminhada pelas ruelas da ilha.</p>
-              <div style="margin-top: 15px; padding-top: 15px;">
-                <a class="btn btn--green" href="ilha-gourmet.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="cards--4" id="pageCards"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+
+  <script>
+    if (typeof initCapiTip === 'function') {
+      initCapiTip();
+    }
+  </script>
 </body>
 </html>

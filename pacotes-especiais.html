@@ -3,26 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pacotes Especiais - Portal Ilha da Gigóia</title>
-  
+  <title>Pacotes Especiais | Portal Oficial da Ilha da Gigóia</title>
+
+  <meta name="description" content="Descubra nossos pacotes especiais na Ilha da Gigóia. Roteiros românticos, em família ou com amigos unindo passeios de barco e alta gastronomia." />
+  <meta name="keywords" content="pacotes ilha da gigoia, passeios com almoço rj, roteiro romântico barra da tijuca, pacote familia gigoia, turismo rj" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pacotes Especiais - O Seu Dia Perfeito na Gigóia" />
+  <meta property="og:description" content="As melhores combinações de passeio de barco e gastronomia. Facilidade e economia para o seu roteiro." />
+  <meta property="og:image" content="assets/experiencia.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/pacotes-especiais.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="pacotes-especiais">
+<body data-page="servicos">
   
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🎁 Experiências Completas</div>
         <h1 class="reveal">Pacotes Especiais</h1>
         <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">As melhores combinações de passeio e gastronomia para o seu dia perfeito.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330; text-align: center;">
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 40px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330; text-align: center; margin-bottom: 40px;">
         <div class="reveal">
           <p>Quer facilidade e economia? Nós criamos <strong>4 pacotes exclusivos</strong> que unem os melhores passeios de barco com paradas estratégicas nos restaurantes mais charmosos da ilha.</p>
         </div>
@@ -31,51 +59,59 @@
       <div class="container">
         <div class="cards--4">
           
-          <article class="card reveal">
-            <div class="card__img">
+          <article class="card reveal" style="display: flex; flex-direction: column;">
+            <div class="card__img" style="height: 200px;">
               <div class="card__badge" style="background:#ff4d4d; color:#fff;">❤️ Casais</div>
-              <img src="assets/experiencia.jpg" alt="Pacote Romântico" />
+              <img src="assets/experiencia.jpg" alt="Pacote Romântico" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Romantico'" />
             </div>
-            <div class="card__body">
-              <h3 class="card__title">Pacote Romântico</h3>
-              <p class="card__desc">Passeio de barco exclusivo ao pôr do sol + Jantar completo a dois à beira da lagoa.</p>
-              <a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar valores <span>→</span></a>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Pacote Romântico</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Passeio de barco exclusivo ao pôr do sol + Jantar completo a dois à beira da lagoa.</p>
+              <div style="margin-top: 15px; padding-top: 15px;">
+                <a class="card__link" href="#" onclick="openGigiChat(); return false;" style="font-weight: 700; color: var(--green-dark);">Consultar valores <span>→</span></a>
+              </div>
             </div>
           </article>
 
-          <article class="card reveal">
-            <div class="card__img">
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 100ms;">
+            <div class="card__img" style="height: 200px;">
               <div class="card__badge" style="background:#47b05a; color:#fff;">👨‍👩‍👧‍👦 Família</div>
-              <img src="assets/pantanalcarioca.jpg" alt="Pacote Família" />
+              <img src="assets/pantanalcarioca.jpg" alt="Pacote Família" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Familia'" />
             </div>
-            <div class="card__body">
-              <h3 class="card__title">Pacote Família</h3>
-              <p class="card__desc">Passeio Pantanal Carioca (foco na natureza e animais) + Almoço farto com menu kids.</p>
-              <a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar valores <span>→</span></a>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Pacote Família</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Passeio Pantanal Carioca (foco na natureza e animais) + Almoço farto com menu kids.</p>
+              <div style="margin-top: 15px; padding-top: 15px;">
+                <a class="card__link" href="#" onclick="openGigiChat(); return false;" style="font-weight: 700; color: var(--green-dark);">Consultar valores <span>→</span></a>
+              </div>
             </div>
           </article>
 
-          <article class="card reveal">
-            <div class="card__img">
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 200ms;">
+            <div class="card__img" style="height: 200px;">
               <div class="card__badge" style="background:#f2c200; color:#000;">🍹 Amigos</div>
-              <img src="assets/bar&DRINK.jpg" alt="Pacote Sunset" />
+              <img src="assets/bar&DRINK.jpg" alt="Pacote Sunset" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Sunset'" />
             </div>
-            <div class="card__body">
-              <h3 class="card__title">Pacote Sunset</h3>
-              <p class="card__desc">Tour pelas ilhas com parada para mergulho + Reserva VIP em bar com primeira rodada de drinks inclusa.</p>
-              <a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar valores <span>→</span></a>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Pacote Sunset</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Tour pelas ilhas com parada para mergulho + Reserva VIP em bar com primeira rodada de drinks inclusa.</p>
+              <div style="margin-top: 15px; padding-top: 15px;">
+                <a class="card__link" href="#" onclick="openGigiChat(); return false;" style="font-weight: 700; color: var(--green-dark);">Consultar valores <span>→</span></a>
+              </div>
             </div>
           </article>
 
-          <article class="card reveal">
-            <div class="card__img">
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 300ms;">
+            <div class="card__img" style="height: 200px;">
               <div class="card__badge" style="background:#1f5f88; color:#fff;">⭐ VIP</div>
-              <img src="assets/ilhastijucas.jpg" alt="Pacote Ilhas Tijucas" />
+              <img src="assets/ilhastijucas.jpg" alt="Pacote Ilhas Tijucas" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Ilhas+Tijucas'" />
             </div>
-            <div class="card__body">
-              <h3 class="card__title">Pacote Ilhas Tijucas</h3>
-              <p class="card__desc">Expedição premium às Ilhas Tijucas (4h) + Almoço VIP de frutos do mar no retorno à ilha.</p>
-              <a class="card__link" href="#" onclick="openGigiChat(); return false;">Consultar valores <span>→</span></a>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Pacote Ilhas Tijucas</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Expedição premium às Ilhas Tijucas (4h) + Almoço VIP de frutos do mar no retorno à ilha.</p>
+              <div style="margin-top: 15px; padding-top: 15px;">
+                <a class="card__link" href="#" onclick="openGigiChat(); return false;" style="font-weight: 700; color: var(--green-dark);">Consultar valores <span>→</span></a>
+              </div>
             </div>
           </article>
 
@@ -88,6 +124,9 @@
   
   <div id="gigiWidgetRoot"></div>
   
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

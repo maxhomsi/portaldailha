@@ -3,41 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiência Completa na Ilha - Portal Ilha da Gigóia</title>
+  <title>Experiência Completa | Ilha da Gigóia - O Roteiro Perfeito</title>
+
+  <meta name="description" content="Viva um dia inesquecível na Ilha da Gigóia. Roteiro completo com passeio de barco pelos canais, almoço nos melhores restaurantes e pôr do sol exclusivo." />
+  <meta name="keywords" content="roteiro ilha da gigoia, o que fazer na gigoia, passeio de barco barra da tijuca, dia inteiro na ilha rj, turismo gigoia" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Experiência Completa: Um Dia no Paraíso da Gigóia" />
+  <meta property="og:description" content="Tudo o que a Ilha tem de melhor em um único roteiro. Reserve sua experiência completa." />
+  <meta property="og:image" content="assets/card-experiencia-completa.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/experiencia-completa.html" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="servicos">
+  
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <h1 class="reveal">Experiência Completa na Ilha</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">O roteiro perfeito para viver a Gigóia em um dia.</p>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">✨ O Melhor da Ilha</div>
+        <h1 class="reveal">Experiência Completa</h1>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Não escolha apenas um lugar, viva a Ilha inteira. Criamos o roteiro ideal para você aproveitar cada segundo deste refúgio.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330;">
-        <div class="reveal">
-          <p>Além da hospedagem, também é possível viver <strong>uma experiência completa de um dia na Ilha da Gigóia.</strong></p>
-          <p>O visitante pode começar o passeio chegando de barco e sendo recepcionado na ilha, seguindo para um <strong>café da manhã em um dos estabelecimentos locais.</strong></p>
-          <p>Durante o dia, é possível fazer um <strong>passeio de barco pelos canais ou pela lagoa</strong>, conhecer a natureza da região e depois aproveitar o <strong>almoço em um dos restaurantes da ilha.</strong></p>
-          <p>À tarde, muitos visitantes gostam de caminhar pela ilha e visitar a <strong>feirinha local</strong>, antes de relaxar com um <strong>drink ao pôr do sol</strong> à beira da água.</p>
-          <p>Para encerrar o dia, alguns bares e restaurantes oferecem <strong>música ao vivo</strong>, criando o clima perfeito para aproveitar a noite antes de retornar.</p>
-          <p>Essa experiência reúne natureza, gastronomia, cultura e lazer em um único dia inesquecível com tudo de melhor que tem na ilha.</p>
-          
-          <div style="text-align: center; margin-top: 40px;">
-            <a href="#" onclick="openGigiChat(); return false;" class="btn btn--green">Agendar Experiência com a Gigi</a>
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 40px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container" style="max-width: 1000px;">
+        
+        <div class="cards--3">
+          <article class="card reveal">
+            <div class="card__body" style="text-align: center;">
+              <div style="font-size: 40px; margin-bottom: 15px;">🛶</div>
+              <h3 class="card__title">1. A Chegada</h3>
+              <p class="card__desc">Comece com uma travessia panorâmica pelos canais da "Veneza Carioca", observando a fauna local e o clima único da Ilha.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay: 100ms;">
+            <div class="card__body" style="text-align: center;">
+              <div style="font-size: 40px; margin-bottom: 15px;">🍽️</div>
+              <h3 class="card__title">2. Gastronomia</h3>
+              <p class="card__desc">Um almoço inesquecível em um dos nossos restaurantes selecionados, com o melhor dos frutos do mar e tempero caiçara.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="transition-delay: 200ms;">
+            <div class="card__body" style="text-align: center;">
+              <div style="font-size: 40px; margin-bottom: 15px;">🌅</div>
+              <h3 class="card__title">3. Pôr do Sol</h3>
+              <p class="card__desc">Feche o dia com um drink artesanal em um deck exclusivo, assistindo ao sol se pôr atrás da Pedra da Gávea.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="reveal" style="background: var(--green-dark); color: #fff; padding: 50px; border-radius: 32px; text-align: center; margin-top: 60px; box-shadow: var(--shadow-strong);">
+          <h2 style="color: #fff; margin-bottom: 20px;">Quer esse roteiro planejado para você?</h2>
+          <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">A Gigi organiza sua reserva, indica os melhores horários e garante que sua experiência seja impecável.</p>
+          <button class="btn btn--yellow" onclick="openGigiChat()" style="padding: 15px 40px; font-size: 18px; color: var(--text);">Reservar Experiência com a Gigi</button>
+        </div>
+
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
+  
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

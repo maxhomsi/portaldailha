@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pousadas e Hospedagem | Onde Ficar | Ilha da Gigóia</title>
+  <title>Onde Ficar: Hospedagem | Ilha da Gigóia</title>
 
-  <meta name="description" content="Encontre a pousada perfeita na Ilha da Gigóia. Opções aconchegantes para viagens românticas ou em família no Rio de Janeiro." />
-  <meta name="keywords" content="pousadas Ilha da Gigóia, onde ficar Ilha da Gigóia, hospedagem Barra da Tijuca, hotel" />
+  <meta name="description" content="Encontre as melhores pousadas, hotéis, Airbnb e casas de temporada na Ilha da Gigóia. Acorde com a vista para a lagoa e o som da natureza no Rio de Janeiro." />
+  <meta name="keywords" content="pousadas Ilha da Gigóia, hotel, airbnb Ilha da Gigóia, aluguel de temporada, onde ficar, hospedagem RJ" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pousadas e Hospedagem | Ilha da Gigóia" />
-  <meta property="og:description" content="Acorde com a vista da lagoa. Encontre a pousada ideal para o seu descanso na Ilha da Gigóia." />
+  <meta property="og:title" content="Onde Ficar: Hospedagem | Ilha da Gigóia" />
+  <meta property="og:description" content="De charmosas pousadas a casas completas. Encontre o lugar perfeito para relaxar e aproveitar a ilha." />
   <meta property="og:image" content="assets/card-hospedagem.jpg" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/hospedagem.html" />
 
@@ -21,24 +21,52 @@
 
 <body data-page="hospedagem">
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
     <section class="pageHead">
       <div class="container">
-        <h1 class="reveal" data-i18n="pg_hospeda_h1">Hospedagem</h1>
-        <p class="reveal" data-i18n="pg_hospeda_p">Encontre o lugar perfeito para descansar: opções aconchegantes, boas localizações e dicas de custo-benefício.</p>
+        <h1 class="reveal">Hospedagem</h1>
+        <p class="reveal">Encontre o lugar perfeito para relaxar e aproveitar a ilha. De charmosas pousadas a casas inteiras de temporada.</p>
       </div>
     </section>
+
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" style="padding-top:24px">
       <div class="container">
-        <div class="cards" id="pageCards"></div>
+        <div class="cards--4" id="pageCards"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
+
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+
+  <script>
+    if (typeof initCapiTip === 'function') {
+      initCapiTip();
+    }
+  </script>
 </body>
 </html>
