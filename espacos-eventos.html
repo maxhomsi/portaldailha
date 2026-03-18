@@ -3,126 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espaços e Eventos na Ilha da Gigóia | Portal Oficial</title>
-
-  <meta name="description" content="Encontre o local perfeito para seu evento na Ilha da Gigóia. Casamentos, aniversários, eventos corporativos e festas com vista para a lagoa." />
-  <meta name="keywords" content="espaço para eventos Ilha da Gigóia, casamentos gigoia, aluguel de espaço barra da tijuca, festas na ilha, eventos corporativos rj" />
+  <title>Espaços para Eventos - Portal Ilha da Gigóia</title>
+  
+  <meta name="description" content="A Ilha da Gigóia é o destino especial para casamentos, aniversários e eventos corporativos. Celebre cercado pela natureza." />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Espaços e Eventos | Ilha da Gigóia" />
-  <meta property="og:description" content="Celebre momentos inesquecíveis em cenários paradisíacos. Conheça os melhores espaços da Ilha." />
-  <meta property="og:image" content="assets/card-eventos.jpg" />
-  <meta property="og:url" content="https://www.ilhadagigoia.com.br/espacos-eventos.html" />
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="servicos">
-  
   <div class="progress" id="progress"></div>
   
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead" style="padding-bottom: 60px;">
+    <section class="pageHead">
       <div class="container" style="text-align: center;">
-        <h1 class="reveal">Espaços & Eventos</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">De casamentos românticos a festas inesquecíveis. Encontre o cenário ideal para a sua celebração na Gigóia.</p>
+        <h1 class="reveal">Espaços para Eventos</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Celebre momentos inesquecíveis cercado pela natureza.</p>
       </div>
     </section>
 
-    <section class="section" style="padding-top:10px; padding-bottom: 0;">
-      <div class="container">
-        <div class="tipRow reveal" style="margin-bottom: 40px;">
-          <div class="capi">
-            <div class="capi__ring">
-              <img id="capiImg" src="assets/capi.png" alt="Capi" />
-            </div>
-            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
-          </div>
-          <div class="tip">
-            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+    <section class="section">
+      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330;">
+        <div class="reveal">
+          <p>A Ilha da Gigóia também é um destino especial para a realização de <strong>eventos e celebrações</strong>.</p>
+          <p>Diversos espaços podem ser alugados para <strong>casamentos, aniversários, confraternizações, eventos corporativos e encontros entre amigos</strong>, sempre com o charme da lagoa e da natureza ao redor.</p>
+          <p>Realizar um evento na ilha oferece um cenário diferente e memorável, combinando gastronomia, paisagem e uma atmosfera única dentro da Barra da Tijuca.</p>
+          
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="#" onclick="openGigiChat(); return false;" class="btn btn--green">Planeje seu evento com a Gigi</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 30px;">
-      <div class="container">
-        <div class="cards--4" id="pageCards"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  <div id="gigiWidgetRoot"></div>
   
-  <div class="side-badge" onclick="openEventosModal()">
-    Anuncie seu<br>Espaço<br>aqui!
-  </div>
-
-  <div class="modal-overlay" id="eventosModal" onclick="closeEventosModal(event)">
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeEventosModal()">×</button>
-      <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;">Anuncie seu Espaço</h2>
-      <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">Seja visto por quem busca o cenário perfeito para grandes momentos na Gigóia.</p>
-      
-      <form id="eventosCadastroForm" class="gigiForm">
-        <div>
-          <label>Nome do Espaço</label>
-          <input type="text" placeholder="Ex: Deck dos Sonhos" required />
-        </div>
-        <div>
-          <label>Seu Nome</label>
-          <input type="text" placeholder="Nome completo" required />
-        </div>
-        <div>
-          <label>WhatsApp</label>
-          <input type="tel" placeholder="(21) 99999-9999" required />
-        </div>
-        <div>
-          <label>Tipo de Evento</label>
-          <select required style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd;">
-            <option value="">Selecione...</option>
-            <option value="casamento">Casamentos</option>
-            <option value="corporativo">Corporativos</option>
-            <option value="aniversario">Aniversários / Festas</option>
-            <option value="outro">Outros</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn--green" style="width:100%; margin-top:20px; padding:15px;" id="eventosSubmitBtn">Solicitar Cadastro</button>
-      </form>
-
-      <div id="eventosSuccess" style="display:none; text-align:center; padding:20px;">
-        <h3 style="color:var(--green-dark);">Solicitação Enviada!</h3>
-        <p>Nossa equipe entrará em contato em breve.</p>
-        <button class="btn" style="margin-top:20px; background:#eee;" onclick="closeEventosModal()">Fechar</button>
-      </div>
-    </div>
-  </div>
+  <div id="gigiWidgetRoot"></div>
 
   <script src="dicionario.js"></script>
   <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-  <script>
-    if (typeof initCapiTip === 'function') initCapiTip();
-
-    // Lógica do Modal
-    function openEventosModal() { document.getElementById('eventosModal').classList.add('active'); }
-    function closeEventosModal(e) { document.getElementById('eventosModal').classList.remove('active'); }
-
-    const form = document.getElementById('eventosCadastroForm');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        document.getElementById('eventosSubmitBtn').innerText = "Enviando...";
-        setTimeout(() => {
-          form.style.display = 'none';
-          document.getElementById('eventosSuccess').style.display = 'block';
-        }, 1500);
-      });
-    }
-  </script>
 </body>
 </html>
