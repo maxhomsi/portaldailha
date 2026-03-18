@@ -55,7 +55,7 @@ const DICT = {
 const t = (key) => DICT[key] ? (DICT[key][currentLang] || DICT[key].pt) : key;
 
 /* =========================================================
-   DADOS DOS CARDS E PÁGINAS
+   DADOS DOS CARDS E PÁGINAS (ATUALIZADO COM PASTAS CORRETAS)
    ========================================================= */
 const SITE = {
   brand: {
@@ -78,10 +78,10 @@ const SITE = {
   },
   tip: { capiImg: "assets/capi.png", capiTag: t("capi_tag"), title: t("tip_title") },
   homeCards: [
-    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat", badge:"⭐ Mais Procurado" },
-    { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork", badge:"🍤 Gastronomia" },
+    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge:"⭐ Mais Procurado" },
+    { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/lanches/gourmet1.webp", icon:"fork", badge:"🍤 Gastronomia" },
     // O Card de Natureza foi removido daqui!
-    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/card-hospedagem.jpg", icon:"bed", badge:"🌅 Para Relaxar" }
+    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/pousadas/casanova1.webp", icon:"bed", badge:"🌅 Para Relaxar" }
   ],
   pages: {
     "a-ilha": [
@@ -91,20 +91,20 @@ const SITE = {
       { title:"Melhor época", desc:"Clima, horários e dicas para aproveitar o dia inteiro.", linkLabel:"Ver detalhes", href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" }
     ],
     "passeios-rotas": [
-      { title:"Ilhas Tijucas", desc:"Passeio de barco até o arquipélago. Águas cristalinas e fotos incríveis.", linkLabel:"Ver roteiro", href:"ilhas-tijucas.html", img:"assets/ilhastijucas.jpg", icon:"boat", badge:"🌊 Mergulho" },
-      { title:"Pantanal Carioca", desc:"Explore a rica biodiversidade da lagoa e o safári urbano.", linkLabel:"Ver roteiro", href:"pantanal-carioca.html", img:"assets/pantanalcarioca.jpg", icon:"leaf", badge:"🐊 Safári" },
-      { title:"Reserva", desc:"Navegue pelos canais até chegar à bela e preservada Praia da Reserva.", linkLabel:"Ver roteiro", href:"reserva.html", img:"assets/reserva.jpg", icon:"boat", badge:"🏖️ Praia" },
-      { title:"Jet-Ski", desc:"Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", linkLabel:"Ver opções", href:"jet-ski.html", img:"assets/jetski.jpg", icon:"boat", badge:"⚡ Adrenalina" },
+      { title:"Ilhas Tijucas", desc:"Passeio de barco até o arquipélago. Águas cristalinas e fotos incríveis.", linkLabel:"Ver roteiro", href:"ilhas-tijucas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge:"🌊 Mergulho" },
+      { title:"Pantanal Carioca", desc:"Explore a rica biodiversidade da lagoa e o safári urbano.", linkLabel:"Ver roteiro", href:"pantanal-carioca.html", img:"assets/passeios/pantanal1.jpg", icon:"leaf", badge:"🐊 Safári" },
+      { title:"Reserva", desc:"Navegue pelos canais até chegar à bela e preservada Praia da Reserva.", linkLabel:"Ver roteiro", href:"reserva.html", img:"assets/passeios/reserva1.jpg", icon:"boat", badge:"🏖️ Praia" },
+      { title:"Jet-Ski", desc:"Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", linkLabel:"Ver opções", href:"jet-ski.html", img:"assets/passeios/jet1.jpg", icon:"boat", badge:"⚡ Adrenalina" },
       { title:"Pacotes Especiais", desc:"Monte seu roteiro ideal combinando passeio de barco, almoço e mais.", linkLabel:"Ver pacotes", href:"pacotes-especiais.html", img:"assets/experiencia.jpg", icon:"fork", badge:"🎁 Ofertas" }
     ],
     "comer-beber": [
-      { title:"Restaurantes da Ilha", desc:"Pratos de frutos do mar, carnes e culinária variada à beira da lagoa.", linkLabel:"Ver detalhes", href:"restaurantes.html", img:"assets/card-comer.jpg", icon:"fork", badge:"🍤 Gastronomia" },
+      { title:"Restaurantes da Ilha", desc:"Pratos de frutos do mar, carnes e culinária variada à beira da lagoa.", linkLabel:"Ver detalhes", href:"restaurantes.html", img:"assets/lanches/parada1.webp", icon:"fork", badge:"🍤 Gastronomia" },
       { title:"Bares e Drinks", desc:"Cerveja gelada, caipirinhas e o pôr do sol mais bonito da região.", linkLabel:"Ver detalhes", href:"bares-drinks.html", img:"assets/bar&DRINK.jpg", icon:"boat", badge:"🍹 Relax" },
-      { title:"Café da Manhã e Lanches", desc:"Comece o dia com tranquilidade ou faça uma pausa para recarregar.", linkLabel:"Ver opções", href:"cafe-lanches.html", img:"assets/cafedamanha.png", icon:"leaf", badge:"☕ Bom dia" },
+      { title:"Café da Manhã e Lanches", desc:"Comece o dia com tranquilidade ou faça uma pausa para recarregar.", linkLabel:"Ver opções", href:"cafe-lanches.html", img:"assets/aleatoria/cantinho1.webp", icon:"leaf", badge:"☕ Bom dia" },
       { title:"Eventos e Experiências", desc:"Feirinhas, música ao vivo e espaços para celebrações inesquecíveis.", linkLabel:"Conferir", href:"eventos-experiencias.html", img:"assets/drinks.jpg", icon:"fork", badge:"🎵 Ao Vivo" }
     ],
     "hospedagem": [
-      { title:"Hotéis e Pousadas", desc:"Conforto e descanso com vista para a lagoa.", linkLabel:"Ver detalhes", href:"hoteis-pousadas.html", img:"assets/card-hospedagem.jpg", icon:"bed" },
+      { title:"Hotéis e Pousadas", desc:"Conforto e descanso com vista para a lagoa.", linkLabel:"Ver detalhes", href:"hoteis-pousadas.html", img:"assets/pousadas/veneza1.jpg", icon:"bed" },
       { title:"Airbnb e Temporada", desc:"Privacidade e liberdade para grupos e famílias.", linkLabel:"Ver opções", href:"airbnb-temporada.html", img:"assets/airbnb.jpg", icon:"bed" },
       { title:"Espaços para Eventos", desc:"Cenários memoráveis para sua celebração.", linkLabel:"Conferir", href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge:"🎉 Celebre" },
     ]
@@ -188,7 +188,6 @@ function mountHeaderFooter() {
     `;
   }
 
-  // ====== NOVO FOOTER DINÂMICO INSERIDO AQUI ======
   if (footer) {
     const anoAtual = new Date().getFullYear();
     footer.innerHTML = `
@@ -339,12 +338,8 @@ function mountGigiWidget() {
   });
 }
 
-/* =========================================================
-   NOVO: WIDGET DE CADASTRO DE RESTAURANTES (AJAX MODAL)
-   ========================================================= */
 function setupCadastroModal() {
   const currentUrl = location.href;
-  // O botão só vai aparecer nestas 4 páginas específicas
   const showButton = ['restaurantes', 'bares-drinks', 'cafe-lanches', 'eventos-experiencias'].some(page => currentUrl.includes(page));
   
   if (!showButton) return;
@@ -395,7 +390,6 @@ function setupCadastroModal() {
   
   document.body.insertAdjacentHTML('beforeend', html);
 
-  // Lógica do AJAX (Simulado)
   const form = document.getElementById('ajaxCadastroForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -404,7 +398,6 @@ function setupCadastroModal() {
     btn.style.opacity = "0.7";
     btn.style.pointerEvents = "none";
     
-    // Simula o tempo de envio de um servidor (1.5 segundos) e mostra o sucesso
     setTimeout(() => {
       form.style.display = 'none';
       document.getElementById('ajaxSuccess').style.display = 'block';
@@ -415,19 +408,16 @@ function setupCadastroModal() {
 window.openCadastroModal = function() {
   const m = document.getElementById('cadastroModal');
   m.style.display = 'flex';
-  void m.offsetWidth; // Força o navegador a entender o display:flex antes de animar a opacidade
+  void m.offsetWidth;
   m.classList.add('is-active');
 };
 
 window.closeCadastroModal = function(e) {
   const m = document.getElementById('cadastroModal');
   m.classList.remove('is-active');
-  setTimeout(() => { m.style.display = 'none'; }, 300); // Espera a animação terminar para sumir com o HTML
+  setTimeout(() => { m.style.display = 'none'; }, 300);
 };
 
-/* =========================================================
-   LIGHTBOX INTERATIVO PARA GALERIAS DE FOTOS (NOVO)
-   ========================================================= */
 function setupLightbox() {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImage');
@@ -496,32 +486,23 @@ function setupLightbox() {
   }
 }
 
-/* =========================================================
-   TORNAR AS FOTOS DOS CARDS CLICÁVEIS (GLOBAL)
-   ========================================================= */
 function setupClickableCards() {
-  // Encontra todos os cards na página que o usuário abriu
   const cards = document.querySelectorAll('.card');
   
   cards.forEach(card => {
     const foto = card.querySelector('.card__img');
-    // Encontra o botão de link correspondente dentro desse mesmo card
     const link = card.querySelector('a.btn, a.btn--green, a.card__link');
     
-    // Se o card tiver uma foto e um link, cria a mágica
     if (foto && link) {
-      foto.style.cursor = 'pointer'; // Muda o mouse para a "mãozinha" de clique
+      foto.style.cursor = 'pointer';
       
       foto.addEventListener('click', () => {
-        window.location.href = link.href; // Redireciona para a página do botão
+        window.location.href = link.href;
       });
     }
   });
 }
 
-/* =========================================================
-   FUNÇÕES GERAIS DE SCROLL E INICIALIZAÇÃO
-   ========================================================= */
 function setupReveal() {
   const els = document.querySelectorAll(".reveal");
   if (!("IntersectionObserver" in window) || els.length === 0) { els.forEach(el => el.classList.add("is-in")); return; }
@@ -564,7 +545,6 @@ function setupProgress() {
   setupCadastroModal(); 
   setupLightbox(); 
   
-  // Atraso sutil para garantir que o HTML de todas as páginas (inclusive as geradas via JS) já existam
   setTimeout(setupClickableCards, 100); 
   
   requestAnimationFrame(() => document.body.classList.add("is-ready"));
