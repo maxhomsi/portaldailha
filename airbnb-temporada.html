@@ -102,6 +102,68 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
+  
+  <div class="side-badge" onclick="openCadastroModal()">
+    Cadastre sua<br>Casa<br>conosco!
+  </div>
+
+  <div class="modal-overlay" id="cadastroModal" onclick="closeCadastroModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeCadastroModal()">×</button>
+      <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;">Fale Conosco</h2>
+      <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">Preencha os dados abaixo para solicitar o cadastro do seu espaço de temporada no Portal.</p>
+      
+      <form id="airbnbCadastroForm" class="gigiForm">
+        <div>
+          <label>Nome do Espaço / Casa</label>
+          <input type="text" placeholder="Ex: Casa do Sol Nascente" required />
+        </div>
+        <div>
+          <label>Nome do Anfitrião</label>
+          <input type="text" placeholder="Seu nome completo" required />
+        </div>
+        <div>
+          <label>Telefone / WhatsApp</label>
+          <input type="tel" placeholder="(21) 99999-9999" required />
+        </div>
+        <div>
+          <label>Link do anúncio ou Mensagem</label>
+          <textarea rows="3" placeholder="Cole aqui o link do seu Airbnb ou deixe sua mensagem..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px; font-size:16px;" id="airbnbSubmitBtn">Enviar Solicitação</button>
+      </form>
+
+      <div id="airbnbSuccess" style="display:none; text-align:center; padding:40px 20px;">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="var(--green)" style="margin-bottom:20px; display:inline-block;">
+          <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm-1.2 17.3l-4.8-4.8 1.4-1.4 3.4 3.4 7.6-7.6 1.4 1.4-9 9z"/>
+        </svg>
+        <h3 style="margin:0 0 10px; color:var(--text); font-weight:900; font-size:22px;">Mensagem Enviada!</h3>
+        <p style="color:var(--muted); font-size:16px; font-weight:600;">Nossa equipe entrará em contato em breve para finalizar o cadastro da sua casa.</p>
+        <button class="btn" style="margin-top:20px; background:#eee; color:#333; width:100%;" onclick="closeCadastroModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+
   <script src="app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('airbnbCadastroForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const btn = document.getElementById('airbnbSubmitBtn');
+          btn.innerText = "Enviando aguarde...";
+          btn.style.opacity = "0.7";
+          btn.style.pointerEvents = "none";
+          
+          setTimeout(() => {
+            form.style.display = 'none';
+            document.getElementById('airbnbSuccess').style.display = 'block';
+          }, 1500);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
