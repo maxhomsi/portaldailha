@@ -3,31 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airbnb e Casas de Temporada - Portal Ilha da Gigóia</title>
+  <title>Airbnb e Temporada - Portal Ilha da Gigóia</title>
+  
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="hospedagem">
+  
   <div class="progress" id="progress"></div>
+  
   <header class="header" id="siteHeader"></header>
 
   <main>
-    <section class="pageHead">
+    <section class="pageHead" style="padding-bottom: 90px;">
       <div class="container" style="text-align: center;">
-        <h1 class="reveal">Airbnb e Casas de Temporada</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Sinta-se um verdadeiro morador da ilha.</p>
+        <h1 class="reveal">Airbnb e Temporada</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Privacidade, liberdade e conforto de uma casa inteira para você, sua família e amigos.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container" style="max-width: 800px; font-size: 18px; line-height: 1.8; color: #2d3330;">
-        <div class="reveal">
-          <p>Outra opção bastante procurada na ilha são os <strong>aluguéis de temporada</strong>, como casas e apartamentos disponíveis em plataformas como Airbnb.</p>
-          <p>Essa alternativa é ideal para quem viaja em grupo, com amigos ou família, oferecendo <strong>mais privacidade e liberdade</strong> durante a estadia.</p>
-          <p>Algumas casas possuem varanda, vista para a lagoa e acesso fácil aos restaurantes e bares da ilha, permitindo que o visitante aproveite o ambiente único da região.</p>
+    <section class="section" style="padding-top: 30px;">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h2 class="reveal" style="font-size: 32px; color: var(--text);">Casas e Apartamentos</h2>
+          <p class="reveal" style="font-size: 18px; color: var(--muted);">As melhores hospedagens da ilha para quem busca a experiência de viver como um morador local.</p>
+        </div>
+
+        <div class="cards--4">
           
-          <div style="text-align: center; margin-top: 40px;">
-            <a href="#" onclick="openGigiChat(); return false;" class="btn btn--green">Verificar opções com a Gigi</a>
-          </div>
+          <article class="card reveal" style="display: flex; flex-direction: column;">
+            <div class="card__img" style="height: 200px;">
+              <img src="assets/airbnb/venti1.avif" alt="Casa Venti" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Casa+Venti'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Casa Venti</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Duplex completo em condomínio tranquilo. Ótima opção com jardim e churrasqueira para famílias e pequenos grupos.</p>
+              
+              <p style="color: var(--green); font-size: 12px; font-weight: 800; margin-bottom: 10px;">✓ Até 7 hóspedes • Aceita Pet</p>
+              
+              <div style="margin-top: auto; padding-top: 15px;">
+                <a class="btn btn--green" href="casa-venti.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 100ms;">
+            <div class="card__img" style="height: 200px;">
+              <img src="assets/airbnb/lux1.avif" alt="Lux 48" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Lux+48'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Lux 48</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Apartamento super moderno com varanda e vista. Localização estratégica perto do metrô, ideal para casais e estadias curtas.</p>
+              
+              <p style="color: var(--green); font-size: 12px; font-weight: 800; margin-bottom: 10px;">✓ Até 4 hóspedes • Super Moderno</p>
+              
+              <div style="margin-top: auto; padding-top: 15px;">
+                <a class="btn btn--green" href="lux-48.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 200ms;">
+            <div class="card__img" style="height: 200px;">
+              <img src="assets/airbnb/goia1.avif" alt="Casa Goia" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Casa+Goia'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Casa Goia</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Duplex moderno e amplo nos últimos andares do prédio. Muito confortável e perto de bares e restaurantes da ilha.</p>
+              
+              <p style="color: var(--green); font-size: 12px; font-weight: 800; margin-bottom: 10px;">✓ Até 8 hóspedes • Aceita Pet</p>
+              
+              <div style="margin-top: auto; padding-top: 15px;">
+                <a class="btn btn--green" href="casa-goia.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 300ms;">
+            <div class="card__img" style="height: 200px;">
+              <img src="assets/airbnb/estatua1.avif" alt="Casa da Estátua" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Casa+da+Estatua'" />
+            </div>
+            <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <h3 class="card__title" style="font-size: 20px;">Casa da Estátua</h3>
+              <p class="card__desc" style="flex-grow: 1; font-size: 14px;">Hospedagem inteira com estilo artístico na Ilha Primeira. Conta com piscina, churrasqueira e capacidade para grandes grupos.</p>
+              
+              <p style="color: var(--green); font-size: 12px; font-weight: 800; margin-bottom: 10px;">✓ Até 16 hóspedes • Piscina</p>
+              
+              <div style="margin-top: auto; padding-top: 15px;">
+                <a class="btn btn--green" href="casa-estatua.html" style="width: 100%; text-align: center; font-size: 14px; height: 40px;">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
