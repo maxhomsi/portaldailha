@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bar e Restaurante Caiçaras | Portal Ilha da Gigóia</title>
+  <title>Bar e Restaurante Caiçaras | Portal Oficial Ilha da Gigóia</title>
 
   <meta name="description" content="Saboreie o melhor da culinária caiçara no Bar Caiçaras na Ilha da Gigóia. Frutos do mar frescos, ambiente acolhedor e tradição à beira da lagoa." />
   <meta name="keywords" content="Bar Caiçaras Ilha da Gigóia, restaurante frutos do mar, comida caiçara RJ, onde almoçar na ilha, gastronomia Gigóia" />
@@ -14,6 +14,7 @@
   <meta property="og:title" content="Bar e Restaurante Caiçaras - Tradição e Sabor" />
   <meta property="og:description" content="O autêntico sabor da Ilha. Venha provar nossas especialidades em um ambiente familiar único." />
   <meta property="og:image" content="assets/caicaras/caicaras1.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/bar-caicaras.html" />
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,7 +27,6 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🐟 Tradição Caiçara</div>
         <h1 class="reveal">Bar Caiçaras</h1>
         <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Referência em frutos do mar e culinária brasileira, unindo sabor caseiro e o visual incrível da nossa lagoa.</p>
       </div>
@@ -48,7 +48,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="padding-top: 0;">
       <div class="container" style="max-width: 900px;">
         
         <div class="reveal gallery" style="margin-top: 0;">
@@ -67,6 +67,9 @@
           <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
             O <strong>Bar Caiçaras</strong> é um marco na Ilha da Gigóia. Perfeito para quem busca um almoço farto e de qualidade, o restaurante se destaca por suas moquecas, peixes grelhados e guarnições que remetem ao melhor da comida feita com carinho.
           </p>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px; font-weight: 600;">
+            O ambiente é familiar e acolhedor, ideal para quem quer passar horas aproveitando a brisa da lagoa. A tradição se reflete em cada prato, servido sempre com ingredientes frescos e aquele toque caseiro que só a Gigóia tem.
+          </p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
             <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
@@ -75,7 +78,7 @@
                 <li style="margin-bottom: 8px;">✓ Moquecas Variadas</li>
                 <li style="margin-bottom: 8px;">✓ Peixes Frescos do Dia</li>
                 <li style="margin-bottom: 8px;">✓ Petiscos Clássicos</li>
-                <li>✓ Sobremesas Caseiras</li>
+                <li>✓ Guarnições Caseiras</li>
               </ul>
             </div>
             <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
@@ -86,13 +89,13 @@
             </div>
           </div>
           
-          <div style="text-align: center; margin-top: 20px;">
-             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Ver Cardápio via Gigi</button>
+          <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 15px 40px; height: auto; font-size: 18px;">Ver Cardápio via Gigi</button>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="comer-beber.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Comer & Beber</a>
+          <a href="bares-drinks.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para Bares e Drinks</a>
         </div>
       </div>
     </section>
@@ -103,9 +106,9 @@
 
   <div class="lightbox" id="lightbox">
     <span class="lightbox__close" id="lightboxClose">&times;</span>
-    <img class="lightbox__content" id="lightboxImage" src="" alt="Imagem Ampliada">
-    <a class="lightbox__prev" id="lightboxPrev">&#10094;</a>
-    <a class="lightbox__next" id="lightboxNext">&#10095;</a>
+    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
   
   <script src="dicionario.js"></script>
