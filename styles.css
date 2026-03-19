@@ -24,7 +24,7 @@
   --shadow-card: 0 20px 50px rgba(14, 32, 20, 0.14);
   --shadow-soft: 0 14px 28px rgba(14, 32, 20, 0.10);
   
-  --max: 1300px; /* Aumentado para acomodar os 5 cards de passeios sem quebrar */
+  --max: 1300px; /* Aumentado para garantir os 5 cards na mesma linha */
   
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --t: 240ms;
@@ -100,7 +100,7 @@ img {
    ========================================================= */
 .social-links {
   display: flex;
-  gap: 8px; /* Reduzido para economizar espaço no header */
+  gap: 10px;
   align-items: center;
 }
 
@@ -130,7 +130,7 @@ img {
 }
 
 /* =========================================================
-   CABEÇALHO (HEADER) - AJUSTADO PARA 1 LINHA FORÇADA
+   CABEÇALHO (HEADER) - PROPORÇÕES RESTAURADAS
    ========================================================= */
 .header {
   position: sticky;
@@ -147,25 +147,25 @@ img {
 }
 
 .header__inner {
-  min-height: 80px; /* Ligeiramente mais compacto */
+  min-height: 90px;
   padding: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribui logo, menu e botões */
-  gap: 15px;
-  flex-wrap: nowrap; /* IMPEDE QUEBRA DE LINHA */
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap; /* GARANTE QUE NÃO QUEBRE */
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-shrink: 0; /* Impede o logo de espremer */
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .brand__logo {
-  width: 60px; /* Reduzido levemente para caber tudo */
-  height: 60px;
+  width: 75px;
+  height: 75px;
   object-fit: contain;
 }
 
@@ -176,18 +176,17 @@ img {
 }
 
 .brand__text small {
-  font-size: 10px;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  letter-spacing: 0.15em;
   font-weight: 800;
   color: #2c7e55;
   text-transform: uppercase;
 }
 
 .brand__text strong {
-  font-size: 20px; /* Reduzido levemente */
+  font-size: 24px;
   font-weight: 900;
   color: #1f5f88;
-  white-space: nowrap; /* Não quebra o nome */
 }
 
 .brand__text strong span {
@@ -199,25 +198,23 @@ img {
    ========================================================= */
 .navWrap {
   background: rgba(71, 176, 90, 0.06);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  flex-shrink: 1; /* Permite espremer um pouco se necessário, mas... */
-  overflow: hidden; /* Evita vazamentos */
 }
 
 .nav {
   display: flex;
-  gap: 6px; /* Espaçamento menor entre links */
+  gap: 14px;
   font-weight: 800;
-  font-size: 13.5px; /* Fonte otimizada */
-  white-space: nowrap; /* IMPEDE QUEBRA DE LINHA NO TEXTO DO MENU */
+  font-size: 14px;
+  white-space: nowrap; /* BLINDADO CONTRA QUEBRA */
 }
 
 .nav a {
   transition: all var(--t);
   position: relative;
-  padding: 8px 12px; /* Padding reduzido */
+  padding: 6px 12px;
   border-radius: 100px;
 }
 
@@ -226,8 +223,8 @@ img {
 }
 
 .nav a[aria-current="page"] {
-  background-color: var(--green) !important;
-  color: #fff !important;
+  background-color: rgba(71, 176, 90, 0.15) !important;
+  color: var(--green) !important;
   font-weight: 900 !important;
 }
 
@@ -235,18 +232,19 @@ img {
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-shrink: 0; /* Impede os botões de espremer */
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .header__actions .social-links {
-  display: flex; /* Volta para flex, grid estava causando problemas */
-  gap: 6px;
+  display: flex;
+  gap: 5px;
+  margin-right: 6px;
 }
 
 .header__actions .social-icon {
-  width: 32px; /* Menor no header */
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
 .header__actions .social-icon svg {
@@ -279,19 +277,18 @@ img {
    BOTÕES GERAIS E EFEITO DE BRILHO (SHINE)
    ========================================================= */
 .btn {
-  height: 40px; /* Reduzido no geral para alinhar ao header */
-  padding: 0 20px;
-  font-size: 14px; 
+  height: 44px;
+  padding: 0 24px;
+  font-size: 14px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 900;
   cursor: pointer;
   transition: all var(--t) var(--ease);
   border: none;
-  white-space: nowrap; /* Não quebra texto de botão */
 }
 
 .btn--green,
@@ -311,7 +308,6 @@ img {
   box-shadow: 0 14px 26px rgba(71, 176, 90, 0.30);
 }
 
-/* MÁGICA: O reflexo agora é aplicado APENAS no botão do header e nos botões da Gigi! */
 .header__actions .btn--green::after,
 .gigiFab__btn::after,
 .gigiSend::after {
@@ -472,7 +468,6 @@ img {
   flex-wrap: wrap;
 }
 
-/* Transforma TODOS os links da Hero em botões padronizados */
 .hero__actions a {
   display: inline-flex;
   align-items: center;
@@ -486,7 +481,6 @@ img {
   transition: all var(--t) var(--ease);
 }
 
-/* O botão secundário "Conheça a Ilha" ganha fundo branco sólido e sombra */
 .hero__actions a:not(.btn--green) {
   background: #ffffff;
   color: var(--text);
@@ -510,7 +504,7 @@ img {
 }
 
 /* =========================================================
-   SEÇÕES GERAIS DE CONTEÚDO
+   SEÇÕES GERAIS DE CONTEÚDO E CABEÇALHOS INTERNOS
    ========================================================= */
 .section {
   padding: 60px 0;
@@ -534,29 +528,56 @@ img {
   font-weight: 800;
 }
 
+.pageHead {
+  padding: 80px 0 100px;
+  background: var(--green);
+  color: #fff;
+  z-index: 10;
+}
+
+.pageHead h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 900;
+  position: relative;
+  z-index: 15;
+}
+
+.pageHead p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  z-index: 15;
+}
+
 /* =========================================================
-   DICA DA CAPI (CORRIGIDA: FLUTUANTE, ELEGANTE E PROPORCIONAL)
+   DICA DA CAPI - FORA DO FUNDO VERDE
    ========================================================= */
 .tipRow {
   display: flex;
-  justify-content: flex-start; /* Alinhamento mais natural com a imagem */
+  justify-content: center;
   align-items: center;
-  gap: 25px; 
-  margin: -80px auto 40px; /* Sobe e sobrepõe a onda verde! */
+  gap: 30px;
+  margin: 40px auto 40px; /* <--- MARGEM POSITIVA (Fora do verde) */
   position: relative;
-  z-index: 100; /* Garante que fique POR CIMA do background verde */
-  max-width: 900px;
+  z-index: 100;
   background: #fff;
-  padding: 25px 40px; /* Mais respiro horizontal */
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Sombra elegante */
-  border: 1px solid rgba(0,0,0,0.05);
+  padding: 30px 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+  max-width: 850px;
+  border: 1px solid rgba(71, 176, 90, 0.12);
+}
+
+main .section .tipRow {
+  margin-top: 0 !important; 
 }
 
 .capi {
   position: relative;
   flex-shrink: 0;
-  transform: none; 
   margin-right: 0;
 }
 
@@ -568,7 +589,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid var(--yellow); /* Borda amarela oficial */
+  border: 4px solid var(--yellow);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -587,11 +608,11 @@ img {
   background: var(--green);
   color: #fff;
   font-weight: 900;
-  padding: 6px 14px; /* Tag um pouco maior e mais visível */
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 11px;
   white-space: nowrap;
-  box-shadow: 0 4px 10px rgba(71, 176, 90, 0.3); /* Sombra na tag */
+  box-shadow: 0 4px 10px rgba(71, 176, 90, 0.3);
 }
 
 .tip {
@@ -608,61 +629,56 @@ img {
   font-weight: 700;
   line-height: 1.6;
   font-size: 16px;
-}
-
-/* =========================================================
-   CARDS DE PASSEIOS E ETIQUETAS (BADGES)
+}/* =========================================================
+   CARDS DE HOSPEDAGEM / PASSEIOS (FLEXBOX PARA CENTRALIZAR)
    ========================================================= */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.cards, .cards--4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* MÁGICA: Centraliza cards órfãos */
   gap: 24px;
   padding: 20px 0;
 }
 
-/* AJUSTE PARA QUANDO HOUVER 3 CARDS */
-.cards:has(> .card:last-child:nth-child(3)) {
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1050px;
+.cards > .card, 
+.cards--4 > .card {
+  width: calc(25% - 18px); /* 4 por linha default */
+  min-width: 260px;
+  max-width: 320px;
+}
+
+/* ESPECÍFICO PARA PASSEIOS: 5 NA MESMA LINHA */
+body[data-page="passeios-rotas"] .cards {
+  gap: 16px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
-/* MÁGICA: 5 CARDS NA PÁGINA DE PASSEIOS ALINHADOS NA MESMA LINHA */
-body[data-page="passeios-rotas"] .cards {
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+body[data-page="passeios-rotas"] .cards > .card {
+  width: calc(20% - 13px); /* 5 por linha */
+  min-width: 210px;
+  max-width: 250px;
 }
 
 body[data-page="passeios-rotas"] .card__img {
-  height: 150px; /* Reduz a altura da imagem para não alongar muito o card */
+  height: 160px;
 }
 
 body[data-page="passeios-rotas"] .card__title {
-  font-size: 18px; /* Título um pouco menor */
-  margin-bottom: 8px;
+  font-size: 17px;
+  margin-bottom: 6px;
 }
 
 body[data-page="passeios-rotas"] .card__desc {
-  font-size: 13px; /* Descrição menor para caber texto */
+  font-size: 13px;
   margin-bottom: 12px;
 }
 
 body[data-page="passeios-rotas"] .card__body {
-  padding: 20px 16px; /* Padding interno menor */
+  padding: 18px 16px 16px;
 }
 
-body[data-page="passeios-rotas"] .card__icon {
-  width: 32px; /* Ícone menor proporcional ao card */
-  height: 32px;
-  top: 12px;
-  left: 12px;
-}
-
-body[data-page="passeios-rotas"] .card__icon svg {
-  width: 16px;
-  height: 16px;
-}
-
+/* ESTRUTURA INTERNA DOS CARDS */
 .card {
   background: var(--white);
   border-radius: var(--radius-card);
@@ -717,13 +733,6 @@ body[data-page="passeios-rotas"] .card__icon svg {
   fill: #fff;
 }
 
-/* OCULTAR ETIQUETAS E ELEMENTOS INDESEJADOS */
-.card__badge, 
-.badge,
-.pageHead .container div[style*="background: var(--yellow)"] {
-  display: none !important;
-}
-
 .card__body {
   padding: 24px;
   flex-grow: 1;
@@ -757,41 +766,10 @@ body[data-page="passeios-rotas"] .card__icon svg {
   text-decoration: underline;
 }
 
-/* =========================================================
-   GRADE DE 4 COLUNAS (VITRINE DE RESTAURANTES)
-   ========================================================= */
-.cards--4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 50px;
-}
-
-/* =========================================================
-   CABEÇALHOS DAS PÁGINAS INTERNAS
-   ========================================================= */
-.pageHead {
-  padding: 80px 0 120px; /* Respiro maior no fundo para a Dica do Capi sobrepor com estilo */
-  background: var(--green);
-  color: #fff;
-  z-index: 10;
-}
-
-.pageHead h1 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 900;
-  position: relative;
-  z-index: 15;
-}
-
-.pageHead p {
-  margin: 10px 0 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 700;
-  font-size: 18px;
-  position: relative;
-  z-index: 15;
+.card__badge, 
+.badge,
+.pageHead .container div[style*="background: var(--yellow)"] {
+  display: none !important;
 }
 
 /* =========================================================
@@ -821,7 +799,6 @@ body[data-page="passeios-rotas"] .card__icon svg {
   position: relative;
 }
 
-/* Estilo do Lightbox (Janela Ampliada) */
 .lightbox {
   position: fixed;
   top: 0;
@@ -898,7 +875,7 @@ body[data-page="passeios-rotas"] .card__icon svg {
 }
 
 /* =========================================================
-   JACK, O PROTETOR DO MANGUE
+   JACK E FALE CONOSCO
    ========================================================= */
 .jack-block {
   margin-top: 60px;
@@ -924,9 +901,6 @@ body[data-page="passeios-rotas"] .card__icon svg {
   pointer-events: none;
 }
 
-/* =========================================================
-   FALE CONOSCO E GIGI FORM GERAL
-   ========================================================= */
 .contato-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -1280,9 +1254,6 @@ body[data-page="passeios-rotas"] .card__icon svg {
   font-weight: 600;
 }
 
-/* =========================================================
-   AJUSTES FINAIS DE LIMPEZA E FEATURES
-   ========================================================= */
 /* Oculta a linha divisória e os textos verdes de características no final dos cards */
 .card__body hr,
 .card hr,
@@ -1293,18 +1264,17 @@ body[data-page="passeios-rotas"] .card__icon svg {
 }
 
 /* =========================================================
-   RESPONSIVIDADE E MEDIA QUERIES
+   RESPONSIVIDADE E MEDIA QUERIES (SEMPRE NO FINAL)
    ========================================================= */
 @media (max-width: 1300px) {
-  /* Se a tela não comportar 5, ajusta pra 3 na de passeios */
-  body[data-page="passeios-rotas"] .cards {
-    grid-template-columns: repeat(3, 1fr);
+  body[data-page="passeios-rotas"] .cards > .card {
+    width: calc(25% - 18px); /* Volta para 4 cards */
   }
 }
 
 @media (max-width: 1100px) {
-  .cards, .cards:has(> .card:last-child:nth-child(3)) {
-    grid-template-columns: repeat(2, 1fr);
+  .cards > .card, .cards--4 > .card, body[data-page="passeios-rotas"] .cards > .card {
+    width: calc(33.333% - 16px); /* 3 cards */
   }
 }
 
@@ -1319,8 +1289,8 @@ body[data-page="passeios-rotas"] .card__icon svg {
 }
 
 @media (max-width: 960px) {
-  .brand__logo { width: 55px; height: 55px; }
-  .brand__text strong { font-size: 18px; }
+  .brand__logo { width: 60px; height: 60px; }
+  .brand__text strong { font-size: 20px; }
   .navWrap { display: none; }
   .burger { display: inline-flex; align-items: center; justify-content: center; }
   .mobileNav { display: block; }
@@ -1329,8 +1299,8 @@ body[data-page="passeios-rotas"] .card__icon svg {
 }
 
 @media (max-width: 768px) {
-  body[data-page="passeios-rotas"] .cards {
-    grid-template-columns: repeat(2, 1fr);
+  .cards > .card, .cards--4 > .card, body[data-page="passeios-rotas"] .cards > .card {
+    width: calc(50% - 12px); /* 2 cards */
   }
   .gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -1356,6 +1326,11 @@ body[data-page="passeios-rotas"] .card__icon svg {
   
   .footer__col p { margin: 0 auto 15px; }
   .footer__socials { justify-content: center; }
+  
+  .footer__col ul li a {
+    display: inline-block;
+    padding: 4px 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1365,12 +1340,8 @@ body[data-page="passeios-rotas"] .card__icon svg {
 }
 
 @media (max-width: 560px) {
-  .cards, .cards:has(> .card:last-child:nth-child(3)) {
-    grid-template-columns: 1fr;
-  }
-  
-  body[data-page="passeios-rotas"] .cards {
-    grid-template-columns: 1fr;
+  .cards > .card, .cards--4 > .card, body[data-page="passeios-rotas"] .cards > .card {
+    width: 100%; /* 1 card */
   }
   
   .hero { height: auto; min-height: 500px; }
@@ -1384,13 +1355,9 @@ body[data-page="passeios-rotas"] .card__icon svg {
   .pageHead { padding: 40px 0 80px; }
   .pageHead h1 { font-size: 32px; }
 
-  /* Ajuste responsivo da Dica do Capi */
-  .tipRow { 
-    flex-direction: column; 
-    margin-top: -40px; 
-    padding: 20px;
-    text-align: center;
-  }
+  .tipRow { flex-direction: column; margin-top: 20px; gap: 15px; }
+  .capi { margin-right: 0; transform: none; z-index: 20; }
+  .tip { padding: 0; text-align: center; }
   
   .jack-block {
     margin-top: 80px; padding: 120px 20px 24px 20px !important;
@@ -1403,4 +1370,7 @@ body[data-page="passeios-rotas"] .card__icon svg {
   
   .gigiBox { width: calc(100% - 40px); bottom: 80px; }
   .lang-switcher { padding: 0 8px; font-size: 13px; height: 38px; }
+  
+  .side-badge { padding: 10px 12px; font-size: 11px; }
 }
+/* FIM DO ARQUIVO */
