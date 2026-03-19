@@ -11,6 +11,8 @@ function changeLanguage(lang) {
 
 const DICT = {
   // === MENU E RODAPÉ ===
+  const DICT = {
+  // === MENU E RODAPÉ ===
   nav_ilha: { pt: "A Ilha", en: "The Island", es: "La Isla" },
   nav_passeios: { pt: "Passeios & Rotas", en: "Tours & Routes", es: "Paseos y Rutas" },
   nav_comer: { pt: "Comer & Beber", en: "Eat & Drink", es: "Comer y Beber" },
@@ -18,8 +20,21 @@ const DICT = {
   nav_fale: { pt: "Fale Conosco", en: "Contact Us", es: "Contáctenos" },
   btn_passeios: { pt: "Ver Passeios", en: "See Tours", es: "Ver Paseos" },
   btn_conheca: { pt: "Conheça a Ilha", en: "Discover the Island", es: "Conoce la Isla" },
-  footer_text: { pt: "Portal Ilha da Gigóia — Termos • Privacidade", en: "Gigóia Island Portal — Terms • Privacy", es: "Portal Isla Gigóia — Términos • Privacidad" },
+  
+  // AQUI ESTÃO AS DUAS CORREÇÕES DO FOOTER:
+  footer_text: { 
+    pt: "Portal Ilha da Gigóia — <a href='termos.html' style='text-decoration:underline;'>Termos • Privacidade</a>", 
+    en: "Gigóia Island Portal — <a href='termos.html' style='text-decoration:underline;'>Terms • Privacy</a>", 
+    es: "Portal Isla Gigóia — <a href='termos.html' style='text-decoration:underline;'>Términos • Privacidad</a>" 
+  },
+  footer_rights: { 
+    pt: "Todos os direitos reservados.", 
+    en: "All rights reserved.", 
+    es: "Todos los derechos reservados." 
+  },
 
+
+  // ... resto do arquivo continua normal ...
   // === HOME: HERO ===
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
   hero_title_a: { pt: "Descubra o Paraíso Tropical", en: "Discover the Tropical Paradise", es: "Descubre el Paraíso Tropical" },
@@ -1045,7 +1060,7 @@ const DICT = {
   card_solar_ee_d: { pt: "Arquitetura colonial e amplos jardins. Oferece produção personalizada de alta gastronomia para casamentos, festas de 15 anos e celebrações grandiosas.", en: "Colonial architecture and vast gardens. Offers personalized high-gastronomy production for weddings, 15th birthday parties, and grand celebrations.", es: "Arquitectura colonial y amplios jardines. Ofrece producción personalizada de alta gastronomía para bodas, fiestas de 15 años y grandes celebraciones." },
   card_oasis_ee_d: { pt: "Mistura restaurante, lounge e espaço para festas privadas. Cenário charmoso para almoços relaxantes que ganha um clima animado e musical à noite.", en: "Mixes restaurant, lounge, and space for private parties. Charming setting for relaxing lunches that gains a lively and musical atmosphere at night.", es: "Mezcla restaurante, lounge y espacio para fiestas privadas. Entorno encantador para almuerzos relajantes que adquiere un ambiente animado y musical por la noche." },
   card_mara_ee_d: { pt: "Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.", en: "Gathers gastronomy, tropical drinks, and an unforgettable sunset. The perfect setting for gatherings and relaxed meetings among friends.", es: "Reúne gastronomía, tragos tropicales y un atardecer inolvidable. El escenario perfecto para confraternizaciones y encuentros relajados entre amigos." },
-  
+
 
 };
 
