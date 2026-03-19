@@ -3,22 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos e Experiências na Ilha da Gigóia | Portal Oficial</title>
-
-  <meta name="description" content="Descubra experiências únicas na Ilha da Gigóia. Passeios de barco, workshops, trilhas ecológicas, roteiros gastronômicos e eventos culturais no Rio de Janeiro." />
-  <meta name="keywords" content="o que fazer na ilha da gigoia, experiencias rj, passeios barra da tijuca, roteiro gigoia, turismo de experiencia rio" />
+  <title>Eventos e Experiências | Portal Oficial Ilha da Gigóia</title>
+  
+  <meta name="description" content="Conecte-se com a essência da Ilha. De passeios ecológicos a vivências artísticas, conheça os melhores lugares para celebrar momentos únicos." />
+  <meta name="keywords" content="eventos ilha da gigoia, experiencias rio de janeiro, onde celebrar gigoia, festas barra da tijuca" />
   <meta name="author" content="Portal Ilha da Gigóia" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Experiências Inesquecíveis | Ilha da Gigóia" />
-  <meta property="og:description" content="Vá além do comum. Conheça a ilha através de vivências, tours e eventos exclusivos." />
-  <meta property="og:image" content="assets/card-experiencias.jpg" />
-  <meta property="og:url" content="https://www.ilhadagigoia.com.br/eventos-experiencias.html" />
-
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="servicos">
+<body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
   
@@ -48,75 +42,76 @@
       </div>
     </section>
 
-    <section class="section" style="padding-top: 30px;">
+    <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="cards--4" id="pageCards"></div>
+        
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h2 class="reveal" style="font-size: 32px; color: var(--text);" data-i18n="ee_onde_celebrar_t">Onde celebrar</h2>
+          <p class="reveal" style="font-size: 18px; color: var(--muted);" data-i18n="ee_onde_celebrar_d">Conheça as melhores opções de ambientes para o seu evento.</p>
+        </div>
+
+        <div class="cards--4">
+          
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="assets/aleatoria/gaivota1.jpeg" alt="Gaivota" onerror="this.src='https://via.placeholder.com/400x300?text=Gaivota'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="title_gaivota">Gaivota</h3>
+              <p class="card__desc" data-i18n="card_gaivota_ee_d">Localizado na Ilha Primeira, combina vista privilegiada com atmosfera elegante. Perfeito para casamentos intimistas, festas e eventos corporativos.</p>
+              
+              <a class="card__link" href="pousada-gaivota.html" data-i18n="btn_ver_detalhes">Ver Detalhes <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="assets/aleatoria/solar1.jpg" alt="Solar das Palmeiras Rio" onerror="this.src='https://via.placeholder.com/400x300?text=Solar+das+Palmeiras'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="title_solar">Solar das Palmeiras Rio</h3>
+              <p class="card__desc" data-i18n="card_solar_ee_d">Arquitetura colonial e amplos jardins. Oferece produção personalizada de alta gastronomia para casamentos, festas de 15 anos e celebrações grandiosas.</p>
+              
+              <a class="card__link" href="solar-palmeiras.html" data-i18n="btn_ver_detalhes">Ver Detalhes <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="assets/aleatoria/oasis1.jpg" alt="Oásis Gastrolounge" onerror="this.src='https://via.placeholder.com/400x300?text=Oasis+Gastrolounge'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="title_oasis">Oásis Gastrolounge</h3>
+              <p class="card__desc" data-i18n="card_oasis_ee_d">Mistura restaurante, lounge e espaço para festas privadas. Cenário charmoso para almoços relaxantes que ganha um clima animado e musical à noite.</p>
+              
+              <a class="card__link" href="oasis.html" data-i18n="btn_ver_detalhes">Ver Detalhes <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="assets/aleatoria/mara1.jpg" alt="Maracujá da Ilha" onerror="this.src='https://via.placeholder.com/400x300?text=Maracuja+da+Ilha'" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title" data-i18n="title_maracuja">Maracujá da Ilha</h3>
+              <p class="card__desc" data-i18n="card_mara_ee_d">Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.</p>
+              
+              <a class="card__link" href="restaurante-maracuja.html" data-i18n="btn_ver_detalhes">Ver Detalhes <span>→</span></a>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
+  
   <div id="gigiWidgetRoot"></div>
   
-  <div class="side-badge" onclick="openExpModal()" data-i18n="side_badge_exp">
-    Ofereça uma<br>Experiência<br>conosco!
-  </div>
-
-  <div class="modal-overlay" id="expModal" onclick="closeExpModal(event)">
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeExpModal()">×</button>
-      <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;" data-i18n="modal_exp_title">Seja um Parceiro</h2>
-      <p style="color:var(--muted); margin-bottom:24px; font-weight:600;" data-i18n="modal_exp_sub">Você oferece tours, cursos ou eventos na Ilha? Divulgue no Portal Oficial.</p>
-      
-      <form id="expCadastroForm" class="gigiForm">
-        <div>
-          <label data-i18n="lbl_nome_exp">Nome da Experiência</label>
-          <input type="text" placeholder="Ex: Tour Fotográfico ao Pôr do Sol" required />
-        </div>
-        <div>
-          <label data-i18n="lbl_nome_empresa">Seu Nome / Empresa</label>
-          <input type="text" placeholder="Nome completo ou Razão Social" required />
-        </div>
-        <div>
-          <label data-i18n="lbl_whatsapp">WhatsApp</label>
-          <input type="tel" placeholder="(21) 99999-9999" required />
-        </div>
-        <div>
-          <label data-i18n="lbl_desc_curta">Descrição Curta</label>
-          <textarea rows="3" placeholder="..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px;" id="expSubmitBtn" data-i18n="btn_solicitar_parceria">Solicitar Parceria</button>
-      </form>
-
-      <div id="expSuccess" style="display:none; text-align:center; padding:20px;">
-        <h3 style="color:var(--green-dark);" data-i18n="modal_exp_sucesso_title">Solicitação Recebida!</h3>
-        <p data-i18n="modal_exp_sucesso_sub">Entraremos em contato para validar sua experiência no portal.</p>
-        <button class="btn" style="margin-top:20px; background:#eee;" onclick="closeExpModal()" data-i18n="btn_fechar">Fechar</button>
-      </div>
-    </div>
-  </div>
-
   <script src="dicionario.js"></script>
   <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-  <script>
-    if (typeof initCapiTip === 'function') initCapiTip();
-
-    function openExpModal() { document.getElementById('expModal').classList.add('is-active'); document.getElementById('expModal').style.display='flex'; }
-    function closeExpModal() { document.getElementById('expModal').classList.remove('is-active'); setTimeout(()=>document.getElementById('expModal').style.display='none', 300); }
-
-    const form = document.getElementById('expCadastroForm');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = document.getElementById('expSubmitBtn');
-        btn.innerText = "Enviando..."; // Fica fixo pra não precisar de tradução dinâmica no JS
-        setTimeout(() => {
-          form.style.display = 'none';
-          document.getElementById('expSuccess').style.display = 'block';
-        }, 1500);
-      });
-    }
-  </script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

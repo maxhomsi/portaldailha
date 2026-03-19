@@ -1038,6 +1038,13 @@ const DICT = {
   veneza_dest_3: { pt: "✓ Próximo ao Metrô", en: "✓ Near the Metro", es: "✓ Cerca del Metro" },
   veneza_dest_4: { pt: "✓ Ambiente romântico e silencioso", en: "✓ Romantic and quiet environment", es: "✓ Ambiente romántico y silencioso" },
   
+  // === PÁGINA: EVENTOS E EXPERIÊNCIAS (COMPLEMENTO) ===
+  ee_onde_celebrar_t: { pt: "Onde celebrar", en: "Where to celebrate", es: "Dónde celebrar" },
+  ee_onde_celebrar_d: { pt: "Conheça as melhores opções de ambientes para o seu evento.", en: "Discover the best options of environments for your event.", es: "Conoce las mejores opciones de ambientes para tu evento." },
+  card_gaivota_ee_d: { pt: "Localizado na Ilha Primeira, combina vista privilegiada com atmosfera elegante. Perfeito para casamentos intimistas, festas e eventos corporativos.", en: "Located on Ilha Primeira, it combines a privileged view with an elegant atmosphere. Perfect for intimate weddings, parties, and corporate events.", es: "Ubicado en Ilha Primeira, combina una vista privilegiada con una atmósfera elegante. Perfecto para bodas íntimas, fiestas y eventos corporativos." },
+  card_solar_ee_d: { pt: "Arquitetura colonial e amplos jardins. Oferece produção personalizada de alta gastronomia para casamentos, festas de 15 anos e celebrações grandiosas.", en: "Colonial architecture and vast gardens. Offers personalized high-gastronomy production for weddings, 15th birthday parties, and grand celebrations.", es: "Arquitectura colonial y amplios jardines. Ofrece producción personalizada de alta gastronomía para bodas, fiestas de 15 años y grandes celebraciones." },
+  card_oasis_ee_d: { pt: "Mistura restaurante, lounge e espaço para festas privadas. Cenário charmoso para almoços relaxantes que ganha um clima animado e musical à noite.", en: "Mixes restaurant, lounge, and space for private parties. Charming setting for relaxing lunches that gains a lively and musical atmosphere at night.", es: "Mezcla restaurante, lounge y espacio para fiestas privadas. Entorno encantador para almuerzos relajantes que adquiere un ambiente animado y musical por la noche." },
+  card_mara_ee_d: { pt: "Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.", en: "Gathers gastronomy, tropical drinks, and an unforgettable sunset. The perfect setting for gatherings and relaxed meetings among friends.", es: "Reúne gastronomía, tragos tropicales y un atardecer inolvidable. El escenario perfecto para confraternizaciones y encuentros relajados entre amigos." },
   
 
 };
