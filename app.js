@@ -523,3 +523,12 @@ function setupProgress() {
   setupHeaderScroll();
   setupReveal();
 })();
+// Procura todas as tags HTML que tenham o atributo "data-i18n" e traduz o texto dentro delas
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('[data-i18n]').forEach(elemento => {
+    const chave = elemento.getAttribute('data-i18n');
+    if (DICT[chave]) {
+      elemento.innerHTML = t(chave); // Substitui o texto pelo idioma correto
+    }
+  });
+});
