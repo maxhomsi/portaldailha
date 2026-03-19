@@ -8,7 +8,7 @@ if (typeof DICT === 'undefined' || typeof capiTips === 'undefined') {
 }
 
 /* =========================================================
-   DADOS DOS CARDS E PÁGINAS (Com Pastas Corretas)
+   DADOS DOS CARDS E PÁGINAS (Com Tradução Ativa)
    ========================================================= */
 const SITE = {
   brand: {
@@ -173,9 +173,9 @@ function mountHeaderFooter() {
         </div>
         
         <div class="footer__col">
-          <h3>Navegue</h3>
+          <h3 data-i18n="footer_nav_t">Navegue</h3>
           <ul>
-            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html" data-i18n="nav_inicio">Início</a></li>
             <li><a href="a-ilha.html">${t("nav_ilha")}</a></li>
             <li><a href="passeios-rotas.html">${t("nav_passeios")}</a></li>
             <li><a href="comer-beber.html">${t("nav_comer")}</a></li>
@@ -184,7 +184,7 @@ function mountHeaderFooter() {
         </div>
         
         <div class="footer__col">
-          <h3>Atendimento</h3>
+          <h3 data-i18n="footer_serv_t">Atendimento</h3>
           <ul>
             <li><a href="#" onclick="openGigiChat(); return false;">${t("gigi_fab")}</a></li>
             <li><a href="fale-conosco.html">${t("nav_fale")}</a></li>
@@ -193,7 +193,7 @@ function mountHeaderFooter() {
       </div>
       
       <div class="footer__bottom">
-        <p>&copy; ${anoAtual} Portal Ilha da Gigóia. Todos os direitos reservados.</p>
+        <p>&copy; ${anoAtual} Portal Ilha da Gigóia. ${t("footer_rights")}</p>
       </div>
     `;
   }
@@ -368,6 +368,7 @@ function setupCadastroModal() {
 
 window.openCadastroModal = function() {
   const m = document.getElementById('cadastroModal');
+  if(!m) return;
   m.style.display = 'flex';
   void m.offsetWidth;
   m.classList.add('is-active');
@@ -375,6 +376,7 @@ window.openCadastroModal = function() {
 
 window.closeCadastroModal = function(e) {
   const m = document.getElementById('cadastroModal');
+  if(!m) return;
   m.classList.remove('is-active');
   setTimeout(() => { m.style.display = 'none'; }, 300);
 };
@@ -393,6 +395,13 @@ function setupLightbox() {
       galleryImages = document.querySelectorAll('.gallery img');
       
       if (galleryImages.length > 0) {
+          const updateLightboxImage = () => {
+              if (galleryImages[currentIndex]) {
+                  lightboxImg.src = galleryImages[currentIndex].src;
+                  lightboxImg.alt = galleryImages[currentIndex].alt;
+              }
+          };
+
           const openLightbox = (index) => {
               currentIndex = index;
               updateLightboxImage();
@@ -401,13 +410,6 @@ function setupLightbox() {
 
           const closeLightbox = () => {
               lightbox.classList.remove('is-active');
-          };
-
-          const updateLightboxImage = () => {
-              if (galleryImages[currentIndex]) {
-                  lightboxImg.src = galleryImages[currentIndex].src;
-                  lightboxImg.alt = galleryImages[currentIndex].alt;
-              }
           };
 
           const prevImage = (e) => {
@@ -466,9 +468,17 @@ function setupClickableCards() {
 
 function setupReveal() {
   const els = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window) || els.length === 0) { els.forEach(el => el.classList.add("is-in")); return; }
+  if (!("IntersectionObserver" in window) || els.length === 0) { 
+    els.forEach(el => el.classList.add("is-in")); 
+    return; 
+  }
   const io = new IntersectionObserver((entries, observer) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-in"); observer.unobserve(e.target); } });
+    entries.forEach(e => { 
+      if (e.isIntersecting) { 
+        e.target.classList.add("is-in"); 
+        observer.unobserve(e.target); 
+      } 
+    });
   }, { threshold: 0.05, rootMargin: "50px" });
   els.forEach(el => io.observe(el));
   setTimeout(() => { els.forEach(el => el.classList.add("is-in")); }, 150);
@@ -502,13 +512,16 @@ function setupProgress() {
 
   if (page === "home") {
     mountHome();
-    
-    if (typeof initCapiTip === 'function') {
-      initCapiTip();
-    }
   }
   
-  if (page && SITE.pages[page]) mountPageCards(page);
+  if (page && SITE.pages[page]) {
+    mountPageCards(page);
+  }
+
+  // O Capi sempre inicializa para garantir tradução
+  if (typeof initCapiTip === 'function') {
+    initCapiTip();
+  }
 
   mountGigiWidget();
   setupCadastroModal(); 
@@ -519,14 +532,12 @@ function setupProgress() {
   requestAnimationFrame(() => document.body.classList.add("is-ready"));
   setupHeaderScroll();
   setupReveal();
-})();
 
-// O CÉREBRO DA TRADUÇÃO DINÂMICA
-document.addEventListener("DOMContentLoaded", () => {
+  // O CÉREBRO DA TRADUÇÃO DINÂMICA
   document.querySelectorAll('[data-i18n]').forEach(elemento => {
     const chave = elemento.getAttribute('data-i18n');
     if (DICT[chave]) {
       elemento.innerHTML = t(chave);
     }
   });
-});
+})();
