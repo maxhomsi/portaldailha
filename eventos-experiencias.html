@@ -27,8 +27,8 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <h1 class="reveal">Eventos & Experiências</h1>
-        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;">Conecte-se com a essência da Ilha. De passeios ecológicos a vivências artísticas e culturais.</p>
+        <h1 class="reveal" data-i18n="title_eventos_exp">Eventos & Experiências</h1>
+        <p class="reveal" style="max-width: 600px; margin: 10px auto 0;" data-i18n="sub_eventos_exp">Conecte-se com a essência da Ilha. De passeios ecológicos a vivências artísticas e culturais.</p>
       </div>
     </section>
 
@@ -39,7 +39,7 @@
             <div class="capi__ring">
               <img id="capiImg" src="assets/capi.png" alt="Capi" />
             </div>
-            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+            <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
           </div>
           <div class="tip">
             <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
@@ -58,40 +58,40 @@
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
   
-  <div class="side-badge" onclick="openExpModal()">
+  <div class="side-badge" onclick="openExpModal()" data-i18n="side_badge_exp">
     Ofereça uma<br>Experiência<br>conosco!
   </div>
 
   <div class="modal-overlay" id="expModal" onclick="closeExpModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeExpModal()">×</button>
-      <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;">Seja um Parceiro</h2>
-      <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">Você oferece tours, cursos ou eventos na Ilha? Divulgue no Portal Oficial.</p>
+      <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;" data-i18n="modal_exp_title">Seja um Parceiro</h2>
+      <p style="color:var(--muted); margin-bottom:24px; font-weight:600;" data-i18n="modal_exp_sub">Você oferece tours, cursos ou eventos na Ilha? Divulgue no Portal Oficial.</p>
       
       <form id="expCadastroForm" class="gigiForm">
         <div>
-          <label>Nome da Experiência</label>
+          <label data-i18n="lbl_nome_exp">Nome da Experiência</label>
           <input type="text" placeholder="Ex: Tour Fotográfico ao Pôr do Sol" required />
         </div>
         <div>
-          <label>Seu Nome / Empresa</label>
+          <label data-i18n="lbl_nome_empresa">Seu Nome / Empresa</label>
           <input type="text" placeholder="Nome completo ou Razão Social" required />
         </div>
         <div>
-          <label>WhatsApp</label>
+          <label data-i18n="lbl_whatsapp">WhatsApp</label>
           <input type="tel" placeholder="(21) 99999-9999" required />
         </div>
         <div>
-          <label>Descrição Curta</label>
-          <textarea rows="3" placeholder="Conte um pouco sobre o que você oferece..." required></textarea>
+          <label data-i18n="lbl_desc_curta">Descrição Curta</label>
+          <textarea rows="3" placeholder="..." required></textarea>
         </div>
-        <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px;" id="expSubmitBtn">Solicitar Parceria</button>
+        <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px;" id="expSubmitBtn" data-i18n="btn_solicitar_parceria">Solicitar Parceria</button>
       </form>
 
       <div id="expSuccess" style="display:none; text-align:center; padding:20px;">
-        <h3 style="color:var(--green-dark);">Solicitação Recebida!</h3>
-        <p>Entraremos em contato para validar sua experiência no portal.</p>
-        <button class="btn" style="margin-top:20px; background:#eee;" onclick="closeExpModal()">Fechar</button>
+        <h3 style="color:var(--green-dark);" data-i18n="modal_exp_sucesso_title">Solicitação Recebida!</h3>
+        <p data-i18n="modal_exp_sucesso_sub">Entraremos em contato para validar sua experiência no portal.</p>
+        <button class="btn" style="margin-top:20px; background:#eee;" onclick="closeExpModal()" data-i18n="btn_fechar">Fechar</button>
       </div>
     </div>
   </div>
@@ -102,14 +102,15 @@
   <script>
     if (typeof initCapiTip === 'function') initCapiTip();
 
-    function openExpModal() { document.getElementById('expModal').classList.add('active'); }
-    function closeExpModal() { document.getElementById('expModal').classList.remove('active'); }
+    function openExpModal() { document.getElementById('expModal').classList.add('is-active'); document.getElementById('expModal').style.display='flex'; }
+    function closeExpModal() { document.getElementById('expModal').classList.remove('is-active'); setTimeout(()=>document.getElementById('expModal').style.display='none', 300); }
 
     const form = document.getElementById('expCadastroForm');
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        document.getElementById('expSubmitBtn').innerText = "Enviando...";
+        const btn = document.getElementById('expSubmitBtn');
+        btn.innerText = "Enviando..."; // Fica fixo pra não precisar de tradução dinâmica no JS
         setTimeout(() => {
           form.style.display = 'none';
           document.getElementById('expSuccess').style.display = 'block';

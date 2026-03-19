@@ -544,6 +544,72 @@ const DICT = {
   
   btn_perguntar_gigi_loc: { pt: "Perguntar localização exata para a Gigi", en: "Ask Gigi for exact location", es: "Preguntar ubicación exacta a Gigi" },
 
+  // === PÁGINA: ESPAÇOS PARA EVENTOS ===
+  title_espacos_eventos: { pt: "Espaços para Eventos", en: "Event Spaces", es: "Espacios para Eventos" },
+  sub_espacos_eventos: { pt: "Celebre momentos inesquecíveis cercado pela natureza.", en: "Celebrate unforgettable moments surrounded by nature.", es: "Celebra momentos inolvidables rodeado de naturaleza." },
+  
+  espacos_p1: { pt: "A Ilha da Gigóia também é um destino especial para a realização de <strong>eventos e celebrações</strong>.", en: "Gigóia Island is also a special destination for hosting <strong>events and celebrations</strong>.", es: "La Isla Gigóia también es un destino especial para la realización de <strong>eventos y celebraciones</strong>." },
+  espacos_p2: { pt: "Diversos espaços podem ser alugados para <strong>casamentos, aniversários, confraternizações, eventos corporativos e encontros entre amigos</strong>, sempre com o charme da lagoa e da natureza ao redor.", en: "Various spaces can be rented for <strong>weddings, birthdays, get-togethers, corporate events, and meetings with friends</strong>, always with the charm of the lagoon and surrounding nature.", es: "Diversos espacios pueden ser alquilados para <strong>bodas, cumpleaños, confraternizaciones, eventos corporativos y reuniones entre amigos</strong>, siempre con el encanto de la laguna y la naturaleza alrededor." },
+  espacos_p3: { pt: "Realizar um evento na ilha oferece um cenário diferente e memorável, combinando gastronomia, paisagem e uma atmosfera única dentro da Barra da Tijuca.", en: "Hosting an event on the island offers a different and memorable setting, combining gastronomy, landscape, and a unique atmosphere within Barra da Tijuca.", es: "Realizar un evento en la isla ofrece un escenario diferente y memorable, combinando gastronomía, paisaje y una atmósfera única dentro de Barra da Tijuca." },
+  
+  btn_planeje_gigi: { pt: "Planeje seu evento com a Gigi", en: "Plan your event with Gigi", es: "Planifica tu evento con Gigi" },
+  
+  card_mara_d: { pt: "O cenário perfeito para festas ao pôr do sol com energia leve e visual incrível da lagoa.", en: "The perfect setting for sunset parties with light energy and an incredible view of the lagoon.", es: "El escenario perfecto para fiestas al atardecer con energía ligera y una vista increíble a la laguna." },
+  card_solar_d: { pt: "Casarão icônico com amplo gramado à beira da água, ideal para casamentos e grandes festas.", en: "Iconic mansion with a large lawn by the water, ideal for weddings and large parties.", es: "Casona icónica con un amplio césped junto al agua, ideal para bodas y grandes fiestas." },
+  card_cais_d: { pt: "Tradição, gastronomia de qualidade e espaço coberto e amplo para confraternizações.", en: "Tradition, quality gastronomy, and a large covered space for get-togethers.", es: "Tradición, gastronomía de calidad y un amplio espacio cubierto para confraternizaciones." },
+  card_ocya_d: { pt: "Alta gastronomia premiada em um ambiente sofisticado para eventos exclusivos e inesquecíveis.", en: "Award-winning haute cuisine in a sophisticated environment for exclusive and unforgettable events.", es: "Alta gastronomía premiada en un ambiente sofisticado para eventos exclusivos e inolvidables." },
+
+  // === PÁGINA: EVENTOS E EXPERIÊNCIAS ===
+  title_eventos_exp: { pt: "Eventos & Experiências", en: "Events & Experiences", es: "Eventos y Experiencias" },
+  sub_eventos_exp: { pt: "Conecte-se com a essência da Ilha. De passeios ecológicos a vivências artísticas e culturais.", en: "Connect with the essence of the Island. From ecological tours to artistic and cultural experiences.", es: "Conéctate con la esencia de la Isla. Desde paseos ecológicos hasta vivencias artísticas y culturales." },
+
+  side_badge_exp: { pt: "Ofereça uma<br>Experiência<br>conosco!", en: "Offer an<br>Experience<br>with us!", es: "¡Ofrece una<br>Experiencia<br>con nosotros!" },
+  modal_exp_title: { pt: "Seja um Parceiro", en: "Become a Partner", es: "Conviértete en Socio" },
+  modal_exp_sub: { pt: "Você oferece tours, cursos ou eventos na Ilha? Divulgue no Portal Oficial.", en: "Do you offer tours, courses, or events on the Island? Promote it on the Official Portal.", es: "¿Ofreces tours, cursos o eventos en la Isla? Promociónalo en el Portal Oficial." },
+
+  lbl_nome_exp: { pt: "Nome da Experiência", en: "Experience Name", es: "Nombre de la Experiencia" },
+  lbl_nome_empresa: { pt: "Seu Nome / Empresa", en: "Your Name / Company", es: "Tu Nombre / Empresa" },
+  lbl_whatsapp: { pt: "WhatsApp", en: "WhatsApp", es: "WhatsApp" },
+  lbl_desc_curta: { pt: "Descrição Curta", en: "Short Description", es: "Descripción Corta" },
+  btn_solicitar_parceria: { pt: "Solicitar Parceria", en: "Request Partnership", es: "Solicitar Asociación" },
+
+  modal_exp_sucesso_title: { pt: "Solicitação Recebida!", en: "Request Received!", es: "¡Solicitud Recibida!" },
+  modal_exp_sucesso_sub: { pt: "Entraremos em contato para validar sua experiência no portal.", en: "We will contact you to validate your experience on the portal.", es: "Nos pondremos en contacto para validar tu experiencia en el portal." },
+
+  // === PÁGINA: EXPERIÊNCIA COMPLETA ===
+  badge_melhor_ilha: { pt: "✨ O Melhor da Ilha", en: "✨ The Best of the Island", es: "✨ Lo Mejor de la Isla" },
+  title_exp_completa: { pt: "Experiência Completa", en: "Complete Experience", es: "Experiencia Completa" },
+  sub_exp_completa: { pt: "Não escolha apenas um lugar, viva a Ilha inteira. Criamos o roteiro ideal para você aproveitar cada segundo deste refúgio.", en: "Don't just choose one place, live the entire Island. We created the ideal itinerary for you to enjoy every second of this refuge.", es: "No elijas solo un lugar, vive la Isla entera. Creamos el itinerario ideal para que disfrutes cada segundo de este refugio." },
+  
+  exp_c1_t: { pt: "1. A Chegada", en: "1. The Arrival", es: "1. La Llegada" },
+  exp_c1_d: { pt: "Comece com uma travessia panorâmica pelos canais da \"Veneza Carioca\", observando a fauna local e o clima único da Ilha.", en: "Start with a panoramic crossing through the canals of the \"Carioca Venice\", observing the local fauna and the unique climate of the Island.", es: "Comienza con una travesía panorámica por los canales de la \"Venecia Carioca\", observando la fauna local y el clima único de la Isla." },
+  
+  exp_c2_t: { pt: "2. Gastronomia", en: "2. Gastronomy", es: "2. Gastronomía" },
+  exp_c2_d: { pt: "Um almoço inesquecível em um dos nossos restaurantes selecionados, com o melhor dos frutos do mar e tempero caiçara.", en: "An unforgettable lunch in one of our selected restaurants, with the best seafood and caiçara seasoning.", es: "Un almuerzo inolvidable en uno de nuestros restaurantes seleccionados, con lo mejor de los mariscos y el sazón caiçara." },
+  
+  exp_c3_t: { pt: "3. Pôr do Sol", en: "3. Sunset", es: "3. Puesta de Sol" },
+  exp_c3_d: { pt: "Feche o dia com um drink artesanal em um deck exclusivo, assistindo ao sol se pôr atrás da Pedra da Gávea.", en: "End the day with an artisanal drink on an exclusive deck, watching the sun set behind Pedra da Gávea.", es: "Termina el día con una bebida artesanal en una terraza exclusiva, viendo la puesta de sol detrás de la Pedra da Gávea." },
+  
+  exp_banner_t: { pt: "Quer esse roteiro planejado para você?", en: "Do you want this itinerary planned for you?", es: "¿Quieres este itinerario planificado para ti?" },
+  exp_banner_d: { pt: "A Gigi organiza sua reserva, indica os melhores horários e garante que sua experiência seja impecável.", en: "Gigi organizes your reservation, indicates the best times, and ensures your experience is impeccable.", es: "Gigi organiza tu reserva, indica los mejores horarios y asegura que tu experiencia sea impecable." },
+  btn_reservar_exp_gigi: { pt: "Reservar Experiência com a Gigi", en: "Book Experience with Gigi", es: "Reservar Experiencia con Gigi" },
+
+  // === PÁGINA: FALE CONOSCO ===
+  badge_atendimento: { pt: "Atendimento", en: "Support", es: "Atención" },
+  fale_sub: { pt: "Dúvidas, sugestões ou interesse em parcerias? Nossa equipe e a Gigi estão prontas para te atender.", en: "Questions, suggestions, or interest in partnerships? Our team and Gigi are ready to assist you.", es: "¿Dudas, sugerencias o interés en asociaciones? Nuestro equipo y Gigi están listos para atenderte." },
+  fale_canais_t: { pt: "Canais Diretos", en: "Direct Channels", es: "Canales Directos" },
+  fale_canais_d: { pt: "Precisa de uma resposta rápida? Fale direto com a Gigi pelo WhatsApp ou mande um e-mail para nossa administração.", en: "Need a quick answer? Talk directly to Gigi via WhatsApp or send an email to our administration.", es: "¿Necesitas una respuesta rápida? Habla directamente con Gigi por WhatsApp o envía un correo electrónico a nuestra administración." },
+  fale_iniciar: { pt: "Iniciar Conversa →", en: "Start Chat →", es: "Iniciar Conversación →" },
+  fale_form_t: { pt: "Envie uma Mensagem", en: "Send a Message", es: "Enviar un Mensaje" },
+  fale_form_nome: { pt: "Nome Completo", en: "Full Name", es: "Nombre Completo" },
+  fale_form_assunto: { pt: "Assunto", en: "Subject", es: "Asunto" },
+  fale_opt_sel: { pt: "Selecione...", en: "Select...", es: "Seleccione..." },
+  fale_opt_1: { pt: "Dúvida Geral", en: "General Question", es: "Duda General" },
+  fale_opt_2: { pt: "Quero ser Parceiro", en: "I want to be a Partner", es: "Quiero ser Socio" },
+  fale_opt_3: { pt: "Problema no Site", en: "Website Issue", es: "Problema en el Sitio" },
+  fale_opt_4: { pt: "Sugestão", en: "Suggestion", es: "Sugerencia" },
+  fale_btn_enviar: { pt: "Enviar Mensagem", en: "Send Message", es: "Enviar Mensaje" },
+
   
 
 };
