@@ -166,7 +166,7 @@ function mountHeaderFooter() {
       <div class="footer__content container">
         <div class="footer__col">
           <h2 class="footer__logo">Portal Ilha da Gigóia</h2>
-          <p>Seu guia oficial para descobrir os encantos, sabores e aventuras do nosso paraíso carioca.</p>
+          <p>${t("footer_text")}</p>
           <div class="footer__socials_wrapper">
             ${socialHtml}
           </div>
@@ -176,20 +176,18 @@ function mountHeaderFooter() {
           <h3>Navegue</h3>
           <ul>
             <li><a href="index.html">Início</a></li>
-            <li><a href="a-ilha.html">A Ilha</a></li>
-            <li><a href="passeios-rotas.html">Passeios & Rotas</a></li>
-            <li><a href="comer-beber.html">Comer & Beber</a></li>
-            <li><a href="hospedagem.html">Hospedagem</a></li>
+            <li><a href="a-ilha.html">${t("nav_ilha")}</a></li>
+            <li><a href="passeios-rotas.html">${t("nav_passeios")}</a></li>
+            <li><a href="comer-beber.html">${t("nav_comer")}</a></li>
+            <li><a href="hospedagem.html">${t("nav_hospedagem")}</a></li>
           </ul>
         </div>
         
         <div class="footer__col">
           <h3>Atendimento</h3>
           <ul>
-            <li><a href="#" onclick="openGigiChat(); return false;">Falar com a Gigi</a></li>
-            <li><a href="como-chegar.html">Como Chegar</a></li>
-            <li><a href="fale-conosco.html">Fale Conosco</a></li>
-            <li><a href="termos.html">Termos • Privacidade</a></li>
+            <li><a href="#" onclick="openGigiChat(); return false;">${t("gigi_fab")}</a></li>
+            <li><a href="fale-conosco.html">${t("nav_fale")}</a></li>
           </ul>
         </div>
       </div>
@@ -505,7 +503,6 @@ function setupProgress() {
   if (page === "home") {
     mountHome();
     
-    // Chama a função do Capi SOMENTE SE ELA EXISTIR (Garante que não quebra o site se o arquivo não carregou)
     if (typeof initCapiTip === 'function') {
       initCapiTip();
     }
@@ -523,12 +520,13 @@ function setupProgress() {
   setupHeaderScroll();
   setupReveal();
 })();
-// Procura todas as tags HTML que tenham o atributo "data-i18n" e traduz o texto dentro delas
+
+// O CÉREBRO DA TRADUÇÃO DINÂMICA
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('[data-i18n]').forEach(elemento => {
     const chave = elemento.getAttribute('data-i18n');
     if (DICT[chave]) {
-      elemento.innerHTML = t(chave); // Substitui o texto pelo idioma correto
+      elemento.innerHTML = t(chave);
     }
   });
 });
