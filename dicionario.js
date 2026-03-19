@@ -594,23 +594,17 @@ const DICT = {
   exp_banner_d: { pt: "A Gigi organiza sua reserva, indica os melhores horários e garante que sua experiência seja impecável.", en: "Gigi organizes your reservation, indicates the best times, and ensures your experience is impeccable.", es: "Gigi organiza tu reserva, indica los mejores horarios y asegura que tu experiencia sea impecable." },
   btn_reservar_exp_gigi: { pt: "Reservar Experiência com a Gigi", en: "Book Experience with Gigi", es: "Reservar Experiencia con Gigi" },
 
-  // === PÁGINA: FALE CONOSCO ===
-  badge_atendimento: { pt: "Atendimento", en: "Support", es: "Atención" },
-  fale_sub: { pt: "Dúvidas, sugestões ou interesse em parcerias? Nossa equipe e a Gigi estão prontas para te atender.", en: "Questions, suggestions, or interest in partnerships? Our team and Gigi are ready to assist you.", es: "¿Dudas, sugerencias o interés en asociaciones? Nuestro equipo y Gigi están listos para atenderte." },
-  fale_canais_t: { pt: "Canais Diretos", en: "Direct Channels", es: "Canales Directos" },
-  fale_canais_d: { pt: "Precisa de uma resposta rápida? Fale direto com a Gigi pelo WhatsApp ou mande um e-mail para nossa administração.", en: "Need a quick answer? Talk directly to Gigi via WhatsApp or send an email to our administration.", es: "¿Necesitas una respuesta rápida? Habla directamente con Gigi por WhatsApp o envía un correo electrónico a nuestra administración." },
-  fale_iniciar: { pt: "Iniciar Conversa →", en: "Start Chat →", es: "Iniciar Conversación →" },
-  fale_form_t: { pt: "Envie uma Mensagem", en: "Send a Message", es: "Enviar un Mensaje" },
-  fale_form_nome: { pt: "Nome Completo", en: "Full Name", es: "Nombre Completo" },
-  fale_form_assunto: { pt: "Assunto", en: "Subject", es: "Asunto" },
-  fale_opt_sel: { pt: "Selecione...", en: "Select...", es: "Seleccione..." },
-  fale_opt_1: { pt: "Dúvida Geral", en: "General Question", es: "Duda General" },
-  fale_opt_2: { pt: "Quero ser Parceiro", en: "I want to be a Partner", es: "Quiero ser Socio" },
-  fale_opt_3: { pt: "Problema no Site", en: "Website Issue", es: "Problema en el Sitio" },
-  fale_opt_4: { pt: "Sugestão", en: "Suggestion", es: "Sugerencia" },
-  fale_btn_enviar: { pt: "Enviar Mensagem", en: "Send Message", es: "Enviar Mensaje" },
+  // === PÁGINA: FALE CONOSCO (VERSÃO GIGI DATILÓGRAFA) ===
+  pg_fale_h1: { pt: "Fale Conosco", en: "Contact Us", es: "Contáctenos" },
+  pg_fale_p: { pt: "Dúvidas, anúncios ou parcerias? Envie uma mensagem para nós.", en: "Questions, ads, or partnerships? Send us a message.", es: "¿Dudas, anuncios o asociaciones? Envíenos un mensaje." },
+  fc_intro: { pt: "Estamos aqui para ajudar! Se você tem alguma dúvida sobre a ilha, deseja anunciar seu negócio no Portal Ilha da Gigóia ou propor uma parceria comercial, basta preencher o formulário abaixo que retornaremos em breve.", en: "We're here to help! If you have any questions about the island, want to advertise your business on the Gigóia Island Portal, or propose a business partnership, just fill out the form below and we'll get back to you soon.", es: "¡Estamos aquí para ayudar! Si tiene alguna pregunta sobre la isla, desea anunciar su negocio en el Portal Isla Gigóia o proponer una asociación comercial, simplemente complete el formulario a continuación y le responderemos pronto." },
+  fc_lbl_name: { pt: "Seu nome", en: "Your name", es: "Tu nombre" },
+  fc_lbl_email: { pt: "Seu e-mail", en: "Your email", es: "Tu email" },
+  fc_lbl_phone: { pt: "Telefone para contato", en: "Contact phone", es: "Teléfono de contacto" },
+  fc_lbl_msg: { pt: "Corpo da mensagem", en: "Message body", es: "Cuerpo del mensaje" },
+  fc_btn_send: { pt: "Enviar mensagem", en: "Send message", es: "Enviar mensaje" },
+  fc_feedback_p: { pt: "A Gigi já recebeu sua carta e nossa equipe entrará em contato com você muito em breve.", en: "Gigi has received your letter and our team will get in touch with you very soon.", es: "Gigi ya recebeu su carta y nuestro equipo se pondrá en contacto con usted muy pronto." },
 
-  
 
 };
 
