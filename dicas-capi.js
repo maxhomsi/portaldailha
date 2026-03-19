@@ -6,7 +6,7 @@ const capiTips = [
   {
     pt: "<strong>Barcos 24h:</strong> A travessia principal (pelo deck do metrô Jardim Oceânico) funciona 24 horas por dia. O valor costuma ser tabelado, mas de madrugada pode ter um pequeno acréscimo.",
     en: "<strong>24h Boats:</strong> The main crossing (from the Jardim Oceânico subway deck) operates 24 hours a day. The price is usually fixed, but there might be a small surcharge late at night.",
-    es: "<strong>Barcos 24h:</strong> El cruce principal (por el muelle del metro Jardim Oceânico) funciona as 24 horas. El precio suele ser fijo, pero de madrugada puede tener un pequeño recargo."
+    es: "<strong>Barcos 24h:</strong> El cruce principal (por el muelle del metro Jardim Oceânico) funciona las 24 horas. El precio suele ser fijo, pero de madrugada puede tener un pequeño recargo."
   },
   {
     pt: "<strong>Leve repelente:</strong> Como estamos cercados de lagoa e muita natureza, os mosquitinhos costumam aparecer no fim da tarde. É sempre bom ter um na mochila!",
@@ -60,11 +60,12 @@ function initCapiTip() {
   const tipTextEl = document.getElementById("tipText");
   if (!tipTextEl) return; 
 
-  // Sincronizado com a chave usada no dicionario.js
-  const currentLang = localStorage.getItem('ilg_lang_v1') || 'pt';
+  // Puxa a variável global currentLang gerada pelo dicionario.js. 
+  // Se houver falha, usa 'pt' como segurança.
+  const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
 
   const randomIndex = Math.floor(Math.random() * capiTips.length);
   const selectedTip = capiTips[randomIndex];
 
-  tipTextEl.innerHTML = selectedTip[currentLang] || selectedTip.pt;
+  tipTextEl.innerHTML = selectedTip[lang] || selectedTip.pt;
 }

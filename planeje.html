@@ -26,7 +26,7 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">📝 Roteiro Personalizado</div>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;" data-i18n="badge_plan">📝 Roteiro Personalizado</div>
         <h1 class="reveal" data-i18n="pg_plan_h1">Monte seu roteiro</h1>
         <p class="reveal" data-i18n="pg_plan_p" style="max-width: 700px; margin: 10px auto 0;">Selecione as opções que você quer fazer. Ao enviar, pediremos seu número para te mandar o roteiro completo com preços e opções.</p>
       </div>
@@ -39,7 +39,7 @@
             <div class="capi__ring">
               <img id="capiImg" src="assets/capi.png" alt="Capi" />
             </div>
-            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+            <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
           </div>
           <div class="tip">
             <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
@@ -56,10 +56,23 @@
           <p class="section__subtitle" style="text-align:center; margin:0 0 30px; font-weight: 600; color: #444;" data-i18n="pg_plan_p2">Marque o que você quer fazer e clique em <strong>Enviar roteiro</strong> para a Gigi organizar tudo.</p>
           
           <form id="plannerForm" class="planner">
-            <div class="planner__grid" id="plannerOptions" style="display: grid; gap: 15px; margin-bottom: 30px;"></div>
+            <div class="planner__grid" id="plannerOptions" style="display: grid; gap: 15px; margin-bottom: 30px;">
+               <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 10px; border: 1px solid #eee; border-radius: 8px;">
+                 <input type="checkbox" name="option" value="Ilhas Tijucas">
+                 <span data-i18n="page_pass_c1_t">Ilhas Tijucas</span>
+               </label>
+               <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 10px; border: 1px solid #eee; border-radius: 8px;">
+                 <input type="checkbox" name="option" value="Pantanal Carioca">
+                 <span data-i18n="page_pass_c2_t">Pantanal Carioca</span>
+               </label>
+               <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 10px; border: 1px solid #eee; border-radius: 8px;">
+                 <input type="checkbox" name="option" value="Gastronomia">
+                 <span data-i18n="hm_c2_t">Gastronomia</span>
+               </label>
+            </div>
             
             <div class="planner__actions" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-              <button class="btn btn--green" type="submit" data-i18n="btn_enviar" style="padding: 15px 40px; font-size: 16px;">Enviar roteiro</button>
+              <button class="btn btn--green" type="submit" data-i18n="btn_enviar_roteiro" style="padding: 15px 40px; font-size: 16px;">Enviar roteiro</button>
               <button class="btn" type="button" id="clearPlan" data-i18n="btn_limpar" style="padding: 15px 40px; font-size: 16px; background: #eee; color: #333;">Limpar</button>
             </div>
           </form>
@@ -76,6 +89,28 @@
   <script src="dicionario.js"></script>
   <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
+  <script>
+    if (typeof initCapiTip === 'function') initCapiTip();
+
+    // Lógica simples para o botão enviar abrir a Gigi
+    document.getElementById('plannerForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const selected = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(el => el.value);
+      if (selected.length === 0) {
+        alert(t("alerta_selecione"));
+        return;
+      }
+      openGigiChat();
+      // Opcional: preencher a mensagem da Gigi automaticamente com os itens selecionados
+      const msgArea = document.getElementById('gigiMessage');
+      if (msgArea) {
+        msgArea.value = t("gigi_msg_roteiro") + selected.join(", ");
+      }
+    });
+
+    document.getElementById('clearPlan')?.addEventListener('click', () => {
+      document.getElementById('plannerForm').reset();
+    });
+  </script>
 </body>
 </html>

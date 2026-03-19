@@ -7,6 +7,11 @@ if (typeof DICT === 'undefined' || typeof capiTips === 'undefined') {
   console.warn("Aviso: 'dicionario.js' ou 'dicas-capi.js' não foram carregados. O site pode apresentar textos faltantes.");
 }
 
+// SOLUÇÃO: Se a função t() não existir no momento do carregamento, cria uma versão segura temporária
+if (typeof window.t !== 'function') {
+  window.t = function(key) { return key; };
+}
+
 /* =========================================================
    DADOS DOS CARDS E PÁGINAS (Com Tradução Ativa)
    ========================================================= */
@@ -117,6 +122,9 @@ function mountHeaderFooter() {
   const header = document.getElementById("siteHeader");
   const footer = document.getElementById("siteFooter");
   
+  // SOLUÇÃO: Garante que a variável exista para não quebrar o script no HTML abaixo
+  const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
+  
   if (header) {
     header.innerHTML = `
       <div class="container header__inner">
@@ -129,9 +137,9 @@ function mountHeaderFooter() {
           ${socialHtml}
           
           <select class="lang-switcher" onchange="changeLanguage(this.value)">
-            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
-            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
-            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
+            <option value="pt" ${lang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
+            <option value="en" ${lang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
+            <option value="es" ${lang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
           </select>
 
           <a class="btn btn--green" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
@@ -143,9 +151,9 @@ function mountHeaderFooter() {
           ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
           
           <select class="lang-switcher" onchange="changeLanguage(this.value)" style="margin: 10px 0; width: 100%;">
-            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
-            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
-            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
+            <option value="pt" ${lang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
+            <option value="en" ${lang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
+            <option value="es" ${lang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
           </select>
           
           <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
@@ -536,7 +544,8 @@ function setupProgress() {
   // O CÉREBRO DA TRADUÇÃO DINÂMICA
   document.querySelectorAll('[data-i18n]').forEach(elemento => {
     const chave = elemento.getAttribute('data-i18n');
-    if (DICT[chave]) {
+    // SOLUÇÃO: Verifica se o DICT existe antes de buscar a chave nele
+    if (typeof DICT !== 'undefined' && DICT[chave]) {
       elemento.innerHTML = t(chave);
     }
   });
