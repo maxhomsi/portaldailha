@@ -196,21 +196,21 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 /* =========================================================
    ESTRUTURAS INTERNAS (Secões e Cabeçalhos)
    ========================================================= */
-.section { padding: 60px 0; background: var(--bg); }
+.section { padding: 50px 0; background: var(--bg); }
 .section__title { margin: 0 0 10px; text-align: center; font-size: 48px; font-weight: 900; letter-spacing: -0.02em; color: #2c2f2d; }
 .section__subtitle { margin: 0 0 34px; text-align: center; color: var(--muted); font-size: 18px; font-weight: 800; }
 
-.pageHead { padding: 80px 0 100px; background: var(--green); color: #fff; z-index: 10; }
+.pageHead { padding: 60px 0 70px; background: var(--green); color: #fff; z-index: 10; }
 .pageHead h1, .pageHead p { position: relative; z-index: 15; }
 .pageHead h1 { margin: 0; font-size: 48px; font-weight: 900; }
 .pageHead p { margin: 10px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 18px; font-weight: 700; }
 
 /* =========================================================
-   DICA DA CAPI (Fora do fundo verde)
+   DICA DA CAPI
    ========================================================= */
 .tipRow {
   display: flex; align-items: center; justify-content: center; gap: 30px; max-width: 850px;
-  margin: 40px auto; padding: 30px 40px; border: 1px solid rgba(71, 176, 90, 0.12); border-radius: 30px;
+  margin: 30px auto 40px; padding: 30px 40px; border: 1px solid rgba(71, 176, 90, 0.12); border-radius: 30px;
   background: #fff; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1); z-index: 100;
 }
 main .section .tipRow { margin-top: 0 !important; }
@@ -228,7 +228,8 @@ main .section .tipRow { margin-top: 0 !important; }
 /* =========================================================
    CARDS INTELIGENTES (ALINHAMENTO BLINDADO)
    ========================================================= */
-.cards, .cards--4 { 
+/* CARDS GENÉRICOS (Quebram linha naturalmente) */
+.cards { 
   display: flex; 
   flex-wrap: wrap; 
   justify-content: center; 
@@ -236,41 +237,48 @@ main .section .tipRow { margin-top: 0 !important; }
   gap: 24px; 
   padding: 20px 0; 
 }
-
-.cards > .card, .cards--4 > .card { 
+.cards > .card { 
   width: calc(25% - 18px); 
-  min-width: 260px; 
+  min-width: 220px; 
   max-width: 320px; 
 }
 
-/* =========================================================
-   LAYOUT EXCLUSIVO: BOAS PRÁTICAS (4 Cards + Espaçamentos)
-   ========================================================= */
-body[data-page="boas-praticas"] .section { padding: 15px 0 !important; }
-body[data-page="boas-praticas"] .tipRow { margin-bottom: 25px !important; }
-body[data-page="boas-praticas"] .container[style*="margin-bottom"] { margin-bottom: 30px !important; }
-
-body[data-page="boas-praticas"] .cards,
-body[data-page="boas-praticas"] .cards--4 {
-  display: flex !important;
-  flex-wrap: nowrap !important; /* Trava os 4 na mesma linha rigorosamente */
-  gap: 20px !important;
-  max-width: 1200px;
+/* CARDS 4 COLUNAS FIXAS (Usado no Boas Práticas) */
+.cards--4 {
+  display: flex; 
+  flex-wrap: nowrap !important; /* Trava os 4 na mesma linha no desktop */
+  justify-content: center; 
+  align-items: stretch; 
+  gap: 20px; 
+  padding: 20px 0; 
+  max-width: 1200px; 
   margin: 0 auto;
-  justify-content: space-between;
 }
-body[data-page="boas-praticas"] .cards > .card,
-body[data-page="boas-praticas"] .cards--4 > .card {
-  width: calc(25% - 15px) !important;
-  min-width: 0 !important; /* Remove a limitação padrão de 260px que causava a quebra */
+.cards--4 > .card {
+  width: calc(25% - 15px) !important; 
+  min-width: 0 !important; /* Remove a limitação de tamanho para não forçar a quebra */
   max-width: 300px;
 }
+
+/* =========================================================
+   LAYOUT EXCLUSIVO: BOAS PRÁTICAS E A ILHA (Espaçamentos)
+   ========================================================= */
+body[data-page="boas-praticas"] .section,
+body[data-page="a-ilha"] .section { padding: 15px 0 !important; }
+
+body[data-page="boas-praticas"] .tipRow,
+body[data-page="a-ilha"] .tipRow { margin-bottom: 25px !important; }
+
+body[data-page="boas-praticas"] .container[style*="margin-bottom"],
+body[data-page="a-ilha"] .container[style*="margin-bottom"] { margin-bottom: 30px !important; }
+
 
 /* =========================================================
    LAYOUT EXCLUSIVO: 5 CARDS LADO A LADO (Passeios)
    ========================================================= */
 body[data-page="passeios-rotas"] .cards,
 body[data-page="passeios-rotas"] .cards--4 { 
+  flex-wrap: nowrap !important; /* Força os 5 na mesma linha */
   max-width: 1300px; 
   margin: 0 auto; 
   gap: 16px; 
@@ -278,8 +286,8 @@ body[data-page="passeios-rotas"] .cards--4 {
 
 body[data-page="passeios-rotas"] .cards > .card,
 body[data-page="passeios-rotas"] .cards--4 > .card { 
-  width: calc(20% - 12.8px); 
-  min-width: 190px; 
+  width: calc(20% - 12.8px) !important; 
+  min-width: 0 !important; 
   max-width: 260px; 
 }
 
@@ -451,14 +459,12 @@ body[data-page="passeios-rotas"] .card__body { padding: 18px 16px 16px; }
   .brand__text strong { font-size: 20px; }
   .navWrap, .header__actions .social-links, .header__actions .btn--green { display: none; }
   
-  /* Retorna os cards da Boas Práticas ao fluxo normal no Tablet/Mobile */
-  body[data-page="boas-praticas"] .cards,
-  body[data-page="boas-praticas"] .cards--4 {
+  /* Retorna os cards (Boas Práticas e 4 colunas) ao fluxo normal no Tablet/Mobile */
+  .cards--4 {
     flex-wrap: wrap !important; 
     justify-content: center;
   }
-  body[data-page="boas-praticas"] .cards > .card,
-  body[data-page="boas-praticas"] .cards--4 > .card {
+  .cards--4 > .card {
     width: calc(50% - 10px) !important;
     min-width: 240px !important;
   }
@@ -482,9 +488,7 @@ body[data-page="passeios-rotas"] .card__body { padding: 18px 16px 16px; }
 }
 
 @media (max-width: 600px) { 
-  .cards > .card, .cards--4 > .card, 
-  body[data-page="boas-praticas"] .cards > .card,
-  body[data-page="boas-praticas"] .cards--4 > .card { width: 100% !important; } 
+  .cards > .card, .cards--4 > .card { width: 100% !important; } 
 }
 
 @media (max-width: 560px) {
