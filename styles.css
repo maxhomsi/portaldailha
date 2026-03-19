@@ -24,7 +24,7 @@
   --shadow-card: 0 20px 50px rgba(14, 32, 20, 0.14);
   --shadow-soft: 0 14px 28px rgba(14, 32, 20, 0.10);
   
-  --max: 1180px;
+  --max: 1300px; /* Aumentado para acomodar os 5 cards de passeios sem quebrar */
   
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --t: 240ms;
@@ -100,7 +100,7 @@ img {
    ========================================================= */
 .social-links {
   display: flex;
-  gap: 10px;
+  gap: 8px; /* Reduzido para economizar espaço no header */
   align-items: center;
 }
 
@@ -130,7 +130,7 @@ img {
 }
 
 /* =========================================================
-   CABEÇALHO (HEADER)
+   CABEÇALHO (HEADER) - AJUSTADO PARA 1 LINHA FORÇADA
    ========================================================= */
 .header {
   position: sticky;
@@ -147,25 +147,25 @@ img {
 }
 
 .header__inner {
-  min-height: 90px;
+  min-height: 80px; /* Ligeiramente mais compacto */
   padding: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: nowrap;
+  justify-content: space-between; /* Distribui logo, menu e botões */
+  gap: 15px;
+  flex-wrap: nowrap; /* IMPEDE QUEBRA DE LINHA */
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  gap: 8px;
+  flex-shrink: 0; /* Impede o logo de espremer */
 }
 
 .brand__logo {
-  width: 75px;
-  height: 75px;
+  width: 60px; /* Reduzido levemente para caber tudo */
+  height: 60px;
   object-fit: contain;
 }
 
@@ -176,17 +176,18 @@ img {
 }
 
 .brand__text small {
-  font-size: 11px;
-  letter-spacing: 0.15em;
+  font-size: 10px;
+  letter-spacing: 0.12em;
   font-weight: 800;
   color: #2c7e55;
   text-transform: uppercase;
 }
 
 .brand__text strong {
-  font-size: 24px;
+  font-size: 20px; /* Reduzido levemente */
   font-weight: 900;
   color: #1f5f88;
+  white-space: nowrap; /* Não quebra o nome */
 }
 
 .brand__text strong span {
@@ -198,22 +199,25 @@ img {
    ========================================================= */
 .navWrap {
   background: rgba(71, 176, 90, 0.06);
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  flex-shrink: 1; /* Permite espremer um pouco se necessário, mas... */
+  overflow: hidden; /* Evita vazamentos */
 }
 
 .nav {
   display: flex;
-  gap: 14px;
+  gap: 6px; /* Espaçamento menor entre links */
   font-weight: 800;
-  font-size: 14px;
+  font-size: 13.5px; /* Fonte otimizada */
+  white-space: nowrap; /* IMPEDE QUEBRA DE LINHA NO TEXTO DO MENU */
 }
 
 .nav a {
   transition: all var(--t);
   position: relative;
-  padding: 6px 12px;
+  padding: 8px 12px; /* Padding reduzido */
   border-radius: 100px;
 }
 
@@ -222,8 +226,8 @@ img {
 }
 
 .nav a[aria-current="page"] {
-  background-color: rgba(71, 176, 90, 0.15) !important;
-  color: var(--green) !important;
+  background-color: var(--green) !important;
+  color: #fff !important;
   font-weight: 900 !important;
 }
 
@@ -231,20 +235,18 @@ img {
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  gap: 12px;
+  flex-shrink: 0; /* Impede os botões de espremer */
 }
 
 .header__actions .social-links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
-  margin-right: 6px;
+  display: flex; /* Volta para flex, grid estava causando problemas */
+  gap: 6px;
 }
 
 .header__actions .social-icon {
-  width: 28px;
-  height: 28px;
+  width: 32px; /* Menor no header */
+  height: 32px;
 }
 
 .header__actions .social-icon svg {
@@ -277,18 +279,19 @@ img {
    BOTÕES GERAIS E EFEITO DE BRILHO (SHINE)
    ========================================================= */
 .btn {
-  height: 44px; /* Diminuído para ficar mais elegante */
-  padding: 0 24px;
-  font-size: 14px; /* Fonte ajustada para proporção */
+  height: 40px; /* Reduzido no geral para alinhar ao header */
+  padding: 0 20px;
+  font-size: 14px; 
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 900;
   cursor: pointer;
   transition: all var(--t) var(--ease);
   border: none;
+  white-space: nowrap; /* Não quebra texto de botão */
 }
 
 .btn--green,
@@ -469,12 +472,12 @@ img {
   flex-wrap: wrap;
 }
 
-/* Transforma TODOS os links da Hero em botões padronizados (menores e elegantes) */
+/* Transforma TODOS os links da Hero em botões padronizados */
 .hero__actions a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px; /* Combinando com o tamanho ajustado */
+  height: 44px;
   padding: 0 24px;
   font-size: 14px;
   border-radius: 50px;
@@ -491,7 +494,6 @@ img {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Hover do botão secundário para interatividade */
 .hero__actions a:not(.btn--green):hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -533,33 +535,28 @@ img {
 }
 
 /* =========================================================
-   DICA DA CAPI (ATUALIZADA PADRÃO OURO)
+   DICA DA CAPI (CORRIGIDA: FLUTUANTE, ELEGANTE E PROPORCIONAL)
    ========================================================= */
 .tipRow {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Alinhamento mais natural com a imagem */
   align-items: center;
-  gap: 25px; /* Alinhamento mais próximo */
-  margin: 40px auto;
+  gap: 25px; 
+  margin: -80px auto 40px; /* Sobe e sobrepõe a onda verde! */
   position: relative;
-  max-width: 800px;
+  z-index: 100; /* Garante que fique POR CIMA do background verde */
+  max-width: 900px;
   background: #fff;
-  padding: 25px;
+  padding: 25px 40px; /* Mais respiro horizontal */
   border-radius: 24px;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Sombra elegante */
   border: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Sobrescrevendo a flutuação antiga para o novo grid interno das páginas */
-main .section .tipRow {
-  margin-top: -30px; 
-  z-index: 100;
 }
 
 .capi {
   position: relative;
   flex-shrink: 0;
-  transform: none; /* Resetando transform antigo */
+  transform: none; 
   margin-right: 0;
 }
 
@@ -584,20 +581,21 @@ main .section .tipRow {
 
 .capi__tag {
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--green);
   color: #fff;
   font-weight: 900;
-  padding: 4px 12px;
+  padding: 6px 14px; /* Tag um pouco maior e mais visível */
   border-radius: 20px;
   font-size: 11px;
   white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(71, 176, 90, 0.3); /* Sombra na tag */
 }
 
 .tip {
-  background: transparent; /* Agora o fundo é o tipRow */
+  background: transparent;
   padding: 0;
   border: none;
   box-shadow: none;
@@ -608,7 +606,7 @@ main .section .tipRow {
   margin: 0;
   color: var(--text);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 16px;
 }
 
@@ -622,35 +620,47 @@ main .section .tipRow {
   padding: 20px 0;
 }
 
-/* AJUSTE MÁGICO: Se houver exatamente 3 cards (como na Hospedagem e Home), centraliza em 3 colunas! */
+/* AJUSTE PARA QUANDO HOUVER 3 CARDS */
 .cards:has(> .card:last-child:nth-child(3)) {
   grid-template-columns: repeat(3, 1fr);
   max-width: 1050px;
   margin: 0 auto;
 }
 
-/* AJUSTE PARA 5 CARDS NA PÁGINA DE PASSEIOS */
+/* MÁGICA: 5 CARDS NA PÁGINA DE PASSEIOS ALINHADOS NA MESMA LINHA */
 body[data-page="passeios-rotas"] .cards {
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
 body[data-page="passeios-rotas"] .card__img {
-  height: 160px;
+  height: 150px; /* Reduz a altura da imagem para não alongar muito o card */
 }
 
 body[data-page="passeios-rotas"] .card__title {
-  font-size: 17px;
-  margin-bottom: 6px;
+  font-size: 18px; /* Título um pouco menor */
+  margin-bottom: 8px;
 }
 
 body[data-page="passeios-rotas"] .card__desc {
-  font-size: 13px;
+  font-size: 13px; /* Descrição menor para caber texto */
   margin-bottom: 12px;
 }
 
 body[data-page="passeios-rotas"] .card__body {
-  padding: 18px 16px 16px;
+  padding: 20px 16px; /* Padding interno menor */
+}
+
+body[data-page="passeios-rotas"] .card__icon {
+  width: 32px; /* Ícone menor proporcional ao card */
+  height: 32px;
+  top: 12px;
+  left: 12px;
+}
+
+body[data-page="passeios-rotas"] .card__icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 .card {
@@ -761,7 +771,7 @@ body[data-page="passeios-rotas"] .card__body {
    CABEÇALHOS DAS PÁGINAS INTERNAS
    ========================================================= */
 .pageHead {
-  padding: 80px 0 100px; /* Mais respiro por causa da falta de badge */
+  padding: 80px 0 120px; /* Respiro maior no fundo para a Dica do Capi sobrepor com estilo */
   background: var(--green);
   color: #fff;
   z-index: 10;
@@ -1283,9 +1293,10 @@ body[data-page="passeios-rotas"] .card__body {
 }
 
 /* =========================================================
-   RESPONSIVIDADE E MEDIA QUERIES (SEMPRE NO FINAL)
+   RESPONSIVIDADE E MEDIA QUERIES
    ========================================================= */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+  /* Se a tela não comportar 5, ajusta pra 3 na de passeios */
   body[data-page="passeios-rotas"] .cards {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1301,11 +1312,15 @@ body[data-page="passeios-rotas"] .card__body {
   .cards--4 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .header__inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media (max-width: 960px) {
-  .brand__logo { width: 60px; height: 60px; }
-  .brand__text strong { font-size: 20px; }
+  .brand__logo { width: 55px; height: 55px; }
+  .brand__text strong { font-size: 18px; }
   .navWrap { display: none; }
   .burger { display: inline-flex; align-items: center; justify-content: center; }
   .mobileNav { display: block; }
@@ -1329,7 +1344,6 @@ body[data-page="passeios-rotas"] .card__body {
     max-height: 90%;
   }
   
-  /* Footer compactado no Celular */
   .footer { margin-top: 60px; }
   .footer::before { top: -40px; height: 41px; }
   
@@ -1342,11 +1356,6 @@ body[data-page="passeios-rotas"] .card__body {
   
   .footer__col p { margin: 0 auto 15px; }
   .footer__socials { justify-content: center; }
-  
-  .footer__col ul li a {
-    display: inline-block;
-    padding: 4px 0;
-  }
 }
 
 @media (max-width: 600px) {
@@ -1375,9 +1384,13 @@ body[data-page="passeios-rotas"] .card__body {
   .pageHead { padding: 40px 0 80px; }
   .pageHead h1 { font-size: 32px; }
 
-  .tipRow { flex-direction: column; margin-top: 20px; gap: 15px; }
-  .capi { margin-right: 0; transform: none; z-index: 20; }
-  .tip { padding: 0; text-align: center; }
+  /* Ajuste responsivo da Dica do Capi */
+  .tipRow { 
+    flex-direction: column; 
+    margin-top: -40px; 
+    padding: 20px;
+    text-align: center;
+  }
   
   .jack-block {
     margin-top: 80px; padding: 120px 20px 24px 20px !important;
@@ -1390,6 +1403,4 @@ body[data-page="passeios-rotas"] .card__body {
   
   .gigiBox { width: calc(100% - 40px); bottom: 80px; }
   .lang-switcher { padding: 0 8px; font-size: 13px; height: 38px; }
-  
-  .side-badge { padding: 10px 12px; font-size: 11px; }
 }
