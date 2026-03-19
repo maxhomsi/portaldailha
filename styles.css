@@ -64,7 +64,7 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 }
 
 /* =========================================================
-   CABEÇALHO E NAVEGAÇÃO (VISUAL IGUAL AO PRINT)
+   CABEÇALHO E NAVEGAÇÃO
    ========================================================= */
 .header {
   position: sticky; top: 0; z-index: 999; border-bottom: 1px solid var(--line); backdrop-filter: blur(10px);
@@ -74,12 +74,7 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 
 .header__inner {
   min-height: 90px;
-  padding: 10px 0; 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  gap: 20px; 
-  flex-wrap: nowrap;
+  padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: nowrap;
 }
 
 .brand { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; }
@@ -89,7 +84,7 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 .brand__text strong { font-size: 22px; font-weight: 900; color: #1f5f88; white-space: nowrap; line-height: 1.1; }
 .brand__text strong span { color: var(--green-dark); }
 
-/* PÍLULA CENTRAL AMPLIADA E ESPAÇADA */
+/* PÍLULA CENTRAL */
 .navWrap { 
   flex: 1; 
   max-width: 720px; 
@@ -125,7 +120,7 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 .social-icon svg { width: 18px; height: 18px; fill: currentColor; }
 .social-icon:hover { background: var(--green); color: #fff; transform: translateY(-4px) scale(1.1) rotate(5deg); box-shadow: 0 8px 16px rgba(71, 176, 90, 0.3); }
 
-/* Grid 2x2 Perfeito para Redes Sociais no Header */
+/* Grid 2x2 no Header */
 .header__actions .social-links {
   display: grid;
   grid-template-columns: repeat(2, 26px);
@@ -140,13 +135,10 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 }
 .header__actions .social-icon svg { width: 12px; height: 12px; }
 
-/* Select de Idioma Robusto */
+/* Select de Idioma */
 .lang-switcher, .gigiForm input, .gigiForm textarea { font-family: inherit; outline: none; }
 .lang-switcher {
-  height: 44px; 
-  padding: 0 12px; 
-  border: 1px solid rgba(0, 0, 0, 0.10); 
-  border-radius: var(--radius-btn);
+  height: 44px; padding: 0 12px; border: 1px solid rgba(0, 0, 0, 0.10); border-radius: var(--radius-btn);
   background: #fff; color: var(--text); font-size: 14px; font-weight: 800; cursor: pointer; transition: all var(--t);
 }
 .lang-switcher:hover { border-color: var(--green); box-shadow: 0 4px 12px rgba(71, 176, 90, 0.15); }
@@ -165,7 +157,6 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 }
 .btn--green:hover, .gigiSend:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 14px 26px rgba(71, 176, 90, 0.30); }
 
-/* Ajuste do botão principal do Header para ficar igual ao print */
 .header__actions .btn--green {
   height: 44px;
   padding: 0 24px;
@@ -253,6 +244,29 @@ main .section .tipRow { margin-top: 0 !important; }
 }
 
 /* =========================================================
+   LAYOUT EXCLUSIVO: BOAS PRÁTICAS (4 Cards + Espaçamentos)
+   ========================================================= */
+body[data-page="boas-praticas"] .section { padding: 15px 0 !important; }
+body[data-page="boas-praticas"] .tipRow { margin-bottom: 25px !important; }
+body[data-page="boas-praticas"] .container[style*="margin-bottom"] { margin-bottom: 30px !important; }
+
+body[data-page="boas-praticas"] .cards,
+body[data-page="boas-praticas"] .cards--4 {
+  display: flex !important;
+  flex-wrap: nowrap !important; /* Trava os 4 na mesma linha rigorosamente */
+  gap: 20px !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+body[data-page="boas-praticas"] .cards > .card,
+body[data-page="boas-praticas"] .cards--4 > .card {
+  width: calc(25% - 15px) !important;
+  min-width: 0 !important; /* Remove a limitação padrão de 260px que causava a quebra */
+  max-width: 300px;
+}
+
+/* =========================================================
    LAYOUT EXCLUSIVO: 5 CARDS LADO A LADO (Passeios)
    ========================================================= */
 body[data-page="passeios-rotas"] .cards,
@@ -264,8 +278,8 @@ body[data-page="passeios-rotas"] .cards--4 {
 
 body[data-page="passeios-rotas"] .cards > .card,
 body[data-page="passeios-rotas"] .cards--4 > .card { 
-  width: calc(20% - 12.8px); /* Matemática exata para caberem 5 */
-  min-width: 210px; 
+  width: calc(20% - 12.8px); 
+  min-width: 190px; 
   max-width: 260px; 
 }
 
@@ -273,7 +287,6 @@ body[data-page="passeios-rotas"] .card__img { height: 160px; }
 body[data-page="passeios-rotas"] .card__title { margin-bottom: 6px; font-size: 17px; }
 body[data-page="passeios-rotas"] .card__desc { margin-bottom: 12px; font-size: 13px; }
 body[data-page="passeios-rotas"] .card__body { padding: 18px 16px 16px; }
-
 
 /* A ESTRUTURA BLINDADA DO CARD */
 .card { 
@@ -399,6 +412,17 @@ body[data-page="passeios-rotas"] .card__body { padding: 18px 16px 16px; }
 .footer__col ul li a { color: rgba(255, 255, 255, 0.85); font-size: 14px; font-weight: 600; text-decoration: none; transition: color var(--t); }
 .footer__col ul li a:hover { color: #fff; text-decoration: underline; }
 .footer__socials_wrapper { margin-top: 15px; }
+
+/* Cor específica para ícones sociais no footer (branco para destacar) */
+.footer .social-icon { 
+  background: rgba(255, 255, 255, 0.15); 
+  color: var(--white); 
+}
+.footer .social-icon:hover { 
+  background: var(--white); 
+  color: var(--green-dark); 
+}
+
 .footer__bottom { max-width: var(--max); margin: 0 auto; padding: 15px 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.15); color: rgba(255, 255, 255, 0.7); text-align: center; font-size: 13px; font-weight: 600; }
 
 /* =========================================================
@@ -427,6 +451,18 @@ body[data-page="passeios-rotas"] .card__body { padding: 18px 16px 16px; }
   .brand__text strong { font-size: 20px; }
   .navWrap, .header__actions .social-links, .header__actions .btn--green { display: none; }
   
+  /* Retorna os cards da Boas Práticas ao fluxo normal no Tablet/Mobile */
+  body[data-page="boas-praticas"] .cards,
+  body[data-page="boas-praticas"] .cards--4 {
+    flex-wrap: wrap !important; 
+    justify-content: center;
+  }
+  body[data-page="boas-praticas"] .cards > .card,
+  body[data-page="boas-praticas"] .cards--4 > .card {
+    width: calc(50% - 10px) !important;
+    min-width: 240px !important;
+  }
+  
   .burger { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(0,0,0,0.1); border-radius: var(--radius-btn); background: #fff; font-size: 20px; }
   .mobileNav { display: block; padding: 15px 0; border-top: 1px solid var(--line); }
   .mobileNav__inner { display: grid; gap: 10px; } .mobileNav a { padding: 10px; font-weight: 900; }
@@ -446,7 +482,9 @@ body[data-page="passeios-rotas"] .card__body { padding: 18px 16px 16px; }
 }
 
 @media (max-width: 600px) { 
-  .cards--4 { grid-template-columns: 1fr; } 
+  .cards > .card, .cards--4 > .card, 
+  body[data-page="boas-praticas"] .cards > .card,
+  body[data-page="boas-praticas"] .cards--4 > .card { width: 100% !important; } 
 }
 
 @media (max-width: 560px) {
