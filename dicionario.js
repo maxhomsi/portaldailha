@@ -285,6 +285,266 @@ const DICT = {
 
   btn_voltar_comer_beber: { pt: "← Voltar para Onde Comer e Beber", en: "← Back to Where to Eat & Drink", es: "← Volver a Dónde Comer y Beber" },
 
+  // === PÁGINA: BOAS PRÁTICAS ===
+  title_boas_praticas: { pt: "Boas Práticas", en: "Good Practices", es: "Buenas Prácticas" },
+  sub_boas_praticas: { pt: "A Ilha da Gigóia é um ecossistema vivo e uma comunidade vibrante. Ajude-nos a manter este paraíso preservado seguindo estas dicas simples.", en: "Gigóia Island is a living ecosystem and a vibrant community. Help us keep this paradise preserved by following these simple tips.", es: "La Isla Gigóia es un ecosistema vivo y una comunidad vibrante. Ayúdanos a mantener este paraíso preservado siguiendo estos sencillos consejos." },
+  bp_intro: { pt: "A Ilha da Gigóia é um lugar especial que combina natureza, comunidade local e turismo. Para que todos possam aproveitar a visita e para preservar o ambiente da ilha, algumas boas práticas são importantes.", en: "Gigóia Island is a special place that combines nature, local community, and tourism. So everyone can enjoy the visit and to preserve the island's environment, some good practices are important.", es: "La Isla Gigóia es un lugar especial que combina naturaleza, comunidad local y turismo. Para que todos puedan disfrutar la visita y para preservar el medio ambiente de la isla, algunas buenas prácticas son importantes." },
+  
+  bp_card1_t: { pt: "Respeite a Natureza", en: "Respect Nature", es: "Respeta la Naturaleza" },
+  bp_card1_d: { pt: "A região abriga diversas espécies de aves e peixes. Evite jogar lixo na água ou áreas naturais e ajude a manter o local preservado.", en: "The region is home to various species of birds and fish. Avoid throwing trash in the water or natural areas and help keep the place preserved.", es: "La región alberga diversas especies de aves y peces. Evita tirar basura en el agua o áreas naturales y ayuda a mantener el lugar preservado." },
+  
+  bp_card2_t: { pt: "Negócios Locais", en: "Local Businesses", es: "Negocios Locales" },
+  bp_card2_d: { pt: "Valorize o comércio local administrado por moradores. Conheça a gastronomia e produtos artesanais da região.", en: "Value local businesses run by residents. Discover the region's gastronomy and handcrafted products.", es: "Valora el comercio local administrado por los residentes. Conoce la gastronomía y los productos artesanales de la región." },
+  
+  bp_card3_t: { pt: "Ambiente Tranquilo", en: "Quiet Environment", es: "Ambiente Tranquilo" },
+  bp_card3_d: { pt: "A ilha tem atmosfera de vila. Respeite os moradores e evite barulho excessivo, principalmente em áreas residenciais.", en: "The island has a village atmosphere. Respect the residents and avoid excessive noise, especially in residential areas.", es: "La isla tiene un ambiente de pueblo. Respeta a los residentes y evita el ruido excesivo, especialmente en áreas residenciales." },
+  
+  bp_card4_t: { pt: "Embarque Seguro", en: "Safe Boarding", es: "Embarque Seguro" },
+  bp_card4_d: { pt: "Aguarde sua vez de embarcar e siga as orientações dos barqueiros para uma travessia organizada e segura.", en: "Wait for your turn to board and follow the boatmen's instructions for an organized and safe crossing.", es: "Espera tu turno para embarcar y sigue las instrucciones de los barqueros para una travesía organizada y segura." },
+  
+  bp_box_t: { pt: "🗑️ Cuide do Lixo", en: "🗑️ Take Care of Your Trash", es: "🗑️ Cuida la Basura" },
+  bp_box_d: { pt: "Sempre utilize lixeiras ou leve seu lixo com você até encontrar um local adequado para descartá-lo. Pequenas atitudes ajudam a manter a ilha bonita e agradável para todos.", en: "Always use trash cans or take your trash with you until you find an appropriate place to dispose of it. Small actions help keep the island beautiful and pleasant for everyone.", es: "Utiliza siempre los basureros o lleva tu basura contigo hasta encontrar un lugar adecuado para desecharla. Pequeñas acciones ayudan a mantener la isla hermosa y agradable para todos." },
+
+  // === PÁGINA: CAFÉS E LANCHES ===
+  title_cafes: { pt: "Cafés e Lanches", en: "Cafes & Snacks", es: "Cafeterías y Snacks" },
+  sub_cafes: { pt: "Comece o dia com tranquilidade ou faça uma pausa deliciosa para recarregar as energias.", en: "Start your day peacefully or take a delicious break to recharge your energy.", es: "Comienza el día con tranquilidad o haz una pausa deliciosa para recargar energías." },
+  cafes_h2: { pt: "Onde tomar um bom café", en: "Where to have a good coffee", es: "Dónde tomar un buen café" },
+  cafes_p: { pt: "Opções charmosas com bolos caseiros, lanches rápidos e muito sabor.", en: "Charming options with homemade cakes, quick snacks, and lots of flavor.", es: "Opciones encantadoras con pasteles caseros, bocadillos rápidos y mucho sabor." },
+  
+  // Descrições dos Cards
+  desc_poesia: { pt: "Mistura cafeteria com arte e poesia em um ambiente super acolhedor. O lugar perfeito para começar o dia com um café especial e relaxar na ilha.", en: "Mixes a coffee shop with art and poetry in a super cozy environment. The perfect place to start the day with a special coffee and relax on the island.", es: "Mezcla cafetería con arte y poesía en un ambiente súper acogedor. El lugar perfecto para empezar el día con un café especial y relajarse en la isla." },
+  desc_cantinho: { pt: "Cafeteria charmosa conhecida pelo cardápio variado. Ideal para um café da manhã relaxante ou um lanche da tarde depois de explorar a região.", en: "Charming cafe known for its varied menu. Ideal for a relaxing breakfast or an afternoon snack after exploring the region.", es: "Cafetería encantadora conocida por su menú variado. Ideal para un desayuno relajante o un refrigerio por la tarde después de explorar la región." },
+  desc_parada: { pt: "Ponto de parada obrigatório com deliciosos hambúrgueres preparados na hora. Ambiente descontraído para um lanche reforçado no início da noite.", en: "Mandatory stop with delicious freshly made burgers. Relaxed atmosphere for a hearty snack early in the evening.", es: "Parada obligatoria con deliciosas hamburguesas preparadas al momento. Ambiente relajado para un buen bocadillo a primera hora de la noche." },
+  desc_gourmet: { pt: "Uma opção versátil e sem complicação. Perfeito para fazer uma pausa entre um passeio de barco e uma caminhada pelas ruelas da ilha.", en: "A versatile and uncomplicated option. Perfect for taking a break between a boat ride and a walk through the island's narrow streets.", es: "Una opción versátil y sin complicaciones. Perfecto para hacer una pausa entre un paseo en barco y un paseo por las callejuelas de la isla." },
+  // === PÁGINA: CAFÉ POESIA ===
+  badge_poesia: { pt: "☕ Café & Inspiração", en: "☕ Coffee & Inspiration", es: "☕ Café e Inspiración" },
+  title_poesia: { pt: "Café Poesia", en: "Café Poesia", es: "Café Poesia" },
+  sub_poesia: { pt: "Um espaço onde o tempo para. Cafés selecionados, doçuras artesanais e o clima mais acolhedor da ilha.", en: "A space where time stops. Selected coffees, artisanal sweets, and the most welcoming atmosphere on the island.", es: "Un espacio donde el tiempo se detiene. Cafés seleccionados, dulces artesanales y el ambiente más acogedor de la isla." },
+  
+  poesia_sobre_titulo: { pt: "O Refúgio Perfeito", en: "The Perfect Refuge", es: "El Refugio Perfecto" },
+  poesia_sobre_p: { pt: "O <strong>Café Poesia</strong> nasceu do desejo de criar um ambiente onde a correria do Rio de Janeiro não entra. Aqui, cada detalhe convida ao relaxamento, desde a trilha sonora suave até o aroma de café fresquinho que invade o espaço.", en: "<strong>Café Poesia</strong> was born from the desire to create an environment where the hustle and bustle of Rio de Janeiro does not enter. Here, every detail invites relaxation, from the soft soundtrack to the aroma of freshly brewed coffee that fills the space.", es: "El <strong>Café Poesia</strong> nació del deseo de crear un ambiente donde el ajetreo de Río de Janeiro no entra. Aquí, cada detalle invita a la relajación, desde la suave banda sonora hasta el aroma a café recién hecho que invade el espacio." },
+  
+  poesia_dest_titulo: { pt: "Para Saborear", en: "To Savor", es: "Para Saborear" },
+  poesia_dest_1: { pt: "✓ Cafés Coados e Espresso", en: "✓ Filtered & Espresso Coffees", es: "✓ Cafés Filtrados y Espresso" },
+  poesia_dest_2: { pt: "✓ Bolos do Dia", en: "✓ Cakes of the Day", es: "✓ Pasteles del Día" },
+  poesia_dest_3: { pt: "✓ Quiches e Sanduíches", en: "✓ Quiches & Sandwiches", es: "✓ Quiches y Sándwiches" },
+  poesia_dest_4: { pt: "✓ Chás Gelados Naturais", en: "✓ Natural Iced Teas", es: "✓ Tés Helados Naturales" },
+  
+  poesia_vibe_titulo: { pt: "Vibe", en: "Vibe", es: "Vibra" },
+  poesia_vibe_p: { pt: "Lugar ideal para leitura, home office ou conversas baixas.", en: "Ideal place for reading, home office, or quiet conversations.", es: "Lugar ideal para lectura, home office o conversaciones en voz baja." },
+  
+  poesia_dif_titulo: { pt: "Diferencial", en: "Differential", es: "Diferencial" },
+  poesia_dif_p: { pt: "📖 Cantinho de livros e arte local.", en: "📖 Corner of books and local art.", es: "📖 Rincón de libros y arte local." },
+  
+  btn_voltar_cafe_lanches: { pt: "← Voltar para Café & Lanches", en: "← Back to Cafes & Snacks", es: "← Volver a Cafeterías y Snacks" },
+
+  // === PÁGINA: CANTINHO DO CAFÉ ===
+  badge_cantinho: { pt: "☕ Pausa & Sabor", en: "☕ Pause & Flavor", es: "☕ Pausa y Sabor" },
+  title_cantinho: { pt: "Cantinho do Café", en: "Cantinho do Café", es: "Cantinho do Café" },
+  sub_cantinho: { pt: "Um espaço charmoso criado para quem não abre mão de um bom café e um atendimento carinhoso.", en: "A charming space created for those who don't compromise on good coffee and affectionate service.", es: "Un espacio encantador creado para quienes no renuncian a un buen café y una atención cariñosa." },
+  
+  cantinho_sobre_titulo: { pt: "Sabor em cada detalhe", en: "Flavor in every detail", es: "Sabor en cada detalle" },
+  cantinho_sobre_p: { pt: "O <strong>Cantinho do Café</strong> é aquele lugar especial onde o tempo parece passar mais devagar. Perfeito para começar o dia com energia ou para uma pausa relaxante à tarde, oferecemos uma seleção de grãos e acompanhamentos feitos com muito amor.", en: "<strong>Cantinho do Café</strong> is that special place where time seems to pass more slowly. Perfect to start the day with energy or for a relaxing afternoon break, we offer a selection of beans and sides made with a lot of love.", es: "El <strong>Cantinho do Café</strong> es ese lugar especial donde el tiempo parece pasar más lentamente. Perfecto para comenzar el día con energía o para una pausa relajante por la tarde, ofrecemos una selección de granos y acompañamientos hechos con mucho amor." },
+  
+  cantinho_esp_titulo: { pt: "Especialidades", en: "Specialties", es: "Especialidades" },
+  cantinho_esp_1: { pt: "✓ Café Coado na Hora", en: "✓ Freshly Brewed Drip Coffee", es: "✓ Café Filtrado al Instante" },
+  cantinho_esp_2: { pt: "✓ Pão de Queijo Recheado", en: "✓ Stuffed Cheese Bread", es: "✓ Pan de Queso Relleno" },
+  cantinho_esp_3: { pt: "✓ Bolos Caseiros Variados", en: "✓ Various Homemade Cakes", es: "✓ Pasteles Caseros Variados" },
+  cantinho_esp_4: { pt: "✓ Sanduíches Naturais", en: "✓ Natural Sandwiches", es: "✓ Sándwiches Naturales" },
+  
+  cantinho_vibe_titulo: { pt: "Vibe", en: "Vibe", es: "Vibra" },
+  cantinho_vibe_p: { pt: "Ambiente íntimo e perfeito para um bom papo.", en: "Intimate atmosphere, perfect for a good chat.", es: "Ambiente íntimo y perfecto para una buena charla." },
+  
+  cantinho_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
+  cantinho_dest_p: { pt: "☕ Grãos selecionados da região.", en: "☕ Selected beans from the region.", es: "☕ Granos seleccionados de la región." },
+
+  // === PÁGINA: CASA ESTÁTUA ===
+  badge_estatua: { pt: "🗿 Arte & Curiosidade", en: "🗿 Art & Curiosity", es: "🗿 Arte y Curiosidad" },
+  title_estatua: { pt: "Casa Estátua", en: "Casa Estátua", es: "Casa Estátua" },
+  sub_estatua: { pt: "Um dos pontos mais fotografados e icônicos da ilha, onde a arte se mistura com a paisagem urbana da Gigóia.", en: "One of the most photographed and iconic spots on the island, where art blends with Gigóia's urban landscape.", es: "Uno de los puntos más fotografiados e icónicos de la isla, donde el arte se mezcla con el paisaje urbano de Gigóia." },
+  
+  estatua_sobre_titulo: { pt: "Um Ícone Visual", en: "A Visual Icon", es: "Un Ícono Visual" },
+  estatua_sobre_p: { pt: "A <strong>Casa Estátua</strong> chama a atenção de todos que caminham pelas ruelas da Ilha da Gigóia. Com sua estética peculiar e a presença marcante de elementos artísticos em sua fachada, ela se tornou um ponto de referência para turistas e amantes da fotografia.", en: "The <strong>Casa Estátua</strong> catches the eye of everyone walking through the narrow streets of Gigóia Island. With its peculiar aesthetics and the strong presence of artistic elements on its facade, it has become a landmark for tourists and photography lovers.", es: "La <strong>Casa Estátua</strong> llama la atención de todos los que pasean por las callejuelas de la Isla Gigóia. Con su estética peculiar y la fuerte presencia de elementos artísticos en su fachada, se ha convertido en un punto de referencia para turistas y amantes de la fotografía." },
+  
+  estatua_observar_titulo: { pt: "O que observar", en: "What to look for", es: "Qué observar" },
+  estatua_obs_1: { pt: "✓ Esculturas na Fachada", en: "✓ Facade Sculptures", es: "✓ Esculturas en la Fachada" },
+  estatua_obs_2: { pt: "✓ Arquitetura Criativa", en: "✓ Creative Architecture", es: "✓ Arquitectura Creativa" },
+  estatua_obs_3: { pt: "✓ Integração com as Plantas", en: "✓ Integration with Plants", es: "✓ Integración con las Plantas" },
+  estatua_obs_4: { pt: "✓ Detalhes Artesanais", en: "✓ Handcrafted Details", es: "✓ Detalles Artesanales" },
+  
+  estatua_dica_titulo: { pt: "Dica", en: "Tip", es: "Consejo" },
+  estatua_dica_p: { pt: "Prepare a câmera! É um dos melhores ângulos para registrar a identidade única da ilha.", en: "Get your camera ready! It's one of the best angles to capture the unique identity of the island.", es: "¡Prepara la cámara! Es uno de los mejores ángulos para capturar la identidad única de la isla." },
+  
+  estatua_curiosidade_titulo: { pt: "Curiosidade", en: "Fun Fact", es: "Curiosidad" },
+  estatua_curiosidade_p: { pt: "📸 Ponto de parada obrigatória em tours fotográficos.", en: "📸 Mandatory stop on photography tours.", es: "📸 Parada obligatoria en tours fotográficos." },
+  
+  btn_saber_mais_gigi: { pt: "Saber mais com a Gigi", en: "Learn more with Gigi", es: "Saber más con Gigi" },
+  btn_voltar_inicio: { pt: "← Voltar para o Início", en: "← Back to Home", es: "← Volver al Inicio" },
+
+  // === PÁGINA: CASA GOIÁ ===
+  title_goia: { pt: "Casa Goiá", en: "Casa Goiá", es: "Casa Goiá" },
+  sub_goia: { pt: "Conforto, privacidade e um deck exclusivo para viver a verdadeira experiência da Ilha.", en: "Comfort, privacy, and an exclusive deck to live the true Island experience.", es: "Confort, privacidad y una terraza exclusiva para vivir la verdadera experiencia de la Isla." },
+  
+  goia_sobre_titulo: { pt: "Sobre a Casa", en: "About the House", es: "Sobre la Casa" },
+  goia_sobre_p1: { pt: "A <strong>Casa Goiá</strong> é o refúgio perfeito para quem busca a autenticidade de morar na Ilha da Gigóia com o conforto de uma casa moderna. Com espaços integrados e uma decoração que remete ao clima náutico e tropical, a residência oferece total privacidade para seus hóspedes.", en: "<strong>Casa Goiá</strong> is the perfect refuge for those seeking the authenticity of living on Gigóia Island with the comfort of a modern house. With integrated spaces and a decor that reflects the nautical and tropical climate, the residence offers total privacy for its guests.", es: "La <strong>Casa Goiá</strong> es el refugio perfecto para quienes buscan la autenticidad de vivir en la Isla Gigóia con el confort de una casa moderna. Con espacios integrados y una decoración que remite al clima náutico y tropical, la residencia ofrece total privacidad para sus huéspedes." },
+  goia_sobre_p2: { pt: "O grande destaque é o seu deck privativo, onde é possível contemplar o movimento dos barcos pelos canais ou simplesmente relaxar ao fim do dia. Totalmente equipada com cozinha, Wi-Fi de alta velocidade e áreas de descanso, é ideal para casais ou famílias que desejam uma estadia prolongada ou um final de semana diferenciado na Barra da Tijuca.", en: "The main highlight is its private deck, where you can watch the movement of boats through the canals or simply relax at the end of the day. Fully equipped with a kitchen, high-speed Wi-Fi, and resting areas, it is ideal for couples or families wanting a long stay or a different weekend in Barra da Tijuca.", es: "El gran atractivo es su terraza privada, donde es posible contemplar el movimiento de los barcos por los canales o simplemente relajarse al final del día. Totalmente equipada con cocina, Wi-Fi de alta velocidad y áreas de descanso, es ideal para parejas o familias que desean una estadía prolongada o un fin de semana diferente en Barra da Tijuca." },
+  
+  goia_dif_titulo: { pt: "Diferenciais", en: "Differentials", es: "Diferenciales" },
+  goia_dif_1: { pt: "⚓ Deck privativo na lagoa", en: "⚓ Private deck on the lagoon", es: "⚓ Terraza privada en la laguna" },
+  goia_dif_2: { pt: "🍳 Cozinha completa", en: "🍳 Full kitchen", es: "🍳 Cocina completa" },
+  goia_dif_3: { pt: "📶 Wi-Fi para Home Office", en: "📶 Wi-Fi for Home Office", es: "📶 Wi-Fi para Home Office" },
+  goia_dif_4: { pt: "🍃 Ambiente silencioso e seguro", en: "🍃 Quiet and safe environment", es: "🍃 Ambiente silencioso y seguro" },
+  
+  goia_valores_titulo: { pt: "Valores", en: "Prices", es: "Valores" },
+  goia_valores_p: { pt: "🗓️ Sob Consulta", en: "🗓️ Upon Request", es: "🗓️ Bajo Consulta" },
+  
+  goia_reserva_titulo: { pt: "Reservas", en: "Reservations", es: "Reservas" },
+  goia_reserva_p: { pt: "Consulte datas disponíveis diretamente com a nossa assistente Gigi.", en: "Check available dates directly with our assistant Gigi.", es: "Consulta las fechas disponibles directamente con nuestra asistente Gigi." },
+  
+  btn_reservar_gigi: { pt: "💬 Reservar via Gigi", en: "💬 Book via Gigi", es: "💬 Reservar vía Gigi" },
+  btn_voltar_airbnb: { pt: "← Voltar para Airbnb e Temporada", en: "← Back to Airbnb & Vacation Rentals", es: "← Volver a Airbnb y Temporada" },
+
+  // === PÁGINA: CASA VENTI ===
+  badge_venti: { pt: "🏡 Conforto Familiar", en: "🏡 Family Comfort", es: "🏡 Confort Familiar" },
+  title_venti: { pt: "Casa Venti", en: "Casa Venti", es: "Casa Venti" },
+  sub_venti: { pt: "Um duplex acolhedor com alma de casa de vila. Espaço de sobra para relaxar e aproveitar o melhor da Gigóia.", en: "A cozy duplex with the soul of a village house. Plenty of space to relax and enjoy the best of Gigóia.", es: "Un dúplex acogedor con alma de casa de pueblo. Mucho espacio para relajarse y disfrutar lo mejor de Gigóia." },
+  
+  venti_sobre_titulo: { pt: "Sinta-se em Casa", en: "Feel at Home", es: "Siéntete como en Casa" },
+  venti_sobre_p: { pt: "A <strong>Casa Venti</strong> oferece a experiência autêntica de morar na Ilha da Gigóia. Localizada em um condomínio fechado super tranquilo, a casa conta com um charmoso jardim e área de churrasqueira, sendo perfeita para quem viaja com crianças ou amigos.", en: "<strong>Casa Venti</strong> offers the authentic experience of living on Gigóia Island. Located in a super quiet gated community, the house features a charming garden and BBQ area, making it perfect for those traveling with children or friends.", es: "La <strong>Casa Venti</strong> ofrece la experiencia auténtica de vivir en la Isla Gigóia. Ubicada en un condominio cerrado súper tranquilo, la casa cuenta con un encantador jardín y zona de barbacoa, siendo perfecta para quienes viajan con niños o amigos." },
+  
+  venti_dest_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+  venti_dest_1: { pt: "✓ Acomoda até 7 pessoas", en: "✓ Accommodates up to 7 people", es: "✓ Acomoda hasta 7 personas" },
+  venti_dest_2: { pt: "✓ Área com Churrasqueira", en: "✓ BBQ Area", es: "✓ Zona de Barbacoa" },
+  venti_dest_3: { pt: "✓ Pet Friendly", en: "✓ Pet Friendly", es: "✓ Mascotas Permitidas" },
+  venti_dest_4: { pt: "✓ Jardim Privativo", en: "✓ Private Garden", es: "✓ Jardín Privado" },
+  
+  venti_dif_titulo: { pt: "Diferencial", en: "Differential", es: "Diferencial" },
+  venti_dif_p: { pt: "Segurança e silêncio total para uma noite de sono perfeita.", en: "Total security and silence for a perfect night's sleep.", es: "Seguridad y silencio total para una noche de sueño perfecta." },
+  
+  venti_lazer_titulo: { pt: "Lazer", en: "Leisure", es: "Ocio" },
+  venti_lazer_p: { pt: "🌳 Próximo ao parquinho da ilha.", en: "🌳 Close to the island's playground.", es: "🌳 Cerca del parque infantil de la isla." },
+  
+  btn_ver_airbnb: { pt: "Ver Datas no Airbnb", en: "Check Dates on Airbnb", es: "Ver Fechas en Airbnb" },
+
+  // === PÁGINA: CASANOVA ===
+  badge_casanova: { pt: "✨ Exclusividade & Design", en: "✨ Exclusivity & Design", es: "✨ Exclusividad y Diseño" },
+  title_casanova: { pt: "Casanova", en: "Casanova", es: "Casanova" },
+  sub_casanova: { pt: "Um refúgio contemporâneo que une o rústico da ilha com o luxo da modernidade. O lugar perfeito para quem busca algo especial.", en: "A contemporary refuge that combines the rustic feel of the island with modern luxury. The perfect place for those seeking something special.", es: "Un refugio contemporáneo que une lo rústico de la isla con el lujo de la modernidad. El lugar perfecto para quienes buscan algo especial." },
+  
+  casanova_sobre_titulo: { pt: "Sofisticação na Ilha", en: "Sophistication on the Island", es: "Sofisticación en la Isla" },
+  casanova_sobre_p: { pt: "A <strong>Casanova</strong> foi projetada para proporcionar uma experiência de imersão total na tranquilidade da Gigóia, sem abrir mão das conveniências modernas. Com ambientes integrados e decoração minimalista, é o cenário ideal para relaxar e se desconectar do caos urbano.", en: "<strong>Casanova</strong> was designed to provide an experience of total immersion in the tranquility of Gigóia, without giving up modern conveniences. With integrated environments and minimalist decor, it is the ideal setting to relax and disconnect from urban chaos.", es: "<strong>Casanova</strong> fue diseñada para brindar una experiencia de inmersión total en la tranquilidad de Gigóia, sin renunciar a las comodidades modernas. Con ambientes integrados y decoración minimalista, es el escenario ideal para relajarse y desconectarse del caos urbano." },
+  
+  casanova_dest_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+  casanova_dest_1: { pt: "✓ Suítes com Ar-condicionado", en: "✓ Air-conditioned Suites", es: "✓ Suites con Aire Acondicionado" },
+  casanova_dest_2: { pt: "✓ Cozinha Gourmet", en: "✓ Gourmet Kitchen", es: "✓ Cocina Gourmet" },
+  casanova_dest_3: { pt: "✓ Projeto Arquitetônico Único", en: "✓ Unique Architectural Design", es: "✓ Diseño Arquitectónico Único" },
+  casanova_dest_4: { pt: "✓ Localização Silenciosa", en: "✓ Quiet Location", es: "✓ Ubicación Silenciosa" },
+  
+  casanova_exp_titulo: { pt: "Experiência", en: "Experience", es: "Experiencia" },
+  casanova_exp_p: { pt: "Ideal para casais ou quem busca um retiro criativo.", en: "Ideal for couples or those seeking a creative retreat.", es: "Ideal para parejas o quienes buscan un retiro creativo." },
+  
+  casanova_reserva_titulo: { pt: "Reserva", en: "Reservation", es: "Reserva" },
+  casanova_reserva_p: { pt: "📅 Disponível em plataformas de temporada.", en: "📅 Available on vacation rental platforms.", es: "📅 Disponible en plataformas de alquiler vacacional." },
+  
+  btn_falar_gigi_casanova: { pt: "Falar com a Gigi sobre a Casanova", en: "Talk to Gigi about Casanova", es: "Habla con Gigi sobre Casanova" },
+  // === PÁGINA: COMER E BEBER (VITRINE) ===
+  title_comer_beber: { pt: "Comer & Beber", en: "Eat & Drink", es: "Comer y Beber" },
+  sub_comer_beber: { pt: "Saboreie frutos do mar frescos, pratos da culinária carioca e aproveite os melhores drinks com vista para a lagoa.", en: "Savor fresh seafood, local Carioca cuisine, and enjoy the best drinks with a view of the lagoon.", es: "Saborea mariscos frescos, platos de la cocina carioca y disfruta de las mejores bebidas con vista a la laguna." },
+  // === BOTÕES E BADGES GENÉRICOS (APP.JS) ===
+  btn_ler_mais: { pt: "Ler mais", en: "Read more", es: "Leer más" },
+  btn_conferir: { pt: "Conferir", en: "Check it out", es: "Comprobar" },
+  btn_ver_roteiro: { pt: "Ver roteiro", en: "View itinerary", es: "Ver itinerario" },
+  btn_ver_opcoes: { pt: "Ver opções", en: "View options", es: "Ver opciones" },
+  btn_ver_pacotes: { pt: "Ver pacotes", en: "View packages", es: "Ver paquetes" },
+  
+  badge_procurado: { pt: "⭐ Mais Procurado", en: "⭐ Most Wanted", es: "⭐ Más Buscado" },
+  badge_relaxar: { pt: "🌅 Para Relaxar", en: "🌅 To Relax", es: "🌅 Para Relajarse" },
+  badge_mergulho: { pt: "🌊 Mergulho", en: "🌊 Diving", es: "🌊 Buceo" },
+  badge_safari: { pt: "🐊 Safári", en: "🐊 Safari", es: "🐊 Safari" },
+  badge_praia: { pt: "🏖️ Praia", en: "🏖️ Beach", es: "🏖️ Playa" },
+  badge_adrenalina: { pt: "⚡ Adrenalina", en: "⚡ Adrenaline", es: "⚡ Adrenalina" },
+  badge_ofertas: { pt: "🎁 Ofertas", en: "🎁 Offers", es: "🎁 Ofertas" },
+  badge_gastronomia: { pt: "🍤 Gastronomia", en: "🍤 Gastronomy", es: "🍤 Gastronomía" },
+  badge_relax: { pt: "🍹 Relax", en: "🍹 Relax", es: "🍹 Relax" },
+  badge_bom_dia: { pt: "☕ Bom dia", en: "☕ Good morning", es: "☕ Buenos días" },
+  badge_ao_vivo: { pt: "🎵 Ao Vivo", en: "🎵 Live Music", es: "🎵 En Vivo" },
+  badge_celebre: { pt: "🎉 Celebre", en: "🎉 Celebrate", es: "🎉 Celebra" },
+
+  // === TEXTOS MODAL CADASTRO ESPAÇO ===
+  side_badge_espaco: { pt: "Cadastre seu<br>Espaço<br>aqui!", en: "Register your<br>Space<br>here!", es: "¡Registra tu<br>Espacio<br>aquí!" },
+  modal_cad_espaco_sub: { pt: "Preencha os dados abaixo para solicitar o cadastro do seu estabelecimento no Portal.", en: "Fill out the details below to request the registration of your establishment on the Portal.", es: "Complete los datos a continuación para solicitar el registro de su establecimiento en el Portal." },
+
+  // === CARDS: A ILHA ===
+  page_ilha_c1_t: { pt: "Como chegar", en: "How to get there", es: "Cómo llegar" },
+  page_ilha_c1_d: { pt: "Acesso rápido a partir do Rio. Dicas de transporte e horários.", en: "Quick access from Rio. Transport tips and schedules.", es: "Acceso rápido desde Río. Consejos de transporte y horarios." },
+  
+  page_ilha_c2_t: { pt: "História & Cultura", en: "History & Culture", es: "Historia y Cultura" },
+  page_ilha_c2_d: { pt: "Tradições locais, ambiente tranquilo e charme natural.", en: "Local traditions, peaceful environment, and natural charm.", es: "Tradiciones locales, ambiente tranquilo y encanto natural." },
+  
+  page_ilha_c3_t: { pt: "Boas práticas", en: "Good practices", es: "Buenas prácticas" },
+  page_ilha_c3_d: { pt: "Recomendações para curtir com respeito à natureza e aos moradores.", en: "Recommendations to enjoy with respect for nature and residents.", es: "Recomendaciones para disfrutar respetando la naturaleza y a los residentes." },
+  
+  page_ilha_c4_t: { pt: "Melhor época", en: "Best time to visit", es: "Mejor época para visitar" },
+  page_ilha_c4_d: { pt: "Clima, horários e dicas para aproveitar o dia inteiro.", en: "Weather, schedules, and tips to enjoy the whole day.", es: "Clima, horarios y consejos para disfrutar todo el día." },
+
+  // === CARDS: PASSEIOS E ROTAS ===
+  page_pass_c1_t: { pt: "Ilhas Tijucas", en: "Tijucas Islands", es: "Islas Tijucas" },
+  page_pass_c1_d: { pt: "Passeio de barco até o arquipélago. Águas cristalinas e fotos incríveis.", en: "Boat tour to the archipelago. Crystal clear waters and amazing photos.", es: "Paseo en barco al archipiélago. Aguas cristalinas y fotos increíbles." },
+  
+  page_pass_c2_t: { pt: "Pantanal Carioca", en: "Carioca Pantanal", es: "Pantanal Carioca" },
+  page_pass_c2_d: { pt: "Explore a rica biodiversidade da lagoa e o safári urbano.", en: "Explore the rich biodiversity of the lagoon and the urban safari.", es: "Explora la rica biodiversidad de la laguna y el safari urbano." },
+  
+  page_pass_c3_t: { pt: "Reserva", en: "Reserva Beach", es: "Playa Reserva" },
+  page_pass_c3_d: { pt: "Navegue pelos canais até chegar à bela e preservada Praia da Reserva.", en: "Sail through the canals until you reach the beautiful and preserved Reserva Beach.", es: "Navega por los canales hasta llegar a la hermosa y preservada Playa Reserva." },
+  
+  page_pass_c4_t: { pt: "Jet-Ski", en: "Jet-Ski", es: "Jet-Ski" },
+  page_pass_c4_d: { pt: "Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", en: "Adventure and adrenaline exploring the lagoons at your own pace.", es: "Aventura y adrenalina explorando las lagunas a tu propio ritmo." },
+  
+  page_pass_c5_t: { pt: "Pacotes Especiais", en: "Special Packages", es: "Paquetes Especiales" },
+  page_pass_c5_d: { pt: "Monte seu roteiro ideal combinando passeio de barco, almoço e mais.", en: "Create your ideal itinerary combining a boat tour, lunch, and more.", es: "Crea tu itinerario ideal combinando paseo en barco, almuerzo y más." },
+
+  // === CARDS: COMER E BEBER ===
+  page_comer_c1_t: { pt: "Restaurantes da Ilha", en: "Island Restaurants", es: "Restaurantes de la Isla" },
+  page_comer_c1_d: { pt: "Pratos de frutos do mar, carnes e culinária variada à beira da lagoa.", en: "Seafood dishes, meats, and varied cuisine by the lagoon.", es: "Platos de mariscos, carnes y cocina variada junto a la laguna." },
+  
+  page_comer_c2_t: { pt: "Bares e Drinks", en: "Bars & Drinks", es: "Bares y Bebidas" },
+  page_comer_c2_d: { pt: "Cerveja gelada, caipirinhas e o pôr do sol mais bonito da região.", en: "Ice-cold beer, caipirinhas, and the most beautiful sunset in the region.", es: "Cerveza helada, caipirinhas y el atardecer más hermoso de la región." },
+  
+  page_comer_c3_t: { pt: "Café da Manhã e Lanches", en: "Breakfast & Snacks", es: "Desayuno y Snacks" },
+  page_comer_c3_d: { pt: "Comece o dia com tranquilidade ou faça uma pausa para recarregar.", en: "Start the day peacefully or take a break to recharge.", es: "Comienza el día con tranquilidad o haz una pausa para recargar." },
+  
+  page_comer_c4_t: { pt: "Eventos e Experiências", en: "Events & Experiences", es: "Eventos y Experiencias" },
+  page_comer_c4_d: { pt: "Feirinhas, música ao vivo e espaços para celebrações inesquecíveis.", en: "Fairs, live music, and spaces for unforgettable celebrations.", es: "Ferias, música en vivo y espacios para celebraciones inolvidables." },
+
+  // === CARDS: HOSPEDAGEM ===
+  page_hosp_c1_t: { pt: "Hotéis e Pousadas", en: "Hotels & Inns", es: "Hoteles y Posadas" },
+  page_hosp_c1_d: { pt: "Conforto e descanso com vista para a lagoa.", en: "Comfort and rest with a view of the lagoon.", es: "Confort y descanso con vista a la laguna." },
+  
+  page_hosp_c2_t: { pt: "Airbnb e Temporada", en: "Airbnb & Vacation Rentals", es: "Airbnb y Alquileres Vacacionales" },
+  page_hosp_c2_d: { pt: "Privacidade e liberdade para grupos e famílias.", en: "Privacy and freedom for groups and families.", es: "Privacidad y libertad para grupos y familias." },
+  
+  page_hosp_c3_t: { pt: "Espaços para Eventos", en: "Event Spaces", es: "Espacios para Eventos" },
+  page_hosp_c3_d: { pt: "Cenários memoráveis para sua celebração.", en: "Memorable settings for your celebration.", es: "Escenarios memorables para tu celebración." },
+
+  // === PÁGINA: COMO CHEGAR ===
+  title_como_chegar: { pt: "Como Chegar", en: "How to Get There", es: "Cómo Llegar" },
+  sub_como_chegar: { pt: "Tudo o que você precisa saber para chegar ao paraíso de forma rápida e segura.", en: "Everything you need to know to reach paradise quickly and safely.", es: "Todo lo que necesitas saber para llegar al paraíso de forma rápida y segura." },
+  
+  cc_metro_t: { pt: "Vindo de Metrô", en: "Coming by Subway", es: "Llegando en Metro" },
+  cc_metro_d: { pt: "Salte na estação <strong>Jardim Oceânico</strong> (Saída Lagoa). O deck de embarque fica a menos de 5 minutos de caminhada.", en: "Get off at <strong>Jardim Oceânico</strong> station (Lagoa Exit). The boarding deck is less than a 5-minute walk away.", es: "Bájate en la estación <strong>Jardim Oceânico</strong> (Salida Lagoa). El muelle de embarque está a menos de 5 minutos a pie." },
+  
+  cc_carro_t: { pt: "Vindo de Carro", en: "Coming by Car", es: "Llegando en Coche" },
+  cc_carro_d: { pt: "Coloque no GPS: <strong>Av. Armando Lombardi, 350</strong>. Existem estacionamentos particulares no entorno dos principais decks.", en: "Put in your GPS: <strong>Av. Armando Lombardi, 350</strong>. There are private parking lots around the main decks.", es: "Pon en el GPS: <strong>Av. Armando Lombardi, 350</strong>. Hay estacionamientos privados alrededor de los muelles principales." },
+  
+  cc_barco_t: { pt: "Travessia de Barco", en: "Boat Crossing", es: "Cruce en Barco" },
+  cc_barco_d: { pt: "As chalanas e barcos-táxi funcionam 24h por dia. O valor varia entre <strong>R$ 2,00 a R$ 5,00</strong> por pessoa para a travessia comum.", en: "Flatboats and water taxis operate 24/7. The fare ranges from <strong>R$ 2.00 to R$ 5.00</strong> per person for a regular crossing.", es: "Las chalanas y taxis acuáticos funcionan las 24 horas. El precio varía entre <strong>R$ 2,00 y R$ 5,00</strong> por persona para el cruce normal." },
+  
+  cc_saltar_t: { pt: "Onde Saltar?", en: "Where to get off?", es: "¿Dónde bajarse?" },
+  cc_saltar_d: { pt: "Existem diversos decks na ilha. Se for para um restaurante específico, peça ao barqueiro para te deixar no deck mais próximo dele.", en: "There are several decks on the island. If you are going to a specific restaurant, ask the boatman to drop you at the deck closest to it.", es: "Hay varios muelles en la isla. Si vas a un restaurante específico, pídele al barquero que te deje en el muelle más cercano." },
+  
+  btn_perguntar_gigi_loc: { pt: "Perguntar localização exata para a Gigi", en: "Ask Gigi for exact location", es: "Preguntar ubicación exacta a Gigi" },
+
+  
 
 };
 

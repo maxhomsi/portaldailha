@@ -31,34 +31,34 @@ const SITE = {
   },
   tip: { capiImg: "assets/capi.png", capiTag: t("capi_tag"), title: t("tip_title") },
   homeCards: [
-    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge:"⭐ Mais Procurado" },
-    { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/lanches/gourmet1.webp", icon:"fork", badge:"🍤 Gastronomia" },
-    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/pousadas/casanova1.webp", icon:"bed", badge:"🌅 Para Relaxar" }
+    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge: t("badge_procurado") },
+    { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/lanches/gourmet1.webp", icon:"fork", badge: t("badge_gastronomia") },
+    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/pousadas/casanova1.webp", icon:"bed", badge: t("badge_relaxar") }
   ],
   pages: {
     "a-ilha": [
-      { title:"Como chegar", desc:"Acesso rápido a partir do Rio. Dicas de transporte e horários.", linkLabel:"Ver detalhes", href:"como-chegar.html", img:"assets/comochegar.jpg", icon:"boat" },
-      { title:"História & Cultura", desc:"Tradições locais, ambiente tranquilo e charme natural.", linkLabel:"Ler mais", href:"historia-cultura.html", img:"assets/historia.jpg", icon:"leaf" },
-      { title:"Boas práticas", desc:"Recomendações para curtir com respeito à natureza e aos moradores.", linkLabel:"Conferir", href:"boas-praticas.html", img:"assets/boaspraticas.jpg", icon:"bed" },
-      { title:"Melhor época", desc:"Clima, horários e dicas para aproveitar o dia inteiro.", linkLabel:"Ver detalhes", href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" }
+      { title: t("page_ilha_c1_t"), desc: t("page_ilha_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"como-chegar.html", img:"assets/comochegar.jpg", icon:"boat" },
+      { title: t("page_ilha_c2_t"), desc: t("page_ilha_c2_d"), linkLabel: t("btn_ler_mais"), href:"historia-cultura.html", img:"assets/historia.jpg", icon:"leaf" },
+      { title: t("page_ilha_c3_t"), desc: t("page_ilha_c3_d"), linkLabel: t("btn_conferir"), href:"boas-praticas.html", img:"assets/boaspraticas.jpg", icon:"bed" },
+      { title: t("page_ilha_c4_t"), desc: t("page_ilha_c4_d"), linkLabel: t("btn_ver_detalhes"), href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" }
     ],
     "passeios-rotas": [
-      { title:"Ilhas Tijucas", desc:"Passeio de barco até o arquipélago. Águas cristalinas e fotos incríveis.", linkLabel:"Ver roteiro", href:"ilhas-tijucas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge:"🌊 Mergulho" },
-      { title:"Pantanal Carioca", desc:"Explore a rica biodiversidade da lagoa e o safári urbano.", linkLabel:"Ver roteiro", href:"pantanal-carioca.html", img:"assets/passeios/pantanal1.jpg", icon:"leaf", badge:"🐊 Safári" },
-      { title:"Reserva", desc:"Navegue pelos canais até chegar à bela e preservada Praia da Reserva.", linkLabel:"Ver roteiro", href:"reserva.html", img:"assets/passeios/reserva1.jpg", icon:"boat", badge:"🏖️ Praia" },
-      { title:"Jet-Ski", desc:"Aventura e adrenalina explorando as lagoas no seu próprio ritmo.", linkLabel:"Ver opções", href:"jet-ski.html", img:"assets/passeios/jet1.jpg", icon:"boat", badge:"⚡ Adrenalina" },
-      { title:"Pacotes Especiais", desc:"Monte seu roteiro ideal combinando passeio de barco, almoço e mais.", linkLabel:"Ver pacotes", href:"pacotes-especiais.html", img:"assets/experiencia.jpg", icon:"fork", badge:"🎁 Ofertas" }
+      { title: t("page_pass_c1_t"), desc: t("page_pass_c1_d"), linkLabel: t("btn_ver_roteiro"), href:"ilhas-tijucas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge: t("badge_mergulho") },
+      { title: t("page_pass_c2_t"), desc: t("page_pass_c2_d"), linkLabel: t("btn_ver_roteiro"), href:"pantanal-carioca.html", img:"assets/passeios/pantanal1.jpg", icon:"leaf", badge: t("badge_safari") },
+      { title: t("page_pass_c3_t"), desc: t("page_pass_c3_d"), linkLabel: t("btn_ver_roteiro"), href:"reserva.html", img:"assets/passeios/reserva1.jpg", icon:"boat", badge: t("badge_praia") },
+      { title: t("page_pass_c4_t"), desc: t("page_pass_c4_d"), linkLabel: t("btn_ver_opcoes"), href:"jet-ski.html", img:"assets/passeios/jet1.jpg", icon:"boat", badge: t("badge_adrenalina") },
+      { title: t("page_pass_c5_t"), desc: t("page_pass_c5_d"), linkLabel: t("btn_ver_pacotes"), href:"pacotes-especiais.html", img:"assets/experiencia.jpg", icon:"fork", badge: t("badge_ofertas") }
     ],
     "comer-beber": [
-      { title:"Restaurantes da Ilha", desc:"Pratos de frutos do mar, carnes e culinária variada à beira da lagoa.", linkLabel:"Ver detalhes", href:"restaurantes.html", img:"assets/lanches/parada1.webp", icon:"fork", badge:"🍤 Gastronomia" },
-      { title:"Bares e Drinks", desc:"Cerveja gelada, caipirinhas e o pôr do sol mais bonito da região.", linkLabel:"Ver detalhes", href:"bares-drinks.html", img:"assets/bar&DRINK.jpg", icon:"boat", badge:"🍹 Relax" },
-      { title:"Café da Manhã e Lanches", desc:"Comece o dia com tranquilidade ou faça uma pausa para recarregar.", linkLabel:"Ver opções", href:"cafe-lanches.html", img:"assets/aleatoria/cantinho1.webp", icon:"leaf", badge:"☕ Bom dia" },
-      { title:"Eventos e Experiências", desc:"Feirinhas, música ao vivo e espaços para celebrações inesquecíveis.", linkLabel:"Conferir", href:"eventos-experiencias.html", img:"assets/aleatoria/solar1.jpg", icon:"fork", badge:"🎵 Ao Vivo" }
+      { title: t("page_comer_c1_t"), desc: t("page_comer_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"restaurantes.html", img:"assets/lanches/parada1.webp", icon:"fork", badge: t("badge_gastronomia") },
+      { title: t("page_comer_c2_t"), desc: t("page_comer_c2_d"), linkLabel: t("btn_ver_detalhes"), href:"bares-drinks.html", img:"assets/bar&DRINK.jpg", icon:"boat", badge: t("badge_relax") },
+      { title: t("page_comer_c3_t"), desc: t("page_comer_c3_d"), linkLabel: t("btn_ver_opcoes"), href:"cafe-lanches.html", img:"assets/aleatoria/cantinho1.webp", icon:"leaf", badge: t("badge_bom_dia") },
+      { title: t("page_comer_c4_t"), desc: t("page_comer_c4_d"), linkLabel: t("btn_conferir"), href:"eventos-experiencias.html", img:"assets/aleatoria/solar1.jpg", icon:"fork", badge: t("badge_ao_vivo") }
     ],
     "hospedagem": [
-      { title:"Hotéis e Pousadas", desc:"Conforto e descanso com vista para a lagoa.", linkLabel:"Ver detalhes", href:"hoteis-pousadas.html", img:"assets/pousadas/veneza1.jpg", icon:"bed" },
-      { title:"Airbnb e Temporada", desc:"Privacidade e liberdade para grupos e famílias.", linkLabel:"Ver opções", href:"airbnb-temporada.html", img:"assets/airbnb/venti1.avif", icon:"bed" },
-      { title:"Espaços para Eventos", desc:"Cenários memoráveis para sua celebração.", linkLabel:"Conferir", href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge:"🎉 Celebre" },
+      { title: t("page_hosp_c1_t"), desc: t("page_hosp_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"hoteis-pousadas.html", img:"assets/pousadas/veneza1.jpg", icon:"bed" },
+      { title: t("page_hosp_c2_t"), desc: t("page_hosp_c2_d"), linkLabel: t("btn_ver_opcoes"), href:"airbnb-temporada.html", img:"assets/airbnb/venti1.avif", icon:"bed" },
+      { title: t("page_hosp_c3_t"), desc: t("page_hosp_c3_d"), linkLabel: t("btn_conferir"), href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge: t("badge_celebre") },
     ]
   }
 };
@@ -107,7 +107,7 @@ function cardHtml(c, idx=0) {
       <div class="card__body">
         <h3 class="card__title">${c.title}</h3>
         <p class="card__desc">${c.desc}</p>
-        <a class="card__link" href="${c.href}">${c.linkLabel || 'Ver detalhes'} <span>→</span></a>
+        <a class="card__link" href="${c.href}">${c.linkLabel || t("btn_ver_detalhes")} <span>→</span></a>
       </div>
     </article>
   `;
@@ -307,42 +307,42 @@ function setupCadastroModal() {
 
   const html = `
     <div class="side-badge" onclick="openCadastroModal()">
-      Cadastre seu<br>Espaço<br>aqui!
+      ${t("side_badge_espaco")}
     </div>
 
     <div class="modal-overlay" id="cadastroModal" onclick="closeCadastroModal(event)">
       <div class="modal-content" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeCadastroModal()">×</button>
-        <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;">Fale Conosco</h2>
-        <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">Preencha os dados abaixo para solicitar o cadastro do seu estabelecimento no Portal.</p>
+        <h2 style="margin-top:0; color:var(--green-dark); font-weight:900;">${t("modal_fale_title")}</h2>
+        <p style="color:var(--muted); margin-bottom:24px; font-weight:600;">${t("modal_cad_espaco_sub")}</p>
         
         <form id="ajaxCadastroForm" class="gigiForm">
           <div>
-            <label>Nome do Estabelecimento</label>
+            <label>${t("lbl_nome_espaco")}</label>
             <input type="text" placeholder="Ex: Boteco da Ilha" required />
           </div>
           <div>
-            <label>Nome do Responsável</label>
-            <input type="text" placeholder="Seu nome completo" required />
+            <label>${t("lbl_seu_nome")}</label>
+            <input type="text" placeholder="Maria da Silva" required />
           </div>
           <div>
-            <label>Telefone / WhatsApp</label>
+            <label>${t("gigi_lbl_phone")}</label>
             <input type="tel" placeholder="(21) 99999-9999" required />
           </div>
           <div>
-            <label>Mensagem</label>
-            <textarea rows="3" placeholder="Gostaria de saber como funciona o cadastro..." required></textarea>
+            <label>${t("gigi_lbl_msg")}</label>
+            <textarea rows="3" placeholder="..." required></textarea>
           </div>
-          <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px; font-size:16px;" id="ajaxSubmitBtn">Enviar Solicitação</button>
+          <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px; font-size:16px;" id="ajaxSubmitBtn">${t("btn_enviar_solic")}</button>
         </form>
 
         <div id="ajaxSuccess" style="display:none; text-align:center; padding:40px 20px;">
           <svg width="60" height="60" viewBox="0 0 24 24" fill="var(--green)" style="margin-bottom:20px; display:inline-block;">
             <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm-1.2 17.3l-4.8-4.8 1.4-1.4 3.4 3.4 7.6-7.6 1.4 1.4-9 9z"/>
           </svg>
-          <h3 style="margin:0 0 10px; color:var(--text); font-weight:900; font-size:22px;">Mensagem Enviada!</h3>
-          <p style="color:var(--muted); font-size:16px; font-weight:600;">Nossa equipe entrará em contato em breve.</p>
-          <button class="btn" style="margin-top:20px; background:#eee; color:#333; width:100%;" onclick="closeCadastroModal()">Fechar</button>
+          <h3 style="margin:0 0 10px; color:var(--text); font-weight:900; font-size:22px;">${t("modal_sucesso_title")}</h3>
+          <p style="color:var(--muted); font-size:16px; font-weight:600;">${t("modal_sucesso_sub")}</p>
+          <button class="btn" style="margin-top:20px; background:#eee; color:#333; width:100%;" onclick="closeCadastroModal()">${t("btn_fechar")}</button>
         </div>
 
       </div>
@@ -355,7 +355,7 @@ function setupCadastroModal() {
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = document.getElementById('ajaxSubmitBtn');
-    btn.innerText = "Enviando aguarde...";
+    btn.innerText = t("btn_enviando");
     btn.style.opacity = "0.7";
     btn.style.pointerEvents = "none";
     

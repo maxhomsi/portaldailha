@@ -26,9 +26,9 @@
   <main>
     <section class="pageHead" style="padding-bottom: 60px;">
       <div class="container" style="text-align: center;">
-        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;">🗿 Arte & Curiosidade</div>
-        <h1 class="reveal">Casa Estátua</h1>
-        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;">Um dos pontos mais fotografados e icônicos da ilha, onde a arte se mistura com a paisagem urbana da Gigóia.</p>
+        <div style="display: inline-block; background: var(--yellow); color: var(--text); padding: 5px 15px; border-radius: 50px; font-weight: 900; margin-bottom: 15px; font-size: 14px;" data-i18n="badge_estatua">🗿 Arte & Curiosidade</div>
+        <h1 class="reveal" data-i18n="title_estatua">Casa Estátua</h1>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;" data-i18n="sub_estatua">Um dos pontos mais fotografados e icônicos da ilha, onde a arte se mistura com a paisagem urbana da Gigóia.</p>
       </div>
     </section>
 
@@ -39,7 +39,7 @@
             <div class="capi__ring">
               <img id="capiImg" src="assets/capi.png" alt="Capi" />
             </div>
-            <div class="capi__tag" id="tipTitle">Dica do Capi:</div>
+            <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
           </div>
           <div class="tip">
             <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
@@ -59,36 +59,36 @@
         </div>
 
         <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
-          <h2 style="color: var(--green-dark); margin-bottom: 20px;">Um Ícone Visual</h2>
-          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;">
+          <h2 style="color: var(--green-dark); margin-bottom: 20px;" data-i18n="estatua_sobre_titulo">Um Ícone Visual</h2>
+          <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; font-weight: 600;" data-i18n="estatua_sobre_p">
             A <strong>Casa Estátua</strong> chama a atenção de todos que caminham pelas ruelas da Ilha da Gigóia. Com sua estética peculiar e a presença marcante de elementos artísticos em sua fachada, ela se tornou um ponto de referência para turistas e amantes da fotografia.
           </p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
             <div style="background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px;">
-              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;">O que observar</h3>
+              <h3 style="color: var(--green-dark); margin-top: 0; margin-bottom: 15px; font-size: 18px;" data-i18n="estatua_observar_titulo">O que observar</h3>
               <ul style="list-style: none; padding: 0; margin: 0; color: #444; line-height: 1.6; font-weight: 700;">
-                <li style="margin-bottom: 8px;">✓ Esculturas na Fachada</li>
-                <li style="margin-bottom: 8px;">✓ Arquitetura Criativa</li>
-                <li style="margin-bottom: 8px;">✓ Integração com as Plantas</li>
-                <li>✓ Detalhes Artesanais</li>
+                <li style="margin-bottom: 8px;" data-i18n="estatua_obs_1">✓ Esculturas na Fachada</li>
+                <li style="margin-bottom: 8px;" data-i18n="estatua_obs_2">✓ Arquitetura Criativa</li>
+                <li style="margin-bottom: 8px;" data-i18n="estatua_obs_3">✓ Integração com as Plantas</li>
+                <li data-i18n="estatua_obs_4">✓ Detalhes Artesanais</li>
               </ul>
             </div>
             <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Dica</h3>
-              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;">Prepare a câmera! É um dos melhores ângulos para registrar a identidade única da ilha.</p>
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;">Curiosidade</h3>
-              <p style="margin: 0; color: #444; font-weight: 700;">📸 Ponto de parada obrigatória em tours fotográficos.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;" data-i18n="estatua_dica_titulo">Dica</h3>
+              <p style="font-size: 16px; font-weight: 700; color: #444; margin-bottom: 10px;" data-i18n="estatua_dica_p">Prepare a câmera! É um dos melhores ângulos para registrar a identidade única da ilha.</p>
+              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;" data-i18n="estatua_curiosidade_titulo">Curiosidade</h3>
+              <p style="margin: 0; color: #444; font-weight: 700;" data-i18n="estatua_curiosidade_p">📸 Ponto de parada obrigatória em tours fotográficos.</p>
             </div>
           </div>
           
           <div style="text-align: center; margin-top: 20px;">
-             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;">Saber mais com a Gigi</button>
+             <button class="btn btn--green" onclick="openGigiChat()" style="padding: 0 40px;" data-i18n="btn_saber_mais_gigi">Saber mais com a Gigi</button>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="index.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;">← Voltar para o Início</a>
+          <a href="index.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;" data-i18n="btn_voltar_inicio">← Voltar para o Início</a>
         </div>
       </div>
     </section>
