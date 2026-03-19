@@ -11,8 +11,6 @@ function changeLanguage(lang) {
 
 const DICT = {
   // === MENU E RODAPÉ ===
-  const DICT = {
-  // === MENU E RODAPÉ ===
   nav_ilha: { pt: "A Ilha", en: "The Island", es: "La Isla" },
   nav_passeios: { pt: "Passeios & Rotas", en: "Tours & Routes", es: "Paseos y Rutas" },
   nav_comer: { pt: "Comer & Beber", en: "Eat & Drink", es: "Comer y Beber" },
@@ -33,8 +31,6 @@ const DICT = {
     es: "Todos los derechos reservados." 
   },
 
-
-  // ... resto do arquivo continua normal ...
   // === HOME: HERO ===
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
   hero_title_a: { pt: "Descubra o Paraíso Tropical", en: "Discover the Tropical Paradise", es: "Descubre el Paraíso Tropical" },
@@ -1044,6 +1040,7 @@ const DICT = {
   termos_sec5_t: { pt: "5. Propriedade Intelectual", en: "5. Intellectual Property", es: "5. Propiedad Intelectual" },
   termos_sec5_p: { pt: "Todo o conteúdo deste site (textos, design, ilustrações dos mascotes Gigi e Capi) é de propriedade exclusiva do Portal Ilha da Gigóia. A reprodução total ou parcial sem autorização prévia é proibida.", en: "All content on this site (text, design, mascot illustrations) is the exclusive property of the Gigóia Island Portal.", es: "Todo el contenido de este sitio es propiedad exclusiva del Portal Isla Gigóia." },
   termos_duvida: { pt: "Dúvidas sobre nossos termos?", en: "Questions about our terms?", es: "¿Dúvidas sobre nuestros términos?" },
+  
   // === PÁGINA: VENEZA CARIOCA ===
   title_veneza: { pt: "Veneza Carioca", en: "Veneza Carioca", es: "Veneza Carioca" },
   sub_veneza: { pt: "Ambiente intimista, acolhedor e com decoração exclusiva. O refúgio perfeito na tranquila Ilha Primeira.", en: "Intimate, welcoming atmosphere with exclusive decor. The perfect refuge on peaceful Ilha Primeira.", es: "Ambiente íntimo, acogedor y con decoración exclusiva. El refugio perfecto en la tranquila Ilha Primeira." },
@@ -1059,8 +1056,7 @@ const DICT = {
   card_gaivota_ee_d: { pt: "Localizado na Ilha Primeira, combina vista privilegiada com atmosfera elegante. Perfeito para casamentos intimistas, festas e eventos corporativos.", en: "Located on Ilha Primeira, it combines a privileged view with an elegant atmosphere. Perfect for intimate weddings, parties, and corporate events.", es: "Ubicado en Ilha Primeira, combina una vista privilegiada con una atmósfera elegante. Perfecto para bodas íntimas, fiestas y eventos corporativos." },
   card_solar_ee_d: { pt: "Arquitetura colonial e amplos jardins. Oferece produção personalizada de alta gastronomia para casamentos, festas de 15 anos e celebrações grandiosas.", en: "Colonial architecture and vast gardens. Offers personalized high-gastronomy production for weddings, 15th birthday parties, and grand celebrations.", es: "Arquitectura colonial y amplios jardines. Ofrece producción personalizada de alta gastronomía para bodas, fiestas de 15 años y grandes celebraciones." },
   card_oasis_ee_d: { pt: "Mistura restaurante, lounge e espaço para festas privadas. Cenário charmoso para almoços relaxantes que ganha um clima animado e musical à noite.", en: "Mixes restaurant, lounge, and space for private parties. Charming setting for relaxing lunches that gains a lively and musical atmosphere at night.", es: "Mezcla restaurante, lounge y espacio para fiestas privadas. Entorno encantador para almuerzos relajantes que adquiere un ambiente animado y musical por la noche." },
-  card_mara_ee_d: { pt: "Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.", en: "Gathers gastronomy, tropical drinks, and an unforgettable sunset. The perfect setting for gatherings and relaxed meetings among friends.", es: "Reúne gastronomía, tragos tropicales y un atardecer inolvidable. El escenario perfecto para confraternizaciones y encuentros relajados entre amigos." },
-
+  card_mara_ee_d: { pt: "Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.", en: "Gathers gastronomy, tropical drinks, and an unforgettable sunset. The perfect setting for gatherings and relaxed meetings among friends.", es: "Reúne gastronomía, tragos tropicales y un atardecer inolvidable. El escenario perfecto para confraternizaciones y encuentros relajados entre amigos." }
 
 };
 
