@@ -226,15 +226,13 @@ main .section .tipRow { margin-top: 0 !important; }
 .tip p { margin: 0; color: var(--text); font-size: 16px; font-weight: 700; line-height: 1.6; }
 
 /* =========================================================
-   CARDS INTELIGENTES (ALINHAMENTO MATEMÁTICO BLINDADO)
+   CARDS INTELIGENTES (ALINHAMENTO COM CSS GRID)
    ========================================================= */
 
-/* CARDS GENÉRICOS (Quebram linha automaticamente de 4 em 4) */
+/* CARDS GENÉRICOS (Garanti 4 colunas cravadas) */
 .cards, .cards--4 { 
-  display: flex; 
-  flex-wrap: wrap !important; 
-  justify-content: center; 
-  align-items: stretch; 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
   gap: 24px; 
   padding: 20px 0;
   max-width: 1200px;
@@ -242,11 +240,9 @@ main .section .tipRow { margin-top: 0 !important; }
 }
 
 .cards > .card, .cards--4 > .card { 
-  width: calc(25% - 18px); 
-  min-width: 200px; 
-  max-width: 320px; 
+  width: 100%; 
+  max-width: none;
 }
-
 
 /* =========================================================
    LAYOUT EXCLUSIVO: BOAS PRÁTICAS E A ILHA (Ajuste de margens)
@@ -260,16 +256,14 @@ body[data-page="a-ilha"] .tipRow { margin-bottom: 25px !important; }
 body[data-page="boas-praticas"] .container[style*="margin-bottom"],
 body[data-page="a-ilha"] .container[style*="margin-bottom"] { margin-bottom: 30px !important; }
 
-
 /* =========================================================
    LAYOUT EXCLUSIVO: 5 CARDS LADO A LADO
    ========================================================= */
 body[data-page="passeios-rotas"] .cards,
 body[data-page="passeios-rotas"] .cards--4,
 .cards--5 { 
-  display: flex;
-  flex-wrap: wrap !important;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   max-width: 1300px; 
   margin: 0 auto;
   gap: 16px; 
@@ -278,9 +272,8 @@ body[data-page="passeios-rotas"] .cards--4,
 body[data-page="passeios-rotas"] .cards > .card,
 body[data-page="passeios-rotas"] .cards--4 > .card,
 .cards--5 > .card { 
-  width: calc(20% - 12.8px) !important; 
-  min-width: 190px !important; 
-  max-width: 260px; 
+  width: 100% !important; 
+  max-width: none; 
 }
 
 body[data-page="passeios-rotas"] .card__img,
@@ -294,7 +287,6 @@ body[data-page="passeios-rotas"] .card__desc,
 
 body[data-page="passeios-rotas"] .card__body,
 .cards--5 .card__body { padding: 18px 16px 16px; }
-
 
 /* A ESTRUTURA BLINDADA DO CARD */
 .card { 
@@ -438,18 +430,11 @@ body[data-page="passeios-rotas"] .card__body,
    ========================================================= */
 .burger, .mobileNav { display: none; }
 
-@media (max-width: 1300px) { 
-  .cards > .card, .cards--4 > .card { width: calc(25% - 18px); }
-  body[data-page="passeios-rotas"] .cards > .card,
-  body[data-page="passeios-rotas"] .cards--4 > .card,
-  .cards--5 > .card { width: calc(25% - 18px) !important; } 
-}
-
 @media (max-width: 1100px) { 
-  .cards > .card, .cards--4 > .card, 
-  body[data-page="passeios-rotas"] .cards > .card,
-  body[data-page="passeios-rotas"] .cards--4 > .card,
-  .cards--5 > .card { width: calc(33.333% - 16px) !important; } 
+  .cards, .cards--4 { grid-template-columns: repeat(2, 1fr); }
+  body[data-page="passeios-rotas"] .cards,
+  body[data-page="passeios-rotas"] .cards--4,
+  .cards--5 { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 1024px) { 
@@ -469,10 +454,10 @@ body[data-page="passeios-rotas"] .card__body,
 }
 
 @media (max-width: 768px) {
-  .cards > .card, .cards--4 > .card, 
-  body[data-page="passeios-rotas"] .cards > .card,
-  body[data-page="passeios-rotas"] .cards--4 > .card,
-  .cards--5 > .card { width: calc(50% - 12px) !important; }
+  .cards, .cards--4 { grid-template-columns: repeat(2, 1fr); }
+  body[data-page="passeios-rotas"] .cards,
+  body[data-page="passeios-rotas"] .cards--4,
+  .cards--5 { grid-template-columns: repeat(2, 1fr); }
   
   .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; } .gallery img { height: 140px; }
   .lightbox__content { max-width: 100%; max-height: 90%; }
@@ -482,10 +467,10 @@ body[data-page="passeios-rotas"] .card__body,
 }
 
 @media (max-width: 600px) { 
-  .cards > .card, .cards--4 > .card,
-  body[data-page="passeios-rotas"] .cards > .card,
-  body[data-page="passeios-rotas"] .cards--4 > .card,
-  .cards--5 > .card { width: 100% !important; } 
+  .cards, .cards--4 { grid-template-columns: 1fr; }
+  body[data-page="passeios-rotas"] .cards,
+  body[data-page="passeios-rotas"] .cards--4,
+  .cards--5 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
