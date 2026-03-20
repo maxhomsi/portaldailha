@@ -36,7 +36,7 @@ const SITE = {
   },
   tip: { capiImg: "assets/capi.png", capiTag: t("capi_tag"), title: t("tip_title") },
   homeCards: [
-    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/passeios/tijucas6.jpg", icon:"boat", badge: t("badge_procurado") },
+    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat", badge: t("badge_procurado") },
     { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork", badge: t("badge_gastronomia") },
     { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/pousadas/casanova1.webp", icon:"bed", badge: t("badge_relaxar") }
   ],
@@ -55,7 +55,7 @@ const SITE = {
       { title: t("page_pass_c5_t"), desc: t("page_pass_c5_d"), linkLabel: t("btn_ver_pacotes"), href:"pacotes-especiais.html", img:"assets/experiencia.jpg", icon:"fork", badge: t("badge_ofertas") }
     ],
     "comer-beber": [
-      { title: t("page_comer_c1_t"), desc: t("page_comer_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"restaurantes.html", img:"assets/lanches/parada2.webp", icon:"fork", badge: t("badge_gastronomia") },
+      { title: t("page_comer_c1_t"), desc: t("page_comer_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"restaurantes.html", img:"assets/lanches/card-comer.jpg", icon:"fork", badge: t("badge_gastronomia") },
       { title: t("page_comer_c2_t"), desc: t("page_comer_c2_d"), linkLabel: t("btn_ver_detalhes"), href:"bares-drinks.html", img:"assets/bar&DRINK.jpg", icon:"boat", badge: t("badge_relax") },
       { title: t("page_comer_c3_t"), desc: t("page_comer_c3_d"), linkLabel: t("btn_ver_opcoes"), href:"cafe-lanches.html", img:"assets/aleatoria/cantinho1.webp", icon:"leaf", badge: t("badge_bom_dia") },
       { title: t("page_comer_c4_t"), desc: t("page_comer_c4_d"), linkLabel: t("btn_conferir"), href:"eventos-experiencias.html", img:"assets/aleatoria/solar1.jpg", icon:"fork", badge: t("badge_ao_vivo") }
