@@ -341,7 +341,7 @@ function setupCadastroModal() {
             <label>${t("gigi_lbl_msg")}</label>
             <textarea rows="3" placeholder="..." required></textarea>
           </div>
-          <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px; font-size:16px;" id="ajaxSubmitBtn">${t("btn_enviar_solic")}</button>
+          <button type="submit" class="btn btn--green" style="width:100%; margin-top:10px; padding:15px; font-size:16px; height:auto;" id="ajaxSubmitBtn">${t("btn_enviar_solic")}</button>
         </form>
 
         <div id="ajaxSuccess" style="display:none; text-align:center; padding:40px 20px;">

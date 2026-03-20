@@ -19,7 +19,7 @@ const DICT = {
   btn_passeios: { pt: "Ver Passeios", en: "See Tours", es: "Ver Paseos" },
   btn_conheca: { pt: "Conheça a Ilha", en: "Discover the Island", es: "Conoce la Isla" },
   
-  // AQUI ESTÃO AS DUAS CORREÇÕES DO FOOTER:
+  // AQUI ESTÃO AS CORREÇÕES DO FOOTER:
   footer_text: { 
     pt: "Portal Ilha da Gigóia — <a href='termos.html' style='text-decoration:underline;'>Termos • Privacidade</a>", 
     en: "Gigóia Island Portal — <a href='termos.html' style='text-decoration:underline;'>Terms • Privacy</a>", 
@@ -30,6 +30,9 @@ const DICT = {
     en: "All rights reserved.", 
     es: "Todos los derechos reservados." 
   },
+  footer_nav_t: { pt: "Navegue", en: "Navigate", es: "Navegar" },
+  nav_inicio: { pt: "Início", en: "Home", es: "Inicio" },
+  footer_serv_t: { pt: "Atendimento", en: "Customer Service", es: "Atención al Cliente" },
 
   // === HOME: HERO ===
   hero_pill: { pt: "Portal Oficial de Turismo", en: "Official Tourism Portal", es: "Portal Oficial de Turismo" },
