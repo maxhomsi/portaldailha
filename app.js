@@ -194,7 +194,7 @@ function mountHeaderFooter() {
         <div class="footer__col">
           <h3 data-i18n="footer_serv_t">Atendimento</h3>
           <ul>
-            <li><a href="#" onclick="openGigiChat(); return false;">${t("gigi_fab")}</a></li>
+            <li><a href="https://wa.me/${GIGI.whatsappNumber}" target="_blank">${t("gigi_fab")}</a></li>
             <li><a href="fale-conosco.html">${t("nav_fale")}</a></li>
           </ul>
         </div>
@@ -302,7 +302,10 @@ function mountGigiWidget() {
     const message = document.getElementById("gigiMessage")?.value || "";
     if (!name || !phone || !message) return;
     const text = `Olá! Quero falar com a Gigi (Portal Ilha da Gigóia).\n\nNome: ${name}\nTelefone: ${phone}\nMensagem:\n${message}`;
+    
+    // AQUI ESTÁ A CORREÇÃO: Utilizando a API universal do WhatsApp
     window.open(`https://wa.me/${GIGI.whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank");
+    
     form.reset();
   });
 }
