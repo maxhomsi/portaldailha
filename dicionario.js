@@ -134,151 +134,168 @@ const DICT = {
   ak_ideal_p: { pt: "Happy hour com amigos e momentos relaxantes.", en: "Happy hour with friends and relaxing moments.", es: "Happy hour con amigos y momentos relajantes." },
 
   // === PÁGINA: BAR BRIZA ===
-  badge_briza: { pt: "🍹 Drinks & Vibes", en: "🍹 Drinks & Vibes", es: "🍹 Drinks y Vibras" },
-  title_briza: { pt: "Bar Briza", en: "Bar Briza", es: "Bar Briza" },
-  sub_briza: { pt: "Onde a sofisticação encontra a descontração da Ilha. Cocktails autorais e a melhor vista para a lagoa.", en: "Where sophistication meets island relaxation. Signature cocktails and the best view of the lagoon.", es: "Donde la sofisticación se encuentra con la relajación isleña. Cócteles de autor y la mejor vista a la laguna." },
+  badge_briza: { pt: "🎶 Samba & Vibes", en: "🎶 Samba & Vibes", es: "🎶 Samba y Vibras" },
+  title_briza: { pt: "Briza da Gigóia", en: "Briza da Gigóia", es: "Briza da Gigóia" },
+  sub_briza: { pt: "Gastronomia, música ao vivo e eventos em um ambiente agradável à beira da lagoa.", en: "Gastronomy, live music, and events in a pleasant environment by the lagoon.", es: "Gastronomía, música en vivo y eventos en un ambiente agradable a orillas de la laguna." },
   
-  briza_sobre_titulo: { pt: "Sinta a Briza", en: "Feel the Briza", es: "Siente la Briza" },
-  briza_sobre_p: { pt: "O <strong>Bar Briza</strong> é o destino certo para quem procura uma experiência diferenciada. Com uma curadoria musical impecável e uma carta de drinks que valoriza ingredientes locais, o bar se destaca pelo seu ambiente moderno e acolhedor.", en: "<strong>Bar Briza</strong> is the right destination for those looking for a unique experience. With an impeccable musical curation and a drink menu that highlights local ingredients, the bar stands out for its modern and welcoming atmosphere.", es: "<strong>Bar Briza</strong> es el destino indicado para quienes buscan una experiencia diferente. Con una cuidada selección musical y una carta de cócteles que valora los ingredientes locales, el bar destaca por su ambiente moderno y acogedor." },
+  briza_sobre_titulo: { pt: "Sobre o Espaço", en: "About the Space", es: "Sobre el Espacio" },
+  briza_p1: { pt: "Localizado logo na entrada principal da ilha, o <strong>Briza da Gigóia</strong> é um espaço que combina gastronomia, música e eventos em um ambiente agradável à beira da lagoa. O bar oferece uma vista privilegiada e um clima descontraído, perfeito para quem quer aproveitar o melhor da atmosfera única da Ilha da Gigóia.", en: "Located right at the main entrance of the island, <strong>Briza da Gigóia</strong> is a space that combines gastronomy, music, and events in a pleasant environment by the lagoon. The bar offers a privileged view and a relaxed atmosphere, perfect for those who want to enjoy the best of Gigóia Island's unique vibe.", es: "Ubicado justo en la entrada principal de la isla, el <strong>Briza da Gigóia</strong> es un espacio que combina gastronomía, música y eventos en un ambiente agradable a orillas de la laguna. El bar ofrece una vista privilegiada y un clima relajado, perfecto para quienes desean disfrutar de lo mejor de la atmósfera única de la Isla Gigóia." },
+  briza_p2: { pt: "O ambiente é conhecido por ser versátil e acolhedor, funcionando tanto para um almoço tranquilo quanto para encontros entre amigos ou celebrações especiais. O espaço também pode ser reservado para <strong>eventos e comemorações</strong>, sendo uma ótima opção para quem deseja celebrar aniversários, confraternizações ou encontros particulares em um cenário diferente, cercado pela natureza da lagoa.", en: "The environment is known for being versatile and welcoming, working both for a quiet lunch and for gatherings with friends or special celebrations. The space can also be reserved for <strong>events and celebrations</strong>, making it a great option for those wishing to celebrate birthdays, get-togethers, or private meetings in a different setting, surrounded by the lagoon's nature.", es: "El ambiente es conocido por ser versátil y acogedor, funcionando tanto para un almuerzo tranquilo como para encuentros entre amigos o celebraciones especiales. El espacio también puede ser reservado para <strong>eventos y conmemoraciones</strong>, siendo una excelente opción para quienes desean celebrar cumpleaños, reuniones o encuentros privados en un escenario diferente, rodeado de la naturaleza de la laguna." },
+  briza_p3: { pt: "Outro destaque do Briza é a programação musical. Frequentemente acontecem apresentações de música ao vivo, especialmente <strong>rodas de samba aos finais de semana</strong>, que dão ainda mais vida ao lugar e transformam o ambiente em um ponto animado da noite da ilha.", en: "Another highlight of Briza is the musical programming. Live music performances frequently take place, especially <strong>samba circles on weekends</strong>, which bring even more life to the place and transform the environment into a lively spot for the island's nightlife.", es: "Otro destaque del Briza es la programación musical. Frecuentemente hay presentaciones de música en vivo, especialmente <strong>ruedas de samba los fines de semana</strong>, que dan aún más vida al lugar y transforman el ambiente en un punto animado de la noche isleña." },
+  briza_p4: { pt: "Com boa comida, música e uma paisagem encantadora, o Briza da Gigóia se tornou um espaço ideal para quem quer curtir bons momentos, comemorar datas especiais ou simplesmente aproveitar a energia boêmia das ilhas da Barra da Tijuca.", en: "With good food, music, and an enchanting landscape, Briza da Gigóia has become an ideal space for those who want to enjoy good times, celebrate special dates, or simply soak up the bohemian energy of the Barra da Tijuca islands.", es: "Con buena comida, música y un paisaje encantador, el Briza da Gigóia se ha convertido en un espacio ideal para quienes quieren disfrutar de buenos momentos, celebrar fechas especiales o simplemente aprovechar la energía bohemia de las islas de Barra da Tijuca." },
   
-  briza_dest_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
-  briza_dest_1: { pt: "✓ Mixologia Autoral", en: "✓ Signature Mixology", es: "✓ Mixología de Autor" },
-  briza_dest_2: { pt: "✓ Música ao Vivo e DJs", en: "✓ Live Music & DJs", es: "✓ Música en Vivo y DJs" },
-  briza_dest_3: { pt: "✓ Vista Panorâmica", en: "✓ Panoramic View", es: "✓ Vista Panorámica" },
-  briza_dest_4: { pt: "✓ Gastronomia Criativa", en: "✓ Creative Gastronomy", es: "✓ Gastronomía Creativa" },
+  briza_esp_titulo: { pt: "A Experiência", en: "The Experience", es: "La Experiencia" },
+  briza_esp_1: { pt: "✓ Rodas de Samba", en: "✓ Samba Circles", es: "✓ Ruedas de Samba" },
+  briza_esp_2: { pt: "✓ Espaço para Eventos", en: "✓ Event Space", es: "✓ Espacio para Eventos" },
+  briza_esp_3: { pt: "✓ Gastronomia e Drinks", en: "✓ Gastronomy & Drinks", es: "✓ Gastronomía y Tragos" },
+  briza_esp_4: { pt: "✓ Vista para a Lagoa", en: "✓ Lagoon View", es: "✓ Vista a la Laguna" },
   
-  briza_info_titulo: { pt: "Informações", en: "Information", es: "Información" },
-  briza_info_p: { pt: "Ideal para comemorações e fins de tarde.", en: "Ideal for celebrations and late afternoons.", es: "Ideal para celebraciones y atardeceres." },
+  briza_amb_titulo: { pt: "Ambiente", en: "Atmosphere", es: "Ambiente" },
+  briza_amb_p: { pt: "Versátil, boêmio e com muita música.", en: "Versatile, bohemian, and full of music.", es: "Versátil, bohemio y con mucha música." },
   
-  btn_falar_gigi_reserva: { pt: "Falar com a Gigi para Reservas", en: "Talk to Gigi for Reservations", es: "Habla con Gigi para Reservas" },
-  btn_voltar_comer: { pt: "← Voltar para Comer & Beber", en: "← Back to Eat & Drink", es: "← Volver a Comer y Beber" },
+  briza_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
+  briza_dest_p: { pt: "🎵 O ponto certo para curtir um samba no fim de semana.", en: "🎵 The right spot to enjoy samba on the weekend.", es: "🎵 El punto ideal para disfrutar un samba el fin de semana." },
+  
+  btn_falar_gigi_reserva: { pt: "Reservar para Eventos / Aniversários", en: "Book for Events / Birthdays", es: "Reservar para Eventos / Cumpleaños" },
 
   // === PÁGINA: BAR CAIÇARAS ===
-  title_caicara: { pt: "Bar Caiçaras", en: "Caiçaras Bar", es: "Bar Caiçaras" },
-  sub_caicara: { pt: "Referência em frutos do mar e culinária brasileira, unindo sabor caseiro e o visual incrível da nossa lagoa.", en: "A reference in seafood and Brazilian cuisine, combining homemade flavor with the incredible view of our lagoon.", es: "Referencia en mariscos y gastronomía brasileña, uniendo el sabor casero con la increíble vista de nuestra laguna." },
+  title_caicara: { pt: "Bar Caiçara", en: "Caiçara Bar", es: "Bar Caiçara" },
+  sub_caicara: { pt: "Arte, música, gastronomia e um pôr do sol inesquecível na Ilha da Gigóia.", en: "Art, music, gastronomy, and an unforgettable sunset on Gigóia Island.", es: "Arte, música, gastronomía y un atardecer inolvidable en la Isla Gigóia." },
+  caicara_sobre_titulo: { pt: "Sobre o Bar", en: "About the Bar", es: "Sobre el Bar" },
   
-  caicara_sobre_titulo: { pt: "Sobre o Restaurante", en: "About the Restaurant", es: "Sobre el Restaurante" },
-  caicara_sobre_p1: { pt: "O <strong>Bar Caiçaras</strong> é um marco na Ilha da Gigóia. Perfeito para quem busca um almoço farto e de qualidade, o restaurante se destaca por suas moquecas, peixes grelhados e guarnições que remetem ao melhor da comida feita com carinho.", en: "<strong>Caiçaras Bar</strong> is a landmark on Gigóia Island. Perfect for those looking for a hearty and quality lunch, the restaurant stands out for its moquecas (fish stews), grilled fish, and side dishes that bring out the best of food made with love.", es: "El <strong>Bar Caiçaras</strong> es un ícono en la Isla Gigóia. Perfecto para quienes buscan un almuerzo abundante y de calidad, el restaurante destaca por sus moquecas, pescados a la parrilla y guarniciones que evocan lo mejor de la comida hecha con cariño." },
-  caicara_sobre_p2: { pt: "O ambiente é familiar e acolhedor, ideal para quem quer passar horas aproveitando a brisa da lagoa. A tradição se reflete em cada prato, servido sempre com ingredientes frescos e aquele toque caseiro que só a Gigóia tem.", en: "The atmosphere is family-friendly and welcoming, ideal for those who want to spend hours enjoying the lagoon breeze. The tradition is reflected in every dish, always served with fresh ingredients and that homemade touch unique to Gigóia.", es: "El ambiente es familiar y acogedor, ideal para quienes desean pasar horas disfrutando de la brisa de la laguna. La tradición se refleja en cada plato, siempre servido con ingredientes frescos y ese toque casero que solo Gigóia tiene." },
+  caicara_p1: { pt: "Localizado na Ilha da Gigóia, o <strong>Bar Caiçara</strong> é um dos lugares mais autênticos e culturais da região. Muito mais do que um simples bar, o espaço mistura gastronomia, arte e música, criando um ambiente único para quem visita a ilha.", en: "Located on Gigóia Island, <strong>Bar Caiçara</strong> is one of the most authentic and cultural places in the region. Much more than just a bar, the space mixes gastronomy, art, and music, creating a unique environment for those visiting the island.", es: "Ubicado en la Isla Gigóia, el <strong>Bar Caiçara</strong> es uno de los lugares más auténticos y culturales de la región. Mucho más que un simple bar, el espacio mezcla gastronomía, arte y música, creando un ambiente único para quienes visitan la isla." },
+  caicara_p2: { pt: "Um dos grandes diferenciais da casa é seu <strong>palco cultural</strong>, onde acontecem apresentações de música ao vivo, teatro e eventos artísticos, transformando o local em um verdadeiro ponto de encontro para quem aprecia cultura e boa energia.", en: "One of the great differentials of the house is its <strong>cultural stage</strong>, which hosts live music performances, theater, and artistic events, transforming the place into a true meeting point for those who appreciate culture and good energy.", es: "Uno de los grandes diferenciales de la casa es su <strong>escenario cultural</strong>, donde se realizan presentaciones de música en vivo, teatro y eventos artísticos, transformando el lugar en un verdadero punto de encuentro para quienes aprecian la cultura y la buena energía." },
+  caicara_p3: { pt: "O cardápio é bem variado e traz excelentes petiscos e pratos inspirados na culinária brasileira e caiçara, com destaque para frutos do mar, pastéis e diversas opções para compartilhar entre amigos. Tudo isso acompanhado de chopp sempre muito gelado e ótimas caipirinhas, perfeitas para o clima descontraído da ilha.", en: "The menu is quite varied and features excellent snacks and dishes inspired by Brazilian and caiçara cuisine, with highlights including seafood, pastéis, and various options to share with friends. All this accompanied by ice-cold draft beer and great caipirinhas, perfect for the island's relaxed atmosphere.", es: "El menú es muy variado y ofrece excelentes tapas y platos inspirados en la cocina brasileña y caiçara, destacando los mariscos, empanadas y diversas opciones para compartir entre amigos. Todo esto acompañado de cerveza de barril siempre muy fría y excelentes caipirinhas, perfectas para el ambiente relajado de la isla." },
+  caicara_p4: { pt: "Outro espetáculo à parte é o <strong>pôr do sol</strong>. Com vista privilegiada para a lagoa e para a natureza ao redor, o Bar Caiçara se transforma no fim da tarde em um dos melhores lugares da Ilha da Gigóia para relaxar, apreciar a paisagem e curtir a vibe tranquila das ilhas.", en: "Another spectacle is the <strong>sunset</strong>. With a privileged view of the lagoon and surrounding nature, Bar Caiçara transforms in the late afternoon into one of the best places on Gigóia Island to relax, enjoy the scenery, and soak up the peaceful vibe of the islands.", es: "Otro espectáculo aparte es el <strong>atardecer</strong>. Con una vista privilegiada a la laguna y la naturaleza circundante, el Bar Caiçara se transforma al final de la tarde en uno de los mejores lugares de la Isla Gigóia para relajarse, apreciar el paisaje y disfrutar de la vibra tranquila de las islas." },
+  caicara_p5: { pt: "Entre boa música, arte, petiscos e uma paisagem incrível, o Bar Caiçara é uma parada obrigatória para quem quer viver a essência cultural e boêmia da Ilha da Gigóia.", en: "Between good music, art, snacks, and an incredible landscape, Bar Caiçara is a mandatory stop for anyone who wants to experience the cultural and bohemian essence of Gigóia Island.", es: "Entre buena música, arte, tapas y un paisaje increíble, el Bar Caiçara es una parada obligatoria para quienes desean vivir la esencia cultural y bohemia de la Isla Gigóia." },
   
-  caicara_esp_titulo: { pt: "Especialidades", en: "Specialties", es: "Especialidades" },
-  caicara_esp_1: { pt: "✓ Moquecas Variadas", en: "✓ Various Moquecas", es: "✓ Moquecas Variadas" },
-  caicara_esp_2: { pt: "✓ Peixes Frescos do Dia", en: "✓ Fresh Catch of the Day", es: "✓ Pescado Fresco del Día" },
-  caicara_esp_3: { pt: "✓ Petiscos Clássicos", en: "✓ Classic Snacks", es: "✓ Tapas Clásicas" },
-  caicara_esp_4: { pt: "✓ Guarnições Caseiras", en: "✓ Homemade Sides", es: "✓ Guarniciones Caseras" },
+  caicara_esp_titulo: { pt: "A Essência", en: "The Essence", es: "La Esencia" },
+  caicara_esp_1: { pt: "✓ Música ao vivo e Arte", en: "✓ Live Music and Art", es: "✓ Música en vivo y Arte" },
+  caicara_esp_2: { pt: "✓ Petiscos e Frutos do Mar", en: "✓ Snacks and Seafood", es: "✓ Tapas y Mariscos" },
+  caicara_esp_3: { pt: "✓ Chopp gelado e Caipirinhas", en: "✓ Ice-cold Draft Beer and Caipirinhas", es: "✓ Cerveza de barril fría y Caipirinhas" },
+  caicara_esp_4: { pt: "✓ Palco Cultural", en: "✓ Cultural Stage", es: "✓ Escenario Cultural" },
   
   caicara_amb_titulo: { pt: "Ambiente", en: "Atmosphere", es: "Ambiente" },
-  caicara_amb_p: { pt: "Amplo, arejado e ideal para famílias e grandes grupos.", en: "Spacious, airy, and ideal for families and large groups.", es: "Amplio, ventilado e ideal para familias y grupos grandes." },
+  caicara_amb_p: { pt: "Descontraído, boêmio e com vista privilegiada.", en: "Relaxed, bohemian, and with a privileged view.", es: "Relajado, bohemio y con una vista privilegiada." },
   
   caicara_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
-  caicara_dest_p: { pt: "🔝 Um dos mais tradicionais e bem avaliados da ilha.", en: "🔝 One of the most traditional and highly rated on the island.", es: "🔝 Uno de los más tradicionales y mejor valorados de la isla." },
+  caicara_dest_p: { pt: "🌅 Um dos melhores lugares para curtir o pôr do sol.", en: "🌅 One of the best places to enjoy the sunset.", es: "🌅 Uno de los mejores lugares para disfrutar del atardecer." },
+  
+  // === PÁGINA: BOTECO DA CAPIVARA ===
+  badge_capivara: { pt: "🌅 Pôr do Sol & Drinks", en: "🌅 Sunset & Drinks", es: "🌅 Atardecer y Tragos" },
+  title_capivara: { pt: "Boteco da Capivara", en: "Boteco da Capivara", es: "Boteco da Capivara" },
+  sub_capivara: { pt: "Um espaço charmoso com vista direta para a lagoa, perfeito para aproveitar o dia ou o fim de tarde.", en: "A charming space with a direct view of the lagoon, perfect to enjoy the day or late afternoon.", es: "Un espacio encantador con vista directa a la laguna, perfecto para disfrutar el día o el atardecer." },
+  
+  capivara_sobre_titulo: { pt: "Sobre o Bar", en: "About the Bar", es: "Sobre el Bar" },
+  capivara_p1: { pt: "O <strong>Boteco da Capivara</strong> é um bar super charmoso na Ilha da Gigóia, localizado logo em frente à entrada principal da ilha, com vista direta para a lagoa e um dos cenários mais agradáveis para aproveitar o dia ou o fim de tarde.", en: "<strong>Boteco da Capivara</strong> is a super charming bar on Gigóia Island, located right in front of the island's main entrance, with a direct view of the lagoon and one of the most pleasant settings to enjoy the day or late afternoon.", es: "El <strong>Boteco da Capivara</strong> es un bar súper encantador en la Isla Gigóia, ubicado justo frente a la entrada principal de la isla, con vista directa a la laguna y uno de los escenarios más agradables para disfrutar el día o el atardecer." },
+  capivara_p2: { pt: "O espaço tem um clima super acolhedor e descontraído. No cardápio é possível encontrar petiscos, drinks variados e também pratos mais elaborados, como moquecas e risotos, agradando tanto quem quer apenas beliscar algo quanto quem prefere fazer uma refeição completa.", en: "The space has a super cozy and relaxed atmosphere. On the menu, you can find snacks, varied drinks, and also more elaborate dishes, such as moquecas and risottos, pleasing both those who just want a bite and those who prefer a full meal.", es: "El espacio tiene un ambiente súper acogedor y relajado. En el menú, se pueden encontrar tapas, tragos variados y también platos más elaborados, como moquecas y risottos, complaciendo tanto a quienes solo quieren picar algo como a quienes prefieren una comida completa." },
+  capivara_p3: { pt: "Por estar localizado de frente para a água, o Boteco da Capivara também é um dos lugares ideais para apreciar o pôr do sol na Ilha da Gigóia, quando o ambiente fica ainda mais agradável e o clima da ilha aparece em sua melhor forma.", en: "Being located facing the water, Boteco da Capivara is also one of the ideal places to enjoy the sunset on Gigóia Island, when the environment becomes even more pleasant and the island's vibe shows its best form.", es: "Al estar ubicado frente al agua, Boteco da Capivara también es uno de los lugares ideales para disfrutar del atardecer en la Isla Gigóia, cuando el ambiente se vuelve aún más agradable y el clima de la isla aparece en su mejor forma." },
+  capivara_p4: { pt: "Com boa comida, drinks, vista privilegiada e aquele espírito descontraído típico das ilhas da Barra da Tijuca, o Boteco da Capivara se tornou mais uma parada obrigatória para quem quer curtir a gastronomia e o clima único da Ilha da Gigóia.", en: "With good food, drinks, a privileged view, and that relaxed spirit typical of the Barra da Tijuca islands, Boteco da Capivara has become another mandatory stop for those who want to enjoy the gastronomy and unique vibe of Gigóia Island.", es: "Con buena comida, tragos, una vista privilegiada y ese espíritu relajado típico de las islas de Barra da Tijuca, Boteco da Capivara se ha convertido en otra parada obligatoria para quienes desean disfrutar de la gastronomía y el clima único de la Isla Gigóia." },
+  
+  capivara_esp_titulo: { pt: "A Experiência", en: "The Experience", es: "La Experiencia" },
+  capivara_esp_1: { pt: "✓ Vista direta para a lagoa", en: "✓ Direct view of the lagoon", es: "✓ Vista directa a la laguna" },
+  capivara_esp_2: { pt: "✓ Petiscos e pratos elaborados", en: "✓ Snacks and elaborate dishes", es: "✓ Tapas y platos elaborados" },
+  capivara_esp_3: { pt: "✓ Drinks variados", en: "✓ Varied drinks", es: "✓ Tragos variados" },
+  capivara_esp_4: { pt: "✓ Pôr do sol inesquecível", en: "✓ Unforgettable sunset", es: "✓ Atardecer inolvidable" },
+  
+  capivara_amb_titulo: { pt: "Ambiente", en: "Atmosphere", es: "Ambiente" },
+  capivara_amb_p: { pt: "Super acolhedor e descontraído.", en: "Super cozy and relaxed.", es: "Súper acogedor y relajado." },
+  
+  capivara_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
+  capivara_dest_p: { pt: "🌅 Uma parada obrigatória com vista privilegiada.", en: "🌅 A mandatory stop with a privileged view.", es: "🌅 Una parada obligatoria con una vista privilegiada." },
 
-  btn_falar_gigi_menu: { pt: "Ver Cardápio via Gigi", en: "See Menu via Gigi", es: "Ver Menú vía Gigi" },
-
-  // === PÁGINA: BAR CAPIVARA ===
-  badge_capivara: { pt: "🍤 Peixe Fresco & Arte", en: "🍤 Fresh Fish & Art", es: "🍤 Pescado Fresco y Arte" },
-  title_capivara: { pt: "Bar Capivara", en: "Bar Capivara", es: "Bar Capivara" },
-  sub_capivara: { pt: "Uma experiência gastronômica autêntica, onde o cardápio é ditado pelo mar e pela criatividade do chef.", en: "An authentic gastronomic experience where the menu is dictated by the sea and the chef's creativity.", es: "Una experiencia gastronómica auténtica, donde el menú es dictado por el mar y la creatividad del chef." },
-  
-  capivara_sobre_titulo: { pt: "Essência da Lagoa", en: "Essence of the Lagoon", es: "Esencia de la Laguna" },
-  capivara_sobre_p: { pt: "O <strong>Bar Capivara</strong> é o destino final para os verdadeiros amantes da gastronomia. Sem luxo ostensivo, mas com um sabor insuperável, o restaurante foca na qualidade extrema da matéria-prima, vinda diretamente dos pescadores locais.", en: "<strong>Bar Capivara</strong> is the ultimate destination for true gastronomy lovers. Without ostentatious luxury but with an unsurpassed flavor, the restaurant focuses on the extreme quality of the raw materials, coming directly from local fishermen.", es: "El <strong>Bar Capivara</strong> es el destino final para los verdaderos amantes de la gastronomía. Sin lujos ostentosos, pero con un sabor insuperable, el restaurante se centra en la calidad extrema de la materia prima, proveniente directamente de los pescadores locales." },
-  
-  capivara_dest_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
-  capivara_dest_1: { pt: "✓ Frutos do Mar do Dia", en: "✓ Catch of the Day Seafood", es: "✓ Mariscos del Día" },
-  capivara_dest_2: { pt: "✓ Pratos Autorais", en: "✓ Signature Dishes", es: "✓ Platos de Autor" },
-  capivara_dest_3: { pt: "✓ Cervejas Artesanais", en: "✓ Craft Beers", es: "✓ Cervezas Artesanales" },
-  capivara_dest_4: { pt: "✓ Localização \"Raiz\" e Charmosa", en: "✓ \"Authentic\" and Charming Location", es: "✓ Ubicación \"Auténtica\" y Encantadora" },
-  
-  capivara_dica_titulo: { pt: "Fica a Dica", en: "A Quick Tip", es: "Un Consejo" },
-  capivara_dica_p: { pt: "Chegue cedo! Como os produtos são frescos, as especialidades costumam acabar rápido.", en: "Arrive early! Since the products are fresh, the specialties tend to sell out quickly.", es: "¡Llega temprano! Como los productos son frescos, las especialidades suelen agotarse rápido." },
-  
-  capivara_reserva_titulo: { pt: "Reserva", en: "Reservation", es: "Reserva" },
-  capivara_reserva_p: { pt: "Altamente recomendado consultar disponibilidade.", en: "Highly recommended to check availability.", es: "Altamente recomendado consultar disponibilidad." },
-  
-  btn_consultar_disp: { pt: "Consultar Disponibilidade", en: "Check Availability", es: "Consultar Disponibilidad" },
 
 // === PÁGINA: BAR DO ELSON ===
-  badge_elson: { pt: "🍻 Hospitalidade & Tradição", en: "🍻 Hospitality & Tradition", es: "🍻 Hospitalidad y Tradición" },
+  badge_elson: { pt: "🍗 Boteco Raiz & Futebol", en: "🍗 Authentic Pub & Soccer", es: "🍗 Cantina Auténtica y Fútbol" },
   title_elson: { pt: "Bar do Elson", en: "Elson's Bar", es: "Bar de Elson" },
-  sub_elson: { pt: "Um ponto de encontro clássico onde o bom atendimento e o tempero caseiro são as estrelas da casa.", en: "A classic meeting point where great service and homemade seasoning are the stars of the house.", es: "Un clásico punto de encuentro donde el buen servicio y el sazón casero son las estrellas de la casa." },
+  sub_elson: { pt: "Um autêntico boteco raiz com o melhor frango assado da Ilha, cerveja gelada e futebol.", en: "An authentic pub with the best roast chicken on the Island, ice-cold beer, and soccer.", es: "Una auténtica cantina de barrio con el mejor pollo asado de la Isla, cerveza helada y fútbol." },
   
-  elson_sobre_titulo: { pt: "Sobre o Bar", en: "About the Bar", es: "Sobre el Bar" },
-  elson_sobre_p: { pt: "O <strong>Bar do Elson</strong> é o lugar para quem busca a simplicidade bem feita. Conhecido pelo seu peixe frito crocante e pelos caldos que revigoram, o bar é um reduto de amizade e boas histórias na Ilha da Gigóia.", en: "<strong>Elson's Bar</strong> is the place for those seeking well-made simplicity. Known for its crispy fried fish and invigorating broths, the bar is a haven of friendship and good stories on Gigóia Island.", es: "El <strong>Bar de Elson</strong> es el lugar para quienes buscan la simplicidad bien hecha. Conocido por su pescado frito crujiente y sus caldos vigorizantes, el bar es un refugio de amistad y buenas historias en la Isla Gigóia." },
+  elson_sobre_titulo: { pt: "Sobre o Boteco", en: "About the Pub", es: "Sobre la Cantina" },
+  elson_p1: { pt: "Localizado no coração da Ilha da Gigóia, o <strong>Bar do Elson</strong> é um daqueles botequins que rapidamente se tornaram parte da vida da ilha. Criado pelo dono Elson, o bar rapidamente conquistou moradores e visitantes com seu clima simples, acolhedor e cheio de personalidade.", en: "Located in the heart of Gigóia Island, <strong>Elson's Bar</strong> is one of those pubs that quickly became part of the island's life. Created by owner Elson, the bar quickly won over residents and visitors with its simple, welcoming, and personality-filled atmosphere.", es: "Ubicado en el corazón de la Isla Gigóia, el <strong>Bar de Elson</strong> es una de esas cantinas que rápidamente se convirtieron en parte de la vida de la isla. Creado por su dueño Elson, el bar conquistó rápidamente a residentes y visitantes con su ambiente sencillo, acogedor y lleno de personalidad." },
+  elson_p2: { pt: "O espaço tem a essência de boteco raiz, onde as pessoas chegam para comer bem, conversar e aproveitar o dia à beira da lagoa. O grande destaque da casa é o famoso frango assado, considerado por muitos frequentadores o melhor frango assado da Ilha da Gigóia, suculento e cheio de sabor.", en: "The space has the essence of an authentic pub, where people come to eat well, chat, and enjoy the day by the lagoon. The main highlight of the house is the famous roast chicken, considered by many patrons the best roast chicken on Gigóia Island, juicy and full of flavor.", es: "El espacio tiene la esencia de un bar auténtico, donde la gente llega para comer bien, conversar y disfrutar del día junto a la laguna. El gran destaque de la casa es el famoso pollo asado, considerado por muchos clientes el mejor pollo asado de la Isla Gigóia, jugoso y lleno de sabor." },
+  elson_p3: { pt: "Além da comida, o bar também virou um ponto de encontro para assistir jogos de futebol, reunindo moradores e visitantes que se juntam para torcer, beber uma cerveja gelada e aproveitar o clima descontraído típico das ilhas.", en: "Besides the food, the bar has also become a meeting point to watch soccer games, gathering residents and visitors who join together to cheer, drink an ice-cold beer, and enjoy the relaxed atmosphere typical of the islands.", es: "Además de la comida, el bar también se ha convertido en un punto de encuentro para ver partidos de fútbol, reuniendo a residentes y visitantes que se juntan para animar, beber una cerveza helada y disfrutar del ambiente relajado típico de las islas." },
+  elson_p4: { pt: "Outro motivo de destaque é que o bar participa do tradicional concurso gastronômico <strong>Comida di Buteco</strong>, evento que reúne alguns dos melhores botecos do país e celebra a cultura da comida de bar brasileira.", en: "Another highlight is that the bar participates in the traditional gastronomic contest <strong>Comida di Buteco</strong>, an event that gathers some of the best pubs in the country and celebrates the culture of Brazilian pub food.", es: "Otro motivo destacado es que el bar participa en el tradicional concurso gastronómico <strong>Comida di Buteco</strong>, un evento que reúne a algunas de las mejores cantinas del país y celebra la cultura de la comida de bar brasileña." },
   
-  elson_dest_titulo: { pt: "Para Comer", en: "To Eat", es: "Para Comer" },
-  elson_dest_1: { pt: "✓ Peixe Inteiro Frito", en: "✓ Whole Fried Fish", es: "✓ Pescado Entero Frito" },
-  elson_dest_2: { pt: "✓ Porções de Boteco Raiz", en: "✓ Authentic Pub Portions", es: "✓ Porciones de Bar Auténticas" },
-  elson_dest_3: { pt: "✓ Caldo de Peixe e Camarão", en: "✓ Fish and Shrimp Broth", es: "✓ Caldo de Pescado y Camarón" },
-  elson_dest_4: { pt: "✓ Pratos Feitos (Almoço)", en: "✓ Daily Specials (Lunch)", es: "✓ Platos del Día (Almuerzo)" },
+  elson_esp_titulo: { pt: "A Experiência", en: "The Experience", es: "La Experiencia" },
+  elson_esp_1: { pt: "✓ O Melhor Frango Assado", en: "✓ The Best Roast Chicken", es: "✓ El Mejor Pollo Asado" },
+  elson_esp_2: { pt: "✓ Transmissão de Jogos", en: "✓ Live Sports Broadcast", es: "✓ Transmisión de Partidos" },
+  elson_esp_3: { pt: "✓ Comida di Buteco", en: "✓ Comida di Buteco Contest", es: "✓ Comida di Buteco" },
+  elson_esp_4: { pt: "✓ Clima de Boteco Raiz", en: "✓ Authentic Pub Vibe", es: "✓ Clima de Cantina Auténtica" },
   
-  elson_vibe_titulo: { pt: "Vibe", en: "Vibe", es: "Vibra" },
-  elson_vibe_p: { pt: "Ambiente familiar e muito acolhedor.", en: "Family atmosphere and very welcoming.", es: "Ambiente familiar y muy acogedor." },
+  elson_amb_titulo: { pt: "Ambiente", en: "Atmosphere", es: "Ambiente" },
+  elson_amb_p: { pt: "Simples, acolhedor e cheio de personalidade.", en: "Simple, welcoming, and full of personality.", es: "Sencillo, acogedor y lleno de personalidad." },
   
-  elson_preco_titulo: { pt: "Preço", en: "Price", es: "Precio" },
-  elson_preco_p: { pt: "💰 Ótimo custo-benefício.", en: "💰 Great value for money.", es: "💰 Excelente relación calidad-precio." },
-
+  elson_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
+  elson_dest_p: { pt: "🍗 O famoso frango assado, considerado o melhor da região.", en: "🍗 The famous roast chicken, considered the best in the region.", es: "🍗 El famoso pollo asado, considerado el mejor de la región." },
+  
   // === PÁGINA: BAR DA JOANA ===
   badge_joana: { pt: "🍳 Tempero com Amor", en: "🍳 Seasoned with Love", es: "🍳 Sazón con Amor" },
   title_joana: { pt: "Bar da Joana", en: "Joana's Bar", es: "Bar de Joana" },
-  sub_joana: { pt: "Simplicidade, tradição e aquele gostinho de comida feita na hora que todo mundo ama.", en: "Simplicity, tradition, and that taste of freshly made food that everyone loves.", es: "Simplicidad, tradición y ese saborcito de comida recién hecha que a todos les encanta." },
+  sub_joana: { pt: "Um cantinho especial com atendimento caloroso, tempero caseiro e a verdadeira essência do boteco carioca.", en: "A special little corner with warm service, homemade seasoning, and the true essence of a Carioca pub.", es: "Un rincón especial con un servicio cálido, sazón casero y la verdadera esencia de la cantina carioca." },
   
-  joana_sobre_titulo: { pt: "Culinária de Raiz", en: "Authentic Cuisine", es: "Cocina Auténtica" },
-  joana_sobre_p: { pt: "O <strong>Bar da Joana</strong> é o destino certo para quem busca o verdadeiro sabor da Ilha da Gigóia. Joana e sua equipe preparam cada prato com o cuidado de quem cozinha para a própria família, tornando o local um dos favoritos tanto de moradores quanto de visitantes frequentes.", en: "<strong>Joana's Bar</strong> is the right destination for those seeking the true flavor of Gigóia Island. Joana and her team prepare each dish with the care of someone cooking for their own family, making it a favorite among locals and frequent visitors.", es: "El <strong>Bar de Joana</strong> es el destino ideal para quienes buscan el verdadero sabor de la Isla Gigóia. Joana y su equipo preparan cada plato con el cuidado de quien cocina para su propia familia, convirtiéndolo en un favorito tanto de residentes como de visitantes frecuentes." },
+  joana_sobre_titulo: { pt: "Sobre o Bar", en: "About the Bar", es: "Sobre el Bar" },
+  joana_p1: { pt: "O <strong>Bar da Joana</strong> é aquele cantinho especial que faz você se sentir em casa logo no primeiro momento. Conhecido pelo atendimento extremamente caloroso e pela comida com verdadeiro tempero caseiro, é o ponto de encontro perfeito para quem busca uma experiência autêntica e sem frescuras.", en: "<strong>Joana's Bar</strong> is that special little corner that makes you feel at home right from the first moment. Known for its extremely warm service and food with true homemade seasoning, it's the perfect meeting point for those seeking an authentic, no-frills experience.", es: "El <strong>Bar de Joana</strong> es ese rincón especial que te hace sentir como en casa desde el primer momento. Conocido por su servicio extremadamente cálido y comida con verdadero sazón casero, es el punto de encuentro perfecto para quienes buscan una experiencia auténtica y sin pretensiones." },
+  joana_p2: { pt: "Aqui a regra é simples: sentar, pedir uma bebida bem gelada e deixar o tempo passar enquanto se aproveita a tranquilidade e a simpatia dos moradores e visitantes da ilha.", en: "Here the rule is simple: sit down, order an ice-cold drink, and let time pass while enjoying the tranquility and friendliness of the island's residents and visitors.", es: "Aquí la regla es simple: sentarse, pedir una bebida bien fría y dejar pasar el tiempo mientras se disfruta de la tranquilidad y simpatía de los residentes y visitantes de la isla." },
+  joana_p3: { pt: "Se a sua ideia de passeio perfeito envolve simplicidade, gente boa e sabores que abraçam o estômago, o Bar da Joana vai ser uma das suas paradas favoritas.", en: "If your idea of a perfect outing involves simplicity, good people, and flavors that embrace your stomach, Joana's Bar will be one of your favorite stops.", es: "Si tu idea de un paseo perfecto incluye sencillez, buena gente y sabores que abrazan el estómago, el Bar de Joana será una de tus paradas favoritas." },
   
-  joana_esp_titulo: { pt: "Especialidades", en: "Specialties", es: "Especialidades" },
-  joana_esp_1: { pt: "✓ Prato Feito (PF) Caprichado", en: "✓ Hearty Daily Specials", es: "✓ Menú del Día Abundante" },
-  joana_esp_2: { pt: "✓ Bolinhos Artesanais", en: "✓ Artisanal Fritters", es: "✓ Croquetas Artesanales" },
-  joana_esp_3: { pt: "✓ Peixe com Molho de Camarão", en: "✓ Fish with Shrimp Sauce", es: "✓ Pescado con Salsa de Camarón" },
-  joana_esp_4: { pt: "✓ Galinhada aos Domingos", en: "✓ Sunday Galinhada (Chicken & Rice)", es: "✓ Galinhada los Domingos (Arroz con Pollo)" },
+  joana_esp_titulo: { pt: "Destaques do Bar", en: "Bar Highlights", es: "Destacados del Bar" },
+  joana_esp_1: { pt: "✓ Cerveja Estupidamente Gelada", en: "✓ Ice-Cold Beer", es: "✓ Cerveza Súper Helada" },
+  joana_esp_2: { pt: "✓ Petiscos Raiz (Pastéis e Caldinhos)", en: "✓ Authentic Snacks (Pastries and Broths)", es: "✓ Tapas Auténticas (Empanadas y Caldos)" },
+  joana_esp_3: { pt: "✓ Clima Familiar e Aconchegante", en: "✓ Cozy and Family Atmosphere", es: "✓ Clima Familiar y Acogedor" },
+  joana_esp_4: { pt: "✓ Comida com Tempero Caseiro", en: "✓ Food with Homemade Seasoning", es: "✓ Comida con Sazón Casero" },
   
-  joana_info_titulo: { pt: "Informações", en: "Information", es: "Información" },
-  joana_info_p: { pt: "Ambiente simples, acolhedor e familiar.", en: "Simple, welcoming, and family-friendly atmosphere.", es: "Ambiente sencillo, acogedor y familiar." },
+  joana_amb_titulo: { pt: "Ambiente", en: "Atmosphere", es: "Ambiente" },
+  joana_amb_p: { pt: "Simples, aconchegante e sem frescuras.", en: "Simple, cozy, and no-frills.", es: "Sencillo, acogedor y sin pretensiones." },
   
-  joana_preco_titulo: { pt: "Preço", en: "Price", es: "Precio" },
-  joana_preco_p: { pt: "💸 Excelente custo-benefício.", en: "💸 Excellent value for money.", es: "💸 Excelente relación calidad-precio." },
-
-// === PÁGINA: BAR DO KAI ===
-  badge_kai: { pt: "🍹 Drinks & Lagoon View", en: "🍹 Drinks & Lagoon View", es: "🍹 Drinks y Vista a la Laguna" },
+  joana_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
+  joana_dest_p: { pt: "🍻 O ponto de encontro perfeito para uma experiência autêntica.", en: "🍻 The perfect meeting point for an authentic experience.", es: "🍻 El punto de encuentro perfecto para una experiencia auténtica." },
+  
+/// === PÁGINA: BAR DO KAI ===
+  badge_kai: { pt: "🍻 Ponto de Encontro", en: "🍻 Meeting Point", es: "🍻 Punto de Encuentro" },
   title_kai: { pt: "Bar do Kai", en: "Kai's Bar", es: "Bar de Kai" },
-  sub_kai: { pt: "O lugar perfeito para ver o tempo passar devagar, com um bom drink na mão e os pés quase na água.", en: "The perfect place to watch time pass slowly, with a good drink in hand and your feet almost in the water.", es: "El lugar perfecto para ver pasar el tiempo lentamente, con un buen cóctel en mano y los pies casi en el agua." },
+  sub_kai: { pt: "Um ambiente super acolhedor e descontraído, ponto de encontro e parada certa para a saideira na ilha.", en: "A super cozy and relaxed atmosphere, a meeting point, and the perfect stop for a nightcap on the island.", es: "Un ambiente súper acogedor y relajado, punto de encuentro y la parada segura para la última copa en la isla." },
   
-  kai_sobre_titulo: { pt: "Vibe na Beira d'Água", en: "Waterside Vibe", es: "Vibra a la Orilla del Agua" },
-  kai_sobre_p: { pt: "O <strong>Bar do Kai</strong> traduz o espírito da Ilha da Gigóia: sem pressa e com muita cor. É o ponto de encontro ideal para grupos de amigos que querem curtir um balde de cerveja ou coquetéis tropicais enquanto apreciam a fauna e o movimento dos barcos no canal.", en: "<strong>Kai's Bar</strong> translates the spirit of Gigóia Island: unhurried and full of color. It's the ideal meeting point for groups of friends who want to enjoy a bucket of beer or tropical cocktails while appreciating the fauna and the movement of boats in the canal.", es: "El <strong>Bar de Kai</strong> traduce el espíritu de la Isla Gigóia: sin prisa y con mucho color. Es el punto de encuentro ideal para grupos de amigos que quieren disfrutar de un cubo de cerveza o cócteles tropicales mientras aprecian la fauna y el movimiento de los barcos en el canal." },
-  
-  kai_dest_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
-  kai_dest_1: { pt: "✓ Caipirinhas Especiais", en: "✓ Special Caipirinhas", es: "✓ Caipirinhas Especiales" },
-  kai_dest_2: { pt: "✓ Porções de Peixe Frito", en: "✓ Fried Fish Portions", es: "✓ Porciones de Pescado Frito" },
-  kai_dest_3: { pt: "✓ Deck com Vista Direta", en: "✓ Deck with Direct View", es: "✓ Terraza con Vista Directa" },
-  kai_dest_4: { pt: "✓ Música de Qualidade", en: "✓ Quality Music", es: "✓ Música de Calidad" },
-  
-  kai_info_titulo: { pt: "Informações", en: "Information", es: "Información" },
-  kai_info_p: { pt: "Ambiente ao ar livre e descontraído.", en: "Outdoor and relaxed atmosphere.", es: "Ambiente al aire libre y relajado." },
-  
-  kai_momento_titulo: { pt: "Momento Ideal", en: "Ideal Moment", es: "Momento Ideal" },
-  kai_momento_p: { pt: "🌅 Final de tarde e fins de semana.", en: "🌅 Late afternoon and weekends.", es: "🌅 Al final de la tarde y fines de semana." },
+  kai_sobre_titulo: { pt: "Sobre o Bar", en: "About the Bar", es: "Sobre el Bar" },
+  kai_p1: { pt: "O <strong>Kai</strong> é um bar bastante conhecido da Ilha da Gigóia e se destaca pelo ambiente super acolhedor e descontraído, típico dos lugares onde moradores e visitantes se sentem à vontade desde o primeiro momento.", en: "<strong>Kai</strong> is a well-known bar on Gigóia Island and stands out for its super cozy and relaxed atmosphere, typical of places where residents and visitors feel at ease from the first moment.", es: "El <strong>Kai</strong> es un bar muy conocido en la Isla Gigóia y destaca por su ambiente súper acogedor y relajado, típico de los lugares donde residentes y visitantes se sienten cómodos desde el primer momento." },
+  kai_p2: { pt: "O espaço oferece pratos executivos e petiscos variados, sendo uma ótima opção tanto para quem quer fazer uma refeição tranquila durante o dia quanto para quem prefere sentar com amigos e aproveitar a atmosfera da ilha.", en: "The space offers executive dishes and varied snacks, making it a great option both for a quiet meal during the day and for sitting with friends to enjoy the island's atmosphere.", es: "El espacio ofrece platos ejecutivos y tapas variadas, siendo una excelente opción tanto para quienes desean una comida tranquila durante el día como para quienes prefieren sentarse con amigos a disfrutar de la atmósfera de la isla." },
+  kai_p3: { pt: "Um detalhe que tornou o Kai bastante popular entre frequentadores é que muitas vezes ele acaba sendo um dos bares que ficam <strong>abertos até mais tarde na ilha</strong>, virando parada certa para quem quer tomar aquela saideira.", en: "A detail that made Kai very popular among patrons is that it is often one of the bars that stay <strong>open later on the island</strong>, becoming the perfect stop for a nightcap.", es: "Un detalle que hizo al Kai muy popular entre los clientes es que a menudo es uno de los bares que abren <strong>hasta más tarde en la isla</strong>, convirtiéndose en la parada segura para la última copa." },
+  kai_p4: { pt: "A cerveja sempre muito gelada também é parte da fama do lugar, o que naturalmente transforma o bar em ponto de encontro de moradores e visitantes, que se reúnem ali para conversar, relaxar e aproveitar o clima simples e autêntico da ilha.", en: "The always ice-cold beer is also part of the place's fame, which naturally turns the bar into a meeting point for locals and visitors, who gather there to chat, relax, and enjoy the simple and authentic vibe of the island.", es: "La cerveza siempre muy fría también es parte de la fama del lugar, lo que naturalmente transforma el bar en un punto de encuentro para residentes y visitantes, que se reúnen allí para conversar, relajarse y disfrutar del clima sencillo y auténtico de la isla." },
+  kai_p5: { pt: "Com ambiente agradável, boa comida e aquele espírito de boteco carioca onde todo mundo acaba se conhecendo, o Kai é mais um dos lugares que ajudam a construir a vida noturna da Ilha da Gigóia, que hoje é reconhecida como um pequeno polo gastronômico dentro da Barra da Tijuca.", en: "With a pleasant atmosphere, good food, and that Carioca pub spirit where everyone gets to know each other, Kai is another place that helps build the nightlife of Gigóia Island, which today is recognized as a small gastronomic hub within Barra da Tijuca.", es: "Con un ambiente agradable, buena comida y ese espíritu de cantina carioca donde todos se terminan conociendo, el Kai es otro de los lugares que ayudan a construir la vida nocturna de la Isla Gigóia, que hoy es reconocida como un pequeño polo gastronómico dentro de Barra da Tijuca." },
+  kai_esp_titulo: { pt: "A Experiência", en: "The Experience", es: "La Experiencia" },
+  kai_esp_1: { pt: "✓ Pratos executivos e petiscos", en: "✓ Executive dishes and snacks", es: "✓ Platos ejecutivos y tapas" },
+  kai_esp_2: { pt: "✓ Aberto até mais tarde (saideira)", en: "✓ Open late (nightcap)", es: "✓ Abierto hasta más tarde (última copa)" },
+  kai_esp_3: { pt: "✓ Cerveja sempre muito gelada", en: "✓ Ice-cold beer", es: "✓ Cerveza siempre muy fría" },
+  kai_esp_4: { pt: "✓ Clima de boteco carioca", en: "✓ Carioca pub vibe", es: "✓ Clima de cantina carioca" },
+  kai_amb_titulo: { pt: "Ambiente", en: "Atmosphere", es: "Ambiente" },
+  kai_amb_p: { pt: "Simples, acolhedor e autêntico.", en: "Simple, welcoming, and authentic.", es: "Sencillo, acogedor y auténtico." },
+  kai_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
+  kai_dest_p: { pt: "🌙 A parada certa para a saideira na ilha.", en: "🌙 The right stop for a nightcap on the island.", es: "🌙 La parada perfecta para la última copa en la isla." },
 
-// === PÁGINA: KAUAI ===
-  badge_kauai: { pt: "🌴 Tropical Vibes", en: "🌴 Tropical Vibes", es: "🌴 Vibras Tropicales" },
-  title_kauai: { pt: "Kauai", en: "Kauai", es: "Kauai" },
-  sub_kauai: { pt: "Um pedaço do paraíso com deck exclusivo, coquetelaria de alto nível e pratos que celebram o frescor do Rio.", en: "A piece of paradise with an exclusive deck, high-level cocktails, and dishes that celebrate the freshness of Rio.", es: "Un pedazo de paraíso con terraza exclusiva, coctelería de alto nivel y platos que celebran la frescura de Río." },
+// === PÁGINA: KAUAI GASTROLOUNGE ===
+  badge_kauai: { pt: "🌴 Entretenimento & Natureza", en: "🌴 Entertainment & Nature", es: "🌴 Entretenimiento y Naturaleza" },
+  title_kauai: { pt: "Kauai Gastrolounge", en: "Kauai Gastrolounge", es: "Kauai Gastrolounge" },
+  sub_kauai: { pt: "Gastronomia, natureza e música em um espaço amplo com área kids na charmosa Ilha do Ipê.", en: "Gastronomy, nature, and music in a spacious venue with a kids' area on the charming Ilha do Ipê.", es: "Gastronomía, naturaleza y música en un amplio espacio con área infantil en la encantadora Ilha do Ipê." },
   
-  kauai_sobre_titulo: { pt: "Experiência Kauai", en: "Kauai Experience", es: "Experiencia Kauai" },
-  kauai_sobre_p: { pt: "O <strong>Kauai</strong> combina a energia descontraída da ilha com uma estrutura impecável. Conhecido pela sua decoração temática e ambiente arejado, é o lugar perfeito para quem busca um almoço prolongado ou um brinde especial ao pôr do sol.", en: "<strong>Kauai</strong> combines the relaxed energy of the island with impeccable infrastructure. Known for its themed decor and airy environment, it's the perfect place for those seeking a long lunch or a special toast at sunset.", es: "El <strong>Kauai</strong> combina la energía relajada de la isla con una estructura impecable. Conocido por su decoración temática y ambiente ventilado, es el lugar perfecto para quienes buscan un almuerzo prolongado o un brindis especial al atardecer." },
+  kauai_sobre_titulo: { pt: "Sobre o Gastrolounge", en: "About the Gastrolounge", es: "Sobre el Gastrolounge" },
+  kauai_p1: { pt: "Localizado na charmosa Ilha do Ipê, no complexo lagunar da região da Gigóia, o <strong>Kauai Gastrolounge</strong> é um espaço que mistura gastronomia, natureza e entretenimento, criando um ambiente perfeito para quem quer relaxar e aproveitar bons momentos na ilha.", en: "Located on the charming Ilha do Ipê, in the lagoon complex of the Gigóia region, <strong>Kauai Gastrolounge</strong> is a space that mixes gastronomy, nature, and entertainment, creating a perfect environment for those who want to relax and enjoy good times on the island.", es: "Ubicado en la encantadora Ilha do Ipê, en el complejo lagunar de la región de Gigóia, <strong>Kauai Gastrolounge</strong> es un espacio que mezcla gastronomía, naturaleza y entretenimiento, creando un ambiente perfecto para quienes quieren relajarse y disfrutar de buenos momentos en la isla." },
+  kauai_p2: { pt: "O local possui uma estrutura ampla e diferenciada, com decoração rústica e ambiente ao ar livre em meio à natureza. Entre os destaques do espaço está a <strong>área kids</strong>, que permite que famílias aproveitem o passeio enquanto as crianças também têm um espaço próprio para se divertir.", en: "The venue has a large and differentiated structure, with rustic decor and an outdoor environment surrounded by nature. Among the space's highlights is the <strong>kids' area</strong>, which allows families to enjoy the outing while children also have their own space to have fun.", es: "El lugar cuenta con una estructura amplia y diferenciada, con decoración rústica y un ambiente al aire libre en medio de la naturaleza. Entre los atractivos del espacio destaca la <strong>zona kids</strong>, que permite a las familias disfrutar del paseo mientras los niños también tienen un espacio propio para divertirse." },
+  kauai_p3: { pt: "A casa também é conhecida pela música ao vivo nos finais de semana, com programação variada que inclui samba, pagode, rock e DJs, criando um clima animado que combina perfeitamente com o cenário das ilhas da lagoa.", en: "The house is also known for live music on weekends, with a varied program that includes samba, pagode, rock, and DJs, creating a lively atmosphere that perfectly matches the scenery of the lagoon islands.", es: "La casa también es conocida por la música en vivo los fines de semana, con una variada programación que incluye samba, pagode, rock y DJs, creando un ambiente animado que combina a la perfección con el paisaje de las islas de la laguna." },
+  kauai_p4: { pt: "Com cardápio variado, drinks bem preparados e um ambiente descontraído à beira da água, o Kauai se tornou um dos lugares ideais para curtir o fim de tarde com amigos, apreciando a paisagem, boa música e o clima único da região.", en: "With a varied menu, well-prepared drinks, and a relaxed atmosphere by the water, Kauai has become one of the ideal places to enjoy the late afternoon with friends, appreciating the scenery, good music, and the unique climate of the region.", es: "Con un menú variado, tragos bien preparados y un ambiente relajado a la orilla del agua, Kauai se ha convertido en uno de los lugares ideales para disfrutar del atardecer con amigos, apreciando el paisaje, la buena música y el clima único de la región." },
+  kauai_p5: { pt: "Entre gastronomia, natureza e música, o Kauai Gastrolounge oferece uma experiência completa para quem quer aproveitar um dos cenários mais agradáveis das ilhas da Barra da Tijuca.", en: "Between gastronomy, nature, and music, Kauai Gastrolounge offers a complete experience for those who want to enjoy one of the most pleasant settings in the Barra da Tijuca islands.", es: "Entre gastronomía, naturaleza y música, Kauai Gastrolounge ofrece una experiencia completa para quienes desean disfrutar de uno de los escenarios más agradables de las islas de Barra da Tijuca." },
   
-  kauai_dest_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
-  kauai_dest_1: { pt: "✓ Mixologia Premium", en: "✓ Premium Mixology", es: "✓ Mixología Premium" },
-  kauai_dest_2: { pt: "✓ Cozinha Fusion", en: "✓ Fusion Cuisine", es: "✓ Cocina Fusión" },
-  kauai_dest_3: { pt: "✓ Deck Panorâmico", en: "✓ Panoramic Deck", es: "✓ Terraza Panorámica" },
-  kauai_dest_4: { pt: "✓ Música e DJ Set", en: "✓ Music & DJ Set", es: "✓ Música y DJ Set" },
+  kauai_esp_titulo: { pt: "A Experiência", en: "The Experience", es: "La Experiencia" },
+  kauai_esp_1: { pt: "✓ Estrutura ampla com Área Kids", en: "✓ Spacious structure with Kids' Area", es: "✓ Amplia estructura con Área Kids" },
+  kauai_esp_2: { pt: "✓ Gastronomia e drinks bem preparados", en: "✓ Well-prepared gastronomy and drinks", es: "✓ Gastronomía y tragos bien preparados" },
+  kauai_esp_3: { pt: "✓ Música ao vivo (Samba, Rock, DJs)", en: "✓ Live music (Samba, Rock, DJs)", es: "✓ Música en vivo (Samba, Rock, DJs)" },
+  kauai_esp_4: { pt: "✓ Localizado na Ilha do Ipê", en: "✓ Located on Ilha do Ipê", es: "✓ Ubicado en Ilha do Ipê" },
   
-  kauai_info_titulo: { pt: "Informações", en: "Information", es: "Información" },
-  kauai_info_p: { pt: "Consulte sobre reservas para eventos e aniversários.", en: "Inquire about reservations for events and birthdays.", es: "Consulte sobre reservas para eventos y cumpleaños." },
+  kauai_amb_titulo: { pt: "Ambiente", en: "Atmosphere", es: "Ambiente" },
+  kauai_amb_p: { pt: "Amplo, rústico e integrado à natureza.", en: "Spacious, rustic, and integrated with nature.", es: "Amplio, rústico e integrado a la naturaleza." },
   
-  kauai_estilo_titulo: { pt: "Estilo", en: "Style", es: "Estilo" },
-  kauai_estilo_p: { pt: "🏖️ Tropical Chic.", en: "🏖️ Tropical Chic.", es: "🏖️ Tropical Chic." },
-  
-  btn_reservar_wpp: { pt: "Reservar pelo WhatsApp", en: "Book via WhatsApp", es: "Reservar por WhatsApp" },
+  kauai_dest_titulo: { pt: "Destaque", en: "Highlight", es: "Destacado" },
+  kauai_dest_p: { pt: "🎸 Perfeito para curtir o fim de tarde com amigos e família.", en: "🎸 Perfect to enjoy the late afternoon with friends and family.", es: "🎸 Perfecto para disfrutar del atardecer con amigos y familiares." },
 
+  
 // === PÁGINA: LISTA DE BARES E DRINKS ===
   title_bares: { pt: "Bares e Drinks", en: "Bars & Drinks", es: "Bares y Bebidas" },
   sub_bares: { pt: "Cerveja gelada, caipirinhas e o pôr do sol mais bonito da região.", en: "Ice-cold beer, caipirinhas, and the most beautiful sunset in the region.", es: "Cerveza helada, caipirinhas y el atardecer más hermoso de la región." },
@@ -288,12 +305,10 @@ const DICT = {
   card_akbar_d: { pt: "Drinks autorais e uma das vistas mais disputadas para o canal.", en: "Signature drinks and one of the most sought-after views of the canal.", es: "Tragos de autor y una de las vistas más codiciadas del canal." },
   card_briza_d: { pt: "Ambiente descontraído, música boa e petiscos que são a cara do Rio.", en: "Relaxed atmosphere, good music, and snacks that scream Rio.", es: "Ambiente relajado, buena música y tapas con todo el estilo de Río." },
   card_caicaras_d: { pt: "O ponto de encontro tradicional com o verdadeiro tempero da ilha.", en: "The traditional meeting point with the true flavor of the island.", es: "El punto de encuentro tradicional con el verdadero sazón de la isla." },
-  card_capivara_d: { pt: "Simplicidade e cerveja trincando. Um clássico imperdível.", en: "Simplicity and ice-cold beer. An unmissable classic.", es: "Simplicidad y cerveza bien helada. Un clásico imperdible." },
-  card_elson_d: { pt: "Famoso pelos petiscos de boteco e atendimento acolhedor.", en: "Famous for its pub snacks and welcoming service.", es: "Famoso por sus tapas de bar y su servicio acogedor." },
-  card_joana_d: { pt: "Comida caseira de boteco e aquele clima de vila que a gente ama.", en: "Homemade pub food and that village vibe we all love.", es: "Comida casera de bar y ese ambiente de pueblo que tanto amamos." },
-  card_kai_d: { pt: "Modernidade, drinks coloridos e uma vibe jovem à beira d'água.", en: "Modernity, colorful drinks, and a youthful vibe by the water.", es: "Modernidad, tragos coloridos y una vibra joven a la orilla del agua." },
-  card_kauai_d: { pt: "Inspirado no estilo tropical, ideal para um final de tarde relaxante.", en: "Inspired by tropical style, ideal for a relaxing late afternoon.", es: "Inspirado en el estilo tropical, ideal para una tarde relajante." },
-
+  card_capivara_d: { pt: "Ambiente charmoso com vista direta para a lagoa, drinks variados e um pôr do sol incrível.", en: "Charming environment with a direct view of the lagoon, varied drinks, and an incredible sunset.", es: "Ambiente encantador con vista directa a la laguna, tragos variados y un atardecer increíble." },
+  card_elson_d: { pt: "Boteco raiz famoso pelo melhor frango assado da ilha, cerveja gelada e transmissão de jogos.", en: "Authentic pub famous for the best roast chicken on the island, ice-cold beer, and live sports.", es: "Cantina auténtica famosa por el mejor pollo asado de la isla, cerveza helada y transmisión de partidos." },  card_joana_d: { pt: "Comida caseira de boteco e aquele clima de vila que a gente ama.", en: "Homemade pub food and that village vibe we all love.", es: "Comida casera de bar y ese ambiente de pueblo que tanto amamos." },
+card_kai_d: { pt: "Ponto de encontro descontraído, famoso pela cerveja gelada e por ser a parada certa para a saideira.", en: "Relaxed meeting point, famous for ice-cold beer and being the perfect stop for a nightcap.", es: "Punto de encuentro relajado, famoso por la cerveza helada y por ser la parada segura para la última copa." },  card_kauai_d: { pt: "Inspirado no estilo tropical, ideal para um final de tarde relaxante.", en: "Inspired by tropical style, ideal for a relaxing late afternoon.", es: "Inspirado en el estilo tropical, ideal para una tarde relajante." },
+card_kauai_d: { pt: "Espaço amplo na Ilha do Ipê com música ao vivo, área kids e um clima perfeito para relaxar.", en: "Spacious venue on Ilha do Ipê with live music, a kids' area, and a perfect vibe to relax.", es: "Amplio espacio en la Ilha do Ipê con música en vivo, área para niños y un clima perfecto para relajarse." },
   btn_voltar_comer_beber: { pt: "← Voltar para Onde Comer e Beber", en: "← Back to Where to Eat & Drink", es: "← Volver a Dónde Comer y Beber" },
 
   // === PÁGINA: BOAS PRÁTICAS ===
