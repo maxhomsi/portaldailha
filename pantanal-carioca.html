@@ -34,18 +34,16 @@
 
     <section class="section" style="padding-top:10px; padding-bottom: 0;">
       <div class="container">
-        <div class="tipRow reveal" style="margin-bottom: 20px;">
-          <div class="capi">
-            <div class="capi__ring">
-              <img id="capiImg" src="assets/capi.png" alt="Capi" />
-            </div>
-            <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
+        <div class="jaca-block reveal" style="margin-bottom: 20px; background: rgba(71, 176, 90, 0.05); padding: 25px; border-radius: 16px; display: flex; align-items: center; gap: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);">
+          <div class="jaca-img-wrapper" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 4px solid var(--green-dark);">
+            <img src="assets/jaca.png" alt="Jacaré Jack" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="tip">
-            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          <div class="jaca-text">
+            <h3 style="color: var(--green-dark); margin: 0 0 10px; font-size: 22px;">Jacaré Jack</h3>
+            <p style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.6; color: var(--text);">Fique de olho! Durante o passeio, preste bastante atenção nas margens do manguezal. Nosso famoso jacaré-de-papo-amarelo adora tomar um sol e observar os visitantes.</p>
           </div>
         </div>
-      </div>
+        </div>
     </section>
 
     <section class="section" style="padding-top: 0;">
@@ -97,9 +95,6 @@
             <div style="background: rgba(242, 194, 0, 0.1); padding: 25px; border-radius: 16px;">
               <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;" data-i18n="briza_info_titulo">Informações</h3>
               <p style="font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 20px; margin-top: 0;" data-i18n="pantanal_info_val">🗓️ Diariamente</p>
-              
-              <h3 style="color: var(--text); margin-top: 0; margin-bottom: 10px; font-size: 18px;" data-i18n="tip_title">Dica do Capi</h3>
-              <p style="margin: 0; color: #444; font-weight: 700;" data-i18n="pantanal_dica_p">Esse passeio é ideal para conhecer melhor a natureza da lagoa e descobrir um lado surpreendente da Barra.</p>
             </div>
           </div>
 
@@ -132,8 +127,6 @@
   </div>
   
   <script src="dicionario.js"></script>
-  <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>
