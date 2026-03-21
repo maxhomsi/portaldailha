@@ -482,3 +482,25 @@ body[data-page="passeios-rotas"] .card__body,
   .jack-img { top: -70px !important; left: 50% !important; bottom: auto !important; width: 140px !important; transform: translate(-50%, 0) !important; }
   .gigiBox { width: calc(100% - 40px); bottom: 80px; } .lang-switcher { height: 44px; padding: 0 8px; font-size: 13px; } .side-badge { padding: 10px 12px; font-size: 11px; }
 }
+/* =========================================================
+   AJUSTE ESPECÍFICO: 3 CARDS DA HOME
+   ========================================================= */
+#homeCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1050px; /* Mantém um tamanho agradável para 3 colunas */
+  margin: 0 auto;
+}
+
+/* Responsividade específica para os 3 cards da home */
+@media (max-width: 960px) {
+  #homeCards {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  #homeCards {
+    grid-template-columns: 1fr; /* 1 por linha no celular */
+  }
+}
