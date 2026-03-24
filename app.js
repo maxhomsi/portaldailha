@@ -515,10 +515,35 @@ function setupProgress() {
   window.addEventListener("scroll", onScroll, { passive:true });
 }
 
+function setupCookieBanner() {
+  // Verifica se o usuário já aceitou antes
+  if (localStorage.getItem("ilg_cookie_consent") === "1") return;
+
+  const html = `
+    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #ffffff; padding: 16px 24px; box-shadow: 0 -10px 25px rgba(0,0,0,0.1); z-index: 10000; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid var(--line);">
+      <p style="margin: 0; font-size: 14px; color: var(--text); flex: 1 1 300px; line-height: 1.5; font-weight: 600;">
+        Nós usamos cookies para melhorar sua experiência e garantir a segurança dos seus dados, em conformidade com a <strong>LGPD</strong>. Ao continuar navegando, você concorda com a nossa <a href="politica-privacidade.html" style="color: var(--green); text-decoration: underline;">Política de Privacidade</a>.
+      </p>
+      <button onclick="acceptCookies()" class="btn btn--green" style="padding: 12px 24px; font-size: 14px; flex-shrink: 0; height: auto;">
+        Entendi e Aceito
+      </button>
+    </div>
+  `;
+  
+  document.body.insertAdjacentHTML('beforeend', html);
+}
+
+window.acceptCookies = function() {
+  localStorage.setItem("ilg_cookie_consent", "1");
+  const banner = document.getElementById("cookieBanner");
+  if (banner) banner.style.display = "none";
+};
+
 // INICIALIZAÇÃO PRINCIPAL DO SITE
 (function init(){
   setupProgress();
   mountHeaderFooter();
+  setupCookieBanner();
   const page = document.body.getAttribute("data-page");
 
   if (page === "home") {
