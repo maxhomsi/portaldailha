@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="styles.css">
   
   <style>
-    /* Reset mínimo para garantir a centralização */
-    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    /* Reset corrigido - SEM overflow: hidden! */
+    body, html { margin: 0; padding: 0; }
     
-    /* Centralização total da cena */
+    /* Centralização fluida (permite scroll) */
     main.error-page {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      min-height: 100vh;
-      background-color: var(--bg); /* Usa a cor de fundo do seu styles.css */
-      padding: 20px;
+      min-height: 80vh; /* Ajustado para não travar a tela */
+      background-color: var(--bg); 
+      padding: 60px 20px; /* Mais espaço em cima e embaixo */
     }
 
     /* Formatação da cena cômica */
@@ -32,7 +32,7 @@
     .error-title {
       font-size: 38px;
       font-weight: 900;
-      color: var(--teal-deep); /* Marinho Profundo do logo */
+      color: var(--teal-deep); 
       margin: 20px 0 10px;
       line-height: 1.2;
     }
@@ -40,7 +40,7 @@
     .error-description {
       font-size: 18px;
       font-weight: 700;
-      color: var(--muted); /* Cor de texto suave do styles.css */
+      color: var(--muted); 
       max-width: 600px;
       margin: 0 auto 40px;
       line-height: 1.6;
@@ -50,8 +50,8 @@
     .error-image {
       max-width: 100%;
       height: auto;
-      border-radius: var(--radius-card); /* Mesma curvatura dos cards */
-      box-shadow: 0 15px 40px rgba(25, 70, 67, 0.12); /* Sombra suave */
+      border-radius: var(--radius-card); 
+      box-shadow: 0 15px 40px rgba(25, 70, 67, 0.12); 
       margin-bottom: 20px;
     }
 
@@ -67,7 +67,6 @@
     @media (max-width: 768px) {
       .error-title { font-size: 32px; }
       .error-description { font-size: 16px; margin-bottom: 30px; }
-      body, html { overflow: auto; } /* Permite scroll no mobile */
     }
   </style>
 </head>
@@ -76,7 +75,7 @@
   <main class="error-page section">
     <div class="container error-scene reveal is-in">
       
-      <img src="assets/404.png" alt="Desenho animado cômico encalhado no mangue com três personagens (Capivara, Garça e Jacaré) confusos e espantados em volta de grandes números de madeira encalhados que dizem '4 0 4', com fumaça e faíscas saindo." class="error-image">
+      <img src="404.png" alt="Desenho animado cômico encalhado no mangue com três personagens (Capivara, Garça e Jacaré) confusos e espantados em volta de grandes números de madeira encalhados que dizem '4 0 4', com fumaça e faíscas saindo." class="error-image">
       
       <h1 class="error-title">Oops! Navegamos para águas desconhecidas...</h1>
       <p class="error-description">
