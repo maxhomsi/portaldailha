@@ -76,7 +76,7 @@
   <main class="error-page section">
     <div class="container error-scene reveal is-in">
       
-      <img src="404.png" alt="Desenho animado cômico encalhado no mangue com três personagens (Capivara, Garça e Jacaré) confusos e espantados em volta de grandes números de madeira encalhados que dizem '4 0 4', com fumaça e faíscas saindo." class="error-image">
+      <img src="assets/404.png" alt="Desenho animado cômico encalhado no mangue com três personagens (Capivara, Garça e Jacaré) confusos e espantados em volta de grandes números de madeira encalhados que dizem '4 0 4', com fumaça e faíscas saindo." class="error-image">
       
       <h1 class="error-title">Oops! Navegamos para águas desconhecidas...</h1>
       <p class="error-description">
