@@ -4,9 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap');
 
 :root {
+  /* NOVAS CORES DO LOGO CLÁSSICO */
+  --teal-deep: #194643;  /* Marinho/Verde Profundo - Cor principal */
+  --green-deep: #407F6D; /* Verde Floresta */
+  --ocher-gold: #F2C200; /* Dourado/Amarelo */
+
+  /* Cores Antigas Mantidas para Compatibilidade (opcional trocar depois) */
   --green: #47b05a;
   --green-dark: #3aa44a;
   --yellow: #f2c200;
+  
   --text: #1d2320;
   --muted: #6b726e;
   --bg: #eef7ef;
@@ -78,11 +85,16 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 }
 
 .brand { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; }
-.brand__logo { width: 58px; height: 58px; object-fit: contain; }
-.brand__text { display: flex; flex-direction: column; justify-content: center; }
-.brand__text small { font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #2c7e55; }
-.brand__text strong { font-size: 22px; font-weight: 900; color: #1f5f88; white-space: nowrap; line-height: 1.1; }
-.brand__text strong span { color: var(--green-dark); }
+
+/* AJUSTE DE TAMANHO DO LOGO */
+.brand__logo { 
+  width: 140px; /* Aumentado de 58px para 140px */
+  height: auto; 
+  object-fit: contain; 
+}
+
+/* Escondendo o texto antigo da marca, já que o logo agora tem texto */
+.brand__text { display: none; } 
 
 /* PÍLULA CENTRAL */
 .navWrap { 
@@ -443,7 +455,8 @@ body[data-page="passeios-rotas"] .card__body,
 }
 
 @media (max-width: 960px) {
-  .brand__logo { width: 60px; height: 60px; } 
+  /* AJUSTE RESPONSIVO DO LOGO */
+  .brand__logo { width: 110px; height: auto; } 
   .brand__text strong { font-size: 20px; }
   .navWrap, .header__actions .social-links, .header__actions .btn--green { display: none; }
   
