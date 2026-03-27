@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap');
 
 :root {
+  /* NOVAS CORES DA IDENTIDADE CLÁSSICA */
+  --teal-deep: #194643;
+  --green-deep: #407F6D;
+  --ocher-gold: #F2C200;
+
   --green: #47b05a;
   --green-dark: #3aa44a;
   --yellow: #f2c200;
@@ -79,18 +84,27 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 
 .brand { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; border: none !important; outline: none !important; text-decoration: none; }
 
-/* AJUSTE FINO DO TAMANHO DA LOGO E REMOÇÃO DE BORDAS CINZAS */
+/* LOGO COMO ÍCONE + TRUQUE DO FUNDO INVISÍVEL */
 .brand__logo { 
-  width: 95px; /* Tamanho proporcional para o menu */
-  height: auto; 
+  width: 65px; 
+  height: 65px; 
   object-fit: contain; 
-  border: none !important; /* Remove linha cinza */
-  outline: none !important; /* Remove foco */
-  background: transparent !important; /* Remove fundo residual */
+  border: none !important; 
+  outline: none !important; 
+  background: transparent !important; 
   box-shadow: none !important; 
+  mix-blend-mode: multiply; /* Mágica para remover o fundo cinza/borda */
 }
 
-.brand__text { display: none; }
+/* RESTAURAÇÃO DO TEXTO HTML COM AS NOVAS CORES */
+.brand__text { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+.brand__text small { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-deep); }
+.brand__text strong { font-size: 22px; font-weight: 900; color: var(--teal-deep); white-space: nowrap; line-height: 1.1; }
+.brand__text strong span { color: var(--green-deep); }
 
 /* PÍLULA CENTRAL */
 .navWrap { 
@@ -451,8 +465,9 @@ body[data-page="passeios-rotas"] .card__body,
 }
 
 @media (max-width: 960px) {
-  /* AJUSTE PARA DISPOSITIVOS MÓVEIS (Menor para não quebrar o layout) */
-  .brand__logo { width: 80px; height: auto; } 
+  /* AJUSTE PARA DISPOSITIVOS MÓVEIS */
+  .brand__logo { width: 55px; height: 55px; } 
+  .brand__text strong { font-size: 20px; }
   
   .navWrap, .header__actions .social-links, .header__actions .btn--green { display: none; }
   
