@@ -4,11 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap');
 
 :root {
-  /* RESTAURAÇÃO DAS CORES ORIGINAIS E VIBRANTES */
-  --green: #47b05a;        /* Verde Vibrante (Botões e Portal da Ilha) */
-  --green-dark: #3aa44a;   /* Verde Escuro (GIGÓIA) */
-  --yellow: #f2c200;       /* Dourado (Sotaques) */
-  
+  --green: #47b05a;
+  --green-dark: #3aa44a;
+  --yellow: #f2c200;
   --text: #1d2320;
   --muted: #6b726e;
   --bg: #eef7ef;
@@ -83,8 +81,8 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 
 /* LOGO COMO ÍCONE + TRUQUE DO FUNDO INVISÍVEL */
 .brand__logo { 
-  width: 65px; 
-  height: 65px; 
+  width: 68px; /* Aumentado um pouco para acompanhar a nova fonte */
+  height: 68px; 
   object-fit: contain; 
   border: none !important; 
   outline: none !important; 
@@ -93,15 +91,29 @@ img { display: block; max-width: 100%; background: transparent !important; borde
   mix-blend-mode: multiply; /* Mágica para remover o fundo cinza/borda */
 }
 
-/* RESTAURAÇÃO DO TEXTO HTML COM AS CORES VIBRANTES */
+/* RESTAURAÇÃO DAS CORES ORIGINAIS COM FONTE MAIOR */
 .brand__text { 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
 }
-.brand__text small { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); } /* Verde Vibrante Portal da Ilha */
-.brand__text strong { font-size: 22px; font-weight: 900; color: var(--green-dark); white-space: nowrap; line-height: 1.1; } /* Verde Escuro GIGÓIA */
-.brand__text strong span { color: var(--green-dark); }
+.brand__text small { 
+  font-size: 12px; /* Aumentado (era 10px) */
+  font-weight: 800; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: #2c7e55; /* Verde original do PORTAL */
+}
+.brand__text strong { 
+  font-size: 25px; /* Aumentado (era 22px) */
+  font-weight: 900; 
+  color: #1f5f88; /* Azul original de Gigóia */
+  white-space: nowrap; 
+  line-height: 1.1; 
+}
+.brand__text strong span { 
+  color: var(--green); /* Verde original (igual ao botão) para Ilha da */
+}
 
 /* PÍLULA CENTRAL */
 .navWrap { 
@@ -207,7 +219,7 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 .hero h1 .accent { color: var(--yellow); }
 .hero p { max-width: 800px; margin: 0 auto 30px; font-size: 20px; font-weight: 600; text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); }
 
-.hero__actions { display: center; justify-content: center; flex-wrap: wrap; gap: 16px; }
+.hero__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
 .hero__actions a:not(.btn--green) { background: #ffffff; color: var(--text); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); }
 .hero__actions a:not(.btn--green):hover { color: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
 .hero__foot { display: flex; justify-content: center; gap: 10px; margin-top: 18px; color: rgba(255, 255, 255, 0.82); font-weight: 800; }
@@ -463,8 +475,8 @@ body[data-page="passeios-rotas"] .card__body,
 
 @media (max-width: 960px) {
   /* AJUSTE PARA DISPOSITIVOS MÓVEIS */
-  .brand__logo { width: 55px; height: 55px; } 
-  .brand__text strong { font-size: 20px; }
+  .brand__logo { width: 60px; height: 60px; } 
+  .brand__text strong { font-size: 22px; } /* Aumentado um pouco no mobile também */
   
   .navWrap, .header__actions .social-links, .header__actions .btn--green { display: none; }
   
