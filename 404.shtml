@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Não Encontrada | Portal Ilha da Gigóia</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    /* Reset mínimo para garantir a centralização */
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    
+    /* Centralização total da cena */
+    main.error-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      background-color: var(--bg); /* Usa a cor de fundo do seu styles.css */
+      padding: 20px;
+    }
+
+    /* Formatação da cena cômica */
+    .error-scene {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    /* Títulos e textos com as cores da marca */
+    .error-title {
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--teal-deep); /* Marinho Profundo do logo */
+      margin: 20px 0 10px;
+      line-height: 1.2;
+    }
+    
+    .error-description {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--muted); /* Cor de texto suave do styles.css */
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    
+    /* Integrando a imagem cômica 404.png */
+    .error-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-card); /* Mesma curvatura dos cards */
+      box-shadow: 0 15px 40px rgba(25, 70, 67, 0.12); /* Sombra suave */
+      margin-bottom: 20px;
+    }
+
+    /* Agrupamento de botões */
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    /* Ajustes finos para celulares */
+    @media (max-width: 768px) {
+      .error-title { font-size: 32px; }
+      .error-description { font-size: 16px; margin-bottom: 30px; }
+      body, html { overflow: auto; } /* Permite scroll no mobile */
+    }
+  </style>
+</head>
+<body class="is-ready">
+
+  <main class="error-page section">
+    <div class="container error-scene reveal is-in">
+      
+      <img src="404.png" alt="Desenho animado cômico encalhado no mangue com três personagens (Capivara, Garça e Jacaré) confusos e espantados em volta de grandes números de madeira encalhados que dizem '4 0 4', com fumaça e faíscas saindo." class="error-image">
+      
+      <h1 class="error-title">Oops! Navegamos para águas desconhecidas...</h1>
+      <p class="error-description">
+        O mistério do 404 está solto! A nossa equipe de exploradores está investigando, mas a página que você procura parece ter afundado no mangue. Não se preocupe, o barco principal ainda está seguro!
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="btn btn--green">
+          Voltar para o Início
+        </a>
+        
+        <a href="passeios-rotas.html" class="btn btn--yellow" style="color: var(--teal-deep);">
+          Ver Passeios de Barco
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  </body>
+</html>
