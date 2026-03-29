@@ -81,38 +81,38 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 
 /* LOGO COMO ÍCONE + TRUQUE DO FUNDO INVISÍVEL */
 .brand__logo { 
-  width: 68px; /* Aumentado um pouco para acompanhar a nova fonte */
+  width: 68px; 
   height: 68px; 
   object-fit: contain; 
   border: none !important; 
   outline: none !important; 
   background: transparent !important; 
   box-shadow: none !important; 
-  mix-blend-mode: multiply; /* Mágica para remover o fundo cinza/borda */
+  mix-blend-mode: multiply; 
 }
 
-/* RESTAURAÇÃO DAS CORES ORIGINAIS COM FONTE MAIOR */
+/* TEXTO DA MARCA COM CORES ORIGINAIS E FONTE MAIOR */
 .brand__text { 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
 }
 .brand__text small { 
-  font-size: 12px; /* Aumentado (era 10px) */
+  font-size: 12px; 
   font-weight: 800; 
   letter-spacing: 0.12em; 
   text-transform: uppercase; 
-  color: #2c7e55; /* Verde original do PORTAL */
+  color: #2c7e55; 
 }
 .brand__text strong { 
-  font-size: 25px; /* Aumentado (era 22px) */
+  font-size: 25px; 
   font-weight: 900; 
-  color: #1f5f88; /* Azul original de Gigóia */
+  color: #1f5f88; 
   white-space: nowrap; 
   line-height: 1.1; 
 }
 .brand__text strong span { 
-  color: var(--green); /* Verde original (igual ao botão) para Ilha da */
+  color: var(--green); 
 }
 
 /* PÍLULA CENTRAL */
@@ -457,89 +457,74 @@ body[data-page="passeios-rotas"] .card__body,
 .footer__bottom { max-width: var(--max); margin: 0 auto; padding: 15px 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.15); color: rgba(255, 255, 255, 0.7); text-align: center; font-size: 13px; font-weight: 600; }
 
 /* =========================================================
-   RESPONSIVIDADE (MEDIA QUERIES)
+   CENA DIVERTIDA DO 404 COM PERSONAGENS
    ========================================================= */
-.burger, .mobileNav { display: none; }
-
-@media (max-width: 1100px) { 
-  .cards, .cards--4 { grid-template-columns: repeat(2, 1fr); }
-  body[data-page="passeios-rotas"] .cards,
-  body[data-page="passeios-rotas"] .cards--4,
-  .cards--5 { grid-template-columns: repeat(3, 1fr); }
+.error-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  max-width: 500px;
+  height: 250px;
 }
 
-@media (max-width: 1024px) { 
-  .header__inner { padding: 0 10px; } 
-  .navWrap { max-width: auto; margin: 0 10px; }
+.error-code {
+  font-size: 160px !important;
+  font-weight: 900;
+  color: var(--yellow);
+  text-shadow: 4px 6px 0px rgba(71, 176, 90, 0.2); 
+  z-index: 2;
+  margin: 0 !important;
+  line-height: 1 !important;
+  letter-spacing: -5px;
 }
 
-@media (max-width: 960px) {
-  /* AJUSTE PARA DISPOSITIVOS MÓVEIS */
-  .brand__logo { width: 60px; height: 60px; } 
-  .brand__text strong { font-size: 22px; } /* Aumentado um pouco no mobile também */
-  
-  .navWrap, .header__actions .social-links, .header__actions .btn--green { display: none; }
-  
-  .burger { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(0,0,0,0.1); border-radius: var(--radius-btn); background: #fff; font-size: 20px; }
-  .mobileNav { display: block; padding: 15px 0; border-top: 1px solid var(--line); }
-  .mobileNav__inner { display: grid; gap: 10px; } .mobileNav a { padding: 10px; font-weight: 900; }
-  .mobileNav a[aria-current="page"] { background: rgba(71,176,90,0.15) !important; color: var(--green) !important; border-radius: 100px; text-align: center; }
+/* Jacaré espiando pela esquerda */
+.char-jaca {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  width: 140px;
+  z-index: 3;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  animation: float 4s ease-in-out infinite;
 }
 
-@media (max-width: 768px) {
-  .cards, .cards--4 { grid-template-columns: repeat(2, 1fr); }
-  body[data-page="passeios-rotas"] .cards,
-  body[data-page="passeios-rotas"] .cards--4,
-  .cards--5 { grid-template-columns: repeat(2, 1fr); }
-  
-  .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; } .gallery img { height: 140px; }
-  .lightbox__content { max-width: 100%; max-height: 90%; }
-  .footer { margin-top: 60px; } .footer::before { top: -40px; height: 41px; }
-  .footer__content { grid-template-columns: 1fr; gap: 20px; padding: 0 20px 20px; text-align: center; }
-  .footer__col p { margin: 0 auto 15px; } .footer__socials { justify-content: center; } .footer__col ul li a { display: inline-block; padding: 4px 0; }
+/* Capivara de boa na direita */
+.char-capi {
+  position: absolute;
+  right: 5%;
+  bottom: -10px;
+  width: 120px;
+  z-index: 3;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  animation: float 5s ease-in-out infinite alternate;
 }
 
-@media (max-width: 600px) { 
-  .cards, .cards--4 { grid-template-columns: 1fr; }
-  body[data-page="passeios-rotas"] .cards,
-  body[data-page="passeios-rotas"] .cards--4,
-  .cards--5 { grid-template-columns: 1fr; }
+/* Garça pousada no topo/meio */
+.char-gigi {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  z-index: 1;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  animation: float 3s ease-in-out infinite alternate-reverse;
 }
 
-@media (max-width: 560px) {
-  .hero { height: auto; min-height: 500px; } .hero__content { padding: 80px 0 100px; } .hero h1 { font-size: 38px; line-height: 1.1; } .hero p { margin-bottom: 20px; font-size: 16px; }
-  .section { padding: 40px 0; } .section__title { font-size: 34px; }
-  .pageHead { padding: 40px 0 80px; } .pageHead h1 { font-size: 32px; }
-  .tipRow { flex-direction: column; gap: 15px; margin-top: 20px; } .capi { margin-right: 0; transform: none; z-index: 20; } .tip { padding: 0; text-align: center; }
-  .jack-block { margin-top: 80px; padding: 120px 20px 24px 20px !important; text-align: center; flex-direction: column; justify-content: center; }
-  .jack-img { top: -70px !important; left: 50% !important; bottom: auto !important; width: 140px !important; transform: translate(-50%, 0) !important; }
-  .gigiBox { width: calc(100% - 40px); bottom: 80px; } .lang-switcher { height: 44px; padding: 0 8px; font-size: 13px; } .side-badge { padding: 10px 12px; font-size: 11px; }
+/* Animação suave para parecer que estão na água */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
+
 /* =========================================================
-   AJUSTE ESPECÍFICO: 3 CARDS DA HOME
+   AJUSTE ESPECÍFICO: 3 CARDS DA HOME / HOSPEDAGEM
    ========================================================= */
-#homeCards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1050px; /* Mantém um tamanho agradável para 3 colunas */
-  margin: 0 auto;
-}
-
-/* Responsividade específica para os 3 cards da home */
-@media (max-width: 960px) {
-  #homeCards {
-    grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
-  }
-}
-
-@media (max-width: 600px) {
-  #homeCards {
-    grid-template-columns: 1fr; /* 1 por linha no celular */
-  }
-}
-/* =========================================================
-   AJUSTE ESPECÍFICO: 3 CARDS DA PÁGINA HOSPEDAGEM
-   ========================================================= */
+#homeCards,
 body[data-page="hospedagem"] .cards,
 body[data-page="hospedagem"] #pageCards {
   display: grid;
@@ -548,17 +533,120 @@ body[data-page="hospedagem"] #pageCards {
   margin: 0 auto;
 }
 
-/* Responsividade para Hospedagem */
+/* =========================================================
+   RESPONSIVIDADE (MEDIA QUERIES) - ESTILO APP
+   ========================================================= */
+.burger, .mobileNav { display: none; }
+
+/* TABLETS GRANDES E NOTEBOOKS */
+@media (max-width: 1100px) { 
+  .cards, .cards--4 { grid-template-columns: repeat(2, 1fr); }
+  body[data-page="passeios-rotas"] .cards,
+  body[data-page="passeios-rotas"] .cards--4,
+  .cards--5 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1024px) { 
+  .header__inner { padding: 0 15px; } 
+  .navWrap { max-width: auto; margin: 0 10px; }
+}
+
+/* TABLETS PADRÃO E CELULARES NA HORIZONTAL */
 @media (max-width: 960px) {
+  .brand__logo { width: 50px; height: 50px; } 
+  .brand__text strong { font-size: 20px; }
+  
+  .navWrap, .header__actions .social-links, .header__actions .btn--green { display: none !important; }
+  
+  .burger { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 48px; 
+    height: 48px; 
+    border: none; 
+    border-radius: 12px; 
+    background: rgba(71,176,90,0.1); 
+    color: var(--green-dark);
+    font-size: 24px; 
+    cursor: pointer;
+  }
+  
+  .mobileNav { display: block; padding: 15px 0; border-top: 1px solid var(--line); }
+  .mobileNav__inner { display: grid; gap: 10px; } 
+  .mobileNav a { padding: 12px; font-weight: 900; font-size: 16px; border-radius: 12px; }
+  .mobileNav a[aria-current="page"] { background: rgba(71,176,90,0.15); color: var(--green); text-align: center; }
+
+  #homeCards,
   body[data-page="hospedagem"] .cards,
   body[data-page="hospedagem"] #pageCards {
     grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-@media (max-width: 600px) {
-  body[data-page="hospedagem"] .cards,
-  body[data-page="hospedagem"] #pageCards {
-    grid-template-columns: 1fr; 
+/* CELULARES (Onde a mágica do App acontece) */
+@media (max-width: 768px) {
+  .cards, .cards--4, 
+  body[data-page="passeios-rotas"] .cards,
+  body[data-page="passeios-rotas"] .cards--4,
+  .cards--5, #homeCards, #pageCards, body[data-page="hospedagem"] .cards, body[data-page="hospedagem"] #pageCards { 
+    grid-template-columns: 1fr !important; 
+    gap: 20px;
+    padding: 10px;
   }
+  
+  .card__img { height: 240px; }
+  
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; } 
+  .gallery img { height: 140px; }
+  .lightbox__content { max-width: 100%; max-height: 90%; }
+  
+  .footer { margin-top: 60px; } 
+  .footer::before { top: -40px; height: 41px; }
+  .footer__content { grid-template-columns: 1fr; gap: 20px; padding: 0 20px 20px; text-align: center; }
+  .footer__col p { margin: 0 auto 15px; } 
+  .footer__socials { justify-content: center; } 
+  .footer__col ul li a { display: inline-block; padding: 8px 0; font-size: 16px; } 
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 560px) {
+  .hero { height: auto; min-height: 85vh; } 
+  .hero__content { padding: 60px 10px 80px; } 
+  .hero h1 { font-size: 36px; line-height: 1.1; } 
+  .hero p { margin-bottom: 20px; font-size: 16px; }
+  
+  .section { padding: 40px 0; } 
+  .section__title { font-size: 30px; }
+  
+  .pageHead { padding: 40px 0 80px; } 
+  .pageHead h1 { font-size: 30px; }
+  
+  .tipRow { flex-direction: column; gap: 15px; margin-top: 20px; padding: 20px; } 
+  .capi { margin-right: 0; transform: none; z-index: 20; } 
+  .tip { padding: 0; text-align: center; }
+  
+  .jack-block { margin-top: 80px; padding: 120px 20px 24px 20px !important; text-align: center; flex-direction: column; justify-content: center; }
+  .jack-img { top: -70px !important; left: 50% !important; bottom: auto !important; width: 140px !important; transform: translate(-50%, 0) !important; }
+  
+  .gigiBox { width: calc(100% - 40px); bottom: 80px; } 
+  .lang-switcher { height: 44px; padding: 0 8px; font-size: 13px; } 
+  
+  .side-badge, .gigiFab { 
+    bottom: 20px; 
+    right: 15px; 
+    transform: none; 
+    top: auto; 
+    border-radius: 50px; 
+    padding: 12px 20px; 
+    font-size: 14px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Ajustes da Animação 404 em Telas Pequenas */
+  .error-code { font-size: 120px !important; }
+  .char-jaca { width: 100px; left: 0; }
+  .char-capi { width: 90px; right: 0; }
+  .char-gigi { width: 80px; top: -15px; }
+  .error-scene { height: 180px; }
 }
