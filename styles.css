@@ -605,7 +605,14 @@ body[data-page="hospedagem"] #pageCards {
   .footer::before { top: -40px; height: 41px; }
   .footer__content { grid-template-columns: 1fr; gap: 20px; padding: 0 20px 20px; text-align: center; }
   .footer__col p { margin: 0 auto 15px; } 
-  .footer__socials { justify-content: center; } 
+  
+  /* ---> CORREÇÃO: CENTRALIZA AS REDES SOCIAIS E ALARGA A CAIXA <--- */
+  .footer .social-links, 
+  .footer__socials_wrapper {
+    justify-content: center !important;
+    width: 100%;
+  }
+
   .footer__col ul li a { display: inline-block; padding: 8px 0; font-size: 16px; } 
 }
 
