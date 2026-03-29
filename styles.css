@@ -237,12 +237,14 @@ img { display: block; max-width: 100%; background: transparent !important; borde
 .pageHead p { margin: 10px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 18px; font-weight: 700; }
 
 /* =========================================================
-   DICA DA CAPI
+   DICA DA CAPI (AJUSTADO PARA ELIMINAR O BURACO)
    ========================================================= */
 .tipRow {
   display: flex; align-items: center; justify-content: center; gap: 30px; max-width: 850px;
-  margin: 30px auto 40px; padding: 30px 40px; border: 1px solid rgba(71, 176, 90, 0.12); border-radius: 30px;
-  background: #fff; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1); z-index: 100;
+  margin: -40px auto 40px; /* Margem negativa para subir o elemento */
+  padding: 30px 40px; border: 1px solid rgba(71, 176, 90, 0.12); border-radius: 30px;
+  background: #fff; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1); 
+  position: relative; z-index: 100; /* Garante que fique por cima da onda/header */
 }
 main .section .tipRow { margin-top: 0 !important; }
 
@@ -394,7 +396,7 @@ body[data-page="passeios-rotas"] .card__body,
 .lightbox__prev:hover, .lightbox__next:hover { background-color: rgba(0, 0, 0, 0.8); }
 
 /* =========================================================
-   JACK, CONTATO E GIGI (Formulários e Widgets)
+   JACK, CONTATO E GIGI (Formulários e Widgets - Z-INDEX AJUSTADO)
    ========================================================= */
 .jack-block { display: flex; align-items: center; min-height: 160px; margin-top: 60px; padding: 30px 20px 30px 160px; border: 1px solid rgba(71, 176, 90, 0.2); border-radius: 24px; background: rgba(71, 176, 90, 0.1); }
 .jack-img { position: absolute; top: 50%; left: -15px; z-index: 5; width: 170px; transform: translateY(-50%); mix-blend-mode: multiply; filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.2)); pointer-events: none; }
@@ -408,10 +410,10 @@ body[data-page="passeios-rotas"] .card__body,
 .gigiForm input, .gigiForm textarea { width: 100%; padding: 14px; border: 1px solid rgba(0, 0, 0, 0.10); border-radius: 16px; background: rgba(255, 255, 255, 0.96); font-weight: 800; }
 .gigiForm textarea { resize: vertical; }
 
-.gigiFab { right: 20px; bottom: 20px; z-index: 2500; }
+.gigiFab { right: 20px; bottom: 20px; z-index: 10005; } /* Aumentado para 10005 */
 .gigiFab__btn { gap: 10px; padding: 15px 20px; color: var(--text); font-size: 16px; }
 
-.gigiBox { right: 20px; bottom: 85px; z-index: 2500; display: flex; flex-direction: column; width: 340px; background: #fff; border-radius: 24px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); }
+.gigiBox { right: 20px; bottom: 85px; z-index: 10005; display: flex; flex-direction: column; width: 340px; background: #fff; border-radius: 24px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); } /* Aumentado para 10005 */
 .gigiBox__top { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; border-radius: 24px 24px 0 0; background: var(--green); color: #fff; }
 .gigiBox__title, .gigiCard__text { display: flex; flex-direction: column; }
 .gigiBox__close { border: none; background: transparent; color: #fff; font-size: 20px; cursor: pointer; }
@@ -606,7 +608,6 @@ body[data-page="hospedagem"] #pageCards {
   .footer__content { grid-template-columns: 1fr; gap: 20px; padding: 0 20px 20px; text-align: center; }
   .footer__col p { margin: 0 auto 15px; } 
   
-  /* ---> CORREÇÃO: CENTRALIZA AS REDES SOCIAIS E ALARGA A CAIXA <--- */
   .footer .social-links, 
   .footer__socials_wrapper {
     justify-content: center !important;
@@ -616,7 +617,7 @@ body[data-page="hospedagem"] #pageCards {
   .footer__col ul li a { display: inline-block; padding: 8px 0; font-size: 16px; } 
 }
 
-/* CELULARES PEQUENOS */
+/* CELULARES PEQUENOS (AJUSTADO PARA A MARGEM NEGATIVA DA CAPI AQUI TBM) */
 @media (max-width: 560px) {
   .hero { height: auto; min-height: 85vh; } 
   .hero__content { padding: 60px 10px 80px; } 
@@ -629,7 +630,7 @@ body[data-page="hospedagem"] #pageCards {
   .pageHead { padding: 40px 0 80px; } 
   .pageHead h1 { font-size: 30px; }
   
-  .tipRow { flex-direction: column; gap: 15px; margin-top: 20px; padding: 20px; } 
+  .tipRow { flex-direction: column; gap: 15px; margin-top: -30px; padding: 20px; position: relative; z-index: 100; } 
   .capi { margin-right: 0; transform: none; z-index: 20; } 
   .tip { padding: 0; text-align: center; }
   
@@ -656,4 +657,19 @@ body[data-page="hospedagem"] #pageCards {
   .char-capi { width: 90px; right: 0; }
   .char-gigi { width: 80px; top: -15px; }
   .error-scene { height: 180px; }
+}
+
+/* =========================================================
+   ANIMAÇÕES EXTRAS (AGENDA CULTURAL)
+   ========================================================= */
+@keyframes flutuarAgenda {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.popup-agenda {
+  animation: flutuarAgenda 3.5s ease-in-out infinite;
+  z-index: 9000; /* Garante que fique atrás da Gigi (10005) */
+  position: relative;
 }
