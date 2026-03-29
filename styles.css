@@ -396,7 +396,7 @@ body[data-page="passeios-rotas"] .card__body,
 .lightbox__prev:hover, .lightbox__next:hover { background-color: rgba(0, 0, 0, 0.8); }
 
 /* =========================================================
-   JACK, CONTATO E GIGI (Formulários e Widgets - Z-INDEX AJUSTADO)
+   JACK, CONTATO E GIGI
    ========================================================= */
 .jack-block { display: flex; align-items: center; min-height: 160px; margin-top: 60px; padding: 30px 20px 30px 160px; border: 1px solid rgba(71, 176, 90, 0.2); border-radius: 24px; background: rgba(71, 176, 90, 0.1); }
 .jack-img { position: absolute; top: 50%; left: -15px; z-index: 5; width: 170px; transform: translateY(-50%); mix-blend-mode: multiply; filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.2)); pointer-events: none; }
@@ -410,10 +410,10 @@ body[data-page="passeios-rotas"] .card__body,
 .gigiForm input, .gigiForm textarea { width: 100%; padding: 14px; border: 1px solid rgba(0, 0, 0, 0.10); border-radius: 16px; background: rgba(255, 255, 255, 0.96); font-weight: 800; }
 .gigiForm textarea { resize: vertical; }
 
-.gigiFab { right: 20px; bottom: 20px; z-index: 10005; } /* Aumentado para 10005 */
+.gigiFab { right: 20px; bottom: 20px; z-index: 10005; } 
 .gigiFab__btn { gap: 10px; padding: 15px 20px; color: var(--text); font-size: 16px; }
 
-.gigiBox { right: 20px; bottom: 85px; z-index: 10005; display: flex; flex-direction: column; width: 340px; background: #fff; border-radius: 24px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); } /* Aumentado para 10005 */
+.gigiBox { right: 20px; bottom: 85px; z-index: 10005; display: flex; flex-direction: column; width: 340px; background: #fff; border-radius: 24px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); } 
 .gigiBox__top { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; border-radius: 24px 24px 0 0; background: var(--green); color: #fff; }
 .gigiBox__title, .gigiCard__text { display: flex; flex-direction: column; }
 .gigiBox__close { border: none; background: transparent; color: #fff; font-size: 20px; cursor: pointer; }
@@ -660,8 +660,14 @@ body[data-page="hospedagem"] #pageCards {
 }
 
 /* =========================================================
-   ANIMAÇÕES E POSIÇÕES EXTRAS (AGENDA CULTURAL E POPUP)
+   ANIMAÇÕES E POSIÇÕES EXTRAS (AGENDA CULTURAL E POPUPS)
    ========================================================= */
+
+/* Força o banner de LGPD/Cookies para frente de absolutamente tudo */
+div[id*="cookie"], div[class*="cookie"], div[id*="lgpd"], div[class*="lgpd"], .cookie-notice, .cc-window {
+  z-index: 2147483647 !important;
+}
+
 @keyframes flutuarAgenda {
   0% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
@@ -670,8 +676,8 @@ body[data-page="hospedagem"] #pageCards {
 
 .popup-agenda {
   animation: flutuarAgenda 3.5s ease-in-out infinite;
-  z-index: 9000; /* Garante que fique atrás da Gigi (10005) */
-  position: relative;
+  z-index: 9000 !important; /* Garante que fique atrás da Gigi (10005) */
+  position: fixed !important; /* Força ele a descolar da estrutura do site */
 }
 
 /* AJUSTE DE POSIÇÃO DO POPUP NO MOBILE */
@@ -680,6 +686,5 @@ body[data-page="hospedagem"] #pageCards {
     bottom: auto !important; /* Remove o alinhamento na parte de baixo */
     top: 28% !important; /* Puxa ele para cima, ajustando sobre o "Paraíso" */
     right: 15px !important; /* Mantém encostadinho na direita */
-    position: fixed; /* Se precisar forçar a fixação na tela */
   }
 }

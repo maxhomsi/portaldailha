@@ -11,7 +11,7 @@
   <style>
     /* 1. Ajuste do Banner (Hero) - Menor e texto centralizado perfeitamente */
     .hero {
-      height: 75vh !important; /* Reduz a altura da imagem principal */
+      height: 75vh !important; 
       min-height: 480px !important;
       max-height: 600px !important;
     }
@@ -38,22 +38,22 @@
 
     /* 2. Card Flutuante da Agenda (Fixo acompanhando a rolagem) */
     .promo-popup {
-      position: fixed; /* MÁGICA: Fixa o elemento na tela */
-      top: 140px; /* Posição vertical próxima ao 'Tropical' */
-      right: 8%; /* Alinhamento horizontal */
-      width: 200px; /* Tamanho reduzido e elegante */
-      z-index: 9999; /* Fica acima de tudo, não entra embaixo de outras sessões */
-      border-radius: 20px; /* Bordas arredondadas */
+      position: fixed; 
+      top: 140px; 
+      right: 8%; 
+      width: 200px; 
+      z-index: 9000; /* Reduzido para 9000 para que a Gigi (10005) fique na frente */
+      border-radius: 20px; 
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       transition: opacity 0.3s ease, transform 0.3s ease;
-      animation: floatPopup 4s ease-in-out infinite; /* Flutuação sutil */
+      animation: floatPopup 4s ease-in-out infinite; 
     }
 
     .promo-popup img {
       width: 100%;
       display: block;
       border-radius: 20px;
-      border: 3px solid #fff; /* Borda branca estilosa */
+      border: 3px solid #fff; 
     }
 
     .promo-popup__close {
@@ -82,21 +82,20 @@
       transform: scale(1.1);
     }
 
-    /* Animação para dar um respiro visual suave */
     @keyframes floatPopup {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-8px); }
       100% { transform: translateY(0px); }
     }
 
-    /* 3. Comportamento no Celular (Não atrapalhar a leitura) */
+    /* 3. Comportamento no Celular (Agora sim, na altura da palavra Paraíso!) */
     @media (max-width: 768px) {
       .promo-popup {
-        top: auto;
-        bottom: 90px; /* No celular, vai pro canto inferior direito (acima do ícone do WhatsApp) */
+        bottom: auto !important; /* Desprende da parte de baixo */
+        top: 25% !important; /* Sobe para a altura do texto no mobile */
         right: 15px;
-        width: 130px; /* Bem menor no celular */
-        animation: none; /* Sem flutuação para não distrair no touch */
+        width: 130px; 
+        animation: floatPopup 4s ease-in-out infinite; /* Mantém flutuando no cel */
       }
       .hero {
         height: auto !important;
