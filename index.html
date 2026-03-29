@@ -36,13 +36,21 @@
       margin: 0 auto 30px auto;
     }
 
-    /* 2. Card Flutuante da Agenda (Fixo acompanhando a rolagem) */
+    /* 2. Z-Index Blindado (Força a Gigi para trás do LGPD) */
+    .gigiFab {
+      z-index: 999 !important; /* Fica abaixo do banner de Cookies (LGPD) */
+    }
+    .gigiBox {
+      z-index: 1000 !important; 
+    }
+
+    /* 3. Card Flutuante da Agenda */
     .promo-popup {
       position: fixed; 
       top: 140px; 
       right: 8%; 
       width: 200px; 
-      z-index: 9000; /* Reduzido para 9000 para que a Gigi (10005) fique na frente */
+      z-index: 900 !important; /* Fica abaixo da Gigi e do LGPD */
       border-radius: 20px; 
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       transition: opacity 0.3s ease, transform 0.3s ease;
@@ -72,7 +80,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 10000;
+      z-index: 910 !important;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: background 0.2s, transform 0.2s;
     }
@@ -88,18 +96,22 @@
       100% { transform: translateY(0px); }
     }
 
-    /* 3. Comportamento no Celular (Agora sim, na altura da palavra Paraíso!) */
+    /* 4. Comportamento no Celular (Espaçamento do texto e Agenda) */
     @media (max-width: 768px) {
       .promo-popup {
-        bottom: auto !important; /* Desprende da parte de baixo */
-        top: 25% !important; /* Sobe para a altura do texto no mobile */
+        bottom: auto !important; 
+        top: 25% !important; /* Altura do texto no mobile */
         right: 15px;
         width: 130px; 
-        animation: floatPopup 4s ease-in-out infinite; /* Mantém flutuando no cel */
+        animation: floatPopup 4s ease-in-out infinite; 
       }
       .hero {
         height: auto !important;
         min-height: 80vh !important;
+      }
+      .hero__content {
+        justify-content: flex-start !important; /* Remove a centralização automática */
+        padding-top: 160px !important; /* Define a altura exata do texto. Reduza se quiser o texto ainda mais para o alto */
       }
     }
   </style>
