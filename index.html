@@ -2,32 +2,58 @@
 <html lang="pt-BR">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <link rel="canonical" href="https://www.ilhadagigoia.com.br/" />
-  
   <meta charset="UTF-8">
   <title>Portal Ilha da Gigóia | O Guia Completo do Pantanal Carioca RJ</title>
   <meta name="description" content="Descubra a Ilha da Gigóia na Barra da Tijuca, Rio de Janeiro. Guia completo de passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca." />
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    /* 1. Ajuste do Banner (Hero) - Menor e texto centralizado perfeitamente */
+    .hero {
+      height: 75vh !important; /* Reduz a altura da imagem principal */
+      min-height: 480px !important;
+      max-height: 600px !important;
+    }
+    
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      margin: 0 auto 15px auto;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto 30px auto;
+    }
+
+    /* 2. Card Flutuante da Agenda (Fixo acompanhando a rolagem) */
     .promo-popup {
-      position: absolute;
-      top: -20px; /* Altura exata para flutuar perto do 'Tropical' */
-      right: 5%; /* Joga um pouco para a direita para não tampar a leitura toda */
-      width: 260px;
-      z-index: 50;
-      border-radius: 24px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-      animation: floatPopup 4s ease-in-out infinite;
+      position: fixed; /* MÁGICA: Fixa o elemento na tela */
+      top: 140px; /* Posição vertical próxima ao 'Tropical' */
+      right: 8%; /* Alinhamento horizontal */
+      width: 200px; /* Tamanho reduzido e elegante */
+      z-index: 9999; /* Fica acima de tudo, não entra embaixo de outras sessões */
+      border-radius: 20px; /* Bordas arredondadas */
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       transition: opacity 0.3s ease, transform 0.3s ease;
+      animation: floatPopup 4s ease-in-out infinite; /* Flutuação sutil */
     }
 
     .promo-popup img {
       width: 100%;
       display: block;
-      border-radius: 24px;
-      border: 3px solid #fff; /* Borda branca para dar destaque estilo figurinha */
+      border-radius: 20px;
+      border: 3px solid #fff; /* Borda branca estilosa */
     }
 
     .promo-popup__close {
@@ -37,39 +63,44 @@
       background: var(--green, #47b05a);
       color: white;
       border: 2px solid #fff;
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 51;
+      z-index: 10000;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
     }
 
     .promo-popup__close:hover {
       background: var(--green-dark, #3aa44a);
+      transform: scale(1.1);
     }
 
-    /* Animação de flutuação para chamar a atenção sutilmente */
+    /* Animação para dar um respiro visual suave */
     @keyframes floatPopup {
-      0% { transform: translateY(0px) rotate(2deg); }
-      50% { transform: translateY(-12px) rotate(0deg); }
-      100% { transform: translateY(0px) rotate(2deg); }
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
     }
 
-    /* Ajuste para não quebrar no celular */
+    /* 3. Comportamento no Celular (Não atrapalhar a leitura) */
     @media (max-width: 768px) {
       .promo-popup {
-        top: -80px; /* Sobe um pouco mais no celular */
-        right: 50%;
-        transform: translateX(50%); /* Centraliza no celular */
-        width: 220px;
-        animation: none; /* Tira a flutuação no celular para não irritar o usuário */
+        top: auto;
+        bottom: 90px; /* No celular, vai pro canto inferior direito (acima do ícone do WhatsApp) */
+        right: 15px;
+        width: 130px; /* Bem menor no celular */
+        animation: none; /* Sem flutuação para não distrair no touch */
+      }
+      .hero {
+        height: auto !important;
+        min-height: 80vh !important;
       }
     }
   </style>
@@ -80,22 +111,18 @@
   
   <header class="header" id="siteHeader"></header>
 
+  <div id="promoCard" class="promo-popup reveal">
+    <button id="closePromo" class="promo-popup__close" aria-label="Fechar">&times;</button>
+    <a href="agenda-cultural.html">
+      <img src="assets/popup.jpeg" alt="Confira nossa Agenda Cultural">
+    </a>
+  </div>
   <main>
     <section class="hero">
       <div class="hero__bg" id="heroBg"></div>
       <div class="hero__overlay"></div>
+      
       <div class="hero__content container">
-        
-        <div id="promoCard" class="promo-popup reveal" style="transition-delay: 400ms;">
-          <button id="closePromo" class="promo-popup__close" aria-label="Fechar">&times;</button>
-          <a href="agenda-cultural.html">
-            <img src="assets/popup.jpeg" alt="Confira nossa Agenda Cultural">
-          </a>
-        </div>
-        <div class="pill reveal" id="heroPill">
-          <span class="dot"></span>
-          <span data-i18n="hero_pill">Portal Oficial de Turismo</span>
-        </div>
         
         <h1 class="reveal" id="heroTitle">
           <span data-i18n="hero_title_a">Descubra o Paraíso Tropical</span><br>
@@ -153,12 +180,12 @@
       
       if (closeBtn && promoCard) {
         closeBtn.addEventListener('click', function(e) {
-          e.preventDefault(); // Evita que o clique pule para o topo da página
+          e.preventDefault(); 
           promoCard.style.opacity = '0';
           promoCard.style.transform = 'scale(0.8)';
           setTimeout(() => {
             promoCard.style.display = 'none';
-          }, 300); // Espera a animação de opacidade terminar para sumir com o elemento
+          }, 300); 
         });
       }
     });
