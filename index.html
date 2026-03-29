@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="canonical" href="https://www.ilhadagigoia.com.br/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/" />
+  
   <meta charset="UTF-8">
- <title>Portal Ilha da Gigóia | O Guia Completo do Pantanal Carioca RJ</title>
+  <title>Portal Ilha da Gigóia | O Guia Completo do Pantanal Carioca RJ</title>
   <meta name="description" content="Descubra a Ilha da Gigóia na Barra da Tijuca, Rio de Janeiro. Guia completo de passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca." />
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .promo-popup {
+      position: absolute;
+      top: -20px; /* Altura exata para flutuar perto do 'Tropical' */
+      right: 5%; /* Joga um pouco para a direita para não tampar a leitura toda */
+      width: 260px;
+      z-index: 50;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      animation: floatPopup 4s ease-in-out infinite;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .promo-popup img {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+      border: 3px solid #fff; /* Borda branca para dar destaque estilo figurinha */
+    }
+
+    .promo-popup__close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--green, #47b05a);
+      color: white;
+      border: 2px solid #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 51;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+
+    .promo-popup__close:hover {
+      background: var(--green-dark, #3aa44a);
+    }
+
+    /* Animação de flutuação para chamar a atenção sutilmente */
+    @keyframes floatPopup {
+      0% { transform: translateY(0px) rotate(2deg); }
+      50% { transform: translateY(-12px) rotate(0deg); }
+      100% { transform: translateY(0px) rotate(2deg); }
+    }
+
+    /* Ajuste para não quebrar no celular */
+    @media (max-width: 768px) {
+      .promo-popup {
+        top: -80px; /* Sobe um pouco mais no celular */
+        right: 50%;
+        transform: translateX(50%); /* Centraliza no celular */
+        width: 220px;
+        animation: none; /* Tira a flutuação no celular para não irritar o usuário */
+      }
+    }
+  </style>
 </head>
 <body data-page="home">
   
@@ -20,6 +86,12 @@
       <div class="hero__overlay"></div>
       <div class="hero__content container">
         
+        <div id="promoCard" class="promo-popup reveal" style="transition-delay: 400ms;">
+          <button id="closePromo" class="promo-popup__close" aria-label="Fechar">&times;</button>
+          <a href="agenda-cultural.html">
+            <img src="assets/popup.jpeg" alt="Confira nossa Agenda Cultural">
+          </a>
+        </div>
         <div class="pill reveal" id="heroPill">
           <span class="dot"></span>
           <span data-i18n="hero_pill">Portal Oficial de Turismo</span>
@@ -73,6 +145,24 @@
   <footer class="footer" id="siteFooter"></footer>
   
   <div id="gigiWidgetRoot"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const closeBtn = document.getElementById('closePromo');
+      const promoCard = document.getElementById('promoCard');
+      
+      if (closeBtn && promoCard) {
+        closeBtn.addEventListener('click', function(e) {
+          e.preventDefault(); // Evita que o clique pule para o topo da página
+          promoCard.style.opacity = '0';
+          promoCard.style.transform = 'scale(0.8)';
+          setTimeout(() => {
+            promoCard.style.display = 'none';
+          }, 300); // Espera a animação de opacidade terminar para sumir com o elemento
+        });
+      }
+    });
+  </script>
 
   <script src="dicionario.js"></script>
   <script src="dicas-capi.js"></script>
