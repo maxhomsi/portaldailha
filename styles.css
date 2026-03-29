@@ -617,7 +617,7 @@ body[data-page="hospedagem"] #pageCards {
   .footer__col ul li a { display: inline-block; padding: 8px 0; font-size: 16px; } 
 }
 
-/* CELULARES PEQUENOS (AJUSTADO PARA A MARGEM NEGATIVA DA CAPI AQUI TBM) */
+/* CELULARES PEQUENOS */
 @media (max-width: 560px) {
   .hero { height: auto; min-height: 85vh; } 
   .hero__content { padding: 60px 10px 80px; } 
@@ -660,7 +660,7 @@ body[data-page="hospedagem"] #pageCards {
 }
 
 /* =========================================================
-   ANIMAÇÕES EXTRAS (AGENDA CULTURAL)
+   ANIMAÇÕES E POSIÇÕES EXTRAS (AGENDA CULTURAL E POPUP)
    ========================================================= */
 @keyframes flutuarAgenda {
   0% { transform: translateY(0); }
@@ -672,4 +672,14 @@ body[data-page="hospedagem"] #pageCards {
   animation: flutuarAgenda 3.5s ease-in-out infinite;
   z-index: 9000; /* Garante que fique atrás da Gigi (10005) */
   position: relative;
+}
+
+/* AJUSTE DE POSIÇÃO DO POPUP NO MOBILE */
+@media (max-width: 768px) {
+  .popup-agenda {
+    bottom: auto !important; /* Remove o alinhamento na parte de baixo */
+    top: 28% !important; /* Puxa ele para cima, ajustando sobre o "Paraíso" */
+    right: 15px !important; /* Mantém encostadinho na direita */
+    position: fixed; /* Se precisar forçar a fixação na tela */
+  }
 }
