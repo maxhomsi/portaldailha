@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Página Não Encontrada | Portal Ilha da Gigóia</title>
   
   <link rel="stylesheet" href="styles.css">
@@ -18,22 +17,25 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      min-height: 80vh; /* Ajustado para não travar a tela */
+      min-height: 80vh; 
       background-color: var(--bg); 
-      padding: 60px 20px; /* Mais espaço em cima e embaixo */
+      padding: 60px 20px; 
     }
 
-    /* Formatação da cena cômica */
-    .error-scene {
+    /* O SEGREDO DO CONSERTO: Classe nova, forçando o alinhamento em coluna (um embaixo do outro) */
+    .error-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       max-width: 900px;
       margin: 0 auto;
     }
     
-    /* Títulos e textos com as cores da marca */
+    /* Títulos e textos */
     .error-title {
       font-size: 38px;
       font-weight: 900;
-      color: var(--teal-deep); 
+      color: #1f5f88; /* Azul da marca para dar mais destaque */
       margin: 20px 0 10px;
       line-height: 1.2;
     }
@@ -74,9 +76,9 @@
 <body class="is-ready">
 
   <main class="error-page section">
-    <div class="container error-scene reveal is-in">
+    <div class="container error-wrapper reveal is-in">
       
-      <img src="assets/404.png" alt="Desenho animado cômico encalhado no mangue com três personagens (Capivara, Garça e Jacaré) confusos e espantados em volta de grandes números de madeira encalhados que dizem '4 0 4', com fumaça e faíscas saindo." class="error-image">
+      <img src="assets/404.png" alt="Desenho animado cômico encalhado no mangue com três personagens confusos" class="error-image">
       
       <h1 class="error-title">Oops! Navegamos para águas desconhecidas...</h1>
       <p class="error-description">
@@ -88,7 +90,7 @@
           Voltar para o Início
         </a>
         
-        <a href="passeios-rotas.html" class="btn btn--yellow" style="color: var(--teal-deep);">
+        <a href="passeios-rotas.html" class="btn" style="background: #fff; border: 1px solid rgba(0,0,0,0.1); color: var(--text);">
           Ver Passeios de Barco
         </a>
       </div>
@@ -96,5 +98,5 @@
     </div>
   </main>
 
-  </body>
+</body>
 </html>
