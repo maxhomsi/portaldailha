@@ -9,7 +9,7 @@
   
   <style>
     /* =========================================================
-       ESTILOS EXCLUSIVOS DA AGENDA EM LISTA (ACORDEÃO E MESES)
+       ESTILOS EXCLUSIVOS DA AGENDA (ACORDEÃO E DROPDOWN)
        ========================================================= */
     .filters-wrapper {
       display: flex;
@@ -22,21 +22,25 @@
     .filter-group { 
       display: flex; 
       justify-content: center; 
+      align-items: center;
       flex-wrap: wrap; 
-      gap: 8px; 
+      gap: 12px; 
       max-width: 800px;
     }
 
     .filter-btn { 
-      padding: 8px 18px; 
+      padding: 10px 24px; 
       border: 2px solid var(--green); 
       border-radius: 100px; 
       background: transparent; 
       color: var(--green); 
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 800; 
       cursor: pointer; 
       transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .filter-btn:hover, .filter-btn.active { 
       background: var(--green); 
@@ -47,15 +51,74 @@
     .filter-btn.status-btn {
       border-color: #1f5f88;
       color: #1f5f88;
-      font-size: 15px;
-      padding: 10px 24px;
     }
     .filter-btn.status-btn:hover, .filter-btn.status-btn.active {
       background: #1f5f88;
       color: #fff;
     }
 
-    /* Estrutura da Lista de Eventos */
+    /* --- ESTILOS DO MENU DROPDOWN DE MESES --- */
+    .month-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Setinha para baixo no botão do mês */
+    .dropdown-icon {
+      font-size: 10px;
+      transition: transform 0.2s;
+    }
+    .month-dropdown.open .dropdown-icon {
+      transform: rotate(180deg);
+    }
+
+    /* A caixinha flutuante com a lista de meses */
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      display: none; /* Escondido por padrão */
+      flex-direction: column;
+      min-width: 150px;
+      z-index: 1000;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .dropdown-menu.show {
+      display: flex;
+      animation: fadeInDown 0.2s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translate(-50%, -10px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
+    }
+
+    /* Cada mês dentro da caixinha */
+    .dropdown-item {
+      padding: 12px 20px;
+      border: none;
+      background: transparent;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .dropdown-item:hover {
+      background: rgba(71, 176, 90, 0.1);
+      color: var(--green);
+    }
+    .dropdown-item:not(:last-child) {
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    /* --- ESTRUTURA DA LISTA DE EVENTOS --- */
     .event-list { 
       display: flex; 
       flex-direction: column; 
@@ -73,19 +136,11 @@
       overflow: hidden; 
       transition: box-shadow 0.3s ease;
     }
-    .event-item:hover { 
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    }
+    .event-item:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
 
     /* PARTE VISÍVEL (O RESUMO CLICÁVEL) */
-    .event-summary {
-      display: flex;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .event-summary:hover {
-      background: #fafcfa;
-    }
+    .event-summary { display: flex; cursor: pointer; transition: background 0.2s; }
+    .event-summary:hover { background: #fafcfa; }
 
     /* Bloco da Data */
     .event-date {
@@ -104,106 +159,27 @@
     .event-date .weekday { font-size: 11px; font-weight: 700; opacity: 0.7; }
 
     /* Bloco de Informações */
-    .event-info { 
-      padding: 15px 20px; 
-      flex: 1; 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-    }
-    .event-cat { 
-      font-size: 11px; 
-      font-weight: 900; 
-      color: var(--green); 
-      text-transform: uppercase; 
-      margin-bottom: 4px; 
-      letter-spacing: 0.5px;
-    }
-    .event-title { 
-      margin: 0 0 6px; 
-      font-size: 18px; 
-      font-weight: 900; 
-      color: var(--text); 
-      line-height: 1.2;
-    }
-    .event-details { 
-      font-size: 14px; 
-      font-weight: 600; 
-      color: var(--muted); 
-      margin: 0; 
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 12px; 
-    }
+    .event-info { padding: 15px 20px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .event-cat { font-size: 11px; font-weight: 900; color: var(--green); text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.5px; }
+    .event-title { margin: 0 0 6px; font-size: 18px; font-weight: 900; color: var(--text); line-height: 1.2; }
+    .event-details { font-size: 14px; font-weight: 600; color: var(--muted); margin: 0; display: flex; flex-wrap: wrap; gap: 12px; }
     .event-details span { display: inline-flex; align-items: center; gap: 5px; }
 
-    /* Ícone de Setinha */
-    .event-chevron {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 20px;
-      color: #999;
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .event-item.expanded .event-chevron {
-      transform: rotate(180deg);
-      color: var(--green);
-    }
+    /* Ícone de Setinha (Acordeão) */
+    .event-chevron { display: flex; align-items: center; justify-content: center; padding: 0 20px; color: #999; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .event-item.expanded .event-chevron { transform: rotate(180deg); color: var(--green); }
 
     /* PARTE ESCONDIDA (O SLIDE EXPANSÍVEL) */
-    .event-expanded-content {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      background: #f6fbf6; 
-    }
-    .expanded-inner {
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .event-item.expanded .event-expanded-content {
-      grid-template-rows: 1fr;
-    }
-    .event-item.expanded .expanded-inner {
-      padding: 25px; 
-      border-top: 1px solid var(--line);
-    }
+    .event-expanded-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1); background: #f6fbf6; }
+    .expanded-inner { overflow: hidden; position: relative; }
+    .event-item.expanded .event-expanded-content { grid-template-rows: 1fr; }
+    .event-item.expanded .expanded-inner { padding: 25px; border-top: 1px solid var(--line); }
 
-    /* Textos dentro do bloco expandido */
-    .expanded-inner p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.6;
-      color: var(--text);
-      max-width: 92%;
-    }
+    .expanded-inner p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text); max-width: 92%; }
 
-    /* Botão fechar (X) */
-    .close-event {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 32px;
-      height: 32px;
-      border: none;
-      border-radius: 50%;
-      background: #e8e8e8;
-      color: #555;
-      font-size: 20px;
-      line-height: 1;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-    }
-    .close-event:hover {
-      background: #d8d8d8;
-      color: #000;
-      transform: scale(1.1);
-    }
+    /* Botão fechar (X) do Acordeão */
+    .close-event { position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; border: none; border-radius: 50%; background: #e8e8e8; color: #555; font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .close-event:hover { background: #d8d8d8; color: #000; transform: scale(1.1); }
 
     /* Ajustes para Celular */
     @media (max-width: 600px) {
@@ -233,22 +209,29 @@
       
       <div class="filters-wrapper">
         <div class="filter-group">
-          <button class="filter-btn status-btn active" data-filter-type="upcoming">Próximos Eventos</button>
-        </div>
+          <button class="filter-btn status-btn active" id="btnUpcoming">Próximos Eventos</button>
 
-        <div class="filter-group">
-          <button class="filter-btn" data-filter-type="month" data-month="0">Jan</button>
-          <button class="filter-btn" data-filter-type="month" data-month="1">Fev</button>
-          <button class="filter-btn" data-filter-type="month" data-month="2">Mar</button>
-          <button class="filter-btn" data-filter-type="month" data-month="3">Abr</button>
-          <button class="filter-btn" data-filter-type="month" data-month="4">Mai</button>
-          <button class="filter-btn" data-filter-type="month" data-month="5">Jun</button>
-          <button class="filter-btn" data-filter-type="month" data-month="6">Jul</button>
-          <button class="filter-btn" data-filter-type="month" data-month="7">Ago</button>
-          <button class="filter-btn" data-filter-type="month" data-month="8">Set</button>
-          <button class="filter-btn" data-filter-type="month" data-month="9">Out</button>
-          <button class="filter-btn" data-filter-type="month" data-month="10">Nov</button>
-          <button class="filter-btn" data-filter-type="month" data-month="11">Dez</button>
+          <div class="month-dropdown" id="monthDropdown">
+            <button class="filter-btn" id="monthDropdownBtn">
+              <span id="monthBtnText">Mês</span>
+              <span class="dropdown-icon">▼</span>
+            </button>
+            
+            <div class="dropdown-menu" id="monthDropdownMenu">
+              <button class="dropdown-item" data-month="0">Janeiro</button>
+              <button class="dropdown-item" data-month="1">Fevereiro</button>
+              <button class="dropdown-item" data-month="2">Março</button>
+              <button class="dropdown-item" data-month="3">Abril</button>
+              <button class="dropdown-item" data-month="4">Maio</button>
+              <button class="dropdown-item" data-month="5">Junho</button>
+              <button class="dropdown-item" data-month="6">Julho</button>
+              <button class="dropdown-item" data-month="7">Agosto</button>
+              <button class="dropdown-item" data-month="8">Setembro</button>
+              <button class="dropdown-item" data-month="9">Outubro</button>
+              <button class="dropdown-item" data-month="10">Novembro</button>
+              <button class="dropdown-item" data-month="11">Dezembro</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -375,19 +358,43 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       
+      const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+      
       const today = new Date();
       today.setHours(0, 0, 0, 0);
+      const mesAtualIndex = today.getMonth(); // Retorna 0 pra Jan, 1 pra Fev...
 
+      // 1. Configura o botão do Menu Dropdown para mostrar o nome do mês atual
+      const monthBtnText = document.getElementById('monthBtnText');
+      const dropdownBtn = document.getElementById('monthDropdownBtn');
+      const dropdownMenu = document.getElementById('monthDropdownMenu');
+      const dropdownWrapper = document.getElementById('monthDropdown');
+      
+      monthBtnText.textContent = nomesMeses[mesAtualIndex];
+
+      // Abre/Fecha o Dropdown ao clicar
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita que o clique feche na mesma hora
+        dropdownMenu.classList.toggle('show');
+        dropdownWrapper.classList.toggle('open');
+      });
+
+      // Fecha o dropdown se clicar fora dele
+      document.addEventListener('click', () => {
+        dropdownMenu.classList.remove('show');
+        dropdownWrapper.classList.remove('open');
+      });
+
+      // 2. Processamento dos Eventos
       const events = Array.from(document.querySelectorAll('.event-item'));
       const listContainer = document.getElementById('eventList');
       
-      // 1. Processa cada evento: Define se é passado/futuro e descobre qual é o mês dele
       events.forEach(event => {
         const dateString = event.getAttribute('data-date'); 
         const [year, month, day] = dateString.split('-');
         const eventDate = new Date(year, month - 1, day); 
         
-        event.dataset.month = eventDate.getMonth(); // Salva o mês (0 a 11) no HTML do evento
+        event.dataset.month = eventDate.getMonth(); // Salva o mês na tag (0 a 11)
 
         if (eventDate < today) {
           event.dataset.status = 'past';
@@ -396,16 +403,16 @@
         }
       });
 
-      // 2. Ordena cronologicamente
+      // Ordena cronologicamente
       events.sort((a, b) => {
         return new Date(a.dataset.date) - new Date(b.dataset.date);
       });
       events.forEach(e => listContainer.appendChild(e));
 
-      // 3. Lógica dos Filtros
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      let currentFilterType = 'upcoming'; // Começa mostrando os Próximos
-      let currentMonth = null;
+      // 3. Lógica de Filtros (Próximos x Mês Específico)
+      let currentFilterType = 'upcoming'; 
+      let filterMonth = mesAtualIndex;
+      const btnUpcoming = document.getElementById('btnUpcoming');
 
       function applyFilters() {
         events.forEach(event => {
@@ -414,38 +421,55 @@
           if (currentFilterType === 'upcoming') {
             show = (event.dataset.status === 'upcoming');
           } else if (currentFilterType === 'month') {
-            show = (event.dataset.month == currentMonth);
+            show = (event.dataset.month == filterMonth);
           }
           
           if (show) {
             event.style.display = 'flex';
           } else {
             event.style.display = 'none';
-            event.classList.remove('expanded'); // Previne bugs visuais
+            event.classList.remove('expanded'); // Fecha se tiver escondido
           }
         });
       }
 
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Remove a classe 'active' de todos os botões
-          filterBtns.forEach(b => b.classList.remove('active'));
-          // Ativa o botão clicado
-          btn.classList.add('active');
+      // Clique em "Próximos Eventos"
+      btnUpcoming.addEventListener('click', () => {
+        currentFilterType = 'upcoming';
+        
+        btnUpcoming.classList.add('active');
+        dropdownBtn.classList.remove('active');
+        
+        // Reseta o texto do botão para o mês atual
+        monthBtnText.textContent = nomesMeses[mesAtualIndex];
+        
+        applyFilters();
+      });
+
+      // Clique em algum Mês dentro do Dropdown
+      const monthItems = document.querySelectorAll('.dropdown-item');
+      monthItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const clickedMonth = item.dataset.month;
           
-          currentFilterType = btn.dataset.filterType;
-          if (currentFilterType === 'month') {
-            currentMonth = btn.dataset.month;
-          }
+          currentFilterType = 'month';
+          filterMonth = clickedMonth;
+          
+          // Muda a aparência dos botões
+          btnUpcoming.classList.remove('active');
+          dropdownBtn.classList.add('active');
+          
+          // Atualiza o texto do botão com o mês clicado
+          monthBtnText.textContent = nomesMeses[clickedMonth];
           
           applyFilters();
         });
       });
 
-      // Executa o filtro logo ao carregar a página
+      // Executa o filtro inicial (mostrando apenas os Próximos)
       applyFilters();
 
-      // 4. Lógica do Acordeão (Fecha os outros ao abrir um)
+      // 4. Lógica do Acordeão Inteligente (Abre um, fecha o resto)
       const summaries = document.querySelectorAll('.event-summary');
       const closeBtns = document.querySelectorAll('.close-event');
 
@@ -454,19 +478,19 @@
           const item = summary.closest('.event-item');
           const isCurrentlyExpanded = item.classList.contains('expanded');
           
-          // Fecha TODOS os eventos abertos
+          // MÁGICA DO ACORDEÃO: Fecha todos os abertos
           document.querySelectorAll('.event-item.expanded').forEach(openItem => {
             openItem.classList.remove('expanded');
           });
 
-          // Se o evento que foi clicado NÃO estava aberto, abre ele
+          // Abre o atual se estava fechado
           if (!isCurrentlyExpanded) {
             item.classList.add('expanded');
           }
         });
       });
 
-      // Botão X para fechar manualmente
+      // Botão X
       closeBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.stopPropagation(); 
