@@ -191,15 +191,36 @@
     .close-event { position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; border: none; border-radius: 50%; background: #e8e8e8; color: #555; font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
     .close-event:hover { background: #d8d8d8; color: #000; transform: scale(1.1); }
 
-    /* Ajustes para Celular */
+    /* =========================================================
+       AJUSTES PARA CELULAR (REFINADO)
+       ========================================================= */
     @media (max-width: 600px) {
-      .filters-wrapper { padding: 0 22px; justify-content: center; } /* Centraliza no cel ou mantém direita dependendo da sua pref */
+      .filters-wrapper { 
+        padding: 0; 
+        justify-content: flex-end; /* Mantém cravado na direita */
+      } 
+      .filter-btn {
+        font-size: 14px; /* Fonte levemente menor para caber melhor */
+        padding: 10px 20px;
+      }
       .event-summary { flex-direction: column; }
-      .event-date { padding: 12px; flex-direction: row; gap: 10px; min-width: auto; }
-      .event-date .day { font-size: 24px; }
-      .event-date .month { margin-top: 0; }
+      
+      /* A data vira uma barra horizontal super limpa no celular */
+      .event-date { 
+        padding: 12px 20px; 
+        flex-direction: row; 
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 8px; 
+        min-width: auto; 
+      }
+      .event-date .day { font-size: 22px; }
+      .event-date .month { margin-top: 0; font-size: 15px; }
+      .event-date .weekday { font-size: 14px; opacity: 1; color: #a68400; margin-left: auto; } /* Dia da semana vai pra direita */
+      
+      .event-info { padding: 20px; }
       .event-chevron { display: none; } 
-      .close-event { top: 15px; right: 15px; }
+      .close-event { top: 12px; right: 12px; }
     }
   </style>
 </head>
