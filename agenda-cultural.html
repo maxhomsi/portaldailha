@@ -12,7 +12,7 @@
        ESTILOS EXCLUSIVOS DA AGENDA (DROPDOWN À DIREITA)
        ========================================================= */
        
-    /* CORREÇÃO DO Z-INDEX: Força a área da agenda acima do footer */
+    /* CORREÇÃO DO Z-INDEX E ESTRUTURA: Força a área da agenda acima do footer */
     .agenda-main {
         position: relative;
         z-index: 10000; 
@@ -23,17 +23,17 @@
       position: relative;
       z-index: 10005; /* Garante que os filtros sejam o elemento mais alto da página */
       display: flex;
-      justify-content: center; /* Centralizado para destacar o botão */
-      max-width: 900px; 
-      margin: 0 auto 30px auto; 
-      padding: 0 10px; 
+      justify-content: flex-end; /* Joga o botão todo para a direita */
+      width: 100%;
+      max-width: 900px; /* Mesma largura da lista de eventos para alinhar certinho */
+      margin: 0 auto 20px auto; 
     }
 
     .filter-btn { 
       padding: 10px 24px; 
       border: 2px solid var(--green); 
       border-radius: 100px; 
-      background: var(--green); /* Fundo verde padrão */
+      background: var(--green); 
       color: #fff; 
       font-size: 15px;
       font-weight: 800; 
@@ -67,15 +67,15 @@
     .dropdown-menu {
       position: absolute;
       top: calc(100% + 8px);
-      left: 50%; /* Centraliza o menu em relação ao botão */
-      transform: translateX(-50%);
+      right: 0; /* Alinha a caixa pela direita do botão */
+      left: auto;
       background: #fff;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       display: none; 
       flex-direction: column;
       min-width: 180px;
-      z-index: 10010; /* Máximo poder para não sumir no rodapé */
+      z-index: 99999 !important; /* Força bruta para não sumir no rodapé */
       overflow: hidden;
       border: 1px solid rgba(0,0,0,0.05);
     }
@@ -85,8 +85,8 @@
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translate(-50%, -10px); } 
-      to { opacity: 1; transform: translate(-50%, 0); }
+      from { opacity: 0; transform: translateY(-10px); } 
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Cada item dentro da caixinha */
@@ -105,14 +105,15 @@
       background: rgba(71, 176, 90, 0.1);
       color: var(--green);
     }
+    .dropdown-item:not(:last-child) {
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
     .dropdown-item.all-events-btn {
         background: #f6fbf6;
         color: var(--green-dark);
         font-weight: 900;
-        border-bottom: 2px solid rgba(71, 176, 90, 0.2);
-    }
-    .dropdown-item:not(:last-child) {
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+        border-bottom: none;
+        border-top: 2px solid rgba(71, 176, 90, 0.2);
     }
 
     /* Mensagem quando não houver eventos */
@@ -192,6 +193,7 @@
 
     /* Ajustes para Celular */
     @media (max-width: 600px) {
+      .filters-wrapper { padding: 0 22px; justify-content: center; } /* Centraliza no cel ou mantém direita dependendo da sua pref */
       .event-summary { flex-direction: column; }
       .event-date { padding: 12px; flex-direction: row; gap: 10px; min-width: auto; }
       .event-date .day { font-size: 24px; }
@@ -219,12 +221,11 @@
       <div class="filters-wrapper">
         <div class="month-dropdown" id="monthDropdown">
           <button class="filter-btn active" id="monthDropdownBtn">
-            <span id="monthBtnText">Todos os Próximos</span>
+            <span id="monthBtnText">Escolha o mês</span>
             <span class="dropdown-icon">▼</span>
           </button>
           
           <div class="dropdown-menu" id="monthDropdownMenu">
-            <button class="dropdown-item all-events-btn" data-month="all">Todos os Próximos</button>
             <button class="dropdown-item" data-month="0">Janeiro</button>
             <button class="dropdown-item" data-month="1">Fevereiro</button>
             <button class="dropdown-item" data-month="2">Março</button>
@@ -237,6 +238,7 @@
             <button class="dropdown-item" data-month="9">Outubro</button>
             <button class="dropdown-item" data-month="10">Novembro</button>
             <button class="dropdown-item" data-month="11">Dezembro</button>
+            <button class="dropdown-item all-events-btn" data-month="all">Todos Eventos</button>
           </div>
         </div>
       </div>
@@ -402,9 +404,8 @@
         const [year, month, day] = dateString.split('-');
         const eventDate = new Date(year, month - 1, day); 
         
-        event.dataset.month = eventDate.getMonth(); // Salva o mês na tag
+        event.dataset.month = eventDate.getMonth(); 
         
-        // Se a data do evento já passou, esconde ele do HTML e o remove do array
         if (eventDate < today) {
             event.style.display = 'none';
             return false; 
@@ -416,12 +417,10 @@
       futureEvents.sort((a, b) => {
         return new Date(a.dataset.date) - new Date(b.dataset.date);
       });
-      
-      // Reorganiza no HTML apenas os que sobraram
       futureEvents.forEach(e => listContainer.appendChild(e));
 
-      // 3. Lógica de Filtro por Mês
-      let filterMonth = 'all'; // Inicia mostrando 'Todos'
+      // 3. Lógica de Filtro por Mês (Inicia mostrando TODOS)
+      let filterMonth = 'all'; 
 
       function applyFilter() {
         let visibleCount = 0;
@@ -436,7 +435,7 @@
           }
         });
 
-        // Mostra mensagem se não houver nada naquele mês
+        // Mostra mensagem se não houver nada
         if (visibleCount === 0) {
           noEventsMsg.style.display = 'block';
         } else {
@@ -452,7 +451,7 @@
           filterMonth = clickedMonth;
           
           if(clickedMonth === 'all'){
-              monthBtnText.textContent = "Todos os Próximos";
+              monthBtnText.textContent = "Todos Eventos";
           } else {
               monthBtnText.textContent = nomesMeses[clickedMonth];
           }
@@ -461,7 +460,7 @@
         });
       });
 
-      // Executa o filtro inicial (mostrando Todos os Próximos)
+      // Executa o filtro inicial ("Escolha o mês" -> mostra todos)
       applyFilter();
 
       // 4. Lógica do Acordeão Inteligente (Abre um, fecha o resto)
