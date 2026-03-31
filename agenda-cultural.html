@@ -8,27 +8,135 @@
   <link rel="stylesheet" href="styles.css">
   
   <style>
-    .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+    /* =========================================================
+       ESTILOS EXCLUSIVOS DA AGENDA EM LISTA
+       ========================================================= */
+    .filters-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .filter-group { 
+      display: flex; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+      gap: 10px; 
+    }
+
     .filter-btn { 
-      padding: 8px 20px; border: 2px solid var(--green); border-radius: 100px; 
-      background: transparent; color: var(--green); font-weight: 800; cursor: pointer; transition: all 0.2s;
+      padding: 8px 20px; 
+      border: 2px solid var(--green); 
+      border-radius: 100px; 
+      background: transparent; 
+      color: var(--green); 
+      font-weight: 800; 
+      cursor: pointer; 
+      transition: all 0.2s;
     }
-    .filter-btn:hover, .filter-btn.active { background: var(--green); color: #fff; }
-    
-    /* Etiqueta de data flutuante em cima da foto do evento */
-    .card__date-badge {
-      position: absolute; top: 15px; right: 15px; z-index: 10;
-      background: rgba(255, 255, 255, 0.95); padding: 8px 12px; border-radius: 12px;
-      text-align: center; font-weight: 900; line-height: 1.1; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    .filter-btn:hover, .filter-btn.active { 
+      background: var(--green); 
+      color: #fff; 
     }
-    .card__date-badge span.day { display: block; font-size: 22px; color: var(--green-dark); }
-    .card__date-badge span.month { display: block; font-size: 11px; text-transform: uppercase; color: var(--muted); }
+
+    /* Botões de Status (Próximos / Anteriores) com cor diferente para destacar */
+    .filter-btn.status-btn {
+      border-color: #1f5f88;
+      color: #1f5f88;
+    }
+    .filter-btn.status-btn:hover, .filter-btn.status-btn.active {
+      background: #1f5f88;
+      color: #fff;
+    }
+
+    /* Estrutura da Lista de Eventos */
+    .event-list { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 16px; 
+      max-width: 900px; 
+      margin: 0 auto; 
+    }
+
+    .event-item { 
+      display: flex; 
+      background: #fff; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06); 
+      overflow: hidden; 
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .event-item:hover { 
+      transform: translateY(-3px); 
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    /* Bloco da Data (Esquerda) */
+    .event-date {
+      background: var(--yellow);
+      color: var(--text);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 120px;
+      text-align: center;
+    }
+    .event-date .day { font-size: 38px; font-weight: 900; line-height: 1; letter-spacing: -1px; }
+    .event-date .month { font-size: 15px; font-weight: 800; text-transform: uppercase; margin-top: 4px; }
+    .event-date .weekday { font-size: 12px; font-weight: 700; opacity: 0.7; }
+
+    /* Bloco de Informações (Direita) */
+    .event-info { 
+      padding: 20px 25px; 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+    }
+    .event-cat { 
+      font-size: 12px; 
+      font-weight: 900; 
+      color: var(--green); 
+      text-transform: uppercase; 
+      margin-bottom: 6px; 
+      letter-spacing: 0.5px;
+    }
+    .event-title { 
+      margin: 0 0 10px; 
+      font-size: 22px; 
+      font-weight: 900; 
+      color: var(--text); 
+      line-height: 1.3;
+    }
+    .event-details { 
+      font-size: 15px; 
+      font-weight: 600; 
+      color: var(--muted); 
+      margin: 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 15px; 
+    }
+    .event-details span { display: inline-flex; align-items: center; gap: 6px; }
+
+    /* Ajustes para Celular */
+    @media (max-width: 600px) {
+      .event-item { flex-direction: column; }
+      .event-date { padding: 15px; flex-direction: row; gap: 10px; min-width: auto; }
+      .event-date .day { font-size: 28px; }
+      .event-date .month { margin-top: 0; }
+      .event-info { padding: 20px; }
+    }
   </style>
 </head>
 <body class="is-ready" data-page="agenda">
 
-  )
-       ========================================================= -->
+  <div class="progress" id="progress"></div>
+  <header class="header" id="siteHeader"></header>
 
   <header class="pageHead section reveal is-in">
     <div class="container text-center">
@@ -40,62 +148,82 @@
   <main class="section">
     <div class="container reveal is-in">
       
-      <div class="filters">
-        <button class="filter-btn active">Todos</button>
-        <button class="filter-btn">Samba & Pagode</button>
-        <button class="filter-btn">Gastronomia</button>
-        <button class="filter-btn">MPB & Jazz</button>
+      <div class="filters-wrapper">
+        <div class="filter-group">
+          <button class="filter-btn status-btn active" data-status-filter="upcoming">Próximos Eventos</button>
+          <button class="filter-btn status-btn" data-status-filter="past">Eventos Anteriores</button>
+        </div>
+
+        <div class="filter-group">
+          <button class="filter-btn active" data-category="todos">Todos</button>
+          <button class="filter-btn" data-category="samba">Samba & Pagode</button>
+          <button class="filter-btn" data-category="gastronomia">Gastronomia</button>
+          <button class="filter-btn" data-category="jazz">MPB & Jazz</button>
+        </div>
       </div>
 
-      <div class="cards" id="pageCards">
+      <div class="event-list" id="eventList">
         
-        <article class="card">
-          <div class="card__img">
-            <div class="card__date-badge">
-              <span class="day">06</span>
-              <span class="month">Jun</span>
-            </div>
-            <img src="https://images.unsplash.com/photo-1533174000255-598dc3b16843?q=80&w=800&auto=format&fit=crop" alt="Roda de Samba">
+        <article class="event-item" data-category="samba" data-date="2026-04-10">
+          <div class="event-date">
+            <span class="day">10</span>
+            <span class="month">Abr</span>
+            <span class="weekday">Sexta</span>
           </div>
-          <div class="card__body">
-            <h3 class="card__title">Especial Samba: Zeca, Alcione & Aragão (Tributo)</h3>
-            <p class="card__desc">Prepare o coração! Uma noite de exaltação ao samba raiz relembrando os maiores sucessos desses ícones na beira da lagoa.</p>
-            <div style="margin-top: auto;">
-              <a href="#" class="btn btn--green" style="width: 100%;">Garantir Ingresso</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__img">
-            <div class="card__date-badge">
-              <span class="day">15</span>
-              <span class="month">Jul</span>
-            </div>
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop" alt="Comida de boteco">
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">Festival Gastronômico da Ilha</h3>
-            <p class="card__desc">Um roteiro delicioso pelos melhores restaurantes locais com pratos exclusivos de frutos do mar e música ao vivo.</p>
-            <div style="margin-top: auto;">
-              <a href="#" class="btn btn--green" style="width: 100%;">Ver Restaurantes</a>
+          <div class="event-info">
+            <span class="event-cat">Samba & Pagode</span>
+            <h3 class="event-title">Especial Samba: Zeca, Alcione & Aragão (Tributo)</h3>
+            <div class="event-details">
+              <span>📍 Restaurante Caiçara</span>
+              <span>⏰ 19h00</span>
             </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card__img">
-            <div class="card__date-badge">
-              <span class="day">22</span>
-              <span class="month">Ago</span>
-            </div>
-            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" alt="Pôr do sol musical">
+        <article class="event-item" data-category="gastronomia" data-date="2026-05-15">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">Mai</span>
+            <span class="weekday">Sábado</span>
           </div>
-          <div class="card__body">
-            <h3 class="card__title">Jazz & Sunset na Lagoa</h3>
-            <p class="card__desc">Aproveite o fim de tarde espetacular da Gigóia ao som do melhor jazz instrumental e drinks artesanais.</p>
-            <div style="margin-top: auto;">
-              <a href="#" class="btn btn--green" style="width: 100%;">Saber Mais</a>
+          <div class="event-info">
+            <span class="event-cat">Gastronomia</span>
+            <h3 class="event-title">Festival Gastronômico da Ilha</h3>
+            <div class="event-details">
+              <span>📍 Vários Restaurantes</span>
+              <span>⏰ A partir das 12h</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-item" data-category="jazz" data-date="2026-06-22">
+          <div class="event-date">
+            <span class="day">22</span>
+            <span class="month">Jun</span>
+            <span class="weekday">Domingo</span>
+          </div>
+          <div class="event-info">
+            <span class="event-cat">MPB & Jazz</span>
+            <h3 class="event-title">Jazz & Sunset na Lagoa</h3>
+            <div class="event-details">
+              <span>📍 Deck Pôr do Sol</span>
+              <span>⏰ 16h30</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-item" data-category="samba" data-date="2026-02-15">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">Fev</span>
+            <span class="weekday">Domingo</span>
+          </div>
+          <div class="event-info">
+            <span class="event-cat">Samba & Pagode</span>
+            <h3 class="event-title">Ressaca de Carnaval na Ilha</h3>
+            <div class="event-details">
+              <span>📍 Praça Central</span>
+              <span>⏰ 15h00</span>
             </div>
           </div>
         </article>
@@ -104,8 +232,83 @@
     </div>
   </main>
 
-  )
-       ========================================================= -->
+  <footer class="footer" id="siteFooter"></footer>
+  <div id="gigiWidgetRoot"></div>
+
+  <script src="dicionario.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Pega a data de hoje, zerando as horas para comparar só o dia
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const events = Array.from(document.querySelectorAll('.event-item'));
+      const listContainer = document.getElementById('eventList');
+      
+      // 2. Classifica cada evento como 'upcoming' (futuro) ou 'past' (passado)
+      events.forEach(event => {
+        const dateString = event.getAttribute('data-date'); // Ex: "2026-04-10"
+        const [year, month, day] = dateString.split('-');
+        const eventDate = new Date(year, month - 1, day); // Meses no JS começam no 0
+        
+        if (eventDate < today) {
+          event.dataset.status = 'past';
+        } else {
+          event.dataset.status = 'upcoming';
+        }
+      });
+
+      // 3. Ordena a lista: do mais próximo para o mais distante
+      events.sort((a, b) => {
+        return new Date(a.dataset.date) - new Date(b.dataset.date);
+      });
+      
+      // Recoloca os itens no HTML na nova ordem
+      events.forEach(e => listContainer.appendChild(e));
+
+      // 4. Lógica de Filtros (Cliques nos botões)
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      let currentStatus = 'upcoming'; // Começa mostrando só os próximos
+      let currentCategory = 'todos';
+
+      function applyFilters() {
+        let visibleCount = 0;
+        events.forEach(event => {
+          const matchStatus = event.dataset.status === currentStatus;
+          const matchCategory = currentCategory === 'todos' || event.dataset.category === currentCategory;
+          
+          if (matchStatus && matchCategory) {
+            event.style.display = 'flex';
+            visibleCount++;
+          } else {
+            event.style.display = 'none';
+          }
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isStatusFilter = btn.hasAttribute('data-status-filter');
+          
+          if (isStatusFilter) {
+            document.querySelectorAll('[data-status-filter]').forEach(b => b.classList.remove('active'));
+            currentStatus = btn.dataset.statusFilter;
+          } else {
+            document.querySelectorAll('[data-category]').forEach(b => b.classList.remove('active'));
+            currentCategory = btn.dataset.category;
+          }
+          
+          btn.classList.add('active');
+          applyFilters();
+        });
+      });
+
+      // Roda o filtro inicial para esconder os antigos logo de cara
+      applyFilters();
+    });
+  </script>
 
 </body>
 </html>
