@@ -9,23 +9,14 @@
   
   <style>
     /* =========================================================
-       ESTILOS EXCLUSIVOS DA AGENDA (ACORDEÃO E DROPDOWN)
+       ESTILOS EXCLUSIVOS DA AGENDA (DROPDOWN À DIREITA)
        ========================================================= */
     .filters-wrapper {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 40px;
-    }
-
-    .filter-group { 
-      display: flex; 
-      justify-content: center; 
-      align-items: center;
-      flex-wrap: wrap; 
-      gap: 12px; 
-      max-width: 800px;
+      justify-content: flex-end; /* Alinha o conteúdo à direita */
+      max-width: 900px; /* Mesma largura máxima dos cards */
+      margin: 0 auto 20px auto; /* Reduzida a margem inferior para subir a lista */
+      padding: 0 10px; /* Para não colar na borda em telas menores */
     }
 
     .filter-btn { 
@@ -47,23 +38,12 @@
       color: #fff; 
     }
 
-    /* Botão Principal de Próximos Eventos */
-    .filter-btn.status-btn {
-      border-color: #1f5f88;
-      color: #1f5f88;
-    }
-    .filter-btn.status-btn:hover, .filter-btn.status-btn.active {
-      background: #1f5f88;
-      color: #fff;
-    }
-
     /* --- ESTILOS DO MENU DROPDOWN DE MESES --- */
     .month-dropdown {
       position: relative;
       display: inline-block;
     }
     
-    /* Setinha para baixo no botão do mês */
     .dropdown-icon {
       font-size: 10px;
       transition: transform 0.2s;
@@ -76,15 +56,14 @@
     .dropdown-menu {
       position: absolute;
       top: calc(100% + 8px);
-      left: 50%;
-      transform: translateX(-50%);
+      right: 0; /* Alinha o menu pela borda direita do botão */
       background: #fff;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      display: none; /* Escondido por padrão */
+      display: none; 
       flex-direction: column;
       min-width: 150px;
-      z-index: 1000;
+      z-index: 10000; /* Aumentado para passar por cima do footer (z-index 999 no CSS principal) */
       overflow: hidden;
       border: 1px solid rgba(0,0,0,0.05);
     }
@@ -94,8 +73,8 @@
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translate(-50%, -10px); }
-      to { opacity: 1; transform: translate(-50%, 0); }
+      from { opacity: 0; transform: translateY(-10px); } /* Simplificado o translate */
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Cada mês dentro da caixinha */
@@ -116,6 +95,18 @@
     }
     .dropdown-item:not(:last-child) {
       border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    /* Mensagem quando não houver eventos no mês selecionado */
+    .no-events-msg {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 18px;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 600;
+      display: none; /* Escondido por padrão */
     }
 
     /* --- ESTRUTURA DA LISTA DE EVENTOS --- */
@@ -204,45 +195,44 @@
     </div>
   </header>
 
-  <main class="section">
-    <div class="container reveal is-in">
+  <main class="section" style="padding-top: 30px;"> <div class="container reveal is-in">
       
       <div class="filters-wrapper">
-        <div class="filter-group">
-          <button class="filter-btn status-btn active" id="btnUpcoming">Próximos Eventos</button>
-
-          <div class="month-dropdown" id="monthDropdown">
-            <button class="filter-btn" id="monthDropdownBtn">
-              <span id="monthBtnText">Mês</span>
-              <span class="dropdown-icon">▼</span>
-            </button>
-            
-            <div class="dropdown-menu" id="monthDropdownMenu">
-              <button class="dropdown-item" data-month="0">Janeiro</button>
-              <button class="dropdown-item" data-month="1">Fevereiro</button>
-              <button class="dropdown-item" data-month="2">Março</button>
-              <button class="dropdown-item" data-month="3">Abril</button>
-              <button class="dropdown-item" data-month="4">Maio</button>
-              <button class="dropdown-item" data-month="5">Junho</button>
-              <button class="dropdown-item" data-month="6">Julho</button>
-              <button class="dropdown-item" data-month="7">Agosto</button>
-              <button class="dropdown-item" data-month="8">Setembro</button>
-              <button class="dropdown-item" data-month="9">Outubro</button>
-              <button class="dropdown-item" data-month="10">Novembro</button>
-              <button class="dropdown-item" data-month="11">Dezembro</button>
-            </div>
+        <div class="month-dropdown" id="monthDropdown">
+          <button class="filter-btn active" id="monthDropdownBtn">
+            <span id="monthBtnText">Mês</span>
+            <span class="dropdown-icon">▼</span>
+          </button>
+          
+          <div class="dropdown-menu" id="monthDropdownMenu">
+            <button class="dropdown-item" data-month="0">Janeiro</button>
+            <button class="dropdown-item" data-month="1">Fevereiro</button>
+            <button class="dropdown-item" data-month="2">Março</button>
+            <button class="dropdown-item" data-month="3">Abril</button>
+            <button class="dropdown-item" data-month="4">Maio</button>
+            <button class="dropdown-item" data-month="5">Junho</button>
+            <button class="dropdown-item" data-month="6">Julho</button>
+            <button class="dropdown-item" data-month="7">Agosto</button>
+            <button class="dropdown-item" data-month="8">Setembro</button>
+            <button class="dropdown-item" data-month="9">Outubro</button>
+            <button class="dropdown-item" data-month="10">Novembro</button>
+            <button class="dropdown-item" data-month="11">Dezembro</button>
           </div>
         </div>
       </div>
 
+      <div class="no-events-msg" id="noEventsMsg">
+        Nenhum evento programado para este mês ainda. Fique de olho nas novidades!
+      </div>
+
       <div class="event-list" id="eventList">
         
-        <article class="event-item" data-date="2026-04-10">
+        <article class="event-item" data-date="2026-03-10">
           <div class="event-summary">
             <div class="event-date">
               <span class="day">10</span>
-              <span class="month">Abr</span>
-              <span class="weekday">Sexta</span>
+              <span class="month">Mar</span>
+              <span class="weekday">Terça</span>
             </div>
             <div class="event-info">
               <span class="event-cat">Samba & Pagode</span>
@@ -264,12 +254,12 @@
           </div>
         </article>
 
-        <article class="event-item" data-date="2026-05-15">
+        <article class="event-item" data-date="2026-03-25">
           <div class="event-summary">
             <div class="event-date">
-              <span class="day">15</span>
-              <span class="month">Mai</span>
-              <span class="weekday">Sábado</span>
+              <span class="day">25</span>
+              <span class="month">Mar</span>
+              <span class="weekday">Quarta</span>
             </div>
             <div class="event-info">
               <span class="event-cat">Gastronomia</span>
@@ -291,12 +281,12 @@
           </div>
         </article>
 
-        <article class="event-item" data-date="2026-06-22">
+        <article class="event-item" data-date="2026-04-22">
           <div class="event-summary">
             <div class="event-date">
               <span class="day">22</span>
-              <span class="month">Jun</span>
-              <span class="weekday">Domingo</span>
+              <span class="month">Abr</span>
+              <span class="weekday">Quarta</span>
             </div>
             <div class="event-info">
               <span class="event-cat">MPB & Jazz</span>
@@ -361,10 +351,9 @@
       const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
       
       const today = new Date();
-      today.setHours(0, 0, 0, 0);
-      const mesAtualIndex = today.getMonth(); // Retorna 0 pra Jan, 1 pra Fev...
+      const mesAtualIndex = today.getMonth(); // Retorna 0 pra Jan, 1 pra Fev... (Março = 2)
 
-      // 1. Configura o botão do Menu Dropdown para mostrar o nome do mês atual
+      // 1. Configura o botão do Menu Dropdown para mostrar o nome do mês atual ao carregar
       const monthBtnText = document.getElementById('monthBtnText');
       const dropdownBtn = document.getElementById('monthDropdownBtn');
       const dropdownMenu = document.getElementById('monthDropdownMenu');
@@ -374,7 +363,7 @@
 
       // Abre/Fecha o Dropdown ao clicar
       dropdownBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evita que o clique feche na mesma hora
+        e.stopPropagation(); 
         dropdownMenu.classList.toggle('show');
         dropdownWrapper.classList.toggle('open');
       });
@@ -388,6 +377,7 @@
       // 2. Processamento dos Eventos
       const events = Array.from(document.querySelectorAll('.event-item'));
       const listContainer = document.getElementById('eventList');
+      const noEventsMsg = document.getElementById('noEventsMsg');
       
       events.forEach(event => {
         const dateString = event.getAttribute('data-date'); 
@@ -395,12 +385,6 @@
         const eventDate = new Date(year, month - 1, day); 
         
         event.dataset.month = eventDate.getMonth(); // Salva o mês na tag (0 a 11)
-
-        if (eventDate < today) {
-          event.dataset.status = 'past';
-        } else {
-          event.dataset.status = 'upcoming';
-        }
       });
 
       // Ordena cronologicamente
@@ -409,65 +393,46 @@
       });
       events.forEach(e => listContainer.appendChild(e));
 
-      // 3. Lógica de Filtros (Próximos x Mês Específico)
-      let currentFilterType = 'upcoming'; 
-      let filterMonth = mesAtualIndex;
-      const btnUpcoming = document.getElementById('btnUpcoming');
+      // 3. Lógica de Filtro por Mês (Inicia mostrando o mês atual)
+      let filterMonth = mesAtualIndex; 
 
-      function applyFilters() {
+      function applyFilterByMonth() {
+        let visibleCount = 0;
+        
         events.forEach(event => {
-          let show = false;
-          
-          if (currentFilterType === 'upcoming') {
-            show = (event.dataset.status === 'upcoming');
-          } else if (currentFilterType === 'month') {
-            show = (event.dataset.month == filterMonth);
-          }
-          
-          if (show) {
+          if (event.dataset.month == filterMonth) {
             event.style.display = 'flex';
+            visibleCount++;
           } else {
             event.style.display = 'none';
-            event.classList.remove('expanded'); // Fecha se tiver escondido
+            event.classList.remove('expanded'); 
           }
         });
-      }
 
-      // Clique em "Próximos Eventos"
-      btnUpcoming.addEventListener('click', () => {
-        currentFilterType = 'upcoming';
-        
-        btnUpcoming.classList.add('active');
-        dropdownBtn.classList.remove('active');
-        
-        // Reseta o texto do botão para o mês atual
-        monthBtnText.textContent = nomesMeses[mesAtualIndex];
-        
-        applyFilters();
-      });
+        // Mostra mensagem se o mês não tiver eventos cadastrados
+        if (visibleCount === 0) {
+          noEventsMsg.style.display = 'block';
+        } else {
+          noEventsMsg.style.display = 'none';
+        }
+      }
 
       // Clique em algum Mês dentro do Dropdown
       const monthItems = document.querySelectorAll('.dropdown-item');
       monthItems.forEach(item => {
         item.addEventListener('click', () => {
           const clickedMonth = item.dataset.month;
-          
-          currentFilterType = 'month';
           filterMonth = clickedMonth;
-          
-          // Muda a aparência dos botões
-          btnUpcoming.classList.remove('active');
-          dropdownBtn.classList.add('active');
           
           // Atualiza o texto do botão com o mês clicado
           monthBtnText.textContent = nomesMeses[clickedMonth];
           
-          applyFilters();
+          applyFilterByMonth();
         });
       });
 
-      // Executa o filtro inicial (mostrando apenas os Próximos)
-      applyFilters();
+      // Executa o filtro inicial (mostrando apenas o mês atual)
+      applyFilterByMonth();
 
       // 4. Lógica do Acordeão Inteligente (Abre um, fecha o resto)
       const summaries = document.querySelectorAll('.event-summary');
@@ -478,7 +443,7 @@
           const item = summary.closest('.event-item');
           const isCurrentlyExpanded = item.classList.contains('expanded');
           
-          // MÁGICA DO ACORDEÃO: Fecha todos os abertos
+          // Fecha todos os abertos
           document.querySelectorAll('.event-item.expanded').forEach(openItem => {
             openItem.classList.remove('expanded');
           });
