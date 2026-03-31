@@ -9,7 +9,7 @@
   
   <style>
     /* =========================================================
-       ESTILOS EXCLUSIVOS DA AGENDA EM LISTA
+       ESTILOS EXCLUSIVOS DA AGENDA EM LISTA (VERSÃO EXPANSÍVEL)
        ========================================================= */
     .filters-wrapper {
       display: flex;
@@ -41,7 +41,6 @@
       color: #fff; 
     }
 
-    /* Botões de Status (Próximos / Anteriores) com cor diferente para destacar */
     .filter-btn.status-btn {
       border-color: #1f5f88;
       color: #1f5f88;
@@ -55,81 +54,161 @@
     .event-list { 
       display: flex; 
       flex-direction: column; 
-      gap: 16px; 
+      gap: 14px; 
       max-width: 900px; 
       margin: 0 auto; 
     }
 
     .event-item { 
       display: flex; 
+      flex-direction: column;
       background: #fff; 
-      border-radius: 20px; 
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06); 
+      border-radius: 18px; 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05); 
       overflow: hidden; 
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: box-shadow 0.3s ease;
     }
     .event-item:hover { 
-      transform: translateY(-3px); 
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
     }
 
-    /* Bloco da Data (Esquerda) */
+    /* PARTE VISÍVEL (O RESUMO CLICÁVEL) */
+    .event-summary {
+      display: flex;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .event-summary:hover {
+      background: #fafcfa;
+    }
+
+    /* Bloco da Data - Mais fino */
     .event-date {
       background: var(--yellow);
       color: var(--text);
-      padding: 20px;
+      padding: 12px 15px; /* Reduzido */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-width: 120px;
+      min-width: 90px; /* Reduzido */
       text-align: center;
     }
-    .event-date .day { font-size: 38px; font-weight: 900; line-height: 1; letter-spacing: -1px; }
-    .event-date .month { font-size: 15px; font-weight: 800; text-transform: uppercase; margin-top: 4px; }
-    .event-date .weekday { font-size: 12px; font-weight: 700; opacity: 0.7; }
+    .event-date .day { font-size: 32px; font-weight: 900; line-height: 1; letter-spacing: -1px; } /* Menor */
+    .event-date .month { font-size: 13px; font-weight: 800; text-transform: uppercase; margin-top: 2px; }
+    .event-date .weekday { font-size: 11px; font-weight: 700; opacity: 0.7; }
 
-    /* Bloco de Informações (Direita) */
+    /* Bloco de Informações - Mais fino */
     .event-info { 
-      padding: 20px 25px; 
+      padding: 15px 20px; /* Reduzido */
       flex: 1; 
       display: flex; 
       flex-direction: column; 
       justify-content: center; 
     }
     .event-cat { 
-      font-size: 12px; 
+      font-size: 11px; 
       font-weight: 900; 
       color: var(--green); 
       text-transform: uppercase; 
-      margin-bottom: 6px; 
+      margin-bottom: 4px; 
       letter-spacing: 0.5px;
     }
     .event-title { 
-      margin: 0 0 10px; 
-      font-size: 22px; 
+      margin: 0 0 6px; 
+      font-size: 18px; /* Reduzido */
       font-weight: 900; 
       color: var(--text); 
-      line-height: 1.3;
+      line-height: 1.2;
     }
     .event-details { 
-      font-size: 15px; 
+      font-size: 14px; 
       font-weight: 600; 
       color: var(--muted); 
       margin: 0; 
       display: flex; 
       flex-wrap: wrap; 
-      gap: 15px; 
+      gap: 12px; 
     }
-    .event-details span { display: inline-flex; align-items: center; gap: 6px; }
+    .event-details span { display: inline-flex; align-items: center; gap: 5px; }
+
+    /* Ícone de Setinha */
+    .event-chevron {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      color: #999;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .event-item.expanded .event-chevron {
+      transform: rotate(180deg);
+      color: var(--green);
+    }
+
+    /* PARTE ESCONDIDA (O SLIDE EXPANSÍVEL) */
+    .event-expanded-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      background: #f6fbf6; /* Fundo levemente diferente para destacar que abriu */
+    }
+    .expanded-inner {
+      overflow: hidden;
+      position: relative;
+    }
+    
+    /* Quando o item recebe a classe 'expanded' no JS */
+    .event-item.expanded .event-expanded-content {
+      grid-template-rows: 1fr;
+    }
+    .event-item.expanded .expanded-inner {
+      padding: 25px; /* Espaço só entra quando abre */
+      border-top: 1px solid var(--line);
+    }
+
+    /* Textos dentro do bloco expandido */
+    .expanded-inner p {
+      margin: 0 0 20px 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text);
+      max-width: 90%;
+    }
+
+    /* Botão fechar (X) */
+    .close-event {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 50%;
+      background: #e8e8e8;
+      color: #555;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .close-event:hover {
+      background: #d8d8d8;
+      color: #000;
+      transform: scale(1.1);
+    }
 
     /* Ajustes para Celular */
     @media (max-width: 600px) {
-      .event-item { flex-direction: column; }
-      .event-date { padding: 15px; flex-direction: row; gap: 10px; min-width: auto; }
-      .event-date .day { font-size: 28px; }
+      .event-summary { flex-direction: column; }
+      .event-date { padding: 12px; flex-direction: row; gap: 10px; min-width: auto; }
+      .event-date .day { font-size: 24px; }
       .event-date .month { margin-top: 0; }
-      .event-info { padding: 20px; }
+      .event-chevron { display: none; } /* Remove setinha no celular para não bugar o visual */
+      .close-event { top: 10px; right: 10px; }
     }
   </style>
 </head>
@@ -165,65 +244,113 @@
       <div class="event-list" id="eventList">
         
         <article class="event-item" data-category="samba" data-date="2026-04-10">
-          <div class="event-date">
-            <span class="day">10</span>
-            <span class="month">Abr</span>
-            <span class="weekday">Sexta</span>
+          <div class="event-summary">
+            <div class="event-date">
+              <span class="day">10</span>
+              <span class="month">Abr</span>
+              <span class="weekday">Sexta</span>
+            </div>
+            <div class="event-info">
+              <span class="event-cat">Samba & Pagode</span>
+              <h3 class="event-title">Especial Samba: Zeca, Alcione & Aragão (Tributo)</h3>
+              <div class="event-details">
+                <span>📍 Restaurante Caiçara</span>
+                <span>⏰ 19h00</span>
+              </div>
+            </div>
+            <div class="event-chevron">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
-          <div class="event-info">
-            <span class="event-cat">Samba & Pagode</span>
-            <h3 class="event-title">Especial Samba: Zeca, Alcione & Aragão (Tributo)</h3>
-            <div class="event-details">
-              <span>📍 Restaurante Caiçara</span>
-              <span>⏰ 19h00</span>
+          <div class="event-expanded-content">
+            <div class="expanded-inner">
+              <button class="close-event" aria-label="Fechar" title="Fechar">&times;</button>
+              <p>Prepare o coração! Uma noite de exaltação ao samba raiz relembrando os maiores sucessos desses ícones na beira da lagoa. O evento contará com cardápio especial de petiscos e caipirinha dupla até as 20h.</p>
+              <a href="#" class="btn btn--green">Comprar Ingresso</a>
             </div>
           </div>
         </article>
 
         <article class="event-item" data-category="gastronomia" data-date="2026-05-15">
-          <div class="event-date">
-            <span class="day">15</span>
-            <span class="month">Mai</span>
-            <span class="weekday">Sábado</span>
+          <div class="event-summary">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Mai</span>
+              <span class="weekday">Sábado</span>
+            </div>
+            <div class="event-info">
+              <span class="event-cat">Gastronomia</span>
+              <h3 class="event-title">Festival Gastronômico da Ilha</h3>
+              <div class="event-details">
+                <span>📍 Vários Restaurantes</span>
+                <span>⏰ A partir das 12h</span>
+              </div>
+            </div>
+            <div class="event-chevron">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
-          <div class="event-info">
-            <span class="event-cat">Gastronomia</span>
-            <h3 class="event-title">Festival Gastronômico da Ilha</h3>
-            <div class="event-details">
-              <span>📍 Vários Restaurantes</span>
-              <span>⏰ A partir das 12h</span>
+          <div class="event-expanded-content">
+            <div class="expanded-inner">
+              <button class="close-event" aria-label="Fechar" title="Fechar">&times;</button>
+              <p>Um roteiro delicioso pelos melhores restaurantes locais com pratos exclusivos de frutos do mar, música ao vivo itinerante e degustação de cachaças artesanais do estado do Rio.</p>
+              <a href="#" class="btn btn--green">Ver Roteiro Completo</a>
             </div>
           </div>
         </article>
 
         <article class="event-item" data-category="jazz" data-date="2026-06-22">
-          <div class="event-date">
-            <span class="day">22</span>
-            <span class="month">Jun</span>
-            <span class="weekday">Domingo</span>
+          <div class="event-summary">
+            <div class="event-date">
+              <span class="day">22</span>
+              <span class="month">Jun</span>
+              <span class="weekday">Domingo</span>
+            </div>
+            <div class="event-info">
+              <span class="event-cat">MPB & Jazz</span>
+              <h3 class="event-title">Jazz & Sunset na Lagoa</h3>
+              <div class="event-details">
+                <span>📍 Deck Pôr do Sol</span>
+                <span>⏰ 16h30</span>
+              </div>
+            </div>
+            <div class="event-chevron">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
-          <div class="event-info">
-            <span class="event-cat">MPB & Jazz</span>
-            <h3 class="event-title">Jazz & Sunset na Lagoa</h3>
-            <div class="event-details">
-              <span>📍 Deck Pôr do Sol</span>
-              <span>⏰ 16h30</span>
+          <div class="event-expanded-content">
+            <div class="expanded-inner">
+              <button class="close-event" aria-label="Fechar" title="Fechar">&times;</button>
+              <p>Aproveite o fim de tarde espetacular da Gigóia ao som do melhor jazz instrumental. Traga sua canga, peça um drink artesanal e curta a vibe relaxante de frente para a Pedra da Gávea.</p>
+              <a href="#" class="btn btn--green">Saber Mais</a>
             </div>
           </div>
         </article>
 
         <article class="event-item" data-category="samba" data-date="2026-02-15">
-          <div class="event-date">
-            <span class="day">15</span>
-            <span class="month">Fev</span>
-            <span class="weekday">Domingo</span>
+          <div class="event-summary">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Fev</span>
+              <span class="weekday">Domingo</span>
+            </div>
+            <div class="event-info">
+              <span class="event-cat">Samba & Pagode</span>
+              <h3 class="event-title">Ressaca de Carnaval na Ilha</h3>
+              <div class="event-details">
+                <span>📍 Praça Central</span>
+                <span>⏰ 15h00</span>
+              </div>
+            </div>
+            <div class="event-chevron">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
-          <div class="event-info">
-            <span class="event-cat">Samba & Pagode</span>
-            <h3 class="event-title">Ressaca de Carnaval na Ilha</h3>
-            <div class="event-details">
-              <span>📍 Praça Central</span>
-              <span>⏰ 15h00</span>
+          <div class="event-expanded-content">
+            <div class="expanded-inner">
+              <button class="close-event" aria-label="Fechar" title="Fechar">&times;</button>
+              <p>Evento encerrado! Agradecemos a todos que pularam o bloquinho com a gente. Fique ligado na nossa agenda para os próximos encontros.</p>
+              <a href="#" class="btn" style="border: 1px solid #ccc;">Ver Galeria de Fotos</a>
             </div>
           </div>
         </article>
@@ -240,18 +367,18 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Pega a data de hoje, zerando as horas para comparar só o dia
+      
+      // --- LÓGICA DE DATAS E FILTROS (MANTIDA INTACTA) ---
       const today = new Date();
       today.setHours(0, 0, 0, 0);
 
       const events = Array.from(document.querySelectorAll('.event-item'));
       const listContainer = document.getElementById('eventList');
       
-      // 2. Classifica cada evento como 'upcoming' (futuro) ou 'past' (passado)
       events.forEach(event => {
-        const dateString = event.getAttribute('data-date'); // Ex: "2026-04-10"
+        const dateString = event.getAttribute('data-date'); 
         const [year, month, day] = dateString.split('-');
-        const eventDate = new Date(year, month - 1, day); // Meses no JS começam no 0
+        const eventDate = new Date(year, month - 1, day); 
         
         if (eventDate < today) {
           event.dataset.status = 'past';
@@ -260,30 +387,25 @@
         }
       });
 
-      // 3. Ordena a lista: do mais próximo para o mais distante
       events.sort((a, b) => {
         return new Date(a.dataset.date) - new Date(b.dataset.date);
       });
-      
-      // Recoloca os itens no HTML na nova ordem
       events.forEach(e => listContainer.appendChild(e));
 
-      // 4. Lógica de Filtros (Cliques nos botões)
       const filterBtns = document.querySelectorAll('.filter-btn');
-      let currentStatus = 'upcoming'; // Começa mostrando só os próximos
+      let currentStatus = 'upcoming'; 
       let currentCategory = 'todos';
 
       function applyFilters() {
-        let visibleCount = 0;
         events.forEach(event => {
           const matchStatus = event.dataset.status === currentStatus;
           const matchCategory = currentCategory === 'todos' || event.dataset.category === currentCategory;
           
           if (matchStatus && matchCategory) {
             event.style.display = 'flex';
-            visibleCount++;
           } else {
             event.style.display = 'none';
+            event.classList.remove('expanded'); // Fecha ao filtrar para evitar bugs visuais
           }
         });
       }
@@ -305,8 +427,36 @@
         });
       });
 
-      // Roda o filtro inicial para esconder os antigos logo de cara
       applyFilters();
+
+
+      // --- LÓGICA DO ACORDEÃO (CLIQUE PARA EXPANDIR E BOTÃO X) ---
+      const summaries = document.querySelectorAll('.event-summary');
+      const closeBtns = document.querySelectorAll('.close-event');
+
+      // Ao clicar na barra (resumo), abre/fecha o box
+      summaries.forEach(summary => {
+        summary.addEventListener('click', () => {
+          const item = summary.closest('.event-item');
+          
+          // Opcional: Se quiser que feche os outros ao abrir um novo, descomente as 3 linhas abaixo:
+          // document.querySelectorAll('.event-item.expanded').forEach(openItem => {
+          //   if (openItem !== item) openItem.classList.remove('expanded');
+          // });
+
+          item.classList.toggle('expanded');
+        });
+      });
+
+      // Ao clicar no botão de fechar (X), remove a classe expanded
+      closeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation(); // Impede que o clique "vaze" pro summary e reabra
+          const item = btn.closest('.event-item');
+          item.classList.remove('expanded');
+        });
+      });
+
     });
   </script>
 
