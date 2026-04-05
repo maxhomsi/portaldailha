@@ -1079,7 +1079,46 @@ card_kauai_d: { pt: "Espaço amplo na Ilha do Ipê com música ao vivo, área ki
   card_gaivota_ee_d: { pt: "Localizado na Ilha Primeira, combina vista privilegiada com atmosfera elegante. Perfeito para casamentos intimistas, festas e eventos corporativos.", en: "Located on Ilha Primeira, it combines a privileged view with an elegant atmosphere. Perfect for intimate weddings, parties, and corporate events.", es: "Ubicado en Ilha Primeira, combina una vista privilegiada con una atmósfera elegante. Perfecto para bodas íntimas, fiestas y eventos corporativos." },
   card_solar_ee_d: { pt: "Arquitetura colonial e amplos jardins. Oferece produção personalizada de alta gastronomia para casamentos, festas de 15 anos e celebrações grandiosas.", en: "Colonial architecture and vast gardens. Offers personalized high-gastronomy production for weddings, 15th birthday parties, and grand celebrations.", es: "Arquitectura colonial y amplios jardines. Ofrece producción personalizada de alta gastronomía para bodas, fiestas de 15 años y grandes celebraciones." },
   card_oasis_ee_d: { pt: "Mistura restaurante, lounge e espaço para festas privadas. Cenário charmoso para almoços relaxantes que ganha um clima animado e musical à noite.", en: "Mixes restaurant, lounge, and space for private parties. Charming setting for relaxing lunches that gains a lively and musical atmosphere at night.", es: "Mezcla restaurante, lounge y espacio para fiestas privadas. Entorno encantador para almuerzos relajantes que adquiere un ambiente animado y musical por la noche." },
-  card_mara_ee_d: { pt: "Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.", en: "Gathers gastronomy, tropical drinks, and an unforgettable sunset. The perfect setting for gatherings and relaxed meetings among friends.", es: "Reúne gastronomía, tragos tropicales y un atardecer inolvidable. El escenario perfecto para confraternizaciones y encuentros relajados entre amigos." }
+  card_mara_ee_d: { pt: "Reúne gastronomia, drinks tropicais e um pôr do sol inesquecível. O cenário perfeito para confraternizações e encontros descontraídos entre amigos.", en: "Gathers gastronomy, tropical drinks, and an unforgettable sunset. The perfect setting for gatherings and relaxed meetings among friends.", es: "Reúne gastronomía, tragos tropicales y un atardecer inolvidable. El escenario perfecto para confraternizaciones y encuentros relajados entre amigos." },
+
+  // === PÁGINA: AGENDA CULTURAL ===
+  agenda_title: { 
+    pt: "Agenda Cultural", 
+    en: "Cultural Agenda", 
+    es: "Agenda Cultural" 
+  },
+  agenda_sub: { 
+    pt: "Música ao vivo, gastronomia e eventos imperdíveis. Descubra o que vai rolar na Ilha da Gigóia.", 
+    en: "Live music, gastronomy, and unmissable events. Discover what's happening at Ilha da Gigóia.", 
+    es: "Música en vivo, gastronomía y eventos imperdibles. Descubra lo que sucederá en la Isla de Gigóia." 
+  },
+  agenda_btn_mes: { 
+    pt: "Escolha o mês", 
+    en: "Choose the month", 
+    es: "Elige el mes" 
+  },
+  agenda_btn_todos: { 
+    pt: "Todos Eventos", 
+    en: "All Events", 
+    es: "Todos los Eventos" 
+  },
+  agenda_mes_0: { pt: "Janeiro", en: "January", es: "Enero" },
+  agenda_mes_1: { pt: "Fevereiro", en: "February", es: "Febrero" },
+  agenda_mes_2: { pt: "Março", en: "March", es: "Marzo" },
+  agenda_mes_3: { pt: "Abril", en: "April", es: "Abril" },
+  agenda_mes_4: { pt: "Maio", en: "May", es: "Mayo" },
+  agenda_mes_5: { pt: "Junho", en: "June", es: "Junio" },
+  agenda_mes_6: { pt: "Julho", en: "July", es: "Julio" },
+  agenda_mes_7: { pt: "Agosto", en: "August", es: "Agosto" },
+  agenda_mes_8: { pt: "Setembro", en: "September", es: "Septiembre" },
+  agenda_mes_9: { pt: "Outubro", en: "October", es: "Octubre" },
+  agenda_mes_10: { pt: "Novembro", en: "November", es: "Noviembre" },
+  agenda_mes_11: { pt: "Dezembro", en: "December", es: "Diciembre" },
+  agenda_sem_eventos: { 
+    pt: "Nenhum evento futuro programado para este mês ainda.", 
+    en: "No upcoming events scheduled for this month yet.", 
+    es: "Aún no hay eventos futuros programados para este mes." 
+  }
 
 };
 

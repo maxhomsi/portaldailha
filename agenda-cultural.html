@@ -9,7 +9,7 @@
   
   <style>
     /* =========================================================
-       ESTILOS EXCLUSIVOS DA AGENDA (DROPDOWN À DIREITA)
+       ESTILOS EXCLUSIVOS DA AGENDA (DROPDOWN À DIREITA E i18n)
        ========================================================= */
        
     /* CORREÇÃO DO Z-INDEX E ESTRUTURA: Força a área da agenda acima do footer */
@@ -191,21 +191,18 @@
     .close-event { position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; border: none; border-radius: 50%; background: #e8e8e8; color: #555; font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
     .close-event:hover { background: #d8d8d8; color: #000; transform: scale(1.1); }
 
-    /* =========================================================
-       AJUSTES PARA CELULAR (REFINADO)
-       ========================================================= */
+    /* Ajustes para Celular */
     @media (max-width: 600px) {
       .filters-wrapper { 
-        padding: 0; 
-        justify-content: flex-end; /* Mantém cravado na direita */
+        padding: 0 22px; 
+        justify-content: flex-end; 
       } 
       .filter-btn {
-        font-size: 14px; /* Fonte levemente menor para caber melhor */
+        font-size: 14px;
         padding: 10px 20px;
       }
       .event-summary { flex-direction: column; }
       
-      /* A data vira uma barra horizontal super limpa no celular */
       .event-date { 
         padding: 12px 20px; 
         flex-direction: row; 
@@ -216,7 +213,7 @@
       }
       .event-date .day { font-size: 22px; }
       .event-date .month { margin-top: 0; font-size: 15px; }
-      .event-date .weekday { font-size: 14px; opacity: 1; color: #a68400; margin-left: auto; } /* Dia da semana vai pra direita */
+      .event-date .weekday { font-size: 14px; opacity: 1; color: #a68400; margin-left: auto; }
       
       .event-info { padding: 20px; }
       .event-chevron { display: none; } 
@@ -231,8 +228,8 @@
 
   <header class="pageHead section reveal is-in">
     <div class="container text-center">
-      <h1>Agenda Cultural</h1>
-      <p>Música ao vivo, gastronomia e eventos imperdíveis. Descubra o que vai rolar na Ilha da Gigóia.</p>
+      <h1 data-i18n="agenda_title">Agenda Cultural</h1>
+      <p data-i18n="agenda_sub">Música ao vivo, gastronomia e eventos imperdíveis. Descubra o que vai rolar na Ilha da Gigóia.</p>
     </div>
   </header>
 
@@ -242,40 +239,40 @@
       <div class="filters-wrapper">
         <div class="month-dropdown" id="monthDropdown">
           <button class="filter-btn active" id="monthDropdownBtn">
-            <span id="monthBtnText">Escolha o mês</span>
+            <span id="monthBtnText" data-i18n="agenda_btn_mes">Escolha o mês</span>
             <span class="dropdown-icon">▼</span>
           </button>
           
           <div class="dropdown-menu" id="monthDropdownMenu">
-            <button class="dropdown-item" data-month="0">Janeiro</button>
-            <button class="dropdown-item" data-month="1">Fevereiro</button>
-            <button class="dropdown-item" data-month="2">Março</button>
-            <button class="dropdown-item" data-month="3">Abril</button>
-            <button class="dropdown-item" data-month="4">Maio</button>
-            <button class="dropdown-item" data-month="5">Junho</button>
-            <button class="dropdown-item" data-month="6">Julho</button>
-            <button class="dropdown-item" data-month="7">Agosto</button>
-            <button class="dropdown-item" data-month="8">Setembro</button>
-            <button class="dropdown-item" data-month="9">Outubro</button>
-            <button class="dropdown-item" data-month="10">Novembro</button>
-            <button class="dropdown-item" data-month="11">Dezembro</button>
-            <button class="dropdown-item all-events-btn" data-month="all">Todos Eventos</button>
+            <button class="dropdown-item" data-month="0" data-i18n="agenda_mes_0">Janeiro</button>
+            <button class="dropdown-item" data-month="1" data-i18n="agenda_mes_1">Fevereiro</button>
+            <button class="dropdown-item" data-month="2" data-i18n="agenda_mes_2">Março</button>
+            <button class="dropdown-item" data-month="3" data-i18n="agenda_mes_3">Abril</button>
+            <button class="dropdown-item" data-month="4" data-i18n="agenda_mes_4">Maio</button>
+            <button class="dropdown-item" data-month="5" data-i18n="agenda_mes_5">Junho</button>
+            <button class="dropdown-item" data-month="6" data-i18n="agenda_mes_6">Julho</button>
+            <button class="dropdown-item" data-month="7" data-i18n="agenda_mes_7">Agosto</button>
+            <button class="dropdown-item" data-month="8" data-i18n="agenda_mes_8">Setembro</button>
+            <button class="dropdown-item" data-month="9" data-i18n="agenda_mes_9">Outubro</button>
+            <button class="dropdown-item" data-month="10" data-i18n="agenda_mes_10">Novembro</button>
+            <button class="dropdown-item" data-month="11" data-i18n="agenda_mes_11">Dezembro</button>
+            <button class="dropdown-item all-events-btn" data-month="all" data-i18n="agenda_btn_todos">Todos Eventos</button>
           </div>
         </div>
       </div>
 
-      <div class="no-events-msg" id="noEventsMsg">
+      <div class="no-events-msg" id="noEventsMsg" data-i18n="agenda_sem_eventos">
         Nenhum evento futuro programado para este mês ainda.
       </div>
 
       <div class="event-list" id="eventList">
         
-        <article class="event-item" data-date="2026-03-10">
+        <article class="event-item" data-date="2026-05-10">
           <div class="event-summary">
             <div class="event-date">
               <span class="day">10</span>
-              <span class="month">Mar</span>
-              <span class="weekday">Terça</span>
+              <span class="month">Mai</span>
+              <span class="weekday">Domingo</span>
             </div>
             <div class="event-info">
               <span class="event-cat">Samba & Pagode</span>
@@ -297,12 +294,12 @@
           </div>
         </article>
 
-        <article class="event-item" data-date="2026-04-15">
+        <article class="event-item" data-date="2026-06-15">
           <div class="event-summary">
             <div class="event-date">
               <span class="day">15</span>
-              <span class="month">Abr</span>
-              <span class="weekday">Quarta</span>
+              <span class="month">Jun</span>
+              <span class="weekday">Segunda</span>
             </div>
             <div class="event-info">
               <span class="event-cat">Gastronomia</span>
@@ -324,12 +321,12 @@
           </div>
         </article>
 
-        <article class="event-item" data-date="2026-06-22">
+        <article class="event-item" data-date="2026-08-22">
           <div class="event-summary">
             <div class="event-date">
               <span class="day">22</span>
-              <span class="month">Jun</span>
-              <span class="weekday">Domingo</span>
+              <span class="month">Ago</span>
+              <span class="weekday">Sábado</span>
             </div>
             <div class="event-info">
               <span class="event-cat">MPB & Jazz</span>
@@ -351,11 +348,11 @@
           </div>
         </article>
 
-        <article class="event-item" data-date="2026-02-15">
+        <article class="event-item" data-date="2026-03-01">
           <div class="event-summary">
             <div class="event-date">
-              <span class="day">15</span>
-              <span class="month">Fev</span>
+              <span class="day">01</span>
+              <span class="month">Mar</span>
               <span class="weekday">Domingo</span>
             </div>
             <div class="event-info">
@@ -390,8 +387,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      
-      const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
       
       const today = new Date();
       today.setHours(0, 0, 0, 0);
@@ -471,17 +466,14 @@
           const clickedMonth = item.dataset.month;
           filterMonth = clickedMonth;
           
-          if(clickedMonth === 'all'){
-              monthBtnText.textContent = "Todos Eventos";
-          } else {
-              monthBtnText.textContent = nomesMeses[clickedMonth];
-          }
+          // O botão agora copia o texto exato que estava no item do menu clicado, mantendo a tradução certa
+          monthBtnText.textContent = item.textContent;
           
           applyFilter();
         });
       });
 
-      // Executa o filtro inicial ("Escolha o mês" -> mostra todos)
+      // Executa o filtro inicial
       applyFilter();
 
       // 4. Lógica do Acordeão Inteligente (Abre um, fecha o resto)
@@ -505,7 +497,7 @@
         });
       });
 
-      // Botão X
+      // Botão X para fechar
       closeBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.stopPropagation(); 
