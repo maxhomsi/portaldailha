@@ -128,7 +128,7 @@ function mountHeaderFooter() {
   if (header) {
     header.innerHTML = `
       <div class="container header__inner">
-        <a class="brand" href="index.html">
+        <a class="brand" href="/">
           <img class="brand__logo" src="${SITE.brand.logo}" alt="Logo" />
           <div class="brand__text"><small>${SITE.brand.nameSmall}</small><strong><span>${SITE.brand.nameMainA}</span> ${SITE.brand.nameMainB}</strong></div>
         </a>
@@ -183,7 +183,7 @@ function mountHeaderFooter() {
         <div class="footer__col">
           <h3 data-i18n="footer_nav_t">Navegue</h3>
           <ul>
-            <li><a href="index.html" data-i18n="nav_inicio">Início</a></li>
+            <li><a href="/" data-i18n="nav_inicio">Início</a></li>
             <li><a href="a-ilha.html">${t("nav_ilha")}</a></li>
             <li><a href="passeios-rotas.html">${t("nav_passeios")}</a></li>
             <li><a href="comer-beber.html">${t("nav_comer")}</a></li>
