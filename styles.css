@@ -712,3 +712,22 @@ div[id*="cookie"], div[class*="cookie"], div[id*="lgpd"], div[class*="lgpd"], .c
 .promo-popup, .popup-agenda {
   z-index: 9000 !important;
 }
+
+/* =========================================================
+   SELO COMIDA DI BUTECO
+   ========================================================= */
+img.selo-buteco {
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  width: 75px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  z-index: 10 !important;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+  transition: transform 0.3s ease !important;
+}
+
+.card:hover img.selo-buteco {
+  transform: scale(1.15) rotate(10deg) !important;
+}
