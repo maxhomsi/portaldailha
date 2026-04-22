@@ -738,7 +738,15 @@ img.selo-buteco {
 .gigi-msg--bot { flex-direction: row; }
 .gigi-msg--user { flex-direction: row-reverse; }
 
-.gigi-avatar { width: 35px; height: 35px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--green); }
+.gigi-avatar { 
+  width: 50px !important;  /* Aumentamos a largura */
+  height: 50px !important; /* Aumentamos a altura */
+  border-radius: 50%; 
+  overflow: hidden; 
+  flex-shrink: 0; 
+  border: 2px solid var(--green); 
+}
+
 .gigi-avatar img { width: 100%; height: 100%; object-fit: cover; }
 
 .gigi-bubble {
