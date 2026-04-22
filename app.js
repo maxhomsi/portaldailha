@@ -95,7 +95,7 @@ const socialHtml = `
 function iconSvg(name) {
   const common = `viewBox="0 0 24 24" aria-hidden="true" focusable="false"`;
   if (name === "boat") return `<svg ${common}><path d="M12 3c.6 0 1 .4 1 1v2h4c.4 0 .8.3 1 .7l2 6.1c.1.4 0 .8-.3 1.1-1.2 1.2-2.9 2.1-4.7 2.1-1.1 0-2.2-.3-3-.8-.8.5-1.9.8-3 .8s-2.2-.3-3-.8c-.8.5-1.9.8-3 .8-1.8 0-3.5-.9-4.7-2.1-.3-.3-.4-.7-.3-1.1l2-6.1c.1-.4.5-.7 1-.7h4V4c0-.6.4-1 1-1h6Zm-5 6H3.7L2.2 13.7c.8.7 1.8 1.2 2.8 1.2.9 0 1.7-.3 2.4-.8l.6-.4.6.4c.7.5 1.5.8 2.4.8.9 0 1.7-.3 2.4-.8l.6-.4.6.4c.7.5 1.5.8 2.4.8 1 0 2-.5 2.8-1.2L20.3 9H17v2c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1V9Zm2 0v1h6V9H9Z"/></svg>`;
-  if (name === "fork") return `<svg ${common}><path d="M8 2c.6 0 1 .4 1 1v7c0 1.7-1.3 3-3 3v8c0 .6-.4 1-1 1s-1-.4-1-1v-8c-1.7 0-3-1.3-3-3V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1Zm12 0c.6 0 1 .4 1 1v9c0 1.9-1.3 3.4-3 3.9V21c0 .6-.4 1-1 1s-1-.4-1-1V3c0-.6.4-1 1-1 2.2 0 4 1.8 4 4v6c0 .6-.4 1-1 1s-1-.4-1-1V6c0-.8-.4-1.5-1-1.9V14h.2c.9-.3 1.8-1.1 1.8-2.2V3c0-.6.4-1 1-1Z"/></svg>`;
+  if (name === "fork") return `<svg ${common}><path d="M8 2c.6 0 1 .4 1 1v7c0 1.7-1.3 3-3 3v8c0 .6-.4 1-1 1s-1-.4-1-1v-8c-1.7 0-3-1.3-3-3V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1s1 .4 1 1v4h1V3c0-.6.4-1 1-1Zm12 0c.6 0 1 .4 1 1v9c0 1.9-1.3 3.4-3 3.9V21c0 .6-.4 1-1 1s-1-.4-1-1V3c0-.6.4-1 1-1 2.2 0 4 1.8 4 4v6c0 .6-.4 1-1 1s-1-.4-1-1V6c0-.8-.4-1.5-1-1.9V14h.2c.9-.3 1.8-1.1 1.8-2.2V3c0-.6.4-1 1-1Z"/></svg>`;
   if (name === "leaf") return `<svg ${common}><path d="M20.9 4.6c.2.5.1 1.1-.3 1.5l-8.5 8.5c-1.4 1.4-3.2 2.2-5.2 2.3h-.7l-1.9 1.9c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l1.9-1.9v-.7c.1-2 .9-3.8 2.3-5.2l8.5-8.5c.4-.4 1-.5 1.5-.3 1.6.6 2.9 1.9 3.5 3.5ZM7 14c1.5-.1 2.8-.7 3.9-1.7l7.8-7.8c-.4-.7-1-1.3-1.7-1.7l-7.8 7.8C8 11.7 7.3 13 7.2 14.5V14H7Z"/></svg>`;
   return `<svg ${common}><path d="M4 10c0-1.7 1.3-3 3-3h10c1.7 0 3 1.3 3 3v8c0 .6-.4 1-1 1s-1-.4-1-1v-1H6v1c0 .6-.4 1-1 1s-1-.4-1-1v-8Zm2 5h12v-2c0-.6-.4-1-1-1H7c-.6 0-1 .4-1 1v2Zm2-6h3c.6 0 1 .4 1 1s-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1Z"/></svg>`;
 }
@@ -262,6 +262,9 @@ function mountPageCards(pageKey) {
   if (box) box.innerHTML = list.map((c,i)=>cardHtml(c,i)).join("");
 }
 
+// =======================================================
+// GIGI CHATBOT - AUTOMAÇÃO E WIDGET
+// =======================================================
 function mountGigiWidget() {
   const root = document.getElementById("gigiWidgetRoot");
   if (!root) return;
@@ -273,27 +276,45 @@ function mountGigiWidget() {
         <span class="gigiIcon">💬</span> <span>${t("gigi_fab")}</span>
       </button>
     </div>
-    <div class="gigiBox" id="gigiBox" style="display:${isOpen ? "flex" : "none"}">
+    <div class="gigiBox" id="gigiBox" style="display:${isOpen ? "flex" : "none"}; max-height: 85vh;">
       <div class="gigiBox__top">
-        <div class="gigiBox__title"><strong>Gigi</strong><small>Portal Ilha da Gigóia</small></div>
+        <div class="gigiBox__title"><strong>Gigi</strong><small>Assistente Virtual</small></div>
         <button class="gigiBox__close" onclick="document.getElementById('gigiBox').style.display='none'; localStorage.setItem('ilg_gigi_open_v1','0')">✕</button>
       </div>
-      <div class="gigiBox__body">
-        <div class="gigiCard">
-          <div class="gigiCard__img" id="gigiImgBox"><img src="assets/gigi.png" alt="Gigi" style="width:100%;height:100%;object-fit:cover;border-radius:18px"/></div>
-          <div class="gigiCard__text"><strong>${t("gigi_hello")}</strong><small>${t("gigi_sub")}</small></div>
+      
+      <div class="gigiBox__body" id="gigiChatBody" style="background:#f6fbf6; display:flex; flex-direction:column; overflow-y:auto; padding:20px; height: 450px;">
+        
+        <div id="gigiChatFlow" style="display:flex; flex-direction:column; gap:15px;">
+          <div class="gigi-msg gigi-msg--bot">
+            <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
+            <div class="gigi-bubble">
+              <strong>${t("gigi_hello")}</strong><br>
+              Selecione uma dúvida rápida abaixo ou escolha falar direto com nossa equipe no WhatsApp:
+            </div>
+          </div>
         </div>
-        <form class="gigiForm" id="gigiForm">
-          <div><label>${t("gigi_lbl_name")}</label><input id="gigiName" type="text" placeholder="Maria" required /></div>
-          <div><label>${t("gigi_lbl_phone")}</label><input id="gigiPhone" type="tel" placeholder="+55 21 99999-9999" required /></div>
-          <div><label>${t("gigi_lbl_msg")}</label><textarea id="gigiMessage" placeholder="..." required></textarea></div>
-          <button class="gigiSend" type="submit">${t("gigi_btn")}</button>
-          <small style="color:rgba(0,0,0,.55);font-weight:800">${t("gigi_note")}</small>
-        </form>
+
+        <div class="gigi-quick-replies" id="gigiOptions" style="margin-top:15px;">
+          <button class="gigi-quick-btn" onclick="gigiAsk('como_chegar')">📍 Como chegar na Ilha?</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('passeios')">🚤 Preços de Passeios</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Quero falar no WhatsApp</button>
+        </div>
+
+        <div id="gigiFormContainer" style="display:none; margin-top:15px;">
+          <form class="gigiForm" id="gigiForm" style="background:#fff; padding:15px; border-radius:16px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+            <div style="margin-bottom:12px; font-size:13px; color:var(--green); font-weight:800; text-align:center;">Preencha seus dados para iniciar o WhatsApp</div>
+            <div><label>${t("gigi_lbl_name")}</label><input id="gigiName" type="text" placeholder="Seu nome" required /></div>
+            <div><label>${t("gigi_lbl_phone")}</label><input id="gigiPhone" type="tel" placeholder="(21) 99999-9999" required /></div>
+            <div><label>${t("gigi_lbl_msg")}</label><textarea id="gigiMessage" placeholder="Escreva sua mensagem..." required></textarea></div>
+            <button class="gigiSend" type="submit" style="width:100%; margin-top:5px;">${t("gigi_btn")}</button>
+          </form>
+        </div>
+        
       </div>
     </div>
   `;
 
+  // Função que envia o formulário para o WhatsApp
   const form = document.getElementById("gigiForm");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -301,14 +322,87 @@ function mountGigiWidget() {
     const phone = document.getElementById("gigiPhone")?.value || "";
     const message = document.getElementById("gigiMessage")?.value || "";
     if (!name || !phone || !message) return;
-    const text = `Olá! Quero falar com a Gigi (Portal Ilha da Gigóia).\n\nNome: ${name}\nTelefone: ${phone}\nMensagem:\n${message}`;
+    const text = `Olá! Quero falar com a equipe do Portal Ilha da Gigóia.\n\n*Nome:* ${name}\n*Telefone:* ${phone}\n*Mensagem:*\n${message}`;
     
-    // AQUI ESTÁ A CORREÇÃO: Utilizando a API universal do WhatsApp
     window.open(`https://wa.me/${GIGI.whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank");
     
+    // Reseta o chat após o envio
     form.reset();
+    gigiAsk('encerrar');
   });
 }
+
+window.gigiAsk = function(questionId) {
+  const body = document.getElementById('gigiChatBody');
+  const flow = document.getElementById('gigiChatFlow');
+  const optionsDiv = document.getElementById('gigiOptions');
+  const formDiv = document.getElementById('gigiFormContainer');
+
+  // Esconde os botões quando o usuário clica
+  if(optionsDiv) optionsDiv.style.display = 'none';
+  if(formDiv) formDiv.style.display = 'none';
+
+  let userText = "";
+  let botReply = "";
+  let showForm = false;
+
+  // 1. Respostas configuradas
+  if (questionId === 'como_chegar') {
+    userText = "Como chegar na Ilha?";
+    botReply = "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00. Posso te ajudar com mais alguma coisa?";
+  } 
+  else if (questionId === 'passeios') {
+    userText = "Como funcionam os passeios?";
+    botReply = "Temos várias opções! O passeio do Pantanal Carioca dura 45 min e custa cerca de R$ 50. Já o roteiro Ilhas Tijucas leva umas 4h e custa R$ 150. Quer ir pro WhatsApp agendar um horário com um barqueiro?";
+  } 
+  else if (questionId === 'whatsapp') {
+    userText = "Falar com a equipe (WhatsApp)";
+    botReply = "Perfeito! Preencha seus dados aqui embaixo rapidinho para eu abrir o seu WhatsApp já com a mensagem organizada:";
+    showForm = true;
+  }
+  else if (questionId === 'encerrar') {
+    userText = "Mensagem Enviada!";
+    botReply = "Prontinho, o WhatsApp foi aberto! Se precisar de mais alguma coisa, estarei por aqui.";
+  }
+
+  // 2. Imprime a pergunta do usuário na tela
+  flow.insertAdjacentHTML('beforeend', `
+    <div class="gigi-msg gigi-msg--user">
+      <div class="gigi-bubble">${userText}</div>
+    </div>
+  `);
+
+  // Rola o chat para baixo
+  body.scrollTop = body.scrollHeight;
+
+  // 3. Imprime a resposta da Gigi (com delay para parecer que está digitando)
+  setTimeout(() => {
+    flow.insertAdjacentHTML('beforeend', `
+      <div class="gigi-msg gigi-msg--bot">
+        <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
+        <div class="gigi-bubble">${botReply}</div>
+      </div>
+    `);
+
+    // Mostra o formulário do Whatsapp OU os botões de voltar
+    if (showForm) {
+      formDiv.style.display = 'block';
+    } else if (questionId !== 'encerrar') {
+      flow.insertAdjacentHTML('beforeend', `
+        <div class="gigi-quick-replies" style="margin-top:10px;">
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Agendar/Falar no WhatsApp</button>
+          <button class="gigi-quick-btn" onclick="document.getElementById('gigiOptions').style.display='flex'; this.parentElement.style.display='none';">🔄 Voltar às opções</button>
+        </div>
+      `);
+    }
+    
+    // Rola o chat para baixo novamente
+    body.scrollTop = body.scrollHeight;
+  }, 600); // 600 milissegundos de delay
+};
+// =======================================================
+// FIM DA LÓGICA DA GIGI
+// =======================================================
 
 function setupCadastroModal() {
   const currentUrl = location.href;
