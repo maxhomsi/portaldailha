@@ -265,6 +265,43 @@ function mountPageCards(pageKey) {
 // =======================================================
 // GIGI CHATBOT - AUTOMAÇÃO E WIDGET
 // =======================================================
+
+// =======================================================
+// GIGI CHATBOT - INTELIGÊNCIA "FAKE AI" 100% GRATUITA
+// =======================================================
+
+// 1. O "Cérebro" da Gigi: Você pode adicionar quantas regras quiser aqui!
+const GIGI_BRAIN = [
+  {
+    keywords: ["pet", "cachorro", "gato", "animal", "pets"],
+    reply: "Sim! A Ilha da Gigóia é super Pet Friendly 🐾. A maioria dos barqueiros aceita pets nos passeios, e restaurantes ao ar livre como o Ilha Gourmet e bares adoram receber os peludos. Só lembre de mantê-los na coleira!"
+  },
+  {
+    keywords: ["comer", "restaurante", "fome", "almoco", "jantar", "comida"],
+    reply: "Opção é o que não falta por aqui! 🍤 Se quiser frutos do mar, recomendo o Cais Bar, Ocyá ou Laguna. Para um clima mais descontraído ou lanche, o Parada Burger e o Cantinho do Café são ótimos. Você prefere lanche ou refeição completa?"
+  },
+  {
+    keywords: ["pizza", "pizzaria"],
+    reply: "Falou em Pizza, falou na Ilha Gourmet! 🍕 Fica num cantinho super charmoso e a pizza é deliciosa para aquele fim de tarde."
+  },
+  {
+    keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "airbnb"],
+    reply: "Temos desde pousadas charmosas (como a Pousada Barra da Tijuca e Marísis) até casas inteiras de temporada (como a Casa Venti e Casanova). Dá uma olhadinha na nossa aba de 'Hospedagem' no menu principal! 🛏️"
+  },
+  {
+    keywords: ["estacionamento", "carro", "estacionar", "vaga"],
+    reply: "A ilha não tem carros, é um oásis exclusivo para pedestres! 🚫🚗 Se vier de carro, você precisa deixá-lo em um dos estacionamentos particulares na Av. Armando Lombardi (perto do metrô) e atravessar de barquinho."
+  },
+  {
+    keywords: ["oi", "ola", "bom dia", "boa tarde", "boa noite", "tudo bem"],
+    reply: "Olá! Tudo ótimo por aqui! 😊 Como posso te ajudar a planejar seu dia perfeito na Ilha da Gigóia?"
+  },
+  {
+    keywords: ["obrigado", "obrigada", "valeu", "show"],
+    reply: "Por nada! Se precisar de mais alguma dica ou quiser agendar um passeio, é só me chamar. Boa diversão na Ilha! 🌴"
+  }
+];
+
 function mountGigiWidget() {
   const root = document.getElementById("gigiWidgetRoot");
   if (!root) return;
@@ -276,20 +313,20 @@ function mountGigiWidget() {
         <span class="gigiIcon">💬</span> <span>${t("gigi_fab")}</span>
       </button>
     </div>
-    <div class="gigiBox" id="gigiBox" style="display:${isOpen ? "flex" : "none"}; max-height: 85vh;">
+    <div class="gigiBox" id="gigiBox" style="display:${isOpen ? "flex" : "none"}; max-height: 85vh; overflow: hidden;">
       <div class="gigiBox__top">
         <div class="gigiBox__title"><strong>Gigi</strong><small>Assistente Virtual</small></div>
         <button class="gigiBox__close" onclick="document.getElementById('gigiBox').style.display='none'; localStorage.setItem('ilg_gigi_open_v1','0')">✕</button>
       </div>
       
-      <div class="gigiBox__body" id="gigiChatBody" style="background:#f6fbf6; display:flex; flex-direction:column; overflow-y:auto; padding:20px; height: 450px;">
+      <div class="gigiBox__body" id="gigiChatBody" style="background:#f6fbf6; display:flex; flex-direction:column; overflow-y:auto; height: 380px; padding:20px;">
         
         <div id="gigiChatFlow" style="display:flex; flex-direction:column; gap:15px;">
           <div class="gigi-msg gigi-msg--bot">
             <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
             <div class="gigi-bubble">
               <strong>${t("gigi_hello")}</strong><br>
-              Selecione uma dúvida rápida abaixo ou escolha falar direto com nossa equipe no WhatsApp:
+              Você pode digitar sua dúvida abaixo ou escolher uma opção rápida:
             </div>
           </div>
         </div>
@@ -303,42 +340,93 @@ function mountGigiWidget() {
         <div id="gigiFormContainer" style="display:none; margin-top:15px;">
           <form class="gigiForm" id="gigiForm" style="background:#fff; padding:15px; border-radius:16px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
             <div style="margin-bottom:12px; font-size:13px; color:var(--green); font-weight:800; text-align:center;">Preencha seus dados para iniciar o WhatsApp</div>
-            <div><label>${t("gigi_lbl_name")}</label><input id="gigiName" type="text" placeholder="Seu nome" required /></div>
-            <div><label>${t("gigi_lbl_phone")}</label><input id="gigiPhone" type="tel" placeholder="(21) 99999-9999" required /></div>
-            <div><label>${t("gigi_lbl_msg")}</label><textarea id="gigiMessage" placeholder="Escreva sua mensagem..." required></textarea></div>
-            <button class="gigiSend" type="submit" style="width:100%; margin-top:5px;">${t("gigi_btn")}</button>
+            <div><input id="gigiName" type="text" placeholder="Seu nome" required style="margin-bottom:8px;"/></div>
+            <div><input id="gigiPhone" type="tel" placeholder="(21) 99999-9999" required style="margin-bottom:8px;"/></div>
+            <div><textarea id="gigiMessage" placeholder="Sua mensagem..." required></textarea></div>
+            <button class="gigiSend" type="submit" style="width:100%; margin-top:10px;">${t("gigi_btn")}</button>
           </form>
         </div>
-        
       </div>
+
+      <div style="padding: 12px 15px; background: #fff; border-top: 1px solid rgba(0,0,0,0.08); display: flex; gap: 8px; align-items: center;">
+        <input type="text" id="gigiFreeInput" placeholder="Pergunte algo (ex: Aceita pet?)..." style="flex: 1; padding: 12px 15px; border-radius: 20px; border: 1px solid #ddd; outline: none; font-family: inherit; font-size: 13px;" onkeypress="if(event.key === 'Enter') sendGigiFreeMsg()">
+        <button onclick="sendGigiFreeMsg()" style="background: var(--green); color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+
     </div>
   `;
 
-  // Função que envia o formulário para o WhatsApp
+  // Função do formulário WhatsApp
   const form = document.getElementById("gigiForm");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = document.getElementById("gigiName")?.value || "";
     const phone = document.getElementById("gigiPhone")?.value || "";
-    const message = document.getElementById("gigiMessage")?.value || "";
-    if (!name || !phone || !message) return;
-    const text = `Olá! Quero falar com a equipe do Portal Ilha da Gigóia.\n\n*Nome:* ${name}\n*Telefone:* ${phone}\n*Mensagem:*\n${message}`;
-    
+    const msg = document.getElementById("gigiMessage")?.value || "";
+    const text = `Olá! Quero falar com a equipe do Portal Ilha da Gigóia.\n\n*Nome:* ${name}\n*Telefone:* ${phone}\n*Mensagem:*\n${msg}`;
     window.open(`https://wa.me/${GIGI.whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank");
-    
-    // Reseta o chat após o envio
     form.reset();
     gigiAsk('encerrar');
   });
 }
 
+// 2. Função de Digitação Livre (Inteligência)
+window.sendGigiFreeMsg = function() {
+  const input = document.getElementById('gigiFreeInput');
+  const text = input.value.trim();
+  if(!text) return;
+
+  const body = document.getElementById('gigiChatBody');
+  const flow = document.getElementById('gigiChatFlow');
+  const optionsDiv = document.getElementById('gigiOptions');
+  
+  if(optionsDiv) optionsDiv.style.display = 'none';
+
+  // Imprime pergunta do usuário
+  flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--user"><div class="gigi-bubble">${text}</div></div>`);
+  input.value = "";
+  body.scrollTop = body.scrollHeight;
+
+  // Limpa acentos e converte para minúsculo para a IA entender melhor
+  const normalized = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  
+  // Resposta padrão caso ela não saiba a resposta
+  let botReply = "Hmm, boa pergunta! 🤔 Meu sistema ainda está aprendendo sobre isso. Você pode escolher uma das opções abaixo ou chamar um humano no WhatsApp:";
+  let showOptions = true;
+
+  // Varre o cérebro procurando combinações
+  for (let rule of GIGI_BRAIN) {
+    if (rule.keywords.some(kw => normalized.includes(kw))) {
+      botReply = rule.reply;
+      showOptions = false;
+      break;
+    }
+  }
+
+  // Responde com um leve delay (simulando "Gigi digitando...")
+  setTimeout(() => {
+    flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${botReply}</div></div>`);
+    
+    if(showOptions) {
+      flow.insertAdjacentHTML('beforeend', `
+        <div class="gigi-quick-replies" style="margin-top:5px;">
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Chamar Equipe no WhatsApp</button>
+        </div>
+      `);
+    }
+    body.scrollTop = body.scrollHeight;
+  }, 800);
+};
+
+// 3. Função dos Botões Rápidos
 window.gigiAsk = function(questionId) {
   const body = document.getElementById('gigiChatBody');
   const flow = document.getElementById('gigiChatFlow');
   const optionsDiv = document.getElementById('gigiOptions');
   const formDiv = document.getElementById('gigiFormContainer');
 
-  // Esconde os botões quando o usuário clica
   if(optionsDiv) optionsDiv.style.display = 'none';
   if(formDiv) formDiv.style.display = 'none';
 
@@ -346,14 +434,13 @@ window.gigiAsk = function(questionId) {
   let botReply = "";
   let showForm = false;
 
-  // 1. Respostas configuradas
   if (questionId === 'como_chegar') {
     userText = "Como chegar na Ilha?";
-    botReply = "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00. Posso te ajudar com mais alguma coisa?";
+    botReply = "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00.";
   } 
   else if (questionId === 'passeios') {
     userText = "Como funcionam os passeios?";
-    botReply = "Temos várias opções! O passeio do Pantanal Carioca dura 45 min e custa cerca de R$ 50. Já o roteiro Ilhas Tijucas leva umas 4h e custa R$ 150. Quer ir pro WhatsApp agendar um horário com um barqueiro?";
+    botReply = "Temos várias opções! O passeio do Pantanal Carioca dura 45 min e custa cerca de R$ 50. Já o roteiro Ilhas Tijucas leva umas 4h e custa R$ 150.";
   } 
   else if (questionId === 'whatsapp') {
     userText = "Falar com a equipe (WhatsApp)";
@@ -365,42 +452,25 @@ window.gigiAsk = function(questionId) {
     botReply = "Prontinho, o WhatsApp foi aberto! Se precisar de mais alguma coisa, estarei por aqui.";
   }
 
-  // 2. Imprime a pergunta do usuário na tela
-  flow.insertAdjacentHTML('beforeend', `
-    <div class="gigi-msg gigi-msg--user">
-      <div class="gigi-bubble">${userText}</div>
-    </div>
-  `);
-
-  // Rola o chat para baixo
+  flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--user"><div class="gigi-bubble">${userText}</div></div>`);
   body.scrollTop = body.scrollHeight;
 
-  // 3. Imprime a resposta da Gigi (com delay para parecer que está digitando)
   setTimeout(() => {
-    flow.insertAdjacentHTML('beforeend', `
-      <div class="gigi-msg gigi-msg--bot">
-        <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
-        <div class="gigi-bubble">${botReply}</div>
-      </div>
-    `);
-
-    // Mostra o formulário do Whatsapp OU os botões de voltar
+    flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${botReply}</div></div>`);
     if (showForm) {
       formDiv.style.display = 'block';
     } else if (questionId !== 'encerrar') {
       flow.insertAdjacentHTML('beforeend', `
-        <div class="gigi-quick-replies" style="margin-top:10px;">
-          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Agendar/Falar no WhatsApp</button>
-          <button class="gigi-quick-btn" onclick="document.getElementById('gigiOptions').style.display='flex'; this.parentElement.style.display='none';">🔄 Voltar às opções</button>
+        <div class="gigi-quick-replies" style="margin-top:5px;">
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Agendar no WhatsApp</button>
         </div>
       `);
     }
-    
-    // Rola o chat para baixo novamente
     body.scrollTop = body.scrollHeight;
-  }, 600); // 600 milissegundos de delay
+  }, 600);
 };
-// =======================================================
+
+
 // FIM DA LÓGICA DA GIGI
 // =======================================================
 
