@@ -364,11 +364,13 @@ window.sendGigiFreeMsg = function() {
 
   // Trava de Segurança: Verifica se o arquivo cerebro-gigi.js foi carregado com sucesso
   if (typeof GIGI_BRAIN !== 'undefined') {
-    // Varre o cérebro procurando combinações
+ // Varre o cérebro procurando combinações
+  if (typeof GIGI_BRAIN !== 'undefined') {
     for (let rule of GIGI_BRAIN) {
       if (rule.keywords.some(kw => normalized.includes(kw))) {
         botReply = rule.reply;
-        showOptions = false; // Como ela sabe a resposta, esconde o botão de chamar a equipe
+        // O PULO DO GATO: Mostra o botão do WhatsApp apenas se a regra tiver o gatilho ativado!
+        showOptions = rule.showWhatsapp === true; 
         break;
       }
     }
