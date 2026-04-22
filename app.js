@@ -286,13 +286,19 @@ function mountGigiWidget() {
       <div class="gigiBox__body" id="gigiChatBody" style="background:#f6fbf6; display:flex; flex-direction:column; overflow-y:auto; height: 380px; padding:20px;">
         
         <div id="gigiChatFlow" style="display:flex; flex-direction:column; gap:15px;">
-          <div class="gigi-msg gigi-msg--bot">
-            <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
-            <div class="gigi-bubble">
-              <strong>${t("gigi_hello")}</strong><br>
-              Você pode digitar sua dúvida abaixo ou escolher uma opção rápida:
+          
+          <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px; padding: 10px 0;">
+            <div style="width: 120px; flex-shrink: 0;">
+              <img src="assets/gigi.png" alt="Gigi" style="width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));">
+            </div>
+            <div style="flex: 1;">
+              <strong style="font-size: 22px; color: var(--text); display: block; margin-bottom: 6px; line-height: 1.2;">Olá, me chamo Gigi!</strong>
+              <p style="font-size: 15px; color: var(--muted); font-weight: 600; line-height: 1.4; margin: 0;">
+                Você pode digitar sua dúvida abaixo ou escolher uma opção rápida:
+              </p>
             </div>
           </div>
+
         </div>
 
         <div class="gigi-quick-replies" id="gigiOptions" style="margin-top:15px;">

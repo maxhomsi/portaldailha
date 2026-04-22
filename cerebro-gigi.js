@@ -1,6 +1,6 @@
 /* =========================================================
    CÉREBRO DA GIGI - BASE DE CONHECIMENTO (ILHA DA GIGÓIA)
-   Versão: Super Completa + Gatilhos de WhatsApp
+   Versão: Super Completa + Gatilhos de WhatsApp + Links Internos
    ========================================================= */
 
 const GIGI_BRAIN = [
@@ -31,7 +31,7 @@ const GIGI_BRAIN = [
     reply: "Por nada! Fico muito feliz em ajudar. Se precisar de mais alguma dica, quiser saber de algum restaurante ou agendar um passeio, é só me chamar. Boa diversão na Ilha! 🌴"
   },
   {
-    keywords: ["quem e voce", "robo", "ia", "inteligencia", "bot", "assistente", "vc e real"],
+    keywords: ["quem e voce", "robo", "ia", "humano", "inteligencia", "bot", "assistente", "vc e real"],
     reply: "Eu sou a Gigi, a mascote e assistente virtual do Portal Ilha da Gigóia! 🕊️ Fui programada para conhecer cada cantinho daqui. Se eu não souber responder algo, te passo para a nossa equipe humana no WhatsApp, combinado?"
   },
 
@@ -40,27 +40,27 @@ const GIGI_BRAIN = [
   // ==========================================
   {
     keywords: ["dinheiro", "cartao", "pix", "caixa eletronico", "banco", "pagamento", "pagar"],
-    reply: "A grande maioria dos restaurantes, bares e pousadas da ilha aceita PIX e Cartão de Crédito/Débito! 💳 Porém, é sempre bom ter um trocadinho em dinheiro vivo para pagar a travessia das chalanas. Não temos caixa eletrônico dentro da ilha."
+    reply: "A grande maioria dos estabelecimentos aceita PIX e Cartão! 💳 Porém, é sempre bom ter um trocadinho para a travessia das chalanas. Não temos caixa eletrônico dentro da ilha."
   },
   {
     keywords: ["mosquito", "repelente", "borrachudo", "inseto", "pernilongo"],
-    reply: "Dica de ouro do Capi: Como estamos cercados por água e muita natureza viva, especialmente no final da tarde, é super recomendável trazer um repelente! 🦟 Assim você curte o pôr do sol sem preocupações."
+    reply: "Dica de ouro: Como estamos cercados por natureza, especialmente no final da tarde, é super recomendável trazer um repelente! 🦟 Assim você curte o pôr do sol sem preocupações."
   },
   {
-    keywords: ["acessibilidade", "cadeirante", "idoso", "cadeira de rodas", "dificuldade de locomoção", "locomocao"],
-    reply: "A ilha tem um charme rústico, com ruelas estreitas e caminhos de paralelepípedo ou terra. 🧑‍🦽 Acessibilidade total é um desafio. Se houver cadeirantes ou pessoas com dificuldade de locomoção, recomendamos ir de barco direto para o deck do restaurante escolhido."
+    keywords: ["acessibilidade", "cadeirante", "idoso", "cadeira de rodas", "dificuldade de locomocao", "locomocao"],
+    reply: "A ilha tem um charme rústico com ruelas estreitas. Para melhor acessibilidade, recomendamos ir de barco direto para o deck de locais como o <a href='restaurante-laguna.html'>Laguna</a> ou <a href='bar-kauai.html'>Kauai</a>."
   },
   {
     keywords: ["farmacia", "remedio", "hospital", "posto de saude", "emergencia", "medico"],
-    reply: "Não temos farmácias grandes ou hospitais dentro da ilha. 🏥 Mas não se preocupe: logo ali, na saída do metrô Jardim Oceânico e na Av. Armando Lombardi (a 5 minutinhos de barco), você encontra farmácias 24h e clínicas."
+    reply: "Não temos farmácias grandes dentro da ilha. 🏥 Mas logo na Av. Armando Lombardi (a 5 min de barco), você encontra farmácias 24h e clínicas."
   },
   {
     keywords: ["historia", "origem", "nome gigoia", "antigamente", "cultura", "antigo"],
-    reply: "A Gigóia começou como uma pacata vila de pescadores e foi crescendo sem perder o charme! 📜 O nome 'Gigóia' vem de uma planta aquática (aguapé) que era muito comum na lagoa. Dê uma olhada na nossa página 'A Ilha' para ler a história completa!"
+    reply: "A Gigóia começou como uma pacata vila de pescadores! 📜 Você pode ler tudo sobre nossa trajetória na página <a href='a-ilha.html'>A Ilha</a>."
   },
   {
     keywords: ["clima", "tempo", "chove", "melhor epoca", "quando ir", "verao", "inverno"],
-    reply: "A Gigóia é linda o ano todo! ☀️ No verão, os dias longos são ótimos para barcos e bares animados. No outono e inverno, o clima ameno deixa os passeios mais confortáveis e tranquilos. Qualquer época é época!"
+    reply: "A Gigóia é linda o ano todo! ☀️ No verão os dias são longos para barcos, e no inverno o clima é ameno para caminhar. Confira mais em <a href='melhor-epoca.html'>Melhor Época para Visitar</a>."
   },
 
   // ==========================================
@@ -68,23 +68,23 @@ const GIGI_BRAIN = [
   // ==========================================
   {
     keywords: ["como chegar", "onde fica", "localizacao", "endereco", "chegar", "ir", "metro", "jardim oceanico"],
-    reply: "Chegar aqui é super fácil! 📍 A melhor opção é ir de Metrô e saltar na estação Jardim Oceânico (Saída Lagoa). Você caminhará menos de 5 minutos até os decks principais para pegar o barco."
+    reply: "Chegar aqui é super fácil! 📍 Veja o passo a passo completo, incluindo mapas e dicas de transporte, na nossa página <a href='como-chegar.html'>Como Chegar</a>."
   },
   {
     keywords: ["carro", "estacionamento", "estacionar", "vaga", "parar o carro", "dirigir", "uber"],
-    reply: "A ilha não tem carros, é um oásis exclusivo para pedestres! 🚫🚗 Se vier de carro, coloque no GPS: Av. Armando Lombardi, 350. Você pode deixar o carro em um dos estacionamentos particulares perto dos decks de travessia."
+    reply: "A ilha não tem carros! 🚫🚗 Se vier de carro, recomendamos os estacionamentos particulares na Av. Armando Lombardi, 350. Veja detalhes em <a href='como-chegar.html'>Como Chegar</a>."
   },
   {
     keywords: ["barco", "balsa", "chalana", "travessia", "barquinho", "valor do barco", "preco do barco", "horario barco", "madrugada"],
-    reply: "As chalanas (barcos-táxi) funcionam 24 horas por dia, 7 dias por semana! 🚤 O valor da travessia comum varia entre R$ 2,00 e R$ 5,00 por pessoa. É só pedir pro barqueiro te deixar no deck do local que você deseja."
+    reply: "As chalanas funcionam 24h! 🚤 O valor varia entre R$ 2,00 e R$ 5,00. Saiba mais detalhes de horários e decks em <a href='como-chegar.html'>Como Chegar</a>."
   },
   {
-    keywords: ["pet", "cachorro", "gato", "animal", "pets", "pet friendly", "cão", "cao"],
-    reply: "Sim! A Ilha da Gigóia é super Pet Friendly 🐾. A maioria dos barqueiros aceita pets, assim como diversos restaurantes ao ar livre. Para hospedagem, casas como a 'Casa Venti' e 'Casa da Estátua' aceitam pets sob consulta. Só não esqueça a coleira e de recolher a sujeira!"
+    keywords: ["pet", "cachorro", "gato", "animal", "pets", "pet friendly", "cao"],
+    reply: "Sim! Somos Pet Friendly 🐾. Casas como a <a href='casa-venti.html'>Casa Venti</a> aceitam pets. Confira mais dicas de convivência em <a href='boas-praticas.html'>Boas Práticas</a>."
   },
   {
     keywords: ["lixo", "barulho", "regras", "boas praticas", "som alto", "pode fazer som", "musica alta"],
-    reply: "Temos regras simples de boas práticas: respeite os moradores evitando barulho excessivo (especialmente nas ruelas residenciais) e nunca, em hipótese alguma, jogue lixo nas águas da lagoa! 🗑️🌿 Ajude a preservar nosso paraíso."
+    reply: "Ajude-nos a preservar nosso paraíso! 🗑️🌿 Conheça as regrinhas essenciais de silêncio e lixo na página <a href='boas-praticas.html'>Boas Práticas</a>."
   },
 
   // ==========================================
@@ -92,29 +92,29 @@ const GIGI_BRAIN = [
   // ==========================================
   {
     keywords: ["passeio", "tour", "roteiro", "barco", "fazer o que", "o que fazer", "passear"],
-    reply: "Os passeios de barco são a alma da ilha! 🚤 Temos: 1) Pantanal Carioca; 2) Ilhas Tijucas (mergulho); 3) Praia da Reserva; 4) Jet Ski. Se quiser reservar algum, clique no botão do WhatsApp!",
+    reply: "Os passeios de barco são a alma da ilha! 🚤 Temos o <a href='pantanal-carioca.html'>Pantanal Carioca</a> e as <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>. Veja todas as opções em <a href='passeios-rotas.html'>Passeios & Rotas</a>.",
     showWhatsapp: true
   },
   {
     keywords: ["pantanal", "jacare", "capivara", "animais", "natureza", "passaros", "bicho", "fauna", "safari"],
-    reply: "O passeio do Pantanal Carioca é incrível! 🐊 Custa em média R$ 50 por pessoa e dura 45 minutos. O barco entra nos manguezais e é super comum ver jacarés, capivaras e aves soltas na natureza."
+    reply: "O passeio do <a href='pantanal-carioca.html'>Pantanal Carioca</a> é incrível para ver jacarés e capivaras! 🐊 Dura 45 min e custa em média R$ 50 por pessoa."
   },
   {
     keywords: ["tijucas", "ilhas tijucas", "mar", "mergulho", "mergulhar", "tartaruga", "caribe carioca", "ilha das tijucas"],
-    reply: "As Ilhas Tijucas são nosso 'Caribe Carioca'! 🤿 O passeio custa em média R$ 150 por pessoa e dura umas 4 horas. O barco vai pro mar aberto para você mergulhar em águas cristalinas. (Depende das condições do mar)."
+    reply: "As <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> são o nosso 'Caribe Carioca'! 🤿 Perfeito para mergulhar e ver tartarugas em águas cristalinas."
   },
   {
     keywords: ["reserva", "praia da reserva", "praia", "marapendi", "canal"],
-    reply: "Temos um passeio de barco maravilhoso até a Praia da Reserva! 🏝️ São 2 horas de navegação pelos canais (aprox. R$ 120 por pessoa) com parada para você curtir um banho de mar."
+    reply: "Temos um passeio maravilhoso de barco até a <a href='reserva.html'>Praia da Reserva</a>! 🏝️ São 2 horas de navegação com parada para banho de mar."
   },
   {
     keywords: ["jet ski", "jetski", "jet-ski", "adrenalina", "pilotar", "moto aquatica"],
-    reply: "Se você curte adrenalina, o aluguel de Jet Ski é perfeito! 🚀 Você pilota pela lagoa da Barra. Temos opções de 15 min, 30 min ou 1 hora. Clique abaixo para consultar a disponibilidade no WhatsApp!",
+    reply: "Curte adrenalina? 🚀 Veja os valores para aluguel de Jet Ski na nossa página de <a href='jet-ski.html'>Jet Ski</a> ou chame no WhatsApp!",
     showWhatsapp: true
   },
   {
     keywords: ["pacote", "combo", "pacotes especiais", "romantico", "vip", "experiencia completa", "roteiro perfeito"],
-    reply: "Quer facilidade? Temos pacotes fechados! 🥰 Pode ser o 'Pacote Romântico', o 'Pacote Família', ou a 'Experiência Completa'. Clique no botão do WhatsApp para eu orçar o seu roteiro perfeito!",
+    reply: "Quer facilidade? Temos a <a href='experiencia-completa.html'>Experiência Completa</a> e diversos <a href='pacotes-especiais.html'>Pacotes Especiais</a> 🥰. Clique no botão abaixo para orçarmos!",
     showWhatsapp: true
   },
 
@@ -123,71 +123,71 @@ const GIGI_BRAIN = [
   // ==========================================
   {
     keywords: ["frutos do mar", "peixe", "camarao", "moqueca", "lagosta", "ceviche"],
-    reply: "Para frutos do mar, a Ilha é imbatível! 🦐 Experimente o Ocyá (Guia Michelin), o Laguna (o mais antigo da ilha), a moqueca do Cais Bar, o Camarão da Barra, o Salomé al Mare ou o Deck Bar."
+    reply: "Para frutos do mar, experimente o <a href='restaurante-ocya.html'>Ocyá</a>, o <a href='restaurante-laguna.html'>Laguna</a> ou a moqueca do <a href='restaurante-cais-bar.html'>Cais Bar</a>. Veja a lista completa em <a href='restaurantes.html'>Restaurantes</a>."
   },
   {
     keywords: ["ocya", "michelin", "geronimo", "sofisticado", "chique", "luxo", "alta gastronomia"],
-    reply: "O Ocyá é pura alta gastronomia! 🐟 Comandado pelo chef Gerônimo Athiê e reconhecido pelo Guia Michelin, eles usam técnicas de maturação de peixes e preparos na brasa. O ambiente é lindo e super disputado!"
+    reply: "O <a href='restaurante-ocya.html'>Ocyá</a> é reconhecido pelo Guia Michelin e comandado pelo chef Gerônimo Athiê. É pura alta gastronomia! 🐟"
   },
   {
     keywords: ["laguna", "pedra da gavea", "primeiro restaurante", "antigo", "tradicional"],
-    reply: "O Restaurante Laguna é o pioneiro da ilha (desde 2002)! Tem um clima rústico sofisticado, vista linda pra Pedra da Gávea e o pastel de camarão deles é famoso."
+    reply: "O <a href='restaurante-laguna.html'>Restaurante Laguna</a> é o pioneiro da ilha! Rústico e sofisticado com vista para a Pedra da Gávea."
   },
   {
     keywords: ["deck", "guarda chuva", "guarda-chuva", "deck bar", "camarao no abacaxi"],
-    reply: "O Deck Bar é um clássico! Famoso pelos guarda-chuvas coloridos no teto, música ao vivo e pelo prato assinatura deles: o Camarão no Abacaxi. É um point vibrante e excelente pra tirar fotos. 🍍"
+    reply: "O <a href='restaurante-deck-bar.html'>Deck Bar</a> é famoso pelos guarda-chuvas coloridos e pelo Camarão no Abacaxi! 🍍"
   },
   {
     keywords: ["cais bar", "cais", "melhor moqueca", "rodizio de petiscos"],
-    reply: "O Cais Bar é pura tradição caiçara! 🍲 O destaque da casa é a Moqueca de Peixe farta. Eles também fazem muito sucesso com o Rodízio de Petiscos (com bebida liberada!)."
+    reply: "O <a href='restaurante-cais-bar.html'>Cais Bar</a> tem a moqueca mais tradicional da região! 🍲 Confira também o rodízio de petiscos."
   },
   {
     keywords: ["camarao da barra", "especializado em camarao"],
-    reply: "O Camarão da Barra é super moderno! 🍤 Como o nome diz, eles são totalmente especializados em camarão, com pratos contemporâneos e uma vista incrível da Barra da Tijuca."
+    reply: "O <a href='restaurante-camarao.html'>Camarão da Barra</a> é especializado em diferentes preparos contemporâneos de camarão. 🍤"
   },
   {
     keywords: ["salome", "salomé", "salome al mare", "tabua de frutos do mar"],
-    reply: "O Salomé al Mare fica na Ilha Primeira! Tem um ambiente muito acolhedor. O pastel de camarão é um dos melhores da ilha e a Tábua de Frutos do Mar é gigante, perfeita pra dividir. 🐚"
+    reply: "O <a href='restaurante-salome.html'>Salomé al Mare</a> fica na Ilha Primeira e tem tábuas de mariscos gigantes! 🐚"
   },
   {
-    keywords: ["venne", "mediterranea", "mediterrâneo", "elegante"],
-    reply: "O Venne Gastronomia é maravilhoso para ocasiões especiais. 🍷 Eles servem culinária mediterrânea com ingredientes da estação e a apresentação dos pratos é impecável. O ambiente é super refinado."
+    keywords: ["venne", "mediterranea", "mediterraneo", "elegante"],
+    reply: "O <a href='restaurante-venne.html'>Venne Gastronomia</a> oferece culinária mediterrânea refinada e autorais impecáveis. 🍷"
   },
   {
     keywords: ["maracuja", "maracujá", "maracuja da ilha", "camarao empanado"],
-    reply: "O Maracujá da Ilha fica na Ilha Primeira e tem um dos melhores decks para ver o pôr do sol! 🌅 A dica lá é pedir o Camarão Empanado ou o Ceviche Tradicional com chips de aipim."
+    reply: "O <a href='restaurante-maracuja.html'>Maracujá da Ilha</a> tem um dos melhores decks para ver o pôr do sol! 🌅"
   },
   {
     keywords: ["burger", "hamburguer", "sanduiche", "lanche", "parada burger", "fome"],
-    reply: "Quer um lanche de respeito? O Parada Burger é parada obrigatória! 🍔 Eles têm hambúrgueres artesanais incríveis em um clima sem formalidade, ideal para ir com os amigos."
+    reply: "Quer um hambúrguer artesanal? O <a href='parada-burger.html'>Parada Burger</a> é o point certo! 🍔"
   },
   {
     keywords: ["pizza", "pizzaria", "massa", "ilha gourmet"],
-    reply: "Falou em Pizza e lanches, falou no Ilha Gourmet! 🍕 Fica num espaço super versátil e casual. A comida é saborosa e descomplicada, ótimo pra matar a fome rápido."
+    reply: "Para pizzas e massas, recomendo o <a href='ilha-gourmet.html'>Ilha Gourmet</a>! Casual e muito saboroso. 🍕"
   },
   {
     keywords: ["carne", "frango", "boteco raiz", "elson", "barato", "simples", "comida di buteco"],
-    reply: "Comida de boteco autêntica é no Bar do Elson! 🍗 O ambiente é super simples, passa jogo de futebol e eles servem o melhor e mais famoso Frango Assado da Ilha da Gigóia."
+    reply: "Comida raiz é no <a href='bar-elson.html'>Bar do Elson</a>! 🍗 Não deixe de provar o famoso frango assado."
   },
   {
     keywords: ["cafe", "cafeteria", "cafe da manha", "bolo", "tapioca", "cantinho do cafe", "poesia"],
-    reply: "Para o café da manhã ou da tarde, temos duas opções charmosas: o 'Café da Poesia' (que mistura arte e cafés especiais) e o 'Cantinho do Café' (ótimo para tapiocas, bolos caseiros e vitaminas). ☕"
+    reply: "Comece o dia no <a href='cafe-poesia.html'>Café da Poesia</a> ou no <a href='cantinho-cafe.html'>Cantinho do Café</a>. Veja mais em <a href='cafe-lanches.html'>Cafés & Lanches</a>. ☕"
   },
   {
     keywords: ["joana", "bar da joana", "comida caseira", "pastel", "caldinho"],
-    reply: "O Bar da Joana é o boteco mais acolhedor daqui! 🍳 O atendimento é familiar, a cerveja é gelada e os petiscos (como pastéis e caldinhos) têm aquele tempero caseiro maravilhoso."
+    reply: "O <a href='bar-joana.html'>Bar da Joana</a> tem aquele clima de vila e petiscos caseiros deliciosos. 🍳"
   },
   {
     keywords: ["crianca", "kids", "filhos", "familia", "kauai", "ilha do ipe"],
-    reply: "Se vier com a família, o Kauai Gastrolounge é a melhor escolha! 🌴 Fica na Ilha do Ipê, tem uma estrutura enorme integrada à natureza, estilo tropical, e o principal: Área Kids para a criançada!"
+    reply: "O <a href='bar-kauai.html'>Kauai Gastrolounge</a> tem uma Área Kids incrível para a criançada brincar! 🌴"
   },
   {
     keywords: ["oasis", "lounge", "descontraido", "vibrante"],
-    reply: "O Oásis Gastrolounge é puro estilo! 🍸 Funciona como restaurante de dia para almoços relaxantes e vira um lounge vibrante com música e drinks elaborados durante a noite."
+    reply: "O <a href='oasis.html'>Oásis Gastrolounge</a> vira um lounge vibrante com música e drinks à noite. 🍸"
   },
   {
     keywords: ["kai", "bar kai", "modernidade", "jovem"],
-    reply: "O Bar Kai é a definição de modernidade à beira d'água! 🍹 Tem drinks coloridos, uma vibe muito jovem e animada, ideal para ir com os amigos curtir a tarde ou esticar até a noite."
+    reply: "O <a href='bar-kai.html'>Bar Kai</a> é ponto de encontro jovem com drinks coloridos à beira d'água. 🍹"
   },
 
   // ==========================================
@@ -195,19 +195,19 @@ const GIGI_BRAIN = [
   // ==========================================
   {
     keywords: ["bar", "bares", "beber", "cerveja", "chopp", "caipirinha", "drinks", "bebida"],
-    reply: "A Gigóia é cheia de bares incríveis! 🍻 Você pode conhecer o Deck Bar, o Bar Caiçara, o Boteco da Capivara, o AK Bar, o Kai ou o Briza da Gigóia. Todos têm cerveja gelada e vista para a lagoa."
+    reply: "A Gigóia é boêmia! 🍻 Conheça o <a href='bares-drinks.html'>Bares & Drinks</a> para escolher entre o <a href='bar-capivara.html'>Boteco da Capivara</a> ou o <a href='bar-briza.html'>Briza</a>."
   },
   {
     keywords: ["por do sol", "fim de tarde", "visual", "ak bar", "caicara", "capivara", "pordosol"],
-    reply: "O pôr do sol na lagoa é um espetáculo! 🌅 Lugares perfeitos para assistir com um drink: Boteco da Capivara (vista da lagoa), Bar Caiçara (que também tem palco cultural), o Deck Bar e o AK Bar."
+    reply: "Pôr do sol inesquecível? 🌅 Recomendo o <a href='bar-capivara.html'>Boteco da Capivara</a> ou o <a href='bar-caicaras.html'>Bar Caiçaras</a>."
   },
   {
     keywords: ["samba", "pagode", "musica ao vivo", "tocar", "briza", "jazz", "banda"],
-    reply: "Gosta de um sambinha ou música ao vivo? 🎵 O Briza da Gigóia e o Bar Caiçara são famosos pelas rodas de samba aos finais de semana. Confere a 'Agenda Cultural' do nosso portal!"
+    reply: "Música ao vivo? 🎵 Confira a <a href='agenda-cultural.html'>Agenda Cultural</a> para ver shows no <a href='bar-briza.html'>Briza da Gigóia</a>."
   },
   {
     keywords: ["saideira", "tarde da noite", "madrugada", "aberto ate tarde", "bar do kai"],
-    reply: "A galera que gosta de esticar a noite vai para o Bar do Kai! 🌙 É conhecido como o ponto de encontro oficial da saideira da ilha. Clima de boteco carioca e pratos executivos."
+    reply: "A saideira oficial é no <a href='bar-kai.html'>Bar do Kai</a>! 🌙 Aberto até tarde com cerveja trincando."
   },
 
   // ==========================================
@@ -215,41 +215,41 @@ const GIGI_BRAIN = [
   // ==========================================
   {
     keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "pernoite", "onde dormir"],
-    reply: "Dormir aqui é uma paz! 🛏️ Temos pousadas clássicas (Pousada Barra da Tijuca, Marísis, Veneza Carioca) e imóveis de temporada (Casa Venti, Casa Goiá, Casa da Estátua, Lux 48). Se quiser reservar alguma, é só chamar no WhatsApp!",
+    reply: "Dormir aqui é uma paz! 🛏️ Veja opções em <a href='hospedagem.html'>Hospedagem</a>, como a <a href='pousada-marisis.html'>Marísis</a> ou <a href='veneza-carioca.html'>Veneza Carioca</a>.",
     showWhatsapp: true
   },
   {
     keywords: ["pousada barra da tijuca", "mais perto do metro", "melhor localizacao"],
-    reply: "A Pousada Barra da Tijuca é tradicionalíssima e tem uma localização estratégica: fica a poucos passos dos principais restaurantes e super perto do ponto de travessia para o continente e metrô. 🌴"
+    reply: "A <a href='pousada-barra.html'>Pousada Barra da Tijuca</a> é super tradicional e estratégica perto do metrô. 🌴"
   },
   {
     keywords: ["marisis", "limpeza", "silencio", "tranquila"],
-    reply: "A Pousada Marísis é muito elogiada pelos hóspedes! 🌺 É pequena, familiar, super silenciosa e a limpeza é impecável. O refúgio seguro perfeito para quem quer fugir do barulho."
+    reply: "A <a href='pousada-marisis.html'>Pousada Marísis</a> é o refúgio perfeito para quem busca silêncio e limpeza impecável. 🌺"
   },
   {
     keywords: ["veneza carioca", "boutique", "intimista"],
-    reply: "O Veneza Carioca é um Hotel Boutique na Ilha Primeira! ✨ A decoração é super exclusiva e o ambiente é muito romântico e intimista, perfeito para casais."
+    reply: "O <a href='veneza-carioca.html'>Veneza Carioca</a> é um Hotel Boutique romântico e intimista na Ilha Primeira. ✨"
   },
   {
     keywords: ["airbnb", "casa inteira", "temporada", "alugar casa"],
-    reply: "Quer privacidade? Temos Airbnbs incríveis: a 'Casa Venti' e 'Casa Goiá' (ótimos duplex), o 'Lux 48' (moderno para casais), e a 'Casa da Estátua' (com piscina). Chama a gente no WhatsApp para ver os valores!",
+    reply: "Privacidade? Temos Airbnbs como a <a href='casa-venti.html'>Casa Venti</a> ou <a href='casa-estatua.html'>Casa da Estátua</a>. Veja em <a href='airbnb-temporada.html'>Airbnb & Temporada</a>.",
     showWhatsapp: true
   },
   {
     keywords: ["casanova", "luxuoso", "arquitetura", "retiro"],
-    reply: "A Casanova é um espetáculo à parte! ✨ É um refúgio com projeto arquitetônico único, cozinha gourmet e clima exclusivo, misturando o rústico da ilha com o luxo moderno."
+    reply: "A <a href='casanova.html'>Casanova</a> é um retiro luxuoso com projeto arquitetônico único de frente para a lagoa. ✨"
   },
   {
     keywords: ["casa da estatua", "estatua", "piscina", "grupo grande", "16 pessoas"],
-    reply: "Se você vem com um grupo grande, a Casa da Estátua é a escolha perfeita! 🏊‍♂️ É uma casa inteira, com piscina privativa, muito espaço e acomoda confortavelmente até 16 pessoas."
+    reply: "A <a href='casa-estatua.html'>Casa da Estátua</a> tem piscina privativa e acomoda até 16 pessoas! 🏊‍♂️"
   },
   {
     keywords: ["lux 48", "lux", "casal moderno", "estudio"],
-    reply: "O Lux 48 é um espaço conceito! É um estúdio super moderno, com design arrojado, muito procurado por casais que buscam uma estadia com estilo e conforto na ilha."
+    reply: "O <a href='lux-48.html'>Lux 48</a> é um estúdio conceito super moderno, ideal para casais. 🖤"
   },
   {
     keywords: ["casa goia", "goia", "duplex"],
-    reply: "A Casa Goiá é um duplex maravilhoso para temporada! Ótimo para famílias que querem se sentir moradores da ilha por alguns dias, com todo o conforto de uma casa completa."
+    reply: "A <a href='casa-goia.html'>Casa Goiá</a> é um duplex maravilhoso para quem quer viver como um morador local. 🏡"
   },
 
   // ==========================================
@@ -257,20 +257,20 @@ const GIGI_BRAIN = [
   // ==========================================
   {
     keywords: ["casamento", "festa", "evento", "confraternizacao", "15 anos", "alugar espaco", "eventos"],
-    reply: "A Ilha da Gigóia é um cenário dos sonhos para eventos! 🎉 Temos o 'Solar das Palmeiras Rio' e o 'Espaço Gaivota'. Chame a nossa equipe no botão abaixo para orçarmos o seu evento!",
+    reply: "Cenário dos sonhos! 🎉 Temos o <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a> e o <a href='gaivota.html'>Espaço Gaivota</a>. Peça seu orçamento abaixo!",
     showWhatsapp: true
   },
   {
     keywords: ["solar das palmeiras", "casarao", "colonial", "casar na ilha"],
-    reply: "O Solar das Palmeiras Rio é um casarão colonial belíssimo à beira da lagoa! 🏛️ Tem um gramado perfeito para cerimônias ao ar livre e é um dos locais mais disputados para casamentos no Rio."
+    reply: "O <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a> é um casarão colonial belíssimo para casamentos ao ar livre. 🏛️"
   },
   {
     keywords: ["gaivota", "espaco gaivota", "ilha primeira"],
-    reply: "O Espaço Gaivota fica na Ilha Primeira e tem um clima super charmoso e intimista para festas e confraternizações. A vista para a lagoa é um diferencial e tanto! 🥂"
+    reply: "O <a href='gaivota.html'>Espaço Gaivota</a> oferece um clima intimista para confraternizações elegantes. 🥂"
   },
   {
     keywords: ["agenda", "programacao", "hoje", "fim de semana", "o que ta rolando", "festival", "show", "ingresso"],
-    reply: "Nossa ilha é viva e cheia de cultura! Tem sempre festival gastronômico, shows de jazz e rodas de samba acontecendo. Acesse a aba 'Agenda Cultural' no nosso menu principal para ver a programação! 📅"
+    reply: "Confira todos os shows e festivais do mês na nossa <a href='agenda-cultural.html'>Agenda Cultural</a>! 📅"
   }
 
 ];
