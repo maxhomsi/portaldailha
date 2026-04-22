@@ -372,7 +372,9 @@ window.sendGigiFreeMsg = function() {
   if (typeof GIGI_BRAIN !== 'undefined') {
     // Varre o cérebro procurando combinações
     for (let rule of GIGI_BRAIN) {
-      if (rule.keywords.some(kw => normalized.includes(kw))) {
+      // CORREÇÃO: Usamos Regex (\b) para buscar a palavra exata e isolada!
+      // Isso impede que "opcao" ative a keyword "cao", por exemplo.
+      if (rule.keywords.some(kw => new RegExp("\\b" + kw + "\\b").test(normalized))) {
         botReply = rule.reply;
         // Se a regra tiver o showWhatsapp como true, mostra as opções
         showOptions = rule.showWhatsapp === true; 

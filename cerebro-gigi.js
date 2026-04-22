@@ -1,6 +1,6 @@
 /* =========================================================
    CÉREBRO DA GIGI - BASE DE CONHECIMENTO (ILHA DA GIGÓIA)
-   Versão: Super Completa + Gatilhos de WhatsApp + Links Internos
+   Versão: Super Completa + Gatilhos + Correção de Falsos Positivos
    ========================================================= */
 
 const GIGI_BRAIN = [
@@ -20,7 +20,27 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 2. SAUDAÇÕES E INTERAÇÕES BÁSICAS
+  // 2. PERGUNTAS SOBRE SUSHI E ANIMAIS IRREAIs (CORREÇÕES DE CONTEXTO)
+  // ==========================================
+  {
+    keywords: ["sushi", "japones", "japa", "sashimi", "temaki", "yakisoba", "rodizio de sushi"],
+    reply: "Atualmente não temos restaurantes especializados em culinária japonesa/sushi na Ilha da Gigóia. 🍣 Mas se você gosta de peixe fresco, vai amar a alta gastronomia de frutos do mar do <a href='restaurante-ocya.html'>Ocyá</a> ou do <a href='restaurante-laguna.html'>Laguna</a>!"
+  },
+  {
+    keywords: ["baleia", "tubarao", "golfinho", "pinguim", "leao marinho"],
+    reply: "Hahaha! Na nossa lagoa não tem baleia nem tubarão! 🐋 Aqui a água é abrigada. As grandes estrelas da nossa fauna são os jacarés-de-papo-amarelo, as capivaras e as garças."
+  },
+  {
+    keywords: ["nadar na lagoa", "banho na lagoa", "mergulhar na lagoa", "tomar banho", "agua limpa"],
+    reply: "Não recomendamos o banho/mergulho nas águas da lagoa ao redor da ilha. 🚫 Se quiser dar um mergulho em águas cristalinas, a dica perfeita é agendar o nosso passeio para as <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>!"
+  },
+  {
+    keywords: ["praia de areia", "praia na ilha", "tem praia"],
+    reply: "A Ilha da Gigóia não tem praia de mar com ondas, nós somos cercados pela Lagoa da Tijuca! 🌴 Mas o barquinho pode te deixar em um deck que fica a apenas 5 minutinhos de caminhada da Praia da Barra."
+  },
+
+  // ==========================================
+  // 3. SAUDAÇÕES E INTERAÇÕES BÁSICAS
   // ==========================================
   {
     keywords: ["oi", "ola", "bom dia", "boa tarde", "boa noite", "tudo bem", "hey", "eae", "opa", "alo", "salve"],
@@ -31,12 +51,13 @@ const GIGI_BRAIN = [
     reply: "Por nada! Fico muito feliz em ajudar. Se precisar de mais alguma dica, quiser saber de algum restaurante ou agendar um passeio, é só me chamar. Boa diversão na Ilha! 🌴"
   },
   {
-    keywords: ["quem e voce", "robo", "ia", "humano", "inteligencia", "bot", "assistente", "vc e real"],
+    // Removido "ia" para não dar conflito com "baleia", "praia", etc.
+    keywords: ["quem e voce", "robo", "inteligencia artificial", "humano", "inteligencia", "bot", "assistente", "vc e real"],
     reply: "Eu sou a Gigi, a mascote e assistente virtual do Portal Ilha da Gigóia! 🕊️ Fui programada para conhecer cada cantinho daqui. Se eu não souber responder algo, te passo para a nossa equipe humana no WhatsApp, combinado?"
   },
 
   // ==========================================
-  // 3. DICAS PRÁTICAS, SEGURANÇA E ESTRUTURA
+  // 4. DICAS PRÁTICAS, SEGURANÇA E ESTRUTURA
   // ==========================================
   {
     keywords: ["dinheiro", "cartao", "pix", "caixa eletronico", "banco", "pagamento", "pagar"],
@@ -64,10 +85,10 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 4. LOGÍSTICA, ACESSO E REGRAS
+  // 5. LOGÍSTICA, ACESSO E REGRAS
   // ==========================================
   {
-    keywords: ["como chegar", "onde fica", "localizacao", "endereco", "chegar", "ir", "metro", "jardim oceanico"],
+    keywords: ["como chegar", "onde fica", "localizacao", "endereco", "chegar", "como ir", "metro", "jardim oceanico"],
     reply: "Chegar aqui é super fácil! 📍 Veja o passo a passo completo, incluindo mapas e dicas de transporte, na nossa página <a href='como-chegar.html'>Como Chegar</a>."
   },
   {
@@ -79,7 +100,8 @@ const GIGI_BRAIN = [
     reply: "As chalanas funcionam 24h! 🚤 O valor varia entre R$ 2,00 e R$ 5,00. Saiba mais detalhes de horários e decks em <a href='como-chegar.html'>Como Chegar</a>."
   },
   {
-    keywords: ["pet", "cachorro", "gato", "animal", "pets", "pet friendly", "cao"],
+    // Removido "cao" para não conflitar com macarrao/educacao
+    keywords: ["pet", "cachorro", "gato", "animal", "pets", "pet friendly", "caozinho", "cachorrinho"],
     reply: "Sim! Somos Pet Friendly 🐾. Casas como a <a href='casa-venti.html'>Casa Venti</a> aceitam pets. Confira mais dicas de convivência em <a href='boas-praticas.html'>Boas Práticas</a>."
   },
   {
@@ -88,10 +110,10 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 5. PASSEIOS DE BARCO E AVENTURA
+  // 6. PASSEIOS DE BARCO E AVENTURA
   // ==========================================
   {
-    keywords: ["passeio", "tour", "roteiro", "barco", "fazer o que", "o que fazer", "passear"],
+    keywords: ["passeio", "tour", "roteiro", "fazer o que", "o que fazer", "passear"],
     reply: "Os passeios de barco são a alma da ilha! 🚤 Temos o <a href='pantanal-carioca.html'>Pantanal Carioca</a> e as <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>. Veja todas as opções em <a href='passeios-rotas.html'>Passeios & Rotas</a>.",
     showWhatsapp: true
   },
@@ -100,11 +122,11 @@ const GIGI_BRAIN = [
     reply: "O passeio do <a href='pantanal-carioca.html'>Pantanal Carioca</a> é incrível para ver jacarés e capivaras! 🐊 Dura 45 min e custa em média R$ 50 por pessoa."
   },
   {
-    keywords: ["tijucas", "ilhas tijucas", "mar", "mergulho", "mergulhar", "tartaruga", "caribe carioca", "ilha das tijucas"],
+    keywords: ["tijucas", "ilhas tijucas", "mar", "mergulho", "tartaruga", "caribe carioca", "ilha das tijucas"],
     reply: "As <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> são o nosso 'Caribe Carioca'! 🤿 Perfeito para mergulhar e ver tartarugas em águas cristalinas."
   },
   {
-    keywords: ["reserva", "praia da reserva", "praia", "marapendi", "canal"],
+    keywords: ["reserva", "praia da reserva", "marapendi", "canal"],
     reply: "Temos um passeio maravilhoso de barco até a <a href='reserva.html'>Praia da Reserva</a>! 🏝️ São 2 horas de navegação com parada para banho de mar."
   },
   {
@@ -119,7 +141,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 6. GASTRONOMIA E RESTAURANTES ESPECÍFICOS
+  // 7. GASTRONOMIA E RESTAURANTES ESPECÍFICOS
   // ==========================================
   {
     keywords: ["frutos do mar", "peixe", "camarao", "moqueca", "lagosta", "ceviche"],
@@ -158,7 +180,7 @@ const GIGI_BRAIN = [
     reply: "O <a href='restaurante-maracuja.html'>Maracujá da Ilha</a> tem um dos melhores decks para ver o pôr do sol! 🌅"
   },
   {
-    keywords: ["burger", "hamburguer", "sanduiche", "lanche", "parada burger", "fome"],
+    keywords: ["burger", "hamburguer", "sanduiche", "lanche", "parada burger", "fome", "hamburgueria"],
     reply: "Quer um hambúrguer artesanal? O <a href='parada-burger.html'>Parada Burger</a> é o point certo! 🍔"
   },
   {
@@ -191,7 +213,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 7. BARES E VIDA NOTURNA
+  // 8. BARES E VIDA NOTURNA
   // ==========================================
   {
     keywords: ["bar", "bares", "beber", "cerveja", "chopp", "caipirinha", "drinks", "bebida"],
@@ -211,7 +233,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 8. HOSPEDAGEM E AIRBNBS
+  // 9. HOSPEDAGEM E AIRBNBS
   // ==========================================
   {
     keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "pernoite", "onde dormir"],
@@ -253,7 +275,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 9. EVENTOS, CASAMENTOS E AGENDA CULTURAL
+  // 10. EVENTOS, CASAMENTOS E AGENDA CULTURAL
   // ==========================================
   {
     keywords: ["casamento", "festa", "evento", "confraternizacao", "15 anos", "alugar espaco", "eventos"],
