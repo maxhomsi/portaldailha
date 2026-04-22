@@ -262,46 +262,10 @@ function mountPageCards(pageKey) {
   if (box) box.innerHTML = list.map((c,i)=>cardHtml(c,i)).join("");
 }
 
-// =======================================================
-// GIGI CHATBOT - AUTOMAÇÃO E WIDGET
-// =======================================================
 
 // =======================================================
-// GIGI CHATBOT - INTELIGÊNCIA "FAKE AI" 100% GRATUITA
+// GIGI CHATBOT - AUTOMAÇÃO E WIDGET (COM FAKE AI)
 // =======================================================
-
-// 1. O "Cérebro" da Gigi: Você pode adicionar quantas regras quiser aqui!
-const GIGI_BRAIN = [
-  {
-    keywords: ["pet", "cachorro", "gato", "animal", "pets"],
-    reply: "Sim! A Ilha da Gigóia é super Pet Friendly 🐾. A maioria dos barqueiros aceita pets nos passeios, e restaurantes ao ar livre como o Ilha Gourmet e bares adoram receber os peludos. Só lembre de mantê-los na coleira!"
-  },
-  {
-    keywords: ["comer", "restaurante", "fome", "almoco", "jantar", "comida"],
-    reply: "Opção é o que não falta por aqui! 🍤 Se quiser frutos do mar, recomendo o Cais Bar, Ocyá ou Laguna. Para um clima mais descontraído ou lanche, o Parada Burger e o Cantinho do Café são ótimos. Você prefere lanche ou refeição completa?"
-  },
-  {
-    keywords: ["pizza", "pizzaria"],
-    reply: "Falou em Pizza, falou na Ilha Gourmet! 🍕 Fica num cantinho super charmoso e a pizza é deliciosa para aquele fim de tarde."
-  },
-  {
-    keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "airbnb"],
-    reply: "Temos desde pousadas charmosas (como a Pousada Barra da Tijuca e Marísis) até casas inteiras de temporada (como a Casa Venti e Casanova). Dá uma olhadinha na nossa aba de 'Hospedagem' no menu principal! 🛏️"
-  },
-  {
-    keywords: ["estacionamento", "carro", "estacionar", "vaga"],
-    reply: "A ilha não tem carros, é um oásis exclusivo para pedestres! 🚫🚗 Se vier de carro, você precisa deixá-lo em um dos estacionamentos particulares na Av. Armando Lombardi (perto do metrô) e atravessar de barquinho."
-  },
-  {
-    keywords: ["oi", "ola", "bom dia", "boa tarde", "boa noite", "tudo bem"],
-    reply: "Olá! Tudo ótimo por aqui! 😊 Como posso te ajudar a planejar seu dia perfeito na Ilha da Gigóia?"
-  },
-  {
-    keywords: ["obrigado", "obrigada", "valeu", "show"],
-    reply: "Por nada! Se precisar de mais alguma dica ou quiser agendar um passeio, é só me chamar. Boa diversão na Ilha! 🌴"
-  }
-];
-
 function mountGigiWidget() {
   const root = document.getElementById("gigiWidgetRoot");
   if (!root) return;
@@ -349,7 +313,7 @@ function mountGigiWidget() {
       </div>
 
       <div style="padding: 12px 15px; background: #fff; border-top: 1px solid rgba(0,0,0,0.08); display: flex; gap: 8px; align-items: center;">
-        <input type="text" id="gigiFreeInput" placeholder="Pergunte algo (ex: Aceita pet?)..." style="flex: 1; padding: 12px 15px; border-radius: 20px; border: 1px solid #ddd; outline: none; font-family: inherit; font-size: 13px;" onkeypress="if(event.key === 'Enter') sendGigiFreeMsg()">
+        <input type="text" id="gigiFreeInput" placeholder="Pergunte algo..." style="flex: 1; padding: 12px 15px; border-radius: 20px; border: 1px solid #ddd; outline: none; font-family: inherit; font-size: 13px;" onkeypress="if(event.key === 'Enter') sendGigiFreeMsg()">
         <button onclick="sendGigiFreeMsg()" style="background: var(--green); color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         </button>
@@ -372,7 +336,9 @@ function mountGigiWidget() {
   });
 }
 
-// 2. Função de Digitação Livre (Inteligência)
+// =======================================================
+// LÓGICA DE DIGITAÇÃO LIVRE E INTEGRAÇÃO COM CEREBRO-GIGI
+// =======================================================
 window.sendGigiFreeMsg = function() {
   const input = document.getElementById('gigiFreeInput');
   const text = input.value.trim();
@@ -384,31 +350,37 @@ window.sendGigiFreeMsg = function() {
   
   if(optionsDiv) optionsDiv.style.display = 'none';
 
-  // Imprime pergunta do usuário
+  // Imprime a pergunta do usuário na tela
   flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--user"><div class="gigi-bubble">${text}</div></div>`);
   input.value = "";
   body.scrollTop = body.scrollHeight;
 
-  // Limpa acentos e converte para minúsculo para a IA entender melhor
+  // Limpa acentos e converte para minúsculo
   const normalized = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   
-  // Resposta padrão caso ela não saiba a resposta
-  let botReply = "Hmm, boa pergunta! 🤔 Meu sistema ainda está aprendendo sobre isso. Você pode escolher uma das opções abaixo ou chamar um humano no WhatsApp:";
+  // Resposta padrão caso a Gigi não encontre no cérebro
+  let botReply = "Hmm, boa pergunta! 🤔 Meu sistema ainda está aprendendo sobre isso. Você pode escolher uma das opções abaixo ou chamar nossa equipe no WhatsApp:";
   let showOptions = true;
 
-  // Varre o cérebro procurando combinações
-  for (let rule of GIGI_BRAIN) {
-    if (rule.keywords.some(kw => normalized.includes(kw))) {
-      botReply = rule.reply;
-      showOptions = false;
-      break;
+  // Trava de Segurança: Verifica se o arquivo cerebro-gigi.js foi carregado com sucesso
+  if (typeof GIGI_BRAIN !== 'undefined') {
+    // Varre o cérebro procurando combinações
+    for (let rule of GIGI_BRAIN) {
+      if (rule.keywords.some(kw => normalized.includes(kw))) {
+        botReply = rule.reply;
+        showOptions = false; // Como ela sabe a resposta, esconde o botão de chamar a equipe
+        break;
+      }
     }
+  } else {
+    console.warn("Aviso: O arquivo 'cerebro-gigi.js' não foi carregado. A Gigi usará apenas as opções padrão.");
   }
 
   // Responde com um leve delay (simulando "Gigi digitando...")
   setTimeout(() => {
     flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${botReply}</div></div>`);
     
+    // Se ela não souber a resposta, oferece o botão do WhatsApp
     if(showOptions) {
       flow.insertAdjacentHTML('beforeend', `
         <div class="gigi-quick-replies" style="margin-top:5px;">
@@ -420,13 +392,16 @@ window.sendGigiFreeMsg = function() {
   }, 800);
 };
 
-// 3. Função dos Botões Rápidos
+// =======================================================
+// LÓGICA DOS BOTÕES RÁPIDOS DA GIGI
+// =======================================================
 window.gigiAsk = function(questionId) {
   const body = document.getElementById('gigiChatBody');
   const flow = document.getElementById('gigiChatFlow');
   const optionsDiv = document.getElementById('gigiOptions');
   const formDiv = document.getElementById('gigiFormContainer');
 
+  // Esconde os botões quando o usuário clica
   if(optionsDiv) optionsDiv.style.display = 'none';
   if(formDiv) formDiv.style.display = 'none';
 
@@ -434,13 +409,14 @@ window.gigiAsk = function(questionId) {
   let botReply = "";
   let showForm = false;
 
+  // Respostas configuradas dos botões
   if (questionId === 'como_chegar') {
     userText = "Como chegar na Ilha?";
-    botReply = "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00.";
+    botReply = "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00. Posso te ajudar com mais alguma coisa?";
   } 
   else if (questionId === 'passeios') {
     userText = "Como funcionam os passeios?";
-    botReply = "Temos várias opções! O passeio do Pantanal Carioca dura 45 min e custa cerca de R$ 50. Já o roteiro Ilhas Tijucas leva umas 4h e custa R$ 150.";
+    botReply = "Temos várias opções! O passeio do Pantanal Carioca dura 45 min e custa cerca de R$ 50. Já o roteiro Ilhas Tijucas leva umas 4h e custa R$ 150. Quer ir pro WhatsApp agendar um horário com um barqueiro?";
   } 
   else if (questionId === 'whatsapp') {
     userText = "Falar com a equipe (WhatsApp)";
@@ -452,25 +428,41 @@ window.gigiAsk = function(questionId) {
     botReply = "Prontinho, o WhatsApp foi aberto! Se precisar de mais alguma coisa, estarei por aqui.";
   }
 
-  flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--user"><div class="gigi-bubble">${userText}</div></div>`);
+  // Imprime a pergunta do usuário na tela
+  flow.insertAdjacentHTML('beforeend', `
+    <div class="gigi-msg gigi-msg--user">
+      <div class="gigi-bubble">${userText}</div>
+    </div>
+  `);
+
   body.scrollTop = body.scrollHeight;
 
+  // Imprime a resposta da Gigi (com delay)
   setTimeout(() => {
-    flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${botReply}</div></div>`);
+    flow.insertAdjacentHTML('beforeend', `
+      <div class="gigi-msg gigi-msg--bot">
+        <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
+        <div class="gigi-bubble">${botReply}</div>
+      </div>
+    `);
+
+    // Mostra o formulário do Whatsapp OU o botão de voltar
     if (showForm) {
       formDiv.style.display = 'block';
     } else if (questionId !== 'encerrar') {
       flow.insertAdjacentHTML('beforeend', `
-        <div class="gigi-quick-replies" style="margin-top:5px;">
-          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Agendar no WhatsApp</button>
+        <div class="gigi-quick-replies" style="margin-top:10px;">
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Agendar/Falar no WhatsApp</button>
+          <button class="gigi-quick-btn" onclick="document.getElementById('gigiOptions').style.display='flex'; this.parentElement.style.display='none';">🔄 Voltar às opções</button>
         </div>
       `);
     }
+    
     body.scrollTop = body.scrollHeight;
   }, 600);
 };
 
-
+// =======================================================
 // FIM DA LÓGICA DA GIGI
 // =======================================================
 
@@ -516,229 +508,3 @@ function setupCadastroModal() {
             <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm-1.2 17.3l-4.8-4.8 1.4-1.4 3.4 3.4 7.6-7.6 1.4 1.4-9 9z"/>
           </svg>
           <h3 style="margin:0 0 10px; color:var(--text); font-weight:900; font-size:22px;">${t("modal_sucesso_title")}</h3>
-          <p style="color:var(--muted); font-size:16px; font-weight:600;">${t("modal_sucesso_sub")}</p>
-          <button class="btn" style="margin-top:20px; background:#eee; color:#333; width:100%;" onclick="closeCadastroModal()">${t("btn_fechar")}</button>
-        </div>
-
-      </div>
-    </div>
-  `;
-  
-  document.body.insertAdjacentHTML('beforeend', html);
-
-  const form = document.getElementById('ajaxCadastroForm');
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = document.getElementById('ajaxSubmitBtn');
-    btn.innerText = t("btn_enviando");
-    btn.style.opacity = "0.7";
-    btn.style.pointerEvents = "none";
-    
-    setTimeout(() => {
-      form.style.display = 'none';
-      document.getElementById('ajaxSuccess').style.display = 'block';
-    }, 1500);
-  });
-}
-
-window.openCadastroModal = function() {
-  const m = document.getElementById('cadastroModal');
-  if(!m) return;
-  m.style.display = 'flex';
-  void m.offsetWidth;
-  m.classList.add('is-active');
-};
-
-window.closeCadastroModal = function(e) {
-  const m = document.getElementById('cadastroModal');
-  if(!m) return;
-  m.classList.remove('is-active');
-  setTimeout(() => { m.style.display = 'none'; }, 300);
-};
-
-function setupLightbox() {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImage');
-  const lightboxClose = document.getElementById('lightboxClose');
-  const lightboxPrev = document.getElementById('lightboxPrev');
-  const lightboxNext = document.getElementById('lightboxNext');
-  
-  let galleryImages = [];
-  let currentIndex = 0;
-
-  if (lightbox) {
-      galleryImages = document.querySelectorAll('.gallery img');
-      
-      if (galleryImages.length > 0) {
-          const updateLightboxImage = () => {
-              if (galleryImages[currentIndex]) {
-                  lightboxImg.src = galleryImages[currentIndex].src;
-                  lightboxImg.alt = galleryImages[currentIndex].alt;
-              }
-          };
-
-          const openLightbox = (index) => {
-              currentIndex = index;
-              updateLightboxImage();
-              lightbox.classList.add('is-active');
-          };
-
-          const closeLightbox = () => {
-              lightbox.classList.remove('is-active');
-          };
-
-          const prevImage = (e) => {
-              if (e) e.stopPropagation();
-              currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-              updateLightboxImage();
-          };
-
-          const nextImage = (e) => {
-              if (e) e.stopPropagation();
-              currentIndex = (currentIndex + 1) % galleryImages.length;
-              updateLightboxImage();
-          };
-
-          galleryImages.forEach((img, index) => {
-              img.addEventListener('click', () => openLightbox(index));
-          });
-
-          if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-          if (lightboxPrev) lightboxPrev.addEventListener('click', prevImage);
-          if (lightboxNext) lightboxNext.addEventListener('click', nextImage);
-
-          lightbox.addEventListener('click', (e) => {
-              if (e.target === lightbox) {
-                  closeLightbox();
-              }
-          });
-
-          document.addEventListener('keydown', (e) => {
-              if (lightbox.classList.contains('is-active')) {
-                  if (e.key === 'Escape') closeLightbox();
-                  if (e.key === 'ArrowLeft') prevImage();
-                  if (e.key === 'ArrowRight') nextImage();
-              }
-          });
-      }
-  }
-}
-
-function setupClickableCards() {
-  const cards = document.querySelectorAll('.card');
-  
-  cards.forEach(card => {
-    const foto = card.querySelector('.card__img');
-    const link = card.querySelector('a.btn, a.btn--green, a.card__link');
-    
-    if (foto && link) {
-      foto.style.cursor = 'pointer';
-      
-      foto.addEventListener('click', () => {
-        window.location.href = link.href;
-      });
-    }
-  });
-}
-
-function setupReveal() {
-  const els = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window) || els.length === 0) { 
-    els.forEach(el => el.classList.add("is-in")); 
-    return; 
-  }
-  const io = new IntersectionObserver((entries, observer) => {
-    entries.forEach(e => { 
-      if (e.isIntersecting) { 
-        e.target.classList.add("is-in"); 
-        observer.unobserve(e.target); 
-      } 
-    });
-  }, { threshold: 0.05, rootMargin: "50px" });
-  els.forEach(el => io.observe(el));
-  setTimeout(() => { els.forEach(el => el.classList.add("is-in")); }, 150);
-}
-
-function setupHeaderScroll() {
-  const header = document.querySelector(".header");
-  if (!header) return;
-  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 6);
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive:true });
-}
-
-function setupProgress() {
-  const bar = document.getElementById("progress");
-  if (!bar) return;
-  const onScroll = () => {
-    const doc = document.documentElement;
-    const max = (doc.scrollHeight - doc.clientHeight) || 1;
-    bar.style.width = Math.min(100, Math.max(0, (window.scrollY / max) * 100)).toFixed(2) + "%";
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive:true });
-}
-
-function setupCookieBanner() {
-  // Verifica se o usuário já aceitou antes
-  if (localStorage.getItem("ilg_cookie_consent") === "1") return;
-
-  const html = `
-    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #ffffff; padding: 16px 24px; box-shadow: 0 -10px 25px rgba(0,0,0,0.1); z-index: 10000; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid var(--line);">
-      <p style="margin: 0; font-size: 14px; color: var(--text); flex: 1 1 300px; line-height: 1.5; font-weight: 600;">
-        Nós usamos cookies para melhorar sua experiência e garantir a segurança dos seus dados, em conformidade com a <strong>LGPD</strong>. Ao continuar navegando, você concorda com a nossa <a href="politica-privacidade.html" style="color: var(--green); text-decoration: underline;">Política de Privacidade</a>.
-      </p>
-      <button onclick="acceptCookies()" class="btn btn--green" style="padding: 12px 24px; font-size: 14px; flex-shrink: 0; height: auto;">
-        Entendi e Aceito
-      </button>
-    </div>
-  `;
-  
-  document.body.insertAdjacentHTML('beforeend', html);
-}
-
-window.acceptCookies = function() {
-  localStorage.setItem("ilg_cookie_consent", "1");
-  const banner = document.getElementById("cookieBanner");
-  if (banner) banner.style.display = "none";
-};
-
-// INICIALIZAÇÃO PRINCIPAL DO SITE
-(function init(){
-  setupProgress();
-  mountHeaderFooter();
-  setupCookieBanner();
-  const page = document.body.getAttribute("data-page");
-
-  if (page === "home") {
-    mountHome();
-  }
-  
-  if (page && SITE.pages[page]) {
-    mountPageCards(page);
-  }
-
-  // O Capi sempre inicializa para garantir tradução
-  if (typeof initCapiTip === 'function') {
-    initCapiTip();
-  }
-
-  mountGigiWidget();
-  setupCadastroModal(); 
-  setupLightbox(); 
-  
-  setTimeout(setupClickableCards, 100); 
-  
-  requestAnimationFrame(() => document.body.classList.add("is-ready"));
-  setupHeaderScroll();
-  setupReveal();
-
-  // O CÉREBRO DA TRADUÇÃO DINÂMICA
-  document.querySelectorAll('[data-i18n]').forEach(elemento => {
-    const chave = elemento.getAttribute('data-i18n');
-    // SOLUÇÃO: Verifica se o DICT existe antes de buscar a chave nele
-    if (typeof DICT !== 'undefined' && DICT[chave]) {
-      elemento.innerHTML = t(chave);
-    }
-  });
-})();
