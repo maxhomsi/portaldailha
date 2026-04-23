@@ -122,7 +122,6 @@ function mountHeaderFooter() {
   const header = document.getElementById("siteHeader");
   const footer = document.getElementById("siteFooter");
   
-  // SOLUÇÃO: Garante que a variável exista para não quebrar o script no HTML abaixo
   const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
   
   if (header) {
@@ -271,6 +270,13 @@ function mountGigiWidget() {
   if (!root) return;
   const isOpen = localStorage.getItem("ilg_gigi_open_v1") === "1";
 
+  // Identifica a linguagem para os botões iniciais
+  const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
+  const btn1 = lang === 'en' ? "📍 How to get there?" : lang === 'es' ? "📍 ¿Cómo llegar?" : "📍 Como chegar na Ilha?";
+  const btn2 = lang === 'en' ? "🚤 Tour Prices" : lang === 'es' ? "🚤 Precios de Paseos" : "🚤 Preços de Passeios";
+  const btn3 = lang === 'en' ? "💬 Talk on WhatsApp" : lang === 'es' ? "💬 Hablar en WhatsApp" : "💬 Quero falar no WhatsApp";
+  const placeholderInput = lang === 'en' ? "Ask something..." : lang === 'es' ? "Pregunta algo..." : "Pergunte algo...";
+
   root.innerHTML = `
     <div class="gigiFab">
       <button class="gigiFab__btn" id="gigiFabBtn" type="button" onclick="openGigiChat()">
@@ -302,9 +308,9 @@ function mountGigiWidget() {
         </div>
 
         <div class="gigi-quick-replies" id="gigiOptions" style="margin-top:15px;">
-          <button class="gigi-quick-btn" onclick="gigiAsk('como_chegar')">📍 Como chegar na Ilha?</button>
-          <button class="gigi-quick-btn" onclick="gigiAsk('passeios')">🚤 Preços de Passeios</button>
-          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Quero falar no WhatsApp</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('como_chegar')">${btn1}</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('passeios')">${btn2}</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">${btn3}</button>
         </div>
 
         <div id="gigiFormContainer" style="display:none; margin-top:15px;">
@@ -319,7 +325,7 @@ function mountGigiWidget() {
       </div>
 
       <div style="padding: 12px 15px; background: #fff; border-top: 1px solid rgba(0,0,0,0.08); display: flex; gap: 8px; align-items: center;">
-        <input type="text" id="gigiFreeInput" placeholder="Pergunte algo..." style="flex: 1; padding: 12px 15px; border-radius: 20px; border: 1px solid #ddd; outline: none; font-family: inherit; font-size: 13px;" onkeypress="if(event.key === 'Enter') sendGigiFreeMsg()">
+        <input type="text" id="gigiFreeInput" placeholder="${placeholderInput}" style="flex: 1; padding: 12px 15px; border-radius: 20px; border: 1px solid #ddd; outline: none; font-family: inherit; font-size: 13px;" onkeypress="if(event.key === 'Enter') sendGigiFreeMsg()">
         <button onclick="sendGigiFreeMsg()" style="background: var(--green); color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         </button>
@@ -361,28 +367,32 @@ window.sendGigiFreeMsg = function() {
   input.value = "";
   body.scrollTop = body.scrollHeight;
 
-  // Limpa acentos e converte para minúsculo
+  // Limpa acentos e converte para minúsculo (Fundamental para a Busca)
   const normalized = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   
-  // Resposta padrão caso a Gigi não encontre no cérebro
-  let botReply = "Hmm, boa pergunta! 🤔 Meu sistema ainda está aprendendo sobre isso. Você pode escolher uma das opções abaixo ou chamar nossa equipe no WhatsApp:";
+  // Pega o idioma atual (se não existir, usa 'pt')
+  const lang = (typeof window.currentLang !== 'undefined') ? window.currentLang : 'pt';
+
+  // Respostas padrão traduzidas caso não encontre
+  let botReply = lang === 'en' ? "Hmm, good question! 🤔 My system is still learning about this. You can choose an option below or call our team on WhatsApp:" :
+                 lang === 'es' ? "¡Hmm, buena pregunta! 🤔 Mi sistema todavía está aprendiendo sobre esto. Puedes elegir una opción abajo o llamar a nuestro equipo en WhatsApp:" :
+                 "Hmm, boa pergunta! 🤔 Meu sistema ainda está aprendendo sobre isso. Você pode escolher uma das opções abaixo ou chamar nossa equipe no WhatsApp:";
+
   let showOptions = true;
 
-  // Trava de Segurança: Verifica se o arquivo cerebro-gigi.js foi carregado com sucesso
+  // Trava de Segurança e Busca no Cérebro
   if (typeof GIGI_BRAIN !== 'undefined') {
-    // Varre o cérebro procurando combinações
     for (let rule of GIGI_BRAIN) {
-      // CORREÇÃO: Usamos Regex (\b) para buscar a palavra exata e isolada!
-      // Isso impede que "opcao" ative a keyword "cao", por exemplo.
+      // Usamos Regex (\b) para buscar a palavra exata e isolada!
       if (rule.keywords.some(kw => new RegExp("\\b" + kw + "\\b").test(normalized))) {
-        botReply = rule.reply;
-        // Se a regra tiver o showWhatsapp como true, mostra as opções
+        // CORREÇÃO DO [object Object]: Extrai a string usando a linguagem certa
+        botReply = rule.reply[lang] || rule.reply['pt'];
         showOptions = rule.showWhatsapp === true; 
         break;
       }
     }
   } else {
-    console.warn("Aviso: O arquivo 'cerebro-gigi.js' não foi carregado. A Gigi usará apenas as opções padrão.");
+    console.warn("Aviso: O arquivo 'cerebro-gigi.js' não foi carregado.");
   }
 
   // Responde com um leve delay (simulando "Gigi digitando...")
@@ -391,9 +401,13 @@ window.sendGigiFreeMsg = function() {
     
     // Se ela não souber a resposta ou se o showWhatsapp for true, oferece o botão do WhatsApp
     if(showOptions) {
+      const btnText = lang === 'en' ? "💬 Talk to Team on WhatsApp" :
+                      lang === 'es' ? "💬 Hablar con Equipo en WhatsApp" :
+                      "💬 Falar com Equipe no WhatsApp";
+
       flow.insertAdjacentHTML('beforeend', `
         <div class="gigi-quick-replies" style="margin-top:5px;">
-          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Falar com Equipe no WhatsApp</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">${btnText}</button>
         </div>
       `);
     }
@@ -414,27 +428,37 @@ window.gigiAsk = function(questionId) {
   if(optionsDiv) optionsDiv.style.display = 'none';
   if(formDiv) formDiv.style.display = 'none';
 
+  const lang = (typeof window.currentLang !== 'undefined') ? window.currentLang : 'pt';
+  
   let userText = "";
   let botReply = "";
   let showForm = false;
 
-  // Respostas configuradas dos botões
+  // Respostas configuradas dos botões com suporte multi-idioma
   if (questionId === 'como_chegar') {
-    userText = "Como chegar na Ilha?";
-    botReply = "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00. Posso te ajudar com mais alguma coisa?";
+    userText = lang === 'en' ? "How to get there?" : lang === 'es' ? "¿Cómo llegar?" : "Como chegar na Ilha?";
+    botReply = lang === 'en' ? "It's super easy! Get off at Jardim Oceânico subway station (Lagoa Exit) and walk 5 mins to the decks. Boats run 24/7 and cost around R$ 5.00." : 
+               lang === 'es' ? "¡Es súper fácil! Bájate en la estación de metro Jardim Oceânico (Salida Lagoa) y camina 5 min hasta los muelles. Los botes funcionan las 24 hrs y cuestan aprox R$ 5,00." : 
+               "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00. Posso te ajudar com mais alguma coisa?";
   } 
   else if (questionId === 'passeios') {
-    userText = "Como funcionam os passeios?";
-    botReply = "Temos várias opções! O passeio do Pantanal Carioca dura 45 min e custa cerca de R$ 50. Já o roteiro Ilhas Tijucas leva umas 4h e custa R$ 150. Quer ir pro WhatsApp agendar um horário com um barqueiro?";
+    userText = lang === 'en' ? "Tour Prices" : lang === 'es' ? "Precios de Paseos" : "Como funcionam os passeios?";
+    botReply = lang === 'en' ? "We have several options! The Pantanal Carioca tour is ~R$ 50. The Tijucas Islands tour takes 4h and costs ~R$ 150. Want to schedule on WhatsApp?" : 
+               lang === 'es' ? "¡Tenemos varias opciones! El tour Pantanal Carioca cuesta ~R$ 50. El de Islas Tijucas dura 4h y cuesta ~R$ 150. ¿Quieres programar en WhatsApp?" : 
+               "Temos várias opções! O passeio do Pantanal Carioca dura 45 min e custa cerca de R$ 50. Já o roteiro Ilhas Tijucas leva umas 4h e custa R$ 150. Quer ir pro WhatsApp agendar um horário com um barqueiro?";
   } 
   else if (questionId === 'whatsapp') {
-    userText = "Falar com a equipe (WhatsApp)";
-    botReply = "Perfeito! Preencha seus dados aqui embaixo rapidinho para eu abrir o seu WhatsApp já com a mensagem organizada:";
+    userText = lang === 'en' ? "Talk to Team (WhatsApp)" : lang === 'es' ? "Hablar con Equipo (WhatsApp)" : "Falar com a equipe (WhatsApp)";
+    botReply = lang === 'en' ? "Perfect! Fill in your details below so I can open your WhatsApp with the message organized:" : 
+               lang === 'es' ? "¡Perfecto! Rellena tus datos abajo para abrir tu WhatsApp con el mensaje organizado:" : 
+               "Perfeito! Preencha seus dados aqui embaixo rapidinho para eu abrir o seu WhatsApp já com a mensagem organizada:";
     showForm = true;
   }
   else if (questionId === 'encerrar') {
-    userText = "Mensagem Enviada!";
-    botReply = "Prontinho, o WhatsApp foi aberto! Se precisar de mais alguma coisa, estarei por aqui.";
+    userText = lang === 'en' ? "Message Sent!" : lang === 'es' ? "¡Mensaje Enviado!" : "Mensagem Enviada!";
+    botReply = lang === 'en' ? "All set! WhatsApp is open. I'll be here if you need anything else." : 
+               lang === 'es' ? "¡Listo! WhatsApp está abierto. Estaré aquí si necesitas algo más." : 
+               "Prontinho, o WhatsApp foi aberto! Se precisar de mais alguma coisa, estarei por aqui.";
   }
 
   // Imprime a pergunta do usuário na tela
@@ -459,10 +483,13 @@ window.gigiAsk = function(questionId) {
     if (showForm) {
       formDiv.style.display = 'block';
     } else if (questionId !== 'encerrar') {
+      const btnSchedule = lang === 'en' ? "💬 Schedule on WhatsApp" : lang === 'es' ? "💬 Agendar en WhatsApp" : "💬 Agendar/Falar no WhatsApp";
+      const btnBack = lang === 'en' ? "🔄 Back to options" : lang === 'es' ? "🔄 Volver a opciones" : "🔄 Voltar às opções";
+
       flow.insertAdjacentHTML('beforeend', `
         <div class="gigi-quick-replies" style="margin-top:10px;">
-          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">💬 Agendar/Falar no WhatsApp</button>
-          <button class="gigi-quick-btn" onclick="document.getElementById('gigiOptions').style.display='flex'; this.parentElement.style.display='none';">🔄 Voltar às opções</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">${btnSchedule}</button>
+          <button class="gigi-quick-btn" onclick="document.getElementById('gigiOptions').style.display='flex'; this.parentElement.style.display='none';">${btnBack}</button>
         </div>
       `);
     }
