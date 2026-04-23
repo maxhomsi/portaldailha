@@ -1,15 +1,15 @@
 /* =========================================================
    CÉREBRO DA GIGI - BASE DE CONHECIMENTO (ILHA DA GIGÓIA)
-   Versão: ULTIMATE (Multilíngue + Gatilhos + Curiosidades Históricas)
+   Versão: DEFINITIVA (Genéricos + Específicos + Multilíngue)
    ========================================================= */
 
 const GIGI_BRAIN = [
 
   // ==========================================
-  // 1. GATILHOS DIRETOS PARA O WHATSAPP (RESERVAS E HUMANO)
+  // 1. GATILHOS DIRETOS PARA O WHATSAPP
   // ==========================================
   {
-    keywords: ["falar com atendente", "humano", "pessoa", "telefone", "contato", "falar com alguem", "equipe", "atendimento", "atendente", "human", "person", "contact", "speak to someone", "team", "hablar con alguien", "equipo", "contacto"],
+    keywords: ["falar com atendente", "humano", "pessoa", "telefone", "contato", "falar com alguem", "equipe", "atendimento", "atendente", "human", "person", "contact", "speak to someone", "team", "hablar con alguien", "equipo", "contacto", "zap", "whatsapp"],
     reply: {
       pt: "Com certeza! Vou te passar direto para a nossa equipe humana. É só clicar no botão do WhatsApp logo abaixo e mandar sua mensagem!",
       en: "Sure! I'll connect you directly to our human team. Just click the WhatsApp button below and send your message!",
@@ -18,7 +18,7 @@ const GIGI_BRAIN = [
     showWhatsapp: true
   },
   {
-    keywords: ["reservar", "reserva", "agendar", "agendamento", "marcar", "orcamento", "orçamento", "preco", "preço", "valor", "comprar", "book", "reservation", "schedule", "price", "cost", "buy", "reservación", "programar", "precio", "costo", "comprar"],
+    keywords: ["reservar", "reserva", "agendar", "agendamento", "marcar", "orcamento", "orçamento", "preco", "preço", "valor", "comprar", "book", "reservation", "schedule", "price", "cost", "buy", "reservación", "programar", "precio", "costo"],
     reply: {
       pt: "Excelente! Para consultar valores exatos, disponibilidade e fazer a sua reserva, o ideal é falar direto com a nossa equipe no WhatsApp. É só clicar no botão aqui embaixo!",
       en: "Excellent! To check exact prices, availability, and make your reservation, it's best to speak directly with our team on WhatsApp. Just click the button below!",
@@ -47,7 +47,7 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["nadar na lagoa", "banho na lagoa", "mergulhar na lagoa", "tomar banho", "agua limpa", "swim", "bathe", "dive", "clean water", "nadar", "bañarse", "bucear", "agua limpia"],
+    keywords: ["nadar", "banho", "mergulhar", "agua limpa", "swim", "bathe", "dive", "clean water", "bañarse", "bucear", "agua limpia"],
     reply: {
       pt: "Antigamente a lagoa era límpida e os moradores tomavam banho, mas hoje, devido ao assoreamento e urbanização, NÃO recomendamos o banho na lagoa. 🚫 Se quiser mergulhar, agende nosso passeio para as <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>!",
       en: "In the past, the lagoon was crystal clear, but today, due to silting, we DO NOT recommend swimming in it. 🚫 For diving, book our tour to the <a href='ilhas-tijucas.html'>Tijucas Islands</a>!",
@@ -92,10 +92,40 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 4. HISTÓRIA, GEOLOGIA E CURIOSIDADES (SUPER DETALHADO)
+  // 4. PERGUNTAS GENÉRICAS (CORINGAS)
   // ==========================================
   {
-    keywords: ["historia", "origem", "formacao", "geologia", "criacao", "passado", "17 mil anos", "pedra branca", "history", "origin", "geology", "historia", "origen", "geologia", "curiosidade", "curiosidades", "fatos", "fatos curiosos", "curiosity", "curiosities", "facts"],
+    keywords: ["comer", "restaurante", "fome", "almoco", "jantar", "comida", "onde comer", "gastronomia", "alimentacao", "eat", "restaurant", "lunch", "dinner", "food", "where to eat", "donde comer", "almuerzo", "cena"],
+    reply: {
+      pt: "A Gigóia é um paraíso gastronômico! 🍤 Temos excelentes restaurantes de frutos do mar (como Ocyá e Laguna), lanches rápidos, cafés e botecos raiz. Veja nossa lista completa de locais na página <a href='restaurantes.html'>Onde Comer</a>.",
+      en: "Gigóia is a gastronomic paradise! 🍤 We have excellent seafood restaurants (like Ocyá and Laguna), quick snacks, cafes, and traditional pubs. See our full list on the <a href='restaurantes.html'>Where to Eat</a> page.",
+      es: "¡Gigóia es un paraíso gastronómico! 🍤 Tenemos excelentes restaurantes de mariscos (como Ocyá y Laguna), comida rápida, cafeterías y tabernas. Mira nuestra lista completa en la página <a href='restaurantes.html'>Dónde Comer</a>."
+    }
+  },
+  {
+    keywords: ["passeio", "passear", "tour", "roteiro", "fazer o que", "o que fazer", "atividade", "turismo", "what to do", "excursion", "que hacer", "paseo", "actividad"],
+    reply: {
+      pt: "Os passeios de barco são a alma da ilha! 🚤 Recomendamos muito o tour pelo <a href='pantanal-carioca.html'>Pantanal Carioca</a> (para ver a natureza) ou o mergulho nas <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>. Veja todas as rotas em <a href='passeios-rotas.html'>Passeios</a>.",
+      en: "Boat tours are the soul of the island! 🚤 We highly recommend the <a href='pantanal-carioca.html'>Carioca Pantanal</a> tour (to see nature) or diving in the <a href='ilhas-tijucas.html'>Tijucas Islands</a>. See all routes in <a href='passeios-rotas.html'>Tours</a>.",
+      es: "¡Los paseos en bote son el alma de la isla! 🚤 Recomendamos mucho el tour por el <a href='pantanal-carioca.html'>Pantanal Carioca</a> o bucear en las <a href='ilhas-tijucas.html'>Islas Tijucas</a>. Ve todas las rutas en <a href='passeios-rotas.html'>Paseos</a>."
+    },
+    showWhatsapp: true
+  },
+  {
+    keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "pernoite", "onde dormir", "onde ficar", "sleep", "inn", "accommodation", "stay", "where to sleep", "posada", "alojamiento", "donde dormir"],
+    reply: {
+      pt: "Dormir aqui é uma paz! 🛏️ Temos pousadas charmosas (como a <a href='pousada-barra.html'>Barra</a> e a <a href='pousada-marisis.html'>Marísis</a>), além de casas de temporada incríveis no Airbnb. Acesse a página <a href='hospedagem.html'>Hospedagem</a> para escolher a sua.",
+      en: "Sleeping here is peaceful! 🛏️ We have charming inns (like <a href='pousada-barra.html'>Barra</a> and <a href='pousada-marisis.html'>Marísis</a>), plus amazing Airbnb vacation homes. Visit the <a href='hospedagem.html'>Accommodation</a> page to choose yours.",
+      es: "¡Dormir aquí es pura paz! 🛏️ Tenemos posadas encantadoras (como <a href='pousada-barra.html'>Barra</a> y <a href='pousada-marisis.html'>Marísis</a>), además de increíbles casas Airbnb. Visita la página de <a href='hospedagem.html'>Alojamiento</a>."
+    },
+    showWhatsapp: true
+  },
+
+  // ==========================================
+  // 5. HISTÓRIA, GEOLOGIA E CURIOSIDADES
+  // ==========================================
+  {
+    keywords: ["historia", "origem", "formacao", "geologia", "criacao", "passado", "17 mil anos", "pedra branca", "history", "origin", "geology", "historia", "origen", "geologia", "curiosidade", "fatos", "curiosity", "facts"],
     reply: {
       pt: "A história é fascinante! 📜 Geólogos dizem que há 17 mil anos o nível do mar era 70 metros mais baixo e batia no maciço da Pedra Branca. A erosão e o assoreamento fecharam a passagem, formando a praia da Barra, as lagoas e o nosso arquipélago.",
       en: "The history is fascinating! 📜 Geologists say 17,000 years ago, the sea level was 70m lower and hit the Pedra Branca mountains. Erosion formed Barra beach, the lagoons, and our archipelago.",
@@ -192,7 +222,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 5. DICAS PRÁTICAS E INFRAESTRUTURA
+  // 6. DICAS PRÁTICAS E INFRAESTRUTURA
   // ==========================================
   {
     keywords: ["dinheiro", "cartao", "pix", "caixa eletronico", "banco", "pagamento", "pagar", "money", "card", "atm", "bank", "payment", "pay", "dinero", "tarjeta", "cajero automatico", "banco", "pago"],
@@ -211,7 +241,7 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["acessibilidade", "cadeirante", "idoso", "cadeira de rodas", "dificuldade de locomocao", "locomocao", "accessibility", "wheelchair", "elderly", "mobility", "accesibilidad", "silla de ruedas", "anciano", "movilidad"],
+    keywords: ["acessibilidade", "cadeirante", "idoso", "cadeira de rodas", "dificuldade", "locomocao", "accessibility", "wheelchair", "elderly", "mobility", "accesibilidad", "silla de ruedas", "anciano", "movilidad"],
     reply: {
       pt: "A ilha tem um charme rústico com ruelas estreitas. Para melhor acessibilidade, recomendamos ir de barco direto para o deck de locais preparados como o <a href='restaurante-laguna.html'>Laguna</a> ou <a href='bar-kauai.html'>Kauai</a>.",
       en: "The island has narrow rustic streets. For better accessibility, we recommend going by boat directly to the deck of places like <a href='restaurante-laguna.html'>Laguna</a> or <a href='bar-kauai.html'>Kauai</a>.",
@@ -236,7 +266,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 6. LOGÍSTICA, ACESSO E REGRAS DA ILHA
+  // 7. LOGÍSTICA, ACESSO E REGRAS DA ILHA
   // ==========================================
   {
     keywords: ["unimed", "posto de gasolina", "entrada", "onde pegar o barco", "acesso principal", "beco", "where to catch the boat", "gas station", "donde tomar el bote", "gasolinera"],
@@ -304,7 +334,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 7. PASSEIOS, ESPORTES E NATUREZA
+  // 8. PASSEIOS, ESPORTES E NATUREZA
   // ==========================================
   {
     keywords: ["caiaque", "stand up", "sup", "esportes", "remo", "kayak", "paddle", "sports", "deportes"],
@@ -313,15 +343,6 @@ const GIGI_BRAIN = [
       en: "The lagoon is a paradise for water sports! 🚣‍♂️ Renting Kayaks and Stand-Up Paddleboards (SUP) is very common to explore the canals at a slow pace.",
       es: "¡La laguna es un paraíso para los deportes acuáticos! 🚣‍♂️ El alquiler de Kayak y Stand-Up Paddle (SUP) es muy común aquí para explorar los canales a un ritmo tranquilo."
     }
-  },
-  {
-    keywords: ["passeio", "tour", "roteiro", "fazer o que", "o que fazer", "passear", "what to do", "excursion", "que hacer", "paseo"],
-    reply: {
-      pt: "Os passeios de barco são a alma da ilha! 🚤 Temos o <a href='pantanal-carioca.html'>Pantanal Carioca</a> e as <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>. Veja todas as opções em <a href='passeios-rotas.html'>Passeios & Rotas</a>.",
-      en: "Boat tours are the soul of the island! 🚤 We have the <a href='pantanal-carioca.html'>Carioca Pantanal</a> and the <a href='ilhas-tijucas.html'>Tijucas Islands</a>. See all options at <a href='passeios-rotas.html'>Tours & Routes</a>.",
-      es: "¡Los paseos en bote son el alma de la isla! 🚤 Tenemos el <a href='pantanal-carioca.html'>Pantanal Carioca</a> y las <a href='ilhas-tijucas.html'>Islas Tijucas</a>. Ve todas las opciones en <a href='passeios-rotas.html'>Paseos y Rutas</a>."
-    },
-    showWhatsapp: true
   },
   {
     keywords: ["pantanal", "jacare", "capivara", "natureza", "passaros", "bicho", "fauna", "safari", "alligator", "capybara", "nature", "birds", "caiman", "capibara", "naturaleza", "pajaros"],
@@ -350,7 +371,7 @@ const GIGI_BRAIN = [
   {
     keywords: ["jet ski", "jetski", "jet-ski", "adrenalina", "pilotar", "moto aquatica", "adrenaline", "ride", "adrenalina", "conducir"],
     reply: {
-      pt: "Curte adrenalina? 🚀 Veja os valores para aluguel de Jet Ski na nossa página de <a href='jet-ski.html'>Jet Ski</a> ou chame no WhatsApp!",
+      pt: "Curte adrenalina? 🚀 Veja os valores para aluguel de Jet Ski na nossa página de <a href='jet-ski.html'>Jet Ski</a> ou chame no WhatsApp para agendar!",
       en: "Like adrenaline? 🚀 See the prices for Jet Ski rentals on our <a href='jet-ski.html'>Jet Ski</a> page or contact us on WhatsApp!",
       es: "¿Te gusta la adrenalina? 🚀 ¡Mira los precios de alquiler de Jet Ski en nuestra página de <a href='jet-ski.html'>Jet Ski</a> o contáctanos por WhatsApp!"
     },
@@ -367,7 +388,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 8. GASTRONOMIA E RESTAURANTES ESPECÍFICOS
+  // 9. RESTAURANTES ESPECÍFICOS E TIPOS DE COMIDA
   // ==========================================
   {
     keywords: ["frutos do mar", "peixe", "camarao", "moqueca", "lagosta", "ceviche", "seafood", "fish", "shrimp", "lobster", "mariscos", "pescado", "camaron", "langosta"],
@@ -442,27 +463,27 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["burger", "hamburguer", "sanduiche", "lanche", "parada burger", "fome", "hamburgueria", "sandwich", "snack", "hungry", "hamburguesa", "hambre"],
+    keywords: ["burger", "hamburguer", "sanduiche", "lanche", "parada burger", "pizza", "pizzaria", "massa", "ilha gourmet", "pasta", "sandwich", "snack", "hamburguesa"],
     reply: {
-      pt: "Bateu a fome? O <a href='parada-burger.html'>Parada Burger</a> tem hambúrgueres artesanais incríveis num clima super descontraído! 🍔",
-      en: "Hungry? The <a href='parada-burger.html'>Parada Burger</a> has amazing craft burgers in a super relaxed atmosphere! 🍔",
-      es: "¿Hambre? ¡El <a href='parada-burger.html'>Parada Burger</a> tiene hamburguesas artesanales increíbles en un ambiente súper relajado! 🍔"
+      pt: "Bateu a fome de lanche? O <a href='parada-burger.html'>Parada Burger</a> tem hambúrgueres artesanais incríveis! Se preferir pizza e massas, vá direto para o <a href='ilha-gourmet.html'>Ilha Gourmet</a>. 🍔🍕",
+      en: "Craving a snack? <a href='parada-burger.html'>Parada Burger</a> has amazing craft burgers! If you prefer pizza, go to <a href='ilha-gourmet.html'>Ilha Gourmet</a>. 🍔🍕",
+      es: "¿Hambre de bocadillos? ¡<a href='parada-burger.html'>Parada Burger</a> tiene hamburguesas increíbles! Si prefieres pizza, ve a <a href='ilha-gourmet.html'>Ilha Gourmet</a>. 🍔🍕"
     }
   },
   {
-    keywords: ["pizza", "pizzaria", "massa", "ilha gourmet", "pasta"],
+    keywords: ["carne", "frango", "boteco raiz", "elson", "barato", "simples", "comida di buteco", "joana", "pastel", "caldinho", "meat", "chicken", "cheap", "simple", "carne", "pollo"],
     reply: {
-      pt: "Para pizzas e massas, vá direto para o <a href='ilha-gourmet.html'>Ilha Gourmet</a>! É um espaço casual e muito saboroso. 🍕",
-      en: "For pizzas and pastas, go straight to <a href='ilha-gourmet.html'>Ilha Gourmet</a>! It's a casual and very tasty space. 🍕",
-      es: "¡Para pizzas y pastas, ve directo a <a href='ilha-gourmet.html'>Ilha Gourmet</a>! Es un espacio casual y muy sabroso. 🍕"
+      pt: "Para um clima de vila e comida raiz, visite o <a href='bar-elson.html'>Bar do Elson</a> (melhor frango assado) ou o acolhedor <a href='bar-joana.html'>Bar da Joana</a> para pastéis caseiros! 🍗",
+      en: "For a local vibe and watching football, visit <a href='bar-elson.html'>Bar do Elson</a> (best roast chicken) or the cozy <a href='bar-joana.html'>Bar da Joana</a> for homemade snacks! 🍗",
+      es: "Para un ambiente local y ver el fútbol, visita <a href='bar-elson.html'>Bar do Elson</a> (mejor pollo asado) o el acogedor <a href='bar-joana.html'>Bar da Joana</a> para bocadillos caseros. 🍗"
     }
   },
   {
-    keywords: ["carne", "frango", "boteco raiz", "elson", "barato", "simples", "comida di buteco", "meat", "chicken", "cheap", "simple", "carne", "pollo", "barato"],
+    keywords: ["futebol", "jogo", "mengao", "assistir", "telao", "football", "match", "futbol", "partido"],
     reply: {
-      pt: "Comida raiz é no <a href='bar-elson.html'>Bar do Elson</a>! 🍗 O ambiente é super simples e eles servem o melhor e mais famoso Frango Assado da ilha.",
-      en: "Authentic bar food is at <a href='bar-elson.html'>Bar do Elson</a>! 🍗 The vibe is super simple and they serve the best Roast Chicken on the island.",
-      es: "¡La auténtica comida de bar está en <a href='bar-elson.html'>Bar do Elson</a>! 🍗 El ambiente es muy sencillo y sirven el mejor pollo asado de la isla."
+      pt: "Quer assistir a um bom jogo de futebol (especialmente do Mengão)? A dica é colar no <a href='bar-elson.html'>Bar do Elson</a>. Cerveja no precinho e clima de arquibancada! ⚽",
+      en: "Want to watch a good football match? The tip is to go to <a href='bar-elson.html'>Bar do Elson</a>. Cold beer and a stadium vibe! ⚽",
+      es: "¿Quieres ver un buen partido de fútbol? El consejo es ir al <a href='bar-elson.html'>Bar do Elson</a>. ¡Cerveza helada y ambiente de estadio! ⚽"
     }
   },
   {
@@ -474,19 +495,11 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["joana", "bar da joana", "comida caseira", "pastel", "caldinho", "homemade food", "comida casera"],
-    reply: {
-      pt: "O <a href='bar-joana.html'>Bar da Joana</a> tem o boteco mais acolhedor daqui! 🍳 Comida caseira, atendimento de família e pastéis deliciosos.",
-      en: "The <a href='bar-joana.html'>Bar da Joana</a> is the coziest pub here! 🍳 Homemade food, family service, and delicious snacks.",
-      es: "¡El <a href='bar-joana.html'>Bar da Joana</a> es la taberna más acogedora de aquí! 🍳 Comida casera, servicio familiar y deliciosos aperitivos."
-    }
-  },
-  {
     keywords: ["crianca", "kids", "filhos", "familia", "kauai", "ilha do ipe", "children", "family", "niños", "hijos", "familia"],
     reply: {
-      pt: "Se vier com a família, o <a href='bar-kauai.html'>Kauai Gastrolounge</a> (na Ilha do Ipê) é imbatível! 🌴 Tem uma Área Kids enorme para a criançada brincar.",
-      en: "If coming with family, <a href='bar-kauai.html'>Kauai Gastrolounge</a> is unbeatable! 🌴 It has a huge Kids Area for children to play.",
-      es: "Si vienes con familia, ¡el <a href='bar-kauai.html'>Kauai Gastrolounge</a> es imbatible! 🌴 Tiene una Área Kids enorme para que los niños jueguen."
+      pt: "Se vier com a família, o <a href='bar-kauai.html'>Kauai Gastrolounge</a> (na Ilha do Ipê) é imbatível! 🌴 Espaço gigante, estilo tropical e uma Área Kids maravilhosa para as crianças.",
+      en: "If coming with family, <a href='bar-kauai.html'>Kauai Gastrolounge</a> is unbeatable! 🌴 Giant space, tropical style, and an amazing Kids Area.",
+      es: "Si vienes con familia, ¡el <a href='bar-kauai.html'>Kauai Gastrolounge</a> es imbatible! 🌴 Espacio gigante, estilo tropical y una Área Kids increíble."
     }
   },
   {
@@ -507,7 +520,7 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 9. BARES E VIDA NOTURNA
+  // 10. BARES E VIDA NOTURNA
   // ==========================================
   {
     keywords: ["bar", "bares", "beber", "cerveja", "chopp", "caipirinha", "drinks", "bebida", "beer", "drink", "cerveza", "bebidas"],
@@ -543,17 +556,8 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 10. HOSPEDAGEM E AIRBNBS
+  // 11. HOSPEDAGEM E AIRBNBS
   // ==========================================
-  {
-    keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "pernoite", "onde dormir", "sleep", "inn", "accommodation", "stay", "where to sleep", "dormir", "posada", "alojamiento", "donde dormir", "hoteis", "pousadas"],
-    reply: {
-      pt: "Dormir aqui é uma paz! 🛏️ Temos desde as pousadas <a href='pousada-barra.html'>Barra</a> e <a href='pousada-marisis.html'>Marísis</a>, até Airbnbs inteiros! Clique abaixo para ver disponibilidades e reservar.",
-      en: "Sleeping here is peaceful! 🛏️ We have inns like <a href='pousada-barra.html'>Barra</a> and <a href='pousada-marisis.html'>Marísis</a>, to entire Airbnbs! Click below to book.",
-      es: "¡Dormir aquí es pura paz! 🛏️ Tenemos posadas como <a href='pousada-barra.html'>Barra</a> y <a href='pousada-marisis.html'>Marísis</a>, ¡hasta Airbnbs enteros! Haz clic abajo para reservar."
-    },
-    showWhatsapp: true
-  },
   {
     keywords: ["pousada barra da tijuca", "mais perto do metro", "melhor localizacao", "closest to subway", "best location", "cerca del metro", "mejor ubicacion"],
     reply: {
@@ -621,12 +625,12 @@ const GIGI_BRAIN = [
   },
 
   // ==========================================
-  // 11. EVENTOS, CASAMENTOS E AGENDA CULTURAL
+  // 12. EVENTOS, CASAMENTOS E AGENDA CULTURAL
   // ==========================================
   {
-    keywords: ["casamento", "festa", "evento", "confraternizacao", "15 anos", "alugar espaco", "eventos", "solar das palmeiras", "gaivota", "wedding", "boda"],
+    keywords: ["casamento", "festa", "evento", "confraternizacao", "15 anos", "alugar espaco", "eventos", "wedding", "party", "event", "rent space", "boda", "fiesta", "alquilar espacio"],
     reply: {
-      pt: "Cenário dos sonhos! 🎉 Para eventos maiores temos o <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a>, e para algo intimista o <a href='gaivota.html'>Espaço Gaivota</a>. Peça seu orçamento com nossa equipe abaixo!",
+      pt: "Cenário dos sonhos! 🎉 Para eventos maiores temos o casarão <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a>, e para algo intimista o <a href='gaivota.html'>Espaço Gaivota</a>. Peça seu orçamento com nossa equipe abaixo!",
       en: "Dream setting! 🎉 For larger events we have <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a>, and for intimate ones <a href='gaivota.html'>Espaço Gaivota</a>. Request a quote below!",
       es: "¡Escenario de ensueño! 🎉 Para grandes eventos tenemos <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a>, y para algo íntimo el <a href='gaivota.html'>Espacio Gaivota</a>. ¡Pide tu presupuesto abajo!"
     },
