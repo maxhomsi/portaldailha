@@ -351,6 +351,7 @@ function mountGigiWidget() {
 // =======================================================
 // LÓGICA DE DIGITAÇÃO LIVRE E INTEGRAÇÃO COM CEREBRO-GIGI
 // =======================================================
+
 window.sendGigiFreeMsg = function() {
   const input = document.getElementById('gigiFreeInput');
   const text = input.value.trim();
@@ -367,7 +368,7 @@ window.sendGigiFreeMsg = function() {
   input.value = "";
   body.scrollTop = body.scrollHeight;
 
-  // Limpa acentos e converte para minúsculo (Fundamental para a Busca)
+  // Limpa acentos e converte para minúsculo
   const normalized = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   
   // Pega o idioma atual (se não existir, usa 'pt')
@@ -380,12 +381,12 @@ window.sendGigiFreeMsg = function() {
 
   let showOptions = true;
 
-  // Trava de Segurança e Busca no Cérebro
+  // Trava de Segurança e Busca Inteligente no Cérebro
   if (typeof GIGI_BRAIN !== 'undefined') {
     for (let rule of GIGI_BRAIN) {
-      // Usamos Regex (\b) para buscar a palavra exata e isolada!
-      if (rule.keywords.some(kw => new RegExp("\\b" + kw + "\\b").test(normalized))) {
-        // CORREÇÃO DO [object Object]: Extrai a string usando a linguagem certa
+      // Regex Inteligente: Busca a palavra exata, MAS permite a letra "s" no final (plural).
+      // Continua blindado contra o erro de "opcao" ativar "cao".
+      if (rule.keywords.some(kw => new RegExp("\\b" + kw + "s?\\b", "gi").test(normalized))) {
         botReply = rule.reply[lang] || rule.reply['pt'];
         showOptions = rule.showWhatsapp === true; 
         break;
@@ -395,11 +396,10 @@ window.sendGigiFreeMsg = function() {
     console.warn("Aviso: O arquivo 'cerebro-gigi.js' não foi carregado.");
   }
 
-  // Responde com um leve delay (simulando "Gigi digitando...")
+  // Responde com um leve delay
   setTimeout(() => {
     flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${botReply}</div></div>`);
     
-    // Se ela não souber a resposta ou se o showWhatsapp for true, oferece o botão do WhatsApp
     if(showOptions) {
       const btnText = lang === 'en' ? "💬 Talk to Team on WhatsApp" :
                       lang === 'es' ? "💬 Hablar con Equipo en WhatsApp" :
@@ -414,7 +414,6 @@ window.sendGigiFreeMsg = function() {
     body.scrollTop = body.scrollHeight;
   }, 800);
 };
-
 // =======================================================
 // LÓGICA DOS BOTÕES RÁPIDOS DA GIGI
 // =======================================================

@@ -95,7 +95,7 @@ const GIGI_BRAIN = [
   // 4. HISTÓRIA, GEOLOGIA E CURIOSIDADES (SUPER DETALHADO)
   // ==========================================
   {
-    keywords: ["historia", "origem", "formacao", "geologia", "criacao", "passado", "17 mil anos", "pedra branca", "history", "origin", "geology", "historia", "origen", "geologia"],
+    keywords: ["historia", "origem", "formacao", "geologia", "criacao", "passado", "17 mil anos", "pedra branca", "history", "origin", "geology", "historia", "origen", "geologia", "curiosidade", "curiosidades", "fatos", "fatos curiosos", "curiosity", "curiosities", "facts"],
     reply: {
       pt: "A história é fascinante! 📜 Geólogos dizem que há 17 mil anos o nível do mar era 70 metros mais baixo e batia no maciço da Pedra Branca. A erosão e o assoreamento fecharam a passagem, formando a praia da Barra, as lagoas e o nosso arquipélago.",
       en: "The history is fascinating! 📜 Geologists say 17,000 years ago, the sea level was 70m lower and hit the Pedra Branca mountains. Erosion formed Barra beach, the lagoons, and our archipelago.",
@@ -546,7 +546,7 @@ const GIGI_BRAIN = [
   // 10. HOSPEDAGEM E AIRBNBS
   // ==========================================
   {
-    keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "pernoite", "onde dormir", "sleep", "inn", "accommodation", "stay", "where to sleep", "dormir", "posada", "alojamiento", "donde dormir"],
+    keywords: ["dormir", "pousada", "hotel", "hospedagem", "ficar", "pernoite", "onde dormir", "sleep", "inn", "accommodation", "stay", "where to sleep", "dormir", "posada", "alojamiento", "donde dormir", "hoteis", "pousadas"],
     reply: {
       pt: "Dormir aqui é uma paz! 🛏️ Temos desde as pousadas <a href='pousada-barra.html'>Barra</a> e <a href='pousada-marisis.html'>Marísis</a>, até Airbnbs inteiros! Clique abaixo para ver disponibilidades e reservar.",
       en: "Sleeping here is peaceful! 🛏️ We have inns like <a href='pousada-barra.html'>Barra</a> and <a href='pousada-marisis.html'>Marísis</a>, to entire Airbnbs! Click below to book.",
@@ -624,7 +624,7 @@ const GIGI_BRAIN = [
   // 11. EVENTOS, CASAMENTOS E AGENDA CULTURAL
   // ==========================================
   {
-    keywords: ["casamento", "festa", "evento", "confraternizacao", "15 anos", "alugar espaco", "eventos", "wedding", "party", "event", "rent space", "boda", "fiesta", "alquilar espacio"],
+    keywords: ["casamento", "festa", "evento", "confraternizacao", "15 anos", "alugar espaco", "eventos", "solar das palmeiras", "gaivota", "wedding", "boda"],
     reply: {
       pt: "Cenário dos sonhos! 🎉 Para eventos maiores temos o <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a>, e para algo intimista o <a href='gaivota.html'>Espaço Gaivota</a>. Peça seu orçamento com nossa equipe abaixo!",
       en: "Dream setting! 🎉 For larger events we have <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a>, and for intimate ones <a href='gaivota.html'>Espaço Gaivota</a>. Request a quote below!",
