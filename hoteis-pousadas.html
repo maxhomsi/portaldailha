@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Hotéis e Pousadas na Ilha da Gigóia | Portal Oficial</title>
 
   <meta name="description" content="Encontre as melhores pousadas e hotéis na Ilha da Gigóia. Hospedagem com vista para a lagoa, café da manhã e muito conforto na Barra da Tijuca, Rio de Janeiro." />
@@ -17,7 +17,13 @@
   <meta property="og:image" content="assets/card-pousadas.jpg" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/hoteis-pousadas.html" />
 
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/hoteis-pousadas.html" />
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/hoteis-pousadas.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>body{opacity:1!important}</style></noscript>
 </head>
 <body data-page="hoteis-pousadas">
   
@@ -61,7 +67,7 @@
           
           <article class="card reveal" style="display: flex; flex-direction: column;">
             <div class="card__img" style="height: 200px;">
-              <img src="assets/pousadas/veneza1.jpg" alt="Veneza Carioca Hotel Boutique" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Veneza+Carioca'" />
+              <img src="assets/pousadas/veneza1.jpg" alt="Veneza Carioca Hotel Boutique" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Veneza+Carioca'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Veneza Carioca Hotel Boutique</h3>
@@ -74,7 +80,7 @@
 
           <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 100ms;">
             <div class="card__img" style="height: 200px;">
-              <img src="assets/pousadas/barra1.jpeg" alt="Pousada Barra da Tijuca" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Pousada+Barra'" />
+              <img src="assets/pousadas/barra1.jpeg" alt="Pousada Barra da Tijuca" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Pousada+Barra'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Pousada Barra da Tijuca</h3>
@@ -87,7 +93,7 @@
 
           <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 200ms;">
             <div class="card__img" style="height: 200px;">
-              <img src="assets/pousadas/marisis1.jpg" alt="Pousada Marísis" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Pousada+Marisis'" />
+              <img src="assets/pousadas/marisis1.jpg" alt="Pousada Marísis" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Pousada+Marisis'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Pousada Marísis</h3>
@@ -100,7 +106,7 @@
 
           <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 300ms;">
             <div class="card__img" style="height: 200px;">
-              <img src="assets/pousadas/casanova1.webp" alt="Casanova Residence" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Casanova+Residence'" />
+              <img src="assets/pousadas/casanova1.webp" alt="Casanova Residence" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Casanova+Residence'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Casanova Residence</h3>
@@ -130,6 +136,9 @@
       <p style="color:var(--muted); margin-bottom:24px; font-weight:600;" data-i18n="modal_pousada_sub">Preencha os dados abaixo para solicitar um orçamento e cadastrar a sua hospedagem no Portal.</p>
       
       <form id="pousadaCadastroForm" class="gigiForm">
+        <input type="hidden" name="_subject" value="Novo cadastro de Pousada/Hotel - Portal Ilha da Gigóia!">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
         <div>
           <label data-i18n="lbl_pousada_nome">Nome da Pousada/Hotel</label>
           <input type="text" placeholder="Ex: Pousada do Sol" required />
@@ -163,7 +172,7 @@
   <script src="dicionario.js"></script>
   <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-<script src="cerebro-gigi.js"></script>
+  <script src="cerebro-gigi.js"></script>
   <script>
     if (typeof initCapiTip === 'function') initCapiTip();
 
@@ -181,17 +190,39 @@
     document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('pousadaCadastroForm');
       if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', function(e) {
           e.preventDefault();
           const btn = document.getElementById('pousadaSubmitBtn');
-          btn.innerText = t("btn_enviando");
+          const originalText = btn.innerHTML;
+          btn.innerHTML = typeof t === 'function' ? (t("btn_enviando") || "Enviando...") : "Enviando...";
           btn.style.opacity = "0.7";
           btn.style.pointerEvents = "none";
-          
-          setTimeout(() => {
-            form.style.display = 'none';
-            document.getElementById('pousadaSuccess').style.display = 'block';
-          }, 1500);
+
+          const formData = new FormData(form);
+
+          fetch('https://formsubmit.co/ajax/Ilhadagigoiaoficial@gmail.com', {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.success || data.success === "true") {
+              form.style.display = 'none';
+              document.getElementById('pousadaSuccess').style.display = 'block';
+            } else {
+              alert('Erro ao enviar. Tente novamente.');
+              btn.innerHTML = originalText;
+              btn.style.opacity = "1";
+              btn.style.pointerEvents = "auto";
+            }
+          })
+          .catch(function() {
+            alert('Erro de conexão. Verifique sua internet e tente novamente.');
+            btn.innerHTML = originalText;
+            btn.style.opacity = "1";
+            btn.style.pointerEvents = "auto";
+          });
         });
       }
     });

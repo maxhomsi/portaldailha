@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafés e Lanches - Portal Ilha da Gigóia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cafés e Lanches na Ilha da Gigóia | Portal Oficial</title>
+
+  <meta name="description" content="Descubra os melhores cafés e lancherias da Ilha da Gigóia. Café especial, bolos caseiros, tapiocas e hambúrgueres artesanais com o clima único da lagoa." />
+  <meta name="keywords" content="café ilha da gigoia, lanches barra da tijuca, café da manhã gigoia, onde lanchar na ilha, cafeteria rj" />
+  <meta name="author" content="Portal Ilha da Gigóia" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cafés e Lanches | Ilha da Gigóia" />
+  <meta property="og:description" content="Do café da manhã ao lanche da tarde: sabor e aconchego à beira da lagoa." />
+  <meta property="og:image" content="assets/aleatoria/cantinho1.webp" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/cafe-lanches.html" />
+
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/cafe-lanches.html" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="cafe-lanches">
@@ -21,6 +33,22 @@
       </div>
     </section>
 
+    <section class="section" style="padding-top:10px; padding-bottom: 0;">
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 40px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+            </div>
+            <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
+          </div>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" style="padding-top: 30px;">
       <div class="container">
         
@@ -33,7 +61,7 @@
           
           <article class="card reveal" style="display: flex; flex-direction: column;">
             <div class="card__img" style="height: 200px;">
-              <img src="assets/aleatoria/poesia1.jpg" alt="Café da Poesia" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Cafe+da+Poesia'" />
+              <img src="assets/aleatoria/poesia1.jpg" alt="Café da Poesia" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cafe+da+Poesia'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Café da Poesia</h3>
@@ -45,8 +73,9 @@
           </article>
 
           <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 100ms;">
-            <div class="card__img" style="height: 200px;"><img src="assets/buteco.webp" alt="Selo Comida di Buteco" class="selo-buteco">
-              <img src="assets/aleatoria/cantinho1.webp" alt="Cantinho do Café Gigóia" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Cantinho+do+Cafe'" />
+            <div class="card__img" style="height: 200px;">
+              <img src="assets/buteco.webp" alt="Selo Comida di Buteco" class="selo-buteco">
+              <img src="assets/aleatoria/cantinho1.webp" alt="Cantinho do Café Gigóia" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+do+Cafe'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Cantinho do Café</h3>
@@ -59,7 +88,7 @@
 
           <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 200ms;">
             <div class="card__img" style="height: 200px;">
-              <img src="assets/lanches/parada1.webp" alt="Parada Burger" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Parada+Burger'" />
+              <img src="assets/lanches/parada1.webp" alt="Parada Burger" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Parada+Burger'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Parada Burger</h3>
@@ -71,8 +100,9 @@
           </article>
 
           <article class="card reveal" style="display: flex; flex-direction: column; transition-delay: 300ms;">
-            <div class="card__img" style="height: 200px;"><img src="assets/buteco.webp" alt="Selo Comida di Buteco" class="selo-buteco">
-              <img src="assets/lanches/gourmet1.webp" alt="Ilha Gourmet" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x300?text=Ilha+Gourmet'" />
+            <div class="card__img" style="height: 200px;">
+              <img src="assets/buteco.webp" alt="Selo Comida di Buteco" class="selo-buteco">
+              <img src="assets/lanches/gourmet1.webp" alt="Ilha Gourmet" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Ilha+Gourmet'" />
             </div>
             <div class="card__body" style="flex-grow: 1; display: flex; flex-direction: column;">
               <h3 class="card__title" style="font-size: 20px;">Ilha Gourmet</h3>
@@ -90,11 +120,11 @@
 
   <footer class="footer" id="siteFooter"></footer>
   <div id="gigiWidgetRoot"></div>
-<script src="cerebro-gigi.js"></script>
-  <script src="dicionario.js"></script>
-  <script src="app.js"></script>
 
-  <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508103'},{'dcenter':'p3'},{'cp_id':'10891979'},{'cp_cl':'8'})</script>
-  <script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script>
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
+  <script src="app.js"></script>
+  <script src="cerebro-gigi.js"></script>
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cantinho do Café | Portal Oficial Ilha da Gigóia</title>
@@ -17,12 +16,32 @@
   <meta property="og:image" content="assets/cantinho/cantinho1.jpg" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/cantinho-cafe.html" />
 
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/cantinho-cafe.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>body{opacity:1!important}</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Cantinho do Café",
+    "description": "Cafeteria charmosa na Ilha da Gigóia com cafés espresso, cappuccino, bolos caseiros, tapiocas e sanduíches. Ambiente tranquilo ideal para café da manhã ou lanche da tarde.",
+    "url": "https://www.ilhadagigoia.com.br/cantinho-cafe.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ilha da Gigóia, Barra da Tijuca",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
 </head>
 <body data-page="comer-beber">
   
   <div class="progress" id="progress"></div>
-  
   <header class="header" id="siteHeader"></header>
 
   <main>
@@ -53,15 +72,16 @@
       <div class="container" style="max-width: 900px;">
         
         <div class="reveal gallery" style="margin-top: 0;">
-  <img src="assets/aleatoria/cantinho1.webp" alt="Cantinho do Café 1" loading="lazy">
-  <img src="assets/aleatoria/cantinho2.webp" alt="Cantinho do Café 2" loading="lazy">
-  <img src="assets/aleatoria/cantinho3.webp" alt="Cantinho do Café 3" loading="lazy">
-  <img src="assets/aleatoria/cantinho4.webp" alt="Cantinho do Café 4" loading="lazy">
-  <img src="assets/aleatoria/cantinho5.png" alt="Cantinho do Café 5" loading="lazy">
-  <img src="assets/aleatoria/cantinho6.webp" alt="Cantinho do Café 6" loading="lazy">
-  <img src="assets/aleatoria/cantinho7.jpg" alt="Cantinho do Café 7" loading="lazy">
-  <img src="assets/aleatoria/cantinho8.avif" alt="Cantinho do Café 8" loading="lazy">
-</div>
+          <img src="assets/aleatoria/cantinho1.webp" alt="Cantinho do Café - ambiente" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+1'">
+          <img src="assets/aleatoria/cantinho2.webp" alt="Cantinho do Café - cafés especiais" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+2'">
+          <img src="assets/aleatoria/cantinho3.webp" alt="Cantinho do Café - bolos caseiros" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+3'">
+          <img src="assets/aleatoria/cantinho4.webp" alt="Cantinho do Café - tapiocas" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+4'">
+          <img src="assets/aleatoria/cantinho5.png" alt="Cantinho do Café - sanduíches" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+5'">
+          <img src="assets/aleatoria/cantinho6.webp" alt="Cantinho do Café - sucos" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+6'">
+          <img src="assets/aleatoria/cantinho7.jpg" alt="Cantinho do Café - área externa" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+7'">
+          <img src="assets/aleatoria/cantinho8.avif" alt="Cantinho do Café - vitrine" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Cantinho+8'">
+        </div>
+
         <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
           <h2 style="color: var(--green-dark); margin-bottom: 20px;" data-i18n="cantinho_sobre_titulo">Sobre o Café</h2>
           
@@ -99,7 +119,8 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="/cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;" data-i18n="btn_voltar_cafe_lanches">← Voltar para Café & Lanches</a>
+          <!-- CORRIGIDO: removida a barra inicial /cafe-lanches.html → cafe-lanches.html -->
+          <a href="cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;" data-i18n="btn_voltar_cafe_lanches">← Voltar para Café & Lanches</a>
         </div>
       </div>
     </section>
@@ -110,14 +131,15 @@
 
   <div class="lightbox" id="lightbox">
     <span class="lightbox__close" id="lightboxClose">&times;</span>
-    <img class="lightbox__content" id="lightboxImage" src="" alt="">
+    <img class="lightbox__content" id="lightboxImage" src="" alt="Foto ampliada do Cantinho do Café">
     <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
     <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
-  <script src="cerebro-gigi.js"></script>
+
   <script src="dicionario.js"></script>
   <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
+  <script src="cerebro-gigi.js"></script>
   <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>

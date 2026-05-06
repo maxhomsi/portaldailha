@@ -1120,6 +1120,44 @@ card_kauai_d: { pt: "Espaço amplo na Ilha do Ipê com música ao vivo, área ki
     es: "Aún no hay eventos futuros programados para este mes." 
   }
 
+  // === CHAVES ADICIONADAS PELAS CORREÇÕES (Mai 2026) ===
+  
+  // Títulos de página com chaves próprias (não reutilizando chaves do menu)
+  title_hospedagem: { pt: "Hospedagem", en: "Accommodation", es: "Alojamiento" },
+  title_passeios_rotas: { pt: "Passeios & Rotas", en: "Tours & Routes", es: "Paseos y Rutas" },
+
+  // Pousadas - título de seção "Destaques" com chave própria (antes era gaivota_dest_t)
+  pb_destaques_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+  veneza_destaques_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+  casanova_dest_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+
+  // Maracujá da Ilha (espaço eventos) - chaves próprias (antes eram do gaivota)
+  maracuja_sobre_titulo: { pt: "Sobre o Espaço", en: "About the Space", es: "Sobre el Espacio" },
+  maracuja_destaques_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+  maracuja_orc_titulo: { pt: "Orçamento", en: "Budget", es: "Presupuesto" },
+  maracuja_ideal_titulo: { pt: "Ideal Para", en: "Ideal For", es: "Ideal Para" },
+
+  // Oásis Gastrolounge - chaves próprias
+  oasis_sobre_titulo: { pt: "Sobre o Espaço", en: "About the Space", es: "Sobre el Espacio" },
+  oasis_destaques_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+  oasis_orc_titulo: { pt: "Orçamento", en: "Budget", es: "Presupuesto" },
+  oasis_ideal_titulo: { pt: "Ideal Para", en: "Ideal For", es: "Ideal Para" },
+
+  // Solar das Palmeiras - chaves próprias
+  solar_sobre_titulo: { pt: "Sobre o Espaço", en: "About the Space", es: "Sobre el Espacio" },
+  solar_destaques_titulo: { pt: "Destaques", en: "Highlights", es: "Destacados" },
+  solar_orc_titulo: { pt: "Orçamento", en: "Budget", es: "Presupuesto" },
+  solar_ideal_titulo: { pt: "Ideal Para", en: "Ideal For", es: "Ideal Para" },
+
+  // Pantanal Carioca - chave de informações
+  pantanal_info_titulo: { pt: "Informações", en: "Information", es: "Información" },
+
+  // Pousadas - títulos de seção independentes
+  pousada_sobre_t: { pt: "Sobre a Hospedagem", en: "About the Accommodation", es: "Sobre el Alojamiento" },
+  goia_valores_titulo: { pt: "Valores", en: "Prices", es: "Precios" },
+  goia_reserva_titulo: { pt: "Reservas", en: "Reservations", es: "Reservas" },
+
+
 };
 
 // Função mágica que busca a palavra certa dependendo do idioma

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://www.ilhadagigoia.com.br/" />
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal Ilha da Gigóia | O Guia Completo do Pantanal Carioca RJ</title>
   <meta name="description" content="Descubra a Ilha da Gigóia na Barra da Tijuca, Rio de Janeiro. Guia completo de passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca." />
+
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* 1. Ajuste do Banner (Hero) - Menor e texto centralizado perfeitamente */
     .hero {
       height: 75vh !important; 
       min-height: 480px !important;
       max-height: 600px !important;
     }
-    
     .hero__content {
       display: flex;
       flex-direction: column;
@@ -24,46 +26,35 @@
       text-align: center;
       padding: 0 20px;
     }
-
     .hero h1 {
       max-width: 900px;
       margin: 0 auto 15px auto;
       line-height: 1.15;
     }
-
     .hero p {
       max-width: 750px;
       margin: 0 auto 30px auto;
     }
+    .gigiFab { z-index: 999 !important; }
+    .gigiBox { z-index: 1000 !important; }
 
-    /* 2. Z-Index Blindado (Força a Gigi para trás do LGPD) */
-    .gigiFab {
-      z-index: 999 !important; /* Fica abaixo do banner de Cookies (LGPD) */
-    }
-    .gigiBox {
-      z-index: 1000 !important; 
-    }
-
-    /* 3. Card Flutuante da Agenda */
     .promo-popup {
       position: fixed; 
       top: 140px; 
       right: 8%; 
       width: 200px; 
-      z-index: 900 !important; /* Fica abaixo da Gigi e do LGPD */
+      z-index: 900 !important;
       border-radius: 20px; 
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       transition: opacity 0.3s ease, transform 0.3s ease;
       animation: floatPopup 4s ease-in-out infinite; 
     }
-
     .promo-popup img {
       width: 100%;
       display: block;
       border-radius: 20px;
       border: 3px solid #fff; 
     }
-
     .promo-popup__close {
       position: absolute;
       top: -10px;
@@ -84,26 +75,21 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: background 0.2s, transform 0.2s;
     }
-
     .promo-popup__close:hover {
       background: var(--green-dark, #3aa44a);
       transform: scale(1.1);
     }
-
     @keyframes floatPopup {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-8px); }
       100% { transform: translateY(0px); }
     }
-
-    /* 4. Comportamento no Celular (Espaçamento do texto e Agenda) */
     @media (max-width: 768px) {
       .promo-popup {
         bottom: auto !important; 
-        top: 25% !important; /* Altura do texto no mobile */
+        top: 25% !important;
         right: 15px;
         width: 130px; 
-        animation: floatPopup 4s ease-in-out infinite; 
       }
       .hero {
         height: auto !important;
@@ -111,6 +97,22 @@
       }
     }
   </style>
+  <noscript><style>body{opacity:1!important}</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Portal Ilha da Gigóia",
+    "url": "https://www.ilhadagigoia.com.br",
+    "description": "Guia completo da Ilha da Gigóia: passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca no Rio de Janeiro.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.ilhadagigoia.com.br/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body data-page="home">
   
@@ -118,7 +120,8 @@
   
   <header class="header" id="siteHeader"></header>
 
-  <div id="promoCard" class="promo-popup reveal" style="display: none;">/* card de eventos esta oculto, para ligar tem que tirar o display none e colocar um delay para aparecer depois do carregamento da pagina */
+  <!-- Card de eventos: remova o style="display:none" para ativar -->
+  <div id="promoCard" class="promo-popup reveal" style="display: none;">
     <button id="closePromo" class="promo-popup__close" aria-label="Fechar">&times;</button>
     <a href="agenda-cultural.html">
       <img src="assets/popup.jpeg" alt="Confira nossa Agenda Cultural">
@@ -131,7 +134,6 @@
       <div class="hero__overlay"></div>
       
       <div class="hero__content container">
-        
         <h1 class="reveal" id="heroTitle">
           <span data-i18n="hero_title_a">Descubra o Paraíso Tropical</span><br>
           <span class="accent" data-i18n="hero_title_b">da Ilha da Gigóia</span>
@@ -148,7 +150,6 @@
           <span>✓</span>
           <span data-i18n="hero_check">Informações oficiais e atualizadas</span> 
         </div>
-        
       </div>
     </section>
 
@@ -174,14 +175,20 @@
         
       </div>
     </section>
-
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
   
   <div id="gigiWidgetRoot"></div>
 
+  <script src="dicionario.js"></script>
+  <script src="dicas-capi.js"></script>
+  <script src="app.js"></script>
+  <script src="cerebro-gigi.js"></script>
+
   <script>
+    if (typeof initCapiTip === 'function') initCapiTip();
+
     document.addEventListener('DOMContentLoaded', function() {
       const closeBtn = document.getElementById('closePromo');
       const promoCard = document.getElementById('promoCard');
@@ -191,17 +198,12 @@
           e.preventDefault(); 
           promoCard.style.opacity = '0';
           promoCard.style.transform = 'scale(0.8)';
-          setTimeout(() => {
+          setTimeout(function() {
             promoCard.style.display = 'none';
           }, 300); 
         });
       }
     });
   </script>
-<script src="cerebro-gigi.js"></script>
-  <script src="dicionario.js"></script>
-  <script src="dicas-capi.js"></script>
-  <script src="app.js"></script>
-
 </body>
 </html>

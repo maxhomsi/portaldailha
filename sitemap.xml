@@ -1,150 +1,404 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
+  <!-- ==========================================
+       PÁGINA INICIAL
+       ========================================== -->
   <url>
     <loc>https://www.ilhadagigoia.com.br/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
+  <!-- ==========================================
+       SEÇÕES PRINCIPAIS (NAV)
+       ========================================== -->
   <url>
     <loc>https://www.ilhadagigoia.com.br/a-ilha.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/passeios-rotas.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/comer-beber.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/hospedagem.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/fale-conosco.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/links.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/pantanal-carioca.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/ilhas-tijucas.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/reserva.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/jet-ski.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/pacotes-especiais.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-
+  <!-- ==========================================
+       A ILHA - SUBPÁGINAS
+       ========================================== -->
   <url>
     <loc>https://www.ilhadagigoia.com.br/como-chegar.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/historia-cultura.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/boas-praticas.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/melhor-epoca.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/o-que-fazer.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
+  <!-- ==========================================
+       PASSEIOS - SUBPÁGINAS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/pantanal-carioca.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/ilhas-tijucas.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/reserva.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/jet-ski.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/pacotes-especiais.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/experiencia-completa.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/planeje.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ==========================================
+       COMER E BEBER - HUBS
+       ========================================== -->
   <url>
     <loc>https://www.ilhadagigoia.com.br/restaurantes.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/bares-drinks.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/cafe-lanches.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/eventos-experiencias.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ==========================================
+       RESTAURANTES - PÁGINAS INDIVIDUAIS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-maracuja.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-ocya.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-cais-bar.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-deck-bar.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-salome.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-venne.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-laguna.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/restaurante-camarao.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ==========================================
+       BARES - PÁGINAS INDIVIDUAIS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-ak.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-briza.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-caicaras.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-capivara.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-elson.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-joana.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-kai.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/bar-kauai.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ==========================================
+       CAFÉS E LANCHES - PÁGINAS INDIVIDUAIS
+       ========================================== -->
+  <url>
     <loc>https://www.ilhadagigoia.com.br/cafe-poesia.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/cantinho-cafe.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/parada-burger.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/ilha-gourmet.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ==========================================
+       ESPAÇOS PARA EVENTOS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/espacos-eventos.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/maracuja.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/hoteis-pousadas.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/airbnb-temporada.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/espacos-eventos.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/veneza-carioca.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/pousada-barra.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/pousada-marisis.html</loc>
-    <lastmod>2026-03-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ilhadagigoia.com.br/casanova.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/gaivota.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/solar-palmeiras.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/oasis.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ==========================================
+       HOSPEDAGEM - HUBS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/hoteis-pousadas.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/airbnb-temporada.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ==========================================
+       POUSADAS E HOTÉIS - PÁGINAS INDIVIDUAIS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/veneza-carioca.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/pousada-barra.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/pousada-marisis.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/casanova.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ==========================================
+       AIRBNBS - PÁGINAS INDIVIDUAIS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/casa-venti.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/casa-goia.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/casa-estatua.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/lux-48.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ==========================================
+       PÁGINAS UTILITÁRIAS
+       ========================================== -->
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/termos.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

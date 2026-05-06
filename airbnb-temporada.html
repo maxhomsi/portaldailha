@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Airbnb e Temporada | Ilha da Gigóia - Portal Oficial</title>
 
   <meta name="description" content="Alugue casas e apartamentos de temporada na Ilha da Gigóia. Privacidade, conforto e a experiência de viver como um morador local no Rio de Janeiro." />
@@ -17,7 +17,13 @@
   <meta property="og:image" content="assets/airbnb/venti1.avif" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/airbnb-temporada.html" />
 
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/airbnb-temporada.html" />
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/airbnb-temporada.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>body{opacity:1!important}</style></noscript>
 </head>
 <body data-page="hospedagem">
   
@@ -55,7 +61,7 @@
           
           <article class="card reveal">
             <div class="card__img">
-              <img src="assets/airbnb/venti1.avif" alt="Casa Venti" onerror="this.src='https://via.placeholder.com/400x300?text=Casa+Venti'" />
+              <img src="assets/airbnb/venti1.avif" alt="Casa Venti" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Casa+Venti'" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Casa Venti</h3>
@@ -69,7 +75,7 @@
 
           <article class="card reveal" style="transition-delay: 100ms;">
             <div class="card__img">
-              <img src="assets/airbnb/lux1.avif" alt="Lux 48" onerror="this.src='https://via.placeholder.com/400x300?text=Lux+48'" />
+              <img src="assets/airbnb/lux1.avif" alt="Lux 48" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Lux+48'" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Lux 48</h3>
@@ -83,7 +89,7 @@
 
           <article class="card reveal" style="transition-delay: 200ms;">
             <div class="card__img">
-              <img src="assets/airbnb/goia1.avif" alt="Casa Goia" onerror="this.src='https://via.placeholder.com/400x300?text=Casa+Goia'" />
+              <img src="assets/airbnb/goia1.avif" alt="Casa Goia" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Casa+Goia'" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Casa Goia</h3>
@@ -97,7 +103,7 @@
 
           <article class="card reveal" style="transition-delay: 300ms;">
             <div class="card__img">
-              <img src="assets/airbnb/estatua1.avif" alt="Casa da Estátua" onerror="this.src='https://via.placeholder.com/400x300?text=Casa+da+Estatua'" />
+              <img src="assets/airbnb/estatua1.avif" alt="Casa da Estátua" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Casa+da+Estatua'" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Casa da Estátua</h3>
@@ -128,6 +134,9 @@
       <p style="color:var(--muted); margin-bottom:24px; font-weight:600;" data-i18n="modal_fale_sub">Preencha os dados abaixo para solicitar o cadastro da sua casa no Portal.</p>
       
       <form id="airbnbCadastroForm" class="gigiForm">
+      <input type="hidden" name="_subject" value="Novo cadastro de Casa/Airbnb - Portal Ilha da Gigóia!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
         <div>
           <label data-i18n="lbl_nome_espaco">Nome do Espaço / Casa</label>
           <input type="text" placeholder="Ex: Casa da Lagoa" required />
@@ -164,14 +173,39 @@
     // Lógica do Form de Cadastro
     const form = document.getElementById('airbnbCadastroForm');
     if (form) {
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', function(e) {
         e.preventDefault();
         const btn = document.getElementById('airbnbSubmitBtn');
-        btn.innerText = t("btn_enviando") || "Enviando..."; // Traduz o enviando dinamicamente
-        setTimeout(() => {
-          form.style.display = 'none';
-          document.getElementById('airbnbSuccess').style.display = 'block';
-        }, 1500);
+        const originalText = btn.innerHTML;
+        btn.innerHTML = typeof t === 'function' ? (t("btn_enviando") || "Enviando...") : "Enviando...";
+        btn.style.opacity = "0.7";
+        btn.style.pointerEvents = "none";
+
+        const formData = new FormData(form);
+
+        fetch('https://formsubmit.co/ajax/Ilhadagigoiaoficial@gmail.com', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.success || data.success === "true") {
+            form.style.display = 'none';
+            document.getElementById('airbnbSuccess').style.display = 'block';
+          } else {
+            alert('Erro ao enviar. Tente novamente.');
+            btn.innerHTML = originalText;
+            btn.style.opacity = "1";
+            btn.style.pointerEvents = "auto";
+          }
+        })
+        .catch(function() {
+          alert('Erro de conexão. Verifique sua internet e tente novamente.');
+          btn.innerHTML = originalText;
+          btn.style.opacity = "1";
+          btn.style.pointerEvents = "auto";
+        });
       });
     }
   </script>
