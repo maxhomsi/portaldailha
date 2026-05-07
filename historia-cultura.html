@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
   
   <title>História e Cultura da Ilha da Gigóia | Portal Oficial</title>
@@ -19,11 +19,7 @@
 
   <link rel="canonical" href="https://www.ilhadagigoia.com.br/historia-cultura.html" />
   <link rel="canonical" href="https://www.ilhadagigoia.com.br/historia-cultura.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <noscript><style>body{opacity:1!important}</style></noscript>
 </head>
 <body data-page="a-ilha">
   
@@ -40,26 +36,18 @@
     </section>
 
     <section class="section" style="padding-top:10px; padding-bottom: 0;">
-      <div class="container" style="max-width: 900px;">
-        <a href="https://globoplay.globo.com/v/4979611/" target="_blank" rel="noopener noreferrer" class="reveal"
-          style="display: block; position: relative; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-soft); text-decoration: none; background: #000;">
-          <!-- Thumbnail com overlay de play -->
-          <img
-            src="https://s2.glbimg.com/Y-pMCJFnCcqkjImM_vFVLOyBkk4=/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4a9abead0dda28aa2cfe/internal_photos/bs/2017/5/j/ycfGe5RbimxnP6AKBBIA/ilha-da-gigoia.jpg"
-            alt="Documentário Ilha da Gigóia — assistir no Globoplay"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='https://via.placeholder.com/900x506/1a1a1a/ffffff?text=Ilha+da+Gigóia+—+Documentário'"
-            style="width: 100%; display: block; opacity: 0.85;">
-          <!-- Botão play centralizado -->
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
-              <div style="width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 32px solid var(--green-dark); margin-left: 6px;"></div>
+      <div class="container">
+        <div class="tipRow reveal" style="margin-bottom: 20px;">
+          <div class="capi">
+            <div class="capi__ring">
+              <img id="capiImg" src="assets/capi.png" alt="Capi" />
             </div>
-            <span style="color: #fff; font-size: 16px; font-weight: 800; text-shadow: 0 2px 8px rgba(0,0,0,0.8); letter-spacing: 0.3px;">Assistir no Globoplay</span>
+            <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
           </div>
-          <!-- Badge Globoplay -->
-          <div style="position: absolute; top: 16px; right: 16px; background: #F4192B; color: #fff; font-size: 12px; font-weight: 900; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.5px;">GLOBOPLAY</div>
-        </a>
+          <div class="tip">
+            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -136,9 +124,9 @@
     <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
   <script src="dicionario.js"></script>
+  <script src="cerebro-gigi.js"></script>
   <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-  <script src="cerebro-gigi.js"></script>
-
+  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>
