@@ -384,31 +384,27 @@ window.sendGigiFreeMsg = function() {
 
   let showOptions = true;
 
-  // Trava de Segurança e Busca Inteligente no Cérebro
+  // Busca Inteligente no Cérebro (keywords rápidas)
+  let matchedByKeyword = false;
   if (typeof GIGI_BRAIN !== 'undefined') {
     for (let rule of GIGI_BRAIN) {
-      // Regex Inteligente: Busca a palavra exata, MAS permite a letra "s" no final (plural).
-      // Continua blindado contra o erro de "opcao" ativar "cao".
       if (rule.keywords.some(kw => new RegExp("\\b" + kw + "s?\\b", "gi").test(normalized))) {
         botReply = rule.reply[lang] || rule.reply['pt'];
-        showOptions = rule.showWhatsapp === true; 
+        showOptions = rule.showWhatsapp === true;
+        matchedByKeyword = true;
         break;
       }
     }
-  } else {
-    console.warn("Aviso: O arquivo 'cerebro-gigi.js' não foi carregado.");
   }
 
-  // Responde com um leve delay
-  setTimeout(() => {
-    flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${botReply}</div></div>`);
-    
-    if(showOptions) {
+  // Função para renderizar resposta no chat
+  function renderGigiReply(text, showBtn) {
+    flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${text}</div></div>`);
+    if (showBtn) {
       const btnText = lang === 'en' ? "💬 Talk to Team on WhatsApp" :
                       lang === 'es' ? "💬 Hablar con Equipo en WhatsApp" :
                       lang === 'zh' ? "💬 通过WhatsApp联系团队" :
                       "💬 Falar com Equipe no WhatsApp";
-
       flow.insertAdjacentHTML('beforeend', `
         <div class="gigi-quick-replies" style="margin-top:5px;">
           <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">${btnText}</button>
@@ -416,7 +412,34 @@ window.sendGigiFreeMsg = function() {
       `);
     }
     body.scrollTop = body.scrollHeight;
-  }, 800);
+  }
+
+  if (matchedByKeyword) {
+    // Resposta rápida via keyword
+    setTimeout(() => { renderGigiReply(botReply, showOptions); }, 600);
+  } else if (typeof askGigiAI === 'function') {
+    // Fallback: chamar IA real (gigi-proxy.php)
+    const thinkingId = 'thinking_' + Date.now();
+    const thinkingMsg = lang === 'en' ? "✨ Let me think..." : lang === 'es' ? "✨ Déjame pensar..." : lang === 'zh' ? "✨ 让我想想..." : "✨ Deixa eu pensar...";
+    setTimeout(() => {
+      flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot" id="${thinkingId}"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble" style="opacity:0.6;font-style:italic;">${thinkingMsg}</div></div>`);
+      body.scrollTop = body.scrollHeight;
+
+      askGigiAI(text, lang).then(aiReply => {
+        const el = document.getElementById(thinkingId);
+        if (el) el.remove();
+        if (aiReply) {
+          renderGigiReply(aiReply, false);
+        } else {
+          // Proxy indisponível — mostra fallback padrão
+          renderGigiReply(botReply, true);
+        }
+      });
+    }, 400);
+  } else {
+    // Sem IA disponível — fallback padrão
+    setTimeout(() => { renderGigiReply(botReply, true); }, 800);
+  }
 };
 // =======================================================
 // LÓGICA DOS BOTÕES RÁPIDOS DA GIGI
