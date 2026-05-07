@@ -1118,7 +1118,7 @@ card_kauai_d: { pt: "Espaço amplo na Ilha do Ipê com música ao vivo, área ki
     pt: "Nenhum evento futuro programado para este mês ainda.", 
     en: "No upcoming events scheduled for this month yet.", 
     es: "Aún no hay eventos futuros programados para este mes." 
-  }
+  },
 
   // === CHAVES ADICIONADAS PELAS CORREÇÕES (Mai 2026) ===
   
