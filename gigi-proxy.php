@@ -19,9 +19,16 @@ define('GEMINI_MODEL',   'gemini-1.5-flash');
 define('ALLOWED_ORIGIN', 'https://www.ilhadagigoia.com.br');
 
 header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: ' . ALLOWED_ORIGIN);
+
+// Aceitar tanto www quanto sem www
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+$allowed = ['https://www.ilhadagigoia.com.br', 'https://ilhadagigoia.com.br', 'http://www.ilhadagigoia.com.br', 'http://ilhadagigoia.com.br'];
+if (in_array($origin, $allowed) || empty($origin)) {
+    header('Access-Control-Allow-Origin: ' . ($origin ?: ALLOWED_ORIGIN));
+}
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Credentials: false');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(204); exit; }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST')    { http_response_code(405); echo json_encode(['error'=>'Method not allowed']); exit; }
@@ -120,7 +127,9 @@ curl_close($ch);
 
 if ($http_code !== 200) {
     http_response_code(502);
-    echo json_encode(['error' => 'API error ' . $http_code, 'reply' => null]);
+    $err_body = json_decode($response, true);
+    $err_msg = $err_body['error']['message'] ?? 'HTTP ' . $http_code;
+    echo json_encode(['error' => $err_msg, 'reply' => null, 'debug_code' => $http_code]);
     exit;
 }
 
