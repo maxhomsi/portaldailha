@@ -41,16 +41,25 @@
 
     <section class="section" style="padding-top:10px; padding-bottom: 0;">
       <div class="container" style="max-width: 900px;">
-        <div class="reveal" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-soft);">
-          <iframe
-            src="https://globoplay.globo.com/v/4979611/embed/"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-            title="Ilha da Gigóia — Documentário"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-          </iframe>
-        </div>
+        <a href="https://globoplay.globo.com/v/4979611/" target="_blank" rel="noopener noreferrer" class="reveal"
+          style="display: block; position: relative; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-soft); text-decoration: none; background: #000;">
+          <!-- Thumbnail com overlay de play -->
+          <img
+            src="https://s2.glbimg.com/Y-pMCJFnCcqkjImM_vFVLOyBkk4=/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4a9abead0dda28aa2cfe/internal_photos/bs/2017/5/j/ycfGe5RbimxnP6AKBBIA/ilha-da-gigoia.jpg"
+            alt="Documentário Ilha da Gigóia — assistir no Globoplay"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='https://via.placeholder.com/900x506/1a1a1a/ffffff?text=Ilha+da+Gigóia+—+Documentário'"
+            style="width: 100%; display: block; opacity: 0.85;">
+          <!-- Botão play centralizado -->
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+              <div style="width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 32px solid var(--green-dark); margin-left: 6px;"></div>
+            </div>
+            <span style="color: #fff; font-size: 16px; font-weight: 800; text-shadow: 0 2px 8px rgba(0,0,0,0.8); letter-spacing: 0.3px;">Assistir no Globoplay</span>
+          </div>
+          <!-- Badge Globoplay -->
+          <div style="position: absolute; top: 16px; right: 16px; background: #F4192B; color: #fff; font-size: 12px; font-weight: 900; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.5px;">GLOBOPLAY</div>
+        </a>
       </div>
     </section>
 
