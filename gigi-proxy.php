@@ -12,7 +12,7 @@
 // LIMITES GRATUITOS:
 //   1.500 requisições/dia — mais que suficiente
 //   15 requisições/minuto
-// =========================================================
+// ==============+===========================================
 
 define('GEMINI_API_KEY', 'AIzaSyDkWCLbmWTPgrBTw600xlUJrDIOGBkxktk');
 define('GEMINI_MODEL',   'gemini-1.5-flash');
