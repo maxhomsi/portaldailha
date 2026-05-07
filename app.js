@@ -139,6 +139,7 @@ function mountHeaderFooter() {
             <option value="pt" ${lang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
             <option value="en" ${lang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
             <option value="es" ${lang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
+            <option value="zh" ${lang === 'zh' ? 'selected' : ''}>🇨🇳 中文</option>
           </select>
 
           <a class="btn btn--green" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
@@ -153,6 +154,7 @@ function mountHeaderFooter() {
             <option value="pt" ${lang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
             <option value="en" ${lang === 'en' ? 'selected' : ''}>🇺🇸 EN</option>
             <option value="es" ${lang === 'es' ? 'selected' : ''}>🇪🇸 ES</option>
+            <option value="zh" ${lang === 'zh' ? 'selected' : ''}>🇨🇳 中文</option>
           </select>
           
           <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
@@ -272,10 +274,10 @@ function mountGigiWidget() {
 
   // Identifica a linguagem para os botões iniciais
   const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
-  const btn1 = lang === 'en' ? "📍 How to get there?" : lang === 'es' ? "📍 ¿Cómo llegar?" : "📍 Como chegar na Ilha?";
-  const btn2 = lang === 'en' ? "🚤 Tour Prices" : lang === 'es' ? "🚤 Precios de Paseos" : "🚤 Preços de Passeios";
-  const btn3 = lang === 'en' ? "💬 Talk on WhatsApp" : lang === 'es' ? "💬 Hablar en WhatsApp" : "💬 Quero falar no WhatsApp";
-  const placeholderInput = lang === 'en' ? "Ask something..." : lang === 'es' ? "Pregunta algo..." : "Pergunte algo...";
+  const btn1 = lang === 'en' ? "📍 How to get there?" : lang === 'es' ? "📍 ¿Cómo llegar?" : lang === 'zh' ? "📍 如何到达小岛？" : "📍 Como chegar na Ilha?";
+  const btn2 = lang === 'en' ? "🚤 Tour Prices" : lang === 'es' ? "🚤 Precios de Paseos" : lang === 'zh' ? "🚤 游览价格" : "🚤 Preços de Passeios";
+  const btn3 = lang === 'en' ? "💬 Talk on WhatsApp" : lang === 'es' ? "💬 Hablar en WhatsApp" : lang === 'zh' ? "💬 通过WhatsApp联系" : "💬 Quero falar no WhatsApp";
+  const placeholderInput = lang === 'en' ? "Ask something..." : lang === 'es' ? "Pregunta algo..." : lang === 'zh' ? "请提问..." : "Pergunte algo...";
 
   root.innerHTML = `
     <div class="gigiFab">
@@ -377,6 +379,7 @@ window.sendGigiFreeMsg = function() {
   // Respostas padrão traduzidas caso não encontre
   let botReply = lang === 'en' ? "Hmm, good question! 🤔 My system is still learning about this. You can choose an option below or call our team on WhatsApp:" :
                  lang === 'es' ? "¡Hmm, buena pregunta! 🤔 Mi sistema todavía está aprendiendo sobre esto. Puedes elegir una opción abajo o llamar a nuestro equipo en WhatsApp:" :
+                 lang === 'zh' ? "嗯，好问题！🤔 我的系统还在学习这个。您可以在下方选择一个选项，或通过WhatsApp联系我们的团队：" :
                  "Hmm, boa pergunta! 🤔 Meu sistema ainda está aprendendo sobre isso. Você pode escolher uma das opções abaixo ou chamar nossa equipe no WhatsApp:";
 
   let showOptions = true;
@@ -403,6 +406,7 @@ window.sendGigiFreeMsg = function() {
     if(showOptions) {
       const btnText = lang === 'en' ? "💬 Talk to Team on WhatsApp" :
                       lang === 'es' ? "💬 Hablar con Equipo en WhatsApp" :
+                      lang === 'zh' ? "💬 通过WhatsApp联系团队" :
                       "💬 Falar com Equipe no WhatsApp";
 
       flow.insertAdjacentHTML('beforeend', `

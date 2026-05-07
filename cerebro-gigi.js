@@ -13,7 +13,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Com certeza! Vou te passar direto para a nossa equipe humana. É só clicar no botão do WhatsApp logo abaixo e mandar sua mensagem!",
       en: "Sure! I'll connect you directly to our human team. Just click the WhatsApp button below and send your message!",
-      es: "¡Claro! Te conectaré directamente con nuestro equipo humano. ¡Solo haz clic en el botón de WhatsApp abajo y envía tu mensaje!"
+      es: "¡Claro! Te conectaré directamente con nuestro equipo humano. ¡Solo haz clic en el botón de WhatsApp abajo y envía tu mensaje!",
+      zh: "当然！我会直接将您转接给我们的人工团队。只需点击下方的WhatsApp按钮并发送您的消息！"
     },
     showWhatsapp: true
   },
@@ -22,7 +23,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Excelente! Para consultar valores exatos, disponibilidade e fazer a sua reserva, o ideal é falar direto com a nossa equipe no WhatsApp. É só clicar no botão aqui embaixo!",
       en: "Excellent! To check exact prices, availability, and make your reservation, it's best to speak directly with our team on WhatsApp. Just click the button below!",
-      es: "¡Excelente! Para consultar precios exactos, disponibilidad y hacer tu reserva, lo ideal es hablar directamente con nuestro equipo en WhatsApp. ¡Solo haz clic en el botón de abajo!"
+      es: "¡Excelente! Para consultar precios exactos, disponibilidad y hacer tu reserva, lo ideal es hablar directamente con nuestro equipo en WhatsApp. ¡Solo haz clic en el botón de abajo!",
+      zh: "太棒了！要查询确切价格、空房情况并完成预订，最好直接通过WhatsApp与我们的团队联系。只需点击下方的按钮！"
     },
     showWhatsapp: true
   },
@@ -35,7 +37,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Atualmente não temos restaurantes especializados em culinária japonesa/sushi na Ilha da Gigóia. 🍣 Mas se você gosta de peixe fresco, vai amar a alta gastronomia de frutos do mar do <a href='restaurante-ocya.html'>Ocyá</a> ou do <a href='restaurante-laguna.html'>Laguna</a>!",
       en: "Currently, we don't have Japanese cuisine/sushi restaurants on Gigóia Island. 🍣 But if you like fresh fish, try the high-end seafood at <a href='restaurante-ocya.html'>Ocyá</a> or <a href='restaurante-laguna.html'>Laguna</a>!",
-      es: "Actualmente no tenemos restaurantes de sushi en la Isla de Gigóia. 🍣 ¡Pero si te gusta el pescado fresco, prueba la alta gastronomía de <a href='restaurante-ocya.html'>Ocyá</a> o <a href='restaurante-laguna.html'>Laguna</a>!"
+      es: "Actualmente no tenemos restaurantes de sushi en la Isla de Gigóia. 🍣 ¡Pero si te gusta el pescado fresco, prueba la alta gastronomía de <a href='restaurante-ocya.html'>Ocyá</a> o <a href='restaurante-laguna.html'>Laguna</a>!",
+      zh: "目前吉戈亚岛上没有专门的日本料理/寿司餐厅。🍣 但如果您喜欢新鲜的鱼，一定会喜欢<a href='restaurante-ocya.html'>欧希亚</a>或<a href='restaurante-laguna.html'>拉古纳</a>的高端海鲜！"
     }
   },
   {
@@ -43,7 +46,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Hahaha! Na nossa lagoa não tem baleia nem tubarão! 🐋 Aqui a água é abrigada. As grandes estrelas da nossa fauna são os jacarés-de-papo-amarelo, as capivaras e as garças.",
       en: "Hahaha! There are no whales or sharks in our lagoon! 🐋 The big stars of our fauna are the broad-snouted caimans, capybaras, and herons.",
-      es: "¡Jajaja! ¡En nuestra laguna no hay ballenas ni tiburones! 🐋 Las grandes estrellas de nuestra fauna son los caimanes de hocico ancho, las capibaras y las garzas."
+      es: "¡Jajaja! ¡En nuestra laguna no hay ballenas ni tiburones! 🐋 Las grandes estrellas de nuestra fauna son los caimanes de hocico ancho, las capibaras y las garzas.",
+      zh: "哈哈哈！我们的泻湖里没有鲸鱼或鲨鱼！🐋 这里的水域很平静。我们动物群的明星是宽吻凯门鳄、水豚和苍鹭。"
     }
   },
   {
@@ -51,7 +55,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Antigamente a lagoa era límpida e os moradores tomavam banho, mas hoje, devido ao assoreamento e urbanização, NÃO recomendamos o banho na lagoa. 🚫 Se quiser mergulhar, agende nosso passeio para as <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>!",
       en: "In the past, the lagoon was crystal clear, but today, due to silting, we DO NOT recommend swimming in it. 🚫 For diving, book our tour to the <a href='ilhas-tijucas.html'>Tijucas Islands</a>!",
-      es: "Antiguamente la laguna era cristalina, pero hoy NO recomendamos bañarse en ella debido a la contaminación. 🚫 Para bucear, ¡reserva nuestro tour a las <a href='ilhas-tijucas.html'>Islas Tijucas</a>!"
+      es: "Antiguamente la laguna era cristalina, pero hoy NO recomendamos bañarse en ella debido a la contaminación. 🚫 Para bucear, ¡reserva nuestro tour a las <a href='ilhas-tijucas.html'>Islas Tijucas</a>!",
+      zh: "过去泻湖水质清澈，居民们会在这里游泳，但如今由于淤积和城市化，我们不建议在泻湖游泳。🚫 如果您想潜水，请预订我们的<a href='ilhas-tijucas.html'>蒂茹卡斯群岛</a>之旅！"
     }
   },
   {
@@ -59,7 +64,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A Ilha da Gigóia é cercada pela lagoa, não tem praia de mar com ondas. 🌴 Mas o barquinho pode te deixar num deck a apenas 5 minutinhos de caminhada da Praia da Barra da Tijuca!",
       en: "Gigóia Island is surrounded by the lagoon, it has no ocean beach. 🌴 However, the boat can drop you 5 minutes away from Barra da Tijuca Beach!",
-      es: "La Isla de Gigóia está rodeada por la laguna, no tiene playa de mar. 🌴 ¡Pero el bote puede dejarte a 5 minutos a pie de la Playa de Barra da Tijuca!"
+      es: "La Isla de Gigóia está rodeada por la laguna, no tiene playa de mar. 🌴 ¡Pero el bote puede dejarte a 5 minutos a pie de la Playa de Barra da Tijuca!",
+      zh: "吉戈亚岛被泻湖环绕，没有有浪的海滩。🌴 但小船可以在5分钟步行路程内送您到巴拉达蒂茹卡海滩！"
     }
   },
 
@@ -71,7 +77,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Olá! Tudo ótimo por aqui! 😊 Sou a Gigi, a assistente virtual oficial do Portal. Como posso te ajudar a planejar seu dia perfeito na Ilha da Gigóia hoje?",
       en: "Hello! Everything is great here! 😊 I'm Gigi, the official virtual assistant of the Portal. How can I help you plan your perfect day on Gigóia Island today?",
-      es: "¡Hola! ¡Todo genial por aquí! 😊 Soy Gigi, la asistente virtual oficial del Portal. ¿Cómo puedo ayudarte a planificar tu día perfecto en la Isla de Gigóia hoy?"
+      es: "¡Hola! ¡Todo genial por aquí! 😊 Soy Gigi, la asistente virtual oficial del Portal. ¿Cómo puedo ayudarte a planificar tu día perfecto en la Isla de Gigóia hoy?",
+      zh: "您好！这里一切都很棒！😊 我是吉吉，门户网站的官方虚拟助手。我今天能帮您规划在吉戈亚岛上的完美一天吗？"
     }
   },
   {
@@ -79,7 +86,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Por nada! Fico muito feliz em ajudar. Se precisar de mais alguma dica, quiser saber de algum restaurante ou agendar um passeio, é só me chamar. Boa diversão na Ilha! 🌴",
       en: "You're welcome! I'm very happy to help. If you need any more tips, want to know about a restaurant, or book a tour, just let me know. Have fun on the Island! 🌴",
-      es: "¡De nada! Me alegra mucho ayudar. Si necesitas algún consejo más, quieres saber sobre algún restaurante o reservar un tour, solo dímelo. ¡Diviértete en la Isla! 🌴"
+      es: "¡De nada! Me alegra mucho ayudar. Si necesitas algún consejo más, quieres saber sobre algún restaurante o reservar un tour, solo dímelo. ¡Diviértete en la Isla! 🌴",
+      zh: "不客气！很高兴能帮上忙。如果您需要更多建议、想了解餐厅或预订游览，请随时联系我。在小岛上玩得开心！🌴"
     }
   },
   {
@@ -87,7 +95,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Eu sou a Gigi, a mascote e assistente virtual do Portal Ilha da Gigóia! 🕊️ Fui programada para conhecer cada detalhe histórico e turístico daqui. Se eu não souber algo, te passo para nossa equipe humana, combinado?",
       en: "I am Gigi, the mascot and virtual assistant of the Portal! 🕊️ I was programmed to know every historical and tourist detail here. If I don't know something, I'll pass you to our human team, deal?",
-      es: "¡Soy Gigi, la mascota y asistente virtual del Portal! 🕊️ Fui programada para conocer cada detalle histórico y turístico de aquí. Si no sé algo, te paso a nuestro equipo humano, ¿de acuerdo?"
+      es: "¡Soy Gigi, la mascota y asistente virtual del Portal! 🕊️ Fui programada para conocer cada detalle histórico y turístico de aquí. Si no sé algo, te paso a nuestro equipo humano, ¿de acuerdo?",
+      zh: "我是吉吉，门户网站的吉祥物和虚拟助手！🕊️ 我被编程来了解这里每一个历史和旅游细节。如果我不知道某些事情，我会把您转接给我们的人工团队，好吗？"
     }
   },
 
@@ -99,7 +108,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A Gigóia é um paraíso gastronômico! 🍤 Temos excelentes restaurantes de frutos do mar (como Ocyá e Laguna), lanches rápidos, cafés e botecos raiz. Veja nossa lista completa de locais na página <a href='restaurantes.html'>Onde Comer</a>.",
       en: "Gigóia is a gastronomic paradise! 🍤 We have excellent seafood restaurants (like Ocyá and Laguna), quick snacks, cafes, and traditional pubs. See our full list on the <a href='restaurantes.html'>Where to Eat</a> page.",
-      es: "¡Gigóia es un paraíso gastronómico! 🍤 Tenemos excelentes restaurantes de mariscos (como Ocyá y Laguna), comida rápida, cafeterías y tabernas. Mira nuestra lista completa en la página <a href='restaurantes.html'>Dónde Comer</a>."
+      es: "¡Gigóia es un paraíso gastronómico! 🍤 Tenemos excelentes restaurantes de mariscos (como Ocyá y Laguna), comida rápida, cafeterías y tabernas. Mira nuestra lista completa en la página <a href='restaurantes.html'>Dónde Comer</a>.",
+      zh: "当然！🍽️ 岛上的美食是亮点之一。对于高级美食，我推荐<a href='restaurante-ocya.html'>欧希亚</a>（米其林认可）。对于传统美食，<a href='restaurante-laguna.html'>拉古纳</a>是先驱。寻找轻松的地方？<a href='restaurante-deck-bar.html'>甲板酒吧</a>以菠萝虾而闻名！"
     }
   },
   {
@@ -107,7 +117,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Os passeios de barco são a alma da ilha! 🚤 Recomendamos muito o tour pelo <a href='pantanal-carioca.html'>Pantanal Carioca</a> (para ver a natureza) ou o mergulho nas <a href='ilhas-tijucas.html'>Ilhas Tijucas</a>. Veja todas as rotas em <a href='passeios-rotas.html'>Passeios</a>.",
       en: "Boat tours are the soul of the island! 🚤 We highly recommend the <a href='pantanal-carioca.html'>Carioca Pantanal</a> tour (to see nature) or diving in the <a href='ilhas-tijucas.html'>Tijucas Islands</a>. See all routes in <a href='passeios-rotas.html'>Tours</a>.",
-      es: "¡Los paseos en bote son el alma de la isla! 🚤 Recomendamos mucho el tour por el <a href='pantanal-carioca.html'>Pantanal Carioca</a> o bucear en las <a href='ilhas-tijucas.html'>Islas Tijucas</a>. Ve todas las rutas en <a href='passeios-rotas.html'>Paseos</a>."
+      es: "¡Los paseos en bote son el alma de la isla! 🚤 Recomendamos mucho el tour por el <a href='pantanal-carioca.html'>Pantanal Carioca</a> o bucear en las <a href='ilhas-tijucas.html'>Islas Tijucas</a>. Ve todas las rutas en <a href='passeios-rotas.html'>Paseos</a>.",
+      zh: "多么好的选择！🚤 我们有几个精彩的选项。经典是<a href='pantanal-carioca.html'>里约潘塔纳尔</a>之旅，在那里您可以看到凯门鳄和水豚。对于更冒险的体验，请查看<a href='ilhas-tijucas.html'>蒂茹卡斯群岛</a>之旅，有清澈的水域和海龟！"
     },
     showWhatsapp: true
   },
@@ -116,7 +127,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Dormir aqui é uma paz! 🛏️ Temos pousadas charmosas (como a <a href='pousada-barra.html'>Barra</a> e a <a href='pousada-marisis.html'>Marísis</a>), além de casas de temporada incríveis no Airbnb. Acesse a página <a href='hospedagem.html'>Hospedagem</a> para escolher a sua.",
       en: "Sleeping here is peaceful! 🛏️ We have charming inns (like <a href='pousada-barra.html'>Barra</a> and <a href='pousada-marisis.html'>Marísis</a>), plus amazing Airbnb vacation homes. Visit the <a href='hospedagem.html'>Accommodation</a> page to choose yours.",
-      es: "¡Dormir aquí es pura paz! 🛏️ Tenemos posadas encantadoras (como <a href='pousada-barra.html'>Barra</a> y <a href='pousada-marisis.html'>Marísis</a>), además de increíbles casas Airbnb. Visita la página de <a href='hospedagem.html'>Alojamiento</a>."
+      es: "¡Dormir aquí es pura paz! 🛏️ Tenemos posadas encantadoras (como <a href='pousada-barra.html'>Barra</a> y <a href='pousada-marisis.html'>Marísis</a>), además de increíbles casas Airbnb. Visita la página de <a href='hospedagem.html'>Alojamiento</a>.",
+      zh: "完美！🏡 我们有各种住宿选择。对于旅馆，<a href='pousada-barra.html'>巴拉旅馆</a>非常传统。对于整栋房子，<a href='casa-estatua.html'>雕像之家</a>可容纳最多16人！想要更多选项吗？请访问我们的<a href='hospedagem.html'>住宿</a>页面。"
     },
     showWhatsapp: true
   },
@@ -129,7 +141,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A história é fascinante! 📜 Geólogos dizem que há 17 mil anos o nível do mar era 70 metros mais baixo e batia no maciço da Pedra Branca. A erosão e o assoreamento fecharam a passagem, formando a praia da Barra, as lagoas e o nosso arquipélago.",
       en: "The history is fascinating! 📜 Geologists say 17,000 years ago, the sea level was 70m lower and hit the Pedra Branca mountains. Erosion formed Barra beach, the lagoons, and our archipelago.",
-      es: "¡La historia es fascinante! 📜 Los geólogos dicen que hace 17.000 años el mar estaba 70m más bajo y golpeaba las montañas de Pedra Branca. La erosión formó la playa de Barra, las lagunas y nuestro archipiélago."
+      es: "¡La historia es fascinante! 📜 Los geólogos dicen que hace 17.000 años el mar estaba 70m más bajo y golpeaba las montañas de Pedra Branca. La erosión formó la playa de Barra, las lagunas y nuestro archipiélago.",
+      zh: "到达很简单！🚇 最实用的方式是乘坐地铁到花园海洋站。从那里，只需步行几分钟就可以到达渡船点，它全天24小时运营。🚤 租车的话，有停车场可供使用，但岛上不允许汽车进入。"
     }
   },
   {
@@ -137,7 +150,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Ganhamos o apelido de 'Veneza Carioca' porque somos um arquipélago cercado de canais navegáveis, sem carros, onde a vida flui em barcos, num clima bucólico que contrasta com o caos da metrópole. 🚤",
       en: "We earned the nickname 'Carioca Venice' because we are an archipelago surrounded by canals, with no cars, where life flows on boats, contrasting with the city's chaos. 🚤",
-      es: "Ganamos el apodo de 'Venecia Carioca' porque somos un archipiélago rodeado de canales, sin autos, donde la vida fluye en botes, contrastando con el caos de la metrópoli. 🚤"
+      es: "Ganamos el apodo de 'Venecia Carioca' porque somos un archipiélago rodeado de canales, sin autos, donde la vida fluye en botes, contrastando con el caos de la metrópoli. 🚤",
+      zh: "这里真的很特别！🐊 岛上最受欢迎的动物是宽吻凯门鳄（非常温顺！）、水豚和各种鸟类，如苍鹭和科鸟。如果您乘船游览运河，一定会看到它们的！"
     }
   },
   {
@@ -145,7 +159,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Curiosidade: A Gigóia na verdade eram 3 ilhas! 🏝️ A Ilha da Gigóia, dos Coronéis e Guaimun. O canal que dividia elas secou com o tempo e hoje se transformou na famosa Rua dos Colibris!",
       en: "Fun fact: Gigóia was originally 3 islands! 🏝️ Gigóia, Coronéis, and Guaimun. The dividing canal dried up and is now the famous Colibris Street!",
-      es: "Dato curioso: ¡Gigóia eran originalmente 3 islas! 🏝️ Gigóia, Coronéis y Guaimun. ¡El canal que las dividía se secó y ahora es la famosa Calle Colibris!"
+      es: "Dato curioso: ¡Gigóia eran originalmente 3 islas! 🏝️ Gigóia, Coronéis y Guaimun. ¡El canal que las dividía se secó y ahora es la famosa Calle Colibris!",
+      zh: "岛上有很多很棒的地方！🍺 <a href='bar-ak.html'>AK酒吧</a>以日落而闻名。<a href='bar-briza.html'>吉戈亚微风</a>在周末有桑巴。<a href='bar-capivara.html'>水豚小馆</a>面朝泻湖，视野绝佳。还有更多！"
     }
   },
   {
@@ -153,7 +168,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "No passado, a ilha tinha uma ponte de madeira com acesso direto para a Av. das Américas! 🌉 Com o tempo e o crescimento, ela foi demolida. Hoje o isolamento (acesso 100% por barco) é o nosso maior charme.",
       en: "In the past, the island had a wooden bridge connecting to Av. das Américas! 🌉 It was demolished over time. Today, the 100% boat access is our greatest charm.",
-      es: "En el pasado, la isla tenía un puente de madera que conectaba con la Av. das Américas. 🌉 Fue demolido con el tiempo. Hoy, el acceso 100% en bote es nuestro mayor encanto."
+      es: "En el pasado, la isla tenía un puente de madera que conectaba con la Av. das Américas. 🌉 Fue demolido con el tiempo. Hoy, el acceso 100% en bote es nuestro mayor encanto.",
+      zh: "主要渡船（地铁附近）约为R$ 2至R$ 5，视时间而定。🚤 私人游览行程因路线和时长而异——请通过WhatsApp联系我们获取确切报价！"
     }
   },
   {
@@ -161,7 +177,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A ocupação da ilha começou de forma singela com pescadores. 🎣 Eles viviam da pesca do camarão em águas tão limpas que se via a areia branca do fundo. Com a mídia, o paraíso foi descoberto e a ocupação cresceu.",
       en: "The island's occupation started simply with fishermen catching shrimp in waters so clean you could see the white sand. 🎣 Then the media discovered the paradise.",
-      es: "La ocupación de la isla comenzó con pescadores que atrapaban camarones en aguas tan limpias que se veía la arena blanca. 🎣 Luego los medios descubrieron el paraíso."
+      es: "La ocupación de la isla comenzó con pescadores que atrapaban camarones en aguas tan limpias que se veía la arena blanca. 🎣 Luego los medios descubrieron el paraíso.",
+      zh: "是的！😊 几乎所有岛上的旅馆、餐厅和酒吧都提供免费Wi-Fi。信号通常很好，虽然在一些较偏僻的地方运营商信号（4G/5G）可能会不稳定。"
     }
   },
   {
@@ -169,7 +186,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A Ilha da Gigóia foi a que mais sofreu com o crescimento rápido. Hoje abriga cerca de 7 mil moradores! Todo o complexo lagunar junto soma quase 12 mil pessoas morando no arquipélago. 🏘️",
       en: "Gigóia Island grew the fastest. Today it houses about 7,000 residents! The whole lagoon complex totals nearly 12,000 people living in the archipelago. 🏘️",
-      es: "La Isla de Gigóia fue la que más creció. ¡Hoy alberga a unos 7.000 residentes! Todo el complejo de la laguna suma casi 12.000 personas viviendo en el archipiélago. 🏘️"
+      es: "La Isla de Gigóia fue la que más creció. ¡Hoy alberga a unos 7.000 residentes! Todo el complejo de la laguna suma casi 12.000 personas viviendo en el archipiélago. 🏘️",
+      zh: "很多住宿都允许携带宠物！🐾 例如，<a href='casa-venti.html'>文蒂之家</a>和<a href='casa-goia.html'>戈亚之家</a>通常接受小型宠物（需提前确认）。建议通过WhatsApp联系我们，以便我们验证每个地方的具体政策。"
     }
   },
   {
@@ -177,7 +195,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Curiosidade fundiária: Todos os terrenos pertencem à União. Em 1981, um decreto da Prefeitura transformou a área em 'non edificandi'. Por conta da fiscalização precária no passado, a maioria das casas hoje não possui inscrição formal de IPTU. 🏢",
       en: "Land curiosity: All land here belongs to the Federal Government. A 1981 decree banned residential building, so most houses today lack formal city tax registration (IPTU). 🏢",
-      es: "Curiosidad de tierras: Todo el terreno pertenece a la Unión (Gobierno). Un decreto de 1981 prohibió construir, por lo que la mayoría de las casas no pagan impuesto municipal formal (IPTU). 🏢"
+      es: "Curiosidad de tierras: Todo el terreno pertenece a la Unión (Gobierno). Un decreto de 1981 prohibió construir, por lo que la mayoría de las casas no pagan impuesto municipal formal (IPTU). 🏢",
+      zh: "非常适合带孩子！👨‍👩‍👧‍👦 <a href='bar-kauai.html'>考艾美食休闲吧</a>有儿童游乐区。岛上禁止汽车，使其成为孩子们安全行走的环境。带他们去看野生动物——他们一定会爱上凯门鳄和水豚的！"
     }
   },
   {
@@ -185,7 +204,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A urbanização desordenada trouxe desafios: o consumo de água aumentou e a falta de tratamento de esgoto gerou poluição e assoreamento da lagoa. 🌿 Mesmo com o desgaste do progresso, a natureza resiste bravamente e é nosso maior tesouro.",
       en: "Disorderly urbanization brought challenges: lack of sewage treatment caused pollution and lagoon silting. 🌿 Even with this wear, nature resists and is our greatest treasure.",
-      es: "La urbanización desordenada trajo desafíos: la falta de tratamiento de aguas residuales causó contaminación y sedimentación. 🌿 A pesar de esto, la naturaleza resiste y es nuestro mayor tesoro."
+      es: "La urbanización desordenada trajo desafíos: la falta de tratamiento de aguas residuales causó contaminación y sedimentación. 🌿 A pesar de esto, la naturaleza resiste y es nuestro mayor tesoro.",
+      zh: "当然！🚗 在渡船点附近有停车场。最实用的是接近花园海洋地铁站的停车场。记住：汽车不能进入岛屿，只能留在渡口区域。"
     }
   },
   {
@@ -193,7 +213,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Lógico que vale a pena! 😍 Apesar dos desafios urbanos, a Gigóia é mágica. É uma mistura de clima de interior, paz, alta gastronomia e natureza incrível a apenas 5 minutos da metrópole caótica.",
       en: "Of course it's worth it! 😍 Despite urban challenges, Gigóia is magical. It's a mix of countryside peace, high gastronomy, and incredible nature just 5 mins from the chaotic city.",
-      es: "¡Lógico que vale la pena! 😍 A pesar de los desafíos urbanos, Gigóia es mágica. Es una mezcla de paz pueblerina, alta gastronomía y naturaleza increíble a 5 mins de la ciudad."
+      es: "¡Lógico que vale la pena! 😍 A pesar de los desafíos urbanos, Gigóia es mágica. Es una mezcla de paz pueblerina, alta gastronomía y naturaleza increíble a 5 mins de la ciudad.",
+      zh: "我的主要建议是：提前预订餐厅和游览，特别是在周末和节假日，因为岛上总是很热闹！🌴 此外，带上驱蚊剂、穿舒适的鞋子，并留出一整天——一旦您到了那里，就不想离开了！"
     }
   },
   {
@@ -201,7 +222,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "O Allan do Hostel Barra Lake é uma lenda viva daqui! Ele mora na ilha há mais de 40 anos e viu a Barra da Tijuca nascer. E quem cuida da propriedade com ele é a sua simpática cachorrinha Lola. 🐶",
       en: "Allan from Hostel Barra Lake is a local legend! He has lived here for over 40 years and saw Barra da Tijuca be built. His friendly dog Lola helps him look after the property. 🐶",
-      es: "¡Allan del Hostel Barra Lake es una leyenda local! Vive aquí hace más de 40 años. Su simpática perra Lola lo ayuda a cuidar la propiedad. 🐶"
+      es: "¡Allan del Hostel Barra Lake es una leyenda local! Vive aquí hace más de 40 años. Su simpática perra Lola lo ayuda a cuidar la propiedad. 🐶",
+      zh: "吉戈亚岛是里约热内卢最安全的地方之一。🌴 由于没有汽车通行，街道对行人非常友好。与任何地方一样，保持正常的安全措施即可，享受放松的环境！"
     }
   },
   {
@@ -209,7 +231,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A história do nosso transporte é linda! 🛶 Começou só com barcos a remo. O serviço de chalana surgiu com Antônio, Zé Iris e Zé Grande (que só operavam de dia). O transporte noturno só foi inventado anos depois, pelo Seu João!",
       en: "Our transport history is beautiful! 🛶 It started with rowboats. The 'chalana' service was created by locals like Antônio. Night transport was only invented years later by Seu João!",
-      es: "¡Nuestra historia de transporte es hermosa! 🛶 Comenzó con botes de remos. El servicio de 'chalana' fue creado por lugareños como Antônio. ¡El transporte nocturno fue inventado años después por Seu João!"
+      es: "¡Nuestra historia de transporte es hermosa! 🛶 Comenzó con botes de remos. El servicio de 'chalana' fue creado por lugareños como Antônio. ¡El transporte nocturno fue inventado años después por Seu João!",
+      zh: "当然！📱 在Instagram上关注我们 <a href='https://www.instagram.com/ilha.da.gigoia' target='_blank'>@ilha.da.gigoia</a> 以获取最新照片、活动和小贴士。我们的TikTok和YouTube也有精彩内容！"
     }
   },
   {
@@ -217,7 +240,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Em 2015 o transporte evoluiu: o morador Nilson Simão criou o Barco Táxi (Simão Express)! 🚤 Hoje ele tem barcos legalizados funcionando das 6h às 0h e até oferece 'Cartão Fidelidade' com descontos para os moradores economizarem.",
       en: "In 2015, local Nilson created the Boat Taxi (Simão Express)! 🚤 They run from 6 AM to midnight and offer a Loyalty Card with discounts for residents.",
-      es: "En 2015, el residente Nilson creó el Barco Taxi (Simão Express). 🚤 Funcionan de 6 am a medianoche y ofrecen una Tarjeta de Fidelidad con descuentos para residentes."
+      es: "En 2015, el residente Nilson creó el Barco Taxi (Simão Express). 🚤 Funcionan de 6 am a medianoche y ofrecen una Tarjeta de Fidelidad con descuentos para residentes.",
+      zh: "🌊 吉戈亚岛的泻湖是吉戈亚泻湖的一部分，它是巴拉达蒂茹卡泻湖体系的一部分。这是一个平静而美丽的环境，周围有丰富的野生动植物——里约真正的卡里奥卡潘塔纳尔！"
     }
   },
 
@@ -229,7 +253,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A grande maioria dos estabelecimentos aceita PIX e Cartão! 💳 Porém, tenha sempre dinheiro vivo (notas trocadas) para pagar a travessia das chalanas. Não temos caixa eletrônico dentro da ilha.",
       en: "The vast majority of places accept PIX and Cards! 💳 However, always carry small cash for the boat crossings. We do not have an ATM on the island.",
-      es: "¡La gran mayoría acepta PIX y Tarjeta! 💳 Sin embargo, siempre lleva efectivo pequeño para los cruces en bote. No tenemos cajero automático en la isla."
+      es: "¡La gran mayoría acepta PIX y Tarjeta! 💳 Sin embargo, siempre lleva efectivo pequeño para los cruces en bote. No tenemos cajero automático en la isla.",
+      zh: "🏛️ 吉戈亚岛有着丰富的历史！这里曾是渔民和水手的聚居地。随着时间的推移，它成为了里约一个独特的旅游目的地，以其平静、自然和美食而著称。了解更多请访问我们的<a href='historia-cultura.html'>历史与文化</a>页面！"
     }
   },
   {
@@ -237,7 +262,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Dica de ouro: Como estamos inseridos no Pantanal Carioca, especialmente no final da tarde, é super recomendável trazer um repelente! 🦟 Assim você curte o pôr do sol sem preocupações.",
       en: "Golden tip: Since we are in the Carioca Pantanal, especially in the late afternoon, it is highly recommended to bring bug repellent! 🦟",
-      es: "Consejo de oro: Como estamos en el Pantanal Carioca, especialmente al final de la tarde, ¡es muy recomendable traer repelente de insectos! 🦟"
+      es: "Consejo de oro: Como estamos en el Pantanal Carioca, especialmente al final de la tarde, ¡es muy recomendable traer repelente de insectos! 🦟",
+      zh: "<a href='pousada-barra.html'>蒂茹卡巴拉旅馆</a>非常传统且位置优越：最靠近地铁渡口。🌴"
     }
   },
   {
@@ -245,7 +271,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A ilha tem um charme rústico com ruelas estreitas. Para melhor acessibilidade, recomendamos ir de barco direto para o deck de locais preparados como o <a href='restaurante-laguna.html'>Laguna</a> ou <a href='bar-kauai.html'>Kauai</a>.",
       en: "The island has narrow rustic streets. For better accessibility, we recommend going by boat directly to the deck of places like <a href='restaurante-laguna.html'>Laguna</a> or <a href='bar-kauai.html'>Kauai</a>.",
-      es: "La isla tiene calles rústicas y estrechas. Para mayor accesibilidad, recomendamos ir en bote directamente al muelle de lugares como <a href='restaurante-laguna.html'>Laguna</a> o <a href='bar-kauai.html'>Kauai</a>."
+      es: "La isla tiene calles rústicas y estrechas. Para mayor accesibilidad, recomendamos ir en bote directamente al muelle de lugares como <a href='restaurante-laguna.html'>Laguna</a> o <a href='bar-kauai.html'>Kauai</a>.",
+      zh: "<a href='pousada-marisis.html'>玛丽西斯旅馆</a>是寻求绝对安静和无可挑剔清洁度的人的完美避难所。🌺"
     }
   },
   {
@@ -253,7 +280,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Temos 2 farmácias pequenas na ilha, mas para emergências ou hospitais, logo ali na Av. Armando Lombardi (a 5 min de barco) você encontra clínicas e grandes drogarias 24h. 🏥",
       en: "We have 2 small pharmacies on the island. For emergencies, just on Armando Lombardi Ave. (5 mins by boat) you can find hospitals and 24h drugstores. 🏥",
-      es: "Tenemos 2 farmacias pequeñas en la isla. Para emergencias, en la Av. Armando Lombardi (a 5 minutos en bote) encontrarás hospitales y farmacias 24h. 🏥"
+      es: "Tenemos 2 farmacias pequeñas en la isla. Para emergencias, en la Av. Armando Lombardi (a 5 minutos en bote) encontrarás hospitales y farmacias 24h. 🏥",
+      zh: "<a href='veneza-carioca.html'>里约威尼斯</a>是一家超级浪漫而私密的精品酒店，位于伊岛一号。✨"
     }
   },
   {
@@ -261,7 +289,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A Gigóia é linda o ano todo! ☀️ No verão os dias são perfeitos para esportes aquáticos, e no inverno o clima ameno é ideal para a gastronomia. Confira em <a href='melhor-epoca.html'>Melhor Época para Visitar</a>.",
       en: "Gigóia is beautiful all year round! ☀️ Summer is perfect for water sports, and winter has a mild climate ideal for gastronomy. Check <a href='melhor-epoca.html'>Best Time to Visit</a>.",
-      es: "¡Gigóia es hermosa todo el año! ☀️ El verano es perfecto para deportes acuáticos, y el invierno es ideal para la gastronomía. Revisa <a href='melhor-epoca.html'>Mejor Época para Visitar</a>."
+      es: "¡Gigóia es hermosa todo el año! ☀️ El verano es perfecto para deportes acuáticos, y el invierno es ideal para la gastronomía. Revisa <a href='melhor-epoca.html'>Mejor Época para Visitar</a>.",
+      zh: "想要完全私密？我们有令人惊叹的Airbnb，如<a href='casa-venti.html'>文蒂之家</a>、<a href='casa-goia.html'>戈亚之家</a>或宏伟的<a href='casa-estatua.html'>雕像之家</a>。通过WhatsApp联系我们获取价格！"
     }
   },
 
@@ -273,7 +302,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "O acesso principal fica meio escondido! É uma ruela entre o Posto de Gasolina e o prédio espelhado da Unimed, na Av. Armando Lombardi. É ali que ficam os barcos! 📍",
       en: "The main access is a bit hidden! It's a narrow street between the Gas Station and the mirrored Unimed building on Armando Lombardi Ave. That's where the boats are! 📍",
-      es: "¡El acceso principal está un poco escondido! Es una calle estrecha entre la gasolinera y el edificio de Unimed en la Av. Armando Lombardi. ¡Allí están los botes! 📍"
+      es: "¡El acceso principal está un poco escondido! Es una calle estrecha entre la gasolinera y el edificio de Unimed en la Av. Armando Lombardi. ¡Allí están los botes! 📍",
+      zh: "<a href='casanova.html'>卡萨诺瓦</a>是一个豪华的避难所，拥有独特的建筑设计、美食厨房和面向泻湖的专属氛围。✨"
     }
   },
   {
@@ -281,7 +311,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Chegar aqui é super fácil! 📍 A melhor opção é ir de Metrô (estação Jardim Oceânico - Saída Lagoa). Veja o passo a passo na nossa página <a href='como-chegar.html'>Como Chegar</a>.",
       en: "Getting here is super easy! 📍 The best option is the Subway (Jardim Oceânico station). See the step-by-step guide on our <a href='como-chegar.html'>How to Get Here</a> page.",
-      es: "¡Llegar aquí es muy fácil! 📍 La mejor opción es el metro (estación Jardim Oceânico). Vea la guía paso a paso en nuestra página <a href='como-chegar.html'>Cómo Llegar</a>."
+      es: "¡Llegar aquí es muy fácil! 📍 La mejor opción es el metro (estación Jardim Oceânico). Vea la guía paso a paso en nuestra página <a href='como-chegar.html'>Cómo Llegar</a>.",
+      zh: "<a href='casa-estatua.html'>雕像之家</a>非常适合团体！有私人泳池，可舒适容纳最多16人。🏊‍♂️"
     }
   },
   {
@@ -289,7 +320,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A ilha não tem carros! 🚫🚗 Se vier de carro, recomendamos os estacionamentos particulares na Av. Armando Lombardi, 350. Veja detalhes em <a href='como-chegar.html'>Como Chegar</a>.",
       en: "The island has no cars! 🚫🚗 If you come by car, we recommend the private parking lots at 350 Armando Lombardi Ave. See details at <a href='como-chegar.html'>How to Get Here</a>.",
-      es: "¡La isla no tiene coches! 🚫🚗 Si vienes en coche, te recomendamos los aparcamientos privados en la Av. Armando Lombardi, 350. Consulta los detalles en <a href='como-chegar.html'>Cómo Llegar</a>."
+      es: "¡La isla no tiene coches! 🚫🚗 Si vienes en coche, te recomendamos los aparcamientos privados en la Av. Armando Lombardi, 350. Consulta los detalles en <a href='como-chegar.html'>Cómo Llegar</a>.",
+      zh: "<a href='lux-48.html'>豪华48号</a>是一个超现代的概念工作室，设计大胆，非常适合情侣。🖤"
     }
   },
   {
@@ -297,7 +329,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "As chalanas funcionam 24h! 🚤 O valor varia entre R$ 2,00 e R$ 5,00. Você só precisa dizer o nome do restaurante para o barqueiro te deixar no deck certo.",
       en: "The chalanas (boats) run 24/7! 🚤 The price varies between R$ 2.00 and R$ 5.00. Just tell the boatman the restaurant's name to get dropped off at the right deck.",
-      es: "¡Las chalanas (botes) funcionan las 24 horas! 🚤 El valor varía entre R$ 2,00 y R$ 5,00. Solo dile al barquero el nombre del restaurante para que te deje en el muelle correcto."
+      es: "¡Las chalanas (botes) funcionan las 24 horas! 🚤 El valor varía entre R$ 2,00 y R$ 5,00. Solo dile al barquero el nombre del restaurante para que te deje en el muelle correcto.",
+      zh: "<a href='casa-goia.html'>戈亚之家</a>是一个壮观的复式公寓，适合想要像岛上居民一样生活几天的家庭。🏡"
     }
   },
   {
@@ -305,7 +338,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Sim! Somos Pet Friendly 🐾. Casas de temporada como a <a href='casa-venti.html'>Casa Venti</a> aceitam pets e vários bares também. Confira dicas em <a href='boas-praticas.html'>Boas Práticas</a>.",
       en: "Yes! We are Pet Friendly 🐾. Houses like <a href='casa-venti.html'>Casa Venti</a> and many bars accept pets. Check out our tips in <a href='boas-praticas.html'>Good Practices</a>.",
-      es: "¡Sí! Somos Pet Friendly 🐾. Casas como <a href='casa-venti.html'>Casa Venti</a> y varios bares aceptan mascotas. Consulta nuestros consejos en <a href='boas-praticas.html'>Buenas Prácticas</a>."
+      es: "¡Sí! Somos Pet Friendly 🐾. Casas como <a href='casa-venti.html'>Casa Venti</a> y varios bares aceptan mascotas. Consulta nuestros consejos en <a href='boas-praticas.html'>Buenas Prácticas</a>.",
+      zh: "梦想场景！🎉 对于大型活动，我们有宏伟的<a href='solar-palmeiras.html'>里约棕榈庄园</a>，对于私密活动则有<a href='gaivota.html'>海鸥空间</a>。请向我们的团队申请报价！"
     }
   },
   {
@@ -313,7 +347,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Ajude-nos a preservar nosso paraíso! 🗑️🌿 É fundamental respeitar os moradores com relação ao barulho e nunca jogar lixo na lagoa. Veja a página <a href='boas-praticas.html'>Boas Práticas</a>.",
       en: "Help us preserve our paradise! 🗑️🌿 It is essential to respect residents regarding noise and never throw trash in the lagoon. See the <a href='boas-praticas.html'>Good Practices</a> page.",
-      es: "¡Ayúdanos a preservar nuestro paraíso! 🗑️🌿 Es fundamental respetar a los residentes en cuanto al ruido y nunca arrojar basura a la laguna. Vea la página <a href='boas-praticas.html'>Buenas Prácticas</a>."
+      es: "¡Ayúdanos a preservar nuestro paraíso! 🗑️🌿 Es fundamental respetar a los residentes en cuanto al ruido y nunca arrojar basura a la laguna. Vea la página <a href='boas-praticas.html'>Buenas Prácticas</a>.",
+      zh: "<a href='solar-palmeiras.html'>里约棕榈庄园</a>是一座美丽的殖民庄园！是里约在泻湖边举办户外婚礼最受欢迎的场所之一。🏛️"
     }
   },
   {
@@ -321,7 +356,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "A Gigóia é a maior, mas fazemos parte do complexo lagunar que inclui a charmosíssima Ilha Primeira (onde ficam o Salomé e o Veneza Carioca) e a Ilha de São Jorge! 🏝️",
       en: "Gigóia is the largest, but we are part of a lagoon complex that includes the charming Ilha Primeira (home to Salomé and Veneza Carioca) and Ilha de São Jorge! 🏝️",
-      es: "Gigóia es la más grande, pero somos parte del complejo lagunar que incluye la encantadora Ilha Primeira (donde están Salomé y Veneza Carioca) y la Ilha de São Jorge. 🏝️"
+      es: "Gigóia es la más grande, pero somos parte del complejo lagunar que incluye la encantadora Ilha Primeira (donde están Salomé y Veneza Carioca) y la Ilha de São Jorge. 🏝️",
+      zh: "<a href='gaivota.html'>海鸥空间</a>位于伊岛一号，提供超级优雅而私密的氛围，适合专属聚会。🥂"
     }
   },
   {
@@ -329,7 +365,8 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Nossa ilha hoje é autossuficiente! 🛒 Nas ruas de terra batida você encontra 2 mercadinhos, farmácias, lojas de material de construção, hortifrúti, pet shops e dezenas de comércios.",
       en: "Our island is self-sufficient today! 🛒 On the dirt streets you will find 2 markets, pharmacies, hardware stores, produce markets, pet shops, and dozens of businesses.",
-      es: "¡Nuestra isla hoy es autosuficiente! 🛒 En las calles de tierra encontrarás 2 mercados, farmacias, ferreterías, fruterías, tiendas de mascotas y decenas de negocios."
+      es: "¡Nuestra isla hoy es autosuficiente! 🛒 En las calles de tierra encontrarás 2 mercados, farmacias, ferreterías, fruterías, tiendas de mascotas y decenas de negocios.",
+      zh: "我们的岛屿充满活力！总是有美食节、爵士音乐会和桑巴在举行。查看我们的<a href='agenda-cultural.html'>文化日程</a>了解一切！📅"
     }
   },
 
