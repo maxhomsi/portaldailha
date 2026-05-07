@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   
   <title>História e Cultura da Ilha da Gigóia | Portal Oficial</title>
@@ -19,7 +19,11 @@
 
   <link rel="canonical" href="https://www.ilhadagigoia.com.br/historia-cultura.html" />
   <link rel="canonical" href="https://www.ilhadagigoia.com.br/historia-cultura.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>body{opacity:1!important}</style></noscript>
 </head>
 <body data-page="a-ilha">
   
@@ -36,17 +40,16 @@
     </section>
 
     <section class="section" style="padding-top:10px; padding-bottom: 0;">
-      <div class="container">
-        <div class="tipRow reveal" style="margin-bottom: 20px;">
-          <div class="capi">
-            <div class="capi__ring">
-              <img id="capiImg" src="assets/capi.png" alt="Capi" />
-            </div>
-            <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
-          </div>
-          <div class="tip">
-            <p id="tipText" style="color:var(--text); font-size:16px; line-height:1.6; font-weight:600; margin:0;"></p>
-          </div>
+      <div class="container" style="max-width: 900px;">
+        <div class="reveal" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-soft);">
+          <iframe
+            src="https://globoplay.globo.com/v/4979611/embed/"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="Ilha da Gigóia — Documentário"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+          </iframe>
         </div>
       </div>
     </section>
@@ -124,9 +127,9 @@
     <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
   <script src="dicionario.js"></script>
-  <script src="cerebro-gigi.js"></script>
   <script src="dicas-capi.js"></script>
   <script src="app.js"></script>
-  <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
+  <script src="cerebro-gigi.js"></script>
+
 </body>
 </html>
