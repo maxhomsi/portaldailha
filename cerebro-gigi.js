@@ -814,7 +814,7 @@ const GIGI_BRAIN = [
 // Chamada quando nenhuma keyword do GIGI_BRAIN é encontrada
 // =========================================================
 async function askGigiAI(message, lang) {
-  const KEY = 'AIzaSyDkWCLbmWTPgrBTw600xlUJrDIOGBkxktk';
+  const KEY = 'AIzaSyDsTS2WtUYn7W-G18q3v1ll0UlQyd7uIJk';
   const URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + KEY;
 
   const sys = {
