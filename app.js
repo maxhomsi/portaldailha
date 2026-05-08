@@ -487,6 +487,52 @@ window.gigiAsk = function(questionId) {
                lang === 'es' ? "¡Es súper fácil! Bájate en la estación de metro Jardim Oceânico (Salida Lagoa) y camina 5 min hasta los muelles. Los botes funcionan las 24 hrs y cuestan aprox R$ 5,00." : 
                "É super fácil! Salte na estação de metrô Jardim Oceânico (Saída Lagoa) e caminhe 5 minutos até os decks. As chalanas funcionam 24h e a travessia custa em média R$ 5,00. Posso te ajudar com mais alguma coisa?";
   } 
+  else if (questionId === 'onde_comer') {
+    userText = lang === 'en' ? "Restaurants & Bars" : lang === 'es' ? "¿Dónde comer?" : lang === 'zh' ? "餐厅与酒吧" : "Onde comer e beber?";
+    botReply = lang === 'en'
+      ? "🍽️ <b>Restaurants:</b> Ocyá (Michelin ⭐), Laguna (pioneer since 2002), Deck Bar (pineapple shrimp 🍍), Cais Bar (open-bar snacks), Salomé al Mare, Maracujá da Ilha, Venne Gastronomia, Camarão da Barra, Alla Pergola (Italian 🍕).<br><br>🍺 <b>Bars:</b> AK Bar (best sunset 🌅), Briza da Gigóia (live samba), Bar Caiçara (cultural), Dona Capivara (lagoon view), Bar do Elson (best roasted chicken 🍗), Kauai Gastrolounge (kids area).<br><br>☕ <b>Cafés:</b> Cantinho do Café, Café Poesia."
+      : lang === 'es'
+      ? "🍽️ <b>Restaurantes:</b> Ocyá (Michelin ⭐), Laguna (pionero desde 2002), Deck Bar (camarón en piña 🍍), Cais Bar (rodízio con barra libre), Salomé al Mare, Maracujá da Ilha, Venne Gastronomia, Camarão da Barra, Alla Pergola (italiana 🍕).<br><br>🍺 <b>Bares:</b> AK Bar (mejor atardecer 🌅), Briza da Gigóia (samba en vivo), Bar Caiçara (cultural), Dona Capivara (vista laguna), Bar do Elson (mejor pollo 🍗), Kauai Gastrolounge (área kids)."
+      : lang === 'zh'
+      ? "🍽️ <b>餐厅：</b>欧希亚（米其林⭐）、拉古纳（2002年起）、甲板酒吧（菠萝虾🍍）、码头酒吧（含无限饮品）、萨洛梅、岛上百香果、文内、巴拉虾、阿拉佩尔戈拉（意大利料理🍕）。<br><br>🍺 <b>酒吧：</b>AK酒吧（最佳日落🌅）、吉戈亚微风（现场桑巴）、海滨酒吧（文化）、多娜水豚（泻湖景观）、埃尔森酒吧（最佳烤鸡🍗）、考艾美食休闲吧（儿童区）。"
+      : "🍽️ <b>Restaurantes:</b> Ocyá (Michelin ⭐), Laguna (desde 2002), Deck Bar (camarão no abacaxi 🍍), Cais Bar (rodízio com bebida livre), Salomé al Mare, Maracujá da Ilha, Venne Gastronomia, Camarão da Barra, Alla Pergola (italiana 🍕).<br><br>🍺 <b>Bares:</b> AK Bar (pôr do sol 🌅), Briza da Gigóia (samba ao vivo 🎶), Bar Caiçara (cultural), Dona Capivara (vista lagoa), Bar do Elson (melhor frango 🍗), Bar da Joana (comida caseira), Kauai Gastrolounge (área kids).<br><br>☕ <b>Cafés:</b> Cantinho do Café, Café Poesia.";
+  }
+  else if (questionId === 'hospedagem') {
+    userText = lang === 'en' ? "Where to stay?" : lang === 'es' ? "¿Dónde dormir?" : lang === 'zh' ? "住宿选择" : "Onde me hospedar?";
+    botReply = lang === 'en'
+      ? "🛌 <b>Inns:</b> Pousada Barra da Tijuca (R$220+/night), Pousada Marísis (R$200+/night, very quiet), Veneza Carioca Hotel Boutique (R$250+/night, romantic ❤️).<br><br>🏡 <b>Airbnb/Houses:</b> Casa Venti (7 people, R$450, pets 🐾), Casa Goiá (8 people, R$500), Casa da Estátua (16 people + pool 🏊, R$1.500), Lux 48 (couples, R$250), Casanova (luxury, unique design ✨)."
+      : lang === 'es'
+      ? "🛌 <b>Posadas:</b> Pousada Barra da Tijuca (R$220+/noche), Pousada Marísis (R$200+/noche, muy silenciosa), Veneza Carioca Hotel Boutique (R$250+/noche, romántico ❤️).<br><br>🏡 <b>Airbnb/Casas:</b> Casa Venti (7 personas, R$450, mascotas 🐾), Casa Goiá (8 personas, R$500), Casa da Estátua (16 personas + piscina 🏊, R$1.500), Lux 48 (parejas, R$250), Casanova (lujo ✨)."
+      : lang === 'zh'
+      ? "🛌 <b>旅馆：</b>巴拉旅馆（R$220+/晚）、玛丽西斯旅馆（R$200+/晚，非常安静）、里约威尼斯精品酒店（R$250+/晚，浪漫❤️）。<br><br>🏡 <b>Airbnb/整栋房屋：</b>文蒂之家（7人，R$450，允许宠物🐾）、戈亚之家（8人，R$500）、雕像之家（16人+泳池🏊，R$1500）、豪华48号（情侣，R$250）、卡萨诺瓦（豪华✨）。"
+      : "🛌 <b>Pousadas:</b> Pousada Barra da Tijuca (R$220+/noite), Pousada Marísis (R$200+/noite, super silenciosa), Veneza Carioca Hotel Boutique (R$250+/noite, romântico ❤️).<br><br>🏡 <b>Airbnb/Casas:</b> Casa Venti (7 pessoas, R$450, aceita pets 🐾), Casa Goiá (8 pessoas, R$500), Casa da Estátua (16 pessoas + piscina 🏊, R$1.500), Lux 48 (casais, R$250), Casanova (luxo, design único ✨).";
+  }
+  else if (questionId === 'eventos') {
+    userText = lang === 'en' ? "Events & Agenda" : lang === 'es' ? "Eventos del Momento" : lang === 'zh' ? "活动日程" : "Eventos do Momento";
+    const now = new Date();
+    const month = now.getMonth(); // 0=jan, 4=mai, 5=jun
+    let eventsText = '';
+    if (lang === 'en') {
+      eventsText = "🎉 <b>Regular events:</b> Feira Gigoiando (handicrafts & gastronomy, weekends), Jazz & Sunset (monthly), Gastronomy Festival (annual).<br><br>"
+        + "📅 <b>Upcoming:</b> Comida di Buteco (until mid-May 🍺), Festa Junina (June 🎉), Copa do Brasil (Jun 13, 19, 24 ⚽).<br><br>"
+        + "🌅 <b>Best sunset spots:</b> AK Bar, Dona Capivara and Maracujá da Ilha. Want to schedule something special?";
+    } else if (lang === 'es') {
+      eventsText = "🎉 <b>Eventos regulares:</b> Feira Gigoiando (artesanía y gastronomía, fines de semana), Jazz & Sunset (mensual), Festival Gastronómico (anual).<br><br>"
+        + "📅 <b>Próximos:</b> Comida di Buteco (hasta mediados de mayo 🍺), Fiesta Junina (junio 🎉), Copa do Brasil (13, 19 y 24/Jun ⚽).<br><br>"
+        + "🌅 <b>Mejores puntos de atardecer:</b> AK Bar, Dona Capivara y Maracujá da Ilha.";
+    } else if (lang === 'zh') {
+      eventsText = "🎉 <b>常规活动：</b>吉戈亚集市（手工艺品和美食，周末）、爵士与日落（每月）、美食节（每年）。<br><br>"
+        + "📅 <b>近期活动：</b>小馆美食赛（5月中旬前🍺）、六月节（6月🎉）、巴西世界杯（6月13、19、24日⚽）。<br><br>"
+        + "🌅 <b>最佳日落地点：</b>AK酒吧、多娜水豚和岛上百香果。";
+    } else {
+      eventsText = "🎉 <b>Eventos fixos:</b> Feira Gigoiando (artesanato e gastronomia, fins de semana), Jazz & Sunset (mensal), Festival Gastronômico (anual).<br><br>"
+        + "📅 <b>Em destaque agora:</b> Comida di Buteco 2026 — prove os pratos exclusivos do Bar Caiçaras, Bar do Elson e Dona Capivara e vote no favorito! (até meados de maio 🍺)<br><br>"
+        + "⚽ <b>Copa do Mundo 2026:</b> 13/Jun (Brasil x Marrocos), 19/Jun (Brasil x Haiti), 24/Jun (Escócia x Brasil). Curta os jogos com cerveja gelada nos bares da ilha!<br><br>"
+        + "🎉 <b>Festa Junina:</b> Arraial com forró, comidas típicas e muita alegria em junho!<br><br>"
+        + "🌅 <b>Melhores pontos de pôr do sol:</b> AK Bar, Dona Capivara e Maracujá da Ilha. Quer montar um roteiro especial?";
+    }
+    botReply = eventsText;
+  }
   else if (questionId === 'passeios') {
     userText = lang === 'en' ? "Tour Prices" : lang === 'es' ? "Precios de Paseos" : "Como funcionam os passeios?";
     botReply = lang === 'en' ? "We have several options! The Pantanal Carioca tour is ~R$ 50. The Tijucas Islands tour takes 4h and costs ~R$ 150. Want to schedule on WhatsApp?" : 
