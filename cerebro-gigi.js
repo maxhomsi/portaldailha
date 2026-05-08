@@ -756,7 +756,7 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["agenda", "programacao", "hoje", "fim de semana", "o que ta rolando", "festival", "show", "schedule", "weekend"],
+    keywords: ["agenda", "programacao", "o que ta rolando", "festival", "show", "schedule", "fim de semana este", "eventos hoje"],
     reply: {
       pt: "Nossa ilha é viva o tempo todo! 🎵 Sempre tem festival gastronômico, shows de jazz, rodas de samba e eventos especiais. Confira a programação em <a href='agenda-cultural.html'>Agenda Cultural</a>! Aos fins de semana, a ilha fica especialmente animada com música ao vivo!",
       en: "Our island is always alive! 🎵 There's always a food festival, jazz shows, samba circles, and special events. Check the schedule at <a href='agenda-cultural.html'>Cultural Agenda</a>! Weekends are especially lively with live music in various bars!",
