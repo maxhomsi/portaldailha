@@ -317,7 +317,7 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["chuva", "chover", "vai chover", "tempo ruim", "chove", "rain", "bad weather", "lluvia", "clima", "como é o clima", "como esta o tempo", "como está o tempo", "como ta o tempo", "tempo agora", "tempo hoje", "tempo la", "tempo lá", "temperatura agora", "temperatura hoje", "calor", "frio", "quente", "weather", "climate", "temperature", "forecast", "previsao", "previsão", "sol hoje", "nublado", "hace calor", "hace frio", "va a llover", "天气", "下雨"],
+    keywords: ["previsao do tempo", "previsão do tempo", "meteorologia", "vai chover amanha", "temperatura agora", "como esta o clima agora"],
     reply: {
       pt: "__WEATHER__",
       en: "__WEATHER__",
