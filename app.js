@@ -277,6 +277,9 @@ function mountGigiWidget() {
   const btn1 = lang === 'en' ? "📍 How to get there?" : lang === 'es' ? "📍 ¿Cómo llegar?" : lang === 'zh' ? "📍 如何到达小岛？" : "📍 Como chegar na Ilha?";
   const btn2 = lang === 'en' ? "🚤 Tour Prices" : lang === 'es' ? "🚤 Precios de Paseos" : lang === 'zh' ? "🚤 游览价格" : "🚤 Preços de Passeios";
   const btn3 = lang === 'en' ? "💬 Talk on WhatsApp" : lang === 'es' ? "💬 Hablar en WhatsApp" : lang === 'zh' ? "💬 通过WhatsApp联系" : "💬 Quero falar no WhatsApp";
+  const btn_comer   = lang === 'en' ? "🍽️ Restaurants & Bars" : lang === 'es' ? "🍽️ Restaurantes y Bares" : lang === 'zh' ? "🍽️ 餐厅与酒吧" : "🍽️ Onde Comer & Beber";
+  const btn_hosped  = lang === 'en' ? "🛌 Where to Stay" : lang === 'es' ? "🛌 Dónde Dormir" : lang === 'zh' ? "🛌 住宿" : "🛌 Hospedagem";
+  const btn_eventos = lang === 'en' ? "🎉 Events & Agenda" : lang === 'es' ? "🎉 Eventos y Agenda" : lang === 'zh' ? "🎉 活动日程" : "🎉 Eventos do Momento";
   const placeholderInput = lang === 'en' ? "Ask something..." : lang === 'es' ? "Pregunta algo..." : lang === 'zh' ? "请提问..." : "Pergunte algo...";
 
   root.innerHTML = `
