@@ -841,3 +841,4 @@ async function askGigiAI(message, lang) {
     return null;
   }
 }
+
