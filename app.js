@@ -309,9 +309,12 @@ function mountGigiWidget() {
 
         </div>
 
-        <div class="gigi-quick-replies" id="gigiOptions" style="margin-top:15px;">
-          <button class="gigi-quick-btn" onclick="gigiAsk('como_chegar')">${btn1}</button>
+        <div class="gigi-quick-replies" id="gigiOptions" style="margin-top:15px; display:flex; flex-direction:column; gap:8px;">
+          <button class="gigi-quick-btn" onclick="gigiAsk('onde_comer')">${btn_comer}</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('hospedagem')">${btn_hosped}</button>
           <button class="gigi-quick-btn" onclick="gigiAsk('passeios')">${btn2}</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('eventos')">${btn_eventos}</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('como_chegar')">${btn1}</button>
           <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">${btn3}</button>
         </div>
 
