@@ -19,16 +19,9 @@ define('GEMINI_MODEL',   'gemini-1.5-flash');
 define('ALLOWED_ORIGIN', 'https://www.ilhadagigoia.com.br');
 
 header('Content-Type: application/json; charset=utf-8');
-
-// Aceitar tanto www quanto sem www
-$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-$allowed = ['https://www.ilhadagigoia.com.br', 'https://ilhadagigoia.com.br', 'http://www.ilhadagigoia.com.br', 'http://ilhadagigoia.com.br'];
-if (in_array($origin, $allowed) || empty($origin)) {
-    header('Access-Control-Allow-Origin: ' . ($origin ?: ALLOWED_ORIGIN));
-}
+header('Access-Control-Allow-Origin: ' . ALLOWED_ORIGIN);
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
-header('Access-Control-Allow-Credentials: false');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(204); exit; }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST')    { http_response_code(405); echo json_encode(['error'=>'Method not allowed']); exit; }
@@ -106,151 +99,66 @@ PASEOS: Pantanal Carioca (~R\$50pp, ver caimanes), Islas Tijucas (~R\$150pp, 4h 
 $system = $prompts[$lang] ?? $prompts['pt'];
 
 
-// =========================================================
-// PREVISÃO DO TEMPO — Open-Meteo (gratuito, sem chave)
-// Chamado automaticamente quando detecta perguntas de clima
-// =========================================================
+// ==========================================
+// PREVISÃO DO TEMPO — Open-Meteo (grátis)
+// ==========================================
 function isWeatherQuestion($msg) {
-    $keywords = ['chuva','chover','vai chover','clima','temperatura','calor','frio','tempo hoje',
-                 'tempo amanhã','previsao','previsão','sol','nublado','vento','umidade',
-                 'rain','weather','hot','cold','temperature','forecast','sunny','cloudy',
-                 'lluvia','clima hoy','temperatura hoy','va a llover','hace calor','hace frio',
-                 '天气','下雨','气温','天气预报','热','冷'];
-    $msg_lower = mb_strtolower($msg);
-    foreach ($keywords as $kw) {
-        if (mb_strpos($msg_lower, $kw) !== false) return true;
-    }
+    $kws = ['chuva','chover','clima','temperatura','calor','frio',
+            'tempo hoje','tempo agora','previsao','previsão',
+            'rain','weather','hot','cold','forecast','lluvia'];
+    $m = mb_strtolower($msg);
+    foreach ($kws as $k) { if (mb_strpos($m, $k) !== false) return true; }
     return false;
 }
 
-function getWeatherContext($lang) {
-    // Open-Meteo — gratuito, sem chave, coordenadas da Ilha da Gigóia
-    $url = 'https://api.open-meteo.com/v1/forecast?' . http_build_query([
-        'latitude'       => -23.0035,
-        'longitude'      => -43.3151,
-        'current'        => 'temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m,relativehumidity_2m',
-        'daily'          => 'weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max',
-        'timezone'       => 'America/Sao_Paulo',
-        'forecast_days'  => 3,
-        'wind_speed_unit'=> 'kmh'
-    ]);
-
+function getWeather() {
+    $url = 'https://api.open-meteo.com/v1/forecast?latitude=-23.0035&longitude=-43.3151'
+         . '&current=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m,relativehumidity_2m'
+         . '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode'
+         . '&timezone=America%2FSao_Paulo&forecast_days=3';
     $ch = curl_init($url);
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT        => 5,
-        CURLOPT_HTTPHEADER     => ['Accept: application/json'],
-    ]);
-    $res  = curl_exec($ch);
+    curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER=>true, CURLOPT_TIMEOUT=>5]);
+    $res = curl_exec($ch);
     $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
-
     if ($code !== 200 || !$res) return '';
-
     $d = json_decode($res, true);
-    if (!$d) return '';
-
-    $c = $d['current'] ?? [];
-    $daily = $d['daily'] ?? [];
-
-    // Descrição do código de tempo WMO
-    function wmoDesc($code, $lang) {
-        $map = [
-            0  => ['pt'=>'Céu limpo ☀️',        'en'=>'Clear sky ☀️',        'es'=>'Cielo despejado ☀️',    'zh'=>'晴天 ☀️'],
-            1  => ['pt'=>'Principalmente limpo', 'en'=>'Mainly clear',         'es'=>'Principalmente despejado','zh'=>'大部分晴朗'],
-            2  => ['pt'=>'Parcialmente nublado', 'en'=>'Partly cloudy',        'es'=>'Parcialmente nublado',  'zh'=>'局部多云'],
-            3  => ['pt'=>'Nublado ☁️',           'en'=>'Overcast ☁️',          'es'=>'Nublado ☁️',            'zh'=>'多云 ☁️'],
-            45 => ['pt'=>'Neblina 🌫️',           'en'=>'Foggy 🌫️',            'es'=>'Neblina 🌫️',            'zh'=>'雾 🌫️'],
-            51 => ['pt'=>'Garoa leve 🌦️',        'en'=>'Light drizzle 🌦️',    'es'=>'Llovizna leve 🌦️',      'zh'=>'小毛毛雨 🌦️'],
-            61 => ['pt'=>'Chuva leve 🌧️',        'en'=>'Light rain 🌧️',       'es'=>'Lluvia leve 🌧️',        'zh'=>'小雨 🌧️'],
-            63 => ['pt'=>'Chuva moderada 🌧️',    'en'=>'Moderate rain 🌧️',    'es'=>'Lluvia moderada 🌧️',    'zh'=>'中雨 🌧️'],
-            65 => ['pt'=>'Chuva forte 🌧️',       'en'=>'Heavy rain 🌧️',       'es'=>'Lluvia fuerte 🌧️',      'zh'=>'大雨 🌧️'],
-            80 => ['pt'=>'Pancadas de chuva 🌦️', 'en'=>'Rain showers 🌦️',     'es'=>'Chubascos 🌦️',          'zh'=>'阵雨 🌦️'],
-            81 => ['pt'=>'Chuva intensa 🌧️',     'en'=>'Intense showers 🌧️',  'es'=>'Lluvias intensas 🌧️',   'zh'=>'强阵雨 🌧️'],
-            95 => ['pt'=>'Trovoada ⛈️',          'en'=>'Thunderstorm ⛈️',      'es'=>'Tormenta ⛈️',           'zh'=>'雷暴 ⛈️'],
-            99 => ['pt'=>'Trovoada forte ⛈️',    'en'=>'Heavy thunderstorm ⛈️','es'=>'Tormenta fuerte ⛈️',    'zh'=>'强雷暴 ⛈️'],
-        ];
-        $l = in_array($lang, ['pt','en','es','zh']) ? $lang : 'pt';
-        $entry = $map[$code] ?? $map[0];
-        return $entry[$l] ?? $entry['pt'];
+    if (!$d || !isset($d['current'])) return '';
+    $c = $d['current'];
+    $daily = $d['daily'];
+    $wmo = [0=>'Céu limpo ☀️',1=>'Principalmente limpo',2=>'Parcialmente nublado ⛅',
+            3=>'Nublado ☁️',45=>'Neblina 🌫️',51=>'Garoa 🌦️',
+            61=>'Chuva leve 🌧️',63=>'Chuva moderada 🌧️',65=>'Chuva forte 🌧️',
+            80=>'Pancadas 🌦️',95=>'Trovoada ⛈️',99=>'Trovoada forte ⛈️'];
+    $desc = $wmo[(int)($c['weathercode']??0)] ?? 'Tempo variável';
+    $temp = round($c['temperature_2m']);
+    $feels= round($c['apparent_temperature']);
+    $hum  = round($c['relativehumidity_2m']);
+    $wind = round($c['windspeed_10m']);
+    $prec = $c['precipitation'];
+    $days = ['Hoje','Amanhã','Depois'];
+    $next = '';
+    for ($i=0;$i<3;$i++) {
+        $max = round($daily['temperature_2m_max'][$i]??0);
+        $min = round($daily['temperature_2m_min'][$i]??0);
+        $prob= round($daily['precipitation_probability_max'][$i]??0);
+        $dd  = $wmo[(int)($daily['weathercode'][$i]??0)] ?? 'Variável';
+        $next .= "\n- {$days[$i]}: {$dd}, {$min}°-{$max}°C, {$prob}% chuva";
     }
-
-    $wcode = (int)($c['weathercode'] ?? 0);
-    $temp  = round($c['temperature_2m'] ?? 0);
-    $feels = round($c['apparent_temperature'] ?? 0);
-    $hum   = round($c['relativehumidity_2m'] ?? 0);
-    $wind  = round($c['windspeed_10m'] ?? 0);
-    $prec  = round($c['precipitation'] ?? 0, 1);
-    $desc  = wmoDesc($wcode, $lang);
-
-    // Próximos 3 dias
-    $days_info = '';
-    $day_labels = [
-        'pt' => ['Hoje','Amanhã','Depois de amanhã'],
-        'en' => ['Today','Tomorrow','Day after tomorrow'],
-        'es' => ['Hoy','Mañana','Pasado mañana'],
-        'zh' => ['今天','明天','后天'],
-    ];
-    $labels = $day_labels[in_array($lang,['pt','en','es','zh'])?$lang:'pt'];
-
-    for ($i = 0; $i < min(3, count($daily['temperature_2m_max'] ?? [])); $i++) {
-        $dmax  = round($daily['temperature_2m_max'][$i]);
-        $dmin  = round($daily['temperature_2m_min'][$i]);
-        $dprec = round($daily['precipitation_sum'][$i] ?? 0, 1);
-        $dprob = round($daily['precipitation_probability_max'][$i] ?? 0);
-        $ddesc = wmoDesc((int)($daily['weathercode'][$i] ?? 0), $lang);
-        $days_info .= "| {$labels[$i]}: {$ddesc}, {$dmin}°C–{$dmax}°C, {$dprob}% chuva";
-    }
-
-    $labels_weather = [
-        'pt' => "PREVISÃO DO TEMPO AGORA NA ILHA DA GIGÓIA (dados em tempo real):
-- Condição: {$desc}
-- Temperatura: {$temp}°C (sensação: {$feels}°C)
-- Umidade: {$hum}% | Vento: {$wind} km/h | Precipitação atual: {$prec}mm
-- Próximos dias: {$days_info}
-
-Use esses dados REAIS para responder sobre o clima. Seja específico e útil.",
-        'en' => "REAL-TIME WEATHER FORECAST AT ILHA DA GIGÓIA:
-- Condition: {$desc}
-- Temperature: {$temp}°C (feels like: {$feels}°C)
-- Humidity: {$hum}% | Wind: {$wind} km/h | Current precipitation: {$prec}mm
-- Next days: {$days_info}
-
-Use this REAL data to answer about the weather. Be specific and helpful.",
-        'es' => "PRONÓSTICO DEL TIEMPO AHORA EN ILHA DA GIGÓIA (datos en tiempo real):
-- Condición: {$desc}
-- Temperatura: {$temp}°C (sensación: {$feels}°C)
-- Humedad: {$hum}% | Viento: {$wind} km/h | Precipitación actual: {$prec}mm
-- Próximos días: {$days_info}
-
-Usa estos datos REALES para responder sobre el clima.",
-        'zh' => "吉戈亚岛实时天气预报：
-- 天气状况：{$desc}
-- 温度：{$temp}°C（体感：{$feels}°C）
-- 湿度：{$hum}% | 风速：{$wind} km/h | 当前降水：{$prec}mm
-- 未来几天：{$days_info}
-
-请使用这些真实数据回答关于天气的问题。",
-    ];
-
-    $l = in_array($lang, ['pt','en','es','zh']) ? $lang : 'pt';
-    return "
-
-" . $labels_weather[$l];
+    return "\n\n[DADOS REAIS DA ILHA DA GIGÓIA AGORA — use para responder]"
+          ."\nCondição: {$desc} | Temp: {$temp}°C (sensação {$feels}°C)"
+          ."\nUmidade: {$hum}% | Vento: {$wind}km/h | Precipitação: {$prec}mm"
+          ."\nPrevisão:{$next}";
 }
 
 // Chamar Gemini API
 $url     = "https://generativelanguage.googleapis.com/v1beta/models/" . GEMINI_MODEL . ":generateContent?key=" . GEMINI_API_KEY;
-// Adicionar previsão do tempo ao system prompt se for pergunta de clima
-$weather_context = '';
-if (isWeatherQuestion($message)) {
-    $weather_context = getWeatherContext($lang);
-}
+$weather_ctx = isWeatherQuestion($message) ? getWeather() : '';
 
 $payload = json_encode([
-    'system_instruction' => ['parts' => [['text' => $system . $weather_context]]],
+    'system_instruction' => ['parts' => [['text' => $system . $weather_ctx]]],
     'contents'           => [['role' => 'user', 'parts' => [['text' => $message]]]],
-    'generationConfig'   => ['maxOutputTokens' => 400, 'temperature' => 0.5]
+    'generationConfig'   => ['maxOutputTokens' => 350, 'temperature' => 0.75]
 ]);
 
 $ch = curl_init($url);
@@ -267,9 +175,7 @@ curl_close($ch);
 
 if ($http_code !== 200) {
     http_response_code(502);
-    $err_body = json_decode($response, true);
-    $err_msg = $err_body['error']['message'] ?? 'HTTP ' . $http_code;
-    echo json_encode(['error' => $err_msg, 'reply' => null, 'debug_code' => $http_code]);
+    echo json_encode(['error' => 'API error ' . $http_code, 'reply' => null]);
     exit;
 }
 

@@ -317,12 +317,12 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["chuva", "tempo ruim", "chove", "rain", "bad weather", "lluvia"],
+    keywords: ["chuva", "chover", "vai chover", "tempo ruim", "chove", "rain", "bad weather", "lluvia", "clima", "como é o clima", "como esta o tempo", "como está o tempo", "como ta o tempo", "tempo agora", "tempo hoje", "tempo la", "tempo lá", "temperatura agora", "temperatura hoje", "calor", "frio", "quente", "weather", "climate", "temperature", "forecast", "previsao", "previsão", "sol hoje", "nublado", "hace calor", "hace frio", "va a llover", "天气", "下雨"],
     reply: {
-      pt: "A ilha é muito mais gostosa em dias de sol! ☀️ Em dias de chuva as ruas de terra ficam enlameadas e os passeios ao ar livre perdem a graça. Se pegar chuva, refugie-se em um restaurante coberto com vista para a lagoa. Para passeios de barco, sempre verifique a previsão antes!",
-      en: "The island is much more enjoyable on sunny days! ☀️ In rainy weather the dirt roads become muddy and outdoor activities lose their charm. If it rains, take refuge in a covered restaurant with lagoon views. Always check the weather forecast before boat tours!",
-      es: "¡La isla es mucho más agradable en días soleados! ☀️ Con lluvia las calles de tierra se ponen fangosas. Si llueve, refugiáte en un restaurante cubierto con vista a la laguna. ¡Siempre revisa el pronóstico antes de un tour en bote!",
-      zh: "阳光明媚的日子，小岛更加美丽！☀️ 雨天泥土路会变得泥泞，户外活动会失去乐趣。如果下雨，在有泻湖景观的有遮蔽餐厅里避雨。乘船游览前请务必查看天气预报！"
+      pt: "__WEATHER__",
+      en: "__WEATHER__",
+      es: "__WEATHER__",
+      zh: "__WEATHER__"
     }
   },
   {
@@ -793,6 +793,17 @@ const GIGI_BRAIN = [
       en: "My best tips for a perfect visit! 💡 1) Go by subway — most practical. 2) Book popular restaurant tables in advance. 3) Have cash for the boat. 4) Comfortable footwear — dirt roads! 5) Insect repellent for late afternoon. 6) Set aside the full day — you'll want to stay! 7) Respect nature and residents. 🌴",
       es: "¡Mis mejores consejos para la visita perfecta! 💡 1) Ve en metro. 2) Reserva mesa con anticipación. 3) Ten efectivo para el bote. 4) Calzado cómodo — ¡calles de tierra! 5) Repelente para el final de la tarde. 6) Deja el día entero. 7) Respeta la naturaleza y los residentes. 🌴",
       zh: "完美游览的最佳建议！💡 1) 乘地铁——最实用。2) 提前预订著名餐厅的桌位。3) 带零钱支付船费。4) 舒适的鞋子——泥土路！5) 傍晚时带驱虫剂。6) 留出整天时间——您会想要停留更久！7) 尊重自然和居民。🌴"
+    }
+  },
+
+  // MENU — mostra opções iniciais novamente
+  {
+    keywords: ["menu", "opcoes", "opções", "inicio", "início", "voltar", "ajuda rapida", "ajuda rápida", "options", "home", "start", "opciones", "volver", "菜单", "选项"],
+    reply: {
+      pt: "__MENU__",
+      en: "__MENU__",
+      es: "__MENU__",
+      zh: "__MENU__"
     }
   }
 

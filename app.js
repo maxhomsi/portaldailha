@@ -414,9 +414,29 @@ window.sendGigiFreeMsg = function() {
     body.scrollTop = body.scrollHeight;
   }
 
-  if (matchedByKeyword) {
+  if (matchedByKeyword && botReply !== '__WEATHER__' && botReply !== '__MENU__') {
     // Resposta rápida via keyword
     setTimeout(() => { renderGigiReply(botReply, showOptions); }, 600);
+  } else if (matchedByKeyword && botReply === '__MENU__') {
+    // Mostrar menu inicial novamente
+    setTimeout(() => {
+      const b1 = lang === 'en' ? "📍 How to get there?" : lang === 'es' ? "📍 ¿Cómo llegar?" : lang === 'zh' ? "📍 如何到达小岛？" : "📍 Como chegar na Ilha?";
+      const b2 = lang === 'en' ? "🚤 Tour Prices" : lang === 'es' ? "🚤 Precios de Paseos" : lang === 'zh' ? "🚤 游览价格" : "🚤 Preços de Passeios";
+      const b3 = lang === 'en' ? "💬 Talk on WhatsApp" : lang === 'es' ? "💬 Hablar en WhatsApp" : lang === 'zh' ? "💬 通过WhatsApp联系" : "💬 Quero falar no WhatsApp";
+      const menuLabel = lang === 'en' ? "Here are the quick options:" : lang === 'es' ? "Aquí están las opciones rápidas:" : lang === 'zh' ? "以下是快捷选项：" : "Aqui estão as opções rápidas:";
+      flow.insertAdjacentHTML('beforeend', `
+        <div class="gigi-msg gigi-msg--bot">
+          <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
+          <div class="gigi-bubble">${menuLabel}</div>
+        </div>
+        <div class="gigi-quick-replies">
+          <button class="gigi-quick-btn" onclick="gigiAsk('como_chegar')">${b1}</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('passeios')">${b2}</button>
+          <button class="gigi-quick-btn" onclick="gigiAsk('whatsapp')">${b3}</button>
+        </div>
+      `);
+      body.scrollTop = body.scrollHeight;
+    }, 400);
   } else if (typeof askGigiAI === 'function') {
     // Fallback: chamar IA real (gigi-proxy.php)
     const thinkingId = 'thinking_' + Date.now();
@@ -432,13 +452,13 @@ window.sendGigiFreeMsg = function() {
           renderGigiReply(aiReply, false);
         } else {
           // Proxy indisponível — mostra fallback padrão
-          renderGigiReply(botReply, true);
+          renderGigiReply(botReply === '__WEATHER__' || botReply === '__MENU__' || botReply === '⏳' ? (lang === 'en' ? 'Hmm, good question! 🤔 Choose an option below or contact our team on WhatsApp:' : lang === 'es' ? '¡Hmm, buena pregunta! 🤔 Elige una opción abajo o contacta nuestro equipo en WhatsApp:' : lang === 'zh' ? '嗯，好问题！🤔 请在下方选择选项或通过WhatsApp联系我们的团队：' : 'Hmm, boa pergunta! 🤔 Você pode escolher uma das opções abaixo ou chamar nossa equipe no WhatsApp:') : botReply, true);
         }
       });
     }, 400);
   } else {
     // Sem IA disponível — fallback padrão
-    setTimeout(() => { renderGigiReply(botReply, true); }, 800);
+    setTimeout(() => { renderGigiReply(botReply === '__WEATHER__' || botReply === '__MENU__' || botReply === '⏳' ? (lang === 'en' ? 'Hmm, good question! 🤔 Choose an option below or contact our team on WhatsApp:' : lang === 'es' ? '¡Hmm, buena pregunta! 🤔 Elige una opción abajo o contacta nuestro equipo en WhatsApp:' : lang === 'zh' ? '嗯，好问题！🤔 请在下方选择选项或通过WhatsApp联系我们的团队：' : 'Hmm, boa pergunta! 🤔 Você pode escolher uma das opções abaixo ou chamar nossa equipe no WhatsApp:') : botReply, true); }, 800);
   }
 };
 // =======================================================
