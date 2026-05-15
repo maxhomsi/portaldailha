@@ -1,0 +1,61 @@
+{
+  "name": "Portal Ilha da Gigóia",
+  "short_name": "Ilha Gigóia",
+  "description": "Guia completo da Ilha da Gigóia — Pantanal Carioca, Barra da Tijuca, Rio de Janeiro.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#eef7ef",
+  "theme_color": "#47b05a",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["travel", "lifestyle", "food"],
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/hero.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Portal Ilha da Gigóia — Hero"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Passeios de Barco",
+      "short_name": "Passeios",
+      "description": "Ver roteiros e passeios pela Ilha",
+      "url": "/passeios-rotas.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Falar com Gigi",
+      "short_name": "WhatsApp",
+      "description": "Chamar a assistente virtual no WhatsApp",
+      "url": "https://wa.me/5521993802618",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Onde Comer & Beber",
+      "short_name": "Gastronomia",
+      "description": "Restaurantes e bares da Ilha da Gigóia",
+      "url": "/comer-beber.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,88 @@
+<!-- =========================================================
+     PATCH INDEX.HTML — Adicionar no <head>, após o <meta charset>
+     ========================================================= -->
+
+<!-- 1. PWA: Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- 2. PWA: Cor da barra do navegador (Android Chrome e Safari iOS) -->
+<meta name="theme-color" content="#47b05a">
+
+<!-- 3. PWA: Ícone para iOS (Home Screen) -->
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+
+<!-- 4. PWA: Splash screen / status bar iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ilha Gigóia">
+
+<!-- 5. Mobile: Formato de telefone não detectável automaticamente -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- 6. Mobile-fixes CSS (adicionar APÓS o styles.css) -->
+<link rel="stylesheet" href="mobile-fixes.css">
+
+
+<!-- =========================================================
+     PATCH INDEX.HTML — Adicionar antes do </body>
+     (substituir ou adicionar após os outros <script>)
+     ========================================================= -->
+
+<script>
+  // Registro do Service Worker (PWA)
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('✅ SW registrado:', reg.scope))
+        .catch(err => console.warn('⚠️ SW falhou:', err));
+    });
+  }
+</script>
+
+
+<!-- =========================================================
+     CORREÇÃO DE TYPO — linha 68 do index.html original
+     ========================================================= -->
+
+<!-- ANTES (errado): -->
+<!-- EEExplore praias, passeios de barco... -->
+
+<!-- DEPOIS (correto): -->
+<!-- Explore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro -->
+
+
+<!-- =========================================================
+     RESUMO DO QUE FOI ENTREGUE
+     ========================================================= -->
+<!--
+  ARQUIVOS NOVOS (colocar na raiz do projeto):
+  ├── manifest.json       → PWA: instalação como app, atalhos, ícones
+  ├── sw.js               → PWA: cache offline (Cache-First para assets, Network-First para HTML)
+  └── mobile-fixes.css    → 10 correções mobile críticas (ver abaixo)
+
+  EDITAR index.html:
+  1. Adicionar as 6 tags acima no <head> (após <meta charset>)
+  2. Adicionar o <script> do SW antes do </body>
+  3. Corrigir "EEExplore" → "Explore" (linha 68)
+
+  EDITAR TODAS AS OUTRAS PÁGINAS HTML (.html):
+  Adicionar as mesmas 6 tags no <head> de cada página.
+  O sw.js e manifest.json funcionam automaticamente para todo o site.
+
+  CRIAR OS ÍCONES PWA:
+  assets/icon-192.png  → 192×192px (versão do logo)
+  assets/icon-512.png  → 512×512px (versão do logo)
+  Dica: use https://maskable.app para testar o icon maskable.
+
+  CORREÇÕES DO MOBILE-FIXES.CSS:
+  1. GigiBox  → max-height responsivo (não transborda com teclado aberto)
+  2. SideBadge → oculto em mobile (evita sobreposição com GigiFab)
+  3. CookieBanner → stacking em coluna única em telas < 560px
+  4. Hero → botões empilhados em telas < 380px
+  5. TipRow → margem corrigida em telas estreitas
+  6. LangSwitcher → oculto no header mobile (já aparece no mobileNav)
+  7. Burger → área de toque mínima 48px (WCAG 2.5.5)
+  8. Cards → padding lateral em telas < 380px
+  9. Footer → ícones sociais com área de toque adequada
+  10. SafeArea → env(safe-area-inset-bottom) para iPhone com notch/Dynamic Island
+-->

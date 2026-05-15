@@ -829,8 +829,52 @@ window.acceptCookies = function() {
   if (banner) banner.style.display = "none";
 };
 
+// =========================================================
+//   PWA: MANIFEST, META TAGS, SERVICE WORKER E MOBILE CSS
+//   Injeta automaticamente em todas as páginas via app.js
+// =========================================================
+function setupPWA() {
+  const head = document.head;
+
+  // Manifest
+  if (!document.querySelector('link[rel="manifest"]')) {
+    const el = document.createElement('link');
+    el.rel = 'manifest'; el.href = '/manifest.json';
+    head.appendChild(el);
+  }
+
+  // Theme color (barra do navegador Android/iOS)
+  if (!document.querySelector('meta[name="theme-color"]')) {
+    const el = document.createElement('meta');
+    el.name = 'theme-color'; el.content = '#47b05a';
+    head.appendChild(el);
+  }
+
+  // Apple touch icon (ícone na tela inicial do iOS)
+  if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+    const el = document.createElement('link');
+    el.rel = 'apple-touch-icon'; el.href = '/assets/icon-192.png';
+    head.appendChild(el);
+  }
+
+  // Mobile fixes CSS (injeta após o styles.css)
+  if (!document.querySelector('link[href*="mobile-fixes"]')) {
+    const el = document.createElement('link');
+    el.rel = 'stylesheet'; el.href = '/mobile-fixes.css';
+    head.appendChild(el);
+  }
+
+  // Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
+}
+
 // INICIALIZAÇÃO PRINCIPAL DO SITE
 (function init(){
+  setupPWA();
   setupProgress();
   mountHeaderFooter();
   setupCookieBanner();

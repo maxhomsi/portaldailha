@@ -1,0 +1,164 @@
+/* =========================================================
+   MOBILE-FIXES.CSS — Correções Mobile/PWA
+   Portal Ilha da Gigóia
+   Adicionar APÓS o </style> final ou como último <link>
+   ========================================================= */
+
+/* ── 1. GIGI CHATBOX: altura máxima segura com teclado aberto ── */
+/* O height: 380px fixo transborda em telas pequenas com teclado */
+@media (max-width: 960px) {
+  .gigiBox {
+    /* Sobe mais na tela para não colidir com o FAB */
+    bottom: 90px;
+    right: 15px;
+    width: calc(100vw - 30px);
+    max-width: 380px;
+    max-height: 80vh; /* Nunca maior que 80% da viewport */
+  }
+
+  #gigiChatBody {
+    /* Troca height fixo por max-height responsivo */
+    height: auto !important;
+    max-height: 42vh !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .gigiBox {
+    width: calc(100vw - 20px);
+    right: 10px;
+    bottom: 80px;
+    border-radius: 18px;
+    max-height: 75vh;
+  }
+
+  #gigiChatBody {
+    max-height: 38vh !important;
+  }
+
+  /* Intro da Gigi fica menor para caber mais chat */
+  #gigiChatFlow > div:first-child img {
+    width: 80px !important;
+  }
+  #gigiChatFlow > div:first-child strong {
+    font-size: 17px !important;
+  }
+}
+
+/* ── 2. SIDE-BADGE vs GIGIFAB: conflito de posição aos 560px ── */
+/* Ambos caíam em bottom:20px / right:15px e se sobrepunham */
+@media (max-width: 560px) {
+  /* Esconde side-badge em mobile — o FAB da Gigi já cobre o CTA */
+  .side-badge {
+    display: none !important;
+  }
+}
+
+/* ── 3. COOKIE BANNER: ajuste para telas pequenas ── */
+@media (max-width: 560px) {
+  #cookieBanner {
+    padding: 14px 16px !important;
+    gap: 10px !important;
+  }
+
+  #cookieBanner p {
+    font-size: 12px !important;
+    flex: 1 1 100% !important; /* Força linha própria */
+  }
+
+  #cookieBanner .btn {
+    width: 100% !important;
+    font-size: 13px !important;
+    padding: 12px 16px !important;
+    flex-shrink: 0;
+  }
+}
+
+/* ── 4. HERO: garante texto visível em telas muito pequenas ── */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 30px !important;
+  }
+
+  .hero p {
+    font-size: 14px !important;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero__actions a {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ── 5. TIPROW: evita corte pela onda do hero em telas estreitas ── */
+@media (max-width: 560px) {
+  .tipRow {
+    margin: 0 10px 30px !important;
+    padding: 20px !important;
+    border-radius: 20px;
+  }
+}
+
+/* ── 6. LANG SWITCHER: evita aparecer duas vezes no header mobile ── */
+/* No mobile, o select de idioma já está no mobileNav — oculta no header */
+@media (max-width: 960px) {
+  .header__actions .lang-switcher {
+    display: none !important;
+  }
+}
+
+/* ── 7. BURGER: área de toque mínima de 48px (WCAG 2.5.5) ── */
+.burger {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* ── 8. CARDS: padding mínimo lateral em celulares estreitos ── */
+@media (max-width: 380px) {
+  .cards, #homeCards, #pageCards {
+    padding: 10px 5px !important;
+    gap: 16px !important;
+  }
+
+  .card__body {
+    padding: 16px !important;
+  }
+}
+
+/* ── 9. FOOTER: social links centralizado + espaço de toque ── */
+@media (max-width: 560px) {
+  .footer .social-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .footer .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ── 10. SAFE AREA: iPhones com notch/Dynamic Island ── */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .gigiFab {
+    bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+
+  .gigiBox {
+    bottom: calc(90px + env(safe-area-inset-bottom));
+  }
+
+  #cookieBanner {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
