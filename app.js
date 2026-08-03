@@ -830,6 +830,290 @@ window.acceptCookies = function() {
 };
 
 // =========================================================
+//   SEO: OPEN GRAPH, CANONICAL E JSON-LD RICO POR PÁGINA
+//   Injeta automaticamente em todas as páginas via app.js
+// =========================================================
+
+const SEO_BASE = {
+  siteName: "Portal Ilha da Gigóia",
+  baseUrl:  "https://www.ilhadagigoia.com.br",
+  image:    "https://www.ilhadagigoia.com.br/assets/hero.jpg",
+  logo:     "https://www.ilhadagigoia.com.br/assets/logo.png",
+  whatsapp: "https://wa.me/5521993802618",
+  geo: { lat: -23.0089, lng: -43.3328 },
+  address: {
+    street: "Ilha da Gigóia", city: "Rio de Janeiro",
+    state: "RJ", country: "BR", postal: "22793-030"
+  }
+};
+
+// Metadados específicos por página (data-page ou slug do filename)
+const SEO_PAGES = {
+  "home": {
+    title: "Portal Ilha da Gigóia | Guia Completo do Pantanal Carioca RJ",
+    desc:  "Descubra a Ilha da Gigóia na Barra da Tijuca, Rio de Janeiro. Passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca.",
+    type:  "website",
+    schemas: ["TouristDestination", "WebSite", "FAQ"]
+  },
+  "a-ilha": {
+    title: "A Ilha da Gigóia | História, Natureza e Como Chegar — RJ",
+    desc:  "Tudo sobre a Ilha da Gigóia: história, fauna, flora, melhores épocas para visitar e como chegar de barco saindo da Barra da Tijuca.",
+    type:  "article",
+    schemas: ["TouristAttraction", "BreadcrumbList"]
+  },
+  "passeios-rotas": {
+    title: "Passeios de Barco na Ilha da Gigóia | Roteiros e Preços — RJ",
+    desc:  "Passeios de barco, Pantanal Carioca, jet ski, mergulho e roteiros completos saindo da Barra da Tijuca para a Ilha da Gigóia.",
+    type:  "article",
+    schemas: ["TouristAttraction", "BreadcrumbList"]
+  },
+  "comer-beber": {
+    title: "Restaurantes e Bares na Ilha da Gigóia | Onde Comer — RJ",
+    desc:  "Os melhores restaurantes, bares e cafés da Ilha da Gigóia. Frutos do mar, drinks à beira d'água e experiências gastronômicas únicas no Rio.",
+    type:  "article",
+    schemas: ["FoodEstablishment", "BreadcrumbList"]
+  },
+  "hospedagem": {
+    title: "Hospedagem na Ilha da Gigóia | Pousadas e Airbnb — RJ",
+    desc:  "Pousadas, hotéis e Airbnb na Ilha da Gigóia. Onde se hospedar para acordar com vista para a lagoa e o Pantanal Carioca.",
+    type:  "article",
+    schemas: ["LodgingBusiness", "BreadcrumbList"]
+  },
+  "como-chegar": {
+    title: "Como Chegar na Ilha da Gigóia | Barco, Carro e Dicas — RJ",
+    desc:  "Como chegar na Ilha da Gigóia de barco ou carro. Saída pela Barra da Tijuca, pontos de embarque, horários e dicas práticas.",
+    type:  "article",
+    schemas: ["TouristAttraction", "BreadcrumbList"]
+  },
+  "pantanal-carioca": {
+    title: "Pantanal Carioca na Ilha da Gigóia | Natureza e Ecoturismo RJ",
+    desc:  "Explore o Pantanal Carioca na Ilha da Gigóia: capivaras, aves exóticas, manguezais e a natureza preservada da Barra da Tijuca.",
+    type:  "article",
+    schemas: ["TouristAttraction", "BreadcrumbList"]
+  }
+};
+
+// FAQ para rich result na home
+const SEO_FAQ = [
+  {
+    q: "Como chegar na Ilha da Gigóia?",
+    a: "A Ilha da Gigóia fica na Barra da Tijuca, Rio de Janeiro. O acesso é feito de barco, com embarque a partir da Marina da Glória, da Orla Conde ou de pontos na própria Barra da Tijuca. A travessia dura entre 5 e 15 minutos."
+  },
+  {
+    q: "Qual a melhor época para visitar a Ilha da Gigóia?",
+    a: "A ilha pode ser visitada o ano todo. O verão (dezembro a março) tem mais movimento e festas. O outono e a primavera (abril a junho e setembro a novembro) oferecem clima agradável e menor lotação, sendo ideais para ecoturismo."
+  },
+  {
+    q: "O que fazer na Ilha da Gigóia?",
+    a: "Na Ilha da Gigóia você pode fazer passeios de barco, observar capivaras e aves no Pantanal Carioca, praticar stand-up paddle e jet ski, visitar restaurantes à beira d'água, se hospedar em pousadas charmosas e aproveitar eventos culturais."
+  },
+  {
+    q: "Tem restaurante na Ilha da Gigóia?",
+    a: "Sim! A Ilha da Gigóia tem diversos restaurantes, bares e cafés, muitos com vista para a lagoa. Os carros-chefe são os frutos do mar frescos e os drinks tropicais."
+  },
+  {
+    q: "Posso me hospedar na Ilha da Gigóia?",
+    a: "Sim, há pousadas, pequenos hotéis e opções de Airbnb na ilha. É possível passar dias completos desfrutando de tudo que o Pantanal Carioca tem a oferecer."
+  }
+];
+
+function setupSEO() {
+  const head   = document.head;
+  const page   = document.body.getAttribute("data-page") || "";
+  const slug   = location.pathname.split("/").pop().replace(".html", "") || "home";
+  const meta   = SEO_PAGES[page] || SEO_PAGES[slug] || {};
+  const url    = SEO_BASE.baseUrl + location.pathname;
+
+  const title  = meta.title || document.title || SEO_BASE.siteName;
+  const desc   = meta.desc  || document.querySelector('meta[name="description"]')?.content || "";
+  const ogType = meta.type  || "website";
+  const image  = SEO_BASE.image;
+
+  // ── Canonical dinâmico ───────────────────────────────
+  if (!document.querySelector('link[rel="canonical"]')) {
+    const el = document.createElement('link');
+    el.rel = 'canonical'; el.href = url;
+    head.appendChild(el);
+  }
+
+  // ── Open Graph ───────────────────────────────────────
+  const og = {
+    "og:type":        ogType,
+    "og:url":         url,
+    "og:site_name":   SEO_BASE.siteName,
+    "og:title":       title,
+    "og:description": desc,
+    "og:image":       image,
+    "og:image:width": "1280",
+    "og:image:height":"720",
+    "og:image:alt":   "Ilha da Gigóia — Pantanal Carioca, Rio de Janeiro",
+    "og:locale":      "pt_BR"
+  };
+  Object.entries(og).forEach(([prop, content]) => {
+    if (!document.querySelector(`meta[property="${prop}"]`)) {
+      const el = document.createElement('meta');
+      el.setAttribute('property', prop);
+      el.content = content;
+      head.appendChild(el);
+    }
+  });
+
+  // ── Twitter Card ─────────────────────────────────────
+  const tw = {
+    "twitter:card":        "summary_large_image",
+    "twitter:title":       title,
+    "twitter:description": desc,
+    "twitter:image":       image,
+    "twitter:site":        "@ilhadagigoia"
+  };
+  Object.entries(tw).forEach(([name, content]) => {
+    if (!document.querySelector(`meta[name="${name}"]`)) {
+      const el = document.createElement('meta');
+      el.name = name; el.content = content;
+      head.appendChild(el);
+    }
+  });
+
+  // ── JSON-LD Schemas ───────────────────────────────────
+  const schemas = meta.schemas || ["TouristDestination"];
+  const graphs  = [];
+
+  // WebSite (sempre na home)
+  if (schemas.includes("WebSite")) {
+    graphs.push({
+      "@type": "WebSite",
+      "@id":   SEO_BASE.baseUrl + "/#website",
+      "name":  SEO_BASE.siteName,
+      "url":   SEO_BASE.baseUrl,
+      "description": desc,
+      "inLanguage": ["pt-BR", "en", "es", "zh"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": SEO_BASE.baseUrl + "/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    });
+  }
+
+  // TouristDestination / TouristAttraction
+  if (schemas.includes("TouristDestination") || schemas.includes("TouristAttraction")) {
+    const type = schemas.includes("TouristDestination") ? "TouristDestination" : "TouristAttraction";
+    graphs.push({
+      "@type": type,
+      "@id":   SEO_BASE.baseUrl + "/#ilha",
+      "name":  "Ilha da Gigóia",
+      "alternateName": ["Pantanal Carioca", "Ilha da Gigoia"],
+      "description": "A Ilha da Gigóia é um paraíso tropical localizado na Barra da Tijuca, Rio de Janeiro. Conhecida como o Pantanal Carioca, oferece ecoturismo, passeios de barco, restaurantes à beira d'água e hospedagem charmosa.",
+      "url":   SEO_BASE.baseUrl,
+      "image": image,
+      "touristType": ["Ecoturismo", "Turismo Gastronômico", "Turismo de Aventura", "Turismo de Lazer"],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude":  SEO_BASE.geo.lat,
+        "longitude": SEO_BASE.geo.lng
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":   SEO_BASE.address.street,
+        "addressLocality": SEO_BASE.address.city,
+        "addressRegion":   SEO_BASE.address.state,
+        "postalCode":      SEO_BASE.address.postal,
+        "addressCountry":  SEO_BASE.address.country
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Rio de Janeiro",
+        "addressCountry": "BR"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Passeios de Barco", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Restaurantes",      "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Hospedagem",        "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Ecoturismo",        "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Praia",             "value": true }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/ilha.da.gigoia",
+        "https://www.facebook.com/portaldailhadagigoia",
+        "https://www.tiktok.com/@ilha.da.gigoia",
+        "https://www.youtube.com/@ilha.da.gigoia"
+      ]
+    });
+  }
+
+  // LocalBusiness / FoodEstablishment / LodgingBusiness
+  const bizType = schemas.includes("FoodEstablishment") ? "FoodEstablishment"
+                : schemas.includes("LodgingBusiness")   ? "LodgingBusiness"
+                : null;
+  if (bizType) {
+    graphs.push({
+      "@type": bizType,
+      "@id":   url + "#business",
+      "name":  SEO_BASE.siteName,
+      "url":   url,
+      "image": image,
+      "telephone": "+5521993802618",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude":  SEO_BASE.geo.lat,
+        "longitude": SEO_BASE.geo.lng
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress":   SEO_BASE.address.street,
+        "addressLocality": SEO_BASE.address.city,
+        "addressRegion":   SEO_BASE.address.state,
+        "addressCountry":  SEO_BASE.address.country
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "telephone": "+5521993802618",
+        "availableLanguage": ["Portuguese", "English", "Spanish"]
+      }
+    });
+  }
+
+  // BreadcrumbList (todas as páginas internas)
+  if (schemas.includes("BreadcrumbList") && page && page !== "home") {
+    const pageTitle = document.querySelector('h1')?.textContent?.trim()
+                   || document.title.split('|')[0].trim()
+                   || page;
+    graphs.push({
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início",  "item": SEO_BASE.baseUrl + "/" },
+        { "@type": "ListItem", "position": 2, "name": pageTitle, "item": url }
+      ]
+    });
+  }
+
+  // FAQPage (home)
+  if (schemas.includes("FAQ")) {
+    graphs.push({
+      "@type": "FAQPage",
+      "mainEntity": SEO_FAQ.map(f => ({
+        "@type": "Question",
+        "name":  f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    });
+  }
+
+  // Injeta o JSON-LD no <head> (remove o antigo se existir)
+  const old = document.querySelector('script[type="application/ld+json"]');
+  if (old) old.remove();
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": graphs
+  }, null, 0);
+  head.appendChild(script);
+}
+
+// =========================================================
 //   PWA: MANIFEST, META TAGS, SERVICE WORKER E MOBILE CSS
 //   Injeta automaticamente em todas as páginas via app.js
 // =========================================================
@@ -874,6 +1158,7 @@ function setupPWA() {
 
 // INICIALIZAÇÃO PRINCIPAL DO SITE
 (function init(){
+  setupSEO();
   setupPWA();
   setupProgress();
   mountHeaderFooter();
