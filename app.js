@@ -1191,7 +1191,7 @@ function setupPWA() {
   // O CÉREBRO DA TRADUÇÃO DINÂMICA
   document.querySelectorAll('[data-i18n]').forEach(elemento => {
     const chave = elemento.getAttribute('data-i18n');
-    // SOLUÇÃO: Verifica se o DICT existe antes de buscar a chave nele
+    // SOLUÇÃO: Verifica se o DICT existe antes de buscar a chave nelee
     if (typeof DICT !== 'undefined' && DICT[chave]) {
       elemento.innerHTML = t(chave);
     }
