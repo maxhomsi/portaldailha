@@ -15,55 +15,63 @@ if (typeof window.t !== 'function') {
 /* =========================================================
    DADOS DOS CARDS E PÁGINAS (Com Tradução Ativa)
    ========================================================= */
+// Prefixa links internos com o idioma atual (/en/..., /es/...).
+function L(href){
+  if (!href || currentLang === 'pt') return href;
+  if (/^(https?:|mailto:|tel:|#)/.test(href)) return href;
+  if (href === '/') return '/' + currentLang + '/';
+  return '/' + currentLang + '/' + href.replace(/^\//,'');
+}
+
 const SITE = {
   brand: {
-    logo: "assets/logo.png",
+    logo: "/assets/logo.png",
     nameSmall: "PORTAL",
     nameMainA: "Ilha da",
     nameMainB: "Gigóia",
   },
   nav: [
-    { href: "a-ilha.html", label: t("nav_ilha") },
-    { href: "passeios-rotas.html", label: t("nav_passeios") },
-    { href: "comer-beber.html", label: t("nav_comer") },
-    { href: "hospedagem.html", label: t("nav_hospedagem") },
-    { href: "fale-conosco.html", label: t("nav_fale") }
+    { href:"/a-ilha.html", label: t("nav_ilha") },
+    { href:"/passeios-rotas.html", label: t("nav_passeios") },
+    { href:"/comer-beber.html", label: t("nav_comer") },
+    { href:"/hospedagem.html", label: t("nav_hospedagem") },
+    { href:"/fale-conosco.html", label: t("nav_fale") }
   ],
-  ctas: { header: { href: "passeios-rotas.html", label: t("btn_passeios") } },
+  ctas: { header: { href:"/passeios-rotas.html", label: t("btn_passeios") } },
   hero: {
-    bg: "assets/hero.jpg", pill: t("hero_pill"), titleA: t("hero_title_a"),
+    bg: "/assets/hero.jpg", pill: t("hero_pill"), titleA: t("hero_title_a"),
     titleB: t("hero_title_b"), subtitle: t("hero_sub")
   },
-  tip: { capiImg: "assets/capi.png", capiTag: t("capi_tag"), title: t("tip_title") },
+  tip: { capiImg: "/assets/capi.png", capiTag: t("capi_tag"), title: t("tip_title") },
   homeCards: [
-    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"passeios-rotas.html", img:"assets/card-passeios.jpg", icon:"boat", badge: t("badge_procurado") },
-    { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"comer-beber.html", img:"assets/card-comer.jpg", icon:"fork", badge: t("badge_gastronomia") },
-    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"hospedagem.html", img:"assets/pousadas/casanova1.webp", icon:"bed", badge: t("badge_relaxar") }
+    { title:t("hm_c1_t"), desc:t("hm_c1_d"), linkLabel:t("hm_c1_l"), href:"/passeios-rotas.html", img: "/assets/card-passeios.jpg", icon:"boat", badge: t("badge_procurado") },
+    { title:t("hm_c2_t"), desc:t("hm_c2_d"), linkLabel:t("hm_c2_l"), href:"/comer-beber.html", img: "/assets/card-comer.jpg", icon:"fork", badge: t("badge_gastronomia") },
+    { title:t("hm_c4_t"), desc:t("hm_c4_d"), linkLabel:t("hm_c4_l"), href:"/hospedagem.html", img: "/assets/pousadas/casanova1.webp", icon:"bed", badge: t("badge_relaxar") }
   ],
   pages: {
     "a-ilha": [
-      { title: t("page_ilha_c1_t"), desc: t("page_ilha_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"como-chegar.html", img:"assets/comochegar.jpg", icon:"boat" },
-      { title: t("page_ilha_c2_t"), desc: t("page_ilha_c2_d"), linkLabel: t("btn_ler_mais"), href:"historia-cultura.html", img:"assets/historia.jpg", icon:"leaf" },
-      { title: t("page_ilha_c3_t"), desc: t("page_ilha_c3_d"), linkLabel: t("btn_conferir"), href:"boas-praticas.html", img:"assets/boaspraticas.jpg", icon:"bed" },
-      { title: t("page_ilha_c4_t"), desc: t("page_ilha_c4_d"), linkLabel: t("btn_ver_detalhes"), href:"melhor-epoca.html", img:"assets/melhorepoca.jpg", icon:"fork" }
+      { title: t("page_ilha_c1_t"), desc: t("page_ilha_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"/como-chegar.html", img: "/assets/comochegar.jpg", icon:"boat" },
+      { title: t("page_ilha_c2_t"), desc: t("page_ilha_c2_d"), linkLabel: t("btn_ler_mais"), href:"/historia-cultura.html", img: "/assets/historia.jpg", icon:"leaf" },
+      { title: t("page_ilha_c3_t"), desc: t("page_ilha_c3_d"), linkLabel: t("btn_conferir"), href:"/boas-praticas.html", img: "/assets/boaspraticas.jpg", icon:"bed" },
+      { title: t("page_ilha_c4_t"), desc: t("page_ilha_c4_d"), linkLabel: t("btn_ver_detalhes"), href:"/melhor-epoca.html", img: "/assets/melhorepoca.jpg", icon:"fork" }
     ],
     "passeios-rotas": [
-      { title: t("page_pass_c1_t"), desc: t("page_pass_c1_d"), linkLabel: t("btn_ver_roteiro"), href:"ilhas-tijucas.html", img:"assets/passeios/tijucas1.jpg", icon:"boat", badge: t("badge_mergulho") },
-      { title: t("page_pass_c2_t"), desc: t("page_pass_c2_d"), linkLabel: t("btn_ver_roteiro"), href:"pantanal-carioca.html", img:"assets/passeios/pantanal1.jpg", icon:"leaf", badge: t("badge_safari") },
-      { title: t("page_pass_c3_t"), desc: t("page_pass_c3_d"), linkLabel: t("btn_ver_roteiro"), href:"reserva.html", img:"assets/passeios/reserva1.jpg", icon:"boat", badge: t("badge_praia") },
-      { title: t("page_pass_c4_t"), desc: t("page_pass_c4_d"), linkLabel: t("btn_ver_opcoes"), href:"jet-ski.html", img:"assets/passeios/jet1.jpg", icon:"boat", badge: t("badge_adrenalina") },
-      { title: t("page_pass_c5_t"), desc: t("page_pass_c5_d"), linkLabel: t("btn_ver_pacotes"), href:"pacotes-especiais.html", img:"assets/experiencia.jpg", icon:"fork", badge: t("badge_ofertas") }
+      { title: t("page_pass_c1_t"), desc: t("page_pass_c1_d"), linkLabel: t("btn_ver_roteiro"), href:"/ilhas-tijucas.html", img: "/assets/passeios/tijucas1.jpg", icon:"boat", badge: t("badge_mergulho") },
+      { title: t("page_pass_c2_t"), desc: t("page_pass_c2_d"), linkLabel: t("btn_ver_roteiro"), href:"/pantanal-carioca.html", img: "/assets/passeios/pantanal1.jpg", icon:"leaf", badge: t("badge_safari") },
+      { title: t("page_pass_c3_t"), desc: t("page_pass_c3_d"), linkLabel: t("btn_ver_roteiro"), href:"/reserva.html", img: "/assets/passeios/reserva1.jpg", icon:"boat", badge: t("badge_praia") },
+      { title: t("page_pass_c4_t"), desc: t("page_pass_c4_d"), linkLabel: t("btn_ver_opcoes"), href:"/jet-ski.html", img: "/assets/passeios/jet1.jpg", icon:"boat", badge: t("badge_adrenalina") },
+      { title: t("page_pass_c5_t"), desc: t("page_pass_c5_d"), linkLabel: t("btn_ver_pacotes"), href:"/pacotes-especiais.html", img: "/assets/experiencia.jpg", icon:"fork", badge: t("badge_ofertas") }
     ],
     "comer-beber": [
-      { title: t("page_comer_c1_t"), desc: t("page_comer_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"restaurantes.html", img:"assets/card-comer.jpg", icon:"fork", badge: t("badge_gastronomia") },
-      { title: t("page_comer_c2_t"), desc: t("page_comer_c2_d"), linkLabel: t("btn_ver_detalhes"), href:"bares-drinks.html", img:"assets/bar&DRINK.jpg", icon:"boat", badge: t("badge_relax") },
-      { title: t("page_comer_c3_t"), desc: t("page_comer_c3_d"), linkLabel: t("btn_ver_opcoes"), href:"cafe-lanches.html", img:"assets/aleatoria/cantinho1.webp", icon:"leaf", badge: t("badge_bom_dia") },
-      { title: t("page_comer_c4_t"), desc: t("page_comer_c4_d"), linkLabel: t("btn_conferir"), href:"eventos-experiencias.html", img:"assets/aleatoria/solar1.jpg", icon:"fork", badge: t("badge_ao_vivo") }
+      { title: t("page_comer_c1_t"), desc: t("page_comer_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"/restaurantes.html", img: "/assets/card-comer.jpg", icon:"fork", badge: t("badge_gastronomia") },
+      { title: t("page_comer_c2_t"), desc: t("page_comer_c2_d"), linkLabel: t("btn_ver_detalhes"), href:"/bares-drinks.html", img: "/assets/bar&DRINK.jpg", icon:"boat", badge: t("badge_relax") },
+      { title: t("page_comer_c3_t"), desc: t("page_comer_c3_d"), linkLabel: t("btn_ver_opcoes"), href:"/cafe-lanches.html", img: "/assets/aleatoria/cantinho1.webp", icon:"leaf", badge: t("badge_bom_dia") },
+      { title: t("page_comer_c4_t"), desc: t("page_comer_c4_d"), linkLabel: t("btn_conferir"), href:"/eventos-experiencias.html", img: "/assets/aleatoria/solar1.jpg", icon:"fork", badge: t("badge_ao_vivo") }
     ],
     "hospedagem": [
-      { title: t("page_hosp_c1_t"), desc: t("page_hosp_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"hoteis-pousadas.html", img:"assets/pousadas/veneza1.jpg", icon:"bed" },
-      { title: t("page_hosp_c2_t"), desc: t("page_hosp_c2_d"), linkLabel: t("btn_ver_opcoes"), href:"airbnb-temporada.html", img:"assets/airbnb/venti1.avif", icon:"bed" },
-      { title: t("page_hosp_c3_t"), desc: t("page_hosp_c3_d"), linkLabel: t("btn_conferir"), href:"espacos-eventos.html", img:"assets/eventos.jpg", icon:"fork", badge: t("badge_celebre") },
+      { title: t("page_hosp_c1_t"), desc: t("page_hosp_c1_d"), linkLabel: t("btn_ver_detalhes"), href:"/hoteis-pousadas.html", img: "/assets/pousadas/veneza1.jpg", icon:"bed" },
+      { title: t("page_hosp_c2_t"), desc: t("page_hosp_c2_d"), linkLabel: t("btn_ver_opcoes"), href:"/airbnb-temporada.html", img: "/assets/airbnb/venti1.avif", icon:"bed" },
+      { title: t("page_hosp_c3_t"), desc: t("page_hosp_c3_d"), linkLabel: t("btn_conferir"), href:"/espacos-eventos.html", img: "/assets/eventos.jpg", icon:"fork", badge: t("badge_celebre") },
     ]
   }
 };
@@ -112,7 +120,7 @@ function cardHtml(c, idx=0) {
       <div class="card__body">
         <h3 class="card__title">${c.title}</h3>
         <p class="card__desc">${c.desc}</p>
-        <a class="card__link" href="${c.href}">${c.linkLabel || t("btn_ver_detalhes")} <span>→</span></a>
+        <a class="card__link" href="${L(c.href)}">${c.linkLabel || t("btn_ver_detalhes")} <span>→</span></a>
       </div>
     </article>
   `;
@@ -124,14 +132,14 @@ function mountHeaderFooter() {
   
   const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
   
-  if (header) {
+  if (header && header.children.length === 0) {
     header.innerHTML = `
       <div class="container header__inner">
-        <a class="brand" href="/">
+        <a class="brand" href="${L('/')}">
           <img class="brand__logo" src="${SITE.brand.logo}" alt="Logo" />
           <div class="brand__text"><small>${SITE.brand.nameSmall}</small><strong><span>${SITE.brand.nameMainA}</span> ${SITE.brand.nameMainB}</strong></div>
         </a>
-        <div class="navWrap"><nav class="nav">${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}</nav></div>
+        <div class="navWrap"><nav class="nav">${SITE.nav.map(i => `<a data-navlink href="${L(i.href)}">${i.label}</a>`).join("")}</nav></div>
         <div class="header__actions">
           ${socialHtml}
           
@@ -142,13 +150,13 @@ function mountHeaderFooter() {
             <option value="zh" ${lang === 'zh' ? 'selected' : ''}>🇨🇳 中文</option>
           </select>
 
-          <a class="btn btn--green" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
+          <a class="btn btn--green" href="${L(SITE.ctas.header.href)}">${SITE.ctas.header.label}</a>
           <button class="burger" id="burger">☰</button>
         </div>
       </div>
       <div class="mobileNav" id="mobileNav" style="display:none">
         <div class="container mobileNav__inner">
-          ${SITE.nav.map(i => `<a data-navlink href="${i.href}">${i.label}</a>`).join("")}
+          ${SITE.nav.map(i => `<a data-navlink href="${L(i.href)}">${i.label}</a>`).join("")}
           
           <select class="lang-switcher" onchange="changeLanguage(this.value)" style="margin: 10px 0; width: 100%;">
             <option value="pt" ${lang === 'pt' ? 'selected' : ''}>🇧🇷 PT</option>
@@ -157,13 +165,13 @@ function mountHeaderFooter() {
             <option value="zh" ${lang === 'zh' ? 'selected' : ''}>🇨🇳 中文</option>
           </select>
           
-          <a class="btn btn--green" style="justify-content:center" href="${SITE.ctas.header.href}">${SITE.ctas.header.label}</a>
+          <a class="btn btn--green" style="justify-content:center" href="${L(SITE.ctas.header.href)}">${SITE.ctas.header.label}</a>
         </div>
       </div>
     `;
   }
 
-  if (footer) {
+  if (footer && footer.children.length === 0) {
     const anoAtual = new Date().getFullYear();
     footer.innerHTML = `
       <div class="footer__wave">
@@ -184,11 +192,11 @@ function mountHeaderFooter() {
         <div class="footer__col">
           <h3 data-i18n="footer_nav_t">Navegue</h3>
           <ul>
-            <li><a href="/" data-i18n="nav_inicio">Início</a></li>
-            <li><a href="a-ilha.html">${t("nav_ilha")}</a></li>
-            <li><a href="passeios-rotas.html">${t("nav_passeios")}</a></li>
-            <li><a href="comer-beber.html">${t("nav_comer")}</a></li>
-            <li><a href="hospedagem.html">${t("nav_hospedagem")}</a></li>
+            <li><a href="${L('/')}" data-i18n="nav_inicio">Início</a></li>
+            <li><a href="${L('/a-ilha.html')}">${t("nav_ilha")}</a></li>
+            <li><a href="${L('/passeios-rotas.html')}">${t("nav_passeios")}</a></li>
+            <li><a href="${L('/comer-beber.html')}">${t("nav_comer")}</a></li>
+            <li><a href="${L('/hospedagem.html')}">${t("nav_hospedagem")}</a></li>
           </ul>
         </div>
         
@@ -196,7 +204,7 @@ function mountHeaderFooter() {
           <h3 data-i18n="footer_serv_t">Atendimento</h3>
           <ul>
             <li><a href="https://wa.me/${GIGI.whatsappNumber}" target="_blank">${t("gigi_fab")}</a></li>
-            <li><a href="fale-conosco.html">${t("nav_fale")}</a></li>
+            <li><a href="${L('/fale-conosco.html')}">${t("nav_fale")}</a></li>
           </ul>
         </div>
       </div>
@@ -217,10 +225,10 @@ function mountHeaderFooter() {
 }
 
 function setActiveNav() {
-  const path = location.pathname.split("/").pop() || "index.html";
+  const path = "/" + (location.pathname.split("/").pop() || "index.html");
   document.querySelectorAll("[data-navlink]").forEach(a => {
     const href = a.getAttribute("href");
-    if (href === path) { a.setAttribute("aria-current", "page"); } 
+    if (href && href.replace(/^\/(en|es|zh)/,'') === path) { a.setAttribute("aria-current", "page"); } 
     else { a.removeAttribute("aria-current"); }
   });
 }
@@ -254,13 +262,13 @@ function mountHome() {
   if (tipTitle) tipTitle.textContent = SITE.tip.title;
 
   const homeCards = document.getElementById("homeCards");
-  if (homeCards) homeCards.innerHTML = SITE.homeCards.map((c,i)=>cardHtml(c,i)).join("");
+  if (homeCards && homeCards.children.length === 0) homeCards.innerHTML = SITE.homeCards.map((c,i)=>cardHtml(c,i)).join("");
 }
 
 function mountPageCards(pageKey) {
   const list = SITE.pages[pageKey] || [];
   const box = document.getElementById("pageCards");
-  if (box) box.innerHTML = list.map((c,i)=>cardHtml(c,i)).join("");
+  if (box && box.children.length === 0) box.innerHTML = list.map((c,i)=>cardHtml(c,i)).join("");
 }
 
 
@@ -769,6 +777,9 @@ function setupClickableCards() {
 
 function setupReveal() {
   const els = document.querySelectorAll(".reveal");
+  // Rede de seguranca: se o observer nao disparar por qualquer motivo,
+  // tudo aparece em 2,5s em vez de ficar invisivel.
+  setTimeout(() => els.forEach(el => el.classList.add("is-in")), 2500);
   if (!("IntersectionObserver" in window) || els.length === 0) { 
     els.forEach(el => el.classList.add("is-in")); 
     return; 
@@ -1119,6 +1130,8 @@ function setupSEO() {
 // =========================================================
 function setupPWA() {
   const head = document.head;
+  // manifest, theme-color, apple-touch-icon e mobile-fixes.css agora vem no HTML
+  // de cada pagina; aqui fica so o registro do service worker.
 
   // Manifest
   if (!document.querySelector('link[rel="manifest"]')) {
@@ -1156,10 +1169,32 @@ function setupPWA() {
   }
 }
 
+// =========================================================
+//   ANALYTICS — cole aqui o ID do GA4 (formato G-XXXXXXXXXX)
+//   Enquanto estiver vazio, nada e' carregado.
+// =========================================================
+const GA4_ID = "";
+function setupAnalytics() {
+  if (!GA4_ID) return;
+  const s = document.createElement('script');
+  s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA4_ID);
+  // Mede os cliques que viram conversa no WhatsApp
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href*="wa.me"]');
+    if (a) gtag('event', 'clique_whatsapp', { link_url: a.href });
+  });
+}
+
 // INICIALIZAÇÃO PRINCIPAL DO SITE
 (function init(){
   setupSEO();
   setupPWA();
+  setupAnalytics();
   setupProgress();
   mountHeaderFooter();
   setupCookieBanner();

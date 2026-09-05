@@ -2,11 +2,21 @@
    SISTEMA DE TRADUÇÃO E DICIONÁRIO
    ========================================================= */
 
-const currentLang = localStorage.getItem('ilha_lang') || 'pt';
+// O idioma vem do prefixo da URL (/en/, /es/, /zh/). O localStorage e' so' fallback
+// para quem chega na raiz, e a escolha vira navegacao real - nao estado invisivel.
+const LANGS = ['en','es','zh'];
+const currentLang = (function(){
+  var seg = location.pathname.split('/')[1];
+  if (LANGS.indexOf(seg) !== -1) return seg;
+  return 'pt';
+})();
 
 function changeLanguage(lang) {
   localStorage.setItem('ilha_lang', lang);
-  location.reload(); 
+  var parts = location.pathname.split('/').filter(Boolean);
+  if (LANGS.indexOf(parts[0]) !== -1) parts.shift();
+  var page = parts.join('/');
+  location.href = (lang === 'pt' ? '/' : '/' + lang + '/') + page + location.search;
 }
 
 const DICT = {

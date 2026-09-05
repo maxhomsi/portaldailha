@@ -4,8 +4,10 @@
                Network-First para HTML e API.
    ========================================================= */
 
-const CACHE_NAME = 'ilha-gigoia-v1';
-const CACHE_STATIC = 'ilha-static-v1';
+// Versao do cache: MUDE ESTE NUMERO sempre que publicar imagens/CSS/JS novos,
+// senao quem ja visitou continua vendo os arquivos antigos.
+const CACHE_NAME = 'ilha-gigoia-v2';
+const CACHE_STATIC = 'ilha-static-v2';
 
 // Assets que serão pré-cacheados na instalação
 const PRE_CACHE = [
@@ -18,7 +20,6 @@ const PRE_CACHE = [
   '/assets/hero.jpg',
   '/assets/logo.png',
   '/assets/capi.png',
-  '/assets/gigi.png',
   '/assets/card-passeios.jpg',
   '/assets/card-comer.jpg',
   '/offline.html'

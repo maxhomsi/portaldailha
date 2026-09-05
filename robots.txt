@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
+Disallow: /offline.html
+Disallow: /*.php$
 
 Sitemap: https://www.ilhadagigoia.com.br/sitemap.xml
