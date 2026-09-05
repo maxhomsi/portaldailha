@@ -6,8 +6,8 @@
 
 // Versao do cache: MUDE ESTE NUMERO sempre que publicar imagens/CSS/JS novos,
 // senao quem ja visitou continua vendo os arquivos antigos.
-const CACHE_NAME = 'ilha-gigoia-v2';
-const CACHE_STATIC = 'ilha-static-v2';
+const CACHE_NAME = 'ilha-gigoia-v3';
+const CACHE_STATIC = 'ilha-static-v3';
 
 // Assets que serão pré-cacheados na instalação
 const PRE_CACHE = [
@@ -31,7 +31,11 @@ self.addEventListener('install', event => {
     caches.open(CACHE_STATIC).then(cache => {
       // addAll ignora falhas individuais para não bloquear instalação
       return Promise.allSettled(
-        PRE_CACHE.map(url => cache.add(url).catch(() => null))
+        PRE_CACHE.map(url =>
+          fetch(new Request(url, { cache: "reload" }))
+            .then(res => res.ok ? cache.put(url, res) : null)
+            .catch(() => null)
+        )
       );
     })
   );
