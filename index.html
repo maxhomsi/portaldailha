@@ -2,15 +2,23 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#47b05a">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ilha Gigóia">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portal Ilha da Gigóia | O Guia Completo do Pantanal Carioca RJ</title>
   <meta name="description" content="Descubra a Ilha da Gigóia na Barra da Tijuca, Rio de Janeiro. Guia completo de passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca." />
 
-  <link rel="canonical" href="https://www.ilhadagigoia.com.br/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/mobile-fixes.css">
 
   <style>
     .hero {
@@ -113,6 +121,19 @@
     }
   }
   </script>
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Portal Ilha da Gigóia" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Portal Ilha da Gigóia | O Guia Completo do Pantanal Carioca RJ" />
+  <meta property="og:description" content="Descubra a Ilha da Gigóia na Barra da Tijuca, Rio de Janeiro. Guia completo de passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca." />
+  <meta property="og:image" content="https://www.ilhadagigoia.com.br/assets/hero.jpg" />
+  <meta property="og:url" content="https://www.ilhadagigoia.com.br/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portal Ilha da Gigóia | O Guia Completo do Pantanal Carioca RJ" />
+  <meta name="twitter:description" content="Descubra a Ilha da Gigóia na Barra da Tijuca, Rio de Janeiro. Guia completo de passeios de barco, restaurantes, pousadas e dicas para conhecer o Pantanal Carioca." />
+  <meta name="twitter:image" content="https://www.ilhadagigoia.com.br/assets/hero.jpg" />
+  <meta name="robots" content="index, follow" />
 </head>
 <body data-page="home">
   
@@ -123,8 +144,8 @@
   <!-- Card de eventos: remova o style="display:none" para ativar -->
   <div id="promoCard" class="promo-popup reveal" style="display: none;">
     <button id="closePromo" class="promo-popup__close" aria-label="Fechar">&times;</button>
-    <a href="agenda-cultural.html">
-      <img src="assets/popup.jpeg" alt="Confira nossa Agenda Cultural">
+    <a href="/agenda-cultural.html">
+      <img src="/assets/popup.jpeg" alt="Confira nossa Agenda Cultural">
     </a>
   </div>
 
@@ -139,11 +160,11 @@
           <span class="accent" data-i18n="hero_title_b">da Ilha da Gigóia</span>
         </h1>
         
-        <p class="reveal" id="heroSubtitle" data-i18n="hero_sub">EEExplore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro</p>
+        <p class="reveal" id="heroSubtitle" data-i18n="hero_sub">Explore praias, passeios de barco, natureza exuberante e experiências autênticas a apenas minutos do Rio de Janeiro</p>
         
         <div class="hero__actions reveal" style="transition-delay: 200ms;">
-          <a href="passeios-rotas.html" class="btn btn--green" data-i18n="btn_passeios">Ver Passeios</a>
-          <a href="a-ilha.html" class="btn" data-i18n="btn_conheca">Conheça a Ilha</a>
+          <a href="/passeios-rotas.html" class="btn btn--green" data-i18n="btn_passeios">Ver Passeios</a>
+          <a href="/a-ilha.html" class="btn" data-i18n="btn_conheca">Conheça a Ilha</a>
         </div>
 
         <div class="hero__foot reveal" style="transition-delay: 300ms;">
@@ -159,7 +180,7 @@
         <div class="tipRow reveal" style="margin-bottom: 60px;">
           <div class="capi">
             <div class="capi__ring">
-              <img id="capiImg" src="assets/capi.png" alt="Capi, O Guia" />
+              <img id="capiImg" src="/assets/capi.png" alt="Capi, O Guia" />
             </div>
             <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
           </div>
@@ -181,10 +202,10 @@
   
   <div id="gigiWidgetRoot"></div>
 
-  <script src="dicionario.js"></script>
-  <script src="dicas-capi.js"></script>
-  <script src="app.js"></script>
-  <script src="cerebro-gigi.js"></script>
+  <script src="/dicionario.js"></script>
+  <script src="/dicas-capi.js"></script>
+  <script src="/app.js"></script>
+  <script src="/cerebro-gigi.js"></script>
 
   <script>
     if (typeof initCapiTip === 'function') initCapiTip();

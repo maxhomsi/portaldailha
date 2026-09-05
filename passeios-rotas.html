@@ -1,8 +1,16 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#47b05a">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ilha Gigóia">
+  <meta name="format-detection" content="telephone=no">
  <title>Passeios de Barco na Ilha da Gigóia | Preços e Roteiros RJ</title>
   <meta name="description" content="Conheça os melhores passeios de barco pela Ilha da Gigóia e Pantanal Carioca. Veja preços, rotas, passeio de jet ski e reserve seu passeio direto pelo WhatsApp." />
   
@@ -14,12 +22,20 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Passeios e Rotas de Barco | Ilha da Gigóia" />
   <meta property="og:description" content="Descubra os melhores roteiros de barco pelo Pantanal Carioca. Paradas para fotos e vida selvagem." />
-  <meta property="og:image" content="assets/card-passeios.jpg" />
+  <meta property="og:image" content="https://www.ilhadagigoia.com.br/assets/card-passeios.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/mobile-fixes.css">
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/passeios-rotas.html" />
+  <meta property="og:site_name" content="Portal Ilha da Gigóia" />
+  <meta property="og:locale" content="pt_BR" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/passeios-rotas.html" />
-
-  <link rel="canonical" href="https://www.ilhadagigoia.com.br/passeios-rotas.html" />
-  <link rel="canonical" href="https://www.ilhadagigoia.com.br/passeios-rotas.html" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Passeios de Barco na Ilha da Gigóia | Preços e Roteiros RJ" />
+  <meta name="twitter:description" content="Conheça os melhores passeios de barco pela Ilha da Gigóia e Pantanal Carioca. Veja preços, rotas, passeio de jet ski e reserve seu passeio direto pelo WhatsApp." />
+  <meta name="twitter:image" content="https://www.ilhadagigoia.com.br/assets/card-passeios.jpg" />
 </head>
 
 <body data-page="passeios-rotas">
@@ -40,7 +56,7 @@
         <div class="tipRow reveal" style="margin-bottom: 20px;">
           <div class="capi">
             <div class="capi__ring">
-              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+              <img id="capiImg" src="/assets/capi.png" alt="Capi" />
             </div>
             <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
           </div>
@@ -62,10 +78,10 @@
   
   <div id="gigiWidgetRoot"></div>
 
-  <script src="dicionario.js"></script>
-  <script src="dicas-capi.js"></script>
-  <script src="app.js"></script>
-  <script src="cerebro-gigi.js"></script>
+  <script src="/dicionario.js"></script>
+  <script src="/dicas-capi.js"></script>
+  <script src="/app.js"></script>
+  <script src="/cerebro-gigi.js"></script>
   <script>
     if (typeof initCapiTip === 'function') {
       initCapiTip();

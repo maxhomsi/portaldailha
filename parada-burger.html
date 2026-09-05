@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#47b05a">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ilha Gigóia">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Parada Burger | Portal Oficial Ilha da Gigóia</title>
 
   <meta name="description" content="O Parada Burger é o ponto obrigatório na Ilha da Gigóia para hambúrgueres artesanais preparados na hora e um lanche reforçado à noite." />
@@ -14,10 +22,20 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Parada Burger - Hambúrguer Artesanal na Ilha" />
   <meta property="og:description" content="Simples, sem formalidade e com burgers caprichados para fechar o dia." />
-  <meta property="og:image" content="assets/parada/parada1.jpg" />
+  <meta property="og:image" content="https://www.ilhadagigoia.com.br/assets/parada/parada1.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/mobile-fixes.css">
+  <link rel="canonical" href="https://www.ilhadagigoia.com.br/parada-burger.html" />
+  <meta property="og:site_name" content="Portal Ilha da Gigóia" />
+  <meta property="og:locale" content="pt_BR" />
   <meta property="og:url" content="https://www.ilhadagigoia.com.br/parada-burger.html" />
-
-  <link rel="stylesheet" href="styles.css">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Parada Burger | Portal Oficial Ilha da Gigóia" />
+  <meta name="twitter:description" content="O Parada Burger é o ponto obrigatório na Ilha da Gigóia para hambúrgueres artesanais preparados na hora e um lanche reforçado à noite." />
+  <meta name="twitter:image" content="https://www.ilhadagigoia.com.br/assets/parada/parada1.jpg" />
 </head>
 <body data-page="comer-beber">
   
@@ -38,7 +56,7 @@
         <div class="tipRow reveal" style="margin-bottom: 20px;">
           <div class="capi">
             <div class="capi__ring">
-              <img id="capiImg" src="assets/capi.png" alt="Capi" />
+              <img id="capiImg" src="/assets/capi.png" alt="Capi" />
             </div>
             <div class="capi__tag" id="tipTitle" data-i18n="tip_title">Dica do Capi:</div>
           </div>
@@ -53,14 +71,14 @@
       <div class="container" style="max-width: 900px;">
         
         <div class="gallery">
-  <img src="assets/lanches/parada1.webp" alt="Parada Burger 1" loading="lazy">
-  <img src="assets/lanches/parada2.webp" alt="Parada Burger 2" loading="lazy">
-  <img src="assets/lanches/parada3.webp" alt="Parada Burger 3" loading="lazy">
-  <img src="assets/lanches/parada4.webp" alt="Parada Burger 4" loading="lazy">
-  <img src="assets/lanches/parada5.webp" alt="Parada Burger 5" loading="lazy">
-  <img src="assets/lanches/parada6.webp" alt="Parada Burger 6" loading="lazy">
-  <img src="assets/lanches/parada7.webp" alt="Parada Burger 7" loading="lazy">
-  <img src="assets/lanches/parada8.jpg" alt="Parada Burger 8" loading="lazy">
+  <img src="/assets/lanches/parada1.webp" alt="Parada Burger 1" loading="lazy">
+  <img src="/assets/lanches/parada2.webp" alt="Parada Burger 2" loading="lazy">
+  <img src="/assets/lanches/parada3.webp" alt="Parada Burger 3" loading="lazy">
+  <img src="/assets/lanches/parada4.webp" alt="Parada Burger 4" loading="lazy">
+  <img src="/assets/lanches/parada5.webp" alt="Parada Burger 5" loading="lazy">
+  <img src="/assets/lanches/parada6.webp" alt="Parada Burger 6" loading="lazy">
+  <img src="/assets/lanches/parada7.webp" alt="Parada Burger 7" loading="lazy">
+  <img src="/assets/lanches/parada8.jpg" alt="Parada Burger 8" loading="lazy">
 </div>
 
         <div class="reveal" style="background: #fff; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-soft); margin-top: 30px;">
@@ -97,7 +115,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-          <a href="cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;" data-i18n="btn_voltar_cafe_lanches">← Voltar para Café & Lanches</a>
+          <a href="/cafe-lanches.html" style="color: var(--green-dark); font-weight: 800; text-decoration: underline;" data-i18n="btn_voltar_cafe_lanches">← Voltar para Café & Lanches</a>
         </div>
       </div>
     </section>
@@ -112,10 +130,10 @@
     <span class="lightbox__prev" id="lightboxPrev">&#10094;</span>
     <span class="lightbox__next" id="lightboxNext">&#10095;</span>
   </div>
-  <script src="cerebro-gigi.js"></script>
-  <script src="dicionario.js"></script>
-  <script src="dicas-capi.js"></script>
-  <script src="app.js"></script>
+  <script src="/cerebro-gigi.js"></script>
+  <script src="/dicionario.js"></script>
+  <script src="/dicas-capi.js"></script>
+  <script src="/app.js"></script>
   <script>if (typeof initCapiTip === 'function') initCapiTip();</script>
 </body>
 </html>
