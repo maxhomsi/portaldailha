@@ -54,9 +54,17 @@ ErrorDocument 404 /404.shtml
 </IfModule>
 
 # ── Bloqueia arquivos internos ───────────────────────────
-<FilesMatch "^\.(git|DS_Store)|\.md$">
-  Require all denied
-</FilesMatch>
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.(git|DS_Store)|\.md$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^\.(git|DS_Store)|\.md$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
 
 # ── Redirecionamento para www (descomente se o servidor já não fizer) ──
 # <IfModule mod_rewrite.c>

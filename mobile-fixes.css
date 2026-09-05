@@ -54,25 +54,7 @@
   }
 }
 
-/* ── 3. COOKIE BANNER: ajuste para telas pequenas ── */
-@media (max-width: 560px) {
-  #cookieBanner {
-    padding: 14px 16px !important;
-    gap: 10px !important;
-  }
-
-  #cookieBanner p {
-    font-size: 12px !important;
-    flex: 1 1 100% !important; /* Força linha própria */
-  }
-
-  #cookieBanner .btn {
-    width: 100% !important;
-    font-size: 13px !important;
-    padding: 12px 16px !important;
-    flex-shrink: 0;
-  }
-}
+/* ── 3. COOKIE BANNER: agora e uma faixa fina definida no styles.css ── */
 
 /* ── 4. HERO: garante texto visível em telas muito pequenas ── */
 @media (max-width: 380px) {
@@ -152,10 +134,6 @@
 
   .gigiBox {
     bottom: calc(90px + env(safe-area-inset-bottom));
-  }
-
-  #cookieBanner {
-    padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important;
   }
 
   .footer {

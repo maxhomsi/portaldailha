@@ -20,6 +20,11 @@ function changeLanguage(lang) {
 }
 
 const DICT = {
+  // === AVISO DE COOKIES (LGPD) ===
+  cookie_txt: { pt: "Usamos cookies para melhorar sua experiência, conforme a LGPD.", en: "We use cookies to improve your experience.", es: "Usamos cookies para mejorar tu experiencia.", zh: "我们使用 Cookie 来改善您的浏览体验。" },
+  cookie_link: { pt: "Política de Privacidade", en: "Privacy Policy", es: "Política de Privacidad", zh: "隐私政策" },
+  cookie_btn: { pt: "Entendi", en: "Got it", es: "Entendido", zh: "知道了" },
+
   // === MENU E RODAPÉ ===
   nav_ilha: { pt: "A Ilha", en: "The Island", es: "La Isla", zh: "小岛" },
   nav_passeios: { pt: "Passeios & Rotas", en: "Tours & Routes", es: "Paseos y Rutas", zh: "游览与路线" },

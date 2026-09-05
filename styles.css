@@ -790,3 +790,36 @@ img.selo-buteco {
   color: #ffffff;
   border-color: var(--green);
 }
+/* =========================================================
+   AVISO DE COOKIES (LGPD) — faixa fina, nao come a primeira tela
+   ========================================================= */
+#cookieBanner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10000;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 18px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255,255,255,.97);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -6px 20px rgba(14,32,20,.08);
+}
+#cookieBanner p {
+  margin: 0; flex: 1 1 auto;
+  font-size: 13px; line-height: 1.4; color: var(--muted); font-weight: 600;
+}
+#cookieBanner a { color: var(--green-dark); text-decoration: underline; }
+#cookieBanner .cookieBanner__ok {
+  flex: 0 0 auto; cursor: pointer;
+  min-height: 40px; padding: 9px 20px;
+  border: 0; border-radius: var(--radius-btn);
+  background: var(--green); color: #fff;
+  font-family: inherit; font-size: 13.5px; font-weight: 800;
+  transition: background var(--t) var(--ease);
+}
+#cookieBanner .cookieBanner__ok:hover { background: var(--green-dark); }
+#cookieBanner .cookieBanner__ok:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  #cookieBanner { gap: 10px; padding: 9px 14px calc(9px + env(safe-area-inset-bottom)); }
+  #cookieBanner p { font-size: 12px; line-height: 1.35; }
+  #cookieBanner .cookieBanner__ok { padding: 9px 14px; font-size: 13px; }
+}
