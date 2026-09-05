@@ -1169,7 +1169,7 @@ function setupPWA() {
 //   ANALYTICS — cole aqui o ID do GA4 (formato G-XXXXXXXXXX)
 //   Enquanto estiver vazio, nada e' carregado.
 // =========================================================
-const GA4_ID = "";
+const GA4_ID = "G-XCW0LJGF7S";
 function setupAnalytics() {
   if (!GA4_ID) return;
   const s = document.createElement('script');
