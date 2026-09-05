@@ -129,8 +129,8 @@ html.js .reveal.is-in { opacity: 1; transform: translateY(0); }
 
 /* PÍLULA CENTRAL */
 .navWrap { 
-  flex: 1; 
-  max-width: 720px; 
+  flex: 0 0 auto; 
+  max-width: none; 
   margin: 0 auto; 
   padding: 10px 24px; 
   border: 1px solid rgba(71, 176, 90, 0.15); 
@@ -141,8 +141,8 @@ html.js .reveal.is-in { opacity: 1; transform: translateY(0); }
 }
 .nav { 
   display: flex; 
-  justify-content: space-between; 
-  width: 100%; 
+  justify-content: center; 
+  width: auto; 
   gap: 10px; 
   font-size: 15px; 
   font-weight: 800; 
@@ -822,4 +822,53 @@ img.selo-buteco {
   #cookieBanner { gap: 10px; padding: 9px 14px calc(9px + env(safe-area-inset-bottom)); }
   #cookieBanner p { font-size: 12px; line-height: 1.35; }
   #cookieBanner .cookieBanner__ok { padding: 9px 14px; font-size: 13px; }
+}
+
+/* =========================================================
+   CABEÇALHO EM TELAS INTERMEDIÁRIAS (notebook)
+   Entre 960px e 1400px o menu, os ícones sociais, o seletor de idioma e o
+   botão não cabem lado a lado: o "Fale Conosco" cobria os ícones e o botão
+   saía da tela. Some com o que é redundante (os ícones sociais também estão
+   no rodapé) e aperta o espaçamento do menu.
+   ========================================================= */
+.header__inner > * { min-width: 0; }
+
+@media (max-width: 1600px) {
+  .header__actions .social-links { display: none; }
+  /* a pilula do menu passa a ter a largura do proprio conteudo, em vez de
+     704px fixos com o texto vazando por cima do seletor de idioma */
+  .header__inner { gap: 14px; }
+}
+@media (max-width: 1420px) {
+  .navWrap { padding: 8px 14px; margin: 0 12px; }
+  .nav { font-size: 14px; gap: 2px; }
+  .nav a { padding: 8px 10px; }
+}
+@media (max-width: 1120px) {
+  .nav { font-size: 13.5px; }
+  .nav a { padding: 7px 7px; }
+  .header__actions { gap: 10px; }
+  .header__actions .btn--green { padding-left: 16px; padding-right: 16px; }
+  .lang-switcher { padding-left: 8px; padding-right: 8px; }
+}
+
+/* =========================================================
+   MENU DE HAMBÚRGUER A PARTIR DE 1260px
+   Com 6 itens, o menu horizontal + idioma + botão não cabem abaixo disso:
+   a pílula encolhia e o texto vazava por cima do logo e dos botões.
+   Entre 960 e 1260px o site passa a usar o mesmo menu do celular.
+   ========================================================= */
+@media (max-width: 1260px) {
+  .navWrap, .header__actions .social-links { display: none !important; }
+
+  .burger {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px; border: none; border-radius: 12px;
+    background: rgba(71,176,90,0.1); color: var(--green-dark);
+    font-size: 24px; cursor: pointer;
+  }
+  .mobileNav { display: block; padding: 15px 0; border-top: 1px solid var(--line); }
+  .mobileNav__inner { display: grid; gap: 10px; }
+  .mobileNav a { padding: 12px; font-weight: 900; font-size: 16px; border-radius: 12px; }
+  .mobileNav a[aria-current="page"] { background: rgba(71,176,90,0.15); color: var(--green); text-align: center; }
 }

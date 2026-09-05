@@ -32,6 +32,7 @@ const SITE = {
   },
   nav: [
     { href:"/a-ilha.html", label: t("nav_ilha") },
+    { href: "/ilha-hoje.html", label: t("nav_hoje") },
     { href:"/passeios-rotas.html", label: t("nav_passeios") },
     { href:"/comer-beber.html", label: t("nav_comer") },
     { href:"/hospedagem.html", label: t("nav_hospedagem") },
@@ -1108,11 +1109,12 @@ function setupSEO() {
   }
 
   // Injeta o JSON-LD no <head> (remove o antigo se existir)
-  const old = document.querySelector('script[type="application/ld+json"]');
+  const old = document.getElementById('seo-jsonld');
   if (old) old.remove();
 
   const script = document.createElement('script');
   script.type = 'application/ld+json';
+  script.id = 'seo-jsonld';
   script.textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": graphs

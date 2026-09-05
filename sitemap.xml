@@ -11,16 +11,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/a-ilha.html" />
   </url>
   <url>
-    <loc>https://www.ilhadagigoia.com.br/agenda-cultural.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
-  </url>
-  <url>
     <loc>https://www.ilhadagigoia.com.br/airbnb-temporada.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -309,6 +299,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/ilha-gourmet.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/ilha-gourmet.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/ilha-gourmet.html" />
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/ilha-hoje.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ilhadagigoia.com.br/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/ilha-hoje.html" />
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/ilhas-tijucas.html</loc>
@@ -611,16 +611,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/a-ilha.html" />
   </url>
   <url>
-    <loc>https://www.ilhadagigoia.com.br/en/agenda-cultural.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
-  </url>
-  <url>
     <loc>https://www.ilhadagigoia.com.br/en/airbnb-temporada.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -909,6 +899,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/ilha-gourmet.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/ilha-gourmet.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/ilha-gourmet.html" />
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/en/ilha-hoje.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ilhadagigoia.com.br/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/ilha-hoje.html" />
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/en/ilhas-tijucas.html</loc>
@@ -1211,16 +1211,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/a-ilha.html" />
   </url>
   <url>
-    <loc>https://www.ilhadagigoia.com.br/es/agenda-cultural.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/agenda-cultural.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
-  </url>
-  <url>
     <loc>https://www.ilhadagigoia.com.br/es/airbnb-temporada.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -1509,6 +1499,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/ilha-gourmet.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/ilha-gourmet.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/ilha-gourmet.html" />
+  </url>
+  <url>
+    <loc>https://www.ilhadagigoia.com.br/es/ilha-hoje.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ilhadagigoia.com.br/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/ilha-hoje.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/ilha-hoje.html" />
   </url>
   <url>
     <loc>https://www.ilhadagigoia.com.br/es/ilhas-tijucas.html</loc>
