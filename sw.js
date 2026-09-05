@@ -6,8 +6,8 @@
 
 // Versao do cache: MUDE ESTE NUMERO sempre que publicar imagens/CSS/JS novos,
 // senao quem ja visitou continua vendo os arquivos antigos.
-const CACHE_NAME = 'ilha-gigoia-v3';
-const CACHE_STATIC = 'ilha-static-v3';
+const CACHE_NAME = 'ilha-gigoia-v4';
+const CACHE_STATIC = 'ilha-static-v4';
 
 // Assets que serão pré-cacheados na instalação
 const PRE_CACHE = [
@@ -73,7 +73,14 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Assets estáticos (.js, .css, imagens) → Cache-First
+  // Codigo (.js/.css) → Network-First: uma publicacao nova vale na hora.
+  // O cache continua existindo, mas so' entra em acao quando falta conexao.
+  if (/\.(js|css)$/i.test(url.pathname)) {
+    event.respondWith(networkFirst(request));
+    return;
+  }
+
+  // Imagens e fontes → Cache-First (e' o que realmente compensa guardar)
   if (isStaticAsset(url.pathname)) {
     event.respondWith(cacheFirst(request));
     return;
@@ -86,7 +93,7 @@ self.addEventListener('fetch', event => {
 // ── Helpers ──────────────────────────────────────────────
 
 function isStaticAsset(pathname) {
-  return /\.(js|css|png|jpg|jpeg|webp|avif|svg|ico|woff2|woff|ttf)$/i.test(pathname);
+  return /\.(png|jpg|jpeg|webp|avif|svg|ico|woff2|woff|ttf)$/i.test(pathname);
 }
 
 async function cacheFirst(request) {

@@ -15,25 +15,27 @@ ErrorDocument 404 /404.shtml
 # ── Cache do navegador ───────────────────────────────────
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/jpeg              "access plus 1 year"
-  ExpiresByType image/png               "access plus 1 year"
-  ExpiresByType image/webp              "access plus 1 year"
-  ExpiresByType image/avif              "access plus 1 year"
-  ExpiresByType image/svg+xml           "access plus 1 year"
-  ExpiresByType image/x-icon            "access plus 1 year"
-  ExpiresByType font/woff2              "access plus 1 year"
-  ExpiresByType text/css                "access plus 1 month"
-  ExpiresByType text/javascript         "access plus 1 month"
-  ExpiresByType application/javascript  "access plus 1 month"
+  ExpiresByType image/jpeg              "access plus 7 days"
+  ExpiresByType image/png               "access plus 7 days"
+  ExpiresByType image/webp              "access plus 7 days"
+  ExpiresByType image/avif              "access plus 7 days"
+  ExpiresByType image/svg+xml           "access plus 7 days"
+  ExpiresByType image/x-icon            "access plus 7 days"
+  ExpiresByType font/woff2              "access plus 7 days"
+  ExpiresByType text/css                "access plus 0 seconds"
+  ExpiresByType text/javascript         "access plus 0 seconds"
+  ExpiresByType application/javascript  "access plus 0 seconds"
   ExpiresByType text/html               "access plus 0 seconds"
 </IfModule>
 
 <IfModule mod_headers.c>
   <FilesMatch "\.(jpg|jpeg|png|webp|avif|gif|svg|ico|woff2?)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header set Cache-Control "public, max-age=604800"
   </FilesMatch>
+  # Nomes de arquivo nao mudam entre publicacoes, entao CSS e JS sao sempre
+  # revalidados (o ETag evita baixar de novo quando nada mudou).
   <FilesMatch "\.(css|js)$">
-    Header set Cache-Control "public, max-age=2592000"
+    Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
   <FilesMatch "\.(html|shtml)$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
