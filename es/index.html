@@ -5,8 +5,9 @@
   <script>document.documentElement.classList.add("js");</script>
 <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#47b05a">
-  <link rel="icon" href="/assets/icon-192.png" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="icon" href="/assets/icon-192.png?v=2" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/icon-180.png?v=2">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Ilha Gigóia">
@@ -49,7 +50,7 @@
 
     .promo-popup {
       position: fixed; 
-      top: 140px; 
+      top: 480px; 
       right: 8%; 
       width: 200px; 
       z-index: 900 !important;
@@ -96,17 +97,26 @@
       50%  { transform: translateY(-8px); }
       100% { transform: translateY(0px); }
     }
+    @media (min-width: 769px) and (max-width: 1200px) {
+      .promo-popup { width: 165px; }
+    }
+    @media (max-height: 760px) and (min-width: 769px) {
+      .promo-popup { top: auto !important; bottom: 80px !important; }
+    }
     @media (max-width: 768px) {
       .promo-popup {
-        bottom: auto !important; 
-        top: 25% !important;
-        right: 15px;
-        width: 130px; 
+        top: auto !important;
+        bottom: 110px !important;
+        right: 12px;
+        width: 120px; 
       }
       .hero {
         height: auto !important;
         min-height: 80vh !important;
       }
+    }
+    @media (max-width: 768px) and (max-height: 700px) {
+      .promo-popup { width: 100px !important; bottom: 92px !important; }
     }
   </style>
   <noscript><style>body{opacity:1!important}</style></noscript>
