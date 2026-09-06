@@ -37,8 +37,32 @@ function hojeISO() {
   return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 }
 
-const EV_MESES = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
-const EV_DIAS  = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+const EV_LANG = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+
+const EV_I18N = {
+  pt: { meses: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
+        dias: ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"],
+        hoje: "Hoje", amanha: "Amanhã", mais: "Ver mais", menos: "Ver menos",
+        reservar: "Reservar com a Gigi", saiba: "Saiba mais" },
+  en: { meses: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+        dias: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        hoje: "Today", amanha: "Tomorrow", mais: "Read more", menos: "Read less",
+        reservar: "Book with Gigi", saiba: "Learn more" },
+  es: { meses: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
+        dias: ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],
+        hoje: "Hoy", amanha: "Mañana", mais: "Ver más", menos: "Ver menos",
+        reservar: "Reservar con Gigi", saiba: "Saber más" },
+  zh: { meses: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
+        dias: ["周日","周一","周二","周三","周四","周五","周六"],
+        hoje: "今天", amanha: "明天", mais: "展开", menos: "收起",
+        reservar: "找 Gigi 预订", saiba: "了解更多" }
+};
+const EV_T = EV_I18N[EV_LANG] || EV_I18N.pt;
+const EV_MESES = EV_T.meses;
+const EV_DIAS  = EV_T.dias;
+
+const EV_ICO_LOCAL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>';
+const EV_ICO_HORA  = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>';
 
 // CSV com suporte a campos entre aspas e vírgulas dentro do texto
 function evParseCSV(texto) {
@@ -65,36 +89,45 @@ function evEscapar(s) {
 function evMontarCard(ev) {
   const d = new Date(ev.data + 'T12:00:00');
   if (isNaN(d)) return '';
-  const link = ev.link
-    ? `<p style="margin-top:16px"><a class="btn btn--green" href="${evEscapar(ev.link)}" target="_blank" rel="noopener">Saiba mais</a></p>`
-    : '';
+
+  // etiqueta "Hoje" / "Amanhã" quando for o caso
+  const hoje = new Date(); hoje.setHours(0,0,0,0);
+  const dias = Math.round((new Date(ev.data + 'T00:00:00') - hoje) / 86400000);
+  const selo = dias === 0 ? EV_T.hoje : (dias === 1 ? EV_T.amanha : '');
+
+  const meta = [
+    ev.local ? `<span>${EV_ICO_LOCAL}${evEscapar(ev.local)}</span>` : '',
+    ev.hora  ? `<span>${EV_ICO_HORA}${evEscapar(ev.hora)}</span>`   : ''
+  ].join('');
+
+  const desc = ev.descricao ? `<p class="ev-desc">${evEscapar(ev.descricao)}</p>` : '';
+  const verMais = (ev.descricao && ev.descricao.length > 150)
+    ? `<button type="button" class="ev-more" data-mais="${evEscapar(EV_T.mais)}" data-menos="${evEscapar(EV_T.menos)}">${evEscapar(EV_T.mais)}</button>` : '';
+
+  const acoes = [
+    ev.link ? `<a class="ev-link" href="${evEscapar(ev.link)}" target="_blank" rel="noopener">${evEscapar(EV_T.saiba)}</a>` : '',
+    `<button type="button" class="ev-cta" onclick="openGigiChat()">${evEscapar(EV_T.reservar)}</button>`
+  ].join('');
+
   return `
-        <article class="event-item" data-date="${evEscapar(ev.data)}">
-          <div class="event-summary">
-            <div class="event-date">
-              <span class="day">${d.getDate()}</span>
-              <span class="month">${EV_MESES[d.getMonth()]}</span>
-              <span class="weekday">${EV_DIAS[d.getDay()]}</span>
+        <article class="ev-card" data-date="${evEscapar(ev.data)}">
+          <div class="ev-card__head">
+            <div class="ev-date">
+              <span class="ev-date__d">${d.getDate()}</span>
+              <span class="ev-date__m">${EV_MESES[d.getMonth()]}</span>
             </div>
-            <div class="event-info">
-              ${ev.categoria ? `<span class="event-cat">${evEscapar(ev.categoria)}</span>` : ''}
-              <h3 class="event-title">${evEscapar(ev.titulo)}</h3>
-              <div class="event-details">
-                ${ev.local ? `<span>📍 ${evEscapar(ev.local)}</span>` : ''}
-                ${ev.hora ? `<span>⏰ ${evEscapar(ev.hora)}</span>` : ''}
+            <div class="ev-head">
+              <div class="ev-tags">
+                ${selo ? `<span class="ev-soon">${selo}</span>` : ''}
+                ${ev.categoria ? `<span class="ev-cat">${evEscapar(ev.categoria)}</span>` : ''}
               </div>
-            </div>
-            <div class="event-chevron">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </div>
-          </div>
-          <div class="event-expanded-content">
-            <div class="expanded-inner">
-              <button class="close-event" aria-label="Fechar" title="Fechar">&times;</button>
-              <p>${evEscapar(ev.descricao) || 'Sem descrição.'}</p>
-              ${link}
+              <h3 class="ev-title">${evEscapar(ev.titulo)}</h3>
+              <div class="ev-meta"><span>${EV_DIAS[d.getDay()]}</span>${meta}</div>
             </div>
           </div>
+          ${desc}
+          ${verMais}
+          <div class="ev-foot">${acoes}</div>
         </article>`;
 }
 

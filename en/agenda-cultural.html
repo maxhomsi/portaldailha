@@ -25,224 +25,64 @@
   <link rel="stylesheet" href="/mobile-fixes.css">
   
   <style>
-    /* =========================================================
-       ESTILOS EXCLUSIVOS DA AGENDA (DROPDOWN À DIREITA E i18n)
-       ========================================================= */
+    /* ==== AGENDA — cards ==== */
+    .header { z-index: 100000 !important; }
+    .progress { z-index: 100001 !important; }
+    .agenda-main { position: relative; z-index: 10; padding-top: 26px; }
 
-    /* BLINDAGEM DO CABEÇALHO E PROGRESSO: Garante que fiquem acima dos cards roláveis */
-    .header {
-        z-index: 100000 !important;
-    }
-    .progress {
-        z-index: 100001 !important;
-    }
-       
-    /* CORREÇÃO DO Z-INDEX E ESTRUTURA: Força a área da agenda acima do footer */
-    .agenda-main {
-        position: relative;
-        z-index: 10000; 
-        padding-top: 30px;
-    }
+    .ev-bar { max-width: 1040px; margin: 0 auto 22px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .ev-bar__count { flex: 0 0 auto; margin-left: auto; font-size: 14px; font-weight: 800; color: var(--muted); }
+    .ev-filters { display: flex; flex: 1 1 auto; min-width: 0; gap: 10px; overflow-x: auto; padding: 4px 2px; scrollbar-width: none; -ms-overflow-style: none; }
+    .ev-filters::-webkit-scrollbar { display: none; }
+    .ev-chip { flex: 0 0 auto; padding: 9px 18px; border-radius: 100px; border: 1.5px solid rgba(16,40,24,.10); background: #fff; color: var(--text); font-size: 14px; font-weight: 800; cursor: pointer; white-space: nowrap; transition: all .2s ease; }
+    .ev-chip:hover { border-color: var(--green); color: var(--green-dark); }
+    .ev-chip.is-on { background: var(--green); border-color: var(--green); color: #fff; box-shadow: 0 6px 16px rgba(71,176,90,.28); }
+    .ev-chip__n { margin-left: 7px; font-size: 12px; font-weight: 700; opacity: .75; }
 
-    .filters-wrapper {
-      position: relative;
-      z-index: 10005; /* Garante que os filtros sejam o elemento mais alto da página */
-      display: flex;
-      justify-content: flex-end; /* Joga o botão todo para a direita */
-      width: 100%;
-      max-width: 900px; /* Mesma largura da lista de eventos para alinhar certinho */
-      margin: 0 auto 20px auto; 
-    }
+    .event-list { display: grid; gap: 20px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1040px; margin: 0 auto; }
 
-    .filter-btn { 
-      padding: 10px 24px; 
-      border: 2px solid var(--green); 
-      border-radius: 100px; 
-      background: var(--green); 
-      color: #fff; 
-      font-size: 15px;
-      font-weight: 800; 
-      cursor: pointer; 
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 15px rgba(71, 176, 90, 0.3);
-    }
-    .filter-btn:hover, .filter-btn.active { 
-      background: var(--green-dark); 
-      border-color: var(--green-dark);
-    }
+    .ev-card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(16,40,24,.06); border-radius: 22px; padding: 22px; box-shadow: 0 10px 28px rgba(16,40,24,.07); transition: transform .25s ease, box-shadow .25s ease; }
+    .ev-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(16,40,24,.13); }
+    .ev-card__head { display: flex; gap: 16px; align-items: flex-start; }
 
-    /* --- ESTILOS DO MENU DROPDOWN DE MESES --- */
-    .month-dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .dropdown-icon {
-      font-size: 10px;
-      transition: transform 0.2s;
-    }
-    .month-dropdown.open .dropdown-icon {
-      transform: rotate(180deg);
-    }
+    .ev-date { flex: 0 0 auto; width: 64px; padding: 10px 0 9px; border-radius: 16px; text-align: center; color: #fff; background: linear-gradient(160deg, var(--green), var(--green-dark)); box-shadow: 0 6px 14px rgba(71,176,90,.30); }
+    .ev-date__d { display: block; font-size: 26px; font-weight: 900; line-height: 1; }
+    .ev-date__m { display: block; margin-top: 3px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
 
-    /* A caixinha flutuante com a lista de meses */
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0; /* Alinha a caixa pela direita do botão */
-      left: auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      display: none; 
-      flex-direction: column;
-      min-width: 180px;
-      z-index: 99999 !important; /* Força bruta para não sumir no rodapé */
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    .dropdown-menu.show {
-      display: flex;
-      animation: fadeInDown 0.2s ease-out;
-    }
+    .ev-head { min-width: 0; flex: 1; }
+    .ev-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 7px; }
+    .ev-cat, .ev-soon { font-size: 11px; font-weight: 900; letter-spacing: .4px; text-transform: uppercase; padding: 4px 11px; border-radius: 100px; }
+    .ev-cat { background: rgba(71,176,90,.12); color: var(--green-dark); }
+    .ev-soon { background: var(--yellow); color: #6b5200; }
+    .ev-title { margin: 0; font-size: 19px; font-weight: 900; line-height: 1.25; color: var(--text); }
+    .ev-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 9px; font-size: 14px; font-weight: 700; color: var(--muted); }
+    .ev-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .ev-meta svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-10px); } 
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .ev-desc { margin: 15px 0 0; font-size: 15px; line-height: 1.65; color: #4a5a4e; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .ev-card.is-open .ev-desc { -webkit-line-clamp: unset; }
+    .ev-more { align-self: flex-start; margin-top: 8px; padding: 0; border: none; background: none; color: var(--green-dark); font-size: 14px; font-weight: 800; cursor: pointer; }
+    .ev-more:hover { text-decoration: underline; }
 
-    /* Cada item dentro da caixinha */
-    .dropdown-item {
-      padding: 12px 20px;
-      border: none;
-      background: transparent;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-    .dropdown-item:hover {
-      background: rgba(71, 176, 90, 0.1);
-      color: var(--green);
-    }
-    .dropdown-item:not(:last-child) {
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-    }
-    .dropdown-item.all-events-btn {
-        background: #f6fbf6;
-        color: var(--green-dark);
-        font-weight: 900;
-        border-bottom: none;
-        border-top: 2px solid rgba(71, 176, 90, 0.2);
-    }
+    .ev-foot { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: auto; padding-top: 18px; }
+    .ev-cta, .ev-link { border: none; border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 800; cursor: pointer; transition: all .2s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+    .ev-cta { background: var(--green); color: #fff; box-shadow: 0 6px 16px rgba(71,176,90,.28); }
+    .ev-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .ev-link { background: #fff; color: var(--green-dark); border: 1.5px solid rgba(71,176,90,.35); }
+    .ev-link:hover { border-color: var(--green); background: rgba(71,176,90,.06); }
 
-    /* Mensagem quando não houver eventos */
-    .no-events-msg {
-      text-align: center;
-      padding: 40px 20px;
-      background: #fff;
-      border-radius: 18px;
-      color: var(--muted);
-      font-size: 16px;
-      font-weight: 600;
-      display: none; 
-    }
+    .no-events-msg { display: none; max-width: 620px; margin: 0 auto; padding: 46px 30px; text-align: center; background: #fff; border-radius: 24px; border: 1px solid rgba(16,40,24,.06); box-shadow: 0 10px 28px rgba(16,40,24,.07); }
+    .no-events-msg__ico { font-size: 40px; line-height: 1; margin-bottom: 14px; }
+    .no-events-msg p { margin: 0 0 20px; font-size: 16px; font-weight: 600; line-height: 1.6; color: var(--muted); }
 
-    /* --- ESTRUTURA DA LISTA DE EVENTOS --- */
-    .event-list { 
-      display: flex; 
-      flex-direction: column; 
-      gap: 14px; 
-      max-width: 900px; 
-      margin: 0 auto; 
-    }
-
-    .event-item { 
-      display: flex; 
-      flex-direction: column;
-      background: #fff; 
-      border-radius: 18px; 
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05); 
-      overflow: hidden; 
-      transition: box-shadow 0.3s ease;
-    }
-    .event-item:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
-
-    /* PARTE VISÍVEL (O RESUMO CLICÁVEL) */
-    .event-summary { display: flex; cursor: pointer; transition: background 0.2s; }
-    .event-summary:hover { background: #fafcfa; }
-
-    /* Bloco da Data */
-    .event-date {
-      background: var(--yellow);
-      color: var(--text);
-      padding: 12px 15px; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-width: 90px; 
-      text-align: center;
-    }
-    .event-date .day { font-size: 32px; font-weight: 900; line-height: 1; letter-spacing: -1px; } 
-    .event-date .month { font-size: 13px; font-weight: 800; text-transform: uppercase; margin-top: 2px; }
-    .event-date .weekday { font-size: 11px; font-weight: 700; opacity: 0.7; }
-
-    /* Bloco de Informações */
-    .event-info { padding: 15px 20px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .event-cat { font-size: 11px; font-weight: 900; color: var(--green); text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.5px; }
-    .event-title { margin: 0 0 6px; font-size: 18px; font-weight: 900; color: var(--text); line-height: 1.2; }
-    .event-details { font-size: 14px; font-weight: 600; color: var(--muted); margin: 0; display: flex; flex-wrap: wrap; gap: 12px; }
-    .event-details span { display: inline-flex; align-items: center; gap: 5px; }
-
-    /* Ícone de Setinha (Acordeão) */
-    .event-chevron { display: flex; align-items: center; justify-content: center; padding: 0 20px; color: #999; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-    .event-item.expanded .event-chevron { transform: rotate(180deg); color: var(--green); }
-
-    /* PARTE ESCONDIDA (O SLIDE EXPANSÍVEL) */
-    .event-expanded-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1); background: #f6fbf6; }
-    .expanded-inner { overflow: hidden; position: relative; }
-    .event-item.expanded .event-expanded-content { grid-template-rows: 1fr; }
-    .event-item.expanded .expanded-inner { padding: 25px; border-top: 1px solid var(--line); }
-
-    .expanded-inner p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text); max-width: 92%; }
-
-    /* Botão fechar (X) do Acordeão */
-    .close-event { position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; border: none; border-radius: 50%; background: #e8e8e8; color: #555; font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-    .close-event:hover { background: #d8d8d8; color: #000; transform: scale(1.1); }
-
-    /* Ajustes para Celular */
+    @media (max-width: 860px) { .event-list { grid-template-columns: 1fr; } }
     @media (max-width: 600px) {
-      .filters-wrapper { 
-        padding: 0 22px; 
-        justify-content: flex-end; 
-      } 
-      .filter-btn {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-      .event-summary { flex-direction: column; }
-      
-      .event-date { 
-        padding: 12px 20px; 
-        flex-direction: row; 
-        justify-content: flex-start;
-        align-items: baseline;
-        gap: 8px; 
-        min-width: auto; 
-      }
-      .event-date .day { font-size: 22px; }
-      .event-date .month { margin-top: 0; font-size: 15px; }
-      .event-date .weekday { font-size: 14px; opacity: 1; color: #a68400; margin-left: auto; }
-      
-      .event-info { padding: 20px; }
-      .event-chevron { display: none; } 
-      .close-event { top: 12px; right: 12px; }
+      .ev-bar { padding: 0 4px; }
+      .ev-card { padding: 18px; border-radius: 20px; }
+      .ev-title { font-size: 18px; }
+      .ev-date { width: 58px; }
+      .ev-foot { justify-content: stretch; }
+      .ev-cta, .ev-link { flex: 1; justify-content: center; }
     }
   </style>
   <link rel="canonical" href="https://www.ilhadagigoia.com.br/en/agenda-cultural.html" />
@@ -318,48 +158,21 @@
       </div>
     </section>
 
-  <section class="agenda-main"> 
+    <section class="agenda-main">
     <div class="container reveal is-in">
-      
-      <div class="filters-wrapper">
-        <div class="month-dropdown" id="monthDropdown">
-          <button class="filter-btn active" id="monthDropdownBtn">
-            <span id="monthBtnText" data-i18n="agenda_btn_mes">Choose the month</span>
-            <span class="dropdown-icon">▼</span>
-          </button>
-          
-          <div class="dropdown-menu" id="monthDropdownMenu">
-            <button class="dropdown-item" data-month="0" data-i18n="agenda_mes_0">January</button>
-            <button class="dropdown-item" data-month="1" data-i18n="agenda_mes_1">February</button>
-            <button class="dropdown-item" data-month="2" data-i18n="agenda_mes_2">March</button>
-            <button class="dropdown-item" data-month="3" data-i18n="agenda_mes_3">April</button>
-            <button class="dropdown-item" data-month="4" data-i18n="agenda_mes_4">May</button>
-            <button class="dropdown-item" data-month="5" data-i18n="agenda_mes_5">June</button>
-            <button class="dropdown-item" data-month="6" data-i18n="agenda_mes_6">July</button>
-            <button class="dropdown-item" data-month="7" data-i18n="agenda_mes_7">August</button>
-            <button class="dropdown-item" data-month="8" data-i18n="agenda_mes_8">September</button>
-            <button class="dropdown-item" data-month="9" data-i18n="agenda_mes_9">October</button>
-            <button class="dropdown-item" data-month="10" data-i18n="agenda_mes_10">November</button>
-            <button class="dropdown-item" data-month="11" data-i18n="agenda_mes_11">December</button>
-            <button class="dropdown-item all-events-btn" data-month="all" data-i18n="agenda_btn_todos">All Events</button>
-          </div>
-        </div>
+
+      <div class="ev-bar">
+        <div class="ev-filters" id="evFilters"></div>
+        <span class="ev-bar__count" id="evCount"></span>
       </div>
 
       <div class="no-events-msg" id="noEventsMsg">
-        <p data-i18n="agenda_sem_eventos" style="margin:0 0 18px">No events scheduled right now. If you would like to arrange something on the island, talk to Gigi on the chat!</p>
+        <div class="no-events-msg__ico">🗓️</div>
+        <p data-i18n="agenda_sem_eventos">No events scheduled right now. If you would like to arrange something on the island, talk to Gigi on the chat!</p>
         <button type="button" class="btn btn--green" onclick="openGigiChat()" data-i18n="agenda_falar_gigi">Chat with Gigi</button>
       </div>
 
-      <div class="event-list" id="eventList">
-
-        
-
-        
-
-        
-
-      </div>
+      <div class="event-list" id="eventList"></div>
     </div>
   </section>
   </main>
@@ -416,127 +229,69 @@
   <script src="/dicionario.js"></script>
   <script src="/app.js"></script>
 
-  <script>
+    <script>
     window.initAgenda = () => {
-      
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
+      const TXT = { todos: "All", cont: "event", conts: "events" };
+      const lista = document.getElementById('eventList');
+      const filtros = document.getElementById('evFilters');
+      const contador = document.getElementById('evCount');
+      const vazio = document.getElementById('noEventsMsg');
+      if (!lista) return;
 
-      const monthBtnText = document.getElementById('monthBtnText');
-      const dropdownBtn = document.getElementById('monthDropdownBtn');
-      const dropdownMenu = document.getElementById('monthDropdownMenu');
-      const dropdownWrapper = document.getElementById('monthDropdown');
-      
-      // Abre/Fecha o Dropdown ao clicar
-      dropdownBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        dropdownMenu.classList.toggle('show');
-        dropdownWrapper.classList.toggle('open');
+      filtros.innerHTML = '';
+      filtros.style.display = '';
+      const cards = Array.from(lista.querySelectorAll('.ev-card'));
+      cards.forEach(c => {
+        const d = c.getAttribute('data-date');
+        if (d) c.dataset.month = String(parseInt(d.split('-')[1], 10) - 1);
       });
 
-      // Fecha o dropdown se clicar fora dele
-      document.addEventListener('click', () => {
-        dropdownMenu.classList.remove('show');
-        dropdownWrapper.classList.remove('open');
-      });
+      const nomeMes = m => (typeof t === 'function' ? t('agenda_mes_' + m) : '');
+      const meses = [...new Set(cards.map(c => c.dataset.month))].sort((a, b) => a - b);
 
-      // 2. Processamento dos Eventos
-      const events = Array.from(document.querySelectorAll('.event-item'));
-      const listContainer = document.getElementById('eventList');
-      const noEventsMsg = document.getElementById('noEventsMsg');
-      
-      // Filtra APENAS os eventos do futuro e esconde permanentemente o passado
-      const futureEvents = events.filter(event => {
-        const dateString = event.getAttribute('data-date'); 
-        const [year, month, day] = dateString.split('-');
-        const eventDate = new Date(year, month - 1, day); 
-        
-        event.dataset.month = eventDate.getMonth(); 
-        
-        if (eventDate < today) {
-            event.style.display = 'none';
-            return false; 
-        }
-        return true; 
-      });
-
-      // Ordena cronologicamente do mais próximo ao mais distante
-      futureEvents.sort((a, b) => {
-        return new Date(a.dataset.date) - new Date(b.dataset.date);
-      });
-      futureEvents.forEach(e => listContainer.appendChild(e));
-
-      // 3. Lógica de Filtro por Mês (Inicia mostrando TODOS)
-      let filterMonth = 'all'; 
-
-      function applyFilter() {
-        let visibleCount = 0;
-        
-        futureEvents.forEach(event => {
-          if (filterMonth === 'all' || event.dataset.month == filterMonth) {
-            event.style.display = 'flex';
-            visibleCount++;
-          } else {
-            event.style.display = 'none';
-            event.classList.remove('expanded'); 
-          }
-        });
-
-        // Mostra mensagem se não houver nada
-        if (visibleCount === 0) {
-          noEventsMsg.style.display = 'block';
-        } else {
-          noEventsMsg.style.display = 'none';
-        }
+      let atual = 'all';
+      const chips = [];
+      function chip(valor, rotulo, n) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'ev-chip' + (valor === atual ? ' is-on' : '');
+        b.dataset.v = valor;
+        b.innerHTML = rotulo + (n ? ' <span class="ev-chip__n">' + n + '</span>' : '');
+        b.addEventListener('click', () => { atual = valor; aplicar(); });
+        filtros.appendChild(b);
+        chips.push(b);
       }
 
-      // Clique nos itens do Dropdown
-      const monthItems = document.querySelectorAll('.dropdown-item');
-      monthItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const clickedMonth = item.dataset.month;
-          filterMonth = clickedMonth;
-          
-          // O botão agora copia o texto exato que estava no item do menu clicado, mantendo a tradução certa
-          monthBtnText.textContent = item.textContent;
-          
-          applyFilter();
+      function aplicar() {
+        let n = 0;
+        cards.forEach(c => {
+          const ok = atual === 'all' || c.dataset.month === atual;
+          c.style.display = ok ? 'flex' : 'none';
+          if (ok) n++;
         });
+        chips.forEach(b => b.classList.toggle('is-on', b.dataset.v === atual));
+        vazio.style.display = n ? 'none' : 'block';
+        contador.textContent = n ? (n + ' ' + (n === 1 ? TXT.cont : TXT.conts)) : '';
+      }
+
+      if (cards.length) {
+        chip('all', TXT.todos, cards.length);
+        meses.forEach(m => chip(m, nomeMes(m), cards.filter(c => c.dataset.month === m).length));
+      } else {
+        filtros.style.display = 'none';
+      }
+      aplicar();
+
+      if (lista.dataset.bound !== '1') {
+      lista.dataset.bound = '1';
+      lista.addEventListener('click', e => {
+        const btn = e.target.closest('.ev-more');
+        if (!btn) return;
+        const card = btn.closest('.ev-card');
+        card.classList.toggle('is-open');
+        btn.textContent = card.classList.contains('is-open') ? btn.dataset.menos : btn.dataset.mais;
       });
-
-      // Executa o filtro inicial
-      applyFilter();
-
-      // 4. Lógica do Acordeão Inteligente (Abre um, fecha o resto)
-      const summaries = document.querySelectorAll('.event-summary');
-      const closeBtns = document.querySelectorAll('.close-event');
-
-      summaries.forEach(summary => {
-        summary.addEventListener('click', () => {
-          const item = summary.closest('.event-item');
-          const isCurrentlyExpanded = item.classList.contains('expanded');
-          
-          // Fecha todos os abertos
-          document.querySelectorAll('.event-item.expanded').forEach(openItem => {
-            openItem.classList.remove('expanded');
-          });
-
-          // Abre o atual se estava fechado
-          if (!isCurrentlyExpanded) {
-            item.classList.add('expanded');
-          }
-        });
-      });
-
-      // Botão X para fechar
-      closeBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation(); 
-          const item = btn.closest('.event-item');
-          item.classList.remove('expanded');
-        });
-      });
-
+      }
     };
   </script>
 <script src="/eventos.js"></script>
