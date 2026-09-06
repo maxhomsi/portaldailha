@@ -32,10 +32,10 @@ const SITE = {
   },
   nav: [
     { href:"/a-ilha.html", label: t("nav_ilha") },
-    { href: "/ilha-hoje.html", label: t("nav_hoje") },
     { href:"/passeios-rotas.html", label: t("nav_passeios") },
     { href:"/comer-beber.html", label: t("nav_comer") },
     { href:"/hospedagem.html", label: t("nav_hospedagem") },
+    { href:"/agenda-cultural.html", label: t("nav_eventos") },
     { href:"/fale-conosco.html", label: t("nav_fale") }
   ],
   ctas: { header: { href:"/passeios-rotas.html", label: t("btn_passeios") } },

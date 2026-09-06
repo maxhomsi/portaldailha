@@ -68,6 +68,13 @@ ErrorDocument 404 /404.shtml
   </FilesMatch>
 </IfModule>
 
+# ── A antiga ilha-hoje.html virou parte de a-ilha.html ──
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^ilha-hoje\.html$ /a-ilha.html [R=301,L]
+  RewriteRule ^(en|es|zh)/ilha-hoje\.html$ /$1/a-ilha.html [R=301,L]
+</IfModule>
+
 # ── Redirecionamento para www (descomente se o servidor já não fizer) ──
 # <IfModule mod_rewrite.c>
 #   RewriteEngine On

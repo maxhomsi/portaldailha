@@ -252,10 +252,11 @@
   <meta name="twitter:title" content="Agenda Cultural | Portal Ilha da Gigóia" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:image" content="https://www.ilhadagigoia.com.br/assets/hero.jpg" />
-  <meta name="robots" content="noindex, follow" />
+  <meta name="robots" content="index, follow" />
   <link rel="alternate" hreflang="pt-BR" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
   <link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/agenda-cultural.html" />
   <link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/agenda-cultural.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.ilhadagigoia.com.br/zh/agenda-cultural.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
 </head>
 <body class="is-ready" data-page="agenda">
@@ -267,7 +268,7 @@
           <img class="brand__logo" src="/assets/logo.png" alt="Logo" />
           <div class="brand__text"><small>PORTAL</small><strong><span>Ilha da</span> Gigóia</strong></div>
         </a>
-        <div class="navWrap"><nav class="nav"><a data-navlink href="/a-ilha.html">A Ilha</a><a data-navlink href="/ilha-hoje.html">A Ilha Hoje</a><a data-navlink href="/passeios-rotas.html">Passeios</a><a data-navlink href="/comer-beber.html">Comer & Beber</a><a data-navlink href="/hospedagem.html">Hospedagem</a><a data-navlink href="/fale-conosco.html">Contato</a></nav></div>
+        <div class="navWrap"><nav class="nav"><a data-navlink href="/a-ilha.html">A Ilha</a><a data-navlink href="/passeios-rotas.html">Passeios</a><a data-navlink href="/comer-beber.html">Comer & Beber</a><a data-navlink href="/hospedagem.html">Hospedagem</a><a data-navlink href="/agenda-cultural.html">Eventos</a><a data-navlink href="/fale-conosco.html">Contato</a></nav></div>
         <div class="header__actions">
           
   <div class="social-links">
@@ -291,7 +292,7 @@
       </div>
       <div class="mobileNav" id="mobileNav" style="display:none">
         <div class="container mobileNav__inner">
-          <a data-navlink href="/a-ilha.html">A Ilha</a><a data-navlink href="/ilha-hoje.html">A Ilha Hoje</a><a data-navlink href="/passeios-rotas.html">Passeios</a><a data-navlink href="/comer-beber.html">Comer & Beber</a><a data-navlink href="/hospedagem.html">Hospedagem</a><a data-navlink href="/fale-conosco.html">Contato</a>
+          <a data-navlink href="/a-ilha.html">A Ilha</a><a data-navlink href="/passeios-rotas.html">Passeios</a><a data-navlink href="/comer-beber.html">Comer & Beber</a><a data-navlink href="/hospedagem.html">Hospedagem</a><a data-navlink href="/agenda-cultural.html">Eventos</a><a data-navlink href="/fale-conosco.html">Contato</a>
           
           <select class="lang-switcher" onchange="changeLanguage(this.value)" style="margin: 10px 0; width: 100%;">
             <option value="pt" selected>🇧🇷 PT</option>
@@ -436,7 +437,7 @@
   <script src="/app.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    window.initAgenda = () => {
       
       const today = new Date();
       today.setHours(0, 0, 0, 0);
@@ -556,9 +557,9 @@
         });
       });
 
-    });
-    
+    };
   </script>
+<script src="/eventos.js"></script>
 <script src="/cerebro-gigi.js"></script>
 </body>
 </html>
