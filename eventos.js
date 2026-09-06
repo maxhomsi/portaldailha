@@ -26,7 +26,7 @@
    escritos direto no HTML. Nada quebra.
    ========================================================= */
 
-const EVENTOS_SHEET_CSV = "";
+const EVENTOS_SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRZXTGISljlRSHwmPEGl_lXWMFxUlHfZ917YQ28DVuUaxx6VGV5myLaifpDunX0eIdefhH3LBhDc2DD/pub?output=csv";
 
 /* ───────────────────────────────────────────────────────── */
 
@@ -133,6 +133,8 @@ async function carregarEventos() {
     const col = nome => cab.findIndex(c => c.startsWith(nome));
     const iData = col('data'), iHora = col('hora'), iTit = col('titulo') > -1 ? col('titulo') : col('título');
     const iLocal = col('local'), iCat = col('categoria'), iDesc = col('descricao') > -1 ? col('descricao') : col('descrição'), iLink = col('link');
+    if (cab.length === 1 && cab[0].includes('|'))
+      throw new Error('os títulos estão todos na célula A1. Separe em 7 colunas: Dados → Dividir texto em colunas');
     if (iData < 0 || iTit < 0) throw new Error('faltam as colunas Data e Titulo');
 
     const eventos = linhas.slice(1).map(l => ({
