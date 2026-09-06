@@ -879,13 +879,13 @@ const SEO_PAGES = {
     title: "Restaurantes e Bares na Ilha da Gigóia | Onde Comer — RJ",
     desc:  "Os melhores restaurantes, bares e cafés da Ilha da Gigóia. Frutos do mar, drinks à beira d'água e experiências gastronômicas únicas no Rio.",
     type:  "article",
-    schemas: ["FoodEstablishment", "BreadcrumbList"]
+    schemas: ["CollectionPage", "BreadcrumbList"]
   },
   "hospedagem": {
     title: "Hospedagem na Ilha da Gigóia | Pousadas e Airbnb — RJ",
     desc:  "Pousadas, hotéis e Airbnb na Ilha da Gigóia. Onde se hospedar para acordar com vista para a lagoa e o Pantanal Carioca.",
     type:  "article",
-    schemas: ["LodgingBusiness", "BreadcrumbList"]
+    schemas: ["CollectionPage", "BreadcrumbList"]
   },
   "como-chegar": {
     title: "Como Chegar na Ilha da Gigóia | Barco, Carro e Dicas — RJ",
@@ -927,6 +927,10 @@ const SEO_FAQ = [
 
 function setupSEO() {
   const head   = document.head;
+  // Paginas de negocio ja trazem o schema certo escrito no HTML (data-negocio),
+  // com o nome, o tipo e a trilha daquele estabelecimento. O schema generico
+  // por secao que este bloco monta so' duplicaria - e com dados menos precisos.
+  const temSchemaProprio = !!document.querySelector('script[type="application/ld+json"]:not(#seo-jsonld)');
   const page   = document.body.getAttribute("data-page") || "";
   const slug   = location.pathname.split("/").pop().replace(".html", "") || "home";
   const meta   = SEO_PAGES[page] || SEO_PAGES[slug] || {};
@@ -983,7 +987,8 @@ function setupSEO() {
   });
 
   // ── JSON-LD Schemas ───────────────────────────────────
-  const schemas = meta.schemas || ["TouristDestination"];
+  const schemas = (meta.schemas || ["TouristDestination"])
+    .filter(s => !(temSchemaProprio && ["FoodEstablishment","LodgingBusiness","LocalBusiness","CollectionPage","BreadcrumbList"].includes(s)));
   const graphs  = [];
 
   // WebSite (sempre na home)
@@ -1049,6 +1054,22 @@ function setupSEO() {
     });
   }
 
+  // CollectionPage: a pagina reune varios estabelecimentos, ela propria nao e' um
+  if (schemas.includes("CollectionPage")) {
+    const itens = [...document.querySelectorAll('#pageCards .card, #homeCards .card')].map((c, n) => {
+      const t = c.querySelector('.card__title'), l = c.querySelector('.card__link');
+      if (!t || !l) return null;
+      return { "@type": "ListItem", "position": n + 1, "name": t.textContent.trim(),
+               "url": new URL(l.getAttribute('href'), location.origin).href };
+    }).filter(Boolean);
+    graphs.push(Object.assign({
+      "@type": "CollectionPage", "@id": url + "#pagina",
+      "name": title, "description": desc, "url": url,
+      "isPartOf": { "@id": SEO_BASE.baseUrl + "/#website" },
+      "about": { "@id": SEO_BASE.baseUrl + "/#ilha" }
+    }, itens.length ? { "mainEntity": { "@type": "ItemList", "itemListElement": itens } } : {}));
+  }
+
   // LocalBusiness / FoodEstablishment / LodgingBusiness
   const bizType = schemas.includes("FoodEstablishment") ? "FoodEstablishment"
                 : schemas.includes("LodgingBusiness")   ? "LodgingBusiness"
@@ -1112,6 +1133,7 @@ function setupSEO() {
   const old = document.getElementById('seo-jsonld');
   if (old) old.remove();
 
+  if (!graphs.length) return;   // nada a declarar: a pagina ja tem o schema dela
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.id = 'seo-jsonld';
