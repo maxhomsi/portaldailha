@@ -21,7 +21,7 @@ function changeLanguage(lang) {
 
 const DICT = {
   // === A ILHA HOJE ===
-  nav_eventos: { pt: "Eventos", en: "Events", es: "Eventos", zh: "活动" },
+  nav_eventos: { pt: "Agenda", en: "What's On", es: "Agenda", zh: "活动日历" },
   nav_hoje: { pt: "A Ilha Hoje", en: "The Island Today", es: "La Isla Hoy", zh: "今日小岛" },
   hoje_title: { pt: "A Ilha da Gigóia Hoje", en: "Gigóia Island Today", es: "La Isla Gigóia Hoy" },
   hoje_sub: { pt: "Como funciona um dia comum na ilha: os barcos, o que abre, quanto levar de dinheiro e onde tem música. Sem depender de agenda de evento.", en: "How an ordinary day works on the island: the boats, what is open, how much cash to bring and where the music is. No event calendar needed.", es: "Cómo funciona un día común en la isla: los barcos, qué abre, cuánto dinero llevar y dónde hay música. Sin depender de una agenda de eventos." },

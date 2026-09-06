@@ -268,7 +268,7 @@
           <img class="brand__logo" src="/assets/logo.png" alt="Logo" />
           <div class="brand__text"><small>PORTAL</small><strong><span>Ilha da</span> Gigóia</strong></div>
         </a>
-        <div class="navWrap"><nav class="nav"><a data-navlink href="/zh/a-ilha.html">小岛</a><a data-navlink href="/zh/passeios-rotas.html">游览</a><a data-navlink href="/zh/comer-beber.html">饮食</a><a data-navlink href="/zh/hospedagem.html">住宿</a><a data-navlink href="/zh/agenda-cultural.html">活动</a><a data-navlink href="/zh/fale-conosco.html">联系</a></nav></div>
+        <div class="navWrap"><nav class="nav"><a data-navlink href="/zh/a-ilha.html">小岛</a><a data-navlink href="/zh/passeios-rotas.html">游览</a><a data-navlink href="/zh/comer-beber.html">饮食</a><a data-navlink href="/zh/hospedagem.html">住宿</a><a data-navlink href="/zh/agenda-cultural.html">活动日历</a><a data-navlink href="/zh/fale-conosco.html">联系</a></nav></div>
         <div class="header__actions">
           
   <div class="social-links">
@@ -292,7 +292,7 @@
       </div>
       <div class="mobileNav" id="mobileNav" style="display:none">
         <div class="container mobileNav__inner">
-          <a data-navlink href="/zh/a-ilha.html">小岛</a><a data-navlink href="/zh/passeios-rotas.html">游览</a><a data-navlink href="/zh/comer-beber.html">饮食</a><a data-navlink href="/zh/hospedagem.html">住宿</a><a data-navlink href="/zh/agenda-cultural.html">活动</a><a data-navlink href="/zh/fale-conosco.html">联系</a>
+          <a data-navlink href="/zh/a-ilha.html">小岛</a><a data-navlink href="/zh/passeios-rotas.html">游览</a><a data-navlink href="/zh/comer-beber.html">饮食</a><a data-navlink href="/zh/hospedagem.html">住宿</a><a data-navlink href="/zh/agenda-cultural.html">活动日历</a><a data-navlink href="/zh/fale-conosco.html">联系</a>
           
           <select class="lang-switcher" onchange="changeLanguage(this.value)" style="margin: 10px 0; width: 100%;">
             <option value="pt" >🇧🇷 PT</option>
@@ -306,14 +306,15 @@
       </div>
     <!--/static:header--></header>
 
-  <header class="pageHead section reveal is-in">
-    <div class="container text-center">
-      <h1 data-i18n="agenda_title">活动日历</h1>
-      <p data-i18n="agenda_sub">现场音乐、美食与不容错过的活动。看看吉戈亚岛最近有什么。</p>
-    </div>
-  </header>
+  <main>
+    <section class="pageHead">
+      <div class="container" style="text-align: center;">
+        <h1 class="reveal" data-i18n="agenda_title">活动日历</h1>
+        <p class="reveal" style="max-width: 700px; margin: 10px auto 0;" data-i18n="agenda_sub">现场音乐、美食与不容错过的活动。看看吉戈亚岛最近有什么。</p>
+      </div>
+    </section>
 
-  <main class="agenda-main"> 
+  <section class="agenda-main"> 
     <div class="container reveal is-in">
       
       <div class="filters-wrapper">
@@ -356,6 +357,7 @@
 
       </div>
     </div>
+  </section>
   </main>
 
   <footer class="footer" id="siteFooter"><!--static:footer-->

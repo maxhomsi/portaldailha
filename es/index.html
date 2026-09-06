@@ -88,6 +88,9 @@
       background: var(--green-dark, #3aa44a);
       transform: scale(1.1);
     }
+    @media (prefers-reduced-motion: reduce) {
+      .promo-popup { animation: none; }
+    }
     @keyframes floatPopup {
       0%   { transform: translateY(0px); }
       50%  { transform: translateY(-8px); }
@@ -137,7 +140,7 @@
           <img class="brand__logo" src="/assets/logo.png" alt="Logo" />
           <div class="brand__text"><small>PORTAL</small><strong><span>Ilha da</span> Gigóia</strong></div>
         </a>
-        <div class="navWrap"><nav class="nav"><a data-navlink href="/es/a-ilha.html">La Isla</a><a data-navlink href="/es/passeios-rotas.html">Paseos</a><a data-navlink href="/es/comer-beber.html">Comer y Beber</a><a data-navlink href="/es/hospedagem.html">Alojamiento</a><a data-navlink href="/es/agenda-cultural.html">Eventos</a><a data-navlink href="/es/fale-conosco.html">Contacto</a></nav></div>
+        <div class="navWrap"><nav class="nav"><a data-navlink href="/es/a-ilha.html">La Isla</a><a data-navlink href="/es/passeios-rotas.html">Paseos</a><a data-navlink href="/es/comer-beber.html">Comer y Beber</a><a data-navlink href="/es/hospedagem.html">Alojamiento</a><a data-navlink href="/es/agenda-cultural.html">Agenda</a><a data-navlink href="/es/fale-conosco.html">Contacto</a></nav></div>
         <div class="header__actions">
           
   <div class="social-links">
@@ -161,7 +164,7 @@
       </div>
       <div class="mobileNav" id="mobileNav" style="display:none">
         <div class="container mobileNav__inner">
-          <a data-navlink href="/es/a-ilha.html">La Isla</a><a data-navlink href="/es/passeios-rotas.html">Paseos</a><a data-navlink href="/es/comer-beber.html">Comer y Beber</a><a data-navlink href="/es/hospedagem.html">Alojamiento</a><a data-navlink href="/es/agenda-cultural.html">Eventos</a><a data-navlink href="/es/fale-conosco.html">Contacto</a>
+          <a data-navlink href="/es/a-ilha.html">La Isla</a><a data-navlink href="/es/passeios-rotas.html">Paseos</a><a data-navlink href="/es/comer-beber.html">Comer y Beber</a><a data-navlink href="/es/hospedagem.html">Alojamiento</a><a data-navlink href="/es/agenda-cultural.html">Agenda</a><a data-navlink href="/es/fale-conosco.html">Contacto</a>
           
           <select class="lang-switcher" onchange="changeLanguage(this.value)" style="margin: 10px 0; width: 100%;">
             <option value="pt" >🇧🇷 PT</option>
@@ -176,7 +179,7 @@
     <!--/static:header--></header>
 
   <!-- Card de eventos: remova o style="display:none" para ativar -->
-  <div id="promoCard" class="promo-popup reveal" style="display: none;">
+  <div id="promoCard" class="promo-popup" hidden>
     <button id="closePromo" class="promo-popup__close" aria-label="Fechar">&times;</button>
     <a href="/es/agenda-cultural.html">
       <img src="/assets/popup.jpeg" alt="Confira nossa Agenda Cultural">
@@ -334,13 +337,17 @@
       const promoCard = document.getElementById('promoCard');
       
       if (closeBtn && promoCard) {
+        // so' mostra se nao foi fechado nos ultimos 7 dias
+        var escondidoAte = 0;
+        try { escondidoAte = parseInt(localStorage.getItem('ilg_promo_ate') || '0', 10); } catch (e) {}
+        if (Date.now() > escondidoAte) promoCard.hidden = false;
+
         closeBtn.addEventListener('click', function(e) {
-          e.preventDefault(); 
+          e.preventDefault();
           promoCard.style.opacity = '0';
           promoCard.style.transform = 'scale(0.8)';
-          setTimeout(function() {
-            promoCard.style.display = 'none';
-          }, 300); 
+          setTimeout(function() { promoCard.hidden = true; }, 300);
+          try { localStorage.setItem('ilg_promo_ate', String(Date.now() + 7*24*60*60*1000)); } catch (e) {}
         });
       }
     });
