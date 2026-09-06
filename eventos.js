@@ -6,15 +6,16 @@
    1. Crie uma planilha no Google Sheets com estas colunas na primeira linha,
       exatamente nesta ordem:
 
-        Data | Hora | Titulo | Local | Categoria | Descricao | Link
+        Data | Hora | Titulo | Local | Descricao          (obrigatórias: Data e Titulo)
+        Categoria | Link                                  (opcionais, podem nem existir)
 
       - Data      → 2026-09-20  (ano-mês-dia; é o único formato aceito)
       - Hora      → 20h  ou  A partir das 12h   (texto livre)
       - Titulo    → Samba no Briza
       - Local     → Briza da Gigóia
-      - Categoria → Música   (aparece como etiqueta)
+      - Categoria → Música   (opcional; vira uma etiqueta no card)
       - Descricao → texto livre, aparece ao clicar no evento
-      - Link      → opcional; se preencher, vira um botão
+      - Link      → opcional; se preencher, vira um botão no card
 
    2. No menu da planilha: Arquivo → Compartilhar → Publicar na web.
       Escolha a aba, formato "Valores separados por vírgula (.csv)",

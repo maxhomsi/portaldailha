@@ -1175,10 +1175,8 @@ card_kauai_d: { pt: "Espaço amplo na Ilha do Ipê com música ao vivo, área ki
   agenda_mes_9: { pt: "Outubro", en: "October", es: "Octubre", zh: "十月" },
   agenda_mes_10: { pt: "Novembro", en: "November", es: "Noviembre", zh: "十一月" },
   agenda_mes_11: { pt: "Dezembro", en: "December", es: "Diciembre", zh: "十二月" },
-  agenda_sem_eventos: { 
-    pt: "Nenhum evento futuro programado para este mês ainda.", 
-    en: "No upcoming events scheduled for this month yet.", 
-    es: "Aún no hay eventos futuros programados para este mes.", zh: "本月暂时还没有安排后续活动。" }
+  agenda_falar_gigi: { pt: "Falar com a Gigi", en: "Chat with Gigi", es: "Hablar con Gigi", zh: "找 Gigi 聊聊" },
+  agenda_sem_eventos: { pt: "Não temos eventos marcados no momento. Se quiser agendar algo na ilha, fale com a Gigi pelo chat!", en: "No events scheduled right now. If you would like to arrange something on the island, talk to Gigi on the chat!", es: "No hay eventos programados por ahora. Si quieres organizar algo en la isla, habla con Gigi por el chat.", zh: "目前没有安排活动。如果你想在岛上办点什么，可以在聊天里找 Gigi。" }
 
 };
 
