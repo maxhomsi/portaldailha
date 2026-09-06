@@ -241,6 +241,8 @@
       filtros.innerHTML = '';
       filtros.style.display = '';
       const cards = Array.from(lista.querySelectorAll('.ev-card'));
+      const desatualizado = cards.length === 0 && lista.children.length > 0;
+      if (desatualizado) console.warn('Agenda: eventos.js em cache antigo — recarregue com Ctrl+Shift+R.');
       cards.forEach(c => {
         const d = c.getAttribute('data-date');
         if (d) c.dataset.month = String(parseInt(d.split('-')[1], 10) - 1);
@@ -270,7 +272,7 @@
           if (ok) n++;
         });
         chips.forEach(b => b.classList.toggle('is-on', b.dataset.v === atual));
-        vazio.style.display = n ? 'none' : 'block';
+        vazio.style.display = (n || desatualizado) ? 'none' : 'block';
         contador.textContent = n ? (n + ' ' + (n === 1 ? TXT.cont : TXT.conts)) : '';
       }
 
@@ -294,7 +296,7 @@
       }
     };
   </script>
-<script src="/eventos.js"></script>
+<script src="/eventos.js?v=2"></script>
 <script src="/cerebro-gigi.js"></script>
 </body>
 </html>
