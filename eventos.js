@@ -7,7 +7,8 @@
       exatamente nesta ordem:
 
         Data | Hora | Titulo | Local | Descricao          (obrigatórias: Data e Titulo)
-        Categoria | Link                                  (opcionais, podem nem existir)
+        Categoria | Link                                  (opcionais)
+        Fim | Imagem | Atracao | Organizador | Preco      (opcionais, melhoram o Google)
 
       - Data      → 2026-09-20  (ano-mês-dia; é o único formato aceito)
       - Hora      → 20h  ou  A partir das 12h   (texto livre)
@@ -16,6 +17,11 @@
       - Categoria → Música   (opcional; vira uma etiqueta no card)
       - Descricao → texto livre, aparece ao clicar no evento
       - Link      → opcional; se preencher, vira um botão no card
+      - Fim       → 23h  (hora de término; usada só no dado estruturado do Google)
+      - Imagem    → https://... (endereço de uma foto do evento)
+      - Atracao   → nome da banda / DJ / artista
+      - Organizador → quem promove, se não for a própria casa
+      - Preco     → 40  ou  R$ 40  ou  gratis  (sem valor, o campo não é enviado)
 
    2. No menu da planilha: Arquivo → Compartilhar → Publicar na web.
       Escolha a aba, formato "Valores separados por vírgula (.csv)",
@@ -131,22 +137,81 @@ function evMontarCard(ev) {
         </article>`;
 }
 
-// Schema de evento: é o que faz o Google mostrar data e local direto na busca
+// Schema de evento: é o que faz o Google mostrar data e local direto na busca.
+// Campos opcionais (image, endDate, performer, organizer, offers) entram quando
+// a planilha tiver as colunas correspondentes — sem inventar informação.
 function evSchema(eventos) {
   if (!eventos.length) return;
   const base = 'https://www.ilhadagigoia.com.br';
-  const dados = eventos.slice(0, 30).map(ev => ({
-    "@type": "Event",
-    "name": ev.titulo,
-    "startDate": ev.data,
-    "eventStatus": "https://schema.org/EventScheduled",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "location": { "@type": "Place", "name": ev.local || "Ilha da Gigóia",
-      "address": { "@type": "PostalAddress", "addressLocality": "Rio de Janeiro",
-        "addressRegion": "RJ", "addressCountry": "BR" } },
-    "description": ev.descricao || undefined,
-    "url": ev.link || base + "/agenda-cultural.html"
-  }));
+  // Google pede pelo menos 1200px de largura e as proporcoes 16x9, 4x3 e 1x1
+  const imagemPadrao = [
+    base + '/assets/evento-16x9.jpg',
+    base + '/assets/evento-4x3.jpg',
+    base + '/assets/evento-1x1.jpg'
+  ];
+
+  // "20h", "20:00", "A partir das 19h" → "20:00"
+  function horaISO(txt) {
+    const m = String(txt || '').match(/(\d{1,2})\s*(?:h|:)\s*(\d{2})?/i);
+    if (!m) return '';
+    const h = String(Math.min(23, parseInt(m[1], 10))).padStart(2, '0');
+    return h + ':' + (m[2] || '00') + ':00';
+  }
+
+  const dados = eventos.slice(0, 30).map(ev => {
+    const ini = horaISO(ev.hora);
+    const fim = horaISO(ev.fim);
+    const d = {
+      "@type": "Event",
+      "name": ev.titulo,
+      "startDate": ini ? ev.data + 'T' + ini + '-03:00' : ev.data,
+      "endDate": fim ? ev.data + 'T' + fim + '-03:00' : ev.data,
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "image": ev.imagem ? [ev.imagem] : imagemPadrao,
+      "location": {
+        "@type": "Place",
+        "name": ev.local || "Ilha da Gigóia",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": ev.local ? ev.local + ", Ilha da Gigóia" : "Ilha da Gigóia",
+          "addressLocality": "Rio de Janeiro",
+          "addressRegion": "RJ",
+          "postalCode": "22630-010",
+          "addressCountry": "BR"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": ev.organizador || ev.local || "Portal Ilha da Gigóia",
+        "url": ev.link || base + "/agenda-cultural.html"
+      },
+      "description": ev.descricao || undefined,
+      "url": ev.link || base + "/agenda-cultural.html"
+    };
+
+    if (ev.atracao) d.performer = { "@type": "PerformingGroup", "name": ev.atracao };
+
+    // preço: aceita "40", "R$ 40", "40,00" ou "gratis"/"free"/"0"
+    const bruto = String(ev.preco || '').trim();
+    if (bruto) {
+      const gratis = /gr[aá]tis|gratuito|free|entrada franca/i.test(bruto);
+      const num = bruto.replace(/[^\d,.]/g, '').replace(/\./g, '').replace(',', '.');
+      const valor = gratis ? '0' : (num || '');
+      if (valor) {
+        d.offers = {
+          "@type": "Offer",
+          "price": valor,
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock",
+          "validFrom": ev.data,
+          "url": ev.link || base + "/agenda-cultural.html"
+        };
+      }
+    }
+    return d;
+  });
+
   const s = document.createElement('script');
   s.type = 'application/ld+json';
   s.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": dados });
@@ -167,6 +232,9 @@ async function carregarEventos() {
     const col = nome => cab.findIndex(c => c.startsWith(nome));
     const iData = col('data'), iHora = col('hora'), iTit = col('titulo') > -1 ? col('titulo') : col('título');
     const iLocal = col('local'), iCat = col('categoria'), iDesc = col('descricao') > -1 ? col('descricao') : col('descrição'), iLink = col('link');
+    // colunas opcionais — se não existirem, o campo simplesmente não é usado
+    const iFim = col('fim'), iImg = col('imagem'), iAtr = col('atracao') > -1 ? col('atracao') : col('atração'),
+          iOrg = col('organizador'), iPreco = col('preco') > -1 ? col('preco') : col('preço');
     if (cab.length === 1 && cab[0].includes('|'))
       throw new Error('os títulos estão todos na célula A1. Separe em 7 colunas: Dados → Dividir texto em colunas');
     if (iData < 0 || iTit < 0) throw new Error('faltam as colunas Data e Titulo');
@@ -178,7 +246,12 @@ async function carregarEventos() {
       local: iLocal > -1 ? (l[iLocal] || '').trim() : '',
       categoria: iCat > -1 ? (l[iCat] || '').trim() : '',
       descricao: iDesc > -1 ? (l[iDesc] || '').trim() : '',
-      link: iLink > -1 ? (l[iLink] || '').trim() : ''
+      link: iLink > -1 ? (l[iLink] || '').trim() : '',
+      fim: iFim > -1 ? (l[iFim] || '').trim() : '',
+      imagem: iImg > -1 ? (l[iImg] || '').trim() : '',
+      atracao: iAtr > -1 ? (l[iAtr] || '').trim() : '',
+      organizador: iOrg > -1 ? (l[iOrg] || '').trim() : '',
+      preco: iPreco > -1 ? (l[iPreco] || '').trim() : ''
     }))
     .filter(e => e.titulo && /^\d{4}-\d{2}-\d{2}$/.test(e.data))
     .filter(e => e.data >= hojeISO())        // evento que já passou não entra
