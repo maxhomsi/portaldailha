@@ -1,2 +1,5 @@
+*.DS_Store
 .DS_Store
+.stage/
 Claude outputs/
+_morph_tmp/
