@@ -96,7 +96,7 @@ const socialHtml = `
   <div class="social-links">
     <a href="https://www.instagram.com/ilha.da.gigoia" target="_blank" class="social-icon">${svgInsta}</a>
     <a href="https://www.facebook.com/portaldailhadagigoia" target="_blank" class="social-icon">${svgFb}</a>
-    <a href="https://www.tiktok.com/@ilha.da.gigoia" target="_blank" class="social-icon">${svgTiktok}</a>
+    <a href="https://www.tiktok.com/@portaldagigoia" target="_blank" class="social-icon">${svgTiktok}</a>
     <a href="https://www.youtube.com/@ilha.da.gigoia" target="_blank" class="social-icon">${svgYoutube}</a>
   </div>
 `;
@@ -291,6 +291,17 @@ function mountGigiWidget() {
   const btn_eventos = lang === 'en' ? "🎉 Events & Agenda" : lang === 'es' ? "🎉 Eventos y Agenda" : lang === 'zh' ? "🎉 活动日程" : "🎉 Eventos do Momento";
   const placeholderInput = lang === 'en' ? "Ask something..." : lang === 'es' ? "Pregunta algo..." : lang === 'zh' ? "请提问..." : "Pergunte algo...";
 
+  // Textos fixos do topo do widget e do formulário do WhatsApp — antes ficavam
+  // hardcoded em PT, então o widget abria em português mesmo com o site em
+  // outro idioma. Agora seguem o mesmo idioma detectado (currentLang) do resto
+  // do widget.
+  const assistantLabel = lang === 'en' ? "Virtual Assistant" : lang === 'es' ? "Asistente Virtual" : lang === 'zh' ? "虚拟助手" : "Assistente Virtual";
+  const helloTitle = lang === 'en' ? "Hello, I'm Gigi!" : lang === 'es' ? "¡Hola, soy Gigi!" : lang === 'zh' ? "你好，我叫吉吉！" : "Olá, me chamo Gigi!";
+  const helloSub = lang === 'en' ? "Type your question below or pick a quick option:" : lang === 'es' ? "Escribe tu pregunta abajo o elige una opción rápida:" : lang === 'zh' ? "在下方输入您的问题，或选择一个快捷选项：" : "Você pode digitar sua dúvida abaixo ou escolher uma opção rápida:";
+  const formIntro = lang === 'en' ? "Fill in your details to start on WhatsApp" : lang === 'es' ? "Completa tus datos para iniciar en WhatsApp" : lang === 'zh' ? "填写您的信息以开始WhatsApp对话" : "Preencha seus dados para iniciar o WhatsApp";
+  const namePlaceholder = lang === 'en' ? "Your name" : lang === 'es' ? "Tu nombre" : lang === 'zh' ? "您的姓名" : "Seu nome";
+  const messagePlaceholder = lang === 'en' ? "Your message..." : lang === 'es' ? "Tu mensaje..." : lang === 'zh' ? "您的留言..." : "Sua mensagem...";
+
   root.innerHTML = `
     <div class="gigiFab">
       <button class="gigiFab__btn" id="gigiFabBtn" type="button" onclick="openGigiChat()">
@@ -299,7 +310,7 @@ function mountGigiWidget() {
     </div>
     <div class="gigiBox" id="gigiBox" style="display:${isOpen ? "flex" : "none"}; max-height: 85vh; overflow: hidden;">
       <div class="gigiBox__top">
-        <div class="gigiBox__title"><strong>Gigi</strong><small>Assistente Virtual</small></div>
+        <div class="gigiBox__title"><strong>Gigi</strong><small>${assistantLabel}</small></div>
         <button class="gigiBox__close" onclick="document.getElementById('gigiBox').style.display='none'">✕</button>
       </div>
       
@@ -312,9 +323,9 @@ function mountGigiWidget() {
               <img src="assets/gigi.png" alt="Gigi" style="width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));">
             </div>
             <div style="flex: 1;">
-              <strong style="font-size: 22px; color: var(--text); display: block; margin-bottom: 6px; line-height: 1.2;">Olá, me chamo Gigi!</strong>
+              <strong style="font-size: 22px; color: var(--text); display: block; margin-bottom: 6px; line-height: 1.2;">${helloTitle}</strong>
               <p style="font-size: 15px; color: var(--muted); font-weight: 600; line-height: 1.4; margin: 0;">
-                Você pode digitar sua dúvida abaixo ou escolher uma opção rápida:
+                ${helloSub}
               </p>
             </div>
           </div>
@@ -332,10 +343,10 @@ function mountGigiWidget() {
 
         <div id="gigiFormContainer" style="display:none; margin-top:15px;">
           <form class="gigiForm" id="gigiForm" style="background:#fff; padding:15px; border-radius:16px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
-            <div style="margin-bottom:12px; font-size:13px; color:var(--green); font-weight:800; text-align:center;">Preencha seus dados para iniciar o WhatsApp</div>
-            <div><input id="gigiName" type="text" placeholder="Seu nome" required style="margin-bottom:8px;"/></div>
+            <div style="margin-bottom:12px; font-size:13px; color:var(--green); font-weight:800; text-align:center;">${formIntro}</div>
+            <div><input id="gigiName" type="text" placeholder="${namePlaceholder}" required style="margin-bottom:8px;"/></div>
             <div><input id="gigiPhone" type="tel" placeholder="(21) 99999-9999" required style="margin-bottom:8px;"/></div>
-            <div><textarea id="gigiMessage" placeholder="Sua mensagem..." required></textarea></div>
+            <div><textarea id="gigiMessage" placeholder="${messagePlaceholder}" required></textarea></div>
             <button class="gigiSend" type="submit" style="width:100%; margin-top:10px;">${t("gigi_btn")}</button>
           </form>
         </div>
@@ -1048,7 +1059,7 @@ function setupSEO() {
       "sameAs": [
         "https://www.instagram.com/ilha.da.gigoia",
         "https://www.facebook.com/portaldailhadagigoia",
-        "https://www.tiktok.com/@ilha.da.gigoia",
+        "https://www.tiktok.com/@portaldagigoia",
         "https://www.youtube.com/@ilha.da.gigoia"
       ]
     });
