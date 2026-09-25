@@ -320,7 +320,7 @@ function mountGigiWidget() {
           
           <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px; padding: 10px 0;">
             <div style="width: 120px; flex-shrink: 0;">
-              <img src="assets/gigi.png" alt="Gigi" style="width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));">
+              <img src="/assets/gigi.png" alt="Gigi" style="width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));">
             </div>
             <div style="flex: 1;">
               <strong style="font-size: 22px; color: var(--text); display: block; margin-bottom: 6px; line-height: 1.2;">${helloTitle}</strong>
@@ -425,7 +425,7 @@ window.sendGigiFreeMsg = function() {
 
   // Função para renderizar resposta no chat
   function renderGigiReply(text, showBtn) {
-    flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${text}</div></div>`);
+    flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot"><div class="gigi-avatar"><img src="/assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble">${text}</div></div>`);
     if (showBtn) {
       const btnText = lang === 'en' ? "💬 Talk to Team on WhatsApp" :
                       lang === 'es' ? "💬 Hablar con Equipo en WhatsApp" :
@@ -452,7 +452,7 @@ window.sendGigiFreeMsg = function() {
       const menuLabel = lang === 'en' ? "Here are the quick options:" : lang === 'es' ? "Aquí están las opciones rápidas:" : lang === 'zh' ? "以下是快捷选项：" : "Aqui estão as opções rápidas:";
       flow.insertAdjacentHTML('beforeend', `
         <div class="gigi-msg gigi-msg--bot">
-          <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
+          <div class="gigi-avatar"><img src="/assets/gigi.png" alt="Gigi"></div>
           <div class="gigi-bubble">${menuLabel}</div>
         </div>
         <div class="gigi-quick-replies">
@@ -468,7 +468,7 @@ window.sendGigiFreeMsg = function() {
     const thinkingId = 'thinking_' + Date.now();
     const thinkingMsg = lang === 'en' ? "✨ Let me think..." : lang === 'es' ? "✨ Déjame pensar..." : lang === 'zh' ? "✨ 让我想想..." : "✨ Deixa eu pensar...";
     setTimeout(() => {
-      flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot" id="${thinkingId}"><div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble" style="opacity:0.6;font-style:italic;">${thinkingMsg}</div></div>`);
+      flow.insertAdjacentHTML('beforeend', `<div class="gigi-msg gigi-msg--bot" id="${thinkingId}"><div class="gigi-avatar"><img src="/assets/gigi.png" alt="Gigi"></div><div class="gigi-bubble" style="opacity:0.6;font-style:italic;">${thinkingMsg}</div></div>`);
       body.scrollTop = body.scrollHeight;
 
       askGigiAI(text, lang).then(aiReply => {
@@ -592,7 +592,7 @@ window.gigiAsk = function(questionId) {
   setTimeout(() => {
     flow.insertAdjacentHTML('beforeend', `
       <div class="gigi-msg gigi-msg--bot">
-        <div class="gigi-avatar"><img src="assets/gigi.png" alt="Gigi"></div>
+        <div class="gigi-avatar"><img src="/assets/gigi.png" alt="Gigi"></div>
         <div class="gigi-bubble">${botReply}</div>
       </div>
     `);
