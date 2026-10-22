@@ -78,8 +78,10 @@ Esses valores estão **escritos no HTML**, um por um. A planilha não alimenta o
 site — alimenta só a Gigi do WhatsApp, com cache de 20 minutos.
 
 Então: **mudar o preço na planilha não muda o site**, e mudar no site não muda o
-que a Gigi fala. Conferido em 22/10/2026: hoje os dois batem, e os 5 idiomas
-batem entre si. Mas isso é coincidência mantida à mão, não garantia.
+que a Gigi fala. Conferido em 22/10/2026 contra as três abas: **os valores batem
+com a planilha.** Mas isso é coincidência mantida à mão, não garantia — e os 5
+idiomas **não** estão em pé de igualdade entre si; a tabela abaixo diz página por
+página.
 
 Ao mexer em preço: **não existe um número fixo de idiomas.** Varia por página, e
 varia por categoria. Conferido em 22/10/2026 contra as **três** abas de preço:
