@@ -115,8 +115,12 @@ arquivo**. Mudou uma página, mudou nas cinco — ou o site fica inconsistente e
 Google indexa versões que discordam.
 
 Não há include nem template: `<footer>` está escrito dentro de cada página. Por
-isso trocar um telefone no rodapé é uma mudança de 315 arquivos, e por isso os
-`_SUBIR-FTP.txt` antigos têm listas enormes. Faça com script, nunca à mão.
+isso trocar um telefone no rodapé é uma mudança de **310 arquivos** (62 por
+idioma), e por isso os `_SUBIR-FTP.txt` antigos têm listas enormes. Faça com
+script, nunca à mão.
+
+São 62 e não 63 porque a `offline.html` — a página que o PWA mostra sem internet —
+não tem rodapé **de propósito**, igual nos 5 idiomas. Não conserte isso.
 
 **O zh está atrasado:** 33 páginas com preço contra 50 nas outras. Faltam em
 `a-ilha`, `agenda-cultural`, `bar-joana`, `bar-kauai`, `bares-drinks`,
