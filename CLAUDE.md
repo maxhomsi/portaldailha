@@ -81,37 +81,46 @@ Então: **mudar o preço na planilha não muda o site**, e mudar no site não mu
 que a Gigi fala. Conferido em 22/10/2026: hoje os dois batem, e os 5 idiomas
 batem entre si. Mas isso é coincidência mantida à mão, não garantia.
 
-Ao mexer em preço, o alcance **não é o mesmo para toda página** — conferido em
-22/10/2026:
+Ao mexer em preço: **não existe um número fixo de idiomas.** Varia por página, e
+varia por categoria. Conferido em 22/10/2026 contra as **três** abas de preço:
 
-- a **página do item** (`casanova.html` e companhia): existe com preço nos **5
-  idiomas**. As 9 páginas de item que publicam valor têm preço em pt, en, es, fr
-  **e** zh. Mude nas cinco.
-- a **`hoteis-pousadas.html`** (página-lista, repete os valores): tem preço em
-  pt, en, es e fr e **zero em zh**. Mude nas quatro.
-- a planilha "Eventos", e avise o Max que a Gigi do WhatsApp leva **20 min** pra
-  pegar.
+**Hospedagem** (aba `Preços Hospedagem`)
 
-Por que a diferença: **17 páginas publicam preço em 4 idiomas e não em zh** — são
-as mesmas 17 em pt, en, es e fr (conferido), e entre elas está a
-`hoteis-pousadas.html`. As páginas de item não estão nessa lista. Então antes de
-mudar, confira em que idiomas a página em questão realmente tem valor, em vez de
-assumir cinco:
+- as **9 páginas de item** que publicam valor (`casanova`, `veneza-carioca`,
+  `pousada-marisis`, `pousada-babel`, `pousada-barra`, `lux-48`, `casa-venti`,
+  `casa-goia`, `casa-estatua`): preço nos **5 idiomas**
+- `hoteis-pousadas.html` (página-lista): **4** — zh não publica valor nela
+
+**Passeios** (aba `Preços Passeios`)
+
+- `pantanal-carioca`, `solar-palmeiras`, `reserva`, `gaivota`, `oasis`: **4** —
+  zh não tem preço nenhum nelas
+- `ilhas-tijucas`: 13 menções de preço em pt, en, es e fr e **1** em zh (só a
+  diária principal, `每人R$ 150`). Não é "tem ou não tem": é **parcial**
+- `jet-ski` (R$150/250/450/750) e `passeios-rotas`: **5 idiomas**, completos
+
+**Travessia** (aba `Preços Travessia`)
+
+Não tem página própria: aparece dentro de `pantanal-carioca` e `ilhas-tijucas`
+como "R$ 2 a R$ 5 por pessoa". A aba diz chalana **2** em horário comum e **5** de
+madrugada.
+
+### Então confira, não assuma
 
 ```sh
 for d in . en es fr zh; do echo -n "$d: "; grep -c 'R\$' $d/<pagina>.html; done
 ```
 
-Casos combinados de propósito, não conserte sem perguntar:
+E lembre que a Gigi do WhatsApp leva **20 min** pra pegar o valor novo da planilha.
 
-- **Pousada Ilha da Fantasia** — planilha tem "400 a 500", site não publica valor
-- **Pousada Barra** e **Pousada Babel** — não são parceiras: o site publica preço
-  (R$300 e R$270), a planilha fica **vazia** de propósito e a coluna "A Gigi
-  sugere?" está NÃO. Preço de quem não é parceiro envelhece sem ninguém conferir
-- **Pousada Marísis** — sem parceria desde 21/10/2026. Continua no site, a Gigi
-  do WhatsApp não oferece
-- **Solar das Palmeiras** — espaço de eventos, não pousada. Os R$100 e R$50 da
-  página são preço de **passeio** (aba `Preços Passeios`), e batem
+**Por que esta seção é tão detalhada:** a primeira versão dela dizia "mude nas 5
+páginas do item", o que é verdade só para hospedagem. Uma sessão lendo o documento
+percebeu que `pantanal-carioca` e `solar-palmeiras` estavam na lista das 17 páginas
+sem preço em zh, e que as duas publicam preço de **passeio** — ou seja, a regra
+estava certa para pousada e errada justamente para a categoria onde está a
+promoção com prazo. Ela também notou que a conferência de 22/10 tinha sido feita
+só contra `Preços Hospedagem`. As duas observações estavam certas, e a verificação
+das outras duas abas veio daí.
 
 ## Chave de API: nunca no git, nunca no browser
 
@@ -296,6 +305,12 @@ Fora da raiz e das 4 pastas de idioma não existe página do site.
 - Conferir com as pousadas os valores marcados "CONFERIR se ainda vale" na aba
   `Preços Hospedagem`
 - Decidir o que acontece com a promoção do Pantanal em 01/01/2027
+- Completar o preço de passeio em zh: `pantanal-carioca`, `solar-palmeiras`,
+  `reserva`, `gaivota` e `oasis` não têm nenhum, e `ilhas-tijucas` tem só a diária
+  principal (1 menção contra 13 nos outros idiomas)
+- O texto "a travessia comum custa de R$ 2 a R$ 5 por pessoa" em `pantanal-carioca`
+  junta duas coisas: a aba `Preços Travessia` diz **2** em horário comum e **5** de
+  madrugada. Como faixa "(R$ 2 a R$ 5)" está bom; a frase com "comum" não
 - Na `fr/hoteis-pousadas.html` o valor da Pousada Babel (R$270) aparece **uma vez**
   onde pt, en e es mostram **duas** — falta a linha de preço dentro do bloco
   descritivo dela. O bloco existe e os 13 nomes de pousada estão nos 5 idiomas, só
