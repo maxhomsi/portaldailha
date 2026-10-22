@@ -83,8 +83,10 @@ com a planilha.** Mas isso é coincidência mantida à mão, não garantia — e
 idiomas **não** estão em pé de igualdade entre si; a tabela abaixo diz página por
 página.
 
-Ao mexer em preço: **não existe um número fixo de idiomas.** Varia por página, e
-varia por categoria. Conferido em 22/10/2026 contra as **três** abas de preço:
+Ao mexer em preço: **não existe um número fixo de idiomas, e não existe regra por
+categoria. É por página.** As categorias abaixo servem para organizar a tabela e
+dizer de que aba da planilha o valor vem — não para prever o alcance. Conferido em
+22/10/2026 contra as **três** abas de preço:
 
 **Hospedagem** (aba `Preços Hospedagem`)
 
