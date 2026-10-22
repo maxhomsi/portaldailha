@@ -81,9 +81,26 @@ Então: **mudar o preço na planilha não muda o site**, e mudar no site não mu
 que a Gigi fala. Conferido em 22/10/2026: hoje os dois batem, e os 5 idiomas
 batem entre si. Mas isso é coincidência mantida à mão, não garantia.
 
-Ao mexer em preço: mude na planilha **e** nas 5 páginas do idioma, **e** na
-`hoteis-pousadas.html` (a página-lista repete os valores), **e** avise o Max que
-a Gigi do WhatsApp leva 20 min pra pegar.
+Ao mexer em preço, o alcance **não é o mesmo para toda página** — conferido em
+22/10/2026:
+
+- a **página do item** (`casanova.html` e companhia): existe com preço nos **5
+  idiomas**. As 9 páginas de item que publicam valor têm preço em pt, en, es, fr
+  **e** zh. Mude nas cinco.
+- a **`hoteis-pousadas.html`** (página-lista, repete os valores): tem preço em
+  pt, en, es e fr e **zero em zh**. Mude nas quatro.
+- a planilha "Eventos", e avise o Max que a Gigi do WhatsApp leva **20 min** pra
+  pegar.
+
+Por que a diferença: **17 páginas publicam preço em 4 idiomas e não em zh** — são
+as mesmas 17 em pt, en, es e fr (conferido), e entre elas está a
+`hoteis-pousadas.html`. As páginas de item não estão nessa lista. Então antes de
+mudar, confira em que idiomas a página em questão realmente tem valor, em vez de
+assumir cinco:
+
+```sh
+for d in . en es fr zh; do echo -n "$d: "; grep -c 'R\$' $d/<pagina>.html; done
+```
 
 Casos combinados de propósito, não conserte sem perguntar:
 
@@ -142,6 +159,63 @@ muda é o resto do conteúdo, e a raiz é a versão mais nova. Então não há p
 errado escondido ali — mas **edite sempre a raiz**. Mexer em
 `_upload-precos-pousadas/casanova.html` pensando que é a página do site é um erro
 que não dá erro: você salva, manda subir, e nada muda no ar.
+
+## SEO e Analytics: o que está montado
+
+Conferido nos arquivos em 22/10/2026. **Esta seção descreve o que EXISTE, não a
+estratégia** — o porquê de cada escolha, o que foi tentado e não funcionou, e qual
+página traz reserva não está em arquivo nenhum. Se for mexer nisso, pergunte ao
+Max antes de supor.
+
+**Indexação**
+
+- `sitemap.xml` — 300 URLs e 1.800 entradas de `hreflang`. A conta fecha assim:
+  315 páginas − 5 `offline.html` − 5 `termos.html` − 5
+  `politica-privacidade.html` = 300, e as 5 home entram como `/`, `/en/`, `/es/`,
+  `/fr/`, `/zh/` (forma canônica), não como `index.html`. **Está certo, não
+  "conserte".**
+- `robots.txt` — libera tudo, bloqueia `/offline.html` e `/*.php$`, aponta o
+  sitemap.
+- Em **62 das 63** páginas de cada idioma (a 63ª é a `offline.html`):
+  `rel="canonical"`, `hreflang`, `meta name="description"`, Open Graph, Twitter
+  card e `application/ld+json`.
+- Schema.org em uso: `TouristDestination`, `FAQPage` (`Question`/`Answer`),
+  `BreadcrumbList`, `PostalAddress`, `GeoCoordinates`, `WebSite`, `ListItem`.
+
+**Medição**
+
+- GA4 **`G-XCW0LJGF7S`**, declarado no `app.js` e carregado por `setupAnalytics()`.
+  Com `GA4_ID` vazio nada é carregado — é assim de propósito.
+- Todo evento passa por **`window.medir(evento, dados)`**, um ponto único que:
+  anexa `pagina`, `titulo_pagina` e `idioma` em toda chamada; **não quebra o site**
+  se o gtag não existir (bloqueador, rede fora, ID vazio); e corta em 100
+  caracteres, que é o limite de parâmetro do GA4.
+- **`window.limpaTextoParaMedicao()`** troca e-mail por `[email]` e sequências de 9
+  dígitos ou mais por `[numero]` **antes** de enviar. O GA4 não aceita dado
+  pessoal, e o visitante escreve telefone na conversa com a Gigi. **Nunca mande
+  texto livre do visitante sem passar por aqui.**
+- Eventos hoje: `clique_whatsapp` (com a URL de origem — é o que diz qual das
+  páginas gera reserva), `pergunta_gigi`, `botao_gigi`, `troca_idioma` (manda só
+  o idioma novo; o parâmetro base `idioma` ainda é o antigo naquele instante, e o
+  par de/para sai de graça). Chamados de `app.js` e `depoimentos.js`.
+- Não há GTM, nem segundo rastreador, nem pixel de rede social. Não há arquivo nem
+  meta de verificação do Search Console no repo — se a propriedade está
+  verificada, foi por DNS ou fora daqui.
+
+**Histórico que existe em arquivo, fora do git**
+
+A pasta `Claude outputs/` (está no `.gitignore`, então só existe na máquina do
+Max) guarda o que sessões anteriores produziram: entre outros, uma auditoria linha
+a linha de 30/09/2026 que corrigiu 172 trechos em português que apareciam nas
+páginas em inglês, espanhol e chinês, além de prints e listas de upload de SEO.
+**Vale abrir antes de propor mudança de SEO** — boa chance de o assunto já ter
+sido varrido.
+
+**Ao mexer em `app.js`**
+
+É um arquivo para as 315 páginas, então toda mudança nele atinge o site inteiro —
+e cai na regra do `sw.js`: bumpe a versão ou o visitante antigo continua com o
+`app.js` velho.
 
 ## Como trabalhar aqui
 
@@ -211,10 +285,18 @@ Fora da raiz e das 4 pastas de idioma não existe página do site.
 
 ## Pendências
 
-- Decidir o que fazer com os 315 arquivos não commitados
+- Decidir o que fazer com os 315 arquivos não commitados — entre eles o `app.js`,
+  com **932 linhas adicionadas e 98 removidas** que nunca foram commitadas
+- Registrar a estratégia de SEO e venda: hoje os arquivos mostram **o que** está
+  montado, e nada registra **por quê**, o que já foi tentado, ou qual página
+  converte
 - Decidir se `_upload-precos-pousadas/` deve ser apagada ou entrar no
   `.gitignore` — hoje ela pode ser commitada por acidente
 - Completar o preço nas 17 páginas em chinês
 - Conferir com as pousadas os valores marcados "CONFERIR se ainda vale" na aba
   `Preços Hospedagem`
 - Decidir o que acontece com a promoção do Pantanal em 01/01/2027
+- Na `fr/hoteis-pousadas.html` o valor da Pousada Babel (R$270) aparece **uma vez**
+  onde pt, en e es mostram **duas** — falta a linha de preço dentro do bloco
+  descritivo dela. O bloco existe e os 13 nomes de pousada estão nos 5 idiomas, só
+  essa menção caiu. Babel não é parceira, então não é urgente
