@@ -32,11 +32,13 @@ site não mudou. O que você entrega é:
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME   = 'ilha-gigoia-v15';
-const CACHE_STATIC = 'ilha-static-v15';
+const CACHE_NAME = 'ilha-gigoia-v16';
+const CACHE_STATIC = 'ilha-static-v16';
 ```
 
-**Subir HTML/CSS/JS novo sem trocar esse `v15` por `v16` entrega o arquivo velho
+(v16 desde 23/10/2026, agenda com evento que se repete.)
+
+**Subir HTML/CSS/JS novo sem trocar esse `v16` por `v17` entrega o arquivo velho
 para quem já visitou o site.** O Max sobe tudo, abre no celular, vê a página
 antiga e acha que o FTP falhou. As duas linhas sobem juntas, e o `sw.js` entra na
 lista de arquivos a subir. Isso vale para toda mudança de conteúdo — imagem nova
@@ -70,6 +72,33 @@ Isto não é óbvio e já confundiu: são dois documentos diferentes no Drive.
   **escreve** as reservas.
 
 Preço mora na "Eventos". Reserva mora na "Gigi Database".
+
+## Agenda: a aba Eventos, e evento que se repete
+
+A página `agenda-cultural.html` (5 idiomas) e o chat da Gigi do site leem a aba
+**Eventos** da planilha "Eventos" pelo CSV publicado no `eventos.js`
+(`EVENTOS_SHEET_CSV`). A Gigi do WhatsApp lê o **mesmo** CSV. O endereço não tem
+`gid`, então o Google exporta **a primeira aba**: se alguém arrastar outra aba pra
+frente da Eventos, o site e as duas Gigis passam a ler a aba errada.
+
+Colunas, achadas pelo **nome** do cabeçalho (nunca pela posição): Data
+(`AAAA-MM-DD`, célula formatada como **Texto**), Hora, Titulo, Local, Descricao,
+Categoria, **Repete**. A coluna I é a instrução do Max — o CSV traz ela, mas nenhum
+parser a lê, e linha sem data e título não vira evento. Categoria é texto livre (vira
+só a etiqueta do card; o filtro da página é por mês): use as que já existem — Música,
+Feira, Festa.
+
+**Repete** (desde 23/10/2026): vazia = um dia só; `semanal` ou `quinzenal`. A Data
+da linha é a **primeira vez** — dela sai o dia da semana e o compasso da quinzena.
+`evExpandirRepeticoes` espalha as datas pelos próximos `EV_REPETE_DIAS` (30). Texto
+que não for nenhum dos dois não vira repetição. Uma linha de um dia só com o mesmo
+título e a mesma data de uma repetição ganha dela — é assim que se muda a hora de
+um sábado sem mexer na fixa.
+
+**A mesma regra está escrita no bot** (`eventosDaPlanilha` no `gigi-bot`), porque os
+projetos não compartilham código. Mudou aqui, muda lá. O `npm test` do `gigi-bot`
+roda este `eventos.js` de verdade (`testes/agenda-site.js`) e falha se os dois
+espalharem datas diferentes — é o único teste que existe sobre este repo.
 
 ## Preço: 233 páginas à mão contra uma planilha
 
@@ -257,6 +286,10 @@ responsabilidade é inteiramente sua.**
 
 ## Estado em 22/10/2026
 
+- **23/10: agenda com evento que se repete, esperando FTP.** `eventos.js`, `sw.js`
+  (v16) e as 5 `agenda-cultural.html` (`eventos.js?v=4`) — lista em
+  `_SUBIR-FTP-AGENDA-RECORRENTE-23OUT.txt`. Não commitado: os três arquivos já
+  estavam no bolo de não-commitados, e commitar levaria junto o que não é meu.
 - **315 arquivos não commitados** (251 modificados, 63 novos, 1 apagado). Entre
   eles a limpeza do `gigi-proxy.php` que tirou a chave do código — correta e
   ainda não commitada. Antes de qualquer coisa, entenda com o Max o que desse
