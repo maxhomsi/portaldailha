@@ -32,13 +32,13 @@ site não mudou. O que você entrega é:
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME = 'ilha-gigoia-v16';
-const CACHE_STATIC = 'ilha-static-v16';
+const CACHE_NAME = 'ilha-gigoia-v17';
+const CACHE_STATIC = 'ilha-static-v17';
 ```
 
-(v16 desde 23/10/2026, agenda com evento que se repete.)
+(v17 desde 23/10/2026, card da Agenda em todo acesso.)
 
-**Subir HTML/CSS/JS novo sem trocar esse `v16` por `v17` entrega o arquivo velho
+**Subir HTML/CSS/JS novo sem trocar esse `v17` por `v18` entrega o arquivo velho
 para quem já visitou o site.** O Max sobe tudo, abre no celular, vê a página
 antiga e acha que o FTP falhou. As duas linhas sobem juntas, e o `sw.js` entra na
 lista de arquivos a subir. Isso vale para toda mudança de conteúdo — imagem nova
@@ -289,7 +289,11 @@ responsabilidade é inteiramente sua.**
 
 ## Estado em 22/10/2026
 
-- **23/10: agenda com evento que se repete, esperando FTP.** `eventos.js`, `sw.js`
+- **23/10: card da Agenda na página inicial aparece em todo acesso** (antes o X
+  escondia por 7 dias, e parecia que o card tinha sumido). `index.html` nos 5
+  idiomas + `sw.js` v17 — lista em `_SUBIR-FTP-POPUP-AGENDA-23OUT.txt`. Não
+  commitado, pelo mesmo motivo do item abaixo.
+- **23/10: agenda com evento que se repete — já subiu por FTP e foi conferida no ar.** `eventos.js`, `sw.js`
   (v16) e as 5 `agenda-cultural.html` (`eventos.js?v=4`) — lista em
   `_SUBIR-FTP-AGENDA-RECORRENTE-23OUT.txt`. Não commitado: os três arquivos já
   estavam no bolo de não-commitados, e commitar levaria junto o que não é meu.
