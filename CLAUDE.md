@@ -88,8 +88,11 @@ parser a lê, e linha sem data e título não vira evento. Categoria é texto li
 só a etiqueta do card; o filtro da página é por mês): use as que já existem — Música,
 Feira, Festa.
 
-**Repete** (desde 23/10/2026): vazia = um dia só; `semanal` ou `quinzenal`. A Data
-da linha é a **primeira vez** — dela sai o dia da semana e o compasso da quinzena.
+**Repete** (desde 23/10/2026): vazia = um dia só; `semanal`, `quinzenal`, `fim de
+semana` (sábado **e** domingo numa linha só) ou `fim de semana quinzenal`. A Data da
+linha é a **primeira vez** — dela sai o dia da semana e o compasso da quinzena; com
+fim de semana, a data num dia útil começa no sábado seguinte. Feriado não é
+calculado: entra como linha de um dia só.
 `evExpandirRepeticoes` espalha as datas pelos próximos `EV_REPETE_DIAS` (30). Texto
 que não for nenhum dos dois não vira repetição. Uma linha de um dia só com o mesmo
 título e a mesma data de uma repetição ganha dela — é assim que se muda a hora de
