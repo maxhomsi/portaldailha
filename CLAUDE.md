@@ -32,13 +32,13 @@ site não mudou. O que você entrega é:
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME = 'ilha-gigoia-v17';
-const CACHE_STATIC = 'ilha-static-v17';
+const CACHE_NAME = 'ilha-gigoia-v18';
+const CACHE_STATIC = 'ilha-static-v18';
 ```
 
-(v17 desde 23/10/2026, card da Agenda em todo acesso.)
+(v18 desde 25/10/2026, marca de equipe e clique no telefone no `app.js`.)
 
-**Subir HTML/CSS/JS novo sem trocar esse `v17` por `v18` entrega o arquivo velho
+**Subir HTML/CSS/JS novo sem trocar esse `v18` por `v19` entrega o arquivo velho
 para quem já visitou o site.** O Max sobe tudo, abre no celular, vê a página
 antiga e acha que o FTP falhou. As duas linhas sobem juntas, e o `sw.js` entra na
 lista de arquivos a subir. Isso vale para toda mudança de conteúdo — imagem nova
@@ -240,9 +240,28 @@ Max antes de supor.
   pessoal, e o visitante escreve telefone na conversa com a Gigi. **Nunca mande
   texto livre do visitante sem passar por aqui.**
 - Eventos hoje: `clique_whatsapp` (com a URL de origem — é o que diz qual das
-  páginas gera reserva), `pergunta_gigi`, `botao_gigi`, `troca_idioma` (manda só
+  páginas gera reserva), `clique_telefone` (link `tel:` do rodapé, desde 25/10),
+  `pergunta_gigi`, `botao_gigi`, `troca_idioma` (manda só
   o idioma novo; o parâmetro base `idioma` ainda é o antigo naquele instante, e o
-  par de/para sai de graça). Chamados de `app.js` e `depoimentos.js`.
+  par de/para sai de graça). Chamados de `app.js` e `depoimentos.js`. Clique em
+  link que sai do site (Instagram, mapa) o GA4 já conta sozinho como `click`.
+- **Aparelho da equipe não conta** (25/10). Abrir o site uma vez com `?equipe=1`
+  grava `ilg_equipe` no `localStorage` daquele navegador e mostra um aviso na
+  tela; dali em diante todo evento sai com `traffic_type=internal`, que o filtro
+  "Internal Traffic" do GA4 exclui. `?equipe=0` tira. Não é por IP de propósito:
+  celular troca de IP.
+- **No GA4, já configurado** (conferido em 25/10): retenção de 14 meses;
+  `clique_whatsapp` e `pergunta_gigi` como eventos principais; os parâmetros
+  `origem`, `pagina`, `idioma`, `idioma_novo`, `botao`, `pergunta`, `achou_regra`
+  e `link_url` registrados como dimensões; Search Console (`ilhadagigoia.com.br`,
+  domínio) ligado desde 19/10; anotações em 23/10 (flyer) e 25/10.
+- **`ilhadagigoia.com` (sem .br) é só do flyer.** O encaminhamento na GoDaddy
+  (302) leva para a home com `utm_source=flyer&utm_medium=impresso&
+  utm_campaign=flyer_out26&utm_content=digitado`. O QR do flyer de 23/10 aponta
+  para a home sem marca — essas visitas caem em Direct.
+- A Gigi do WhatsApp guarda na reserva a página do site de onde a conversa veio
+  (`origemSite`, a partir do texto pronto dos links `wa.me`). **Não mude o texto
+  pronto desses links sem mudar o `SITE_SAUDACOES` do `gigi-bot` junto.**
 - Não há GTM, nem segundo rastreador, nem pixel de rede social. Não há arquivo nem
   meta de verificação do Search Console no repo — se a propriedade está
   verificada, foi por DNS ou fora daqui.
@@ -287,20 +306,23 @@ apareceu três vezes em dois dias. Aqui o risco é maior, porque não há teste 
 cobre — **no `gigi-bot` existe o `testes/docs.js` para isso; neste repo a
 responsabilidade é inteiramente sua.**
 
-## Estado em 22/10/2026
+## Estado em 25/10/2026
 
+- **25/10: marca de equipe (`?equipe=1`) e `clique_telefone`** no `app.js`, `sw.js`
+  v18 — lista em `_SUBIR-FTP-ANALYTICS-25OUT.txt`. **Pendente de FTP.** Depois de
+  subir: conferir no ar que o evento sai com `traffic_type` e só então ativar o
+  filtro "Internal Traffic" no GA4 (hoje em Teste).
 - **23/10: card da Agenda na página inicial aparece em todo acesso** (antes o X
-  escondia por 7 dias, e parecia que o card tinha sumido). `index.html` nos 5
-  idiomas + `sw.js` v17 — lista em `_SUBIR-FTP-POPUP-AGENDA-23OUT.txt`. Não
-  commitado, pelo mesmo motivo do item abaixo.
+  escondia por 7 dias, e parecia que o card tinha sumido). Subiu por FTP e foi
+  conferido no ar em 25/10.
 - **23/10: agenda com evento que se repete — já subiu por FTP e foi conferida no ar.** `eventos.js`, `sw.js`
   (v16) e as 5 `agenda-cultural.html` (`eventos.js?v=4`) — lista em
   `_SUBIR-FTP-AGENDA-RECORRENTE-23OUT.txt`. Não commitado: os três arquivos já
   estavam no bolo de não-commitados, e commitar levaria junto o que não é meu.
-- **315 arquivos não commitados** (251 modificados, 63 novos, 1 apagado). Entre
-  eles a limpeza do `gigi-proxy.php` que tirou a chave do código — correta e
-  ainda não commitada. Antes de qualquer coisa, entenda com o Max o que desse
-  bolo deve entrar e o que é lixo.
+- **O bolo de não-commitados foi commitado em 25/10** (`77ae130`, com o Max):
+  396 arquivos, inclusive a limpeza do `gigi-proxy.php`. Ficaram fora de
+  propósito `_upload-precos-pousadas/`, os `_SUBIR-*.txt`, `segmentar.py` e
+  `assets/marinagemeos/`.
 - O `HEAD` publicado no GitHub (`7e7fb5a`) ainda contém a chave morta no
   `gigi-proxy.php`. Commitar a limpeza resolve o presente; o histórico fica, e
   está tudo bem porque a chave não vale mais nada.

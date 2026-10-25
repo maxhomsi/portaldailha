@@ -1810,6 +1810,22 @@ function setupPWA() {
 //   Enquanto estiver vazio, nada e' carregado.
 // =========================================================
 const GA4_ID = "G-XCW0LJGF7S";
+// Confirma na tela que a marca de equipe pegou (ou saiu). Some sozinho em 5 segundos.
+function avisoEquipe(ligado) {
+  const mostra = function () {
+    const d = document.createElement('div');
+    d.textContent = ligado
+      ? 'Este aparelho foi marcado como da equipe: suas visitas nao contam no Analytics.'
+      : 'Marca de equipe removida: este aparelho volta a contar no Analytics.';
+    d.setAttribute('role', 'status');
+    d.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;' +
+      'background:#1f2a24;color:#fff;padding:12px 16px;border-radius:10px;font:14px/1.4 sans-serif;' +
+      'box-shadow:0 4px 16px rgba(0,0,0,.25);text-align:center';
+    document.body.appendChild(d);
+    setTimeout(function () { d.remove(); }, 5000);
+  };
+  if (document.body) mostra(); else document.addEventListener('DOMContentLoaded', mostra);
+}
 function setupAnalytics() {
   if (!GA4_ID) return;
   const s = document.createElement('script');
@@ -1818,12 +1834,33 @@ function setupAnalytics() {
   window.dataLayer = window.dataLayer || [];
   window.gtag = function(){ dataLayer.push(arguments); };
   gtag('js', new Date());
-  gtag('config', GA4_ID);
+  /* APARELHO DA EQUIPE NAO CONTA. Na analise do flyer de 23/10/2026 as visitas do Max,
+     do Vinicius e do Claude conferindo o site se misturaram com as de quem leu o QR.
+     Filtrar por IP nao serve: celular troca de IP o tempo todo. Entao a marca e' do
+     APARELHO: abrir o site uma vez com ?equipe=1 grava a marca neste navegador, e
+     ?equipe=0 tira. Com ela, todo evento sai com traffic_type=internal, que o filtro
+     "Internal Traffic" do GA4 exclui dos relatorios. 25/10/2026. */
+  let daEquipe = false;
+  try {
+    const q = new URLSearchParams(location.search).get('equipe');
+    if (q === '1') localStorage.setItem('ilg_equipe', '1');
+    if (q === '0') localStorage.removeItem('ilg_equipe');
+    daEquipe = localStorage.getItem('ilg_equipe') === '1';
+    if (q === '1' || q === '0') avisoEquipe(daEquipe);
+  } catch (e) { /* sem localStorage (aba anonima): conta como visitante, que e' o seguro */ }
+  // `set` antes do `config`: vale para o page_view e para todo evento que vier depois.
+  if (daEquipe) gtag('set', { traffic_type: 'internal' });
+  gtag('config', GA4_ID, daEquipe ? { traffic_type: 'internal' } : {});
   // Mede os cliques que viram conversa no WhatsApp, agora dizendo DE ONDE
   // vieram: sem isso nao da' para saber qual das 60 paginas gera reserva.
   document.addEventListener('click', e => {
     const a = e.target.closest('a[href*="wa.me"]');
     if (a) window.medir('clique_whatsapp', { origem: 'link', link_url: a.href });
+    /* LIGACAO. O telefone esta' no rodape das 315 paginas e nao era medido: o GA4 so'
+       conta sozinho clique que sai para outro site (Instagram, mapa), e tel: nao sai.
+       Quem liga e' conversa do mesmo jeito que quem chama no WhatsApp. 25/10/2026. */
+    const t = e.target.closest('a[href^="tel:"]');
+    if (t) window.medir('clique_telefone', { origem: 'link', link_url: t.getAttribute('href') });
   });
 
   /* TROCA DE IDIOMA.
