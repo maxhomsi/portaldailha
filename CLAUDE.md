@@ -309,9 +309,11 @@ responsabilidade é inteiramente sua.**
 ## Estado em 25/10/2026
 
 - **25/10: marca de equipe (`?equipe=1`) e `clique_telefone`** no `app.js`, `sw.js`
-  v18 — lista em `_SUBIR-FTP-ANALYTICS-25OUT.txt`. **Pendente de FTP.** Depois de
-  subir: conferir no ar que o evento sai com `traffic_type` e só então ativar o
-  filtro "Internal Traffic" no GA4 (hoje em Teste).
+  v18 — lista em `_SUBIR-FTP-ANALYTICS-25OUT.txt`. Subiu por FTP e foi conferido
+  no ar em 25/10: com a marca, `page_view` e `clique_telefone` saem com
+  `tt=internal`. O filtro "Internal Traffic" do GA4 foi **ativado** em seguida.
+  Pendente: marcar `clique_telefone` como evento principal quando ele aparecer na
+  lista de eventos do GA4 (só aparece depois do primeiro clique de visitante).
 - **23/10: card da Agenda na página inicial aparece em todo acesso** (antes o X
   escondia por 7 dias, e parecia que o card tinha sumido). Subiu por FTP e foi
   conferido no ar em 25/10.
