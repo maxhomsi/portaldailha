@@ -27,6 +27,16 @@ site não mudou. O que você entrega é:
 2. um `_SUBIR-FTP-<ASSUNTO>-<DIA>.txt` na raiz, listando **exatamente** o que
    arrastar e pra onde (há vários exemplos antigos na raiz — siga o formato)
 
+**Desde 25/10/2026 a lista sai do `atualizar-sitemap.py`.** `python3
+atualizar-sitemap.py` compara cada arquivo com a impressão digital (sha256) de como
+ele estava no último FTP (`sitemap-estado.json`), atualiza o `<lastmod>` só das
+páginas que mudaram de conteúdo, grava `_SUBIR-FTP-<data>.txt` e avisa se mudou
+HTML/CSS/JS sem o `sw.js` mudar. Depois que o Max sobe tudo: `python3
+atualizar-sitemap.py --subi`. `--conferir` só mostra. **Nunca ponha a data de hoje
+em todas as URLs**: o Google ignora `lastmod` atrasado, mas para de confiar no
+sitemap que marca tudo como novo. O script não cria nem apaga URL do sitemap (página
+nova precisa do bloco com hreflang) — só avisa.
+
 ### E antes de montar essa lista: bumpe o `sw.js`
 
 O site é PWA com service worker. O `sw.js` tem:
@@ -219,6 +229,15 @@ Max antes de supor.
   `politica-privacidade.html` = 300, e as 5 home entram como `/`, `/en/`, `/es/`,
   `/fr/`, `/zh/` (forma canônica), não como `index.html`. **Está certo, não
   "conserte".**
+- **Um endereço só: `https://www`.** O `.htaccess` manda `http://` e o endereço sem
+  `www` para `https://www.ilhadagigoia.com.br` (301), antes de qualquer outra
+  regra. Até 25/10/2026 o site abria nas 4 formas e o Search Console listava as
+  variações como não indexadas. `/links.html` (404 conhecido do Google) vai para a
+  home. Testado num Apache local antes de subir: sem loop, `/q` e os 301 antigos
+  chegam no destino.
+- **Search Console:** propriedade de domínio `ilhadagigoia.com.br`, verificada
+  pelo provedor do domínio (por isso não há arquivo nem meta de verificação aqui).
+  Dados desde 24/07/2026; sitemap enviado em 07/10.
 - `robots.txt` — libera tudo, bloqueia `/offline.html` e `/*.php$`, aponta o
   sitemap.
 - Em **62 das 63** páginas de cada idioma (a 63ª é a `offline.html`):
@@ -269,8 +288,8 @@ Max antes de supor.
   (`origemSite`, a partir do texto pronto dos links `wa.me`). **Não mude o texto
   pronto desses links sem mudar o `SITE_SAUDACOES` do `gigi-bot` junto.**
 - Não há GTM, nem segundo rastreador, nem pixel de rede social. Não há arquivo nem
-  meta de verificação do Search Console no repo — se a propriedade está
-  verificada, foi por DNS ou fora daqui.
+  meta de verificação do Search Console no repo: a propriedade é de domínio,
+  verificada pelo provedor do domínio (conferido em 25/10/2026).
 
 **Histórico que existe em arquivo, fora do git**
 

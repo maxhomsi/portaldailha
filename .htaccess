@@ -68,6 +68,29 @@ ErrorDocument 404 /404.shtml
   </FilesMatch>
 </IfModule>
 
+# ── Endereco unico: https://www (25/10/2026) ──
+# Ate' aqui o site abria nas 4 formas (http/https, com e sem www) sem redirecionar.
+# O Google aceitava por causa do canonical, mas listava as variacoes como paginas
+# nao indexadas e dividia os sinais entre elas. Fica ANTES das outras regras, para
+# um endereco antigo sem www ir direto ao destino final, sem redirecionar duas vezes.
+# X-Forwarded-Proto: se a hospedagem um dia passar a servir o https por um proxy,
+# %{HTTPS} chega "off" mesmo com cadeado — sem esta condicao o site entraria em loop.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} !^www\.ilhadagigoia\.com\.br$ [NC]
+  RewriteRule ^(.*)$ https://www.ilhadagigoia.com.br/$1 [R=301,L]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^(.*)$ https://www.ilhadagigoia.com.br/$1 [R=301,L]
+</IfModule>
+
+# ── /links.html nao existe mais, mas o Google ainda conhece o endereco (404 no
+#    Search Console em 25/10/2026). Manda para a home em vez de dar erro.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^links\.html$ / [R=301,L]
+</IfModule>
+
 # ── A antiga ilha-hoje.html virou parte de a-ilha.html ──
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -93,9 +116,3 @@ ErrorDocument 404 /404.shtml
   RewriteRule ^q/?$ /?utm_source=flyer&utm_medium=impresso&utm_campaign=flyer_v2&utm_content=qr [R=302,L,NC]
 </IfModule>
 
-# ── Redirecionamento para www (descomente se o servidor já não fizer) ──
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTP_HOST} !^www\. [NC]
-#   RewriteRule ^(.*)$ https://www.ilhadagigoia.com.br/$1 [R=301,L]
-# </IfModule>
