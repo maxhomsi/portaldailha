@@ -83,6 +83,16 @@ ErrorDocument 404 /404.shtml
   RewriteRule ^(en|es|zh)/maracuja\.html$ /$1/restaurante-maracuja.html [R=301,L]
 </IfModule>
 
+# ── QR do adesivo/flyer: endereco que so' existe dentro do QR (25/10/2026) ──
+# Quem escaneia chega na home com a marca do flyer, e o GA4 separa "qr" de "digitado"
+# (o digitado vem do ilhadagigoia.com, encaminhado na GoDaddy). Como o endereco e'
+# so' do QR, o destino e a campanha podem mudar AQUI sem reimprimir nada. 302 de
+# proposito: 301 fica gravado no celular de quem ja' escaneou e a troca nao pega.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^q/?$ /?utm_source=flyer&utm_medium=impresso&utm_campaign=flyer_v2&utm_content=qr [R=302,L,NC]
+</IfModule>
+
 # ── Redirecionamento para www (descomente se o servidor já não fizer) ──
 # <IfModule mod_rewrite.c>
 #   RewriteEngine On

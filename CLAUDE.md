@@ -259,6 +259,12 @@ Max antes de supor.
   (302) leva para a home com `utm_source=flyer&utm_medium=impresso&
   utm_campaign=flyer_out26&utm_content=digitado`. O QR do flyer de 23/10 aponta
   para a home sem marca — essas visitas caem em Direct.
+- **QR do adesivo novo (25/10) aponta para `https://www.ilhadagigoia.com.br/q`**,
+  endereço que só existe no QR. A regra no `.htaccess` (302) manda para a home com
+  `utm_source=flyer&utm_medium=impresso&utm_campaign=flyer_v2&utm_content=qr`.
+  Mudar destino ou campanha é só mexer nessa linha — **nunca apague a regra**
+  enquanto houver adesivo na rua, senão o QR cai no 404. A arte está em
+  `Claude outputs/adesivo-qr-novo.png`.
 - A Gigi do WhatsApp guarda na reserva a página do site de onde a conversa veio
   (`origemSite`, a partir do texto pronto dos links `wa.me`). **Não mude o texto
   pronto desses links sem mudar o `SITE_SAUDACOES` do `gigi-bot` junto.**
