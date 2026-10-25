@@ -140,3 +140,15 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+
+/* ── 6. GRID DE 2 COLUNAS INLINE vs TELA DE CELULAR ──
+   150 paginas usam style="grid-template-columns: 1fr 1fr" direto no HTML.
+   Em 390px isso vira duas colunas de ~138px e empurra a pagina para fora
+   da tela (scroll horizontal). Abaixo de 640px passa a uma coluna.
+   Para reverter: apague este bloco. */
+@media (max-width: 640px) {
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}

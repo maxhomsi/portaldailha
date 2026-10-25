@@ -4,3 +4,9 @@
 Claude outputs/
 _morph_tmp/
 _to_delete/
+
+# chave da API da Gigi — nunca versionar
+gigi-config.php
+
+# chave do Google Maps — nunca versionar
+mapa-chave.js

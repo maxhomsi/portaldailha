@@ -43,7 +43,11 @@ body.is-ready { opacity: 1; }
 main { flex: 1 0 auto; width: 100%; }
 a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 4px; }
-img { display: block; max-width: 100%; background: transparent !important; border: none !important; }
+img { display: block; max-width: 100%; height: auto; background: transparent !important; border: none !important; }
+/* height:auto acima e' o par obrigatorio do width/height nas tags <img>:
+   sem ele o navegador usa a altura declarada como altura fixa e a foto
+   estica. Regras mais especificas (.card__img img, .gallery img) seguem
+   mandando onde a altura e' proposital. */
 
 .container { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
 
@@ -392,6 +396,9 @@ body[data-page="passeios-rotas"] .card__body,
    GALERIA E LIGHTBOX
    ========================================================= */
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; margin: 40px 0; }
+/* galeria de 3 colunas: usada no jet ski, onde 6 fotos deixariam
+   duas orfas numa segunda linha no grid padrao de 4 colunas */
+.gallery--3 { grid-template-columns: repeat(3, 1fr); }
 .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-soft); cursor: pointer; transition: all 0.3s var(--ease); }
 .gallery img:hover { position: relative; z-index: 2; transform: scale(1.05); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); }
 
@@ -757,14 +764,49 @@ img.selo-buteco {
 
 .gigi-bubble {
   background: #ffffff;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: 16px 16px 16px 0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
   max-width: 85%;
-  line-height: 1.5;
+  /* Respostas longas estavam saindo como um bloco unico de texto. Mais entrelinha
+     e um respiro entre paragrafos deixam a leitura no celular bem mais leve. */
+  line-height: 1.7;
+}
+/* O <br><br> que separa paragrafos vira um espaco de verdade, nao so' uma linha
+   vazia apertada. */
+.gigi-bubble br + br { line-height: 2.2; }
+
+/* Botao que envia o pedido pronto no WhatsApp. E' a acao que fecha a
+   venda: nao pode ficar igual ao "Voltar as opcoes". */
+.gigi-quick-btn.gigi-btn-fechar {
+  background: var(--green, #47b05a);
+  border-color: var(--green-dark, #3aa44a);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(71, 176, 90, .35);
+}
+.gigi-quick-btn.gigi-btn-fechar:hover {
+  background: var(--green-dark, #3aa44a);
+  color: #ffffff;
+}
+
+/* Links e imagens dentro da resposta da Gigi */
+.gigi-bubble a {
+  color: var(--green, #2f7d4f);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.gigi-bubble a:hover { opacity: .75; }
+.gigi-bubble img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  margin: 10px 0 6px;
+  display: block;
 }
 .gigi-msg--user .gigi-bubble {
   background: var(--green);
@@ -918,3 +960,151 @@ img.selo-buteco {
   .infoReserva { display: block; width: 100%; text-align: center; }
   .infoMapsLink { display: block; margin: 14px 0 0; text-align: center; }
 }
+
+/* ── PREVISÃO DO TEMPO NA ILHA ──────────────────────────────────
+   Faixa compacta de 4 dias, Open-Meteo (sem chave de API).
+   Some sozinha se a API falhar — ver initPrevisao() no app.js.
+   Para remover: apague este bloco, o #tempoIlha do HTML e a função. */
+.tempo { margin: 0 0 22px; }
+.tempo__card {
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  padding: 10px 18px;
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.tempo__head { display: flex; align-items: baseline; gap: 7px; flex: 0 0 auto; }
+.tempo__head h2 { margin: 0; font-size: 13.5px; font-weight: 800; color: var(--green-dark); }
+.tempo__head small { color: var(--muted); font-size: 11px; font-weight: 700; }
+.tempo__dias { flex: 1 1 340px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.tempo__dia {
+  display: flex; flex-direction: column; align-items: center; gap: 1px;
+  padding: 6px 2px; border-radius: 11px;
+}
+.tempo__dia--hoje { background: rgba(242, 194, 0, .16); }
+.tempo__dow { font-size: 10.5px; font-weight: 800; color: var(--green-dark); text-transform: uppercase; letter-spacing: .3px; }
+.tempo__linha { display: flex; align-items: center; justify-content: center; gap: 5px; }
+.tempo__linha svg { width: 22px; height: 22px; flex: 0 0 auto; }
+.tempo__temps { font-size: 14.5px; font-weight: 900; color: var(--text); white-space: nowrap; }
+.tempo__temps span { font-size: 11.5px; font-weight: 700; color: var(--muted); }
+.tempo__chuva { display: inline-flex; align-items: center; gap: 2px; font-size: 10px; font-weight: 800; color: #4a86b8; }
+.tempo__chuva svg { width: 8px; height: 8px; }
+
+@media (max-width: 560px) {
+  .tempo__card { padding: 10px 12px 12px; gap: 8px; }
+  .tempo__head { flex: 1 1 100%; }
+  .tempo__dias { flex: 1 1 100%; gap: 3px; }
+  .tempo__linha { gap: 3px; }
+  .tempo__linha svg { width: 19px; height: 19px; }
+  .tempo__temps { font-size: 12.5px; }
+  .tempo__temps span { font-size: 10px; }
+  .tempo__dow { font-size: 9.5px; }
+  /* encosta a faixa na agenda: no celular a soma das margens abria 70px de vazio */
+  .tempo { margin-bottom: 8px; }
+  section:has(#tempoIlha) + .agenda-main { padding-top: 8px; }
+  section:has(#tempoIlha) + .agenda-main .ev-bar { margin-bottom: 10px; }
+}
+
+/* Home: a faixa do tempo encosta no hero e na dica do Capi.
+   Sem isto sobravam 34px em cima e 72px embaixo, empurrando a dobra. */
+.section--tempo { padding-top: 14px; padding-bottom: 0; }
+.section--tempo .tempo { margin-bottom: 0; }
+.section--tempo + .section { padding-top: 26px; }
+@media (max-width: 560px) {
+  .section--tempo { padding-top: 10px; }
+  .section--tempo + .section { padding-top: 18px; }
+}
+
+/* Hoteis e pousadas com 6 cards: 3 colunas em duas linhas cheias, em vez de
+   5 + 1 orfao na segunda linha. Fica no fim do arquivo de proposito: assim
+   vence por ordem as media queries de .cards--5 declaradas acima. */
+.cards--6 { grid-template-columns: repeat(3, 1fr); max-width: 1080px; }
+@media (max-width: 900px) { .cards--6 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cards--6 { grid-template-columns: 1fr; } }
+
+/* FAQ sanfonado das paginas de passeio/hospedagem */
+.faq-item{border-bottom:1px solid rgba(0,0,0,.07);padding:14px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item>summary{cursor:pointer;font-weight:800;font-size:16px;color:var(--text);list-style:none;position:relative;padding-right:30px}
+.faq-item>summary::-webkit-details-marker{display:none}
+.faq-item>summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:22px;line-height:1;color:var(--green-dark);font-weight:900}
+.faq-item[open]>summary::after{content:"\2013"}
+.faq-item>summary:hover{color:var(--green-dark)}
+
+
+/* ========== DEPOIMENTOS (alimentados pela planilha — ver depoimentos.js) ========== */
+#depoimentos[hidden]{ display:none; }
+/* A secao de cima ja' tem 50px de respiro embaixo. Somando com os 50 daqui davam
+   100px de vao ate' o titulo. Zerando o de cima, sobra o respiro da outra — mesmo
+   recurso que a secao "A Ilha da Gigoia em poucas linhas" usa logo abaixo. */
+#depoimentos{ padding-top:0; }
+#depoimentos .depSub{ margin-bottom:34px; }
+.depGrid{ display:grid; gap:22px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.depCard{
+  margin:0; background:var(--white); border:1px solid var(--line);
+  border-radius:var(--radius-card); padding:26px 24px;
+  display:flex; flex-direction:column; gap:14px;
+  box-shadow:0 2px 14px rgba(0,0,0,.04);
+}
+.depEstrelas{ color:var(--yellow); font-size:17px; letter-spacing:2px; line-height:1; }
+.depEstrelasOff{ color:var(--line); }
+.depTexto{ margin:0; font-size:16px; line-height:1.7; color:var(--text); font-weight:500; }
+.depAutor{ display:flex; align-items:center; gap:12px; margin-top:auto; padding-top:6px; }
+.depAvatar{
+  width:40px; height:40px; border-radius:var(--radius-full);
+  background:var(--green-dark); color:#fff; display:grid; place-items:center;
+  font-weight:800; font-size:17px; flex:0 0 40px;
+}
+.depAutor strong{ display:block; color:var(--text); font-size:15px; }
+.depAutor em{ display:block; color:var(--muted); font-style:normal; font-size:13px; font-weight:600; }
+@media (max-width:600px){ .depCard{ padding:22px 20px; } }
+
+.depGoogle{
+  max-width:var(--max); margin:0 auto 60px; padding:22px 26px;
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:16px;
+  background:var(--white); border:1px solid var(--line);
+  border-radius:var(--radius-card); text-align:center;
+}
+.depGoogleTxt{ margin:0; font-weight:700; color:var(--text); font-size:17px; }
+.depGoogleBtn{
+  display:inline-block; background:var(--green-dark); color:#fff;
+  padding:12px 24px; border-radius:var(--radius-btn);
+  font-family:inherit; font-size:16px; font-weight:800; line-height:1.25;
+  border:0; -webkit-appearance:none; appearance:none; cursor:pointer;
+  text-decoration:none; transition:filter var(--t);
+}
+.depGoogleBtn:hover{ filter:brightness(1.08); }
+@media (max-width:600px){ .depGoogle{ margin:0 16px 40px; padding:20px; } }
+
+/* formulario de depoimento (so' aparece quando ENVIO_URL estiver preenchido) */
+.depFormBox{ display:contents; }
+.depForm[hidden]{ display:none; }
+.depForm{
+  flex-basis:100%; display:grid; gap:14px; text-align:left;
+  margin:6px auto 0; max-width:560px; width:100%;
+}
+.depForm label{ display:grid; gap:6px; font-weight:700; font-size:14px; color:var(--text); }
+.depForm input[type=text], .depForm select, .depForm textarea{
+  font:inherit; width:100%; padding:11px 13px; font-weight:500;
+  border:1px solid var(--line); border-radius:var(--radius-btn);
+  background:#fff; color:var(--text);
+}
+.depForm textarea{ resize:vertical; }
+.depForm .depCheck{ grid-template-columns:auto 1fr; align-items:start; font-weight:600; font-size:13px; color:var(--muted); }
+.depForm .depCheck input{ margin-top:3px; }
+/* nota por estrela: clicar e' mais rapido que abrir uma lista no celular */
+.depNotaCampo{ display:grid; gap:6px; }
+.depNotaRotulo{ font-weight:700; font-size:14px; color:var(--text); }
+.depEstrelasEscolha{ display:flex; gap:6px; }
+.depEstrelaBtn{
+  font:inherit; font-size:32px; line-height:1; padding:2px 1px;
+  background:none; border:0; cursor:pointer; color:#dcdcdc;
+  -webkit-appearance:none; appearance:none;
+  transition:color var(--t), transform var(--t);
+}
+.depEstrelaBtn.ativa{ color:#f0a500; }
+.depEstrelaBtn:hover{ transform:scale(1.14); }
+.depEstrelaBtn:focus-visible{ outline:2px solid var(--green-dark); outline-offset:3px; border-radius:4px; }
+.depIsca{ position:absolute !important; left:-9999px !important; width:1px; height:1px; opacity:0; }
+.depAviso{ margin:0; font-size:14px; font-weight:700; color:#b4451f; }
+.depObrigado{ margin:0; font-weight:700; color:var(--green-dark); font-size:16px; line-height:1.6; }

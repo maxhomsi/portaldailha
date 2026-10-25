@@ -39,32 +39,32 @@
     .ev-chip.is-on { background: var(--green); border-color: var(--green); color: #fff; box-shadow: 0 6px 16px rgba(71,176,90,.28); }
     .ev-chip__n { margin-left: 7px; font-size: 12px; font-weight: 700; opacity: .75; }
 
-    .event-list { display: grid; gap: 20px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1040px; margin: 0 auto; }
+    .event-list { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1040px; margin: 0 auto; }
 
-    .ev-card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(16,40,24,.06); border-radius: 22px; padding: 22px; box-shadow: 0 10px 28px rgba(16,40,24,.07); transition: transform .25s ease, box-shadow .25s ease; }
+    .ev-card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(16,40,24,.06); border-radius: 18px; padding: 16px 18px; box-shadow: 0 10px 28px rgba(16,40,24,.07); transition: transform .25s ease, box-shadow .25s ease; }
     .ev-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(16,40,24,.13); }
-    .ev-card__head { display: flex; gap: 16px; align-items: flex-start; }
+    .ev-card__head { display: flex; gap: 12px; align-items: flex-start; }
 
-    .ev-date { flex: 0 0 auto; width: 64px; padding: 10px 0 9px; border-radius: 16px; text-align: center; color: #fff; background: linear-gradient(160deg, var(--green), var(--green-dark)); box-shadow: 0 6px 14px rgba(71,176,90,.30); }
-    .ev-date__d { display: block; font-size: 26px; font-weight: 900; line-height: 1; }
-    .ev-date__m { display: block; margin-top: 3px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+    .ev-date { flex: 0 0 auto; width: 52px; padding: 7px 0 6px; border-radius: 13px; text-align: center; color: #fff; background: linear-gradient(160deg, var(--green), var(--green-dark)); box-shadow: 0 6px 14px rgba(71,176,90,.30); }
+    .ev-date__d { display: block; font-size: 21px; font-weight: 900; line-height: 1; }
+    .ev-date__m { display: block; margin-top: 2px; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
 
     .ev-head { min-width: 0; flex: 1; }
-    .ev-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 7px; }
-    .ev-cat, .ev-soon { font-size: 11px; font-weight: 900; letter-spacing: .4px; text-transform: uppercase; padding: 4px 11px; border-radius: 100px; }
+    .ev-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 5px; }
+    .ev-cat, .ev-soon { font-size: 10px; font-weight: 900; letter-spacing: .4px; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; }
     .ev-cat { background: rgba(71,176,90,.12); color: var(--green-dark); }
     .ev-soon { background: var(--yellow); color: #6b5200; }
-    .ev-title { margin: 0; font-size: 19px; font-weight: 900; line-height: 1.25; color: var(--text); }
-    .ev-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 9px; font-size: 14px; font-weight: 700; color: var(--muted); }
+    .ev-title { margin: 0; font-size: 17px; font-weight: 900; line-height: 1.25; color: var(--text); }
+    .ev-meta { display: flex; flex-wrap: wrap; gap: 5px 12px; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--muted); }
     .ev-meta span { display: inline-flex; align-items: center; gap: 6px; }
     .ev-meta svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }
 
-    .ev-desc { margin: 15px 0 0; font-size: 15px; line-height: 1.65; color: #4a5a4e; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .ev-desc { margin: 10px 0 0; font-size: 14px; line-height: 1.55; color: #4a5a4e; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .ev-card.is-open .ev-desc { -webkit-line-clamp: unset; }
-    .ev-more { align-self: flex-start; margin-top: 8px; padding: 0; border: none; background: none; color: var(--green-dark); font-size: 14px; font-weight: 800; cursor: pointer; }
+    .ev-more { align-self: flex-start; margin-top: 6px; padding: 0; border: none; background: none; color: var(--green-dark); font-size: 14px; font-weight: 800; cursor: pointer; }
     .ev-more:hover { text-decoration: underline; }
 
-    .ev-foot { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: auto; padding-top: 18px; }
+    .ev-foot { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: auto; padding-top: 12px; }
     .ev-cta, .ev-link { border: none; border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 800; cursor: pointer; transition: all .2s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
     .ev-cta { background: var(--green); color: #fff; box-shadow: 0 6px 16px rgba(71,176,90,.28); }
     .ev-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
@@ -78,9 +78,9 @@
     @media (max-width: 860px) { .event-list { grid-template-columns: 1fr; } }
     @media (max-width: 600px) {
       .ev-bar { padding: 0 4px; }
-      .ev-card { padding: 18px; border-radius: 20px; }
-      .ev-title { font-size: 18px; }
-      .ev-date { width: 58px; }
+      .ev-card { padding: 14px 15px; border-radius: 16px; }
+      .ev-title { font-size: 16px; }
+      .ev-date { width: 48px; }
       .ev-foot { justify-content: stretch; }
       .ev-cta, .ev-link { flex: 1; justify-content: center; }
     }
@@ -101,7 +101,10 @@
   <link rel="alternate" hreflang="en" href="https://www.ilhadagigoia.com.br/en/agenda-cultural.html" />
   <link rel="alternate" hreflang="es" href="https://www.ilhadagigoia.com.br/es/agenda-cultural.html" />
   <link rel="alternate" hreflang="zh" href="https://www.ilhadagigoia.com.br/zh/agenda-cultural.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.ilhadagigoia.com.br/fr/agenda-cultural.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.ilhadagigoia.com.br/agenda-cultural.html" />
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.ilhadagigoia.com.br/#website","url":"https://www.ilhadagigoia.com.br/es/","name":"Portal Ilha da Gigóia","inLanguage":"es"},{"@type":"BreadcrumbList","@id":"https://www.ilhadagigoia.com.br/es/agenda-cultural.html#trilha","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.ilhadagigoia.com.br/es/"},{"@type":"ListItem","position":2,"name":"Agenda Cultural","item":"https://www.ilhadagigoia.com.br/es/agenda-cultural.html"}]},{"@type":"CollectionPage","@id":"https://www.ilhadagigoia.com.br/es/agenda-cultural.html#pagina","url":"https://www.ilhadagigoia.com.br/es/agenda-cultural.html","name":"Agenda Cultural de la Isla Gigóia | Shows, Fiestas y Eventos","description":"Mira la agenda de shows, samba, fiestas y eventos en la Isla Gigóia, Río de Janeiro. Programación actualizada y reservas por el chat de Gigi.","inLanguage":"es","isPartOf":{"@id":"https://www.ilhadagigoia.com.br/#website"},"breadcrumb":{"@id":"https://www.ilhadagigoia.com.br/es/agenda-cultural.html#trilha"},"primaryImageOfPage":"https://www.ilhadagigoia.com.br/assets/hero.jpg"}]}</script>
 </head>
 <body class="is-ready" data-page="agenda">
 
@@ -109,7 +112,7 @@
   <header class="header" id="siteHeader"><!--static:header-->
       <div class="container header__inner">
         <a class="brand" href="/es/">
-          <img class="brand__logo" src="/assets/logo.png" alt="Logo" />
+          <img class="brand__logo" src="/assets/logo-100.png" alt="Logo" width="100" height="79" />
           <div class="brand__text"><small>PORTAL</small><strong><span>Ilha da</span> Gigóia</strong></div>
         </a>
         <div class="navWrap"><nav class="nav"><a data-navlink href="/es/a-ilha.html">La Isla</a><a data-navlink href="/es/passeios-rotas.html">Paseos</a><a data-navlink href="/es/comer-beber.html">Comer y Beber</a><a data-navlink href="/es/hospedagem.html">Alojamiento</a><a data-navlink href="/es/agenda-cultural.html">Agenda</a><a data-navlink href="/es/fale-conosco.html">Contacto</a></nav></div>
@@ -118,7 +121,7 @@
   <div class="social-links">
     <a href="https://www.instagram.com/ilha.da.gigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
     <a href="https://www.facebook.com/portaldailhadagigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-    <a href="https://www.tiktok.com/@ilha.da.gigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
+    <a href="https://www.tiktok.com/@portaldagigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
     <a href="https://www.youtube.com/@ilha.da.gigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
   </div>
 
@@ -127,7 +130,8 @@
             <option value="pt" >🇧🇷 PT</option>
             <option value="en" >🇺🇸 EN</option>
             <option value="es" selected>🇪🇸 ES</option>
-            <option value="zh" >🇨🇳 中文</option>
+<option value="zh" >🇨🇳 中文</option>
+            <option value="fr" >🇫🇷 FR</option>
           </select>
 
           <a class="btn btn--green" href="/es/passeios-rotas.html">Ver Paseos</a>
@@ -142,7 +146,8 @@
             <option value="pt" >🇧🇷 PT</option>
             <option value="en" >🇺🇸 EN</option>
             <option value="es" selected>🇪🇸 ES</option>
-            <option value="zh" >🇨🇳 中文</option>
+<option value="zh" >🇨🇳 中文</option>
+            <option value="fr" >🇫🇷 FR</option>
           </select>
           
           <a class="btn btn--green" style="justify-content:center" href="/es/passeios-rotas.html">Ver Paseos</a>
@@ -155,6 +160,22 @@
       <div class="container" style="text-align: center;">
         <h1 class="reveal" data-i18n="agenda_title">Agenda Cultural</h1>
         <p class="reveal" style="max-width: 700px; margin: 10px auto 0;" data-i18n="agenda_sub">Música en vivo, gastronomía y eventos imperdibles. Descubra lo que sucederá en la Isla de Gigóia.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="container">
+        <!-- PREVISAO DO TEMPO — preenchida por initPrevisao() no app.js (Open-Meteo).
+             Se a API falhar, este bloco some sozinho. -->
+        <div class="tempo" id="tempoIlha" style="display:none">
+          <div class="tempo__card">
+            <div class="tempo__head">
+              <h2 data-i18n="tempo_titulo">El tiempo en la isla</h2>
+              <small data-i18n="tempo_sub">próximos 4 días</small>
+            </div>
+            <div class="tempo__dias"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -175,7 +196,31 @@
       <div class="event-list" id="eventList"></div>
     </div>
   </section>
-  </main>
+  
+    <section class="section" id="comoFunciona" style="padding-top:34px;">
+      <div class="container" style="max-width:820px;">
+        <h2 class="section__title reveal">Cómo funciona la agenda</h2>
+        <p class="reveal" style="font-size:16px; line-height:1.8; color:#444; font-weight:600; margin:0; text-align:center;">La agenda reúne conciertos, fiestas, ferias y eventos de los locales de la Isla Gigóia. La programación se concentra en el fin de semana: el viernes y el sábado por la noche suele haber música en vivo en los bares junto a la laguna, y el domingo es de almuerzo largo, con samba o MPB en varios sitios. Los eventos se confirman con los propios establecimientos: cuando no hay nada agendado, la página queda vacía en lugar de repetir un evento antiguo. ¿Organizas algo en la isla? Publicarlo aquí es gratis: escribe a Gigi por el chat y entra en la agenda.</p>
+      </div>
+    </section>
+  
+    <!--seo:cta-passeio-->
+    <section class="section" style="padding-top:0;">
+      <div class="container" style="max-width:900px;">
+        <div class="reveal" style="margin-top:34px;background:linear-gradient(135deg,rgba(71,176,90,.10),rgba(242,194,0,.14));border:1px solid rgba(71,176,90,.25);border-radius:24px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:center;gap:26px;">
+          <div style="flex:1 1 300px;min-width:260px;">
+            <span style="display:inline-block;background:var(--green-dark);color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Promoción</span>
+            <h2 style="margin:0 0 10px;font-size:22px;line-height:1.3;color:var(--green-dark);">Ya que viene a la isla: paseo en barco + almuerzo por R$ 100</h2>
+            <p style="margin:0;font-size:15px;line-height:1.7;color:#444;font-weight:600;">Antes o después de comer puede hacer el <a href="/es/pantanal-carioca.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;">paseo en barco del Pantanal Carioca</a>, entre caimanes, capibaras y manglares — de 35 a 40 minutos, con almuerzo ejecutivo incluido. Solo el paseo cuesta R$ 50.</p>
+          </div>
+          <div style="flex:0 0 auto;">
+            <a class="btn btn--green" href="/es/pantanal-carioca.html" style="text-decoration:none;">Ver el paseo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/seo:cta-passeio-->
+</main>
 
   <footer class="footer" id="siteFooter"><!--static:footer-->
       <div class="footer__wave">
@@ -193,7 +238,7 @@
   <div class="social-links">
     <a href="https://www.instagram.com/ilha.da.gigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
     <a href="https://www.facebook.com/portaldailhadagigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-    <a href="https://www.tiktok.com/@ilha.da.gigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
+    <a href="https://www.tiktok.com/@portaldagigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
     <a href="https://www.youtube.com/@ilha.da.gigoia" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
   </div>
 
@@ -208,13 +253,16 @@
             <li><a href="/es/passeios-rotas.html">Paseos</a></li>
             <li><a href="/es/comer-beber.html">Comer y Beber</a></li>
             <li><a href="/es/hospedagem.html">Alojamiento</a></li>
+            <li><a href="/es/casamento.html">Bodas</a></li>
+            <li><a href="/es/espacos-eventos.html">Espacios para Eventos</a></li>
           </ul>
         </div>
         
         <div class="footer__col">
           <h3 data-i18n="footer_serv_t">Atendimento</h3>
           <ul>
-            <li><a href="https://wa.me/5521993802618" target="_blank">Habla con Gigi</a></li>
+            <li><a href="https://wa.me/5521993802618?text=%C2%A1Hola%21%20Vengo%20del%20sitio%2C%20de%20la%20p%C3%A1gina%20Agenda%20Cultural.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank">Habla con Gigi</a></li>
+            <li><a href="tel:+5521993802618">📞 (21) 99380-2618</a></li>
             <li><a href="/es/fale-conosco.html">Contacto</a></li>
           </ul>
         </div>
@@ -226,6 +274,7 @@
     <!--/static:footer--></footer>
   <div id="gigiWidgetRoot"></div>
 
+  <script src="/dicionario-es.js"></script>
   <script src="/dicionario.js"></script>
   <script src="/app.js"></script>
 
@@ -296,7 +345,8 @@
       }
     };
   </script>
-<script src="/eventos.js?v=3"></script>
-<script src="/cerebro-gigi.js"></script>
+<script src="/eventos.js?v=4"></script>
+<script>if (typeof initPrevisao === "function") initPrevisao();</script>
+<script src="/cerebro-gigi-es.js"></script>
 </body>
 </html>

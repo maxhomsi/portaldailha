@@ -61,7 +61,11 @@ const EV_I18N = {
   zh: { meses: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
         dias: ["周日","周一","周二","周三","周四","周五","周六"],
         hoje: "今天", amanha: "明天", mais: "展开", menos: "收起",
-        reservar: "找 Gigi 预订", saiba: "了解更多" }
+        reservar: "找 Gigi 预订", saiba: "了解更多" },
+  fr: { meses: ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."],
+        dias: ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"],
+        hoje: "Aujourd'hui", amanha: "Demain", mais: "Voir plus", menos: "Voir moins",
+        reservar: "Réserver avec Gigi", saiba: "En savoir plus" }
 };
 const EV_T = EV_I18N[EV_LANG] || EV_I18N.pt;
 const EV_MESES = EV_T.meses;
@@ -110,10 +114,12 @@ function evMontarCard(ev) {
   const verMais = (ev.descricao && ev.descricao.length > 150)
     ? `<button type="button" class="ev-more" data-mais="${evEscapar(EV_T.mais)}" data-menos="${evEscapar(EV_T.menos)}">${evEscapar(EV_T.mais)}</button>` : '';
 
-  const acoes = [
-    ev.link ? `<a class="ev-link" href="${evEscapar(ev.link)}" target="_blank" rel="noopener">${evEscapar(EV_T.saiba)}</a>` : '',
-    `<button type="button" class="ev-cta" onclick="openGigiChat()">${evEscapar(EV_T.reservar)}</button>`
-  ].join('');
+  // O botao "Reservar com a Gigi" saiu de dentro do card: o chat da Gigi ja' fica
+  // flutuando na tela o tempo todo, entao repetir o botao em cada evento so'
+  // engordava o cartao. O rodape agora so' aparece quando o evento tem link.
+  const acoes = ev.link
+    ? `<a class="ev-link" href="${evEscapar(ev.link)}" target="_blank" rel="noopener">${evEscapar(EV_T.saiba)}</a>`
+    : '';
 
   return `
         <article class="ev-card" data-date="${evEscapar(ev.data)}">
@@ -133,7 +139,7 @@ function evMontarCard(ev) {
           </div>
           ${desc}
           ${verMais}
-          <div class="ev-foot">${acoes}</div>
+          ${acoes ? `<div class="ev-foot">${acoes}</div>` : ''}
         </article>`;
 }
 
@@ -218,11 +224,85 @@ function evSchema(eventos) {
   document.head.appendChild(s);
 }
 
-async function carregarEventos() {
-  const lista = document.getElementById('eventList');
-  if (!lista || !EVENTOS_SHEET_CSV) return;   // sem planilha: mantém o que está no HTML
+/* EVENTO QUE SE REPETE (23/10/2026). Coluna "Repete" na planilha: vazia = um dia so';
+   "semanal" ou "quinzenal". A Data da linha e' a PRIMEIRA vez — dela sai o dia da
+   semana e o compasso da quinzena. "fim de semana" (ou "fim de semana quinzenal")
+   = sabado E domingo numa linha so', a partir do fim de semana da Data. Texto que nao
+   for nenhum desses nao vira repeticao: o evento fica so' na data dele.
+   A Gigi do WhatsApp (pasta gigi-bot, eventosDaPlanilha) tem a mesma regra, escrita
+   de novo porque os projetos nao compartilham codigo. Mudou aqui, muda la'. */
+const EV_REPETE_DIAS = 30;   // ate' quantos dias pra frente uma repeticao aparece
 
-  try {
+function evSomaDias(iso, n) {
+  const d = new Date(iso + 'T12:00:00Z');
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+function evDiasEntre(a, b) {
+  return Math.round((Date.parse(b + 'T12:00:00Z') - Date.parse(a + 'T12:00:00Z')) / 86400000);
+}
+const EV_REPETE_FDS = /fim de semana|fins de semana|\bfds\b|sabado e domingo/;
+function evSemAcento(v) {
+  return String(v || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
+}
+function evPassoRepeticao(v) {
+  const t = evSemAcento(v);
+  if (!t) return 0;
+  if (/quinzen|15 dias|14 dias|cada 2 semanas|cada duas semanas/.test(t)) return 14;
+  if (/semanal|toda semana|todas as semanas/.test(t) || EV_REPETE_FDS.test(t)) return 7;
+  return null;
+}
+function evRepeteNoFimDeSemana(v) { return EV_REPETE_FDS.test(evSemAcento(v)); }
+function evDatasDaRepeticao(inicio, passo, hoje, dias, fimDeSemana) {
+  const fim = evSomaDias(hoje, dias);
+  let base = inicio;
+  if (fimDeSemana) {
+    const dow = new Date(inicio + 'T12:00:00Z').getUTCDay();
+    base = evSomaDias(inicio, dow === 0 ? -1 : 6 - dow);
+  }
+  const extras = fimDeSemana ? [0, 1] : [0];
+  let k = base < hoje ? Math.floor(evDiasEntre(base, hoje) / passo) : 0;
+  const datas = [];
+  for (;; k++) {
+    const b = evSomaDias(base, k * passo);
+    if (b > fim) break;
+    extras.forEach(n => {
+      const d = evSomaDias(b, n);
+      if (d >= inicio && d >= hoje && d <= fim) datas.push(d);
+    });
+  }
+  return datas;
+}
+// Espalha as linhas que se repetem. Linha de um dia so' com o mesmo titulo e data de
+// uma repeticao ganha dela ("este sabado o samba e' as 17h").
+function evExpandirRepeticoes(eventos, hoje) {
+  const saida = [];
+  eventos.forEach(e => {
+    const passo = evPassoRepeticao(e.repete);
+    if (passo === null) console.warn('Agenda: "' + e.titulo + '" — nao entendi Repete ("' + e.repete + '"), fica so em ' + e.data);
+    if (!passo) { saida.push({ ...e, repete: 0 }); return; }
+    evDatasDaRepeticao(e.data, passo, hoje, EV_REPETE_DIAS, evRepeteNoFimDeSemana(e.repete))
+      .forEach(d => saida.push({ ...e, data: d, repete: passo }));
+  });
+  const chave = e => e.data + '|' + e.titulo.toLowerCase();
+  const avulsos = new Set(saida.filter(e => !e.repete).map(chave));
+  return saida.filter(e => !e.repete || !avulsos.has(chave(e)));
+}
+
+// Aceita AAAA-MM-DD (formato oficial) e tambem DD/MM/AAAA, que e' o que o
+// Google Sheets costuma gravar quando a celula esta formatada como data.
+function evNormalizaData(v) {
+  v = (v || '').trim();
+  let m = v.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (m) return v;
+  m = v.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (m) return m[3] + '-' + m[2].padStart(2, '0') + '-' + m[1].padStart(2, '0');
+  return '';
+}
+
+async function evLerPlanilha() {
+  if (!EVENTOS_SHEET_CSV) throw new Error('planilha não configurada');
+  {
     const r = await fetch(EVENTOS_SHEET_CSV, { cache: 'no-store' });
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const linhas = evParseCSV(await r.text());
@@ -234,7 +314,8 @@ async function carregarEventos() {
     const iLocal = col('local'), iCat = col('categoria'), iDesc = col('descricao') > -1 ? col('descricao') : col('descrição'), iLink = col('link');
     // colunas opcionais — se não existirem, o campo simplesmente não é usado
     const iFim = col('fim'), iImg = col('imagem'), iAtr = col('atracao') > -1 ? col('atracao') : col('atração'),
-          iOrg = col('organizador'), iPreco = col('preco') > -1 ? col('preco') : col('preço');
+          iOrg = col('organizador'), iPreco = col('preco') > -1 ? col('preco') : col('preço'),
+          iRep = col('repete');
     if (cab.length === 1 && cab[0].includes('|'))
       throw new Error('os títulos estão todos na célula A1. Separe em 7 colunas: Dados → Dividir texto em colunas');
     if (iData < 0 || iTit < 0) throw new Error('faltam as colunas Data e Titulo');
@@ -251,14 +332,35 @@ async function carregarEventos() {
       imagem: iImg > -1 ? (l[iImg] || '').trim() : '',
       atracao: iAtr > -1 ? (l[iAtr] || '').trim() : '',
       organizador: iOrg > -1 ? (l[iOrg] || '').trim() : '',
-      preco: iPreco > -1 ? (l[iPreco] || '').trim() : ''
+      preco: iPreco > -1 ? (l[iPreco] || '').trim() : '',
+      repete: iRep > -1 ? (l[iRep] || '').trim() : ''
     }))
-    .filter(e => e.titulo && /^\d{4}-\d{2}-\d{2}$/.test(e.data))
+    .map(e => ({ ...e, data: evNormalizaData(e.data) }))
+    .filter(e => e.titulo && e.data);
+
+    return evExpandirRepeticoes(eventos, hojeISO())
     .filter(e => e.data >= hojeISO())        // evento que já passou não entra
     .sort((a, b) => a.data.localeCompare(b.data));
+  }
+}
 
+// Usada pelo chat da Gigi: devolve os proximos eventos ja filtrados, ou [] em caso de erro.
+window.evProximosEventos = async function (limite) {
+  try {
+    const evs = await evLerPlanilha();
+    return limite ? evs.slice(0, limite) : evs;
+  } catch (e) {
+    console.warn('Gigi/agenda:', e.message);
+    return [];
+  }
+};
+
+async function carregarEventos() {
+  const lista = document.getElementById('eventList');
+  if (!lista || !EVENTOS_SHEET_CSV) return;   // sem planilha: mantém o que está no HTML
+  try {
+    const eventos = await evLerPlanilha();
     if (!eventos.length) throw new Error('nenhuma linha válida');
-
     lista.innerHTML = eventos.map(evMontarCard).join('');
     evSchema(eventos);
   } catch (err) {

@@ -1,0 +1,1716 @@
+/* Cerebro da Gigi — fr. Gerado do cerebro completo.
+   75 regras; as palavras-chave sao as mesmas de sempre, so' a
+   resposta vem apenas neste idioma. 0 caem no portugues. */
+const GIGI_BRAIN = [
+ {
+  "keywords": [
+   "promotion",
+   "promo",
+   "balade avec dejeuner",
+   "forfait",
+   "100 reais",
+   "dejeuner inclus",
+   "promocao",
+   "promocoes",
+   "pacote",
+   "oferta",
+   "desconto",
+   "combo",
+   "passeio com almoco",
+   "deal",
+   "package",
+   "discount",
+   "tour with lunch",
+   "special offer",
+   "promocion",
+   "paquete",
+   "descuento",
+   "paseo con almuerzo",
+   "offre",
+   "remise",
+   "优惠",
+   "套餐",
+   "含午餐",
+   "100雷亚尔",
+   "游船含午餐",
+   "包午餐",
+   "午餐包含",
+   "含不含午餐",
+   "有午餐吗"
+  ],
+  "reply": "Notre promotion du moment : <strong>balade en bateau dans le Pantanal Carioca + déjeuner pour R$100 par personne</strong>. 🚤<br><br>Le déjeuner est au Restaurante Maracujá da Ilha — viande, poisson ou poulet. Départs toutes les demi-heures, de 8h à 16h30.<br><br>Dites-moi la date et le nombre de personnes et je regarde les disponibilités !<br>Elle dure en moyenne 35 à 40 minutes, en bateau collectif, minimum 2 personnes. Boissons non incluses.",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "day use",
+   "passer la journee",
+   "dayuse",
+   "day-use",
+   "uso diurno",
+   "passar o dia",
+   "so o dia",
+   "pasar el dia",
+   "白天使用",
+   "一日游"
+  ],
+  "reply": "Nous ne proposons pas de day use. 🙂<br><br>Ce que nous avons, c'est le forfait <strong>balade dans le Pantanal Carioca + déjeuner à R$100 par personne</strong>.<br><br>Je regarde pour quelle date ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "arret baignade",
+   "on peut se baigner",
+   "baignade",
+   "parada para banho",
+   "parada pra banho",
+   "da pra nadar",
+   "pode nadar",
+   "banho de mar",
+   "swimming stop",
+   "swim stop",
+   "can we swim",
+   "can i swim",
+   "parada para banarse",
+   "se puede nadar",
+   "on peut nager",
+   "能游泳吗",
+   "游泳停靠",
+   "下水",
+   "可以游泳吗"
+  ],
+  "reply": "Ça dépend de la sortie. 🌊<br><br>Celle du <strong>Pantanal Carioca</strong> (R$100 avec déjeuner) n'a pas d'arrêt baignade.<br><br>Celle des <strong>Ilhas Tijucas</strong> (R$200 avec déjeuner, 3 à 4 heures) s'arrête pour la baignade et vous dépose sur l'île.<br><br>Laquelle vous tente le plus ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "moyen de paiement",
+   "vous prenez la carte",
+   "comment payer",
+   "acompte",
+   "forma de pagamento",
+   "formas de pagamento",
+   "aceita cartao",
+   "aceita pix",
+   "como pago",
+   "sinal",
+   "deposito",
+   "parcelar",
+   "como pagar a reserva",
+   "payment",
+   "how do i pay",
+   "do you take card",
+   "deposit",
+   "down payment",
+   "forma de pago",
+   "aceptan tarjeta",
+   "sena",
+   "senal",
+   "怎么付款",
+   "支付方式",
+   "刷卡吗",
+   "定金",
+   "aceitam pix",
+   "aceitam cartao",
+   "pagar tudo",
+   "pagar antes",
+   "pagar na hora",
+   "pagamento antecipado",
+   "posso parcelar",
+   "tem que pagar",
+   "paga quando",
+   "do you accept pix",
+   "pay in advance",
+   "pay upfront",
+   "pay everything",
+   "aceptan pix",
+   "pagar por adelantado",
+   "payer a l avance",
+   "payer d avance"
+  ],
+  "reply": "Nous acceptons <strong>espèces, Pix ou carte</strong>. 💳<br><br>Un <strong>acompte de 50%</strong> garantit la réservation, le reste se paie le jour même.<br><br>Je vous réserve ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "heure de depart",
+   "a quelle heure",
+   "horaires des sorties",
+   "que horas sai",
+   "horario de saida",
+   "sai que horas",
+   "a que horas sai",
+   "hora de saida",
+   "departure time",
+   "what time does it leave",
+   "departures",
+   "horario de salida",
+   "a que hora sale",
+   "a quelle heure part",
+   "几点出发",
+   "出发时间",
+   "行程时间",
+   "que horas comeca",
+   "comeca que horas",
+   "a que horas comeca",
+   "que horas e a saida",
+   "what time does it start",
+   "a que hora empieza",
+   "a quelle heure ca commence"
+  ],
+  "reply": "Nous avons des départs <strong>toutes les demi-heures, de 8h à 16h30</strong>. ⏰<br><br>Dites-moi la date et le nombre de personnes et je trouve le meilleur horaire.",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "bateau partage",
+   "partage",
+   "bateau prive",
+   "prive",
+   "exclusif",
+   "combien de personnes",
+   "capacite",
+   "combien de temps",
+   "duree de la balade",
+   "ca dure combien",
+   "minimum de personnes",
+   "minimum 2 personnes",
+   "boisson incluse",
+   "les boissons sont incluses",
+   "boisson"
+  ],
+  "reply": "La balade du Pantanal Carioca dure en moyenne <b>35 à 40 minutes</b>. 🚤<br><br>Le bateau est <b>collectif</b> (partagé) et part avec un <b>minimum de 2 personnes</b>. Départs toutes les demi-heures, de 8h à 16h30.<br><br>Le forfait à <b>R$100 par personne</b> comprend la balade et le déjeuner — <b>les boissons ne sont pas incluses</b>.<br><br>Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme l'horaire !",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "ilha da fantasia",
+   "pousada ilha da fantasia",
+   "fantasia",
+   "pousada fantasia"
+  ],
+  "reply": "La <a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a> se trouve au bord de la lagune, à quelques minutes du métro Jardim Oceânico. 🚤 Cinq chambres avec climatisation et salle de bains privative, piscine et ponton sur l'eau — et le petit-déjeuner comme la balade en bateau dans le Pantanal Carioca sont compris. Je regarde les disponibilités ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "falar com atendente",
+   "humano",
+   "telefone",
+   "contato",
+   "falar com alguem",
+   "equipe",
+   "atendimento",
+   "atendente",
+   "human",
+   "contact",
+   "speak to someone",
+   "team",
+   "hablar con alguien",
+   "equipo",
+   "contacto",
+   "zap",
+   "whatsapp",
+   "humain",
+   "contacter",
+   "agent",
+   "conseiller",
+   "parler a un humain",
+   "pessoa de verdade",
+   "falar com uma pessoa",
+   "atendente de verdade",
+   "gente de verdade",
+   "real person",
+   "talk to a real person",
+   "persona real",
+   "vraie personne",
+   "parler a quelqu un",
+   "hablar con una persona"
+  ],
+  "reply": "Bien sûr ! Je vous passe directement à notre équipe humaine. Cliquez simplement sur le bouton WhatsApp juste en dessous et envoyez votre message !",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "reservar",
+   "reserva",
+   "agendar",
+   "agendamento",
+   "marcar",
+   "orcamento",
+   "preco",
+   "valor",
+   "comprar",
+   "book",
+   "reservation",
+   "schedule",
+   "price",
+   "cost",
+   "buy",
+   "reservación",
+   "programar",
+   "precio",
+   "costo",
+   "reserver",
+   "prix",
+   "tarif",
+   "devis",
+   "acheter",
+   "quanto custa",
+   "quanto custam",
+   "quanto fica",
+   "quanto sai",
+   "quanto e",
+   "qual o valor",
+   "how much",
+   "how much is",
+   "what does it cost",
+   "how much does it cost",
+   "cuanto cuesta",
+   "cuanto sale",
+   "cuanto es",
+   "cual es el precio",
+   "combien coute",
+   "combien ca coute",
+   "c est combien",
+   "quel prix",
+   "多少钱",
+   "价格",
+   "费用",
+   "价钱",
+   "tem vaga",
+   "tem vagas",
+   "ainda tem vaga",
+   "ainda tem lugar",
+   "disponibilidade",
+   "tem disponibilidade",
+   "quanto para",
+   "quanto pra",
+   "quanto por pessoa",
+   "valor para",
+   "valor por pessoa",
+   "quero fechar",
+   "queria fechar",
+   "fechar a reserva",
+   "fechar o passeio",
+   "is there availability",
+   "any spots",
+   "availability",
+   "how much for",
+   "hay lugar",
+   "disponibilidad",
+   "cuanto para",
+   "cuanto por persona",
+   "il reste de la place",
+   "disponibilite",
+   "combien pour"
+  ],
+  "reply": "Je peux vous donner les tarifs tout de suite ! 💰<br><br>🚤 <b>Sorties en bateau</b><br>• <b>Pantanal Carioca + déjeuner — R$100 par personne</b> (notre promotion)<br>• Pantanal Carioca, balade seule — R$50 par personne<br>• <b>Ilhas Tijucas + déjeuner — R$200 par personne</b><br>• Ilhas Tijucas, balade seule — R$150 par personne<br><br>🛌 <b>Hébergement</b><br>Le tarif dépend de l'auberge et de la date. Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme prix et disponibilités — ou voyez les options sur <a href=\"hoteis-pousadas.html\">hébergement</a>.<br><br>💳 Espèces, Pix ou carte, avec un acompte de 50% pour garantir la réservation.",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "sushi",
+   "japones",
+   "japa",
+   "sashimi",
+   "temaki",
+   "yakisoba",
+   "rodizio de sushi",
+   "japanese",
+   "japonesa",
+   "japonais",
+   "cuisine japonaise"
+  ],
+  "reply": "Il n'y a pas actuellement de restaurant spécialisé en cuisine japonaise / sushi sur l'Île de Gigóia. 🍣 Mais si vous aimez le poisson frais, vous allez adorer la haute gastronomie de fruits de mer de l'<a href='restaurante-ocya.html'>Ocyá</a> ou du <a href='restaurante-laguna.html'>Laguna</a> !"
+ },
+ {
+  "keywords": [
+   "baleia",
+   "tubarao",
+   "golfinho",
+   "pinguim",
+   "leao marinho",
+   "whale",
+   "shark",
+   "dolphin",
+   "penguin",
+   "sea lion",
+   "ballena",
+   "tiburon",
+   "delfin",
+   "pinguino",
+   "lobo marino",
+   "baleine",
+   "requin",
+   "dauphin",
+   "pingouin"
+  ],
+  "reply": "Hahaha ! Dans notre lagune, il n'y a ni baleine ni requin ! 🐋 Ici l'eau est abritée. Les grandes vedettes de notre faune sont les caïmans à museau large, les capybaras et les hérons."
+ },
+ {
+  "keywords": [
+   "nadar",
+   "banho",
+   "mergulhar",
+   "agua limpa",
+   "swim",
+   "bathe",
+   "dive",
+   "clean water",
+   "bañarse",
+   "bucear",
+   "agua limpia",
+   "nager",
+   "baignade",
+   "se baigner",
+   "eau propre"
+  ],
+  "reply": "Autrefois la lagune était limpide et les habitants s'y baignaient, mais aujourd'hui, à cause de l'envasement et de l'urbanisation, nous NE recommandons PAS la baignade dans la lagune. 🚫 Si vous voulez nager, réservez notre excursion vers les <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> !"
+ },
+ {
+  "keywords": [
+   "praia de areia",
+   "praia na ilha",
+   "tem praia",
+   "beach",
+   "sandy beach",
+   "playa",
+   "playa de arena",
+   "plage",
+   "plage de sable"
+  ],
+  "reply": "L'Île de Gigóia est entourée par la lagune, il n'y a pas de plage de mer avec des vagues. 🌴 Mais le bateau peut vous déposer à un ponton à seulement 5 minutes à pied de la plage de Barra da Tijuca !"
+ },
+ {
+  "keywords": [
+   "oi",
+   "ola",
+   "bom dia",
+   "boa tarde",
+   "boa noite",
+   "tudo bem",
+   "hey",
+   "eae",
+   "opa",
+   "alo",
+   "salve",
+   "hello",
+   "hi",
+   "good morning",
+   "good afternoon",
+   "good evening",
+   "how are you",
+   "hola",
+   "buenos dias",
+   "buenas tardes",
+   "buenas noches",
+   "que tal",
+   "bonjour",
+   "bonsoir",
+   "salut",
+   "coucou"
+  ],
+  "reply": "Bonjour ! Tout va très bien ici ! 😊 Je suis Gigi, l'assistante virtuelle officielle du Portail. Comment puis-je vous aider à préparer votre journée parfaite sur l'Île de Gigóia ?",
+  "fraca": true
+ },
+ {
+  "keywords": [
+   "obrigado",
+   "obrigada",
+   "valeu",
+   "show",
+   "perfeito",
+   "otimo",
+   "top",
+   "legal",
+   "agradecido",
+   "incrivel",
+   "maravilha",
+   "thanks",
+   "thank you",
+   "great",
+   "perfect",
+   "awesome",
+   "gracias",
+   "genial",
+   "perfecto",
+   "increible",
+   "merci",
+   "parfait",
+   "formidable"
+  ],
+  "reply": "Je vous en prie ! Ravie d'avoir pu aider. Si vous avez besoin d'un autre conseil, d'une adresse de restaurant ou de réserver une excursion, écrivez-moi. Bon séjour sur l'île ! 🌴"
+ },
+ {
+  "keywords": [
+   "quem e voce",
+   "robo",
+   "inteligencia artificial",
+   "humano",
+   "inteligencia",
+   "bot",
+   "assistente",
+   "vc e real",
+   "who are you",
+   "robot",
+   "artificial intelligence",
+   "assistant",
+   "quien eres",
+   "eres real",
+   "asistente",
+   "qui es tu",
+   "qui etes vous",
+   "assistante",
+   "es tu un robot"
+  ],
+  "reply": "Je suis Gigi, la mascotte et l'assistante virtuelle du Portal Ilha da Gigóia ! 🕊️ J'ai été programmée pour connaître chaque détail historique et touristique d'ici. Si je ne sais pas quelque chose, je vous passe à notre équipe humaine, d'accord ?"
+ },
+ {
+  "keywords": [
+   "comer",
+   "restaurante",
+   "fome",
+   "almoco",
+   "jantar",
+   "comida",
+   "onde comer",
+   "gastronomia",
+   "alimentacao",
+   "eat",
+   "restaurant",
+   "lunch",
+   "dinner",
+   "food",
+   "where to eat",
+   "donde comer",
+   "almuerzo",
+   "cena",
+   "manger",
+   "ou manger",
+   "diner",
+   "dejeuner",
+   "nourriture"
+  ],
+  "reply": "La Gigóia est un paradis gastronomique ! 🍤 Nous avons d'excellents restaurants de fruits de mer (comme l'Ocyá et le Laguna), des snacks, des cafés et des botecos authentiques. Voyez la liste complète sur la page <a href='restaurantes.html'>Où manger</a>."
+ },
+ {
+  "keywords": [
+   "passeio",
+   "passear",
+   "tour",
+   "roteiro",
+   "fazer o que",
+   "o que fazer",
+   "atividade",
+   "turismo",
+   "what to do",
+   "excursion",
+   "que hacer",
+   "paseo",
+   "actividad",
+   "balade",
+   "que faire",
+   "visite",
+   "activite",
+   "quoi faire"
+  ],
+  "reply": "Nous avons deux sorties, et la plus demandée est celle avec le déjeuner. 🚤<br><br><strong>Pantanal Carioca + déjeuner — R$100 par personne.</strong> Vous voyez des caïmans et des capybaras de près dans la mangrove et vous déjeunez au Restaurante Maracujá da Ilha (viande, poisson ou poulet). Départs toutes les demi-heures, de 8h à 16h30. La balade seule est à R$50.<br><br><strong>Ilhas Tijucas + déjeuner — R$200 par personne.</strong> Environ 3 à 4 heures, avec arrêt baignade, et le bateau vous dépose sur l'île. La balade seule est à R$150.<br><br>Laquelle vous tente le plus ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "dormir",
+   "pousada",
+   "hotel",
+   "hospedagem",
+   "ficar",
+   "pernoite",
+   "onde dormir",
+   "onde ficar",
+   "sleep",
+   "inn",
+   "accommodation",
+   "stay",
+   "where to sleep",
+   "posada",
+   "alojamiento",
+   "donde dormir",
+   "hebergement",
+   "ou loger",
+   "auberge",
+   "loger",
+   "ou dormir",
+   "diaria",
+   "diarias",
+   "alugar",
+   "aluguel",
+   "casa para alugar",
+   "quanto custa a diaria",
+   "valor da diaria",
+   "preco da diaria",
+   "quanto custa a pousada",
+   "valor da pousada",
+   "preco da pousada",
+   "quanto custa a hospedagem",
+   "valor da hospedagem",
+   "nightly rate",
+   "how much is the room",
+   "cuanto cuesta la posada",
+   "prix de la chambre"
+  ],
+  "reply": "🏡 <b>Hébergement à Ilha da Gigóia</b><br><br>⭐ <b>Notre recommandation</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — au bord de la lagune, piscine et ponton sur l'eau. <b>Petit-déjeuner et balade en bateau dans le Pantanal Carioca inclus dans le tarif.</b> Le prix dépend de la date.<br><br>🛌 <b>Auberges</b><br><a href=\"pousada-marisis.html\">Pousada Marísis</a> — à partir de R$300 la nuit<br><a href=\"veneza-carioca.html\">Veneza Carioca Hôtel Boutique</a> — à partir de R$650 la nuit<br><a href=\"casanova.html\">Casanova Residence</a> — à partir de R$650 la nuit<br><br>🏖️ <b>Maisons de vacances (la maison entière)</b><br><a href=\"lux-48.html\">Lux 48</a> — à partir de R$250 la nuit, jusqu'à 4 personnes<br><a href=\"casa-venti.html\">Casa Venti</a> — à partir de R$450 la nuit, jusqu'à 7 personnes (animaux acceptés 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — à partir de R$500 la nuit, jusqu'à 8 personnes<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — à partir de R$1.500 la nuit, jusqu'à 16 personnes avec piscine 🏊<br><br>Les tarifs changent selon la date et la saison.<br><br>Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme le prix exact et les disponibilités 😊",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "historia",
+   "origem",
+   "geologia",
+   "17 mil anos",
+   "pedra branca",
+   "history",
+   "origin",
+   "geology",
+   "origen",
+   "histoire",
+   "origine",
+   "geologie",
+   "historia da ilha",
+   "origem da ilha",
+   "curiosidades da ilha",
+   "island history",
+   "historia de la isla",
+   "histoire de l ile"
+  ],
+  "reply": "L'histoire est fascinante ! 📜 Les géologues disent qu'il y a 17 000 ans le niveau de la mer était 70 mètres plus bas et venait battre le massif de la Pedra Branca. L'érosion et l'envasement ont fermé le passage, formant la plage de Barra, les lagunes et notre archipel."
+ },
+ {
+  "keywords": [
+   "veneza carioca",
+   "apelido",
+   "por que veneza",
+   "venice",
+   "why veneza",
+   "venecia",
+   "por que venecia",
+   "venise",
+   "pourquoi venise"
+  ],
+  "reply": "On nous a surnommés la « Venise carioca » parce que nous sommes un archipel entouré de canaux navigables, sans voitures, où la vie se déroule en bateau, dans une ambiance bucolique qui contraste avec le chaos de la métropole. 🚤"
+ },
+ {
+  "keywords": [
+   "rua dos colibris",
+   "guaimun",
+   "coroneis",
+   "3 ilhas",
+   "tres ilhas",
+   "colibris",
+   "three islands",
+   "tres islas",
+   "trois iles"
+  ],
+  "reply": "Une curiosité : la Gigóia était en réalité 3 îles ! 🏝️ L'Ilha da Gigóia, celle dos Coronéis et Guaimun. Le canal qui les séparait s'est asséché avec le temps et est devenu aujourd'hui la fameuse Rua dos Colibris !"
+ },
+ {
+  "keywords": [
+   "ponte de madeira",
+   "ponte",
+   "avenida das americas",
+   "av das americas",
+   "ligacao continente",
+   "bridge",
+   "puente",
+   "pont",
+   "pont en bois"
+  ],
+  "reply": "Autrefois, l'île avait un pont en bois avec un accès direct à l'Av. das Américas ! 🌉 Avec le temps et la croissance, il a été démoli. Aujourd'hui, l'isolement (accès 100 % par bateau) est notre plus grand charme."
+ },
+ {
+  "keywords": [
+   "pescadores",
+   "primeiros moradores",
+   "antigamente",
+   "como comecou",
+   "fishermen",
+   "pecheurs",
+   "premiers habitants"
+  ],
+  "reply": "L'occupation de l'île a commencé modestement, avec des pêcheurs. 🎣 Ils vivaient de la pêche à la crevette dans une eau si claire qu'on voyait le sable blanc du fond. Avec les médias, le paradis a été découvert et l'occupation s'est développée."
+ },
+ {
+  "keywords": [
+   "populacao",
+   "habitantes",
+   "quantas pessoas",
+   "moradores",
+   "population",
+   "inhabitants",
+   "how many people",
+   "residents",
+   "poblacion",
+   "cuantas personas",
+   "residentes",
+   "combien habitants",
+   "combien de personnes"
+  ],
+  "reply": "L'Île de Gigóia est celle qui a le plus souffert de la croissance rapide. Elle abrite aujourd'hui environ 7 000 habitants ! L'ensemble du complexe lagunaire réunit près de 12 000 personnes vivant sur l'archipel. 🏘️"
+ },
+ {
+  "keywords": [
+   "iptu",
+   "uniao",
+   "prefeitura",
+   "ilegal",
+   "non edificando",
+   "decreto",
+   "comprar casa",
+   "terreno",
+   "legalizado",
+   "legal",
+   "taxes",
+   "impuestos",
+   "gobierno",
+   "terrain",
+   "impots",
+   "acheter une maison"
+  ],
+  "reply": "Une curiosité foncière : tous les terrains appartiennent à l'État fédéral. En 1981, un décret municipal a classé la zone « non edificandi ». En raison d'un contrôle insuffisant par le passé, la plupart des maisons n'ont aujourd'hui pas d'inscription formelle à la taxe foncière. 🏢"
+ },
+ {
+  "keywords": [
+   "poluicao",
+   "esgoto",
+   "saneamento",
+   "assoreamento",
+   "pollution",
+   "sewage",
+   "sanitation",
+   "polucion",
+   "alcantarillado",
+   "saneamiento",
+   "egouts",
+   "assainissement",
+   "envasement"
+  ],
+  "reply": "L'urbanisation désordonnée a apporté son lot de défis : la consommation d'eau a augmenté et l'absence de traitement des eaux usées a provoqué pollution et envasement de la lagune. 🌿 Malgré l'usure du progrès, la nature résiste vaillamment et reste notre plus grand trésor."
+ },
+ {
+  "keywords": [
+   "vale a pena",
+   "vale a pena visitar",
+   "o que acha",
+   "is it worth it",
+   "vale la pena",
+   "ca vaut le coup",
+   "vaut la peine"
+  ],
+  "reply": "Bien sûr que ça vaut le coup ! 😍 Malgré les défis urbains, la Gigóia est magique. C'est un mélange d'ambiance de province, de paix, de haute gastronomie et de nature incroyable, à seulement 5 minutes de la métropole chaotique."
+ },
+ {
+  "keywords": [
+   "allan",
+   "hostel barra lake",
+   "cachorra lola",
+   "lola",
+   "morador antigo",
+   "hostel",
+   "ancien habitant"
+  ],
+  "reply": "Allan, du Hostel Barra Lake, est une légende vivante ici ! Il vit sur l'île depuis plus de 40 ans et a vu naître Barra da Tijuca. Et c'est sa gentille petite chienne Lola qui veille sur les lieux avec lui. 🐶"
+ },
+ {
+  "keywords": [
+   "chalana",
+   "transporte antigo",
+   "ze iris",
+   "ze grande",
+   "antonio",
+   "seu joao",
+   "como era o barco",
+   "old transport",
+   "transporte antiguo",
+   "ancien transport",
+   "barques"
+  ],
+  "reply": "L'histoire de notre transport est très belle ! 🛶 Tout a commencé avec de simples barques à rames. Le service de chalana est né avec Antônio, Zé Iris et Zé Grande (qui n'opéraient que de jour). Le transport de nuit n'a été inventé que des années plus tard, par Seu João !"
+ },
+ {
+  "keywords": [
+   "simao express",
+   "nilson",
+   "barco taxi",
+   "cartao fidelidade",
+   "fidelidade",
+   "boat taxi",
+   "taxi acuatico",
+   "bateau taxi",
+   "carte de fidelite"
+  ],
+  "reply": "En 2015, le transport a évolué : Nilson Simão, un habitant, a créé le Barco Táxi (Simão Express) ! 🚤 Il dispose aujourd'hui de bateaux agréés circulant de 6h à minuit et propose même une « carte de fidélité » avec des réductions pour les habitants."
+ },
+ {
+  "keywords": [
+   "dinheiro",
+   "cartao",
+   "pix",
+   "caixa eletronico",
+   "banco",
+   "pagamento",
+   "pagar",
+   "money",
+   "card",
+   "atm",
+   "bank",
+   "payment",
+   "pay",
+   "dinero",
+   "tarjeta",
+   "cajero automatico",
+   "pago",
+   "argent",
+   "carte bancaire",
+   "distributeur",
+   "payer",
+   "especes",
+   "liquide"
+  ],
+  "reply": "La grande majorité des établissements acceptent le PIX et la carte ! 💳 Mais ayez toujours du liquide (petites coupures) pour payer la traversée en chalana. Il n'y a pas de distributeur sur l'île."
+ },
+ {
+  "keywords": [
+   "mosquito",
+   "repelente",
+   "borrachudo",
+   "inseto",
+   "pernilongo",
+   "repellent",
+   "bug",
+   "insect",
+   "insecto",
+   "bicho",
+   "moustique",
+   "repulsif",
+   "insecte"
+  ],
+  "reply": "Le bon conseil : comme nous sommes au cœur du Pantanal Carioca, surtout en fin d'après-midi, il est vivement recommandé d'apporter un répulsif ! 🦟 Vous profiterez du coucher de soleil sans soucis."
+ },
+ {
+  "keywords": [
+   "acessibilidade",
+   "cadeirante",
+   "idoso",
+   "cadeira de rodas",
+   "dificuldade",
+   "locomocao",
+   "accessibility",
+   "wheelchair",
+   "elderly",
+   "mobility",
+   "accesibilidad",
+   "silla de ruedas",
+   "anciano",
+   "movilidad",
+   "accessibilite",
+   "fauteuil roulant",
+   "mobilite reduite",
+   "personnes agees"
+  ],
+  "reply": "L'île a un charme rustique, avec ses ruelles étroites. Pour une meilleure accessibilité, nous recommandons d'aller en bateau directement au ponton d'établissements équipés comme le <a href='restaurante-laguna.html'>Laguna</a> ou le <a href='bar-kauai.html'>Kauai</a>."
+ },
+ {
+  "keywords": [
+   "farmacia",
+   "remedio",
+   "hospital",
+   "posto de saude",
+   "emergencia",
+   "medico",
+   "pharmacy",
+   "medicine",
+   "doctor",
+   "emergency",
+   "medicina",
+   "pharmacie",
+   "medicament",
+   "urgence",
+   "medecin",
+   "hopital"
+  ],
+  "reply": "Nous avons 2 petites pharmacies sur l'île, mais pour les urgences ou l'hôpital, juste à côté, Av. Armando Lombardi (à 5 min en bateau), vous trouverez des cliniques et de grandes pharmacies 24h/24. 🏥"
+ },
+ {
+  "keywords": [
+   "clima",
+   "tempo",
+   "chove",
+   "melhor epoca",
+   "quando ir",
+   "verao",
+   "inverno",
+   "weather",
+   "climate",
+   "rain",
+   "best time",
+   "summer",
+   "winter",
+   "tiempo",
+   "lluvia",
+   "mejor epoca",
+   "verano",
+   "invierno",
+   "meteo",
+   "climat",
+   "quand venir",
+   "meilleure saison",
+   "pluie"
+  ],
+  "reply": "La Gigóia est belle toute l'année ! ☀️ En été, les journées sont parfaites pour les sports nautiques, et en hiver le climat doux est idéal pour la gastronomie. Voyez <a href='melhor-epoca.html'>Meilleure période pour visiter</a>."
+ },
+ {
+  "keywords": [
+   "unimed",
+   "posto de gasolina",
+   "entrada",
+   "onde pegar o barco",
+   "acesso principal",
+   "beco",
+   "where to catch the boat",
+   "gas station",
+   "donde tomar el bote",
+   "gasolinera",
+   "entree principale",
+   "ou prendre le bateau",
+   "station service"
+  ],
+  "reply": "L'accès principal est un peu caché ! C'est une ruelle entre la station-service et l'immeuble miroir d'Unimed, sur l'Av. Armando Lombardi. C'est là que sont les bateaux ! 📍"
+ },
+ {
+  "keywords": [
+   "como chegar",
+   "onde fica",
+   "localizacao",
+   "endereco",
+   "chegar",
+   "como ir",
+   "metro",
+   "jardim oceanico",
+   "how to get there",
+   "location",
+   "address",
+   "subway",
+   "como llegar",
+   "donde esta",
+   "ubicacion",
+   "direccion",
+   "comment venir",
+   "comment y aller",
+   "ou se trouve",
+   "localisation",
+   "adresse",
+   "como chego",
+   "como faco para chegar",
+   "onibus",
+   "bus",
+   "brt",
+   "de onibus",
+   "transporte publico",
+   "how do i get there",
+   "public transport",
+   "como llego",
+   "autobus",
+   "guagua",
+   "colectivo",
+   "micro",
+   "autocar",
+   "navette"
+  ],
+  "reply": "Venir ici est très simple ! 📍 La meilleure option est le métro (station Jardim Oceânico - sortie Lagoa). Voyez le pas à pas sur notre page <a href='como-chegar.html'>Comment venir</a>."
+ },
+ {
+  "keywords": [
+   "carro",
+   "estacionamento",
+   "estacionar",
+   "vaga de estacionamento",
+   "parar o carro",
+   "dirigir",
+   "uber",
+   "car",
+   "parking",
+   "park",
+   "drive",
+   "coche",
+   "estacionamiento",
+   "conducir",
+   "voiture",
+   "se garer",
+   "stationnement"
+  ],
+  "reply": "Il n'y a pas de voitures sur l'île ! 🚫🚗 Si vous venez en voiture, nous recommandons les parkings privés Av. Armando Lombardi, 370. Détails sur <a href='como-chegar.html'>Comment venir</a>."
+ },
+ {
+  "keywords": [
+   "barco",
+   "balsa",
+   "travessia",
+   "barquinho",
+   "valor do barco",
+   "preco do barco",
+   "horario barco",
+   "madrugada",
+   "boat",
+   "ferry",
+   "crossing",
+   "boat price",
+   "boat schedule",
+   "bote",
+   "lancha",
+   "cruce",
+   "precio del bote",
+   "horario del bote",
+   "bateau",
+   "traversee",
+   "prix du bateau",
+   "horaire bateau"
+  ],
+  "reply": "Les chalanas fonctionnent 24h/24 ! 🚤 Le tarif varie entre R$ 2,00 et R$ 5,00. Il vous suffit de donner le nom du restaurant au batelier pour qu'il vous dépose au bon ponton."
+ },
+ {
+  "keywords": [
+   "pet",
+   "cachorro",
+   "gato",
+   "animal",
+   "pets",
+   "pet friendly",
+   "caozinho",
+   "cachorrinho",
+   "dog",
+   "cat",
+   "perro",
+   "mascota",
+   "animaux",
+   "chien",
+   "animal accepte"
+  ],
+  "reply": "Oui ! Nous sommes Pet Friendly 🐾. Des maisons de vacances comme la <a href='casa-venti.html'>Casa Venti</a> acceptent les animaux, et plusieurs bars aussi. Voyez les conseils sur <a href='boas-praticas.html'>Bonnes pratiques</a>."
+ },
+ {
+  "keywords": [
+   "lixo",
+   "barulho",
+   "regras",
+   "boas praticas",
+   "som alto",
+   "pode fazer som",
+   "musica alta",
+   "trash",
+   "noise",
+   "rules",
+   "loud music",
+   "basura",
+   "ruido",
+   "reglas",
+   "dechets",
+   "bruit",
+   "regles",
+   "musique forte"
+  ],
+  "reply": "Aidez-nous à préserver notre paradis ! 🗑️🌿 Il est essentiel de respecter les habitants en matière de bruit et de ne jamais jeter de déchets dans la lagune. Voyez la page <a href='boas-praticas.html'>Bonnes pratiques</a>."
+ },
+ {
+  "keywords": [
+   "ilha primeira",
+   "ilha de sao jorge",
+   "arquipelago",
+   "outras ilhas",
+   "other islands",
+   "otras islas",
+   "autres iles",
+   "archipel"
+  ],
+  "reply": "La Gigóia est la plus grande, mais nous faisons partie du complexe lagunaire qui comprend la très charmante Ilha Primeira (où se trouvent le Salomé et le Veneza Carioca) et l'Ilha de São Jorge ! 🏝️"
+ },
+ {
+  "keywords": [
+   "infraestrutura",
+   "comercio",
+   "mercado",
+   "padaria",
+   "lojas",
+   "supermercado",
+   "market",
+   "bakery",
+   "stores",
+   "panaderia",
+   "tiendas",
+   "commerces",
+   "supermarche",
+   "boulangerie",
+   "epicerie"
+  ],
+  "reply": "Notre île est aujourd'hui autosuffisante ! 🛒 Dans les ruelles en terre battue, vous trouverez 2 épiceries, des pharmacies, des magasins de bricolage, un primeur, des animaleries et des dizaines de commerces."
+ },
+ {
+  "keywords": [
+   "caiaque",
+   "stand up",
+   "sup",
+   "esportes",
+   "remo",
+   "kayak",
+   "paddle",
+   "sports",
+   "deportes",
+   "sports nautiques",
+   "planche"
+  ],
+  "reply": "La lagune est un paradis pour les sports nautiques ! 🚣‍♂️ La location de kayak et de stand-up paddle (SUP) est très courante ici pour explorer les canaux à un rythme tout tranquille."
+ },
+ {
+  "keywords": [
+   "pantanal",
+   "jacare",
+   "capivara",
+   "natureza",
+   "passaros",
+   "bicho",
+   "fauna",
+   "safari",
+   "alligator",
+   "capybara",
+   "nature",
+   "birds",
+   "caiman",
+   "capibara",
+   "naturaleza",
+   "pajaros",
+   "oiseaux",
+   "faune sauvage",
+   "caimanes",
+   "capibaras"
+  ],
+  "reply": "Le <a href='pantanal-carioca.html'>Pantanal Carioca</a> est parfait pour voir des caïmans et des capybaras en liberté ! 🐊<br><br>La balade seule est à R$50 par personne, mais le plus demandé est le forfait avec <strong>déjeuner inclus à R$100 par personne</strong>.<br><br>Pour quelle date, et combien de personnes ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "tijucas",
+   "ilhas tijucas",
+   "mar",
+   "mergulho",
+   "tartaruga",
+   "caribe carioca",
+   "ilha das tijucas",
+   "sea",
+   "dive",
+   "turtle",
+   "tijucas islands",
+   "buceo",
+   "tortuga",
+   "islas tijucas",
+   "tortue",
+   "plongee",
+   "caraibes cariocas"
+  ],
+  "reply": "Les <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> sont notre joyau caché — les Caraïbes cariocas ! 🤿<br><br>Environ 3 à 4 heures, avec arrêt baignade, et le bateau vous dépose sur l'île. La balade seule est à R$150 par personne, et <strong>R$200 avec le déjeuner</strong>.<br><br>Les places partent vite le week-end. Pour quelle date ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "reserva",
+   "praia da reserva",
+   "marapendi",
+   "canal",
+   "reserve beach",
+   "playa de reserva",
+   "plage de la reserve"
+  ],
+  "reply": "Nous avons une magnifique excursion en bateau jusqu'à la <a href='reserva.html'>Praia da Reserva</a> ! 🏝️ 2 heures de navigation paisible dans les canaux, avec un arrêt baignade en mer."
+ },
+ {
+  "keywords": [
+   "jet ski",
+   "jetski",
+   "jet-ski",
+   "adrenalina",
+   "pilotar",
+   "moto aquatica",
+   "adrenaline",
+   "ride",
+   "conducir",
+   "moto marine",
+   "sensations fortes"
+  ],
+  "reply": "Envie de jet-ski ? 🚀 10 min R$ 150 · 20 min R$ 250 · 30 min R$ 450 · 1 heure R$ 750 — tarif par jet-ski (jusqu'à 2 personnes). À partir de 30 minutes, vous gérez le temps comme vous voulez, et toute réservation donne accès à l'espace détente avec piscine après la sortie. Tout est sur notre page <a href='jet-ski.html'>Jet-ski</a>, ou écrivez-moi sur WhatsApp pour réserver !",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "pacote",
+   "combo",
+   "pacotes especiais",
+   "romantico",
+   "vip",
+   "experiencia completa",
+   "roteiro perfeito",
+   "package",
+   "special packages",
+   "romantic",
+   "complete experience",
+   "paquete",
+   "paquetes especiales",
+   "forfait",
+   "forfaits speciaux",
+   "experience complete",
+   "romantique"
+  ],
+  "reply": "Vous voulez la simplicité ? Nous avons l'<a href='experiencia-completa.html'>Expérience complète</a> et plusieurs <a href='pacotes-especiais.html'>Forfaits spéciaux</a> 🥰. Cliquez sur le bouton ci-dessous pour un devis !",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "frutos do mar",
+   "peixe",
+   "camarao",
+   "moqueca",
+   "lagosta",
+   "ceviche",
+   "seafood",
+   "fish",
+   "shrimp",
+   "lobster",
+   "mariscos",
+   "pescado",
+   "camaron",
+   "langosta",
+   "fruits de mer",
+   "poisson",
+   "crevette",
+   "langouste"
+  ],
+  "reply": "Pour les fruits de mer, essayez la haute gastronomie de l'<a href='restaurante-ocya.html'>Ocyá</a> (Guide Michelin), le pionnier <a href='restaurante-laguna.html'>Laguna</a>, ou la fameuse moqueca du <a href='restaurante-cais-bar.html'>Cais Bar</a> !"
+ },
+ {
+  "keywords": [
+   "ocya",
+   "michelin",
+   "geronimo",
+   "sofisticado",
+   "chique",
+   "luxo",
+   "alta gastronomia",
+   "sophisticated",
+   "chic",
+   "luxury",
+   "high gastronomy",
+   "lujo",
+   "haute gastronomie",
+   "raffine"
+  ],
+  "reply": "L'<a href='restaurante-ocya.html'>Ocyá</a> est reconnu par le Guide Michelin et dirigé par le chef Gerônimo Athiê. C'est de la haute gastronomie pure ! 🐟"
+ },
+ {
+  "keywords": [
+   "laguna",
+   "pedra da gavea",
+   "primeiro restaurante",
+   "antigo",
+   "tradicional",
+   "oldest restaurant",
+   "traditional",
+   "restaurante mas antiguo",
+   "plus ancien restaurant",
+   "pionnier"
+  ],
+  "reply": "Le <a href='restaurante-laguna.html'>Restaurante Laguna</a> est le pionnier de l'île (depuis 2002) ! Rustique et raffiné, avec une vue superbe sur la Pedra da Gávea."
+ },
+ {
+  "keywords": [
+   "deck",
+   "guarda chuva",
+   "guarda-chuva",
+   "deck bar",
+   "camarao no abacaxi",
+   "umbrella",
+   "shrimp in pineapple",
+   "paraguas",
+   "camaron en piña",
+   "parasols",
+   "crevette ananas"
+  ],
+  "reply": "Le <a href='restaurante-deck-bar.html'>Deck Bar</a> est célèbre pour ses parasols colorés au plafond et pour ses incroyables crevettes dans l'ananas ! 🍍"
+ },
+ {
+  "keywords": [
+   "cais bar",
+   "cais",
+   "melhor moqueca",
+   "rodizio de petiscos",
+   "best moqueca",
+   "snack all you can eat",
+   "mejor moqueca",
+   "meilleure moqueca"
+  ],
+  "reply": "Le <a href='restaurante-cais-bar.html'>Cais Bar</a> sert la moqueca la plus traditionnelle du coin ! 🍲 Et leur rodízio de tapas a beaucoup de succès."
+ },
+ {
+  "keywords": [
+   "camarao da barra",
+   "especializado em camarao",
+   "shrimp specialized",
+   "especializado en camaron",
+   "specialiste crevette"
+  ],
+  "reply": "Le <a href='restaurante-camarao.html'>Camarão da Barra</a> est très moderne et spécialisé dans différentes préparations contemporaines de la crevette. 🍤"
+ },
+ {
+  "keywords": [
+   "salome",
+   "salome al mare",
+   "tabua de frutos do mar",
+   "seafood platter",
+   "tabla de mariscos",
+   "plateau de fruits de mer"
+  ],
+  "reply": "Le <a href='restaurante-salome.html'>Salomé al Mare</a> se trouve sur l'Ilha Primeira et sert de gigantesques plateaux de fruits de mer, parfaits à partager ! 🐚"
+ },
+ {
+  "keywords": [
+   "venne",
+   "mediterranea",
+   "mediterraneo",
+   "elegante",
+   "mediterranean",
+   "elegant",
+   "mediterraneenne"
+  ],
+  "reply": "Le <a href='restaurante-venne.html'>Venne Gastronomia</a> propose une cuisine méditerranéenne raffinée. Le cadre est très élégant, pour les grandes occasions. 🍷"
+ },
+ {
+  "keywords": [
+   "maracuja",
+   "maracuja da ilha",
+   "camarao empanado",
+   "breaded shrimp",
+   "camaron empanizado",
+   "crevettes panees"
+  ],
+  "reply": "Le <a href='restaurante-maracuja.html'>Maracujá da Ilha</a> (sur l'Ilha Primeira) a l'un des meilleurs pontons pour voir le coucher de soleil ! 🌅"
+ },
+ {
+  "keywords": [
+   "burger",
+   "hamburguer",
+   "sanduiche",
+   "lanche",
+   "parada burger",
+   "pizza",
+   "pizzaria",
+   "massa",
+   "ilha gourmet",
+   "pasta",
+   "sandwich",
+   "snack",
+   "hamburguesa",
+   "casse croute"
+  ],
+  "reply": "Une petite faim ? Le <a href='parada-burger.html'>Parada Burger</a> fait des burgers artisanaux incroyables ! Si vous préférez pizza et pâtes, allez directement à l'<a href='ilha-gourmet.html'>Ilha Gourmet</a>. 🍔🍕"
+ },
+ {
+  "keywords": [
+   "carne",
+   "frango",
+   "boteco raiz",
+   "elson",
+   "barato",
+   "simples",
+   "comida di buteco",
+   "joana",
+   "pastel",
+   "caldinho",
+   "meat",
+   "chicken",
+   "cheap",
+   "simple",
+   "pollo",
+   "poulet",
+   "poulet roti",
+   "pas cher",
+   "viande"
+  ],
+  "reply": "Pour une ambiance de village et une cuisine authentique, allez au <a href='bar-elson.html'>Bar do Elson</a> (le meilleur poulet rôti) ou au chaleureux <a href='bar-joana.html'>Bar da Joana</a> pour des pastéis maison ! 🍗"
+ },
+ {
+  "keywords": [
+   "futebol",
+   "jogo",
+   "mengao",
+   "assistir",
+   "telao",
+   "football",
+   "match",
+   "futbol",
+   "partido",
+   "regarder le match",
+   "football francais"
+  ],
+  "reply": "Vous voulez regarder un bon match de football (surtout de Flamengo) ? Le bon plan, c'est le <a href='bar-elson.html'>Bar do Elson</a>. Bière pas chère et ambiance de tribune ! ⚽"
+ },
+ {
+  "keywords": [
+   "cafe",
+   "cafeteria",
+   "cafe da manha",
+   "bolo",
+   "tapioca",
+   "cantinho do cafe",
+   "poesia",
+   "coffee",
+   "breakfast",
+   "cake",
+   "desayuno",
+   "pastel",
+   "petit dejeuner",
+   "gateau"
+  ],
+  "reply": "Commencez la journée au <a href='cafe-poesia.html'>Café da Poesia</a> (à l'esprit artistique) ou au <a href='cantinho-cafe.html'>Cantinho do Café</a> (tapiocas et gâteaux délicieux). ☕"
+ },
+ {
+  "keywords": [
+   "crianca",
+   "kids",
+   "filhos",
+   "familia",
+   "kauai",
+   "ilha do ipe",
+   "children",
+   "family",
+   "niños",
+   "hijos",
+   "enfants",
+   "famille",
+   "coin enfants"
+  ],
+  "reply": "Si vous venez en famille, le <a href='bar-kauai.html'>Kauai Gastrolounge</a> (sur l'Ilha do Ipê) est imbattable ! 🌴 Espace immense, style tropical et un superbe coin enfants."
+ },
+ {
+  "keywords": [
+   "oasis",
+   "lounge",
+   "descontraido",
+   "vibrante",
+   "relaxed",
+   "vibrant",
+   "relajado",
+   "decontracte"
+  ],
+  "reply": "L'<a href='oasis.html'>Oásis Gastrolounge</a> est restaurant le jour et devient un lounge vibrant avec musique et cocktails travaillés le soir. 🍸"
+ },
+ {
+  "keywords": [
+   "kai",
+   "bar kai",
+   "modernidade",
+   "jovem",
+   "modernity",
+   "young",
+   "modernidad",
+   "joven",
+   "ambiance jeune"
+  ],
+  "reply": "Le <a href='bar-kai.html'>Bar Kai</a> est un point de rendez-vous jeune, avec des cocktails colorés au bord de l'eau. 🍹"
+ },
+ {
+  "keywords": [
+   "bar",
+   "bares",
+   "beber",
+   "cerveja",
+   "chopp",
+   "caipirinha",
+   "drinks",
+   "bebida",
+   "beer",
+   "drink",
+   "cerveza",
+   "bebidas",
+   "boire",
+   "biere",
+   "cocktail",
+   "ou boire"
+  ],
+  "reply": "La Gigóia est bohème ! 🍻 Découvrez l'onglet <a href='bares-drinks.html'>Bars & Cocktails</a> pour choisir entre le <a href='bar-capivara.html'>Boteco da Capivara</a> et le <a href='bar-briza.html'>Briza</a>."
+ },
+ {
+  "keywords": [
+   "por do sol",
+   "fim de tarde",
+   "visual",
+   "ak bar",
+   "caicara",
+   "capivara",
+   "pordosol",
+   "sunset",
+   "late afternoon",
+   "atardecer",
+   "puesta de sol",
+   "coucher de soleil",
+   "fin apres midi"
+  ],
+  "reply": "Un coucher de soleil inoubliable ? 🌅 Je recommande la vue du <a href='bar-capivara.html'>Boteco da Capivara</a>, du <a href='bar-caicaras.html'>Bar Caiçaras</a> ou du classique AK Bar."
+ },
+ {
+  "keywords": [
+   "samba",
+   "pagode",
+   "musica ao vivo",
+   "tocar",
+   "briza",
+   "jazz",
+   "banda",
+   "live music",
+   "band",
+   "musica en vivo",
+   "musique live",
+   "concert",
+   "groupe"
+  ],
+  "reply": "Musique live et samba ? 🎵 Le <a href='bar-briza.html'>Briza da Gigóia</a> et le Caiçaras ont toujours des groupes le week-end. Consultez l'<a href='agenda-cultural.html'>Agenda culturel</a> !"
+ },
+ {
+  "keywords": [
+   "saideira",
+   "tarde da noite",
+   "madrugada",
+   "aberto ate tarde",
+   "bar do kai",
+   "late night",
+   "open late",
+   "abierto hasta tarde",
+   "dernier verre",
+   "ouvert tard",
+   "tard le soir"
+  ],
+  "reply": "Le dernier verre officiel de l'île, c'est au <a href='bar-kai.html'>Bar do Kai</a> ! 🌙 Ouvert jusque tard dans la nuit, avec la bière bien fraîche."
+ },
+ {
+  "keywords": [
+   "mais perto do metro",
+   "melhor localizacao",
+   "closest to subway",
+   "best location",
+   "cerca del metro",
+   "mejor ubicacion",
+   "plus proche du metro",
+   "meilleur emplacement"
+  ],
+  "reply": "Je recommande la <a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a> : au bord de la lagune, à quelques minutes du métro Jardim Oceânico, avec piscine et ponton sur l'eau. 🏡<br><br>Le petit-déjeuner et une balade en bateau dans le Pantanal Carioca sont inclus dans le tarif.<br><br>Vous voulez que je regarde les disponibilités ?",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "marisis",
+   "limpeza",
+   "silencio",
+   "tranquila",
+   "cleanliness",
+   "silence",
+   "quiet",
+   "limpieza",
+   "tranquilo",
+   "proprete",
+   "calme",
+   "silencieux"
+  ],
+  "reply": "La <a href='pousada-marisis.html'>Pousada Marísis</a> est le refuge parfait pour qui cherche le silence absolu et une propreté impeccable. À partir de R$300/nuit pour deux. 🌺"
+ },
+ {
+  "keywords": [
+   "veneza carioca",
+   "boutique",
+   "intimista",
+   "intimate",
+   "intimiste"
+  ],
+  "reply": "Le <a href='veneza-carioca.html'>Veneza Carioca</a> est un hôtel boutique très romantique et intimiste, situé sur l'Ilha Primeira. À partir de R$650/nuit pour deux. ✨"
+ },
+ {
+  "keywords": [
+   "airbnb",
+   "casa inteira",
+   "temporada",
+   "alugar casa",
+   "whole house",
+   "rent house",
+   "casa entera",
+   "alquilar casa",
+   "maison entiere",
+   "louer une maison",
+   "location saisonniere"
+  ],
+  "reply": "Une intimité totale ? Nous avons de superbes Airbnb comme la <a href='casa-venti.html'>Casa Venti</a>, la <a href='casa-goia.html'>Casa Goiá</a> ou la vaste <a href='casa-estatua.html'>Casa da Estátua</a>. Écrivez-nous sur WhatsApp pour les tarifs !",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "casanova",
+   "luxuoso",
+   "arquitetura",
+   "retiro",
+   "luxurious",
+   "architecture",
+   "retreat",
+   "lujoso",
+   "arquitectura",
+   "luxueux",
+   "retraite"
+  ],
+  "reply": "La <a href='casanova.html'>Casanova</a> est une retraite luxueuse au projet architectural unique, avec cuisine gourmet et cadre exclusif face à la lagune. À partir de R$650/nuit pour deux. ✨"
+ },
+ {
+  "keywords": [
+   "casa da estatua",
+   "estatua",
+   "piscina",
+   "grupo grande",
+   "16 pessoas",
+   "pool",
+   "large group",
+   "16 people",
+   "16 personas",
+   "grand groupe",
+   "16 personnes",
+   "piscine privative"
+  ],
+  "reply": "La <a href='casa-estatua.html'>Casa da Estátua</a> est idéale pour les groupes ! Elle a une piscine privative et accueille confortablement jusqu'à 16 personnes. 🏊‍♂️"
+ },
+ {
+  "keywords": [
+   "lux 48",
+   "lux",
+   "casal moderno",
+   "estudio",
+   "modern couple",
+   "studio",
+   "pareja moderna",
+   "couple moderne"
+  ],
+  "reply": "Le <a href='lux-48.html'>Lux 48</a> est un studio très moderne, au design audacieux, idéal pour les couples. 🖤"
+ },
+ {
+  "keywords": [
+   "casa goia",
+   "goia",
+   "duplex",
+   "duplex familial"
+  ],
+  "reply": "La <a href='casa-goia.html'>Casa Goiá</a> est un duplex spectaculaire pour les familles qui veulent se sentir habitants de l'île pendant quelques jours. 🏡"
+ },
+ {
+  "keywords": [
+   "casamento",
+   "festa",
+   "evento",
+   "confraternizacao",
+   "15 anos",
+   "alugar espaco",
+   "eventos",
+   "wedding",
+   "party",
+   "event",
+   "rent space",
+   "boda",
+   "fiesta",
+   "alquilar espacio",
+   "mariage",
+   "fete",
+   "evenement",
+   "louer un espace"
+  ],
+  "reply": "Un cadre de rêve ! 🎉 Pour les grands événements nous avons la demeure <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a>, et pour quelque chose de plus intimiste l'<a href='gaivota.html'>Espace Gaivota</a>. Demandez votre devis à notre équipe ci-dessous !",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "solar das palmeiras",
+   "casarao",
+   "colonial",
+   "casar na ilha",
+   "mansion",
+   "marry on the island",
+   "casona",
+   "casarse en la isla",
+   "demeure",
+   "se marier"
+  ],
+  "reply": "Le <a href='solar-palmeiras.html'>Solar das Palmeiras Rio</a> est une magnifique demeure coloniale ! L'un des lieux les plus courus de Rio pour les mariages en plein air, avec sa pelouse au bord de la lagune. 🏛️"
+ },
+ {
+  "keywords": [
+   "gaivota",
+   "espaco gaivota",
+   "ilha primeira",
+   "espace gaivota"
+  ],
+  "reply": "L'<a href='gaivota.html'>Espace Gaivota</a> se trouve sur l'Ilha Primeira et offre un cadre très élégant et intimiste pour des réceptions exclusives. 🥂"
+ },
+ {
+  "keywords": [
+   "agenda",
+   "programacao",
+   "hoje",
+   "fim de semana",
+   "o que ta rolando",
+   "festival",
+   "show",
+   "ingresso",
+   "schedule",
+   "today",
+   "weekend",
+   "whats happening",
+   "ticket",
+   "hoy",
+   "fin de semana",
+   "que esta pasando",
+   "entrada",
+   "programmation",
+   "ce week end",
+   "concerts",
+   "programme"
+  ],
+  "reply": "Notre île est bien vivante ! Il y a toujours un festival gastronomique, des concerts de jazz ou des rodas de samba. Retrouvez tout dans notre <a href='agenda-cultural.html'>Agenda culturel</a> ! 📅"
+ },
+ {
+  "keywords": [
+   "wifi",
+   "wi-fi",
+   "wi fi",
+   "internet",
+   "reseau sans fil",
+   "il y a du wifi",
+   "网络",
+   "无线网"
+  ],
+  "reply": "Oui, il y a du wifi 📶<br><br>Les restaurants, bars et auberges de l'île ont le wi-fi pour les clients — demandez le mot de passe sur place.<br><br>Je peux vous aider pour autre chose ?",
+  "showWhatsapp": false
+ },
+ {
+  "keywords": [
+   "reveillon",
+   "nouvel an",
+   "jour de l an",
+   "31 decembre",
+   "saint sylvestre",
+   "new year",
+   "ano novo",
+   "nochevieja",
+   "跨年",
+   "新年"
+  ],
+  "reply": "Les événements du Nouvel An sont encore en cours de programmation — <b>rien n'est confirmé pour l'instant</b>. 🎆<br><br>Dès que ce sera fait, cela apparaîtra dans notre <a href=\"agenda-cultural.html\">agenda</a>. Pensez à y revenir, le programme sort généralement proche de la date.<br><br>Si vous voulez déjà réserver un hébergement ou une sortie pour le Nouvel An, dites-moi la <b>date</b> et le <b>nombre de personnes</b>.",
+  "showWhatsapp": true
+ }
+];

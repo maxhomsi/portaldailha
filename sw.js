@@ -6,8 +6,8 @@
 
 // Versao do cache: MUDE ESTE NUMERO sempre que publicar imagens/CSS/JS novos,
 // senao quem ja visitou continua vendo os arquivos antigos.
-const CACHE_NAME = 'ilha-gigoia-v6';
-const CACHE_STATIC = 'ilha-static-v6';
+const CACHE_NAME = 'ilha-gigoia-v17';
+const CACHE_STATIC = 'ilha-static-v17';
 
 // Assets que serão pré-cacheados na instalação
 const PRE_CACHE = [
@@ -16,14 +16,34 @@ const PRE_CACHE = [
   '/styles.css',
   '/app.js',
   '/dicionario.js',
+  '/dicionario-pt.js',
   '/dicas-capi.js',
   '/assets/hero.jpg',
   '/assets/logo.png',
   '/assets/capi.png',
   '/assets/card-passeios.jpg',
   '/assets/card-comer.jpg',
-  '/offline.html'
+  '/offline.html',
+  // As quatro traducoes tambem: sem elas no cache, um visitante em ingles que fica
+  // sem rede recebe a pagina em portugues — era o caso ate' 13/10/2026.
+  '/en/offline.html',
+  '/es/offline.html',
+  '/fr/offline.html',
+  '/zh/offline.html'
 ];
+
+// Descobre o idioma pelo comeco do caminho da pagina que falhou, pra servir a pagina
+// de offline certa. '/en/passeios-rotas.html' -> '/en/offline.html'.
+const IDIOMAS_OFFLINE = ['en', 'es', 'fr', 'zh'];
+function paginaOfflineDe(url) {
+  try {
+    const partes = new URL(url).pathname.split('/').filter(Boolean);
+    if (partes.length && IDIOMAS_OFFLINE.indexOf(partes[0]) > -1) {
+      return '/' + partes[0] + '/offline.html';
+    }
+  } catch (e) { /* url estranha: cai no portugues */ }
+  return '/offline.html';
+}
 
 // ── INSTALL: pré-cacheia os assets críticos ──────────────
 self.addEventListener('install', event => {
@@ -138,8 +158,10 @@ async function networkFirstHTML(request) {
     const cached = await caches.match(request);
     if (cached) return cached;
 
-    // Fallback: página offline customizada (se existir)
-    const offline = await caches.match('/offline.html');
+    // Fallback: pagina offline no idioma de quem estava navegando. Se a traduzida
+    // nao estiver no cache por algum motivo, cai na portuguesa em vez de nada.
+    const offline = (await caches.match(paginaOfflineDe(request.url)))
+                 || (await caches.match('/offline.html'));
     return offline || new Response('<h1>Você está offline 🏝️</h1><p>Verifique sua conexão e tente novamente.</p>', {
       status: 503,
       headers: { 'Content-Type': 'text/html; charset=utf-8' }
