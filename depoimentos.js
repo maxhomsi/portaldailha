@@ -35,11 +35,14 @@ const DEPOIMENTOS_SHEET_CSV =
    com as 5 estrelas e o campo de texto ja' na tela. Um clique a menos e' menos
    gente desistindo no caminho — e no mapa o botao de avaliar fica escondido.
 
-   De onde saiu: a ficha tem CID 2237684313100247256 e feature id
-   0xac26e17ae8fea23f:0x1f0dda06e9cde0d8, que viram o Place ID abaixo.
-   Testado em 17/10/2026: abre a caixa de avaliacao, sem mapa atras. */
+   Desde 28/10/2026 e' o link OFICIAL de "Pedir avaliacoes" (a ficha passou a ser
+   nossa). O anterior (search.google.com/local/writereview?placeid=...) passou a abrir
+   a caixa em cima de uma BUSCA do Google, com o site concorrente em primeiro lugar
+   atras dela. Este abre a caixa em cima da nossa ficha no Google Maps, sem busca.
+   Conferido: o codigo do link e' o CID 2237684313100247256 (0x1f0dda06e9cde0d8),
+   a mesma ficha de sempre. */
 const GOOGLE_FICHA_URL =
-  "https://search.google.com/local/writereview?placeid=ChIJP6L-6HrhJqwR2ODN6QbaDR8";
+  "https://g.page/r/CdjgzekG2g0fEBM/review";
 
 /* Endereco do Apps Script que recebe o formulario (termina em /exec).
    Veja o passo a passo em google-apps-script-depoimentos.gs.txt, na pasta do bot.
