@@ -559,7 +559,7 @@ const GIGI_BRAIN = [
    "cuanto cuesta la posada",
    "prix de la chambre"
   ],
-  "reply": "🏡 <b>Hébergement à Ilha da Gigóia</b><br><br>⭐ <b>Notre recommandation</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — au bord de la lagune, piscine et ponton sur l'eau. <b>Petit-déjeuner et balade en bateau dans le Pantanal Carioca inclus dans le tarif.</b> Le prix dépend de la date.<br><br>🛌 <b>Auberges</b><br><a href=\"pousada-marisis.html\">Pousada Marísis</a> — à partir de R$300 la nuit<br><a href=\"veneza-carioca.html\">Veneza Carioca Hôtel Boutique</a> — à partir de R$650 la nuit<br><a href=\"casanova.html\">Casanova Residence</a> — à partir de R$650 la nuit<br><br>🏖️ <b>Maisons de vacances (la maison entière)</b><br><a href=\"lux-48.html\">Lux 48</a> — à partir de R$250 la nuit, jusqu'à 4 personnes<br><a href=\"casa-venti.html\">Casa Venti</a> — à partir de R$450 la nuit, jusqu'à 7 personnes (animaux acceptés 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — à partir de R$500 la nuit, jusqu'à 8 personnes<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — à partir de R$1.500 la nuit, jusqu'à 16 personnes avec piscine 🏊<br><br>Les tarifs changent selon la date et la saison.<br><br>Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme le prix exact et les disponibilités 😊",
+  "reply": "🏡 <b>Hébergement à Ilha da Gigóia</b><br><br>⭐ <b>Notre recommandation</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — au bord de la lagune, piscine et ponton sur l'eau. <b>Petit-déjeuner et balade en bateau dans le Pantanal Carioca inclus dans le tarif.</b> Le prix dépend de la date.<br><br>🛌 <b>Auberges</b><br><a href=\"veneza-carioca.html\">Veneza Carioca Hôtel Boutique</a> — à partir de R$650 la nuit<br><a href=\"casanova.html\">Casanova Residence</a> — à partir de R$650 la nuit<br><br>🏖️ <b>Maisons de vacances (la maison entière)</b><br><a href=\"lux-48.html\">Lux 48</a> — à partir de R$250 la nuit, jusqu'à 4 personnes<br><a href=\"casa-venti.html\">Casa Venti</a> — à partir de R$450 la nuit, jusqu'à 7 personnes (animaux acceptés 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — à partir de R$500 la nuit, jusqu'à 8 personnes<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — à partir de R$1.500 la nuit, jusqu'à 16 personnes avec piscine 🏊<br><br>Les tarifs changent selon la date et la saison.<br><br>Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme le prix exact et les disponibilités 😊",
   "showWhatsapp": true
  },
  {
@@ -1509,23 +1509,6 @@ const GIGI_BRAIN = [
   ],
   "reply": "Je recommande la <a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a> : au bord de la lagune, à quelques minutes du métro Jardim Oceânico, avec piscine et ponton sur l'eau. 🏡<br><br>Le petit-déjeuner et une balade en bateau dans le Pantanal Carioca sont inclus dans le tarif.<br><br>Vous voulez que je regarde les disponibilités ?",
   "showWhatsapp": true
- },
- {
-  "keywords": [
-   "marisis",
-   "limpeza",
-   "silencio",
-   "tranquila",
-   "cleanliness",
-   "silence",
-   "quiet",
-   "limpieza",
-   "tranquilo",
-   "proprete",
-   "calme",
-   "silencieux"
-  ],
-  "reply": "La <a href='pousada-marisis.html'>Pousada Marísis</a> est le refuge parfait pour qui cherche le silence absolu et une propreté impeccable. À partir de R$300/nuit pour deux. 🌺"
  },
  {
   "keywords": [

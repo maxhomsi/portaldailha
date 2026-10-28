@@ -106,6 +106,16 @@ ErrorDocument 404 /404.shtml
   RewriteRule ^(en|es|zh)/maracuja\.html$ /$1/restaurante-maracuja.html [R=301,L]
 </IfModule>
 
+# ── Pousada Marisis e Pousada Barra da Tijuca: fora da parceria (28/10/2026) ──
+# As paginas continuam no servidor e no git, de proposito: se a parceria voltar, e' so'
+# apagar este bloco (e devolver os cards, a tabela e o sitemap — ver o commit). Ate' la',
+# quem chegar por link antigo ou pelo Google cai na lista das hospedagens que indicamos.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^pousada-(marisis|barra)\.html$ /hoteis-pousadas.html [R=301,L,NC]
+  RewriteRule ^(en|es|fr|zh)/pousada-(marisis|barra)\.html$ /$1/hoteis-pousadas.html [R=301,L,NC]
+</IfModule>
+
 # ── QR do adesivo/flyer: endereco que so' existe dentro do QR (25/10/2026) ──
 # Quem escaneia chega na home com a marca do flyer, e o GA4 separa "qr" de "digitado"
 # (o digitado vem do ilhadagigoia.com, encaminhado na GoDaddy). Como o endereco e'

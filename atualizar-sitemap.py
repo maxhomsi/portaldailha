@@ -35,6 +35,9 @@ FORA_PASTAS = {'.git', '.stage', '_to_delete', '_upload-precos-pousadas', 'Claud
                '_morph_tmp', 'node_modules'}
 FORA_ARQUIVOS = {'sitemap-estado.json', 'CLAUDE.md', 'README.md', 'README.txt', '.gitignore',
                  '.DS_Store', 'segmentar.py', 'atualizar-sitemap.py'}
+# Paginas que ficam no servidor mas fora do ar de proposito (redirecionadas no .htaccess).
+# Marisis e Barra da Tijuca sairam da parceria em 28/10/2026; se voltarem, tire daqui.
+FORA_DO_AR = {'pousada-marisis.html', 'pousada-barra.html'}
 def fora(rel):
     nome = os.path.basename(rel)
     if nome in FORA_ARQUIVOS: return True
@@ -113,6 +116,7 @@ def main():
     fora_do_sitemap = []
     for rel in atuais:
         if not rel.endswith('.html') or os.path.basename(rel) in ('offline.html', 'termos.html', 'politica-privacidade.html'): continue
+        if os.path.basename(rel) in FORA_DO_AR: continue
         d = os.path.dirname(rel); f = os.path.basename(rel)
         u = BASE + '/' + (d + '/' if d else '') + ('' if f == 'index.html' else f)
         if u not in locs: fora_do_sitemap.append(rel)

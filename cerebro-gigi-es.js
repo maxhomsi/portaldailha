@@ -559,7 +559,7 @@ const GIGI_BRAIN = [
    "cuanto cuesta la posada",
    "prix de la chambre"
   ],
-  "reply": "🏡 <b>Alojamiento en Ilha da Gigóia</b><br><br>⭐ <b>Nuestra recomendación</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — junto a la laguna, piscina y deck sobre el agua. <b>Desayuno y paseo en barco por el Pantanal Carioca incluidos en la tarifa.</b> El valor depende de la fecha.<br><br>🛌 <b>Posadas</b><br><a href=\"pousada-marisis.html\">Pousada Marísis</a> — desde R$300 la noche<br><a href=\"veneza-carioca.html\">Veneza Carioca Hotel Boutique</a> — desde R$650 la noche<br><a href=\"casanova.html\">Casanova Residence</a> — desde R$650 la noche<br><br>🏖️ <b>Casas de alquiler (la casa entera)</b><br><a href=\"lux-48.html\">Lux 48</a> — desde R$250 la noche, hasta 4 huéspedes<br><a href=\"casa-venti.html\">Casa Venti</a> — desde R$450 la noche, hasta 7 huéspedes (acepta mascotas 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — desde R$500 la noche, hasta 8 huéspedes<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — desde R$1.500 la noche, hasta 16 huéspedes con piscina 🏊<br><br>Las tarifas cambian según la fecha y la temporada.<br><br>Dime la <b>fecha</b> y <b>cuántas personas</b> y confirmo el valor exacto y la disponibilidad 😊",
+  "reply": "🏡 <b>Alojamiento en Ilha da Gigóia</b><br><br>⭐ <b>Nuestra recomendación</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — junto a la laguna, piscina y deck sobre el agua. <b>Desayuno y paseo en barco por el Pantanal Carioca incluidos en la tarifa.</b> El valor depende de la fecha.<br><br>🛌 <b>Posadas</b><br><a href=\"veneza-carioca.html\">Veneza Carioca Hotel Boutique</a> — desde R$650 la noche<br><a href=\"casanova.html\">Casanova Residence</a> — desde R$650 la noche<br><br>🏖️ <b>Casas de alquiler (la casa entera)</b><br><a href=\"lux-48.html\">Lux 48</a> — desde R$250 la noche, hasta 4 huéspedes<br><a href=\"casa-venti.html\">Casa Venti</a> — desde R$450 la noche, hasta 7 huéspedes (acepta mascotas 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — desde R$500 la noche, hasta 8 huéspedes<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — desde R$1.500 la noche, hasta 16 huéspedes con piscina 🏊<br><br>Las tarifas cambian según la fecha y la temporada.<br><br>Dime la <b>fecha</b> y <b>cuántas personas</b> y confirmo el valor exacto y la disponibilidad 😊",
   "showWhatsapp": true
  },
  {
@@ -1509,23 +1509,6 @@ const GIGI_BRAIN = [
   ],
   "reply": "Mi recomendación es la <a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a>: junto a la laguna, a minutos del metro Jardim Oceânico, con piscina y deck sobre el agua. 🏡<br><br>El desayuno y un paseo en barco por el Pantanal Carioca van incluidos en la tarifa.<br><br>¿Quieres que mire la disponibilidad?",
   "showWhatsapp": true
- },
- {
-  "keywords": [
-   "marisis",
-   "limpeza",
-   "silencio",
-   "tranquila",
-   "cleanliness",
-   "silence",
-   "quiet",
-   "limpieza",
-   "tranquilo",
-   "proprete",
-   "calme",
-   "silencieux"
-  ],
-  "reply": "La <a href='pousada-marisis.html'>Pousada Marísis</a> es el refugio perfecto para quienes buscan silencio absoluto y limpieza impecable. Desde R$300/noche por pareja. 🌺"
  },
  {
   "keywords": [

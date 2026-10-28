@@ -289,7 +289,6 @@ const GIGI_BRAIN = [
       fr: "Le bon conseil : comme nous sommes au cœur du Pantanal Carioca, surtout en fin d'après-midi, il est vivement recommandé d'apporter un répulsif ! 🦟 Vous profiterez du coucher de soleil sans soucis.",
       en: "Golden tip: Since we are in the Carioca Pantanal, especially in the late afternoon, it is highly recommended to bring bug repellent! 🦟",
       es: "Consejo de oro: Como estamos en el Pantanal Carioca, especialmente al final de la tarde, ¡es muy recomendable traer repelente de insectos! 🦟",
-      zh: "<a href='pousada-barra.html'>蒂茹卡巴拉旅馆</a>非常传统且位置优越：最靠近地铁渡口。🌴"
     }
   },
   {
@@ -299,7 +298,6 @@ const GIGI_BRAIN = [
       fr: "L'île a un charme rustique, avec ses ruelles étroites. Pour une meilleure accessibilité, nous recommandons d'aller en bateau directement au ponton d'établissements équipés comme le <a href='restaurante-laguna.html'>Laguna</a> ou le <a href='bar-kauai.html'>Kauai</a>.",
       en: "The island has narrow rustic streets. For better accessibility, we recommend going by boat directly to the deck of places like <a href='restaurante-laguna.html'>Laguna</a> or <a href='bar-kauai.html'>Kauai</a>.",
       es: "La isla tiene calles rústicas y estrechas. Para mayor accesibilidad, recomendamos ir en bote directamente al muelle de lugares como <a href='restaurante-laguna.html'>Laguna</a> o <a href='bar-kauai.html'>Kauai</a>.",
-      zh: "<a href='pousada-marisis.html'>玛丽西斯旅馆</a>是寻求绝对安静和无可挑剔清洁度的人的完美避难所。🌺"
     }
   },
   {
@@ -658,24 +656,6 @@ const GIGI_BRAIN = [
   // ==========================================
   // 11. HOSPEDAGEM E AIRBNBS
   // ==========================================
-  {
-    keywords: ["pousada barra da tijuca", "mais perto do metro", "melhor localizacao", "closest to subway", "best location", "cerca del metro", "mejor ubicacion", "plus proche du metro", "meilleur emplacement"],
-    reply: {
-      pt: "A <a href='pousada-barra.html'>Pousada Barra da Tijuca</a> é super tradicional e estratégica: a mais próxima do ponto de travessia para o metrô. A partir de R$300/diária o casal. 🌴",
-      fr: "La <a href='pousada-barra.html'>Pousada Barra da Tijuca</a> est très traditionnelle et bien placée : la plus proche du point de traversée vers le métro. À partir de R$300/nuit pour deux. 🌴",
-      en: "The <a href='pousada-barra.html'>Pousada Barra da Tijuca</a> is very traditional and strategically located: the closest to the subway crossing point. From R$300/night per couple. 🌴",
-      es: "La <a href='pousada-barra.html'>Pousada Barra da Tijuca</a> es muy tradicional y estratégica: la más cercana al punto de cruce del metro. Desde R$300/noche por pareja. 🌴"
-    }
-  },
-  {
-    keywords: ["marisis", "limpeza", "silencio", "tranquila", "cleanliness", "silence", "quiet", "limpieza", "silencio", "tranquilo", "proprete", "calme", "silencieux"],
-    reply: {
-      pt: "A <a href='pousada-marisis.html'>Pousada Marísis</a> é o refúgio perfeito para quem busca silêncio absoluto e uma limpeza impecável. A partir de R$300/diária o casal. 🌺",
-      fr: "La <a href='pousada-marisis.html'>Pousada Marísis</a> est le refuge parfait pour qui cherche le silence absolu et une propreté impeccable. À partir de R$300/nuit pour deux. 🌺",
-      en: "The <a href='pousada-marisis.html'>Pousada Marísis</a> is the perfect refuge for those seeking absolute silence and impeccable cleanliness. From R$300/night per couple. 🌺",
-      es: "La <a href='pousada-marisis.html'>Pousada Marísis</a> es el refugio perfecto para quienes buscan silencio absoluto y limpieza impecable. Desde R$300/noche por pareja. 🌺"
-    }
-  },
   {
     keywords: ["veneza carioca", "boutique", "intimista", "intimate", "intimista", "intimiste"],
     reply: {

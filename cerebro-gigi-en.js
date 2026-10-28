@@ -569,7 +569,7 @@ const GIGI_BRAIN = [
    "cuanto cuesta la posada",
    "prix de la chambre"
   ],
-  "reply": "🏡 <b>Places to stay on Ilha da Gigóia</b><br><br>⭐ <b>Our pick</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — right on the lagoon, pool and deck over the water. <b>Breakfast and a Carioca Pantanal boat tour included in the rate.</b> Price depends on the date.<br><br>🛌 <b>Inns</b><br><a href=\"pousada-marisis.html\">Pousada Marísis</a> — from R$300 per night<br><a href=\"veneza-carioca.html\">Veneza Carioca Hotel Boutique</a> — from R$650 per night<br><a href=\"casanova.html\">Casanova Residence</a> — from R$650 per night<br><br>🏖️ <b>Vacation homes (the whole house)</b><br><a href=\"lux-48.html\">Lux 48</a> — from R$250 per night, up to 4 guests<br><a href=\"casa-venti.html\">Casa Venti</a> — from R$450 per night, up to 7 guests (pets welcome 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — from R$500 per night, up to 8 guests<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — from R$1.500 per night, up to 16 guests with a pool 🏊<br><br>Rates change with the date and the season.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the exact price and availability 😊",
+  "reply": "🏡 <b>Places to stay on Ilha da Gigóia</b><br><br>⭐ <b>Our pick</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — right on the lagoon, pool and deck over the water. <b>Breakfast and a Carioca Pantanal boat tour included in the rate.</b> Price depends on the date.<br><br>🛌 <b>Inns</b><br><a href=\"veneza-carioca.html\">Veneza Carioca Hotel Boutique</a> — from R$650 per night<br><a href=\"casanova.html\">Casanova Residence</a> — from R$650 per night<br><br>🏖️ <b>Vacation homes (the whole house)</b><br><a href=\"lux-48.html\">Lux 48</a> — from R$250 per night, up to 4 guests<br><a href=\"casa-venti.html\">Casa Venti</a> — from R$450 per night, up to 7 guests (pets welcome 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — from R$500 per night, up to 8 guests<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — from R$1.500 per night, up to 16 guests with a pool 🏊<br><br>Rates change with the date and the season.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the exact price and availability 😊",
   "showWhatsapp": true
  },
  {
@@ -1519,23 +1519,6 @@ const GIGI_BRAIN = [
   ],
   "reply": "My pick is the <a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a>: right on the lagoon, minutes from Jardim Oceânico metro, with a pool and a deck over the water. 🏡<br><br>Breakfast and a boat tour through the Carioca Pantanal are included in the nightly rate.<br><br>Want me to check availability?",
   "showWhatsapp": true
- },
- {
-  "keywords": [
-   "marisis",
-   "limpeza",
-   "silencio",
-   "tranquila",
-   "cleanliness",
-   "silence",
-   "quiet",
-   "limpieza",
-   "tranquilo",
-   "proprete",
-   "calme",
-   "silencieux"
-  ],
-  "reply": "The <a href='pousada-marisis.html'>Pousada Marísis</a> is the perfect refuge for those seeking absolute silence and impeccable cleanliness. From R$300/night per couple. 🌺"
  },
  {
   "keywords": [

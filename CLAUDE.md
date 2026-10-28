@@ -70,6 +70,26 @@ linhas cada) são o conhecimento, um por idioma. Os `dicionario-<idioma>.js` sã
 tradução da interface. Mexer no conhecimento quer dizer mexer em **cinco**
 arquivos.
 
+## Páginas fora do ar de propósito (Marísis e Pousada Barra, 28/10/2026)
+
+Saíram da parceria. Pedido do Max: tirar **toda** informação publicada sobre elas,
+**sem apagar os arquivos** (pode voltar a ter parceria). Então:
+
+- os 10 HTML (`pousada-marisis.html`, `pousada-barra.html`, nos 5 idiomas) e as fotos
+  (`assets/pousadas/marisis*`, `barra*`) **continuam** no repo e no servidor, intactos;
+- o `.htaccess` redireciona (301) as 10 URLs pra `hoteis-pousadas.html` do idioma;
+- saíram: cards e linhas da tabela de `hoteis-pousadas`, a frase de `hospedagem`, a
+  linha da lista e a regra da Marísis nos `cerebro-gigi-*.js` e no `cerebro-gigi.js`,
+  a resposta do `app.js`, o prompt do `gigi-proxy.php` (5 idiomas), as chaves delas
+  nos `dicionario-*.js` e as 10 URLs do `sitemap.xml`;
+- `atualizar-sitemap.py` tem `FORA_DO_AR` pra não pedir essas páginas de volta;
+- `marisis_reserva_p` ficou no dicionário: o nome é antigo, mas o texto é genérico e
+  o `veneza-carioca` usa.
+
+**Pra voltar:** apagar o bloco do `.htaccess`, devolver o resto com o diff do commit
+de 28/10 (`git show` dele), tirar do `FORA_DO_AR` e bumpar o `sw.js`. A Gigi do
+WhatsApp volta com **SIM** na coluna "A Gigi sugere?" da planilha.
+
 ## As DUAS planilhas
 
 Isto não é óbvio e já confundiu: são dois documentos diferentes no Drive.
@@ -132,9 +152,10 @@ dizer de que aba da planilha o valor vem — não para prever o alcance. Conferi
 
 **Hospedagem** (aba `Preços Hospedagem`)
 
-- as **9 páginas de item** que publicam valor (`casanova`, `veneza-carioca`,
-  `pousada-marisis`, `pousada-babel`, `pousada-barra`, `lux-48`, `casa-venti`,
-  `casa-goia`, `casa-estatua`): preço nos **5 idiomas**
+- as **7 páginas de item no ar** que publicam valor (`casanova`, `veneza-carioca`,
+  `pousada-babel`, `lux-48`, `casa-venti`, `casa-goia`, `casa-estatua`): preço nos
+  **5 idiomas**. `pousada-marisis` e `pousada-barra` também têm preço, mas estão
+  **fora do ar** desde 28/10/2026 (ver abaixo)
 - `hoteis-pousadas.html` (página-lista): **4** — zh não publica valor nela
 
 **Passeios** (aba `Preços Passeios`)

@@ -628,7 +628,7 @@ const GIGI_BRAIN = [
    "cuanto cuesta la posada",
    "prix de la chambre"
   ],
-  "reply": "🏡 <b>吉戈亚岛住宿</b><br><br>⭐ <b>我们的推荐</b><br><b><a href=\"pousada-ilha-fantasia.html\">幻想岛旅馆</a></b> — 就在泻湖边，有泳池和临水平台。<b>房价已含早餐与卡里奥卡潘塔纳尔游船。</b>价格视日期而定。<br><br>🛌 <b>旅馆</b><br><a href=\"pousada-marisis.html\">玛丽西斯旅馆</a> — 起价 R$300 每晚<br><a href=\"veneza-carioca.html\">里约威尼斯精品酒店</a> — 起价 R$650 每晚<br><a href=\"casanova.html\">卡萨诺瓦公寓</a> — 起价 R$650 每晚<br><br>🏖️ <b>整栋短租房</b><br><a href=\"lux-48.html\">Lux 48</a> — 起价 R$250 每晚, 最多 4 人<br><a href=\"casa-venti.html\">Casa Venti</a> — 起价 R$450 每晚, 最多 7 人（允许宠物 🐾）<br><a href=\"casa-goia.html\">Casa Goiá</a> — 起价 R$500 每晚, 最多 8 人<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — 起价 R$1.500 每晚, 最多 16 人 带泳池 🏊<br><br>房价因日期和季节而变。<br><br>告诉我<b>日期</b>和<b>人数</b>，我帮您确认确切价格和空房 😊",
+  "reply": "🏡 <b>吉戈亚岛住宿</b><br><br>⭐ <b>我们的推荐</b><br><b><a href=\"pousada-ilha-fantasia.html\">幻想岛旅馆</a></b> — 就在泻湖边，有泳池和临水平台。<b>房价已含早餐与卡里奥卡潘塔纳尔游船。</b>价格视日期而定。<br><br>🛌 <b>旅馆</b><br><a href=\"veneza-carioca.html\">里约威尼斯精品酒店</a> — 起价 R$650 每晚<br><a href=\"casanova.html\">卡萨诺瓦公寓</a> — 起价 R$650 每晚<br><br>🏖️ <b>整栋短租房</b><br><a href=\"lux-48.html\">Lux 48</a> — 起价 R$250 每晚, 最多 4 人<br><a href=\"casa-venti.html\">Casa Venti</a> — 起价 R$450 每晚, 最多 7 人（允许宠物 🐾）<br><a href=\"casa-goia.html\">Casa Goiá</a> — 起价 R$500 每晚, 最多 8 人<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — 起价 R$1.500 每晚, 最多 16 人 带泳池 🏊<br><br>房价因日期和季节而变。<br><br>告诉我<b>日期</b>和<b>人数</b>，我帮您确认确切价格和空房 😊",
   "showWhatsapp": true
  },
  {
@@ -1828,27 +1828,6 @@ const GIGI_BRAIN = [
   ],
   "reply": "我推荐 <a href='pousada-ilha-fantasia.html'>幻想岛旅馆</a>：就在泻湖边，距 Jardim Oceânico 地铁站几分钟，有泳池和临水平台。🏡<br><br>房价还包含早餐和一趟卡里奥卡潘塔纳尔游船行程。<br><br>要我帮您查一下空房吗？",
   "showWhatsapp": true
- },
- {
-  "keywords": [
-   "marisis",
-   "limpeza",
-   "silencio",
-   "tranquila",
-   "cleanliness",
-   "silence",
-   "quiet",
-   "limpieza",
-   "tranquilo",
-   "proprete",
-   "calme",
-   "silencieux",
-   "Marisis",
-   "干净",
-   "安静",
-   "清静"
-  ],
-  "reply": "<a href='pousada-marisis.html'>Pousada Marísis</a> 是追求绝对安静和一尘不染的人的理想去处。双人每晚 300 雷亚尔起。🌺"
  },
  {
   "keywords": [
