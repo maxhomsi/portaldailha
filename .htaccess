@@ -124,7 +124,5 @@ ErrorDocument 404 /404.shtml
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^q/?$ /?utm_source=flyer&utm_medium=impresso&utm_campaign=flyer_v2&utm_content=qr [R=302,L,NC]
-  # Panfleto A5 entregue na mao (30/10/2026). Endereco proprio pra separar do adesivo no GA4.
-  RewriteRule ^p/?$ /?utm_source=panfleto&utm_medium=impresso&utm_campaign=panfleto_v1&utm_content=qr [R=302,L,NC]
 </IfModule>
 
