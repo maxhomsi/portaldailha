@@ -124,5 +124,8 @@ ErrorDocument 404 /404.shtml
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^q/?$ /?utm_source=flyer&utm_medium=impresso&utm_campaign=flyer_v2&utm_content=qr [R=302,L,NC]
+  # Flyer da grafica (31/10/2026). Endereco proprio: no GA4 aparece como
+  # origem "panfleto", separado do adesivo (/q) e de quem digita o endereco.
+  RewriteRule ^p/?$ /?utm_source=panfleto&utm_medium=impresso&utm_campaign=panfleto_grafica&utm_content=qr [R=302,L,NC]
 </IfModule>
 
