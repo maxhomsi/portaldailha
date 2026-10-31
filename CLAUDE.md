@@ -208,7 +208,11 @@ das outras duas abas veio daí.
   apontava pra URL em português; as 5 home tinham trilha com o título do h1 (tirada).
   Café da Poesia ganhou trilha. Guias de texto novos (`<!--seo:guia-restaurantes-->` e
   `<!--seo:guia-bares-drinks-->`) nas 5 línguas — a fonte está em
-  `Claude outputs/guias-31-10/*.json`. sw.js v24.
+  `Claude outputs/guias-31-10/*.json`. sw.js v24. Na mesma leva, guias em mais 18 páginas
+  que tinham pouco texto (casas e pousadas, eventos, cafés, Reserva, agenda, história,
+  boas práticas, AK Bar, Ilha Gourmet), mesmo formato e mesma pasta (`lote1..6.json`).
+  Regra seguida: só fato que já estava publicado no site; preço novo nenhum (só os
+  da travessia e do pacote R$ 100, que a Gigi também fala).
 - **Limite por visitante no `gigi-proxy.php`** (31/10/2026): 30 perguntas a cada 10
   min por IP (contador em arquivo no temp do servidor). Acima disso devolve 429 e o
   `app.js` cai no fallback, como em qualquer erro. Se o servidor não deixar gravar o
