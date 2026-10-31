@@ -200,6 +200,12 @@ das outras duas abas veio daí.
   passaram por isso (`…xktk` e `…uIJk`); as duas já foram revogadas e os commits
   hoje carregam chave morta, então não há nada a limpar no histórico. A
   arquitetura atual (browser → `gigi-proxy.php` → `gigi-config.php`) é a certa.
+- **Limite por visitante no `gigi-proxy.php`** (31/10/2026): 30 perguntas a cada 10
+  min por IP (contador em arquivo no temp do servidor). Acima disso devolve 429 e o
+  `app.js` cai no fallback, como em qualquer erro. Se o servidor não deixar gravar o
+  contador, a pergunta passa. Na mesma data saíram do prompt os eventos que já tinham
+  passado (Comida di Buteco, Copa, Junina) — evento agora só pela agenda do site — e
+  a travessia foi pra R$2 (R$5 de madrugada), como nas páginas.
 
 ## Os 5 idiomas
 
