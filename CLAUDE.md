@@ -200,6 +200,15 @@ das outras duas abas veio daí.
   passaram por isso (`…xktk` e `…uIJk`); as duas já foram revogadas e os commits
   hoje carregam chave morta, então não há nada a limpar no histórico. A
   arquitetura atual (browser → `gigi-proxy.php` → `gigi-config.php`) é a certa.
+- **31/10/2026 — Google e conversão.** Depoimentos da aba Depoimentos agora aparecem
+  também nas páginas do Pantanal e das Tijucas (5 idiomas), logo depois do botão de
+  agendar: `<div id="depoimentos" data-passeio="pantanal|tijuca">`, filtrado pela coluna
+  Passeio, no máximo 3 (`carregarDepoimentos`). Trilhas (BreadcrumbList) corrigidas: em
+  en/es/fr/zh estavam com nomes em português ("Início", "Comer & Beber") e a de `a-ilha`
+  apontava pra URL em português; as 5 home tinham trilha com o título do h1 (tirada).
+  Café da Poesia ganhou trilha. Guias de texto novos (`<!--seo:guia-restaurantes-->` e
+  `<!--seo:guia-bares-drinks-->`) nas 5 línguas — a fonte está em
+  `Claude outputs/guias-31-10/*.json`. sw.js v24.
 - **Limite por visitante no `gigi-proxy.php`** (31/10/2026): 30 perguntas a cada 10
   min por IP (contador em arquivo no temp do servidor). Acima disso devolve 429 e o
   `app.js` cai no fallback, como em qualquer erro. Se o servidor não deixar gravar o

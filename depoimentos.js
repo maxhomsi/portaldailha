@@ -158,7 +158,11 @@ async function carregarDepoimentos() {
   const secao = document.getElementById('depoimentos');
   if (!secao) return;
   const lista = secao.querySelector('#depoimentosList');
-  const depos = await depLerPlanilha();
+  let depos = await depLerPlanilha();
+  /* Pagina de passeio (31/10/2026): data-passeio="pantanal" mostra so' os depoimentos
+     cuja coluna Passeio fala dele, no maximo 3, logo abaixo do botao de agendar. */
+  const filtro = depChave(secao.getAttribute('data-passeio') || '');
+  if (filtro) depos = depos.filter(d => depChave(d.passeio).indexOf(filtro) > -1).slice(0, 3);
   if (!depos.length) { secao.remove(); return; }   // nada aprovado: secao some
   const h = secao.querySelector('.depTitulo');
   const s = secao.querySelector('.depSub');
