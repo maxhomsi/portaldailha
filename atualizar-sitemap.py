@@ -115,7 +115,7 @@ def main():
     locs = set(re.findall(r'<loc>([^<]+)</loc>', sm))
     fora_do_sitemap = []
     for rel in atuais:
-        if not rel.endswith('.html') or os.path.basename(rel) in ('offline.html', 'termos.html', 'politica-privacidade.html'): continue
+        if not rel.endswith('.html') or os.path.basename(rel) in ('offline.html', 'termos.html', 'politica-privacidade.html', 'tiktok-ok.html'): continue
         if os.path.basename(rel) in FORA_DO_AR: continue
         d = os.path.dirname(rel); f = os.path.basename(rel)
         u = BASE + '/' + (d + '/' if d else '') + ('' if f == 'index.html' else f)
