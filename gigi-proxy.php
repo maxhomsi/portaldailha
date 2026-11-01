@@ -57,6 +57,8 @@ $raw = file_get_contents('php://input');
 $body = json_decode($raw, true);
 $message = isset($body['message']) ? trim(strip_tags($body['message'])) : '';
 $lang    = isset($body['lang'])    ? trim($body['lang']) : 'pt';
+// Pagina de onde veio a pergunta, so' pro registro de perguntas (ver gigi_registrar_pergunta).
+$pagina  = isset($body['pagina']) ? substr(preg_replace('#[^a-z0-9/._-]#i', '', (string)$body['pagina']), 0, 80) : '';
 
 if (empty($message) || strlen($message) > 600) {
     http_response_code(400);
@@ -295,3 +297,39 @@ if (!$reply) {
 }
 
 echo json_encode(['reply' => trim($reply)], JSON_UNESCAPED_UNICODE);
+
+/* PERGUNTAS QUE O SITE NAO SABIA (31/10/2026). Toda pergunta que chega aqui ja' passou
+   pelo cerebro local do site sem achar resposta pronta — e' exatamente a lista do que
+   falta escrever. Vai pra aba "Perguntas sem resposta" da planilha Gigi Database, junto
+   com as da Gigi do WhatsApp. Depois da resposta ja' entregue ao visitante (nunca
+   atrasa o chat). Precisa de GIGI_PLANILHA_URL e GIGI_PLANILHA_SENHA no gigi-config.php;
+   sem elas, nao registra nada. Clima nao conta: e' pergunta respondida com dado real. */
+if (function_exists('fastcgi_finish_request')) { @fastcgi_finish_request(); }
+if (!$is_weather) {
+    $nao_soube = preg_match('/vou confirmar|confirmar com a equipe|n[aã]o tenho (essa|esta|essas) informa|n[aã]o sei|will confirm|don.t have (that|this) information|no tengo (esa|esta) informaci|voy a confirmar|je vais v[ée]rifier|pas cette information|确认/iu', $reply);
+    gigi_registrar_pergunta($message, $reply,
+        $nao_soube ? 'a IA também não sabia e mandou confirmar' : 'o site não tinha resposta pronta (a IA respondeu)',
+        $lang, $pagina);
+}
+
+function gigi_registrar_pergunta($pergunta, $resposta, $motivo, $lang, $pagina) {
+    if (!defined('GIGI_PLANILHA_URL') || !defined('GIGI_PLANILHA_SENHA')) return;
+    $mascarar = function ($t) {
+        $t = preg_replace('/[\w.+-]+@[\w-]+\.[\w.]+/u', '[email]', (string)$t);
+        $t = preg_replace('/\+?\d[\d\s().-]{6,}\d/u', '[número]', $t);
+        return mb_substr(trim(preg_replace('/\s+/u', ' ', $t)), 0, 300);
+    };
+    $payload = json_encode([
+        'acao' => 'pergunta', 'senha' => GIGI_PLANILHA_SENHA, 'canal' => 'Site',
+        'idioma' => $lang, 'origem' => $pagina, 'pergunta' => $mascarar($pergunta),
+        'resposta' => $mascarar($resposta), 'motivo' => $motivo
+    ], JSON_UNESCAPED_UNICODE);
+    $ch = curl_init(GIGI_PLANILHA_URL);
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true, CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+        CURLOPT_RETURNTRANSFER => true, CURLOPT_FOLLOWLOCATION => true, CURLOPT_TIMEOUT => 8
+    ]);
+    @curl_exec($ch);
+    curl_close($ch);
+}

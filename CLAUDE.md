@@ -213,6 +213,13 @@ das outras duas abas veio daí.
   boas práticas, AK Bar, Ilha Gourmet), mesmo formato e mesma pasta (`lote1..6.json`).
   Regra seguida: só fato que já estava publicado no site; preço novo nenhum (só os
   da travessia e do pacote R$ 100, que a Gigi também fala).
+- **Origem de QR/campanha e perguntas sem resposta** (31/10/2026). O `app.js` guarda por
+  30 dias (localStorage `gigiOrigemCampanha`) quem chegou com `utm_source` ou `gclid`
+  (/p → panfleto, /q → adesivo) e põe `(ref: …)` no fim de toda mensagem de WhatsApp
+  (links `wa.me` e `window.open`); a Gigi do bot lê e tira. O `gigi-proxy.php` manda cada
+  pergunta que chegou nele (o cérebro local não tinha resposta) pra aba "Perguntas sem
+  resposta" da Gigi Database, depois de responder o visitante — precisa de
+  `GIGI_PLANILHA_URL` e `GIGI_PLANILHA_SENHA` no `gigi-config.php` (fora do git). sw.js v25.
 - **Limite por visitante no `gigi-proxy.php`** (31/10/2026): 30 perguntas a cada 10
   min por IP (contador em arquivo no temp do servidor). Acima disso devolve 429 e o
   `app.js` cai no fallback, como em qualquer erro. Se o servidor não deixar gravar o

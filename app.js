@@ -12,6 +12,63 @@ if (typeof window.t !== 'function') {
   window.t = function(key) { return key; };
 }
 
+/* DE QUAL QR OU CAMPANHA O VISITANTE VEIO (31/10/2026).
+   Quem chega pelo QR do panfleto (/p), do adesivo (/q) ou por link com utm_source
+   ganha uma marca guardada neste navegador por 30 dias. Toda mensagem de WhatsApp
+   que sair do site leva "(ref: panfleto)" no fim, e a Gigi tira isso do texto e
+   guarda no relatorio: assim da' pra saber quantas conversas e reservas o panfleto
+   trouxe, nao so' quantas visitas. Sem marca, nada muda. Nunca pode atrapalhar o
+   clique: qualquer erro aqui deixa o link como estava. */
+(function () {
+  var CHAVE = 'gigiOrigemCampanha', VALIDADE = 30 * 24 * 3600 * 1000;
+  function origemDaUrl() {
+    try {
+      var p = new URLSearchParams(location.search);
+      if (p.get('gclid')) return 'google-ads';
+      var src = String(p.get('utm_source') || '').toLowerCase();
+      if (src === 'panfleto') return 'panfleto';
+      if (src === 'flyer' || src === 'adesivo') return 'adesivo';
+      return /^[a-z0-9_-]{2,24}$/.test(src) ? src : null;
+    } catch (e) { return null; }
+  }
+  try {
+    var nova = origemDaUrl();
+    if (nova) localStorage.setItem(CHAVE, JSON.stringify({ v: nova, t: Date.now() }));
+  } catch (e) {}
+  window.gigiRefCampanha = function () {
+    try {
+      var o = JSON.parse(localStorage.getItem(CHAVE) || 'null');
+      if (o && o.v && Date.now() - o.t < VALIDADE) return o.v;
+    } catch (e) {}
+    return null;
+  };
+  window.gigiComRef = function (url) {
+    try {
+      var r = window.gigiRefCampanha();
+      if (!r || typeof url !== 'string' || url.indexOf('wa.me') === -1) return url;
+      var partes = url.split('text=');
+      if (partes.length < 2) return url + (url.indexOf('?') > -1 ? '&' : '?') + 'text=' + encodeURIComponent('(ref: ' + r + ')');
+      var resto = partes.slice(1).join('text=');
+      var fim = resto.indexOf('&'), cru = fim > -1 ? resto.slice(0, fim) : resto, depois = fim > -1 ? resto.slice(fim) : '';
+      var texto = decodeURIComponent(cru.replace(/\+/g, ' '));
+      if (texto.indexOf('(ref:') > -1) return url;
+      return partes[0] + 'text=' + encodeURIComponent(texto + ' (ref: ' + r + ')') + depois;
+    } catch (e) { return url; }
+  };
+  document.addEventListener('click', function (e) {
+    try {
+      var a = e.target && e.target.closest && e.target.closest('a[href*="wa.me"]');
+      if (a) a.href = window.gigiComRef(a.href);
+    } catch (err) {}
+  }, true);
+  var abrirOriginal = window.open;
+  window.open = function (url) {
+    var args = Array.prototype.slice.call(arguments);
+    try { if (typeof url === 'string') args[0] = window.gigiComRef(url); } catch (e) {}
+    return abrirOriginal.apply(window, args);
+  };
+})();
+
 /* =========================================================
    DADOS DOS CARDS E PÁGINAS (Com Tradução Ativa)
    ========================================================= */
@@ -644,7 +701,7 @@ window.askGigiAI = async function(mensagem, idioma) {
     const r = await fetch('/gigi-proxy.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: texto, lang: idioma || 'pt' }),
+      body: JSON.stringify({ message: texto, lang: idioma || 'pt', pagina: location.pathname }),
       signal: corta.signal
     });
     if (!r.ok) return null;
