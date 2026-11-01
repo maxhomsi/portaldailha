@@ -213,6 +213,20 @@ das outras duas abas veio daí.
   boas práticas, AK Bar, Ilha Gourmet), mesmo formato e mesma pasta (`lote1..6.json`).
   Regra seguida: só fato que já estava publicado no site; preço novo nenhum (só os
   da travessia e do pacote R$ 100, que a Gigi também fala).
+- **01/11/2026 — SEO: páginas órfãs e rodapé "Guia da Ilha".** Search Console (ago–out):
+  "o que fazer na ilha da gigoia" caía na home (posição ~11) porque `o-que-fazer.html`
+  não tinha **nenhum** link interno; o mesmo com `experiencia-completa` e `planeje` (0),
+  `melhor-epoca`/`historia-cultura` (1) e `como-chegar` (4). Rodapé ganhou a coluna
+  `footer__col--guia` nos 310 arquivos (5 idiomas; script em `Claude outputs`/sessão) com
+  O que fazer, Como chegar, Pousadas (`hoteis-pousadas`, que é a que rankeia "pousadas na
+  ilha"), Restaurantes (`restaurantes.html`, a lista), Agenda, Melhor época, Planeje,
+  História, Experiência completa. CSS: rodapé com 4 colunas (`1.6fr 1fr 1fr 1fr`) e a
+  coluna do guia em 2 colunas no celular. Home: "como chegar" e "o que dá para fazer"
+  do parágrafo "em poucas linhas" viraram links (5 idiomas). `restaurantes.html`: título,
+  og/twitter e nome no JSON-LD com "Restaurantes na Ilha da Gigóia" (PT) e equivalentes;
+  descrição PT com os nomes das casas. sw.js v26. A busca pelo nome ("ilha da gigoia",
+  ~9.500 impressões, posição ~10) é dominada por blogs grandes — sobe com autoridade de
+  fora, não só com ajuste na página.
 - **Origem de QR/campanha e perguntas sem resposta** (31/10/2026). O `app.js` guarda por
   30 dias (localStorage `gigiOrigemCampanha`) quem chegou com `utm_source` ou `gclid`
   (/p → panfleto, /q → adesivo) e põe `(ref: …)` no fim de toda mensagem de WhatsApp

@@ -455,7 +455,7 @@ body[data-page="passeios-rotas"] .card__body,
 .footer { position: relative; margin-top: 80px; padding: 0 0 15px; background-color: var(--green-dark); color: var(--white); text-align: left; }
 .footer__wave svg { display: none; }
 .footer::before { top: -60px; height: 61px; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 120' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 C480,130 960,-30 1440,50 L1440,121 L0,121 Z' fill='%233aa44a' /%3E%3C/svg%3E"); }
-.footer__content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; max-width: var(--max); margin: 0 auto; padding: 10px 20px 20px; }
+.footer__content { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 30px; max-width: var(--max); margin: 0 auto; padding: 10px 20px 20px; }
 .footer__col h2.footer__logo { margin: 0 0 10px; color: #fff; font-size: 24px; font-weight: 900; letter-spacing: -0.5px; }
 .footer__col h3 { margin: 0 0 12px; color: var(--yellow); font-size: 15px; font-weight: 800; }
 .footer__col p { max-width: 380px; margin-bottom: 15px; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 600; line-height: 1.5; }
@@ -625,7 +625,8 @@ body[data-page="hospedagem"] #pageCards {
   .footer { margin-top: 60px; } 
   .footer::before { top: -40px; height: 41px; }
   .footer__content { grid-template-columns: 1fr; gap: 20px; padding: 0 20px 20px; text-align: center; }
-  .footer__col p { margin: 0 auto 15px; } 
+  .footer__col p { margin: 0 auto 15px; }
+  .footer__col--guia ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; } 
   
   .footer .social-links, 
   .footer__socials_wrapper {
