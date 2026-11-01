@@ -217,7 +217,7 @@ das outras duas abas veio daí.
   "o que fazer na ilha da gigoia" caía na home (posição ~11) porque `o-que-fazer.html`
   não tinha **nenhum** link interno; o mesmo com `experiencia-completa` e `planeje` (0),
   `melhor-epoca`/`historia-cultura` (1) e `como-chegar` (4). Rodapé ganhou a coluna
-  `footer__col--guia` nos 310 arquivos (5 idiomas; script em `Claude outputs`/sessão) com
+  `footer__col--guia` nos 310 arquivos (5 idiomas; script em `Claude outputs/seo-01-11/guia_rodape.py`) com
   O que fazer, Como chegar, Pousadas (`hoteis-pousadas`, que é a que rankeia "pousadas na
   ilha"), Restaurantes (`restaurantes.html`, a lista), Agenda, Melhor época, Planeje,
   História, Experiência completa. CSS: rodapé com 4 colunas (`1.6fr 1fr 1fr 1fr`) e a
