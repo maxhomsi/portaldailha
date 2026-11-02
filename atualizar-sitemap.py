@@ -43,7 +43,7 @@ def fora(rel):
     if nome in FORA_ARQUIVOS: return True
     if nome.startswith('.') and nome != '.htaccess': return True
     if re.match(r'_?SUBIR', nome): return True
-    if nome.endswith(('.py', '.md')): return True
+    if nome.endswith(('.py', '.md', '.pyc')) or nome == '__pycache__': return True
     return any(rel == p or rel.startswith(p + '/') for p in FORA_PASTAS)
 
 def sha(b): return hashlib.sha256(b).hexdigest()

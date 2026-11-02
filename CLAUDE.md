@@ -37,6 +37,14 @@ em todas as URLs**: o Google ignora `lastmod` atrasado, mas para de confiar no
 sitemap que marca tudo como novo. O script não cria nem apaga URL do sitemap (página
 nova precisa do bloco com hreflang) — só avisa.
 
+**Desde 02/11/2026 o FTP pode sair do `subir-ftp.py`** (curl, sem Cyberduck): sobe o que
+difere do `sitemap-estado.json`, baixa cada arquivo de volta e compara o sha256, e só faz
+o `--subi` se todos bateram. Para se o `sw.js` não mudou junto com HTML/CSS/JS. Senha no
+`~/.netrc` do Mac, servidor/pasta em `~/.portaldailha-ftp.json` — nada disso no repositório
+(é público). `--teste` testa a conexão; `subir-ftp.py arquivo...` sobe só esses, sem registrar.
+Motivo: em 02/11 um dos 12 arquivos arrastados no Cyberduck ficou para trás e o `--subi`
+registrou mesmo assim.
+
 ### E antes de montar essa lista: bumpe o `sw.js`
 
 O site é PWA com service worker. O `sw.js` tem:
