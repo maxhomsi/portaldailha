@@ -455,17 +455,12 @@ Fora da raiz e das 4 pastas de idioma não existe página do site.
   converte
 - Decidir se `_upload-precos-pousadas/` deve ser apagada ou entrar no
   `.gitignore` — hoje ela pode ser commitada por acidente
-- Completar o preço nas 17 páginas em chinês
 - Conferir com as pousadas os valores marcados "CONFERIR se ainda vale" na aba
   `Preços Hospedagem`
 - Decidir o que acontece com a promoção do Pantanal em 01/01/2027
-- Completar o preço de passeio em zh: `pantanal-carioca`, `solar-palmeiras`,
-  `reserva`, `gaivota` e `oasis` não têm nenhum, e `ilhas-tijucas` tem só a diária
-  principal (1 menção contra 13 nos outros idiomas)
-- O texto "a travessia comum custa de R$ 2 a R$ 5 por pessoa" em `pantanal-carioca`
-  junta duas coisas: a aba `Preços Travessia` diz **2** em horário comum e **5** de
-  madrugada. Como faixa "(R$ 2 a R$ 5)" está bom; a frase com "comum" não
-- Na `fr/hoteis-pousadas.html` o valor da Pousada Babel (R$270) aparece **uma vez**
-  onde pt, en e es mostram **duas** — falta a linha de preço dentro do bloco
-  descritivo dela. O bloco existe e os 13 nomes de pousada estão nos 5 idiomas, só
-  essa menção caiu. Babel não é parceira, então não é urgente
+- Em `como-chegar.html` (5 idiomas, no FAQ visível e no JSON-LD) e em `cc_barco_d` dos
+  `dicionario-*.js`, a travessia ainda aparece como faixa "R$ 2,00 a R$ 5,00" para a
+  "travessia comum". Pantanal e Ilhas Tijucas já dizem "R$ 2 (R$ 5 de madrugada)" desde 02/11
+- Conferido em 02/11: os preços em chinês **já existem** (escritos "N 雷亚尔", por isso a
+  busca por "R$" não achava) e a Babel em `fr/hoteis-pousadas.html` aparece duas vezes
+  (uma escrita "270 R$"). Não eram pendências de verdade
