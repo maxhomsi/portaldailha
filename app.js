@@ -272,7 +272,7 @@ function mountHeaderFooter() {
       </div>
       
       <div class="footer__bottom">
-        <p>&copy; ${anoAtual} Portal Ilha da Gigóia. ${t("footer_rights")}</p>
+        <p>&copy; ${anoAtual} Portal Ilha da Gigóia. ${t("footer_rights")}<br>CNPJ 69.946.619/0001-90</p>
       </div>
     `;
   }
