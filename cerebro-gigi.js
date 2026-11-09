@@ -185,7 +185,7 @@ const GIGI_BRAIN = [
       fr: "Autrefois, l'île avait un pont en bois avec un accès direct à l'Av. das Américas ! 🌉 Avec le temps et la croissance, il a été démoli. Aujourd'hui, l'isolement (accès 100 % par bateau) est notre plus grand charme.",
       en: "In the past, the island had a wooden bridge connecting to Av. das Américas! 🌉 It was demolished over time. Today, the 100% boat access is our greatest charm.",
       es: "En el pasado, la isla tenía un puente de madera que conectaba con la Av. das Américas. 🌉 Fue demolido con el tiempo. Hoy, el acceso 100% en bote es nuestro mayor encanto.",
-      zh: "主要渡船（地铁附近）约为R$ 2至R$ 5，视时间而定。🚤 私人游览行程因路线和时长而异——请通过WhatsApp联系我们获取确切报价！"
+      zh: "主要渡船（地铁附近）每人 R$ 2，深夜 R$ 5。🚤 私人游览行程因路线和时长而异——请通过WhatsApp联系我们获取确切报价！"
     }
   },
   {
@@ -357,10 +357,10 @@ const GIGI_BRAIN = [
   {
     keywords: ["barco", "balsa", "travessia", "barquinho", "valor do barco", "preco do barco", "horario barco", "madrugada", "boat", "ferry", "crossing", "boat price", "boat schedule", "bote", "lancha", "cruce", "precio del bote", "horario del bote", "bateau", "traversee", "prix du bateau", "horaire bateau"],
     reply: {
-      pt: "As chalanas funcionam 24h! 🚤 O valor varia entre R$ 2,00 e R$ 5,00. Você só precisa dizer o nome do restaurante para o barqueiro te deixar no deck certo.",
-      fr: "Les chalanas fonctionnent 24h/24 ! 🚤 Le tarif varie entre R$ 2,00 et R$ 5,00. Il vous suffit de donner le nom du restaurant au batelier pour qu'il vous dépose au bon ponton.",
-      en: "The chalanas (boats) run 24/7! 🚤 The price varies between R$ 2.00 and R$ 5.00. Just tell the boatman the restaurant's name to get dropped off at the right deck.",
-      es: "¡Las chalanas (botes) funcionan las 24 horas! 🚤 El valor varía entre R$ 2,00 y R$ 5,00. Solo dile al barquero el nombre del restaurante para que te deje en el muelle correcto.",
+      pt: "As chalanas funcionam 24h! 🚤 Custa R$ 2 por pessoa (R$ 5 de madrugada). Você só precisa dizer o nome do restaurante para o barqueiro te deixar no deck certo.",
+      fr: "Les chalanas fonctionnent 24h/24 ! 🚤 Le trajet coûte R$ 2 par personne (R$ 5 la nuit). Il vous suffit de donner le nom du restaurant au batelier pour qu'il vous dépose au bon ponton.",
+      en: "The chalanas (boats) run 24/7! 🚤 It costs R$ 2 per person (R$ 5 late at night). Just tell the boatman the restaurant's name to get dropped off at the right deck.",
+      es: "¡Las chalanas (botes) funcionan las 24 horas! 🚤 Cuesta R$ 2 por persona (R$ 5 de madrugada). Solo dile al barquero el nombre del restaurante para que te deje en el muelle correcto.",
       zh: "<a href='casa-goia.html'>戈亚之家</a>是一个壮观的复式公寓，适合想要像岛上居民一样生活几天的家庭。🏡"
     }
   },

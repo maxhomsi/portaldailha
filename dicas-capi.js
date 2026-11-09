@@ -39,11 +39,11 @@ const capiTips = [
     fr: "<strong>Faune locale :</strong> Il est courant de voir des capybaras et des caïmans prendre le soleil au bord de la lagune. Prenez beaucoup de photos, mais gardez une distance sûre et ne nourrissez jamais les animaux sauvages."
   },
   {
-    pt: "<strong>Dinheiro trocado:</strong> Embora quase todos os restaurantes e pousadas aceitem PIX e cartão, é sempre bom ter um pouco de dinheiro trocado para facilitar o pagamento rápido da travessia.",
-    en: "<strong>Small change:</strong> Although almost all restaurants and inns accept cards, it's always good to have some small change to make paying for the boat crossing easier.",
-    es: "<strong>Dinero suelto:</strong> Aunque casi todos los restaurantes y posadas aceptan tarjetas, siempre es bueno tener algo de efectivo para facilitar el pago rápido del cruce en barco.",
-    zh: "<strong>零钱：</strong>虽然几乎所有餐厅和旅馆都接受刷卡，但准备一些零钱总是好的，方便快速支付渡船费用。",
-    fr: "<strong>De la monnaie :</strong> Même si presque tous les restaurants et auberges acceptent le PIX et la carte, il est toujours utile d'avoir un peu de liquide pour régler rapidement la traversée."
+    pt: "<strong>Dinheiro trocado:</strong> Quase todos os restaurantes, pousadas e barcos aceitam PIX, mas recomendamos ter um pouco de dinheiro trocado para a chalana da travessia.",
+    en: "<strong>Small change:</strong> Almost all restaurants, inns and boats take PIX, but we recommend having some small change for the chalana crossing.",
+    es: "<strong>Dinero suelto:</strong> Casi todos los restaurantes, posadas y barcos aceptan PIX, pero recomendamos tener algo de efectivo para la chalana de la travesía.",
+    zh: "<strong>零钱：</strong>几乎所有餐厅、旅馆和船只都接受 PIX，但我们仍建议为渡船（chalana）准备一些零钱。",
+    fr: "<strong>De la monnaie :</strong> Presque tous les restaurants, auberges et bateaux acceptent le PIX, mais nous recommandons d'avoir un peu de monnaie pour la chalana de la traversée."
   },
   {
     pt: "<strong>Bagagem leve:</strong> Como as ruas são estreitas e feitas apenas para pedestres, evite malas de rodinhas muito grandes ou pesadas. Mochilas ou malas menores facilitam muito a chegada até a sua pousada!",
