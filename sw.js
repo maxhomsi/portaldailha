@@ -6,8 +6,8 @@
 
 // Versao do cache: MUDE ESTE NUMERO sempre que publicar imagens/CSS/JS novos,
 // senao quem ja visitou continua vendo os arquivos antigos.
-const CACHE_NAME = 'ilha-gigoia-v31';
-const CACHE_STATIC = 'ilha-static-v31';
+const CACHE_NAME = 'ilha-gigoia-v32';
+const CACHE_STATIC = 'ilha-static-v32';
 
 // Assets que serão pré-cacheados na instalação
 const PRE_CACHE = [

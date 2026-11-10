@@ -192,14 +192,23 @@ function evSchema(eventos) {
         "name": ev.organizador || ev.local || "Portal Ilha da Gigóia",
         "url": ev.link || base + "/agenda-cultural.html"
       },
-      "description": ev.descricao || undefined,
+      // Sem descricao na planilha, monta uma so' com o que a linha ja' diz (titulo, tipo e
+      // lugar) — o Google cobra o campo e uma frase factual e' melhor que nenhuma. 10/11/2026.
+      "description": ev.descricao || (ev.titulo + (ev.categoria ? ' (' + String(ev.categoria).toLowerCase() + ')' : '') +
+        (ev.local && ev.local !== 'Ilha da Gigóia' ? ' no ' + ev.local + ', na Ilha da Gigóia' : ' na Ilha da Gigóia') +
+        ', Barra da Tijuca, Rio de Janeiro.'),
       "url": ev.link || base + "/agenda-cultural.html"
     };
 
-    if (ev.atracao) d.performer = { "@type": "PerformingGroup", "name": ev.atracao };
+    // Sem a banda na planilha, quem se apresenta e' a casa (ok do Max, 10/11/2026).
+    d.performer = ev.atracao
+      ? { "@type": "PerformingGroup", "name": ev.atracao }
+      : { "@type": "Organization", "name": ev.local || "Portal Ilha da Gigóia" };
 
     // preço: aceita "40", "R$ 40", "40,00" ou "gratis"/"free"/"0"
-    const bruto = String(ev.preco || '').trim();
+    // Sem preco na planilha = entrada gratuita (os eventos da agenda sao de graca, Max,
+    // 10/11/2026). Evento pago: criar a coluna "Preco" na planilha e preencher.
+    const bruto = String(ev.preco || '').trim() || 'gratis';
     if (bruto) {
       const gratis = /gr[aá]tis|gratuito|free|entrada franca/i.test(bruto);
       const num = bruto.replace(/[^\d,.]/g, '').replace(/\./g, '').replace(',', '.');
