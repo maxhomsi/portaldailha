@@ -293,7 +293,7 @@
             </div>
             <div style="flex: 1; min-width: 200px; background: rgba(242, 194, 0, 0.15); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(242, 194, 0, 0.3);">
                <h3 style="color: var(--text); margin: 0 0 5px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="lbl_valor_medio">Prix moyen</h3>
-               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="pantanal_val_val">R$ 50 par personne</p>
+               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="pantanal_val_val">R$ <span data-preco="pantanal">50</span> par personne</p>
             </div>
           </div>
 
@@ -323,6 +323,7 @@
           </div>
 
           <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <a class="btn btn--green" data-reservar-whats href="https://wa.me/5521993802618?text=Bonjour%20%21%20Je%20viens%20du%20site%2C%20de%20la%20page%20Pantanal%20Carioca.%20Je%20voudrais%20r%C3%A9server%20cette%20excursion." target="_blank" rel="noopener" style="font-size: 17px; padding: 15px 22px; height: auto; display: inline-flex; max-width: 100%; box-sizing: border-box; margin: 0 0 12px;">📲 Réserver sur WhatsApp</a>
             <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;" data-i18n="btn_agendar_gigi">
               💬 Réserver la balade avec Gigi
             </button>
@@ -347,13 +348,13 @@
             <div style="flex:1;min-width:230px;background:rgba(71,176,90,.08);border:2px solid rgba(71,176,90,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:var(--green-dark);color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Le plus réservé</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Excursion + déjeuner</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ 100 <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ <span data-preco="pantanal_almoco">100</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">L'excursion complète et le déjeuner au Restaurante Maracujá da Ilha, au choix viande, poisson ou poulet.</p>
             </div>
             <div style="flex:1;min-width:230px;background:rgba(242,194,0,.10);border:1px solid rgba(242,194,0,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:rgba(0,0,0,.07);color:var(--muted);font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Sans déjeuner</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Excursion seule</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ 50 <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ <span data-preco="pantanal">50</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">L'excursion en bateau dans les canaux et les mangroves, sans repas.</p>
             </div>
           </div>
@@ -369,7 +370,7 @@
               <li style="margin-bottom:8px;">L'excursion en bateau dans les canaux et les mangroves</li>
               <li style="margin-bottom:8px;">Un pilote local qui connaît les points d'observation</li>
               <li style="margin-bottom:8px;">Gilets de sauvetage à bord</li>
-              <li style="margin-bottom:8px;">Déjeuner au Maracujá da Ilha (formule à R$ 100 uniquement)</li>
+              <li style="margin-bottom:8px;">Déjeuner au Maracujá da Ilha (formule à R$ <span data-preco="pantanal_almoco">100</span> uniquement)</li>
             </ul>
             </div>
             <div style="background:rgba(0,0,0,.03);padding:24px;border-radius:16px;">
@@ -409,7 +410,7 @@
         <div class="reveal" style="background:#fff;padding:40px;border-radius:24px;box-shadow:var(--shadow-soft);margin-top:30px;">
           <h2 style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Autres excursions au départ de l'île de Gigóia</h2>
           <ul style="list-style:none;padding:0;margin:0;">
-            <li style="margin-bottom:16px;"><a href="/fr/ilhas-tijucas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Îles Tijucas</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">De 3 à 4 heures, avec arrêt baignade et débarquement sur l'île. R$ 150 par personne, ou R$ 200 avec déjeuner.</span></li>
+            <li style="margin-bottom:16px;"><a href="/fr/ilhas-tijucas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Îles Tijucas</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">De 3 à 4 heures, avec arrêt baignade et débarquement sur l'île. R$ <span data-preco="tijucas">150</span> par personne, ou R$ <span data-preco="tijucas_almoco">200</span> avec déjeuner.</span></li>
             <li style="margin-bottom:16px;"><a href="/fr/reserva.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Plage de la Reserva</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">Traversée de la lagune jusqu'à la bande de sable la plus préservée de Barra.</span></li>
             <li style="margin-bottom:16px;"><a href="/fr/jet-ski.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Location de jet-ski</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">De 10 à 60 minutes sur la lagune de Tijuca, avec briefing avant le départ.</span></li>
             <li style="margin-bottom:16px;"><a href="/fr/passeios-rotas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Toutes les excursions et routes</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">La liste complète des itinéraires, horaires et prix au départ de l'île.</span></li>
@@ -420,7 +421,7 @@
           <h2 id="faq" style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Questions fréquentes sur le Pantanal Carioca</h2>
           <details class="faq-item">
             <summary>Combien coûte l'excursion du Pantanal Carioca ?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">L'excursion seule coûte R$ 50 par personne. La formule avec déjeuner au Restaurante Maracujá da Ilha coûte R$ 100 par personne, au choix viande, poisson ou poulet. Les boissons ne sont pas comprises.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">L'excursion seule coûte R$ <span data-preco="pantanal">50</span> par personne. La formule avec déjeuner au Restaurante Maracujá da Ilha coûte R$ <span data-preco="pantanal_almoco">100</span> par personne, au choix viande, poisson ou poulet. Les boissons ne sont pas comprises.</p>
           </details>
           <details class="faq-item">
             <summary>Combien de temps dure l'excursion ?</summary>
@@ -444,7 +445,7 @@
           </details>
           <details class="faq-item">
             <summary>Les boissons sont-elles comprises dans la formule avec déjeuner ?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">Non. La formule à R$ 100 comprend l'excursion et le déjeuner ; les boissons sont payées à part.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">Non. La formule à R$ <span data-preco="pantanal_almoco">100</span> comprend l'excursion et le déjeuner ; les boissons sont payées à part.</p>
           </details>
           <details class="faq-item">
             <summary>Comment rejoindre le point de départ du bateau ?</summary>

@@ -243,7 +243,7 @@
             </div>
             <div style="flex: 1; min-width: 200px; background: rgba(242, 194, 0, 0.15); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(242, 194, 0, 0.3);">
                <h3 style="color: var(--text); margin: 0 0 5px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="tijucas_valor_lbl">Average Price</h3>
-               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="tijucas_valor_val">R$ 150 per person</p>
+               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="tijucas_valor_val">R$ <span data-preco="tijucas">150</span> per person</p>
             </div>
           </div>
 
@@ -269,6 +269,7 @@
           </div>
           
           <div style="text-align: center; margin-top: 20px;">
+             <a class="btn btn--green" data-reservar-whats href="https://wa.me/5521993802618?text=Hi%21%20I%20came%20from%20the%20website%2C%20from%20the%20Tijucas%20Islands%20page.%20I%27d%20like%20to%20book%20this%20tour." target="_blank" rel="noopener" style="font-size: 17px; padding: 15px 22px; height: auto; display: inline-flex; max-width: 100%; box-sizing: border-box; margin: 0 0 12px;">📲 Book on WhatsApp</a>
              <button class="btn btn--green" onclick="openGigiChat()" style="padding: 15px 40px; font-size: 16px; height: auto;" data-i18n="btn_tijucas_gigi">Check departures with Gigi</button>
           </div>
         </div>
@@ -289,13 +290,13 @@
             <div style="flex:1;min-width:230px;background:rgba(71,176,90,.08);border:2px solid rgba(71,176,90,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:var(--green-dark);color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">With lunch</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Tour + lunch</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ 200 <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ <span data-preco="tijucas_almoco">200</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">The full tour plus lunch, served on the way back to the island.</p>
             </div>
             <div style="flex:1;min-width:230px;background:rgba(242,194,0,.10);border:1px solid rgba(242,194,0,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:rgba(0,0,0,.07);color:var(--muted);font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Without lunch</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Tour only</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ 150 <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ <span data-preco="tijucas">150</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">The boat tour with a swimming stop, without a meal.</p>
             </div>
           </div>
@@ -327,7 +328,7 @@
               <li style="margin-bottom:8px;">35 to 40 minutes, inside the lagoon</li>
               <li style="margin-bottom:8px;">Watching caimans and capybaras</li>
               <li style="margin-bottom:8px;">No swimming stop</li>
-              <li style="margin-bottom:8px;">R$ 50, or R$ 100 with lunch</li>
+              <li style="margin-bottom:8px;">R$ <span data-preco="pantanal">50</span>, or R$ <span data-preco="pantanal_almoco">100</span> with lunch</li>
             </ul>
             </div>
             <div style="background:rgba(0,0,0,.03);padding:24px;border-radius:16px;">
@@ -336,7 +337,7 @@
               <li style="margin-bottom:8px;">3 to 4 hours, with a stretch of open sea</li>
               <li style="margin-bottom:8px;">Clear water, turtles and fish</li>
               <li style="margin-bottom:8px;">Swimming stop and time ashore</li>
-              <li style="margin-bottom:8px;">R$ 150, or R$ 200 with lunch</li>
+              <li style="margin-bottom:8px;">R$ <span data-preco="tijucas">150</span>, or R$ <span data-preco="tijucas_almoco">200</span> with lunch</li>
             </ul>
             </div>
           </div>
@@ -354,7 +355,7 @@
           <h2 id="faq" style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Frequently asked questions about the Tijucas Islands</h2>
           <details class="faq-item">
             <summary>How much does the Tijucas Islands tour cost?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">The tour on its own costs R$ 150 per person. With lunch included, R$ 200 per person.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">The tour on its own costs R$ <span data-preco="tijucas">150</span> per person. With lunch included, R$ <span data-preco="tijucas_almoco">200</span> per person.</p>
           </details>
           <details class="faq-item">
             <summary>How long does the tour last?</summary>

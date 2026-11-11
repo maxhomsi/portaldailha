@@ -243,7 +243,7 @@
             </div>
             <div style="flex: 1; min-width: 200px; background: rgba(242, 194, 0, 0.15); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(242, 194, 0, 0.3);">
                <h3 style="color: var(--text); margin: 0 0 5px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="tijucas_valor_lbl">平均价格</h3>
-               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="tijucas_valor_val">每人R$ 150</p>
+               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="tijucas_valor_val">每人R$ <span data-preco="tijucas">150</span></p>
             </div>
           </div>
 
@@ -269,6 +269,7 @@
           </div>
           
           <div style="text-align: center; margin-top: 20px;">
+             <a class="btn btn--green" data-reservar-whats href="https://wa.me/5521993802618?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%98%AF%E4%BB%8E%E7%BD%91%E7%AB%99%E7%9A%84%E3%80%8C%E8%92%82%E8%8C%B9%E5%8D%A1%E6%96%AF%E7%BE%A4%E5%B2%9B%E3%80%8D%E9%A1%B5%E9%9D%A2%E8%BF%87%E6%9D%A5%E7%9A%84%E3%80%82%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E8%BF%99%E4%B8%AA%E8%A1%8C%E7%A8%8B%E3%80%82" target="_blank" rel="noopener" style="font-size: 17px; padding: 15px 22px; height: auto; display: inline-flex; max-width: 100%; box-sizing: border-box; margin: 0 0 12px;">📲 通过 WhatsApp 预订</a>
              <button class="btn btn--green" onclick="openGigiChat()" style="padding: 15px 40px; font-size: 16px; height: auto;" data-i18n="btn_tijucas_gigi">与吉吉确认出发时间</button>
           </div>
         </div>
@@ -289,13 +290,13 @@
             <div style="flex:1;min-width:230px;background:rgba(71,176,90,.08);border:2px solid rgba(71,176,90,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:var(--green-dark);color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">含午餐</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">游船 + 午餐</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">200 雷亚尔 <span style="font-size:14px;font-weight:700;color:var(--muted);">每人</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;"><span data-preco="tijucas_almoco">200</span> 雷亚尔 <span style="font-size:14px;font-weight:700;color:var(--muted);">每人</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">完整游船行程，加上返回岛上时供应的午餐。</p>
             </div>
             <div style="flex:1;min-width:230px;background:rgba(242,194,0,.10);border:1px solid rgba(242,194,0,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:rgba(0,0,0,.07);color:var(--muted);font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">不含午餐</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">仅游船</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">150 雷亚尔 <span style="font-size:14px;font-weight:700;color:var(--muted);">每人</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;"><span data-preco="tijucas">150</span> 雷亚尔 <span style="font-size:14px;font-weight:700;color:var(--muted);">每人</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">含下水游泳停靠的游船行程，不含餐食。</p>
             </div>
           </div>
@@ -327,7 +328,7 @@
               <li style="margin-bottom:8px;">35 至 40 分钟，在泻湖内</li>
               <li style="margin-bottom:8px;">观赏凯门鳄与水豚</li>
               <li style="margin-bottom:8px;">没有下水游泳的停靠</li>
-              <li style="margin-bottom:8px;">50 雷亚尔，含午餐 100 雷亚尔</li>
+              <li style="margin-bottom:8px;"><span data-preco="pantanal">50</span> 雷亚尔，含午餐 <span data-preco="pantanal_almoco">100</span> 雷亚尔</li>
             </ul>
             </div>
             <div style="background:rgba(0,0,0,.03);padding:24px;border-radius:16px;">
@@ -336,7 +337,7 @@
               <li style="margin-bottom:8px;">3 至 4 小时，含一段外海航程</li>
               <li style="margin-bottom:8px;">水质清澈，可见海龟与鱼群</li>
               <li style="margin-bottom:8px;">有下水游泳停靠并登岛</li>
-              <li style="margin-bottom:8px;">150 雷亚尔，含午餐 200 雷亚尔</li>
+              <li style="margin-bottom:8px;"><span data-preco="tijucas">150</span> 雷亚尔，含午餐 <span data-preco="tijucas_almoco">200</span> 雷亚尔</li>
             </ul>
             </div>
           </div>
@@ -354,7 +355,7 @@
           <h2 id="faq" style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">关于蒂茹卡群岛的常见问题</h2>
           <details class="faq-item">
             <summary>蒂茹卡群岛游船多少钱？</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">仅游船每人 150 雷亚尔。含午餐每人 200 雷亚尔。</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">仅游船每人 <span data-preco="tijucas">150</span> 雷亚尔。含午餐每人 <span data-preco="tijucas_almoco">200</span> 雷亚尔。</p>
           </details>
           <details class="faq-item">
             <summary>行程需要多长时间？</summary>

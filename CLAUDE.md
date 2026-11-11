@@ -141,6 +141,36 @@ projetos não compartilham código. Mudou aqui, muda lá. O `npm test` do `gigi-
 roda este `eventos.js` de verdade (`testes/agenda-site.js`) e falha se os dois
 espalharem datas diferentes — é o único teste que existe sobre este repo.
 
+## Preço dos PASSEIOS: o site lê da planilha (desde 11/11/2026)
+
+Passeios e jet ski (Pantanal, Pantanal + almoço, Tijucas, Tijucas + almoço, Praia da
+Reserva, jet 10/20/30 min e 1 h) **não são mais número escrito à mão** nestes lugares:
+
+- **Gigi do site** — `cerebro-gigi-<idioma>.js`, `GIGI_RESP` no `app.js` e os prompts
+  do `gigi-proxy.php` trazem o marcador `{{p:chave}}` no lugar do número.
+- **Dicionário** — `dicionario-<idioma>.js` usa o mesmo marcador; o `t()` resolve.
+- **Páginas** — `pantanal-carioca`, `ilhas-tijucas`, `jet-ski`, `reserva`,
+  `passeios-rotas`, `a-ilha`, `index` e `restaurantes` (5 idiomas) têm
+  `<span data-preco="chave">100</span>`. O número dentro do span é o valor de reserva
+  (o que aparece se a planilha não responder e o que o Google lê).
+
+O núcleo fica no topo do `dicionario.js` (`GIGI_PRECOS`, `gigiPrecos`,
+`gigiPrecosDoCsv`, `gigiPrecosNaPagina`): lê a aba `Preços Passeios` publicada
+(gid 230079925), guarda 20 min no navegador, ignora linha fora do "Vale de/até".
+O `gigi-proxy.php` tem a mesma leitura do lado do servidor (`gigi_precos`), com cópia
+de 20 min num arquivo temporário. Os apelidos das linhas são os do `PRECO_ITENS` do
+gigi-bot: **renomeou uma linha, confira os três lugares**.
+
+Ao escrever texto novo com preço de passeio: use o marcador (JS/PHP) ou o span (HTML),
+nunca o número solto. Valor padrão novo = trocar em `GIGI_PRECOS` (dicionario.js), no
+reserva do `app.js` e em `gigi_precos_padrao()` (PHP).
+
+**Continuam à mão** (a seção abaixo ainda vale pra eles): hospedagem, travessia,
+`planeje.html`, o JSON-LD (`Offer.price`) e as meta descriptions.
+
+A Gigi do site também manda pra IA as últimas falas da conversa (`history`, montado
+por `gigiLembrar` no `app.js`, conferido no `gigi-proxy.php`).
+
 ## Preço: 233 páginas à mão contra uma planilha
 
 O site publica preço em **233 páginas** (50 pt + 50 en + 50 es + 50 fr + 33 zh).

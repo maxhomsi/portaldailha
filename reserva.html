@@ -146,7 +146,7 @@
             </div>
             <div style="flex: 1; min-width: 200px; background: rgba(242, 194, 0, 0.15); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(242, 194, 0, 0.3);">
                <h3 style="color: var(--text); margin: 0 0 5px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="lbl_valor_medio">Valor Médio</h3>
-               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="reserva_val_val">R$ 120 por pessoa</p>
+               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="reserva_val_val">R$ <span data-preco="reserva">120</span> por pessoa</p>
             </div>
           </div>
 
@@ -178,6 +178,7 @@
           </div>
 
           <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <a class="btn btn--green" data-reservar-whats href="https://wa.me/5521993802618?text=Ol%C3%A1%21%20Vim%20pelo%20site%2C%20pela%20p%C3%A1gina%20Praia%20da%20Reserva.%20Quero%20reservar%20esse%20passeio." target="_blank" rel="noopener" style="font-size: 17px; padding: 15px 22px; height: auto; display: inline-flex; max-width: 100%; box-sizing: border-box; margin: 0 0 12px;">📲 Reservar pelo WhatsApp</a>
             <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;" data-i18n="btn_agendar_gigi">
               💬 Agendar com a Gigi
             </button>

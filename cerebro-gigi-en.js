@@ -87,7 +87,7 @@ const GIGI_BRAIN = [
    "含不含午餐",
    "有午餐吗"
   ],
-  "reply": "Our current deal: <strong>a boat tour through the Carioca Pantanal plus a set lunch, R$100 per person</strong>. 🚤<br><br>Lunch is at Restaurante Maracujá da Ilha — beef, fish or chicken. Departures every half hour, from 8am to 4:30pm.<br><br>Tell me the date and how many people and I'll check availability!<br>It lasts 35 to 40 minutes on average, on a group boat, minimum 2 people. Drinks not included.",
+  "reply": "Our current deal: <strong>a boat tour through the Carioca Pantanal plus a set lunch, R${{p:pantanal_almoco}} per person</strong>. 🚤<br><br>Lunch is at Restaurante Maracujá da Ilha — beef, fish or chicken. Departures every half hour, from 8am to 4:30pm.<br><br>Tell me the date and how many people and I'll check availability!<br>It lasts 35 to 40 minutes on average, on a group boat, minimum 2 people. Drinks not included.",
   "showWhatsapp": true
  },
  {
@@ -104,7 +104,7 @@ const GIGI_BRAIN = [
    "白天使用",
    "一日游"
   ],
-  "reply": "We don't offer day use. 🙂<br><br>What we do have is the <strong>Carioca Pantanal boat tour + lunch for R$100 per person</strong>, which makes a great full day.<br><br>Want me to check a date?",
+  "reply": "We don't offer day use. 🙂<br><br>What we do have is the <strong>Carioca Pantanal boat tour + lunch for R${{p:pantanal_almoco}} per person</strong>, which makes a great full day.<br><br>Want me to check a date?",
   "showWhatsapp": true
  },
  {
@@ -129,7 +129,7 @@ const GIGI_BRAIN = [
    "下水",
    "可以游泳吗"
   ],
-  "reply": "Depends on the tour. 🌊<br><br>The <strong>Carioca Pantanal</strong> one (R$100 with lunch) has no swimming stop.<br><br>The <strong>Tijucas Islands</strong> one (R$200 with lunch, 3 to 4 hours) does stop for a swim and drops you on the island.<br><br>Which one sounds better?",
+  "reply": "Depends on the tour. 🌊<br><br>The <strong>Carioca Pantanal</strong> one (R${{p:pantanal_almoco}} with lunch) has no swimming stop.<br><br>The <strong>Tijucas Islands</strong> one (R${{p:tijucas_almoco}} with lunch, 3 to 4 hours) does stop for a swim and drops you on the island.<br><br>Which one sounds better?",
   "showWhatsapp": true
  },
  {
@@ -239,7 +239,7 @@ const GIGI_BRAIN = [
    "饮料",
    "最少几人"
   ],
-  "reply": "The Carioca Pantanal tour lasts <b>35 to 40 minutes</b> on average. 🚤<br><br>It is a <b>group (shared) boat</b> and runs with a <b>minimum of 2 people</b>. Departures every half hour, from 8am to 4:30pm.<br><br>The <b>R$100 per person</b> package covers the tour and the set lunch — <b>drinks are not included</b>.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the time!",
+  "reply": "The Carioca Pantanal tour lasts <b>35 to 40 minutes</b> on average. 🚤<br><br>It is a <b>group (shared) boat</b> and runs with a <b>minimum of 2 people</b>. Departures every half hour, from 8am to 4:30pm.<br><br>The <b>R${{p:pantanal_almoco}} per person</b> package covers the tour and the set lunch — <b>drinks are not included</b>.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the time!",
   "showWhatsapp": true
  },
  {
@@ -365,7 +365,7 @@ const GIGI_BRAIN = [
    "disponibilite",
    "combien pour"
   ],
-  "reply": "I can give you the prices right now! 💰<br><br>🚤 <b>Boat tours</b><br>• <b>Carioca Pantanal + lunch — R$100 per person</b> (our current deal)<br>• Carioca Pantanal, tour only — R$50 per person<br>• <b>Tijucas Islands + lunch — R$200 per person</b><br>• Tijucas Islands, tour only — R$150 per person<br><br>🛌 <b>Places to stay</b><br>Nightly rates change by inn and by date. Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the price and availability — or browse them on <a href=\"hoteis-pousadas.html\">where to stay</a>.<br><br>💳 Cash, Pix or card, with a 50% deposit to secure the booking.",
+  "reply": "I can give you the prices right now! 💰<br><br>🚤 <b>Boat tours</b><br>• <b>Carioca Pantanal + lunch — R${{p:pantanal_almoco}} per person</b> (our current deal)<br>• Carioca Pantanal, tour only — R${{p:pantanal}} per person<br>• <b>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person</b><br>• Tijucas Islands, tour only — R${{p:tijucas}} per person<br><br>🛌 <b>Places to stay</b><br>Nightly rates change by inn and by date. Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the price and availability — or browse them on <a href=\"hoteis-pousadas.html\">where to stay</a>.<br><br>💳 Cash, Pix or card, with a 50% deposit to secure the booking.",
   "showWhatsapp": true
  },
  {
@@ -575,7 +575,7 @@ const GIGI_BRAIN = [
    "activite",
    "quoi faire"
   ],
-  "reply": "We have two tours, and the one with lunch is the most popular. 🚤<br><br><strong>Carioca Pantanal + lunch — R$100 per person.</strong> You see caimans and capybaras up close in the mangroves and have lunch at Restaurante Maracujá da Ilha (beef, fish or chicken). Departures every half hour, from 8am to 4:30pm. Tour only is R$50.<br><br><strong>Tijucas Islands + lunch — R$200 per person.</strong> About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R$150.<br><br>Which one sounds better?",
+  "reply": "We have two tours, and the one with lunch is the most popular. 🚤<br><br><strong>Carioca Pantanal + lunch — R${{p:pantanal_almoco}} per person.</strong> You see caimans and capybaras up close in the mangroves and have lunch at Restaurante Maracujá da Ilha (beef, fish or chicken). Departures every half hour, from 8am to 4:30pm. Tour only is R${{p:pantanal}}.<br><br><strong>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person.</strong> About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R${{p:tijucas}}.<br><br>Which one sounds better?",
   "showWhatsapp": true
  },
  {
@@ -1179,7 +1179,7 @@ const GIGI_BRAIN = [
    "caimanes",
    "capibaras"
   ],
-  "reply": "The <a href='pantanal-carioca.html'>Carioca Pantanal</a> tour is great for seeing caimans and capybaras in the wild! 🐊<br><br>The tour alone is R$50 per person, but most people take the package with <strong>lunch included for R$100 per person</strong> — much better value.<br><br>What date, and how many people?",
+  "reply": "The <a href='pantanal-carioca.html'>Carioca Pantanal</a> tour is great for seeing caimans and capybaras in the wild! 🐊<br><br>The tour alone is R${{p:pantanal}} per person, but most people take the package with <strong>lunch included for R${{p:pantanal_almoco}} per person</strong> — much better value.<br><br>What date, and how many people?",
   "showWhatsapp": true
  },
  {
@@ -1202,7 +1202,7 @@ const GIGI_BRAIN = [
    "plongee",
    "caraibes cariocas"
   ],
-  "reply": "The <a href='ilhas-tijucas.html'>Tijucas Islands</a> are our hidden gem — the Carioca Caribbean! 🤿<br><br>About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R$150 per person, and <strong>R$200 with lunch included</strong>.<br><br>Weekend spots go fast. What date are you thinking?",
+  "reply": "The <a href='ilhas-tijucas.html'>Tijucas Islands</a> are our hidden gem — the Carioca Caribbean! 🤿<br><br>About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R${{p:tijucas}} per person, and <strong>R${{p:tijucas_almoco}} with lunch included</strong>.<br><br>Weekend spots go fast. What date are you thinking?",
   "showWhatsapp": true
  },
  {
@@ -1231,7 +1231,7 @@ const GIGI_BRAIN = [
    "moto marine",
    "sensations fortes"
   ],
-  "reply": "Jet ski on the island? 🚀 10 min R$ 150 · 20 min R$ 250 · 30 min R$ 450 · 1 hour R$ 750 — price per jet ski (up to 2 people). From 30 minutes on you manage the time as you like, and every booking also gets the leisure area with pool afterwards. It's all on our <a href='jet-ski.html'>Jet Ski</a> page, or message me on WhatsApp to book!",
+  "reply": "Jet ski on the island? 🚀 10 min R$ {{p:jet10}} · 20 min R$ {{p:jet20}} · 30 min R$ {{p:jet30}} · 1 hour R$ {{p:jet60}} — price per jet ski (up to 2 people). From 30 minutes on you manage the time as you like, and every booking also gets the leisure area with pool afterwards. It's all on our <a href='jet-ski.html'>Jet Ski</a> page, or message me on WhatsApp to book!",
   "showWhatsapp": true
  },
  {

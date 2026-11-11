@@ -90,7 +90,7 @@ const GIGI_BRAIN = [
    "含不含午餐",
    "有午餐吗"
   ],
-  "reply": "Nossa promoção do momento: <strong>passeio de barco pelo Pantanal Carioca + almoço executivo por R$100 por pessoa</strong>. 🚤<br><br>O almoço é no Restaurante Maracujá da Ilha, com opção de carne, peixe ou frango. Saídas todos os dias de meia em meia hora, das 8h às 16h30.<br><br>Me diz a data e quantas pessoas que eu já vejo a disponibilidade!<br>Dura em média 35 a 40 minutos, em barco de grupo, mínimo de 2 pessoas. Bebida não inclusa.",
+  "reply": "Nossa promoção do momento: <strong>passeio de barco pelo Pantanal Carioca + almoço executivo por R${{p:pantanal_almoco}} por pessoa</strong>. 🚤<br><br>O almoço é no Restaurante Maracujá da Ilha, com opção de carne, peixe ou frango. Saídas todos os dias de meia em meia hora, das 8h às 16h30.<br><br>Me diz a data e quantas pessoas que eu já vejo a disponibilidade!<br>Dura em média 35 a 40 minutos, em barco de grupo, mínimo de 2 pessoas. Bebida não inclusa.",
   "showWhatsapp": true
  },
  {
@@ -106,7 +106,7 @@ const GIGI_BRAIN = [
    "白天使用",
    "一日游"
   ],
-  "reply": "Não trabalhamos com day use. 🙂<br><br>O que temos é o pacote de <strong>passeio de barco no Pantanal Carioca + almoço por R$100 por pessoa</strong>, que dá um ótimo programa de dia inteiro.<br><br>Quer que eu veja para qual data?",
+  "reply": "Não trabalhamos com day use. 🙂<br><br>O que temos é o pacote de <strong>passeio de barco no Pantanal Carioca + almoço por R${{p:pantanal_almoco}} por pessoa</strong>, que dá um ótimo programa de dia inteiro.<br><br>Quer que eu veja para qual data?",
   "showWhatsapp": true
  },
  {
@@ -132,7 +132,7 @@ const GIGI_BRAIN = [
    "下水",
    "可以游泳吗"
   ],
-  "reply": "Depende do passeio. 🌊<br><br>O do <strong>Pantanal Carioca</strong> (R$100 com almoço) não tem parada para banho.<br><br>Já o das <strong>Ilhas Tijucas</strong> (R$200 com almoço, de 3 a 4 horas) tem parada para banho e deixa o grupo na ilha.<br><br>Qual dos dois te interessa mais?",
+  "reply": "Depende do passeio. 🌊<br><br>O do <strong>Pantanal Carioca</strong> (R${{p:pantanal_almoco}} com almoço) não tem parada para banho.<br><br>Já o das <strong>Ilhas Tijucas</strong> (R${{p:tijucas_almoco}} com almoço, de 3 a 4 horas) tem parada para banho e deixa o grupo na ilha.<br><br>Qual dos dois te interessa mais?",
   "showWhatsapp": true
  },
  {
@@ -243,7 +243,7 @@ const GIGI_BRAIN = [
    "饮料",
    "最少几人"
   ],
-  "reply": "O passeio do Pantanal Carioca dura em média <b>35 a 40 minutos</b>. 🚤<br><br>O barco é <b>de grupo</b> (compartilhado) e sai com <b>mínimo de 2 pessoas</b>. Saídas todos os dias de meia em meia hora, das 8h às 16h30.<br><br>No pacote de <b>R$100 por pessoa</b> estão inclusos o passeio e o almoço executivo — <b>bebida não está inclusa</b>.<br><br>Me diz a <b>data</b> e <b>quantas pessoas</b> que eu confirmo o horário!",
+  "reply": "O passeio do Pantanal Carioca dura em média <b>35 a 40 minutos</b>. 🚤<br><br>O barco é <b>de grupo</b> (compartilhado) e sai com <b>mínimo de 2 pessoas</b>. Saídas todos os dias de meia em meia hora, das 8h às 16h30.<br><br>No pacote de <b>R${{p:pantanal_almoco}} por pessoa</b> estão inclusos o passeio e o almoço executivo — <b>bebida não está inclusa</b>.<br><br>Me diz a <b>data</b> e <b>quantas pessoas</b> que eu confirmo o horário!",
   "showWhatsapp": true
  },
  {
@@ -369,7 +369,7 @@ const GIGI_BRAIN = [
    "disponibilite",
    "combien pour"
   ],
-  "reply": "Posso te adiantar os valores! 💰<br><br>🚤 <b>Passeios de barco</b><br>• <b>Pantanal Carioca + almoço — R$100 por pessoa</b> (nossa promoção)<br>• Pantanal Carioca só o passeio — R$50 por pessoa<br>• <b>Ilhas Tijucas + almoço — R$200 por pessoa</b><br>• Ilhas Tijucas só o passeio — R$150 por pessoa<br><br>🛌 <b>Hospedagem</b><br>A diária muda conforme a pousada e a data. Me diz a <b>data</b> e <b>quantas pessoas</b> que eu confirmo valor e disponibilidade — ou veja as opções em <a href=\"hoteis-pousadas.html\">hospedagem</a>.<br><br>💳 Dinheiro, Pix ou cartão, com 50% de sinal para garantir a reserva.",
+  "reply": "Posso te adiantar os valores! 💰<br><br>🚤 <b>Passeios de barco</b><br>• <b>Pantanal Carioca + almoço — R${{p:pantanal_almoco}} por pessoa</b> (nossa promoção)<br>• Pantanal Carioca só o passeio — R${{p:pantanal}} por pessoa<br>• <b>Ilhas Tijucas + almoço — R${{p:tijucas_almoco}} por pessoa</b><br>• Ilhas Tijucas só o passeio — R${{p:tijucas}} por pessoa<br><br>🛌 <b>Hospedagem</b><br>A diária muda conforme a pousada e a data. Me diz a <b>data</b> e <b>quantas pessoas</b> que eu confirmo valor e disponibilidade — ou veja as opções em <a href=\"hoteis-pousadas.html\">hospedagem</a>.<br><br>💳 Dinheiro, Pix ou cartão, com 50% de sinal para garantir a reserva.",
   "showWhatsapp": true
  },
  {
@@ -579,7 +579,7 @@ const GIGI_BRAIN = [
    "activite",
    "quoi faire"
   ],
-  "reply": "Temos dois passeios, e o mais procurado é o com almoço incluso. 🚤<br><br><strong>Pantanal Carioca + almoço — R$100 por pessoa.</strong> Você vê jacarés e capivaras de pertinho nos manguezais e almoça no Restaurante Maracujá da Ilha (carne, peixe ou frango). Saídas todo dia de meia em meia hora, das 8h às 16h30. Só o passeio sai por R$50.<br><br><strong>Ilhas Tijucas + almoço — R$200 por pessoa.</strong> De 3 a 4 horas, com parada para banho, e o barco deixa vocês na ilha. Só o passeio sai por R$150.<br><br>Qual dos dois te interessa mais?",
+  "reply": "Temos dois passeios, e o mais procurado é o com almoço incluso. 🚤<br><br><strong>Pantanal Carioca + almoço — R${{p:pantanal_almoco}} por pessoa.</strong> Você vê jacarés e capivaras de pertinho nos manguezais e almoça no Restaurante Maracujá da Ilha (carne, peixe ou frango). Saídas todo dia de meia em meia hora, das 8h às 16h30. Só o passeio sai por R${{p:pantanal}}.<br><br><strong>Ilhas Tijucas + almoço — R${{p:tijucas_almoco}} por pessoa.</strong> De 3 a 4 horas, com parada para banho, e o barco deixa vocês na ilha. Só o passeio sai por R${{p:tijucas}}.<br><br>Qual dos dois te interessa mais?",
   "showWhatsapp": true
  },
  {
@@ -1183,7 +1183,7 @@ const GIGI_BRAIN = [
    "caimanes",
    "capibaras"
   ],
-  "reply": "O <a href='pantanal-carioca.html'>Pantanal Carioca</a> é incrível para ver jacarés e capivaras soltas! 🐊<br><br>Só o passeio sai por R$50 por pessoa. Mas o que mais sai é o pacote com <strong>almoço executivo incluso, por R$100 por pessoa</strong> — vale muito mais a pena.<br><br>Me diz a data e quantas pessoas?",
+  "reply": "O <a href='pantanal-carioca.html'>Pantanal Carioca</a> é incrível para ver jacarés e capivaras soltas! 🐊<br><br>Só o passeio sai por R${{p:pantanal}} por pessoa. Mas o que mais sai é o pacote com <strong>almoço executivo incluso, por R${{p:pantanal_almoco}} por pessoa</strong> — vale muito mais a pena.<br><br>Me diz a data e quantas pessoas?",
   "showWhatsapp": true
  },
  {
@@ -1206,7 +1206,7 @@ const GIGI_BRAIN = [
    "plongee",
    "caraibes cariocas"
   ],
-  "reply": "As <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> são nossa joia escondida — o Caribe Carioca! 🤿<br><br>São de 3 a 4 horas, com parada para banho, e o barco deixa vocês na ilha. Só o passeio sai por R$150 por pessoa, e <strong>com almoço incluso fica R$200</strong>.<br><br>As vagas esgotam rápido no fim de semana. Para qual data você quer?",
+  "reply": "As <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> são nossa joia escondida — o Caribe Carioca! 🤿<br><br>São de 3 a 4 horas, com parada para banho, e o barco deixa vocês na ilha. Só o passeio sai por R${{p:tijucas}} por pessoa, e <strong>com almoço incluso fica R${{p:tijucas_almoco}}</strong>.<br><br>As vagas esgotam rápido no fim de semana. Para qual data você quer?",
   "showWhatsapp": true
  },
  {
@@ -1235,7 +1235,7 @@ const GIGI_BRAIN = [
    "moto marine",
    "sensations fortes"
   ],
-  "reply": "Jet ski na ilha? 🚀 10 min R$ 150 · 20 min R$ 250 · 30 min R$ 450 · 1 hora R$ 750 — valores por jet ski (até 2 pessoas). A partir de 30 minutos você administra o tempo como quiser, e quem contrata ainda ganha a área de lazer com piscina depois do passeio. Tudo na página de <a href='jet-ski.html'>Jet Ski</a>, ou me chame no WhatsApp para agendar!",
+  "reply": "Jet ski na ilha? 🚀 10 min R$ {{p:jet10}} · 20 min R$ {{p:jet20}} · 30 min R$ {{p:jet30}} · 1 hora R$ {{p:jet60}} — valores por jet ski (até 2 pessoas). A partir de 30 minutos você administra o tempo como quiser, e quem contrata ainda ganha a área de lazer com piscina depois do passeio. Tudo na página de <a href='jet-ski.html'>Jet Ski</a>, ou me chame no WhatsApp para agendar!",
   "showWhatsapp": true
  },
  {

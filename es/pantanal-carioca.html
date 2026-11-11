@@ -293,7 +293,7 @@
             </div>
             <div style="flex: 1; min-width: 200px; background: rgba(242, 194, 0, 0.15); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(242, 194, 0, 0.3);">
                <h3 style="color: var(--text); margin: 0 0 5px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="lbl_valor_medio">Precio Medio</h3>
-               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="pantanal_val_val">R$ 50 por persona</p>
+               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="pantanal_val_val">R$ <span data-preco="pantanal">50</span> por persona</p>
             </div>
           </div>
 
@@ -319,6 +319,7 @@
           </div>
 
           <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <a class="btn btn--green" data-reservar-whats href="https://wa.me/5521993802618?text=%C2%A1Hola%21%20Vengo%20del%20sitio%2C%20de%20la%20p%C3%A1gina%20Pantanal%20Carioca.%20Quiero%20reservar%20este%20paseo." target="_blank" rel="noopener" style="font-size: 17px; padding: 15px 22px; height: auto; display: inline-flex; max-width: 100%; box-sizing: border-box; margin: 0 0 12px;">📲 Reservar por WhatsApp</a>
             <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;" data-i18n="btn_agendar_gigi">💬 Reservar con Gigi</button>
             <p style="margin-top: 15px; font-size: 14px; color: var(--muted); font-weight: 700;" data-i18n="pantanal_footer_p">Salidas exclusivas y programadas para garantizar la mejor experiencia.</p>
           </div>
@@ -341,13 +342,13 @@
             <div style="flex:1;min-width:230px;background:rgba(71,176,90,.08);border:2px solid rgba(71,176,90,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:var(--green-dark);color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">El más reservado</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Paseo + almuerzo ejecutivo</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ 100 <span style="font-size:14px;font-weight:700;color:var(--muted);">por persona</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ <span data-preco="pantanal_almoco">100</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">por persona</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">El paseo completo más el almuerzo en el Restaurante Maracujá da Ilha, con opción de carne, pescado o pollo.</p>
             </div>
             <div style="flex:1;min-width:230px;background:rgba(242,194,0,.10);border:1px solid rgba(242,194,0,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:rgba(0,0,0,.07);color:var(--muted);font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Sin almuerzo</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Solo el paseo</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ 50 <span style="font-size:14px;font-weight:700;color:var(--muted);">por persona</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ <span data-preco="pantanal">50</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">por persona</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">El paseo en barco por los canales y manglares, sin comida.</p>
             </div>
           </div>
@@ -363,7 +364,7 @@
               <li style="margin-bottom:8px;">Paseo en barco por los canales y manglares</li>
               <li style="margin-bottom:8px;">Patrón local que conoce los puntos de avistamiento</li>
               <li style="margin-bottom:8px;">Chalecos salvavidas a bordo</li>
-              <li style="margin-bottom:8px;">Almuerzo ejecutivo en Maracujá da Ilha (solo en el paquete de R$ 100)</li>
+              <li style="margin-bottom:8px;">Almuerzo ejecutivo en Maracujá da Ilha (solo en el paquete de R$ <span data-preco="pantanal_almoco">100</span>)</li>
             </ul>
             </div>
             <div style="background:rgba(0,0,0,.03);padding:24px;border-radius:16px;">
@@ -403,7 +404,7 @@
         <div class="reveal" style="background:#fff;padding:40px;border-radius:24px;box-shadow:var(--shadow-soft);margin-top:30px;">
           <h2 style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Otros paseos que salen de la Isla Gigóia</h2>
           <ul style="list-style:none;padding:0;margin:0;">
-            <li style="margin-bottom:16px;"><a href="/es/ilhas-tijucas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Islas Tijucas</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">De 3 a 4 horas, con parada para baño y desembarque en la isla. R$ 150 por persona, o R$ 200 con almuerzo.</span></li>
+            <li style="margin-bottom:16px;"><a href="/es/ilhas-tijucas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Islas Tijucas</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">De 3 a 4 horas, con parada para baño y desembarque en la isla. R$ <span data-preco="tijucas">150</span> por persona, o R$ <span data-preco="tijucas_almoco">200</span> con almuerzo.</span></li>
             <li style="margin-bottom:16px;"><a href="/es/reserva.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Playa de la Reserva</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">Travesía por la laguna hasta la franja de arena más preservada de Barra.</span></li>
             <li style="margin-bottom:16px;"><a href="/es/jet-ski.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Alquiler de jet ski</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">De 10 a 60 minutos por la Laguna de Tijuca, con instrucción antes de salir.</span></li>
             <li style="margin-bottom:16px;"><a href="/es/passeios-rotas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Todos los paseos y rutas</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">La lista completa de recorridos, horarios y precios que salen de la isla.</span></li>
@@ -414,7 +415,7 @@
           <h2 id="faq" style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Preguntas frecuentes sobre el Pantanal Carioca</h2>
           <details class="faq-item">
             <summary>¿Cuánto cuesta el paseo del Pantanal Carioca?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">Solo el paseo cuesta R$ 50 por persona. El paquete con almuerzo ejecutivo en el Restaurante Maracujá da Ilha cuesta R$ 100 por persona, con opción de carne, pescado o pollo. Las bebidas no están incluidas.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">Solo el paseo cuesta R$ <span data-preco="pantanal">50</span> por persona. El paquete con almuerzo ejecutivo en el Restaurante Maracujá da Ilha cuesta R$ <span data-preco="pantanal_almoco">100</span> por persona, con opción de carne, pescado o pollo. Las bebidas no están incluidas.</p>
           </details>
           <details class="faq-item">
             <summary>¿Cuánto dura el paseo?</summary>
@@ -438,7 +439,7 @@
           </details>
           <details class="faq-item">
             <summary>¿La bebida está incluida en el paquete con almuerzo?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">No. El paquete de R$ 100 incluye el paseo y el almuerzo ejecutivo; las bebidas se pagan aparte.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">No. El paquete de R$ <span data-preco="pantanal_almoco">100</span> incluye el paseo y el almuerzo ejecutivo; las bebidas se pagan aparte.</p>
           </details>
           <details class="faq-item">
             <summary>¿Cómo llego al punto de salida del barco?</summary>

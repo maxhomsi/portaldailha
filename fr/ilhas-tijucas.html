@@ -243,7 +243,7 @@
             </div>
             <div style="flex: 1; min-width: 200px; background: rgba(242, 194, 0, 0.15); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(242, 194, 0, 0.3);">
                <h3 style="color: var(--text); margin: 0 0 5px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="tijucas_valor_lbl">Prix moyen</h3>
-               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="tijucas_valor_val">R$ 150 par personne</p>
+               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="tijucas_valor_val">R$ <span data-preco="tijucas">150</span> par personne</p>
             </div>
           </div>
 
@@ -271,6 +271,7 @@
           </div>
           
           <div style="text-align: center; margin-top: 20px;">
+             <a class="btn btn--green" data-reservar-whats href="https://wa.me/5521993802618?text=Bonjour%20%21%20Je%20viens%20du%20site%2C%20de%20la%20page%20Ilhas%20Tijucas.%20Je%20voudrais%20r%C3%A9server%20cette%20excursion." target="_blank" rel="noopener" style="font-size: 17px; padding: 15px 22px; height: auto; display: inline-flex; max-width: 100%; box-sizing: border-box; margin: 0 0 12px;">📲 Réserver sur WhatsApp</a>
              <button class="btn btn--green" onclick="openGigiChat()" style="padding: 15px 40px; font-size: 16px; height: auto;" data-i18n="btn_tijucas_gigi">Vérifier les départs avec Gigi</button>
           </div>
         </div>
@@ -291,13 +292,13 @@
             <div style="flex:1;min-width:230px;background:rgba(71,176,90,.08);border:2px solid rgba(71,176,90,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:var(--green-dark);color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Avec déjeuner</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Excursion + déjeuner</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ 200 <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ <span data-preco="tijucas_almoco">200</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">L’excursion complète et le déjeuner, servi au retour sur l’île.</p>
             </div>
             <div style="flex:1;min-width:230px;background:rgba(242,194,0,.10);border:1px solid rgba(242,194,0,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:rgba(0,0,0,.07);color:var(--muted);font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Sans déjeuner</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Excursion seule</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ 150 <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ <span data-preco="tijucas">150</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">par personne</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">L’excursion en bateau avec arrêt baignade, sans repas.</p>
             </div>
           </div>
@@ -329,7 +330,7 @@
               <li style="margin-bottom:8px;">35 à 40 minutes, dans la lagune</li>
               <li style="margin-bottom:8px;">Observation de caïmans et de capybaras</li>
               <li style="margin-bottom:8px;">Pas d’arrêt baignade</li>
-              <li style="margin-bottom:8px;">R$ 50, ou R$ 100 avec déjeuner</li>
+              <li style="margin-bottom:8px;">R$ <span data-preco="pantanal">50</span>, ou R$ <span data-preco="pantanal_almoco">100</span> avec déjeuner</li>
             </ul>
             </div>
             <div style="background:rgba(0,0,0,.03);padding:24px;border-radius:16px;">
@@ -338,7 +339,7 @@
               <li style="margin-bottom:8px;">3 à 4 heures, avec un passage en pleine mer</li>
               <li style="margin-bottom:8px;">Eau claire, tortues et poissons</li>
               <li style="margin-bottom:8px;">Arrêt baignade et débarquement</li>
-              <li style="margin-bottom:8px;">R$ 150, ou R$ 200 avec déjeuner</li>
+              <li style="margin-bottom:8px;">R$ <span data-preco="tijucas">150</span>, ou R$ <span data-preco="tijucas_almoco">200</span> avec déjeuner</li>
             </ul>
             </div>
           </div>
@@ -356,7 +357,7 @@
           <h2 id="faq" style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Questions fréquentes sur les îles Tijucas</h2>
           <details class="faq-item">
             <summary>Combien coûte l’excursion aux îles Tijucas ?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">L’excursion seule coûte R$ 150 par personne. Avec déjeuner compris, R$ 200 par personne.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">L’excursion seule coûte R$ <span data-preco="tijucas">150</span> par personne. Avec déjeuner compris, R$ <span data-preco="tijucas_almoco">200</span> par personne.</p>
           </details>
           <details class="faq-item">
             <summary>Combien de temps dure l’excursion ?</summary>

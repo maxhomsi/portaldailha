@@ -293,7 +293,7 @@
             </div>
             <div style="flex: 1; min-width: 200px; background: rgba(242, 194, 0, 0.15); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(242, 194, 0, 0.3);">
                <h3 style="color: var(--text); margin: 0 0 5px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="lbl_valor_medio">Average Price</h3>
-               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="pantanal_val_val">R$ 50 per person</p>
+               <p style="margin: 0; color: var(--text); font-weight: 900; font-size: 20px;" data-i18n="pantanal_val_val">R$ <span data-preco="pantanal">50</span> per person</p>
             </div>
           </div>
 
@@ -319,6 +319,7 @@
           </div>
 
           <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
+            <a class="btn btn--green" data-reservar-whats href="https://wa.me/5521993802618?text=Hi%21%20I%20came%20from%20the%20website%2C%20from%20the%20Carioca%20Pantanal%20page.%20I%27d%20like%20to%20book%20this%20tour." target="_blank" rel="noopener" style="font-size: 17px; padding: 15px 22px; height: auto; display: inline-flex; max-width: 100%; box-sizing: border-box; margin: 0 0 12px;">📲 Book on WhatsApp</a>
             <button class="btn btn--green" onclick="openGigiChat()" style="font-size: 18px; padding: 15px 40px; height: auto;" data-i18n="btn_agendar_gigi">💬 Book with Gigi</button>
             <p style="margin-top: 15px; font-size: 14px; color: var(--muted); font-weight: 700;" data-i18n="pantanal_footer_p">Exclusive and scheduled departures to ensure the best experience.</p>
           </div>
@@ -341,13 +342,13 @@
             <div style="flex:1;min-width:230px;background:rgba(71,176,90,.08);border:2px solid rgba(71,176,90,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:var(--green-dark);color:#fff;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Most booked</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Tour + executive lunch</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ 100 <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--green-dark);line-height:1;">R$ <span data-preco="pantanal_almoco">100</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">The full tour plus lunch at Restaurante Maracujá da Ilha, with a choice of beef, fish or chicken.</p>
             </div>
             <div style="flex:1;min-width:230px;background:rgba(242,194,0,.10);border:1px solid rgba(242,194,0,.35);border-radius:18px;padding:24px 22px;">
               <span style="display:inline-block;background:rgba(0,0,0,.07);color:var(--muted);font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Without lunch</span>
               <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Tour only</h3>
-              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ 50 <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
+              <p style="margin:0 0 10px;font-size:34px;font-weight:900;color:var(--text);line-height:1;">R$ <span data-preco="pantanal">50</span> <span style="font-size:14px;font-weight:700;color:var(--muted);">per person</span></p>
               <p style="margin:0;font-size:15px;line-height:1.6;color:#444;font-weight:600;">The boat tour through the canals and mangroves, without a meal.</p>
             </div>
           </div>
@@ -363,7 +364,7 @@
               <li style="margin-bottom:8px;">The boat tour through the canals and mangroves</li>
               <li style="margin-bottom:8px;">A local skipper who knows where the wildlife shows up</li>
               <li style="margin-bottom:8px;">Life jackets on board</li>
-              <li style="margin-bottom:8px;">Executive lunch at Maracujá da Ilha (R$ 100 package only)</li>
+              <li style="margin-bottom:8px;">Executive lunch at Maracujá da Ilha (R$ <span data-preco="pantanal_almoco">100</span> package only)</li>
             </ul>
             </div>
             <div style="background:rgba(0,0,0,.03);padding:24px;border-radius:16px;">
@@ -403,7 +404,7 @@
         <div class="reveal" style="background:#fff;padding:40px;border-radius:24px;box-shadow:var(--shadow-soft);margin-top:30px;">
           <h2 style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Other tours departing from Gigóia Island</h2>
           <ul style="list-style:none;padding:0;margin:0;">
-            <li style="margin-bottom:16px;"><a href="/en/ilhas-tijucas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Tijucas Islands</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">3 to 4 hours, with a swimming stop and time ashore on the island. R$ 150 per person, or R$ 200 with lunch.</span></li>
+            <li style="margin-bottom:16px;"><a href="/en/ilhas-tijucas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Tijucas Islands</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">3 to 4 hours, with a swimming stop and time ashore on the island. R$ <span data-preco="tijucas">150</span> per person, or R$ <span data-preco="tijucas_almoco">200</span> with lunch.</span></li>
             <li style="margin-bottom:16px;"><a href="/en/reserva.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Reserva Beach</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">Across the lagoon to the most preserved stretch of sand in Barra.</span></li>
             <li style="margin-bottom:16px;"><a href="/en/jet-ski.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">Jet ski rental</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">10 to 60 minutes on the Tijuca Lagoon, with a briefing before you set off.</span></li>
             <li style="margin-bottom:16px;"><a href="/en/passeios-rotas.html" style="color:var(--green-dark);font-weight:800;text-decoration:underline;font-size:17px;">All tours and routes</a><br><span style="color:#444;font-weight:600;font-size:15px;line-height:1.6;">The full list of itineraries, times and prices departing from the island.</span></li>
@@ -414,7 +415,7 @@
           <h2 id="faq" style="color:var(--green-dark);margin:0 0 18px;font-size:26px;">Frequently asked questions about the Carioca Pantanal</h2>
           <details class="faq-item">
             <summary>How much does the Carioca Pantanal tour cost?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">The tour on its own costs R$ 50 per person. The package with an executive lunch at Restaurante Maracuja da Ilha costs R$ 100 per person, with a choice of beef, fish or chicken. Drinks are not included.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">The tour on its own costs R$ <span data-preco="pantanal">50</span> per person. The package with an executive lunch at Restaurante Maracuja da Ilha costs R$ <span data-preco="pantanal_almoco">100</span> per person, with a choice of beef, fish or chicken. Drinks are not included.</p>
           </details>
           <details class="faq-item">
             <summary>How long does the tour last?</summary>
@@ -438,7 +439,7 @@
           </details>
           <details class="faq-item">
             <summary>Are drinks included in the package with lunch?</summary>
-            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">No. The R$ 100 package covers the tour and the executive lunch; drinks are paid separately.</p>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#444;font-weight:600;">No. The R$ <span data-preco="pantanal_almoco">100</span> package covers the tour and the executive lunch; drinks are paid separately.</p>
           </details>
           <details class="faq-item">
             <summary>How do I get to the departure point?</summary>

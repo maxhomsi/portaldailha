@@ -86,7 +86,7 @@ const GIGI_BRAIN = [
    "remise",
    "balade avec dejeuner"
   ],
-  "reply": "我们现在的优惠：<strong>卡里奥卡潘塔纳尔游船 + 套餐午餐，每人 R$100</strong>。🚤<br><br>午餐在 Restaurante Maracujá da Ilha，可选牛肉、鱼或鸡肉。每天 8 点至 16 点 30 分，每半小时出发一班。<br><br>告诉我日期和人数，我马上帮您查！<br>平均约 35 至 40 分钟，拼船，最少 2 人。饮料不含。",
+  "reply": "我们现在的优惠：<strong>卡里奥卡潘塔纳尔游船 + 套餐午餐，每人 R${{p:pantanal_almoco}}</strong>。🚤<br><br>午餐在 Restaurante Maracujá da Ilha，可选牛肉、鱼或鸡肉。每天 8 点至 16 点 30 分，每半小时出发一班。<br><br>告诉我日期和人数，我马上帮您查！<br>平均约 35 至 40 分钟，拼船，最少 2 人。饮料不含。",
   "showWhatsapp": true
  },
  {
@@ -102,7 +102,7 @@ const GIGI_BRAIN = [
    "passer la journee",
    "一日游"
   ],
-  "reply": "我们没有 day use。🙂<br><br>我们有的是<strong>卡里奥卡潘塔纳尔游船 + 午餐，每人 R$100</strong> 的套餐。<br><br>要我帮您查哪一天吗？",
+  "reply": "我们没有 day use。🙂<br><br>我们有的是<strong>卡里奥卡潘塔纳尔游船 + 午餐，每人 R${{p:pantanal_almoco}}</strong> 的套餐。<br><br>要我帮您查哪一天吗？",
   "showWhatsapp": true
  },
  {
@@ -126,7 +126,7 @@ const GIGI_BRAIN = [
    "baignade",
    "可以游泳吗"
   ],
-  "reply": "要看是哪个行程。🌊<br><br><strong>卡里奥卡潘塔纳尔</strong>（R$100 含午餐）没有游泳停靠。<br><br><strong>蒂茹卡群岛</strong>（R$200 含午餐，约 3 至 4 小时）有游泳停靠，还会把您送上岛。<br><br>您对哪个更感兴趣？",
+  "reply": "要看是哪个行程。🌊<br><br><strong>卡里奥卡潘塔纳尔</strong>（R${{p:pantanal_almoco}} 含午餐）没有游泳停靠。<br><br><strong>蒂茹卡群岛</strong>（R${{p:tijucas_almoco}} 含午餐，约 3 至 4 小时）有游泳停靠，还会把您送上岛。<br><br>您对哪个更感兴趣？",
   "showWhatsapp": true
  },
  {
@@ -225,7 +225,7 @@ const GIGI_BRAIN = [
    "饮料",
    "多久"
   ],
-  "reply": "卡里奥卡潘塔纳尔行程平均约 <b>35 至 40 分钟</b>。🚤<br><br>船为<b>拼船</b>（多人共乘），<b>最少 2 人</b>成行。每天 8 点至 16 点 30 分，每半小时出发一班。<br><br><b>每人 R$100</b> 的套餐含游船和套餐午餐 — <b>饮料不含</b>。<br><br>告诉我<b>日期</b>和<b>人数</b>，我帮您确认时间！",
+  "reply": "卡里奥卡潘塔纳尔行程平均约 <b>35 至 40 分钟</b>。🚤<br><br>船为<b>拼船</b>（多人共乘），<b>最少 2 人</b>成行。每天 8 点至 16 点 30 分，每半小时出发一班。<br><br><b>每人 R${{p:pantanal_almoco}}</b> 的套餐含游船和套餐午餐 — <b>饮料不含</b>。<br><br>告诉我<b>日期</b>和<b>人数</b>，我帮您确认时间！",
   "showWhatsapp": true
  },
  {
@@ -364,7 +364,7 @@ const GIGI_BRAIN = [
    "disponibilite",
    "combien pour"
   ],
-  "reply": "我现在就可以告诉您价格！💰<br><br>🚤 <b>游船行程</b><br>• <b>卡里奥卡潘塔纳尔 + 午餐 — 每人 R$100</b>（当前优惠）<br>• 卡里奥卡潘塔纳尔，仅游船 — 每人 R$50<br>• <b>蒂茹卡群岛 + 午餐 — 每人 R$200</b><br>• 蒂茹卡群岛，仅游船 — 每人 R$150<br><br>🛌 <b>住宿</b><br>房价因旅馆和日期而异。告诉我<b>日期</b>和<b>人数</b>，我帮您确认价格和空房 — 也可以看 <a href=\"hoteis-pousadas.html\">住宿</a> 页面。<br><br>💳 可用现金、Pix 或刷卡，预付 50% 定金锁定预订。",
+  "reply": "我现在就可以告诉您价格！💰<br><br>🚤 <b>游船行程</b><br>• <b>卡里奥卡潘塔纳尔 + 午餐 — 每人 R${{p:pantanal_almoco}}</b>（当前优惠）<br>• 卡里奥卡潘塔纳尔，仅游船 — 每人 R${{p:pantanal}}<br>• <b>蒂茹卡群岛 + 午餐 — 每人 R${{p:tijucas_almoco}}</b><br>• 蒂茹卡群岛，仅游船 — 每人 R${{p:tijucas}}<br><br>🛌 <b>住宿</b><br>房价因旅馆和日期而异。告诉我<b>日期</b>和<b>人数</b>，我帮您确认价格和空房 — 也可以看 <a href=\"hoteis-pousadas.html\">住宿</a> 页面。<br><br>💳 可用现金、Pix 或刷卡，预付 50% 定金锁定预订。",
   "showWhatsapp": true
  },
  {
@@ -627,7 +627,7 @@ const GIGI_BRAIN = [
    "游船",
    "坐船游"
   ],
-  "reply": "我们有两个行程，最受欢迎的是含午餐的那个。🚤<br><br><strong>卡里奥卡潘塔纳尔 + 午餐 — 每人 R$100。</strong>近距离观赏鳄鱼和水豚，在 Restaurante Maracujá da Ilha 用午餐（牛肉、鱼或鸡肉）。每天 8 点至 16 点 30 分，每半小时出发一班。仅游船每人 R$50。<br><br><strong>蒂茹卡群岛 + 午餐 — 每人 R$200。</strong>约 3 至 4 小时，有游泳停靠，船会把您送上岛。仅游船每人 R$150。<br><br>您对哪个更感兴趣？",
+  "reply": "我们有两个行程，最受欢迎的是含午餐的那个。🚤<br><br><strong>卡里奥卡潘塔纳尔 + 午餐 — 每人 R${{p:pantanal_almoco}}。</strong>近距离观赏鳄鱼和水豚，在 Restaurante Maracujá da Ilha 用午餐（牛肉、鱼或鸡肉）。每天 8 点至 16 点 30 分，每半小时出发一班。仅游船每人 R${{p:pantanal}}。<br><br><strong>蒂茹卡群岛 + 午餐 — 每人 R${{p:tijucas_almoco}}。</strong>约 3 至 4 小时，有游泳停靠，船会把您送上岛。仅游船每人 R${{p:tijucas}}。<br><br>您对哪个更感兴趣？",
   "showWhatsapp": true
  },
  {
@@ -1372,7 +1372,7 @@ const GIGI_BRAIN = [
    "caimanes",
    "capibaras"
   ],
-  "reply": "<a href='pantanal-carioca.html'>卡里奥卡潘塔纳尔</a>行程非常适合近距离观赏鳄鱼和水豚！🐊<br><br>仅游船每人 R$50，不过大家更多选的是<strong>含午餐的套餐，每人 R$100</strong>。<br><br>请问是哪一天，几位？",
+  "reply": "<a href='pantanal-carioca.html'>卡里奥卡潘塔纳尔</a>行程非常适合近距离观赏鳄鱼和水豚！🐊<br><br>仅游船每人 R${{p:pantanal}}，不过大家更多选的是<strong>含午餐的套餐，每人 R${{p:pantanal_almoco}}</strong>。<br><br>请问是哪一天，几位？",
   "showWhatsapp": true
  },
  {
@@ -1403,7 +1403,7 @@ const GIGI_BRAIN = [
    "蒂茹卡",
    "茹卡"
   ],
-  "reply": "<a href='ilhas-tijucas.html'>蒂茹卡群岛</a>是我们的宝藏地 — 里约的加勒比！🤿<br><br>约 3 至 4 小时，有游泳停靠，船会把您送上岛。仅游船每人 R$150，<strong>含午餐每人 R$200</strong>。<br><br>周末名额很快满。您想预订哪一天？",
+  "reply": "<a href='ilhas-tijucas.html'>蒂茹卡群岛</a>是我们的宝藏地 — 里约的加勒比！🤿<br><br>约 3 至 4 小时，有游泳停靠，船会把您送上岛。仅游船每人 R${{p:tijucas}}，<strong>含午餐每人 R${{p:tijucas_almoco}}</strong>。<br><br>周末名额很快满。您想预订哪一天？",
   "showWhatsapp": true
  },
  {
@@ -1439,7 +1439,7 @@ const GIGI_BRAIN = [
    "水上摩托",
    "刺激"
   ],
-  "reply": "想玩摩托艇？🚀 10 分钟 R$ 150 · 20 分钟 R$ 250 · 30 分钟 R$ 450 · 1 小时 R$ 750 —— 价格按每台计算（最多 2 人）。30 分钟起时间由您自由安排，预订还可在结束后使用带泳池的休闲区。详情见<a href='jet-ski.html'>摩托艇</a>页面，或在 WhatsApp 上联系我预约！",
+  "reply": "想玩摩托艇？🚀 10 分钟 R$ {{p:jet10}} · 20 分钟 R$ {{p:jet20}} · 30 分钟 R$ {{p:jet30}} · 1 小时 R$ {{p:jet60}} —— 价格按每台计算（最多 2 人）。30 分钟起时间由您自由安排，预订还可在结束后使用带泳池的休闲区。详情见<a href='jet-ski.html'>摩托艇</a>页面，或在 WhatsApp 上联系我预约！",
   "showWhatsapp": true
  },
  {
