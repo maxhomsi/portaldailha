@@ -276,6 +276,7 @@ function mountHeaderFooter() {
           <h3 data-i18n="footer_serv_t">Atendimento</h3>
           <ul>
             <li><a href="https://wa.me/${GIGI.whatsappNumber}" target="_blank">${t("gigi_fab")}</a></li>
+            <li><a href="mailto:contato@ilhadagigoia.com.br">✉️ contato@ilhadagigoia.com.br</a></li>
             <li><a href="${L('/fale-conosco.html')}">${t("nav_fale")}</a></li>
           </ul>
         </div>
