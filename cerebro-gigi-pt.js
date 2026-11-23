@@ -1163,6 +1163,7 @@ const GIGI_BRAIN = [
  {
   "keywords": [
    "pantanal",
+   "everglades",
    "jacare",
    "capivara",
    "natureza",

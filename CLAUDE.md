@@ -502,3 +502,14 @@ Fora da raiz e das 4 pastas de idioma não existe página do site.
 - Conferido em 02/11: os preços em chinês **já existem** (escritos "N 雷亚尔", por isso a
   busca por "R$" não achava) e a Babel em `fr/hoteis-pousadas.html` aparece duas vezes
   (uma escrita "270 R$"). Não eram pendências de verdade
+
+## Pantanal em inglês: "Pantanal Carioca", com "Rio's Everglades" (22/11/2026)
+
+Decisão do Max e do Vini. Em inglês o passeio se chama **Pantanal Carioca** (nunca
+"Carioca Pantanal" — era assim até 22/11 e foi trocado nas 48 páginas `en/`, no
+`dicionario-en.js`, nos cérebros e no `gigi-proxy.php`): é o nome que o cliente usa
+no WhatsApp, na planilha e com o marinheiro. **"Rio's Everglades"** entra como
+explicação (título e descrição da página do Pantanal, cards da home e de passeios),
+nunca no lugar do nome, e sempre com a ressalva de escala: barco comum, 35–40 min,
+não é airboat. As Gigis (site e WhatsApp) entendem "Everglades" como o Pantanal.
+Os outros idiomas não mudaram.

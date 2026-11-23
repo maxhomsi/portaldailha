@@ -127,7 +127,7 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Temos dois passeios imperdíveis! 🚤 O <a href='pantanal-carioca.html'>Pantanal Carioca</a> — você vê jacarés e capivaras de pertinho nos manguezais, sai todo dia, custa <strong>R$50 por pessoa</strong>. E as <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> — nosso Caribe Carioca, 4h em mar aberto com tartarugas marinhas, <strong>R$150 por pessoa</strong>, vagas limitadas! Qual te interessa mais? Posso reservar agora pelo WhatsApp 😊",
       fr: "Nous avons deux excursions à ne pas manquer ! 🚤 Le <a href='pantanal-carioca.html'>Pantanal Carioca</a> — vous voyez caïmans et capybaras de tout près dans les mangroves, départ tous les jours, <strong>R$50 par personne</strong>. Et les <a href='ilhas-tijucas.html'>Ilhas Tijucas</a> — nos Caraïbes cariocas, 4h en pleine mer avec des tortues marines, <strong>R$150 par personne</strong>, places limitées ! Laquelle vous tente le plus ? Je peux réserver tout de suite sur WhatsApp 😊",
-      en: "We have two unmissable tours! 🚤 <a href='pantanal-carioca.html'>Carioca Pantanal</a> — see caimans and capybaras up close in the mangroves, departs daily, <strong>R$50 per person</strong>. And <a href='ilhas-tijucas.html'>Tijucas Islands</a> — our Caribbean, 4h open sea with sea turtles, <strong>R$150 per person</strong>, limited spots! Which one interests you? I can book right now on WhatsApp 😊",
+      en: "We have two unmissable tours! 🚤 <a href='pantanal-carioca.html'>Pantanal Carioca</a> — see caimans and capybaras up close in the mangroves, departs daily, <strong>R$50 per person</strong>. And <a href='ilhas-tijucas.html'>Tijucas Islands</a> — our Caribbean, 4h open sea with sea turtles, <strong>R$150 per person</strong>, limited spots! Which one interests you? I can book right now on WhatsApp 😊",
       es: "¡Tenemos dos tours imperdibles! 🚤 <a href='pantanal-carioca.html'>Pantanal Carioca</a> — ver caimanes y capibaras de cerca, sale todos los días, <strong>R$50 por persona</strong>. Y las <a href='ilhas-tijucas.html'>Islas Tijucas</a> — nuestro Caribe, 4h en mar abierto con tortugas, <strong>R$150 por persona</strong>, ¡cupos limitados! ¿Cuál te interesa? ¡Puedo reservar ahora por WhatsApp 😊",
       zh: "我们有两个必游之旅！🚤 <a href='pantanal-carioca.html'>里约潘塔纳尔</a>——近距离观看凯门鳄和水豚，每天出发，<strong>每人R$50</strong>。还有<a href='ilhas-tijucas.html'>蒂茹卡斯群岛</a>——我们的加勒比海，4小时公海游，海龟相伴，<strong>每人R$150</strong>，名额有限！哪个更感兴趣？我可以立即通过WhatsApp预订😊"
     },
@@ -287,7 +287,7 @@ const GIGI_BRAIN = [
     reply: {
       pt: "Dica de ouro: Como estamos inseridos no Pantanal Carioca, especialmente no final da tarde, é super recomendável trazer um repelente! 🦟 Assim você curte o pôr do sol sem preocupações.",
       fr: "Le bon conseil : comme nous sommes au cœur du Pantanal Carioca, surtout en fin d'après-midi, il est vivement recommandé d'apporter un répulsif ! 🦟 Vous profiterez du coucher de soleil sans soucis.",
-      en: "Golden tip: Since we are in the Carioca Pantanal, especially in the late afternoon, it is highly recommended to bring bug repellent! 🦟",
+      en: "Golden tip: Since we are in the Pantanal Carioca, especially in the late afternoon, it is highly recommended to bring bug repellent! 🦟",
       es: "Consejo de oro: Como estamos en el Pantanal Carioca, especialmente al final de la tarde, ¡es muy recomendable traer repelente de insectos! 🦟",
     }
   },
@@ -418,11 +418,11 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["pantanal", "jacare", "capivara", "natureza", "passaros", "bicho", "fauna", "safari", "alligator", "capybara", "nature", "birds", "caiman", "capibara", "naturaleza", "pajaros", "oiseaux", "faune sauvage"],
+    keywords: ["pantanal", "everglades", "jacare", "capivara", "natureza", "passaros", "bicho", "fauna", "safari", "alligator", "capybara", "nature", "birds", "caiman", "capibara", "naturaleza", "pajaros", "oiseaux", "faune sauvage"],
     reply: {
       pt: "O passeio do <a href='pantanal-carioca.html'>Pantanal Carioca</a> é incrível para ver jacarés e capivaras soltas! 🐊 Custa em média R$ 50 por pessoa e o barco entra fundo nos manguezais.",
       fr: "L'excursion du <a href='pantanal-carioca.html'>Pantanal Carioca</a> est formidable pour voir caïmans et capybaras en liberté ! 🐊 Elle coûte en moyenne R$ 50 par personne et le bateau s'enfonce loin dans les mangroves.",
-      en: "The <a href='pantanal-carioca.html'>Carioca Pantanal</a> tour is amazing to see wild alligators and capybaras! 🐊 It costs ~R$ 50 and goes deep into the mangroves.",
+      en: "The <a href='pantanal-carioca.html'>Pantanal Carioca</a> tour is amazing to see wild alligators and capybaras! 🐊 It costs ~R$ 50 and goes deep into the mangroves.",
       es: "¡El tour del <a href='pantanal-carioca.html'>Pantanal Carioca</a> es increíble para ver caimanes y capibaras salvajes! 🐊 Cuesta ~R$ 50 y se adentra en los manglares."
     }
   },

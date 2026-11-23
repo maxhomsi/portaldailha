@@ -87,7 +87,7 @@ const GIGI_BRAIN = [
    "含不含午餐",
    "有午餐吗"
   ],
-  "reply": "Our current deal: <strong>a boat tour through the Carioca Pantanal plus a set lunch, R${{p:pantanal_almoco}} per person</strong>. 🚤<br><br>Lunch is at Restaurante Maracujá da Ilha — beef, fish or chicken. Departures every half hour, from 8am to 4:30pm.<br><br>Tell me the date and how many people and I'll check availability!<br>It lasts 35 to 40 minutes on average, on a group boat, minimum 2 people. Drinks not included.",
+  "reply": "Our current deal: <strong>a boat tour through the Pantanal Carioca plus a set lunch, R${{p:pantanal_almoco}} per person</strong>. 🚤<br><br>Lunch is at Restaurante Maracujá da Ilha — beef, fish or chicken. Departures every half hour, from 8am to 4:30pm.<br><br>Tell me the date and how many people and I'll check availability!<br>It lasts 35 to 40 minutes on average, on a group boat, minimum 2 people. Drinks not included.",
   "showWhatsapp": true
  },
  {
@@ -104,7 +104,7 @@ const GIGI_BRAIN = [
    "白天使用",
    "一日游"
   ],
-  "reply": "We don't offer day use. 🙂<br><br>What we do have is the <strong>Carioca Pantanal boat tour + lunch for R${{p:pantanal_almoco}} per person</strong>, which makes a great full day.<br><br>Want me to check a date?",
+  "reply": "We don't offer day use. 🙂<br><br>What we do have is the <strong>Pantanal Carioca boat tour + lunch for R${{p:pantanal_almoco}} per person</strong>, which makes a great full day.<br><br>Want me to check a date?",
   "showWhatsapp": true
  },
  {
@@ -129,7 +129,7 @@ const GIGI_BRAIN = [
    "下水",
    "可以游泳吗"
   ],
-  "reply": "Depends on the tour. 🌊<br><br>The <strong>Carioca Pantanal</strong> one (R${{p:pantanal_almoco}} with lunch) has no swimming stop.<br><br>The <strong>Tijucas Islands</strong> one (R${{p:tijucas_almoco}} with lunch, 3 to 4 hours) does stop for a swim and drops you on the island.<br><br>Which one sounds better?",
+  "reply": "Depends on the tour. 🌊<br><br>The <strong>Pantanal Carioca</strong> one (R${{p:pantanal_almoco}} with lunch) has no swimming stop.<br><br>The <strong>Tijucas Islands</strong> one (R${{p:tijucas_almoco}} with lunch, 3 to 4 hours) does stop for a swim and drops you on the island.<br><br>Which one sounds better?",
   "showWhatsapp": true
  },
  {
@@ -239,7 +239,7 @@ const GIGI_BRAIN = [
    "饮料",
    "最少几人"
   ],
-  "reply": "The Carioca Pantanal tour lasts <b>35 to 40 minutes</b> on average. 🚤<br><br>It is a <b>group (shared) boat</b> and runs with a <b>minimum of 2 people</b>. Departures every half hour, from 8am to 4:30pm.<br><br>The <b>R${{p:pantanal_almoco}} per person</b> package covers the tour and the set lunch — <b>drinks are not included</b>.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the time!",
+  "reply": "The Pantanal Carioca tour lasts <b>35 to 40 minutes</b> on average. 🚤<br><br>It is a <b>group (shared) boat</b> and runs with a <b>minimum of 2 people</b>. Departures every half hour, from 8am to 4:30pm.<br><br>The <b>R${{p:pantanal_almoco}} per person</b> package covers the tour and the set lunch — <b>drinks are not included</b>.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the time!",
   "showWhatsapp": true
  },
  {
@@ -249,7 +249,7 @@ const GIGI_BRAIN = [
    "fantasia",
    "pousada fantasia"
   ],
-  "reply": "<a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a> sits by the lagoon, minutes from Jardim Oceânico metro. 🚤 Five rooms with air conditioning and private bathroom, a pool and a deck over the water — and breakfast plus a boat tour through the Carioca Pantanal come with the rate. Want me to check availability?",
+  "reply": "<a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a> sits by the lagoon, minutes from Jardim Oceânico metro. 🚤 Five rooms with air conditioning and private bathroom, a pool and a deck over the water — and breakfast plus a boat tour through the Pantanal Carioca come with the rate. Want me to check availability?",
   "showWhatsapp": true
  },
  {
@@ -365,7 +365,7 @@ const GIGI_BRAIN = [
    "disponibilite",
    "combien pour"
   ],
-  "reply": "I can give you the prices right now! 💰<br><br>🚤 <b>Boat tours</b><br>• <b>Carioca Pantanal + lunch — R${{p:pantanal_almoco}} per person</b> (our current deal)<br>• Carioca Pantanal, tour only — R${{p:pantanal}} per person<br>• <b>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person</b><br>• Tijucas Islands, tour only — R${{p:tijucas}} per person<br><br>🛌 <b>Places to stay</b><br>Nightly rates change by inn and by date. Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the price and availability — or browse them on <a href=\"hoteis-pousadas.html\">where to stay</a>.<br><br>💳 Cash, Pix or card, with a 50% deposit to secure the booking.",
+  "reply": "I can give you the prices right now! 💰<br><br>🚤 <b>Boat tours</b><br>• <b>Pantanal Carioca + lunch — R${{p:pantanal_almoco}} per person</b> (our current deal)<br>• Pantanal Carioca, tour only — R${{p:pantanal}} per person<br>• <b>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person</b><br>• Tijucas Islands, tour only — R${{p:tijucas}} per person<br><br>🛌 <b>Places to stay</b><br>Nightly rates change by inn and by date. Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the price and availability — or browse them on <a href=\"hoteis-pousadas.html\">where to stay</a>.<br><br>💳 Cash, Pix or card, with a 50% deposit to secure the booking.",
   "showWhatsapp": true
  },
  {
@@ -575,7 +575,7 @@ const GIGI_BRAIN = [
    "activite",
    "quoi faire"
   ],
-  "reply": "We have two tours, and the one with lunch is the most popular. 🚤<br><br><strong>Carioca Pantanal + lunch — R${{p:pantanal_almoco}} per person.</strong> You see caimans and capybaras up close in the mangroves and have lunch at Restaurante Maracujá da Ilha (beef, fish or chicken). Departures every half hour, from 8am to 4:30pm. Tour only is R${{p:pantanal}}.<br><br><strong>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person.</strong> About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R${{p:tijucas}}.<br><br>Which one sounds better?",
+  "reply": "We have two tours, and the one with lunch is the most popular. 🚤<br><br><strong>Pantanal Carioca + lunch — R${{p:pantanal_almoco}} per person.</strong> You see caimans and capybaras up close in the mangroves and have lunch at Restaurante Maracujá da Ilha (beef, fish or chicken). Departures every half hour, from 8am to 4:30pm. Tour only is R${{p:pantanal}}.<br><br><strong>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person.</strong> About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R${{p:tijucas}}.<br><br>Which one sounds better?",
   "showWhatsapp": true
  },
  {
@@ -619,7 +619,7 @@ const GIGI_BRAIN = [
    "cuanto cuesta la posada",
    "prix de la chambre"
   ],
-  "reply": "🏡 <b>Places to stay on Ilha da Gigóia</b><br><br>⭐ <b>Our pick</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — right on the lagoon, pool and deck over the water. <b>Breakfast and a Carioca Pantanal boat tour included in the rate.</b> Price depends on the date.<br><br>🛌 <b>Inns</b><br><a href=\"veneza-carioca.html\">Veneza Carioca Hotel Boutique</a> — from R$650 per night<br><a href=\"casanova.html\">Casanova Residence</a> — from R$650 per night<br><br>🏖️ <b>Vacation homes (the whole house)</b><br><a href=\"lux-48.html\">Lux 48</a> — from R$250 per night, up to 4 guests<br><a href=\"casa-venti.html\">Casa Venti</a> — from R$450 per night, up to 7 guests (pets welcome 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — from R$500 per night, up to 8 guests<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — from R$1.500 per night, up to 16 guests with a pool 🏊<br><br>Rates change with the date and the season.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the exact price and availability 😊",
+  "reply": "🏡 <b>Places to stay on Ilha da Gigóia</b><br><br>⭐ <b>Our pick</b><br><b><a href=\"pousada-ilha-fantasia.html\">Pousada Ilha da Fantasia</a></b> — right on the lagoon, pool and deck over the water. <b>Breakfast and a Pantanal Carioca boat tour included in the rate.</b> Price depends on the date.<br><br>🛌 <b>Inns</b><br><a href=\"veneza-carioca.html\">Veneza Carioca Hotel Boutique</a> — from R$650 per night<br><a href=\"casanova.html\">Casanova Residence</a> — from R$650 per night<br><br>🏖️ <b>Vacation homes (the whole house)</b><br><a href=\"lux-48.html\">Lux 48</a> — from R$250 per night, up to 4 guests<br><a href=\"casa-venti.html\">Casa Venti</a> — from R$450 per night, up to 7 guests (pets welcome 🐾)<br><a href=\"casa-goia.html\">Casa Goiá</a> — from R$500 per night, up to 8 guests<br><a href=\"casa-estatua.html\">Casa da Estátua</a> — from R$1.500 per night, up to 16 guests with a pool 🏊<br><br>Rates change with the date and the season.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the exact price and availability 😊",
   "showWhatsapp": true
  },
  {
@@ -854,7 +854,7 @@ const GIGI_BRAIN = [
    "repulsif",
    "insecte"
   ],
-  "reply": "Golden tip: Since we are in the Carioca Pantanal, especially in the late afternoon, it is highly recommended to bring bug repellent! 🦟"
+  "reply": "Golden tip: Since we are in the Pantanal Carioca, especially in the late afternoon, it is highly recommended to bring bug repellent! 🦟"
  },
  {
   "keywords": [
@@ -1159,6 +1159,7 @@ const GIGI_BRAIN = [
  {
   "keywords": [
    "pantanal",
+   "everglades",
    "jacare",
    "capivara",
    "natureza",
@@ -1179,7 +1180,7 @@ const GIGI_BRAIN = [
    "caimanes",
    "capibaras"
   ],
-  "reply": "The <a href='pantanal-carioca.html'>Carioca Pantanal</a> tour is great for seeing caimans and capybaras in the wild! 🐊<br><br>The tour alone is R${{p:pantanal}} per person, but most people take the package with <strong>lunch included for R${{p:pantanal_almoco}} per person</strong> — much better value.<br><br>What date, and how many people?",
+  "reply": "The <a href='pantanal-carioca.html'>Pantanal Carioca</a> tour — Rio's own Everglades — is great for seeing caimans and capybaras in the wild! 🐊<br><br>The tour alone is R${{p:pantanal}} per person, but most people take the package with <strong>lunch included for R${{p:pantanal_almoco}} per person</strong> — much better value.<br><br>What date, and how many people?",
   "showWhatsapp": true
  },
  {
@@ -1594,7 +1595,7 @@ const GIGI_BRAIN = [
    "plus proche du metro",
    "meilleur emplacement"
   ],
-  "reply": "My pick is the <a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a>: right on the lagoon, minutes from Jardim Oceânico metro, with a pool and a deck over the water. 🏡<br><br>Breakfast and a boat tour through the Carioca Pantanal are included in the nightly rate.<br><br>Want me to check availability?",
+  "reply": "My pick is the <a href='pousada-ilha-fantasia.html'>Pousada Ilha da Fantasia</a>: right on the lagoon, minutes from Jardim Oceânico metro, with a pool and a deck over the water. 🏡<br><br>Breakfast and a boat tour through the Pantanal Carioca are included in the nightly rate.<br><br>Want me to check availability?",
   "showWhatsapp": true
  },
  {
