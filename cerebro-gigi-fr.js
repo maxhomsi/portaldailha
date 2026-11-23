@@ -88,7 +88,7 @@ const GIGI_BRAIN = [
    "含不含午餐",
    "有午餐吗"
   ],
-  "reply": "Notre promotion du moment : <strong>balade en bateau dans le Pantanal Carioca + déjeuner pour R${{p:pantanal_almoco}} par personne</strong>. 🚤<br><br>Le déjeuner est au Restaurante Maracujá da Ilha — viande, poisson ou poulet. Départs toutes les demi-heures, de 8h à 16h30.<br><br>Dites-moi la date et le nombre de personnes et je regarde les disponibilités !<br>Elle dure en moyenne 35 à 40 minutes, en bateau collectif, minimum 2 personnes. Boissons non incluses.",
+  "reply": "Notre promotion du moment : <strong>balade en bateau dans le Pantanal Carioca + déjeuner pour R${{p:pantanal_almoco}} par personne</strong>. 🚤<br><br>Le déjeuner est au Restaurante Maracujá da Ilha — viande, poisson ou poulet. Départs toutes les demi-heures, de 8h à 17h30.<br><br>Dites-moi la date et le nombre de personnes et je regarde les disponibilités !<br>Elle dure en moyenne 35 à 40 minutes, en bateau collectif, minimum 2 personnes. Boissons non incluses.",
   "showWhatsapp": true
  },
  {
@@ -208,7 +208,7 @@ const GIGI_BRAIN = [
    "a que hora empieza",
    "a quelle heure ca commence"
   ],
-  "reply": "Nous avons des départs <strong>toutes les demi-heures, de 8h à 16h30</strong>. ⏰<br><br>Dites-moi la date et le nombre de personnes et je trouve le meilleur horaire.",
+  "reply": "Nous avons des départs <strong>toutes les demi-heures, de 8h à 17h30</strong>. ⏰<br><br>Dites-moi la date et le nombre de personnes et je trouve le meilleur horaire.",
   "showWhatsapp": true
  },
  {
@@ -229,7 +229,7 @@ const GIGI_BRAIN = [
    "les boissons sont incluses",
    "boisson"
   ],
-  "reply": "La balade du Pantanal Carioca dure en moyenne <b>35 à 40 minutes</b>. 🚤<br><br>Le bateau est <b>collectif</b> (partagé) et part avec un <b>minimum de 2 personnes</b>. Départs toutes les demi-heures, de 8h à 16h30.<br><br>Le forfait à <b>R${{p:pantanal_almoco}} par personne</b> comprend la balade et le déjeuner — <b>les boissons ne sont pas incluses</b>.<br><br>Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme l'horaire !",
+  "reply": "La balade du Pantanal Carioca dure en moyenne <b>35 à 40 minutes</b>. 🚤<br><br>Le bateau est <b>collectif</b> (partagé) et part avec un <b>minimum de 2 personnes</b>. Départs toutes les demi-heures, de 8h à 17h30.<br><br>Le forfait à <b>R${{p:pantanal_almoco}} par personne</b> comprend la balade et le déjeuner — <b>les boissons ne sont pas incluses</b>.<br><br>Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme l'horaire !",
   "showWhatsapp": true
  },
  {
@@ -565,7 +565,7 @@ const GIGI_BRAIN = [
    "activite",
    "quoi faire"
   ],
-  "reply": "Nous avons deux sorties, et la plus demandée est celle avec le déjeuner. 🚤<br><br><strong>Pantanal Carioca + déjeuner — R${{p:pantanal_almoco}} par personne.</strong> Vous voyez des caïmans et des capybaras de près dans la mangrove et vous déjeunez au Restaurante Maracujá da Ilha (viande, poisson ou poulet). Départs toutes les demi-heures, de 8h à 16h30. La balade seule est à R${{p:pantanal}}.<br><br><strong>Ilhas Tijucas + déjeuner — R${{p:tijucas_almoco}} par personne.</strong> Environ 3 à 4 heures, avec arrêt baignade, et le bateau vous dépose sur l'île. La balade seule est à R${{p:tijucas}}.<br><br>Laquelle vous tente le plus ?",
+  "reply": "Nous avons deux sorties, et la plus demandée est celle avec le déjeuner. 🚤<br><br><strong>Pantanal Carioca + déjeuner — R${{p:pantanal_almoco}} par personne.</strong> Vous voyez des caïmans et des capybaras de près dans la mangrove et vous déjeunez au Restaurante Maracujá da Ilha (viande, poisson ou poulet). Départs toutes les demi-heures, de 8h à 17h30. La balade seule est à R${{p:pantanal}}.<br><br><strong>Ilhas Tijucas + déjeuner — R${{p:tijucas_almoco}} par personne.</strong> Environ 3 à 4 heures, avec arrêt baignade, et le bateau vous dépose sur l'île. La balade seule est à R${{p:tijucas}}.<br><br>Laquelle vous tente le plus ?",
   "showWhatsapp": true
  },
  {

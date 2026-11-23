@@ -88,7 +88,7 @@ const GIGI_BRAIN = [
    "含不含午餐",
    "有午餐吗"
   ],
-  "reply": "Nuestra promoción del momento: <strong>paseo en barco por el Pantanal Carioca + almuerzo ejecutivo por R${{p:pantanal_almoco}} por persona</strong>. 🚤<br><br>El almuerzo es en el Restaurante Maracujá da Ilha, con carne, pescado o pollo. Salidas cada media hora, de 8h a 16h30.<br><br>¡Dime la fecha y cuántas personas y miro la disponibilidad!<br>Dura en promedio 35 a 40 minutos, en barco de grupo, mínimo 2 personas. Bebida no incluida.",
+  "reply": "Nuestra promoción del momento: <strong>paseo en barco por el Pantanal Carioca + almuerzo ejecutivo por R${{p:pantanal_almoco}} por persona</strong>. 🚤<br><br>El almuerzo es en el Restaurante Maracujá da Ilha, con carne, pescado o pollo. Salidas cada media hora, de 8h a 17h30.<br><br>¡Dime la fecha y cuántas personas y miro la disponibilidad!<br>Dura en promedio 35 a 40 minutos, en barco de grupo, mínimo 2 personas. Bebida no incluida.",
   "showWhatsapp": true
  },
  {
@@ -207,7 +207,7 @@ const GIGI_BRAIN = [
    "a que hora empieza",
    "a quelle heure ca commence"
   ],
-  "reply": "Tenemos salidas <strong>cada media hora, de 8h a 16h30</strong>. ⏰<br><br>Dime la fecha y cuántas personas y busco el mejor horario.",
+  "reply": "Tenemos salidas <strong>cada media hora, de 8h a 17h30</strong>. ⏰<br><br>Dime la fecha y cuántas personas y busco el mejor horario.",
   "showWhatsapp": true
  },
  {
@@ -229,7 +229,7 @@ const GIGI_BRAIN = [
    "la bebida esta incluida",
    "bebida"
   ],
-  "reply": "El paseo del Pantanal Carioca dura en promedio <b>35 a 40 minutos</b>. 🚤<br><br>El barco es <b>de grupo</b> (compartido) y sale con un <b>mínimo de 2 personas</b>. Salidas cada media hora, de 8h a 16h30.<br><br>El paquete de <b>R${{p:pantanal_almoco}} por persona</b> incluye el paseo y el almuerzo ejecutivo — <b>la bebida no está incluida</b>.<br><br>¡Dime la <b>fecha</b> y <b>cuántas personas</b> y confirmo el horario!",
+  "reply": "El paseo del Pantanal Carioca dura en promedio <b>35 a 40 minutos</b>. 🚤<br><br>El barco es <b>de grupo</b> (compartido) y sale con un <b>mínimo de 2 personas</b>. Salidas cada media hora, de 8h a 17h30.<br><br>El paquete de <b>R${{p:pantanal_almoco}} por persona</b> incluye el paseo y el almuerzo ejecutivo — <b>la bebida no está incluida</b>.<br><br>¡Dime la <b>fecha</b> y <b>cuántas personas</b> y confirmo el horario!",
   "showWhatsapp": true
  },
  {
@@ -565,7 +565,7 @@ const GIGI_BRAIN = [
    "activite",
    "quoi faire"
   ],
-  "reply": "Tenemos dos paseos, y el más pedido es el que incluye almuerzo. 🚤<br><br><strong>Pantanal Carioca + almuerzo — R${{p:pantanal_almoco}} por persona.</strong> Ves caimanes y capibaras de cerca en los manglares y almuerzas en el Restaurante Maracujá da Ilha (carne, pescado o pollo). Salidas cada media hora, de 8h a 16h30. Solo el paseo son R${{p:pantanal}}.<br><br><strong>Islas Tijucas + almuerzo — R${{p:tijucas_almoco}} por persona.</strong> De 3 a 4 horas, con parada para bañarse, y el barco te deja en la isla. Solo el paseo son R${{p:tijucas}}.<br><br>¿Cuál te interesa más?",
+  "reply": "Tenemos dos paseos, y el más pedido es el que incluye almuerzo. 🚤<br><br><strong>Pantanal Carioca + almuerzo — R${{p:pantanal_almoco}} por persona.</strong> Ves caimanes y capibaras de cerca en los manglares y almuerzas en el Restaurante Maracujá da Ilha (carne, pescado o pollo). Salidas cada media hora, de 8h a 17h30. Solo el paseo son R${{p:pantanal}}.<br><br><strong>Islas Tijucas + almuerzo — R${{p:tijucas_almoco}} por persona.</strong> De 3 a 4 horas, con parada para bañarse, y el barco te deja en la isla. Solo el paseo son R${{p:tijucas}}.<br><br>¿Cuál te interesa más?",
   "showWhatsapp": true
  },
  {

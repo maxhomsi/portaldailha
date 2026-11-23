@@ -87,7 +87,7 @@ const GIGI_BRAIN = [
    "含不含午餐",
    "有午餐吗"
   ],
-  "reply": "Our current deal: <strong>a boat tour through the Pantanal Carioca plus a set lunch, R${{p:pantanal_almoco}} per person</strong>. 🚤<br><br>Lunch is at Restaurante Maracujá da Ilha — beef, fish or chicken. Departures every half hour, from 8am to 4:30pm.<br><br>Tell me the date and how many people and I'll check availability!<br>It lasts 35 to 40 minutes on average, on a group boat, minimum 2 people. Drinks not included.",
+  "reply": "Our current deal: <strong>a boat tour through the Pantanal Carioca plus a set lunch, R${{p:pantanal_almoco}} per person</strong>. 🚤<br><br>Lunch is at Restaurante Maracujá da Ilha — beef, fish or chicken. Departures every half hour, from 8am to 5:30pm.<br><br>Tell me the date and how many people and I'll check availability!<br>It lasts 35 to 40 minutes on average, on a group boat, minimum 2 people. Drinks not included.",
   "showWhatsapp": true
  },
  {
@@ -208,7 +208,7 @@ const GIGI_BRAIN = [
    "a que hora empieza",
    "a quelle heure ca commence"
   ],
-  "reply": "We have departures <strong>every half hour, from 8am to 4:30pm</strong>. ⏰<br><br>Tell me the date and how many people and I'll find the best time.",
+  "reply": "We have departures <strong>every half hour, from 8am to 5:30pm</strong>. ⏰<br><br>Tell me the date and how many people and I'll find the best time.",
   "showWhatsapp": true
  },
  {
@@ -239,7 +239,7 @@ const GIGI_BRAIN = [
    "饮料",
    "最少几人"
   ],
-  "reply": "The Pantanal Carioca tour lasts <b>35 to 40 minutes</b> on average. 🚤<br><br>It is a <b>group (shared) boat</b> and runs with a <b>minimum of 2 people</b>. Departures every half hour, from 8am to 4:30pm.<br><br>The <b>R${{p:pantanal_almoco}} per person</b> package covers the tour and the set lunch — <b>drinks are not included</b>.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the time!",
+  "reply": "The Pantanal Carioca tour lasts <b>35 to 40 minutes</b> on average. 🚤<br><br>It is a <b>group (shared) boat</b> and runs with a <b>minimum of 2 people</b>. Departures every half hour, from 8am to 5:30pm.<br><br>The <b>R${{p:pantanal_almoco}} per person</b> package covers the tour and the set lunch — <b>drinks are not included</b>.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the time!",
   "showWhatsapp": true
  },
  {
@@ -575,7 +575,7 @@ const GIGI_BRAIN = [
    "activite",
    "quoi faire"
   ],
-  "reply": "We have two tours, and the one with lunch is the most popular. 🚤<br><br><strong>Pantanal Carioca + lunch — R${{p:pantanal_almoco}} per person.</strong> You see caimans and capybaras up close in the mangroves and have lunch at Restaurante Maracujá da Ilha (beef, fish or chicken). Departures every half hour, from 8am to 4:30pm. Tour only is R${{p:pantanal}}.<br><br><strong>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person.</strong> About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R${{p:tijucas}}.<br><br>Which one sounds better?",
+  "reply": "We have two tours, and the one with lunch is the most popular. 🚤<br><br><strong>Pantanal Carioca + lunch — R${{p:pantanal_almoco}} per person.</strong> You see caimans and capybaras up close in the mangroves and have lunch at Restaurante Maracujá da Ilha (beef, fish or chicken). Departures every half hour, from 8am to 5:30pm. Tour only is R${{p:pantanal}}.<br><br><strong>Tijucas Islands + lunch — R${{p:tijucas_almoco}} per person.</strong> About 3 to 4 hours, with a swimming stop, and the boat drops you on the island. Tour only is R${{p:tijucas}}.<br><br>Which one sounds better?",
   "showWhatsapp": true
  },
  {
