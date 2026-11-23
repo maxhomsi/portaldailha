@@ -84,6 +84,14 @@ ErrorDocument 404 /404.shtml
   RewriteRule ^(.*)$ https://www.ilhadagigoia.com.br/$1 [R=301,L]
 </IfModule>
 
+# ── PAGINA DE PAGAMENTO (23/11/2026): /pagar/<token> abre a mesma pagina, que le o
+#    token do endereco. Interno (sem redirecionar). A Gigi confere que isto funciona
+#    antes de mandar o link nesse formato; sem isto ela usa /pagar/?r=<token>.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^pagar/[A-Za-z0-9_-]{16,40}/?$ /pagar/index.html [L]
+</IfModule>
+
 # ── /links.html nao existe mais, mas o Google ainda conhece o endereco (404 no
 #    Search Console em 25/10/2026). Manda para a home em vez de dar erro.
 <IfModule mod_rewrite.c>

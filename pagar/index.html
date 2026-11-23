@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-pagina="pagamento-gigi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Pagamento da reserva · Portal Ilha da Gigóia</title>
+<meta name="description" content="Página oficial de pagamento das reservas do Portal Ilha da Gigóia.">
+<meta property="og:title" content="Pagamento da reserva · Portal Ilha da Gigóia">
+<meta property="og:description" content="Página oficial de pagamento · ilhadagigoia.com.br">
+<meta property="og:image" content="https://www.ilhadagigoia.com.br/assets/hero.jpg">
+<meta property="og:site_name" content="Portal Ilha da Gigóia">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!--
+  PAGINA DE PAGAMENTO DO SINAL (23/11/2026, Max e Vinicius).
+  A Gigi manda pro cliente ilhadagigoia.com.br/pagar/<token>. Esta pagina pede os dados
+  ao /pagar/dados.php, que pergunta a Gigi no Railway. Aqui nao tem segredo nenhum:
+  sem um token valido, nao aparece nada.
+  Depois que o Pix cai, a pagina vira "Pagamento confirmado" sozinha (consulta a cada 8 s).
+  O atributo data-pagina="pagamento-gigi" e' o que a Gigi procura pra saber que o
+  endereco /pagar/<token> funciona. Nao remova.
+-->
+<style>
+:root{--green:#47b05a;--green-dark:#2f8a41;--yellow:#f2c200;--text:#1d2320;--muted:#6b726e;--bg:#eef7ef;--line:#e2e8e3}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{font-family:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+.top{background:var(--green);color:#fff;padding:12px 16px}
+.top .in{max-width:520px;margin:0 auto;display:flex;align-items:center;gap:10px}
+.top img{width:46px;height:auto;flex:none}
+.top b{font-size:17px;display:block}
+.top small{font-size:12px;opacity:.92}
+.langs{max-width:520px;margin:0 auto;padding:10px 16px 0;text-align:right;font-size:12.5px;color:var(--muted)}
+.langs button{background:none;border:0;color:var(--muted);font:inherit;cursor:pointer;padding:2px 3px}
+.langs button.on{color:var(--text);font-weight:800;text-decoration:underline}
+.wrap{max-width:520px;margin:0 auto;padding:12px 16px 8px}
+.card{background:#fff;border-radius:18px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tag{display:inline-block;background:#e7f6ea;color:var(--green-dark);font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:20px;margin-bottom:10px}
+h1{font-size:21px;margin-bottom:10px;font-weight:800}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.row span:first-child{color:var(--muted);flex:none}
+.row span:last-child{text-align:right;font-weight:600}
+.aprox{display:block;font-size:12.5px;color:var(--muted);font-weight:600}
+.sinal{background:var(--text);color:#fff;border-radius:14px;padding:14px 16px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.sinal .l{font-size:14px;line-height:1.35}
+.sinal .l small{display:block;opacity:.72;font-size:12.5px}
+.sinal .v{text-align:right;flex:none}
+.sinal .v b{font-size:26px;color:var(--yellow);font-weight:800;white-space:nowrap}
+.sinal .v small{display:block;font-size:12.5px;opacity:.8}
+.pix{text-align:center}
+.pix h2{font-size:18px}
+.pix .sub{font-size:13px;color:var(--muted);margin-top:2px}
+.pix img{width:230px;max-width:80%;height:auto;margin:12px auto 4px;display:block;image-rendering:pixelated}
+.btn{display:block;width:100%;background:var(--green);color:#fff;border:0;border-radius:13px;padding:15px;font:800 16px 'Manrope',sans-serif;margin-top:10px;cursor:pointer}
+.btn.ok{background:var(--green-dark)}
+.auto{font-size:13px;color:var(--muted);margin-top:8px}
+.rec{font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:14px;background:#f6faf6;border-radius:12px;padding:11px 12px;text-align:left}
+.rec b{color:var(--text)}
+.wise h3{font-size:15.5px;margin-bottom:6px}
+.wise p{font-size:14px;line-height:1.5;color:#3d4541}
+.nota{font-size:12.5px;color:var(--muted);margin-top:8px}
+.dep .stars{color:var(--yellow);font-size:17px;letter-spacing:1px}
+.dep blockquote{font-size:14px;line-height:1.5;font-style:italic;margin-top:4px}
+.dep figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+.foot{text-align:center;font-size:12px;color:var(--muted);padding:6px 16px 26px;line-height:1.7}
+.foot a{color:var(--muted)}
+.estado{text-align:center;padding:30px 18px}
+.estado .ic{font-size:52px;line-height:1}
+.estado h1{margin:12px 0 8px;font-size:22px}
+.estado p{font-size:14.5px;color:#3d4541;line-height:1.55}
+.estado.pago .ic{display:inline-flex;align-items:center;justify-content:center;width:84px;height:84px;border-radius:50%;background:var(--green);color:#fff;font-size:44px;animation:pop .5s ease-out}
+@keyframes pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+.carregando{text-align:center;color:var(--muted);padding:60px 0;font-size:14px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <img src="/assets/logo-sem-fundo.png" alt="" width="46" height="36">
+  <div><b>Portal Ilha da Gigóia</b><small id="t_oficial">ilhadagigoia.com.br · pagamento oficial</small></div>
+</div></header>
+<div class="langs" id="langs"></div>
+<main class="wrap" id="app"><div class="carregando" id="t_carregando">Carregando sua reserva…</div></main>
+<footer class="foot" id="foot"></footer>
+
+<script>var currentLang = 'pt';</script>
+<script src="/depoimentos.js" defer></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- textos (5 idiomas) ---------- */
+  var T = {
+    pt: { oficial: 'ilhadagigoia.com.br · pagamento oficial', carregando: 'Carregando sua reserva…',
+      vaga: '✓ Vaga disponível', reserva: 'Reserva', passeio: 'Passeio', data: 'Data', pessoas: 'Pessoas', nome: 'Nome', total: 'Total',
+      sinal: 'Sinal (50%)', resto: 'o resto, {v}, é pago {onde}',
+      onde: { barqueiro: 'no barco', restaurante: 'no restaurante', jet: 'no jet ski', dia: 'no dia do passeio' },
+      pagueCom: 'Pague com Pix', pixSub: 'o pagamento instantâneo do Brasil', copiar: 'Copiar código Pix', copiado: '✓ Código copiado! Cole no app do seu banco',
+      auto: '⏱ Confirmação automática em até 1 minuto', manual: '📎 Depois de pagar, mande o comprovante para a Gigi no WhatsApp.',
+      recebe: 'Você vai pagar para', doc: 'CNPJ', confira: 'Confira esse nome no app do seu banco antes de confirmar.',
+      wiseT: '🌍 Pagando de fora do Brasil?', wise: 'Abra o app <b>Wise</b>, toque em <b>Escanear</b> e aponte para o QR Code acima. Ele paga em reais a partir da sua moeda e mostra o valor exato antes de você confirmar.',
+      aprox: 'Valores em {m} aproximados; o pagamento é em reais.',
+      depT: 'Quem já foi, conta',
+      pagoT: 'Pagamento confirmado!', pagoP: 'Sua reserva <b>{c}</b> está garantida. 🎉 A confirmação também foi para o seu WhatsApp. Até já na Ilha da Gigóia!',
+      pagoResto: 'No dia, o restante ({v}) é pago {onde}.',
+      cancT: 'Reserva cancelada', cancP: 'Esta reserva foi cancelada. Se tiver alguma dúvida, fale com a Gigi no WhatsApp.',
+      esperaT: 'Estamos conferindo a vaga', esperaP: 'Assim que a equipe confirmar, a Gigi te manda o pagamento pelo WhatsApp.',
+      erroT: 'Link não encontrado', erroP: 'Esse link não existe ou já não vale. Peça um novo para a Gigi no WhatsApp.',
+      foraT: 'Não consegui carregar agora', foraP: 'Tente de novo em alguns instantes. Se continuar, fale com a Gigi no WhatsApp.',
+      termos: 'Cancelamento e chuva', duvidas: 'Dúvidas? Fale com a Gigi no WhatsApp',
+      semAlmoco: '(sem almoço)', comAlmoco: '+ Almoço', pessoa: ['pessoa', 'pessoas'], as: 'às' },
+    en: { oficial: 'ilhadagigoia.com.br · official payment page', carregando: 'Loading your reservation…',
+      vaga: '✓ Spot available', reserva: 'Reservation', passeio: 'Tour', data: 'Date', pessoas: 'People', nome: 'Name', total: 'Total',
+      sinal: 'Deposit (50%)', resto: 'the rest, {v}, is paid {onde}',
+      onde: { barqueiro: 'on the boat', restaurante: 'at the restaurant', jet: 'at the jet ski', dia: 'on the day of the tour' },
+      pagueCom: 'Pay with Pix', pixSub: "Brazil's instant payment", copiar: 'Copy Pix code', copiado: '✓ Code copied! Paste it in your banking app',
+      auto: '⏱ Automatic confirmation within 1 minute', manual: '📎 After paying, send the receipt to Gigi on WhatsApp.',
+      recebe: 'You are paying', doc: 'CNPJ (company ID)', confira: 'Check this name in your app before confirming.',
+      wiseT: '🌍 Paying from outside Brazil?', wise: 'Open the <b>Wise</b> app, tap <b>Scan</b> and point at the QR code above. It pays in reais from your own currency and shows the exact amount before you confirm.',
+      aprox: '{m} amounts are approximate; payment is in reais.',
+      depT: 'What our guests say',
+      pagoT: 'Payment confirmed!', pagoP: 'Your reservation <b>{c}</b> is secured. 🎉 The confirmation was also sent to your WhatsApp. See you on Ilha da Gigóia!',
+      pagoResto: 'On the day, the rest ({v}) is paid {onde}.',
+      cancT: 'Reservation cancelled', cancP: 'This reservation was cancelled. If you have any questions, talk to Gigi on WhatsApp.',
+      esperaT: 'We are checking availability', esperaP: 'As soon as the team confirms, Gigi will send you the payment on WhatsApp.',
+      erroT: 'Link not found', erroP: 'This link does not exist or is no longer valid. Ask Gigi for a new one on WhatsApp.',
+      foraT: 'Could not load right now', foraP: 'Please try again in a moment. If it continues, talk to Gigi on WhatsApp.',
+      termos: 'Cancellation & rain policy', duvidas: 'Questions? Talk to Gigi on WhatsApp',
+      semAlmoco: '(no lunch)', comAlmoco: '+ Lunch', pessoa: ['person', 'people'], as: 'at' },
+    es: { oficial: 'ilhadagigoia.com.br · página oficial de pago', carregando: 'Cargando tu reserva…',
+      vaga: '✓ Lugar disponible', reserva: 'Reserva', passeio: 'Paseo', data: 'Fecha', pessoas: 'Personas', nome: 'Nombre', total: 'Total',
+      sinal: 'Seña (50%)', resto: 'el resto, {v}, se paga {onde}',
+      onde: { barqueiro: 'en el barco', restaurante: 'en el restaurante', jet: 'en el jet ski', dia: 'el día del paseo' },
+      pagueCom: 'Paga con Pix', pixSub: 'el pago instantáneo de Brasil', copiar: 'Copiar código Pix', copiado: '✓ ¡Código copiado! Pégalo en la app de tu banco',
+      auto: '⏱ Confirmación automática en hasta 1 minuto', manual: '📎 Después de pagar, envía el comprobante a Gigi por WhatsApp.',
+      recebe: 'Vas a pagar a', doc: 'CNPJ (ID de la empresa)', confira: 'Confirma este nombre en tu app antes de pagar.',
+      wiseT: '🌍 ¿Pagas desde fuera de Brasil?', wise: 'Abre la app <b>Wise</b>, toca <b>Escanear</b> y apunta al código QR de arriba. Paga en reales desde tu moneda y muestra el valor exacto antes de confirmar.',
+      aprox: 'Los valores en {m} son aproximados; el pago es en reales.',
+      depT: 'Lo que dicen los visitantes',
+      pagoT: '¡Pago confirmado!', pagoP: 'Tu reserva <b>{c}</b> está garantizada. 🎉 La confirmación también llegó a tu WhatsApp. ¡Nos vemos en la Ilha da Gigóia!',
+      pagoResto: 'El día del paseo, el resto ({v}) se paga {onde}.',
+      cancT: 'Reserva cancelada', cancP: 'Esta reserva fue cancelada. Si tienes dudas, habla con Gigi por WhatsApp.',
+      esperaT: 'Estamos verificando la disponibilidad', esperaP: 'En cuanto el equipo confirme, Gigi te enviará el pago por WhatsApp.',
+      erroT: 'Enlace no encontrado', erroP: 'Este enlace no existe o ya no es válido. Pide uno nuevo a Gigi por WhatsApp.',
+      foraT: 'No se pudo cargar ahora', foraP: 'Inténtalo de nuevo en un momento. Si sigue, habla con Gigi por WhatsApp.',
+      termos: 'Cancelación y lluvia', duvidas: '¿Dudas? Habla con Gigi por WhatsApp',
+      semAlmoco: '(sin almuerzo)', comAlmoco: '+ Almuerzo', pessoa: ['persona', 'personas'], as: 'a las' },
+    fr: { oficial: 'ilhadagigoia.com.br · page de paiement officielle', carregando: 'Chargement de votre réservation…',
+      vaga: '✓ Place disponible', reserva: 'Réservation', passeio: 'Balade', data: 'Date', pessoas: 'Personnes', nome: 'Nom', total: 'Total',
+      sinal: 'Acompte (50 %)', resto: 'le reste, {v}, se paie {onde}',
+      onde: { barqueiro: 'sur le bateau', restaurante: 'au restaurant', jet: 'au jet ski', dia: 'le jour de la balade' },
+      pagueCom: 'Payer avec Pix', pixSub: 'le paiement instantané du Brésil', copiar: 'Copier le code Pix', copiado: '✓ Code copié ! Collez-le dans votre app bancaire',
+      auto: '⏱ Confirmation automatique en moins d’1 minute', manual: '📎 Après le paiement, envoyez le reçu à Gigi sur WhatsApp.',
+      recebe: 'Vous payez', doc: 'CNPJ (identifiant de l’entreprise)', confira: 'Vérifiez ce nom dans votre app avant de confirmer.',
+      wiseT: '🌍 Vous payez depuis l’étranger ?', wise: 'Ouvrez l’app <b>Wise</b>, touchez <b>Scanner</b> et visez le QR code ci-dessus. Elle paie en reais depuis votre devise et affiche le montant exact avant de confirmer.',
+      aprox: 'Montants en {m} approximatifs ; le paiement est en reais.',
+      depT: 'Ce que disent nos clients',
+      pagoT: 'Paiement confirmé !', pagoP: 'Votre réservation <b>{c}</b> est garantie. 🎉 La confirmation a aussi été envoyée sur votre WhatsApp. À bientôt sur l’Ilha da Gigóia !',
+      pagoResto: 'Le jour J, le reste ({v}) se paie {onde}.',
+      cancT: 'Réservation annulée', cancP: 'Cette réservation a été annulée. Pour toute question, parlez à Gigi sur WhatsApp.',
+      esperaT: 'Nous vérifions la disponibilité', esperaP: 'Dès que l’équipe confirme, Gigi vous envoie le paiement sur WhatsApp.',
+      erroT: 'Lien introuvable', erroP: 'Ce lien n’existe pas ou n’est plus valable. Demandez-en un nouveau à Gigi sur WhatsApp.',
+      foraT: 'Chargement impossible pour le moment', foraP: 'Réessayez dans un instant. Si cela continue, parlez à Gigi sur WhatsApp.',
+      termos: 'Annulation et pluie', duvidas: 'Des questions ? Parlez à Gigi sur WhatsApp',
+      semAlmoco: '(sans déjeuner)', comAlmoco: '+ Déjeuner', pessoa: ['personne', 'personnes'], as: 'à' },
+    zh: { oficial: 'ilhadagigoia.com.br · 官方付款页面', carregando: '正在加载您的预订…',
+      vaga: '✓ 有名额', reserva: '预订', passeio: '项目', data: '日期', pessoas: '人数', nome: '姓名', total: '总价',
+      sinal: '定金（50%）', resto: '余款 {v}，{onde}支付',
+      onde: { barqueiro: '在船上', restaurante: '在餐厅', jet: '在水上摩托处', dia: '在活动当天' },
+      pagueCom: '使用 Pix 付款', pixSub: '巴西的即时支付', copiar: '复制 Pix 代码', copiado: '✓ 已复制！请粘贴到您的银行 App',
+      auto: '⏱ 1 分钟内自动确认', manual: '📎 付款后，请通过 WhatsApp 把付款凭证发给 Gigi。',
+      recebe: '收款方', doc: 'CNPJ（公司编号）', confira: '确认付款前，请在 App 中核对此名称。',
+      wiseT: '🌍 在巴西境外付款？', wise: '打开 <b>Wise</b> App，点击<b>扫描</b>并对准上方的二维码。它会用您的货币支付雷亚尔，并在确认前显示准确金额。',
+      aprox: '{m} 金额为约数；以雷亚尔付款。',
+      depT: '客人怎么说',
+      pagoT: '付款已确认！', pagoP: '您的预订 <b>{c}</b> 已确认。🎉 确认信息也已发送到您的 WhatsApp。Ilha da Gigóia 见！',
+      pagoResto: '活动当天，余款（{v}）{onde}支付。',
+      cancT: '预订已取消', cancP: '此预订已取消。如有疑问，请通过 WhatsApp 联系 Gigi。',
+      esperaT: '正在确认名额', esperaP: '团队确认后，Gigi 会通过 WhatsApp 发送付款信息。',
+      erroT: '找不到链接', erroP: '此链接不存在或已失效。请通过 WhatsApp 向 Gigi 索取新链接。',
+      foraT: '暂时无法加载', foraP: '请稍后再试。如仍有问题，请通过 WhatsApp 联系 Gigi。',
+      termos: '取消与雨天政策', duvidas: '有疑问？通过 WhatsApp 联系 Gigi',
+      semAlmoco: '（不含午餐）', comAlmoco: '+ 午餐', pessoa: ['人', '人'], as: '' }
+  };
+  var NOMES = { pt: 'Português', en: 'English', es: 'Español', fr: 'Français', zh: '中文' };
+  var LOCALE = { pt: 'pt-BR', en: 'en-US', es: 'es-ES', fr: 'fr-FR', zh: 'zh-CN' };
+
+  /* ---------- token ---------- */
+  function lerToken() {
+    var q = new URLSearchParams(location.search).get('r');
+    if (q) return q;
+    var m = location.pathname.match(/\/pagar\/([A-Za-z0-9_-]{16,40})\/?$/);
+    return m ? m[1] : '';
+  }
+  var token = lerToken();
+  var dados = null, lang = 'pt', escolhida = false, consulta = null, inicio = Date.now();
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function t() { return T[lang] || T.pt; }
+  function reais(v) {
+    var n = Number(v) || 0;
+    return 'R$ ' + n.toLocaleString(lang === 'pt' ? 'pt-BR' : 'en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function aprox(v) {
+    if (!dados || !dados.taxa || !dados.simbolo) return '';
+    var n = Math.round((Number(v) || 0) / dados.taxa);
+    return n >= 1 ? '≈ ' + dados.simbolo + n : '';
+  }
+  function opcaoNoIdioma(o) {
+    return String(o || '').replace(/\(sem almo[çc]o\)/i, t().semAlmoco).replace(/\+ ?Almo[çc]o\b/, t().comAlmoco);
+  }
+  function dataNoIdioma() {
+    if (dados.dataISO) {
+      try {
+        var d = new Date(dados.dataISO + 'T12:00:00');
+        var s = d.toLocaleDateString(LOCALE[lang], { weekday: 'short', day: 'numeric', month: 'short' });
+        if (dados.horaISO) {
+          var h = Number(dados.horaISO.slice(0, 2)), mi = dados.horaISO.slice(3, 5);
+          var hora = lang === 'en' ? ((h % 12) || 12) + (mi !== '00' ? ':' + mi : '') + (h < 12 ? ' am' : ' pm')
+                   : (lang === 'pt' ? h + 'h' + (mi !== '00' ? mi : '') : h + ':' + mi);
+          s += (t().as ? ' · ' : ' ') + hora;
+        }
+        return s.charAt(0).toUpperCase() + s.slice(1);
+      } catch (e) {}
+    }
+    return dados.data || '';
+  }
+  function pessoasNoIdioma(p) {
+    var s = String(p || '').trim();
+    if (/^\d+$/.test(s)) return s + ' ' + t().pessoa[Number(s) === 1 ? 0 : 1];
+    return s;
+  }
+
+  /* ---------- telas ---------- */
+  function rodape() {
+    var w = (dados && dados.whatsapp) || '+55 21 99380-2618';
+    var wa = 'https://wa.me/' + w.replace(/\D/g, '');
+    document.getElementById('foot').innerHTML =
+      t().termos + ': <a href="/termos.html">ilhadagigoia.com.br/termos</a><br>' +
+      t().duvidas + ' <a href="' + wa + '">' + esc(w) + '</a>';
+    document.getElementById('t_oficial').textContent = t().oficial;
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+  }
+  function seletor() {
+    var el = document.getElementById('langs');
+    el.innerHTML = '🌐 ' + Object.keys(NOMES).map(function (k) {
+      return '<button type="button" data-l="' + k + '"' + (k === lang ? ' class="on"' : '') + '>' + NOMES[k] + '</button>';
+    }).join(' · ');
+    el.onclick = function (ev) {
+      var b = ev.target.closest('button[data-l]');
+      if (!b) return;
+      lang = b.getAttribute('data-l'); escolhida = true;
+      desenhar();
+    };
+  }
+  function telaSimples(cls, ic, titulo, texto) {
+    document.getElementById('app').innerHTML =
+      '<div class="card estado ' + cls + '"><div class="ic">' + ic + '</div><h1>' + titulo + '</h1><p>' + texto + '</p></div>';
+  }
+  function linhasDaReserva() {
+    var tt = t();
+    return '<div class="row"><span>' + tt.passeio + '</span><span>' + esc(opcaoNoIdioma(dados.opcao)) + '</span></div>' +
+      '<div class="row"><span>' + tt.data + '</span><span>' + esc(dataNoIdioma()) + '</span></div>' +
+      '<div class="row"><span>' + tt.pessoas + '</span><span>' + esc(pessoasNoIdioma(dados.pessoas)) + '</span></div>' +
+      (dados.nome ? '<div class="row"><span>' + tt.nome + '</span><span>' + esc(dados.nome) + '</span></div>' : '') +
+      '<div class="row"><span>' + tt.total + '</span><span>' + reais(dados.total) +
+        (aprox(dados.total) ? '<span class="aprox">' + aprox(dados.total) + '</span>' : '') + '</span></div>';
+  }
+  function telaPendente() {
+    var tt = t(), d = dados;
+    var onde = tt.onde[d.onde] || tt.onde.dia;
+    var fora = !!d.taxa || lang !== 'pt';
+    var html =
+      '<div class="card"><div class="tag">' + tt.vaga + '</div><h1>' + tt.reserva + ' ' + esc(d.codigo) + '</h1>' + linhasDaReserva() +
+      '<div class="sinal"><div class="l">' + tt.sinal + '<small>' + esc(tt.resto.replace('{v}', reais(d.resto)).replace('{onde}', onde)) + '</small></div>' +
+      '<div class="v"><b>' + reais(d.sinal) + '</b>' + (aprox(d.sinal) ? '<small>' + aprox(d.sinal) + '</small>' : '') + '</div></div></div>' +
+      '<div class="card pix"><h2>' + tt.pagueCom + '</h2>' + (lang !== 'pt' ? '<div class="sub">' + tt.pixSub + '</div>' : '') +
+      (d.qr ? '<img src="' + esc(d.qr) + '" alt="QR Code Pix">' : '') +
+      '<button class="btn" type="button" id="copiar">' + tt.copiar + '</button>' +
+      '<div class="auto">' + (d.automatico ? tt.auto : tt.manual) + '</div>' +
+      '<div class="rec">' + tt.recebe + ' <b>' + esc(d.recebedor) + '</b><br>' + tt.doc + ' <b>' +
+        esc(String(d.documento || '').replace(/^CNPJ\s*/, '')) + '</b> · ' + esc(d.banco) + '<br>' + tt.confira + '</div></div>' +
+      (fora ? '<div class="card wise"><h3>' + tt.wiseT + '</h3><p>' + tt.wise + '</p>' +
+        (d.simbolo ? '<p class="nota">' + esc(tt.aprox.replace('{m}', d.simbolo)) + '</p>' : '') + '</div>' : '') +
+      '<div class="card dep" id="dep" hidden></div>';
+    document.getElementById('app').innerHTML = html;
+    document.getElementById('copiar').onclick = copiar;
+    depoimento();
+  }
+  function telaPago() {
+    var tt = t(), d = dados;
+    var onde = tt.onde[d.onde] || tt.onde.dia;
+    document.getElementById('app').innerHTML =
+      '<div class="card estado pago"><div class="ic">✓</div><h1>' + tt.pagoT + '</h1><p>' + tt.pagoP.replace('{c}', esc(d.codigo)) + '</p></div>' +
+      '<div class="card">' + linhasDaReserva() +
+      (d.resto > 0 ? '<p class="nota" style="margin-top:12px">' + esc(tt.pagoResto.replace('{v}', reais(d.resto)).replace('{onde}', onde)) + '</p>' : '') + '</div>';
+  }
+  function desenhar() {
+    seletor(); rodape();
+    if (!dados) return;
+    if (dados.status === 'pago') return telaPago();
+    if (dados.status === 'cancelada') return telaSimples('', '🚫', t().cancT, t().cancP);
+    if (dados.status === 'aguardando') return telaSimples('', '⏳', t().esperaT, t().esperaP);
+    return telaPendente();
+  }
+
+  /* ---------- copiar ---------- */
+  function copiar() {
+    var b = document.getElementById('copiar'), cc = dados && dados.copiaECola;
+    if (!cc) return;
+    function feito() { b.textContent = t().copiado; b.classList.add('ok'); setTimeout(function () { b.textContent = t().copiar; b.classList.remove('ok'); }, 4000); }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(cc).then(feito, reserva);
+    } else reserva();
+    function reserva() {
+      var ta = document.createElement('textarea');
+      ta.value = cc; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, cc.length);
+      try { document.execCommand('copy'); feito(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+  }
+
+  /* ---------- depoimento real (mesma planilha do site) ---------- */
+  function depoimento() {
+    if (typeof depLerPlanilha !== 'function') return;
+    depLerPlanilha().then(function (lista) {
+      var box = document.getElementById('dep');
+      if (!box || !lista || !lista.length) return;
+      var chave = /tijuca/i.test(dados.opcao) ? 'tijuca' : (/pantanal/i.test(dados.opcao) ? 'pantanal' : '');
+      var d = (chave && lista.filter(function (x) { return String(x.passeio).toLowerCase().indexOf(chave) > -1; })[0]) || lista[0];
+      var n = Math.round(Number(String(d.nota).replace(',', '.'))) || 5;
+      box.innerHTML = '<div class="stars">' + '★★★★★'.slice(0, Math.min(5, Math.max(1, n))) + '</div>' +
+        '<blockquote>' + esc(d.texto) + '</blockquote><figcaption>— ' + esc(d.nome) + (d.passeio ? ', ' + esc(d.passeio) : '') + '</figcaption>';
+      box.hidden = false;
+    }).catch(function () {});
+  }
+
+  /* ---------- dados ---------- */
+  function buscar(soStatus) {
+    return fetch('/pagar/dados.php?t=' + encodeURIComponent(token) + (soStatus ? '&s=1' : ''), { cache: 'no-store' })
+      .then(function (r) { return r.json().then(function (j) { return { http: r.status, j: j }; }); });
+  }
+  function acompanhar() {
+    clearTimeout(consulta);
+    if (!dados || dados.status !== 'pendente') return;
+    if (Date.now() - inicio > 3 * 3600 * 1000) return;   // 3 h aberta: para de perguntar
+    consulta = setTimeout(function () {
+      if (document.hidden) return acompanhar();
+      buscar(true).then(function (r) {
+        if (r.j && r.j.ok && r.j.status && r.j.status !== 'pendente') {
+          dados.status = r.j.status;
+          desenhar();
+          if (dados.status === 'pago' && navigator.vibrate) { try { navigator.vibrate(120); } catch (e) {} }
+          return;
+        }
+        acompanhar();
+      }).catch(acompanhar);
+    }, 8000);
+  }
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) acompanhar(); });
+
+  function iniciar() {
+    lang = (function () {
+      var n = (navigator.language || 'pt').slice(0, 2).toLowerCase();
+      return T[n] ? n : 'pt';
+    })();
+    seletor(); rodape();
+    document.getElementById('t_carregando').textContent = t().carregando;
+    if (!token) { telaSimples('', '🔗', t().erroT, t().erroP); return; }
+    buscar(false).then(function (r) {
+      if (!r.j || !r.j.ok) {
+        if (r.http === 404) telaSimples('', '🔗', t().erroT, t().erroP);
+        else telaSimples('', '⚠️', t().foraT, t().foraP);
+        return;
+      }
+      dados = r.j;
+      if (!escolhida && T[dados.lang]) lang = dados.lang;   // a lingua da conversa com a Gigi
+      desenhar();
+      acompanhar();
+    }).catch(function () { telaSimples('', '⚠️', t().foraT, t().foraP); });
+  }
+  iniciar();
+})();
+</script>
+</body>
+</html>

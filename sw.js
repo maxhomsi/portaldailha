@@ -6,8 +6,8 @@
 
 // Versao do cache: MUDE ESTE NUMERO sempre que publicar imagens/CSS/JS novos,
 // senao quem ja visitou continua vendo os arquivos antigos.
-const CACHE_NAME = 'ilha-gigoia-v38';
-const CACHE_STATIC = 'ilha-static-v38';
+const CACHE_NAME = 'ilha-gigoia-v39';
+const CACHE_STATIC = 'ilha-static-v39';
 
 // Assets que serão pré-cacheados na instalação
 const PRE_CACHE = [
@@ -83,6 +83,10 @@ self.addEventListener('fetch', event => {
 
   // Ignora requisições de terceiros (Google Fonts, Analytics, etc.)
   if (url.origin !== location.origin) return;
+
+  // Pagina de pagamento (23/11/2026): sempre da rede, nunca do cache — o status do Pix
+  // muda a cada minuto e cache aqui mostraria "pendente" depois de pago.
+  if (url.pathname.startsWith('/pagar/')) return;
 
   // Ignora requisições POST / PUT / DELETE
   if (request.method !== 'GET') return;

@@ -513,3 +513,8 @@ explicação (título e descrição da página do Pantanal, cards da home e de p
 nunca no lugar do nome, e sempre com a ressalva de escala: barco comum, 35–40 min,
 não é airboat. As Gigis (site e WhatsApp) entendem "Everglades" como o Pantanal.
 Os outros idiomas não mudaram.
+
+## Página de pagamento /pagar/ (23/11/2026)
+- `pagar/index.html` (página do cliente, 5 idiomas, noindex) e `pagar/dados.php` (ponte pra Gigi no Railway). O `.htaccess` faz `/pagar/<token>` abrir a mesma página; o `sw.js` não mexe em nada de `/pagar/`; o robots bloqueia.
+- `dados.php` lê `GIGI_API_URL` do `gigi-config.php` (fora do git). Sem essa linha a Gigi continua mandando o Pix do jeito antigo.
+- Não remover `data-pagina="pagamento-gigi"` do `<html>`: é por ele que a Gigi sabe que o endereço `/pagar/<token>` funciona.
