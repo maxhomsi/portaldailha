@@ -57,6 +57,7 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
 .pix img{width:230px;max-width:80%;height:auto;margin:12px auto 4px;display:block;image-rendering:pixelated}
 .btn{display:block;width:100%;background:var(--green);color:#fff;border:0;border-radius:13px;padding:15px;font:800 16px 'Manrope',sans-serif;margin-top:10px;cursor:pointer}
 .btn.ok{background:var(--green-dark)}
+.btn.sec{background:#fff;color:var(--green-dark);border:2px solid var(--green);margin-top:12px;font-size:15px;padding:12px}
 .auto{font-size:13px;color:var(--muted);margin-top:8px}
 .rec{font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:14px;background:#f6faf6;border-radius:12px;padding:11px 12px;text-align:left}
 .rec b{color:var(--text)}
@@ -103,7 +104,7 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
       auto: '⏱ Confirmação automática em até 1 minuto', manual: '📎 Depois de pagar, mande o comprovante para a Gigi no WhatsApp.',
       recebe: 'Você vai pagar para', doc: 'CNPJ', confira: 'Confira esse nome no app do seu banco antes de confirmar.',
       wiseT: '🌍 Pagando de fora do Brasil?', wise: 'Abra o app <b>Wise</b>, toque em <b>Escanear</b> e aponte para o QR Code acima. Ele paga em reais a partir da sua moeda e mostra o valor exato antes de você confirmar.',
-      aprox: 'Valores em {m} aproximados; o pagamento é em reais.',
+      ajudaT: 'Não funcionou?', ajuda: 'Qualquer pessoa com conta em banco no Brasil (a recepção do hotel, um amigo) pode pagar pelo mesmo QR Code. É só mandar esta página para ela.', compartilhar: 'Enviar esta página para quem vai pagar', falar: 'Ou fale com a gente no WhatsApp que combinamos outra forma.', aprox: 'Valores em {m} aproximados; o pagamento é em reais.',
       depT: 'Quem já foi, conta',
       pagoT: 'Pagamento confirmado!', pagoP: 'Sua reserva <b>{c}</b> está garantida. 🎉 A confirmação também foi para o seu WhatsApp. Até já na Ilha da Gigóia!',
       pagoResto: 'No dia, o restante ({v}) é pago {onde}.',
@@ -121,7 +122,7 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
       auto: '⏱ Automatic confirmation within 1 minute', manual: '📎 After paying, send the receipt to Gigi on WhatsApp.',
       recebe: 'You are paying', doc: 'CNPJ (company ID)', confira: 'Check this name in your app before confirming.',
       wiseT: '🌍 Paying from outside Brazil?', wise: 'Open the <b>Wise</b> app, tap <b>Scan</b> and point at the QR code above. It pays in reais from your own currency and shows the exact amount before you confirm.',
-      aprox: '{m} amounts are approximate; payment is in reais.',
+      ajudaT: 'Didn\u2019t work?', ajuda: 'Anyone with a Brazilian bank account (your hotel reception, a friend) can pay with the same QR code. Just send them this page.', compartilhar: 'Send this page to whoever will pay', falar: 'Or message us on WhatsApp and we\u2019ll sort out another way.', aprox: '{m} amounts are approximate; payment is in reais.',
       depT: 'What our guests say',
       pagoT: 'Payment confirmed!', pagoP: 'Your reservation <b>{c}</b> is secured. 🎉 The confirmation was also sent to your WhatsApp. See you on Ilha da Gigóia!',
       pagoResto: 'On the day, the rest ({v}) is paid {onde}.',
@@ -139,7 +140,7 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
       auto: '⏱ Confirmación automática en hasta 1 minuto', manual: '📎 Después de pagar, envía el comprobante a Gigi por WhatsApp.',
       recebe: 'Vas a pagar a', doc: 'CNPJ (ID de la empresa)', confira: 'Confirma este nombre en tu app antes de pagar.',
       wiseT: '🌍 ¿Pagas desde fuera de Brasil?', wise: 'Abre la app <b>Wise</b>, toca <b>Escanear</b> y apunta al código QR de arriba. Paga en reales desde tu moneda y muestra el valor exacto antes de confirmar.',
-      aprox: 'Los valores en {m} son aproximados; el pago es en reales.',
+      ajudaT: '¿No funcionó?', ajuda: 'Cualquier persona con cuenta bancaria en Brasil (la recepción del hotel, un amigo) puede pagar con el mismo código QR. Solo envíale esta página.', compartilhar: 'Enviar esta página a quien va a pagar', falar: 'O escríbenos por WhatsApp y acordamos otra forma.', aprox: 'Los valores en {m} son aproximados; el pago es en reales.',
       depT: 'Lo que dicen los visitantes',
       pagoT: '¡Pago confirmado!', pagoP: 'Tu reserva <b>{c}</b> está garantizada. 🎉 La confirmación también llegó a tu WhatsApp. ¡Nos vemos en la Ilha da Gigóia!',
       pagoResto: 'El día del paseo, el resto ({v}) se paga {onde}.',
@@ -157,7 +158,7 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
       auto: '⏱ Confirmation automatique en moins d’1 minute', manual: '📎 Après le paiement, envoyez le reçu à Gigi sur WhatsApp.',
       recebe: 'Vous payez', doc: 'CNPJ (identifiant de l’entreprise)', confira: 'Vérifiez ce nom dans votre app avant de confirmer.',
       wiseT: '🌍 Vous payez depuis l’étranger ?', wise: 'Ouvrez l’app <b>Wise</b>, touchez <b>Scanner</b> et visez le QR code ci-dessus. Elle paie en reais depuis votre devise et affiche le montant exact avant de confirmer.',
-      aprox: 'Montants en {m} approximatifs ; le paiement est en reais.',
+      ajudaT: 'Ça n\u2019a pas marché ?', ajuda: 'Toute personne ayant un compte bancaire au Brésil (la réception de votre hôtel, un ami) peut payer avec le même QR code. Envoyez-lui simplement cette page.', compartilhar: 'Envoyer cette page à la personne qui paiera', falar: 'Ou écrivez-nous sur WhatsApp et nous trouverons une autre solution.', aprox: 'Montants en {m} approximatifs ; le paiement est en reais.',
       depT: 'Ce que disent nos clients',
       pagoT: 'Paiement confirmé !', pagoP: 'Votre réservation <b>{c}</b> est garantie. 🎉 La confirmation a aussi été envoyée sur votre WhatsApp. À bientôt sur l’Ilha da Gigóia !',
       pagoResto: 'Le jour J, le reste ({v}) se paie {onde}.',
@@ -175,7 +176,7 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
       auto: '⏱ 1 分钟内自动确认', manual: '📎 付款后，请通过 WhatsApp 把付款凭证发给 Gigi。',
       recebe: '收款方', doc: 'CNPJ（公司编号）', confira: '确认付款前，请在 App 中核对此名称。',
       wiseT: '🌍 在巴西境外付款？', wise: '打开 <b>Wise</b> App，点击<b>扫描</b>并对准上方的二维码。它会用您的货币支付雷亚尔，并在确认前显示准确金额。',
-      aprox: '{m} 金额为约数；以雷亚尔付款。',
+      ajudaT: '没有成功？', ajuda: '任何在巴西有银行账户的人（酒店前台、朋友）都可以用同一个二维码付款。把这个页面发给他们即可。', compartilhar: '把此页面发给付款人', falar: '或者通过 WhatsApp 联系我们，我们会商量其他方式。', aprox: '{m} 金额为约数；以雷亚尔付款。',
       depT: '客人怎么说',
       pagoT: '付款已确认！', pagoP: '您的预订 <b>{c}</b> 已确认。🎉 确认信息也已发送到您的 WhatsApp。Ilha da Gigóia 见！',
       pagoResto: '活动当天，余款（{v}）{onde}支付。',
@@ -288,9 +289,15 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
         esc(String(d.documento || '').replace(/^CNPJ\s*/, '')) + '</b> · ' + esc(d.banco) + '<br>' + tt.confira + '</div></div>' +
       (fora ? '<div class="card wise"><h3>' + tt.wiseT + '</h3><p>' + tt.wise + '</p>' +
         (d.simbolo ? '<p class="nota">' + esc(tt.aprox.replace('{m}', d.simbolo)) + '</p>' : '') + '</div>' : '') +
+      /* NAO FUNCIONOU? (25/11/2026, Elodie: Wise e Pix nao funcionaram pra ela). Quem tem
+         banco no Brasil paga pelo mesmo QR: a pagina vai pra essa pessoa com um toque. */
+      (fora ? '<div class="card wise"><h3>' + tt.ajudaT + '</h3><p>' + tt.ajuda + '</p>' +
+      '<button class="btn sec" type="button" id="compartilhar">' + tt.compartilhar + '</button>' +
+      '<p class="nota">' + tt.falar + '</p></div>' : '') +
       '<div class="card dep" id="dep" hidden></div>';
     document.getElementById('app').innerHTML = html;
     document.getElementById('copiar').onclick = copiar;
+    if (document.getElementById('compartilhar')) document.getElementById('compartilhar').onclick = compartilhar;
     depoimento();
   }
   function telaPago() {
@@ -325,6 +332,14 @@ h1{font-size:21px;margin-bottom:10px;font-weight:800}
       try { document.execCommand('copy'); feito(); } catch (e) {}
       document.body.removeChild(ta);
     }
+  }
+
+  /* ---------- mandar a pagina pra quem vai pagar ---------- */
+  function compartilhar() {
+    var url = location.href.split('#')[0];
+    var txt = (dados && dados.codigo ? 'Reserva ' + dados.codigo + ' · ' : '') + 'Portal Ilha da Gigóia — Pix ' + reais(dados && dados.sinal);
+    if (navigator.share) { navigator.share({ title: 'Portal Ilha da Gigóia', text: txt, url: url }).catch(function () {}); return; }
+    window.open('https://wa.me/?text=' + encodeURIComponent(txt + '\n' + url), '_blank');
   }
 
   /* ---------- depoimento real (mesma planilha do site) ---------- */
