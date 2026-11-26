@@ -1,5 +1,5 @@
 /* Cerebro da Gigi — fr. Gerado do cerebro completo.
-   75 regras; as palavras-chave sao as mesmas de sempre, so' a
+   85 regras; as palavras-chave sao as mesmas de sempre, so' a
    resposta vem apenas neste idioma. 0 caem no portugues. */
 const GIGI_BRAIN = [
  {
@@ -218,8 +218,6 @@ const GIGI_BRAIN = [
    "bateau prive",
    "prive",
    "exclusif",
-   "combien de personnes",
-   "capacite",
    "combien de temps",
    "duree de la balade",
    "ca dure combien",
@@ -230,6 +228,40 @@ const GIGI_BRAIN = [
    "boisson"
   ],
   "reply": "La balade du Pantanal Carioca dure en moyenne <b>35 à 40 minutes</b>. 🚤<br><br>Le bateau est <b>collectif</b> (partagé) et part avec un <b>minimum de 2 personnes</b>. Départs toutes les demi-heures, de 8h à 17h30.<br><br>Le forfait à <b>R${{p:pantanal_almoco}} par personne</b> comprend la balade et le déjeuner — <b>les boissons ne sont pas incluses</b>.<br><br>Dites-moi la <b>date</b> et le <b>nombre de personnes</b> et je confirme l'horaire !",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "limite de pessoas",
+   "quantas pessoas cabem",
+   "cabe quantas pessoas",
+   "quantas pessoas cabem no barco",
+   "capacidade do barco",
+   "lotacao",
+   "lotacao do barco",
+   "maximo de pessoas",
+   "how many people fit",
+   "how many people can",
+   "boat capacity",
+   "capacity",
+   "maximum number of people",
+   "cuantas personas caben",
+   "capacidad",
+   "capacidad del barco",
+   "maximo de personas",
+   "combien de personnes peut",
+   "combien de personnes peuvent",
+   "combien de personnes sur le bateau",
+   "combien de personnes dans le bateau",
+   "capacite",
+   "capacite du bateau",
+   "多少人",
+   "能坐多少人",
+   "最多几人",
+   "最多多少人",
+   "容纳"
+  ],
+  "reply": "Pour le <strong>Pantanal Carioca</strong>, nous avons des bateaux pour <strong>jusqu'à 50 personnes</strong> — les grands groupes sont les bienvenus. 🚤<br><br>Pour les <strong>Ilhas Tijucas</strong> et les autres sorties, l'équipe vous confirme la capacité. Dites-moi la date et le nombre de personnes et on s'organise !",
   "showWhatsapp": true
  },
  {

@@ -50,14 +50,14 @@ registrou mesmo assim.
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME = 'ilha-gigoia-v41';
-const CACHE_STATIC = 'ilha-static-v41';
+const CACHE_NAME = 'ilha-gigoia-v42';
+const CACHE_STATIC = 'ilha-static-v42';
 ```
 
-(v41 desde 26/11/2026, "e com almoço?" nos cérebros. Confira o número no próprio
+(v42 desde 26/11/2026, lotação do barco nos cérebros. Confira o número no próprio
 `sw.js` antes de subir: ele muda a cada leva.)
 
-**Subir HTML/CSS/JS novo sem subir esse número (v41 → v42) entrega o arquivo velho
+**Subir HTML/CSS/JS novo sem subir esse número (v42 → v43) entrega o arquivo velho
 para quem já visitou o site.** O Max sobe tudo, abre no celular, vê a página
 antiga e acha que o FTP falhou. As duas linhas sobem juntas, e o `sw.js` entra na
 lista de arquivos a subir. Isso vale para toda mudança de conteúdo — imagem nova
@@ -289,6 +289,17 @@ regra de preços (a do `quanto custa`) ganhou `com almoco`, `with lunch`, `con a
 palavra-chave mais longa vence, então ela ganha de `almoco`/`lunch`/`almuerzo`/`dejeuner`,
 e perde pras frases da promoção ("passeio com almoco", "tour with lunch") e pra
 "restaurante". O zh já tinha `含午餐` na regra da promoção.
+
+## Lotação do barco (26/11/2026)
+
+Mesma regra da Gigi do WhatsApp (o Vinicius respondeu "Temos embarcações para até 50
+pessoas" e a Gigi do WhatsApp tinha inventado "até 12"): **Pantanal Carioca, até 50
+pessoas; Ilhas Tijucas e os outros passeios, a equipe confirma.** Regra nova nos 5
+`cerebro-gigi-<idioma>.js` (logo depois da regra de duração, que perdeu as palavras de
+lotação — "quantas pessoas cabem" respondia a duração) e uma linha em cada um dos 5 prompts
+do `gigi-proxy.php`, com "nunca diga outro número". Em francês a regra não usa
+"combien de personnes" sozinho: "combien de personnes habitent" é a da população.
+Mudou o número? Os dois projetos (aqui e o `index.js` do gigi-bot, entrada `lotacao_barco`).
 
 ## Os 5 idiomas
 

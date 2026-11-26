@@ -1,5 +1,5 @@
 /* Cerebro da Gigi — pt. Gerado do cerebro completo.
-   75 regras; as palavras-chave sao as mesmas de sempre, so' a
+   85 regras; as palavras-chave sao as mesmas de sempre, so' a
    resposta vem apenas neste idioma. 0 caem no portugues. */
 const GIGI_BRAIN = [
  {
@@ -221,9 +221,6 @@ const GIGI_BRAIN = [
    "barco privativo",
    "privativo",
    "exclusivo",
-   "quantas pessoas cabem",
-   "lotacao",
-   "cabe quantas pessoas",
    "quanto tempo dura",
    "duracao do passeio",
    "dura quanto tempo",
@@ -244,6 +241,40 @@ const GIGI_BRAIN = [
    "最少几人"
   ],
   "reply": "O passeio do Pantanal Carioca dura em média <b>35 a 40 minutos</b>. 🚤<br><br>O barco é <b>de grupo</b> (compartilhado) e sai com <b>mínimo de 2 pessoas</b>. Saídas todos os dias de meia em meia hora, das 8h às 17h30.<br><br>No pacote de <b>R${{p:pantanal_almoco}} por pessoa</b> estão inclusos o passeio e o almoço executivo — <b>bebida não está inclusa</b>.<br><br>Me diz a <b>data</b> e <b>quantas pessoas</b> que eu confirmo o horário!",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "limite de pessoas",
+   "quantas pessoas cabem",
+   "cabe quantas pessoas",
+   "quantas pessoas cabem no barco",
+   "capacidade do barco",
+   "lotacao",
+   "lotacao do barco",
+   "maximo de pessoas",
+   "how many people fit",
+   "how many people can",
+   "boat capacity",
+   "capacity",
+   "maximum number of people",
+   "cuantas personas caben",
+   "capacidad",
+   "capacidad del barco",
+   "maximo de personas",
+   "combien de personnes peut",
+   "combien de personnes peuvent",
+   "combien de personnes sur le bateau",
+   "combien de personnes dans le bateau",
+   "capacite",
+   "capacite du bateau",
+   "多少人",
+   "能坐多少人",
+   "最多几人",
+   "最多多少人",
+   "容纳"
+  ],
+  "reply": "No <strong>Pantanal Carioca</strong> temos embarcações para <strong>até 50 pessoas</strong> — dá pra ir com grupo grande. 🚤<br><br>Nas <strong>Ilhas Tijucas</strong> e nos outros passeios, a lotação a equipe confirma pra você. Me diz a data e quantas pessoas que a gente organiza!",
   "showWhatsapp": true
  },
  {

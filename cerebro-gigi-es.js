@@ -1,5 +1,5 @@
 /* Cerebro da Gigi — es. Gerado do cerebro completo.
-   75 regras; as palavras-chave sao as mesmas de sempre, so' a
+   85 regras; as palavras-chave sao as mesmas de sempre, so' a
    resposta vem apenas neste idioma. 0 caem no portugues. */
 const GIGI_BRAIN = [
  {
@@ -217,8 +217,6 @@ const GIGI_BRAIN = [
    "barco privado",
    "privado",
    "exclusivo",
-   "cuantas personas caben",
-   "capacidad",
    "cuanto dura",
    "duracion del paseo",
    "cuanto tiempo dura",
@@ -230,6 +228,40 @@ const GIGI_BRAIN = [
    "bebida"
   ],
   "reply": "El paseo del Pantanal Carioca dura en promedio <b>35 a 40 minutos</b>. 🚤<br><br>El barco es <b>de grupo</b> (compartido) y sale con un <b>mínimo de 2 personas</b>. Salidas cada media hora, de 8h a 17h30.<br><br>El paquete de <b>R${{p:pantanal_almoco}} por persona</b> incluye el paseo y el almuerzo ejecutivo — <b>la bebida no está incluida</b>.<br><br>¡Dime la <b>fecha</b> y <b>cuántas personas</b> y confirmo el horario!",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "limite de pessoas",
+   "quantas pessoas cabem",
+   "cabe quantas pessoas",
+   "quantas pessoas cabem no barco",
+   "capacidade do barco",
+   "lotacao",
+   "lotacao do barco",
+   "maximo de pessoas",
+   "how many people fit",
+   "how many people can",
+   "boat capacity",
+   "capacity",
+   "maximum number of people",
+   "cuantas personas caben",
+   "capacidad",
+   "capacidad del barco",
+   "maximo de personas",
+   "combien de personnes peut",
+   "combien de personnes peuvent",
+   "combien de personnes sur le bateau",
+   "combien de personnes dans le bateau",
+   "capacite",
+   "capacite du bateau",
+   "多少人",
+   "能坐多少人",
+   "最多几人",
+   "最多多少人",
+   "容纳"
+  ],
+  "reply": "En el <strong>Pantanal Carioca</strong> tenemos embarcaciones para <strong>hasta 50 personas</strong> — se puede ir en grupo grande. 🚤<br><br>Para las <strong>Islas Tijucas</strong> y los otros paseos, el equipo te confirma la capacidad. ¡Dime la fecha y cuántas personas y lo organizamos!",
   "showWhatsapp": true
  },
  {

@@ -1,5 +1,5 @@
 /* Cerebro da Gigi — en. Gerado do cerebro completo.
-   75 regras; as palavras-chave sao as mesmas de sempre, so' a
+   85 regras; as palavras-chave sao as mesmas de sempre, so' a
    resposta vem apenas neste idioma. 0 caem no portugues. */
 const GIGI_BRAIN = [
  {
@@ -218,8 +218,6 @@ const GIGI_BRAIN = [
    "private boat",
    "private",
    "exclusive",
-   "how many people fit",
-   "capacity",
    "how long does it last",
    "tour duration",
    "how long is the tour",
@@ -240,6 +238,40 @@ const GIGI_BRAIN = [
    "最少几人"
   ],
   "reply": "The Pantanal Carioca tour lasts <b>35 to 40 minutes</b> on average. 🚤<br><br>It is a <b>group (shared) boat</b> and runs with a <b>minimum of 2 people</b>. Departures every half hour, from 8am to 5:30pm.<br><br>The <b>R${{p:pantanal_almoco}} per person</b> package covers the tour and the set lunch — <b>drinks are not included</b>.<br><br>Tell me the <b>date</b> and <b>how many people</b> and I'll confirm the time!",
+  "showWhatsapp": true
+ },
+ {
+  "keywords": [
+   "limite de pessoas",
+   "quantas pessoas cabem",
+   "cabe quantas pessoas",
+   "quantas pessoas cabem no barco",
+   "capacidade do barco",
+   "lotacao",
+   "lotacao do barco",
+   "maximo de pessoas",
+   "how many people fit",
+   "how many people can",
+   "boat capacity",
+   "capacity",
+   "maximum number of people",
+   "cuantas personas caben",
+   "capacidad",
+   "capacidad del barco",
+   "maximo de personas",
+   "combien de personnes peut",
+   "combien de personnes peuvent",
+   "combien de personnes sur le bateau",
+   "combien de personnes dans le bateau",
+   "capacite",
+   "capacite du bateau",
+   "多少人",
+   "能坐多少人",
+   "最多几人",
+   "最多多少人",
+   "容纳"
+  ],
+  "reply": "On the <strong>Pantanal Carioca</strong> we have boats for <strong>up to 50 people</strong> — big groups are welcome. 🚤<br><br>For the <strong>Tijucas Islands</strong> and the other tours, our team confirms the capacity for you. Tell me the date and how many people and we'll arrange it!",
   "showWhatsapp": true
  },
  {
