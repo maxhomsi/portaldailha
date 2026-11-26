@@ -50,14 +50,14 @@ registrou mesmo assim.
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME = 'ilha-gigoia-v40';
-const CACHE_STATIC = 'ilha-static-v40';
+const CACHE_NAME = 'ilha-gigoia-v41';
+const CACHE_STATIC = 'ilha-static-v41';
 ```
 
-(v40 desde 25/11/2026, página de pagamento com "Não funcionou?". Confira o número no
-próprio `sw.js` antes de subir: ele muda a cada leva.)
+(v41 desde 26/11/2026, "e com almoço?" nos cérebros. Confira o número no próprio
+`sw.js` antes de subir: ele muda a cada leva.)
 
-**Subir HTML/CSS/JS novo sem subir esse número (v40 → v41) entrega o arquivo velho
+**Subir HTML/CSS/JS novo sem subir esse número (v41 → v42) entrega o arquivo velho
 para quem já visitou o site.** O Max sobe tudo, abre no celular, vê a página
 antiga e acha que o FTP falhou. As duas linhas sobem juntas, e o `sw.js` entra na
 lista de arquivos a subir. Isso vale para toda mudança de conteúdo — imagem nova
@@ -279,6 +279,16 @@ das outras duas abas veio daí.
   contador, a pergunta passa. Na mesma data saíram do prompt os eventos que já tinham
   passado (Comida di Buteco, Copa, Junina) — evento agora só pela agenda do site — e
   a travessia foi pra R$2 (R$5 de madrugada), como nas páginas.
+
+## "E com almoço?" na Gigi do site (26/11/2026)
+
+A pergunta de seguimento "e com almoço?" (depois de "quanto custa o pantanal?") casava
+com a palavra `almoco` da regra de restaurantes e recebia a lista de restaurantes. A
+regra de preços (a do `quanto custa`) ganhou `com almoco`, `with lunch`, `con almuerzo`,
+`avec dejeuner`, `avec le dejeuner` e `avec repas` nos 5 `cerebro-gigi-<idioma>.js`: a
+palavra-chave mais longa vence, então ela ganha de `almoco`/`lunch`/`almuerzo`/`dejeuner`,
+e perde pras frases da promoção ("passeio com almoco", "tour with lunch") e pra
+"restaurante". O zh já tinha `含午餐` na regra da promoção.
 
 ## Os 5 idiomas
 
