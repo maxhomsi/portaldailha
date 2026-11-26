@@ -50,14 +50,14 @@ registrou mesmo assim.
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME = 'ilha-gigoia-v42';
-const CACHE_STATIC = 'ilha-static-v42';
+const CACHE_NAME = 'ilha-gigoia-v43';
+const CACHE_STATIC = 'ilha-static-v43';
 ```
 
-(v42 desde 26/11/2026, lotação do barco nos cérebros. Confira o número no próprio
+(v43 desde 26/11/2026, Pix avulso na página de pagamento. Confira o número no próprio
 `sw.js` antes de subir: ele muda a cada leva.)
 
-**Subir HTML/CSS/JS novo sem subir esse número (v42 → v43) entrega o arquivo velho
+**Subir HTML/CSS/JS novo sem subir esse número (v43 → v44) entrega o arquivo velho
 para quem já visitou o site.** O Max sobe tudo, abre no celular, vê a página
 antiga e acha que o FTP falhou. As duas linhas sobem juntas, e o `sw.js` entra na
 lista de arquivos a subir. Isso vale para toda mudança de conteúdo — imagem nova
@@ -289,6 +289,14 @@ regra de preços (a do `quanto custa`) ganhou `com almoco`, `with lunch`, `con a
 palavra-chave mais longa vence, então ela ganha de `almoco`/`lunch`/`almuerzo`/`dejeuner`,
 e perde pras frases da promoção ("passeio com almoco", "tour with lunch") e pra
 "restaurante". O zh já tinha `含午餐` na regra da promoção.
+
+## Página de pagamento: modo avulso (26/11/2026)
+
+O `pix 40` da equipe agora manda o link de `pagar/` em vez do código solto. A API da Gigi
+devolve `avulso: true` (valor, referência, sem passeio/data/sinal) e o `pagar/index.html`
+desenha "Pagamento AVxxxx" / "Pagamento confirmado!" / "Este link venceu" (status
+`expirado`, depois de 24h). A reserva continua igual. Textos novos nos 5 idiomas:
+`pagamento`, `referente`, `valor`, `pagoAvP`, `vencidoT`, `vencidoP`.
 
 ## Lotação do barco (26/11/2026)
 
