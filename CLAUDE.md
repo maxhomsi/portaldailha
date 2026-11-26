@@ -50,13 +50,14 @@ registrou mesmo assim.
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME = 'ilha-gigoia-v18';
-const CACHE_STATIC = 'ilha-static-v18';
+const CACHE_NAME = 'ilha-gigoia-v40';
+const CACHE_STATIC = 'ilha-static-v40';
 ```
 
-(v18 desde 25/10/2026, marca de equipe e clique no telefone no `app.js`.)
+(v40 desde 25/11/2026, página de pagamento com "Não funcionou?". Confira o número no
+próprio `sw.js` antes de subir: ele muda a cada leva.)
 
-**Subir HTML/CSS/JS novo sem trocar esse `v18` por `v19` entrega o arquivo velho
+**Subir HTML/CSS/JS novo sem subir esse número (v40 → v41) entrega o arquivo velho
 para quem já visitou o site.** O Max sobe tudo, abre no celular, vê a página
 antiga e acha que o FTP falhou. As duas linhas sobem juntas, e o `sw.js` entra na
 lista de arquivos a subir. Isso vale para toda mudança de conteúdo — imagem nova
