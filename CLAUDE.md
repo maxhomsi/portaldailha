@@ -50,11 +50,11 @@ registrou mesmo assim.
 O site é PWA com service worker. O `sw.js` tem:
 
 ```js
-const CACHE_NAME = 'ilha-gigoia-v43';
-const CACHE_STATIC = 'ilha-static-v43';
+const CACHE_NAME = 'ilha-gigoia-v44';
+const CACHE_STATIC = 'ilha-static-v44';
 ```
 
-(v43 desde 26/11/2026, Pix avulso na página de pagamento. Confira o número no próprio
+(v44 desde 27/11/2026, o Kauai virou Venezza Gastrobar. v43 desde 26/11/2026, Pix avulso na página de pagamento. Confira o número no próprio
 `sw.js` antes de subir: ele muda a cada leva.)
 
 **Subir HTML/CSS/JS novo sem subir esse número (v43 → v44) entrega o arquivo velho
@@ -548,3 +548,19 @@ Os outros idiomas não mudaram.
 - `pagar/index.html` (página do cliente, 5 idiomas, noindex) e `pagar/dados.php` (ponte pra Gigi no Railway). O `.htaccess` faz `/pagar/<token>` abrir a mesma página; o `sw.js` não mexe em nada de `/pagar/`; o robots bloqueia.
 - `dados.php` lê `GIGI_API_URL` do `gigi-config.php` (fora do git). Sem essa linha a Gigi continua mandando o Pix do jeito antigo.
 - Não remover `data-pagina="pagamento-gigi"` do `<html>`: é por ele que a Gigi sabe que o endereço `/pagar/<token>` funciona.
+
+
+## O Kauai agora é Venezza Gastrobar (27/11/2026, comunicado oficial)
+
+Mesmo lugar (Ilha do Ipê), cara nova, nova equipe. Decisões do Max: a página **continua
+`bar-kauai.html`** (não perder o Google; o id e as chaves `*_kauai*` também ficam), Área
+Kids e música ao vivo continuam, e o Réveillon Encanta Rio (31/12, 21h, ingressos
+válidos) entra no site e nas duas Gigis.
+- Nome: pt "Venezza Gastrobar (antigo Kauai)", en "(formerly Kauai)", es "(antiguo Kauai)",
+  fr "(ex-Kauai)", zh "（原 Kauai）"; curto "Venezza (antigo Kauai)" onde era só "Kauai".
+  "Gastrolounge" virou "Gastrobar".
+- `bar-kauai.html` (5 idiomas) ganhou o quadro do comunicado (`kauai_novo` nos 5
+  dicionários) antes de "Sobre o Gastrobar". As fotos ainda são as do Kauai.
+- Gigi do site: a regra de família (`kauai`) acha também "venezza"/"gastrobar"; a regra
+  de Réveillon (que dizia "nada confirmado") agora fala do Encanta Rio no Venezza, nos 5
+  `cerebro-gigi-*.js`; `cerebro-gigi.js`, `app.js` e o prompt do `gigi-proxy.php` também.

@@ -1038,7 +1038,7 @@ const GIGI_BRAIN = [
    "行动不便",
    "方便吗"
   ],
-  "reply": "小岛有着质朴的魅力，小巷狭窄。为了更方便，建议直接坐船到设施完善的场所码头，比如<a href='restaurante-laguna.html'>Laguna</a> 或 <a href='bar-kauai.html'>Kauai</a>。"
+  "reply": "小岛有着质朴的魅力，小巷狭窄。为了更方便，建议直接坐船到设施完善的场所码头，比如<a href='restaurante-laguna.html'>Laguna</a> 或 <a href='bar-kauai.html'>Venezza（原 Kauai）</a>。"
  },
  {
   "keywords": [
@@ -1794,9 +1794,13 @@ const GIGI_BRAIN = [
    "亲子",
    "家庭",
    "带孩子",
-   "Kauai"
+   "Kauai",
+   "venezza",
+   "venezza gastrobar",
+   "gastrobar",
+   "antigo kauai"
   ],
-  "reply": "带家人来的话，<a href='bar-kauai.html'>Kauai Gastrolounge</a>（在伊佩岛）无可匹敌！🌴 场地宽敞，热带风格，还有很棒的儿童游乐区。"
+  "reply": "带家人来的话，<a href='bar-kauai.html'>Venezza Gastrobar</a>（原 Kauai，在伊佩岛）无可匹敌！🌴 场地焕然一新，设施更完善，团队全新，依然有很棒的儿童游乐区和现场音乐。"
  },
  {
   "keywords": [
@@ -1814,7 +1818,7 @@ const GIGI_BRAIN = [
    "轻松",
    "热闹"
   ],
-  "reply": "<a href='oasis.html'>Oásis Gastrolounge</a> 白天是餐厅，入夜变成热闹的休闲吧，有音乐和精调鸡尾酒。🍸"
+  "reply": "<a href='oasis.html'>Oásis Gastrobar</a> 白天是餐厅，入夜变成热闹的休闲吧，有音乐和精调鸡尾酒。🍸"
  },
  {
   "keywords": [
@@ -2172,9 +2176,11 @@ const GIGI_BRAIN = [
    "12月31日",
    "reveillon",
    "new year",
-   "ano novo"
+   "ano novo",
+   "encanta rio",
+   "reveillon encanta"
   ],
-  "reply": "跨年活动还在筹备中 — <b>目前尚未确认</b>。🎆<br><br>一旦定下，就会发布在我们的<a href=\"agenda-cultural.html\">活动日历</a>上。节目单通常临近日期才公布，建议您不时查看。<br><br>如果您想先预定跨年的住宿或行程，告诉我<b>日期</b>和<b>人数</b>，我转给团队。",
+  "reply": "🎆 <b>Réveillon Encanta Rio</b> 跨年活动 — 12月31日 21:00，在 <a href='bar-kauai.html'>Venezza Gastrobar</a>（原 Kauai），伊佩岛，巴拉达蒂茹卡。<br><br>Kauai 已更名为 Venezza，焕然一新，但跨年活动<b>照常举行</b>，地点和节目都不变。已经买了门票？<b>继续有效</b>。✅<br><br>更多信息请看 Instagram <b>@reveillonencantario</b>。如果想预订跨年的住宿或游船，告诉我<b>日期</b>和<b>人数</b>，我转给团队。",
   "showWhatsapp": true
  }
 ];

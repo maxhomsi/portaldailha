@@ -215,7 +215,7 @@ const GIGI_BRAIN = [
       fr: "Une curiosité foncière : tous les terrains appartiennent à l'État fédéral. En 1981, un décret municipal a classé la zone « non edificandi ». En raison d'un contrôle insuffisant par le passé, la plupart des maisons n'ont aujourd'hui pas d'inscription formelle à la taxe foncière. 🏢",
       en: "Land curiosity: All land here belongs to the Federal Government. A 1981 decree banned residential building, so most houses today lack formal city tax registration (IPTU). 🏢",
       es: "Curiosidad de tierras: Todo el terreno pertenece a la Unión (Gobierno). Un decreto de 1981 prohibió construir, por lo que la mayoría de las casas no pagan impuesto municipal formal (IPTU). 🏢",
-      zh: "非常适合带孩子！👨‍👩‍👧‍👦 <a href='bar-kauai.html'>考艾美食休闲吧</a>有儿童游乐区。岛上禁止汽车，使其成为孩子们安全行走的环境。带他们去看野生动物——他们一定会爱上凯门鳄和水豚的！"
+      zh: "非常适合带孩子！👨‍👩‍👧‍👦 <a href='bar-kauai.html'>Venezza Gastrobar（原 Kauai）</a>有儿童游乐区。岛上禁止汽车，使其成为孩子们安全行走的环境。带他们去看野生动物——他们一定会爱上凯门鳄和水豚的！"
     }
   },
   {
@@ -294,10 +294,10 @@ const GIGI_BRAIN = [
   {
     keywords: ["acessibilidade", "cadeirante", "idoso", "cadeira de rodas", "dificuldade", "locomocao", "accessibility", "wheelchair", "elderly", "mobility", "accesibilidad", "silla de ruedas", "anciano", "movilidad", "accessibilite", "fauteuil roulant", "mobilite reduite", "personnes agees"],
     reply: {
-      pt: "A ilha tem um charme rústico com ruelas estreitas. Para melhor acessibilidade, recomendamos ir de barco direto para o deck de locais preparados como o <a href='restaurante-laguna.html'>Laguna</a> ou <a href='bar-kauai.html'>Kauai</a>.",
-      fr: "L'île a un charme rustique, avec ses ruelles étroites. Pour une meilleure accessibilité, nous recommandons d'aller en bateau directement au ponton d'établissements équipés comme le <a href='restaurante-laguna.html'>Laguna</a> ou le <a href='bar-kauai.html'>Kauai</a>.",
-      en: "The island has narrow rustic streets. For better accessibility, we recommend going by boat directly to the deck of places like <a href='restaurante-laguna.html'>Laguna</a> or <a href='bar-kauai.html'>Kauai</a>.",
-      es: "La isla tiene calles rústicas y estrechas. Para mayor accesibilidad, recomendamos ir en bote directamente al muelle de lugares como <a href='restaurante-laguna.html'>Laguna</a> o <a href='bar-kauai.html'>Kauai</a>.",
+      pt: "A ilha tem um charme rústico com ruelas estreitas. Para melhor acessibilidade, recomendamos ir de barco direto para o deck de locais preparados como o <a href='restaurante-laguna.html'>Laguna</a> ou <a href='bar-kauai.html'>Venezza (antigo Kauai)</a>.",
+      fr: "L'île a un charme rustique, avec ses ruelles étroites. Pour une meilleure accessibilité, nous recommandons d'aller en bateau directement au ponton d'établissements équipés comme le <a href='restaurante-laguna.html'>Laguna</a> ou le <a href='bar-kauai.html'>Venezza (ex-Kauai)</a>.",
+      en: "The island has narrow rustic streets. For better accessibility, we recommend going by boat directly to the deck of places like <a href='restaurante-laguna.html'>Laguna</a> or <a href='bar-kauai.html'>Venezza (formerly Kauai)</a>.",
+      es: "La isla tiene calles rústicas y estrechas. Para mayor accesibilidad, recomendamos ir en bote directamente al muelle de lugares como <a href='restaurante-laguna.html'>Laguna</a> o <a href='bar-kauai.html'>Venezza (antiguo Kauai)</a>.",
     }
   },
   {
@@ -586,12 +586,12 @@ const GIGI_BRAIN = [
     }
   },
   {
-    keywords: ["crianca", "kids", "filhos", "familia", "kauai", "ilha do ipe", "children", "family", "niños", "hijos", "familia", "enfants", "famille", "coin enfants"],
+    keywords: ["crianca", "kids", "filhos", "familia", "kauai", "venezza", "gastrobar", "ilha do ipe", "children", "family", "niños", "hijos", "familia", "enfants", "famille", "coin enfants"],
     reply: {
-      pt: "Se vier com a família, o <a href='bar-kauai.html'>Kauai Gastrolounge</a> (na Ilha do Ipê) é imbatível! 🌴 Espaço gigante, estilo tropical e uma Área Kids maravilhosa para as crianças.",
-      fr: "Si vous venez en famille, le <a href='bar-kauai.html'>Kauai Gastrolounge</a> (sur l'Ilha do Ipê) est imbattable ! 🌴 Espace immense, style tropical et un superbe coin enfants.",
-      en: "If coming with family, <a href='bar-kauai.html'>Kauai Gastrolounge</a> is unbeatable! 🌴 Giant space, tropical style, and an amazing Kids Area.",
-      es: "Si vienes con familia, ¡el <a href='bar-kauai.html'>Kauai Gastrolounge</a> es imbatible! 🌴 Espacio gigante, estilo tropical y una Área Kids increíble."
+      pt: "Se vier com a família, o <a href='bar-kauai.html'>Venezza Gastrobar (antigo Kauai)</a> (na Ilha do Ipê) é imbatível! 🌴 Espaço gigante, estilo tropical e uma Área Kids maravilhosa para as crianças.",
+      fr: "Si vous venez en famille, le <a href='bar-kauai.html'>Venezza Gastrobar (ex-Kauai)</a> (sur l'Ilha do Ipê) est imbattable ! 🌴 Espace immense, style tropical et un superbe coin enfants.",
+      en: "If coming with family, <a href='bar-kauai.html'>Venezza Gastrobar (formerly Kauai)</a> is unbeatable! 🌴 Giant space, tropical style, and an amazing Kids Area.",
+      es: "Si vienes con familia, ¡el <a href='bar-kauai.html'>Venezza Gastrobar (antiguo Kauai)</a> es imbatible! 🌴 Espacio gigante, estilo tropical y una Área Kids increíble."
     }
   },
   {

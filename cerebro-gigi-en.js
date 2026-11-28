@@ -915,7 +915,7 @@ const GIGI_BRAIN = [
    "mobilite reduite",
    "personnes agees"
   ],
-  "reply": "The island has narrow rustic streets. For better accessibility, we recommend going by boat directly to the deck of places like <a href='restaurante-laguna.html'>Laguna</a> or <a href='bar-kauai.html'>Kauai</a>."
+  "reply": "The island has narrow rustic streets. For better accessibility, we recommend going by boat directly to the deck of places like <a href='restaurante-laguna.html'>Laguna</a> or <a href='bar-kauai.html'>Venezza (formerly Kauai)</a>."
  },
  {
   "keywords": [
@@ -1518,9 +1518,13 @@ const GIGI_BRAIN = [
    "hijos",
    "enfants",
    "famille",
-   "coin enfants"
+   "coin enfants",
+   "venezza",
+   "venezza gastrobar",
+   "gastrobar",
+   "antigo kauai"
   ],
-  "reply": "If coming with family, <a href='bar-kauai.html'>Kauai Gastrolounge</a> is unbeatable! 🌴 Giant space, tropical style, and an amazing Kids Area."
+  "reply": "If coming with family, <a href='bar-kauai.html'>Venezza Gastrobar</a> (formerly Kauai, on Ilha do Ipê) is unbeatable! 🌴 The venue has a fresh new look, an even more complete structure and a new team, and still has the amazing Kids Area and live music."
  },
  {
   "keywords": [
@@ -1533,7 +1537,7 @@ const GIGI_BRAIN = [
    "relajado",
    "decontracte"
   ],
-  "reply": "The <a href='oasis.html'>Oásis Gastrolounge</a> is a daytime restaurant and turns into a vibrant lounge with music and crafted drinks at night. 🍸"
+  "reply": "The <a href='oasis.html'>Oásis Gastrobar</a> is a daytime restaurant and turns into a vibrant lounge with music and crafted drinks at night. 🍸"
  },
  {
   "keywords": [
@@ -1826,9 +1830,11 @@ const GIGI_BRAIN = [
    "ano nuevo",
    "nouvel an",
    "跨年",
-   "新年"
+   "新年",
+   "encanta rio",
+   "reveillon encanta"
   ],
-  "reply": "New Year's events are still being scheduled — <b>nothing is confirmed yet</b>. 🎆<br><br>As soon as they are, they go up on our <a href=\"agenda-cultural.html\">agenda</a>. Worth checking back now and then, since the programme usually comes out close to the date.<br><br>If you already want to secure a place to stay or a tour for New Year's, tell me the <b>date</b> and <b>how many people</b> and I'll pass it to the team.",
+  "reply": "🎆 <b>Réveillon Encanta Rio</b> — December 31, at 9 pm, at <a href='bar-kauai.html'>Venezza Gastrobar</a> (formerly Kauai), on Ilha do Ipê, Barra da Tijuca.<br><br>Kauai is now Venezza, with a fresh new look, but the New Year's Eve party goes ahead <b>as planned</b>, at the same place and with the announced programme. Already have a ticket? <b>It remains valid</b>. ✅<br><br>More information on Instagram <b>@reveillonencantario</b>. If you want to secure accommodation or a boat tour for New Year's, tell me the <b>date</b> and <b>how many people</b> and I'll pass it on to the team.",
   "showWhatsapp": true
  }
 ];
